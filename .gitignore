@@ -1,0 +1,14 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.DS_Store
+.htaccess
+
+/backup_pages
+/code_experiments
+/supplementary_info
+/webpage_planning
+
+
+index.Rmd

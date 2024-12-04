@@ -1,0 +1,23 @@
+[submodule "FAQ"] 
+  path = FAQ 
+  url = git://faq_webpage/
+
+
+[submodule "Policies"]
+  path = Policies
+  url = git://policies/
+
+
+[submodule "Security"]
+  path = Security
+  url = git://security/
+
+
+[submodule "legal"]
+  path = legal
+  url = git://legal/
+
+
+[submodule "rdm"]
+  path = rdm
+  url = git://rdm/
