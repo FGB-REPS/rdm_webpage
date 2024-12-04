@@ -1,0 +1,97 @@
+
+---
+title: "RDM @ FGB: Codebooks"
+date: "`r Sys.Date()`; Version 1.1"
+output: 
+  html_document:
+    theme: cerulean
+    includes: 
+      after_body: ../../footer.html
+---
+
+
+<style type="text/css">
+
+/* need to ensure all text is in Roboto so as to be in-line with VU house style*/
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.main-container {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5%;
+  padding-bottom: 30%;
+  padding-right: 10%;
+  padding-left: 10%;
+}
+
+h1.title {
+  font-size: 28px;
+  text-align: center;
+}
+
+h4.date { /* this is to affect the size of the date text in the YAML when it prints in html  */
+  font-size: 20px;
+  text-align: center;
+}
+
+p, summary {
+  font-size: 18px;
+}
+
+li {
+  font-size: 18px;
+  margin: 5px;
+}
+
+
+
+
+</style>
+
+\
+
+## What are codebooks/data dictionaries? {#codebooktips}
+
+Codebooks are important sources of data documentation. They can have different purposes and meanings depending on whether your data are quantitative or qualitative.
+\
+\
+
+### Codebooks for quantitative data
+
+Codebooks (sometimes called data dictionaries) are essential to understanding your data (both for yourself and any other users). Without a codebook it's often impossible to make sense of the information present in your data since variable names alone are often not enough to understand what a variable represents. Your codebook is also required for the correct interpretation of categorical variables and the meaning their values. Various statistical programs offer ways to label your variables and the values of your categorical variables, however, it is always advised to have a separate codebook containing this information, particularly when data are saved in a proprietary format. Codebooks can also be used to document variable-level information, so a codebook separate from your dataset is an essential document. 
+\
+\
+The [RDM LibGuide](https://libguides.vu.nl/rdm/data-documentation){target="_blank"} describes the elements that are essential for  a good codebook. You should also aim to include in your codebook (where applicable):
+
+* What each record in the dataset refers to
+  + In the case of questionnaires, this is usually a single respondent, but might also be a household
+  + In the case of experimental data, this could be repeated measurements for a single subject
+* Unit of measurement, if applicable
+* The meaning of any numerical representations of categorical variables (e.g. 1 = non-binary, 2 = female, 3 = male etc.)
+* The numerical codes for missing values 
+  + If there are various reasons why data could be missing (e.g. missing due to non-response versus missing due to questionnaire routing) make sure to describe this for each type of missingness.
+* The source used if variables (or the categories used in a variable) are based on existing standards
+* For questionnaire data, any [weighting variables](https://www.cessda.eu/Training/Training-Resources/Library/Data-Management-Expert-Guide/3.-Process/Weights-of-survey-data){target="_blank"} used, if applicable
+* Explanation of how new derived variables were created
+  + You can also refer to the code used to create the derived variable or the section of the [logbook](../definitions/Definitions.html#logbook) that describes the process
+
+While a  codebook tends to provide more specific data information, there can be overlap between what you document in a codebook and what you document in a [README file](../archiving/ArchivingGuidelinesFull.html#subsection9). You can opt to cross-reference between these two documents, rather than documenting the same thing in two places, however you must then ensure that these cross-references are maintained (i.e. don't go changing your folder structure and make it impossible to find the cross-referenced file(s) later on). 
+<!--IN future versions:
+**DISCUSS FURTHER THE OVERLAPS WITH README FILES (done) AND WHETHER A SEPARATE CODEBOOK FOR EACH DATA FILE IS NECESSARY OR WHETHER YOU CAN DESCRIBE CLUSTERS OF DATA IN ONE CODEBOOK**-->
+\
+\
+
+### Codebooks for qualitative data
+
+You may create a codebook when coding qualitative data (see Tip 1 on this [page about qualitative coding](https://www.cessda.eu/Training/Training-Resources/Library/Data-Management-Expert-Guide/3.-Process/Qualitative-coding){target="_blank"}).
+It is important to clearly document the meaning of the codes you create. 
+\
+\
+If you are using Atlas.ti for coding, a codebook can be created by exporting codes and code comments to Excel:
+
+* More information on Atlas.ti codebooks can be found at the bottom of this [page](https://doc.atlasti.com/QuicktourWin.v9/Codes/CodesWorkingWithQuickTour.html){target="_blank"}
+* Ensure that at a minimum each code and code comment are exported and included in your Atlas.ti codebook

@@ -1,0 +1,95 @@
+---
+title: "FGB Data Collection Software"
+date: "2022-07-21"
+output:
+  html_document:
+    theme: cerulean
+---
+
+<style type="text/css">
+
+
+.main-container {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5%;
+  padding-bottom: 15%;
+  padding-right: 10%;
+  padding-left: 10%;
+}
+
+h1.title {
+  font-size: 28px;
+  text-align: center;
+}
+
+h4.date { /* this is to affect the size of the date text in the YAML when it prints in html  */
+  font-size: 20px;
+  text-align: center;
+}
+
+p {
+  font-size: 18px;
+}
+
+li {
+  font-size: 18px;
+  margin: 5px;
+}
+
+table {
+  width: 100%;
+}
+
+table, td { 
+  padding: 15px;
+  vertical-align: top;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+}
+
+table th:first-of-type {
+    width: 10%;
+}
+table th:nth-of-type(2) {
+    width: 30%;
+}
+table th:nth-of-type(3) {
+    width: 30%;
+}
+table th:nth-of-type(4) {
+    width: 30%;
+}
+
+
+
+</style>
+
+This page gives an overview of the data collection software available at FGB and the VU, what the functionality of the software is, what requirements and considerations are necessary before using the software and where to get support.
+
+<!--&nbsp; is used to preseve blank spaces. somehow having this at the start of the table also results in all text being center-aligned-->
+
+--------------------------------------------------------------------------------------------------
+                                  Qualtrics               Survalyzer             Castor   
+------------------------------- ----------------------  ---------------------- -----------------------
+**Functionality**\                  Some details\
+
+
+**Privacy & Security**\
+
+&nbsp;&nbsp;  What can be\
+&nbsp; collected?\
+
+&nbsp; GDPR concerns\
+      
+&nbsp; Security guidance
+      
+**Pre-requisites for Use**
+
+    Access requirements\
+    
+    Registration process\
+    
+
+---------------------------------------------------------------------------------------------------

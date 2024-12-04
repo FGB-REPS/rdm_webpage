@@ -1,0 +1,195 @@
+---
+title: "FGB Security Tips: Physical Transport"
+date: "2022-09-28; Version 1.0"
+output: 
+  html_document:
+    theme: cerulean
+    toc: true
+    toc_depth: 5
+    toc_float: 
+      collapsed: false
+      smooth_scroll: true
+---
+
+
+<style type="text/css">
+
+/* change font for whole text so that it's in line with house style. For webpages that is Roboto  */
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+#TOC {
+  left: 0%;
+  top: 0%;
+}
+
+
+div.tocify {
+  width: 18%;
+}
+
+.tocify ul, .tocify li {
+  line-height: 25px;
+}
+
+
+.tocify-header .tocify-item {
+  font-size: 1.2em;
+}
+
+
+.tocify-subheader .tocify-item {
+  font-size: 1.0em;
+}
+
+/* following two commands get the text of TOC to indent properly */
+
+.tocify-header {
+    text-indent: initial;
+}
+
+.tocify-subheader > .tocify-item {
+  text-indent: initial;
+  padding-left: 2em;
+}
+
+/* max-width refused to change below unless I included the !important tag next to it. Found answer on this stack exchange https://stackoverflow.com/questions/34906002/increase-width-of-entire-html-rmarkdown-output 
+Seems only to be an issue when using TOC; not required to use !important on pages without TOC */
+
+.main-container {
+  max-width: 100% !important;
+  padding-right: 5%;
+  padding-top: 5%;
+  padding-bottom: 10%;
+}
+
+
+
+h1.title {
+  font-size: 28px;
+  text-align: center;
+}
+
+h4.date { /* this is to affect the size of the date text in the YAML when it prints in html  */
+  font-size: 20px;
+  text-align: center;
+}
+
+/* improve contrast for all a-tags and headers for accessibility */
+
+a {
+  color: #157bb7;
+}
+
+h1, h2, h3, h4 {
+  color: #105d89;
+}
+
+p {
+  font-size: 18px;
+}
+
+li {
+  font-size: 18px;
+  margin: 5px;
+}
+
+
+
+</style>
+
+Before you determine how best to physically transport your data, you should assess the [privacy risk](PrivacyRisks.html){target="_blank"} (and where applicable the [confidentiality risk](PrivacyRisks.html#confidentiality){target="_blank"}) for the [data asset(s)](../rdm/definitions/Definitions.html#dataasset){target="_blank"} you will be transporting. This will help you determine what extra protections you should apply to protect your data while it's being physically transported.
+
+-------------------
+
+
+## Technical Support for Research (TO3) {#to3}
+
+FGB researchers can borrow portable devices from the [TO3 lending service](https://vu.nl/en/employee/behavioural-and-movement-sciences-getting-started/reservation-lab-equipment-fgb){target="_blank"} for short-term use. Some equipment available for borrowing are:
+
+* A small selection of hardware [encrypted USB-sticks](#usb), as well as regular USB-sticks
+* A small selection of external hard drives
+* ~60-70 Windows [laptops](#laptops)
+* ~150 [iPads and iPods](#tablets)
+
+If you borrow devices from the TO3 lending service, you are expected to follow the guidance of this document. 
+
+-------------------
+
+## Portable Media {#portable}
+
+Portable devices are easily transported and are regularly used to collect and store data remotely. They include laptops, USB sticks, external hard drives, tablets, smartphones, DVDs, CDs and cameras. Because these devices are portable, they are easily stolen or lost and it is therefore essential that extra care be taken when using these devices. Data should only be stored on these devices [temporarily](SecurityBasics.html#portable){target="_blank"} (or with regards to laptops, data should be [removed](SecurityBasics.html#removal){target="_blank"} from the hard drive when it is no longer required); this advice is applicable regardless of the privacy/confidentiality risk category.
+
+### Laptops {#laptops}
+
+Best practices for working with laptops are described in the [Security Basics](SecurityBasics.html#laptops){target="_blank"} guide. These practices should be applied regardless of the privacy/confidentiality risk for your data. If you are borrowing a laptop from TO3, please note that:
+
+* TO3 laptops should only be used to collect "Green" or "Blue" data. Because these laptops are intended for short-term use by many different users, it is not feasible to require [full disk encryption](Encryption.html#fde){target="_blank"} of the hard drive nor individual login credentials for every user. 
+* If a TO3 laptop _must_ be used for the collection of "Red", "Orange" or "Yellow" data, the files should either be protected with [file-level encryption](Encryption.html#fle){target="_blank"} or stored on an [encrypted USB- or external hard drive](#usb) rather than the hard drive of the laptop. In such cases, these data must be moved to a [secure storage option](Storage.html){target="_blank"} as soon as possible.
+
+### USB Sticks/External Hard Drives/Flash Drives {#usb}
+
+**NB: Always use dedicated USB sticks/external drives. Either borrow from Technical Support ([TO3](#to3)) or purchase a stick/drive specifically for your research project. Do not use personal USB sticks/external drives.**
+
+Regardless of the privacy/confidentiality risk, all data temporarily stored on these portable drives should have some level of protection; your data are valuable and you don't want them to be publicly available before you're ready! This can be done by either [encrypting the files](Encryption.html#fle){target="_blank"} on a regular USB-stick or external hard drive, or by storing the data on an encrypted device.
+
+If you use an encrypted device, your options are hardware-encrypted or software-encrypted devices. If your data are "Red" or "Orange", use hardware-encrypted drives because they may be slightly more secure. Otherwise the choice is up to you as to which option you pick. Hardware-encrypted drives can be used on any operating system and they don't tax your computer resources during encryption and decryption; however, they are more expensive and if the hardware fails, it is much more difficult to recover the stored data. If the loss of your data would be an absolute disaster for your research, a software-encrypted drive may be a better choice, however, if you choose a software-encrypted drive and your data are "Red" or "Orange" it may be a good idea to add additional file-level [encryption](Encryption.html#fle){target="_blank"} to the data files stored on the device.
+
+Software-encrypted drives are a reasonable option for "Yellow", "Green" and "Blue" data. They are cheaper and have options available to recover the encrypted data, but they can tax your computers resources during encryption and decryption, and their use may be limited to only certain operating systems (i.e. some only run on Windows). **Be aware**: software-encrypted drives are only as secure as your computer is. If your computer is infected with malware or viruses, a hacker can easily access and crack the encryption on a software-encrypted drive through brute force. Therefore, make sure to have virus and malware scanners active on your computer (which you should do anyways).
+
+### DVDs/CDs
+
+Data storage on DVDs/CDs should be avoided; if this is your only option, storage on this medium **must only** be temporary. It is recommended that file-level [encryption](Encryption.html#fle){target="_blank"} be used to protect the data stored on DVDs/CDs, regardless of the privacy/confidentiality risk level; such encryption **must always** be used for "Red", "Orange" and "Yellow" data. Once data have been transferred to a [secure storage option](Storage.html){target="_blank"}, the DVD/CD must be destroyed.
+
+### Tablets/Smartphones/iPods {#tablets}
+
+**NB: Always use a dedicated tablet. Either borrow from Technical Support ([TO3](#to3)) or purchase a device specifically for your research project. Do not use personal tablets or smartphones.**
+
+Apple products produced from 2013 onwards are encrypted when they are locked by the user. All Android products running 5.0 and up can also be encrypted when locked, but the user needs to activate this encryption. Although encryption is activated when these devices are locked, anyone can unlock them unless the user activates a PIN code or biometric scan (finger print or iris scan) for locking and unlocking the device. It is therefore recommended to activate a PIN code or biometric scan whenever you are storing data on these devices. If you are borrowing an iPad or iPod from [TO3](#to3), please note that:
+
+* iPads and iPods are provided without any PIN codes, but you can activate this yourself. PIN codes should always be activated whenever these devices are used to collect "Red", "Orange" or "Yellow" data.
+  + Prior to activating a PIN code on any loaned device, consult with the TO3 technician from whom you loan the device about the use of a PIN. If the PIN is forgotten, the device may be rendered unusable.
+* Sometimes it is not feasible to have a PIN/biometric scan active on these devices, particularly when they are handed out to participants, for example, in a classroom setting. If a PIN/biometric scan cannot reasonably be used for your type of research, make sure that the data that will be collected do not have a risk higher than "Yellow" data. Also consider activating the PIN/biometric scan once it is feasible to do so (e.g. during transport after all data have been collected) and be extra [careful when transporting](#general) the devices back to the VU campus (e.g. preferably not via public transportation)
+
+
+### Cameras
+
+**NB: Always use a dedicated camera. Either borrow from Technical Support ([TO3](#to3)) or purchase a camera specifically for your research project. Do not use personal cameras.**
+
+There is no method for encrypting digital cameras. Although SD cards can be encrypted, they cannot be used in a camera if encryption has been activated and there is no way to de-encrypt the data using a camera. The safest and most convenient option when physically transferring data recorded on a camera is to store the camera in a locked safe (see [Analog Data](#analog) for further details).
+
+
+#### Best practices for video recordings
+
+Researchers who need to make video recordings can use either iPads or cameras. In general, iPads should be used because a PIN code can be activated to lock and encrypt the device, whereas this is not feasible for camera SD cards. Cameras are only superior to iPads with regards to zooming options and light capture in dark environments. If these features are not important, researchers making video recordings should use iPads with a PIN code. If zooming and light capture are essential to the research project, a [safe](#analog) must be used for storing cameras during transport.
+
+
+## Returning portable devices after use
+
+If you borrowed a portable device from VU IT or the [TO3 lending service](#to3), it is important to permanently [remove](SecurityBasics.html#removal){target="_blank"} all of your files from the device as per the instructions from TO3. Any files that are important for research, particularly for archiving, should be stored on an appropriate [VU storage option](Storage.html){target="_blank"} prior to the removal of the data from the portable device. Also make sure to turn off the PIN code or biometric access on Tablets/Smartphones/iPads/iPods prior to returning them.
+
+-------------------
+
+## Analog data  {#analog}
+
+Not all data are stored digitally. Analog data (paper notes, bodily materials with identifying labels, cassette recordings, photographs etc) may also be sensitive and these data should still be transported securely and with care. The safest option for storing these materials is in a locked briefcase or a portable locked safe. If these measures are absolutely not possible, it is strongly recommended not to use public transportation for travelling to and from the data collection site, particularly if the data are "Red", "Orange" or "Yellow" data. Obviously public transportation is often the only option for many researchers and research assistants, therefore, if public transportation must be used, make sure to review the tips [below](#general) on physically transporting data in a safe manner.
+
+-------------------
+
+## General Tips for Physically Transporting Data {#general}
+
+Whether data are physically locked away or locked with encryption, both methods only function to slow hackers and thieves down. Locked and encrypted data are never 100% safe therefore it's important to stay alert to not lose the data that you are physically transporting.
+
+* Whenever possible, and especially when working with "Red" and/or "Orange" data, try to find an alternative to public transportation. Obviously, this is not always feasible, therefore, when transporting data on public transportation stay alert and always keep track of your possessions.
+* Don’t throw your encrypted device into the bottom of a giant bag. Know where it is at all times.
+* Just like they say on the train, always check that you have all of your belongings before you depart.
+* Be aware of your surroundings and situations where pickpockets could steal your devices (i.e. don’t bring your research USB-stick to the café).
+* Whenever possible, immediately transfer the data from the research site to the location where you can upload the data to your [secure storage option](Storage.html){target="_blank"}. If this is not possible find a safe location to temporarily keep the device (e.g. your house) until you can transfer the data to secure VU storage. Basically, don’t carry around research data on your person during your free time.
+
+
+## Support
+
+If the advice described in this document is not feasible for your research, contact the [TO3 technicians](https://vu.nl/en/employee/behavioural-and-movement-sciences-getting-started/technical-support-for-research-to3){target="_blank"} as soon as possible to discuss possible alternatives. If they cannot assist you, you can get support from VU IT Security via the [Research Data Management Support Desk](https://vu.nl/en/employee/university-library/rdm-support-desk){target="_blank"}.
+

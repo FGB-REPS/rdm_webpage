@@ -1,0 +1,353 @@
+---
+title: "FGB Security Tips: De-identification of Data"
+date: "2023-10-18; Version 1.0.1"
+output: 
+  html_document:
+    theme: cerulean
+    toc: true
+    toc_depth: 4
+    toc_float: 
+      collapsed: false
+      smooth_scroll: true
+    includes: 
+      after_body: ../footer.html
+---
+
+
+<style type="text/css">
+
+/* change font for whole text so that it's in line with house style. For webpages that is Roboto  */
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+#TOC {
+  left: 0%;
+  top: 0%;
+}
+
+
+/* width of the TOC needs to be defined in div.tocify because it allows the width to be low when the TOC is next to the text, but let's it expand when it moves to above the text in a very small screen like on a mobile */
+
+div.tocify {
+  width: 15%;
+}
+
+.tocify ul, .tocify li {
+  line-height: 25px;
+}
+
+.tocify-header .tocify-item {
+  font-size: 1.2em;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.9em;
+}
+
+
+
+/* following two commands get the text of TOC to indent properly */
+
+.tocify-header {
+    text-indent: initial;
+}
+
+.tocify-subheader > .tocify-item {
+  text-indent: initial;
+  padding-left: 2em;
+}
+
+/* attempted to change highlight color on TOC, but nothing works; wanted to improve contrast for accessibility, but had no luck  */
+
+/* max-width refused to change below unless I included the !important tag next to it. Found answer on this stack exchange https://stackoverflow.com/questions/34906002/increase-width-of-entire-html-rmarkdown-output 
+Seems only to be an issue when using TOC; not required to use !important on pages without TOC */
+
+.main-container {
+  max-width: 100% !important;
+  padding-right: 5%;
+  padding-top: 5%;
+  padding-bottom: 10%;
+}
+
+
+
+h1.title {
+  font-size: 28px;
+  text-align: center;
+}
+
+h4.date { /* this is to affect the size of the date text in the YAML when it prints in html  */
+  font-size: 20px;
+  text-align: center;
+}
+
+
+p {
+  font-size: 18px;
+}
+
+li {
+  font-size: 18px;
+  margin: 5px;
+}
+
+/* improve contrast for all a-tags and headers for accessibility */
+
+a {
+  color: #157bb7;
+}
+
+h1, h2, h3, h4 {
+  color: #105d89;
+}
+
+summary {
+  font-size: 18px;
+}
+
+</style>
+
+\
+\
+
+You will see a lot of different words used to describe the process of making it harder or impossible to identify a specific person within your data: anonymization, pseudonymization, de-identification etc. The definitions of these terms can vary depending on context and opinion. For the purposes of this guide, de-identification will be used and the focus is mainly on making it as hard as possible to re-identify people in the data. It's important to also be aware that it isn't always feasible or appropriate to de-identify data so much that it is impossible to re-identify people: you might be able to achieve anonymous data this way, but in doing so you modify your data so much that you render it useless. 
+
+### Why De-identification?
+
+If de-identification doesn't necessarily create data that are impossible to re-identify, why do it? Because if you de-identify your data you can lower the [privacy risk categorization](PrivacyRisks.html){target="_blank"} of your data, which gives you more choice in determining:
+
+* Where you [store](Storage.html){target="_blank"} the de-identified data 
+* How you can [digitally](DigitalTransfer.html){target="_blank"} transfer or [physically](PhysicalTransport.html){target="_blank"} transport the data
+* Who can have access to the data, especially those with less experience handling data, such as [students](SecurityForStudents.html){target="_blank"}
+
+There are other advantages such as helping to maintain blinding in an RCT and, obviously, safeguarding the privacy of research subjects, which helps maintain public trust.
+
+### How is it done?
+
+The following steps serve as general guidance on how to de-identify your data. Different types of data and different purposes will affect how you carry out de-identification in your research, but you can use this guidance to assist you in the process. Additionally:
+
+* Many of the following steps will involve modifying your data, e.g. deleting certain variables, deleting unnecessary datasets, modifying categories, removing outliers etc. Before permanently modifying your data, consider whether you need to maintain a copy of the raw, unaltered data. This is most relevant for data that will be used in your analysis (as opposed to data that are just for communication with participants), especially if those raw data cannot be easily replicated. Ask yourself "Would someone need to review this data to be able to confirm my findings in the future?". Also note that if you are conducting [WMO-applicable research](https://english.ccmo.nl/investigators/legal-framework-for-medical-scientific-research/your-research-is-it-subject-to-the-wmo-or-not){target="_blank"} and/or research that falls under the [Good Clinical Practice guidelines](https://www.ema.europa.eu/en/ich-e6-r2-good-clinical-practice){target="_blank"}, that there are stricter requirements for maintaining your data; if these laws/guidelines apply to your research, check whether or not it's appropriate to permanently modify any of your data (including data necessary for communication with participants).
+
+* Make sure to document the steps you take to create your de-identified datasets: this documentation should, preferably, be in the form of a syntax or other programming code, but at a minimum you should document all modifications in a logbook.
+
+* Your research goals and the nature of your data may influence how far you can go in the de-identification process. You may only be able to complete steps 1-4; perhaps even that is not feasible. Go as far as you can in the de-identification process and once you've reached the endpoint that is feasible for your research, reassess the [privacy risks](PrivacyRisks.html){target="_blank"} posed by your data.
+
+#### Step 1: Write a data management plan {#step1}
+
+<details>
+<summary>Expand for details</summary>
+
+If you haven't done so already, stop what you're doing and go start your data management plan. You can use [DMPonline](https://dmponline.vu.nl/){target="_blank"} to write a DMP; it's designed to guide you through the process. You don't need to complete an entire plan to figure out how to de-identify your data; you do, however, need to understand the nature of the [data assets](../rdm/definitions/Definitions.html#dataasset){target="_blank"} you are using in your research, especially what these data will look like at the start of your research, as well as the form the data will ultimately need to take for you to carry out your analyses. 
+
+Some forms of raw data assets used at the start of research are:
+
+* Raw questionnaire data collected with a survey tool
+* A structured, tabular dataset of physical measurements
+* Clinical report forms
+* Video interviews
+* Diary entries from research subjects
+* fMRIs and other imaging data
+* Paper or digital consent forms
+
+
+</details>
+
+#### Step 2: Identify if there are any direct identifiers present {#step2}
+
+<details>
+<summary>Expand for details</summary>
+
+Once you have an idea of what your data assets are, consider the variables that you plan to collect for each data asset and determine whether any variables are [direct identifiers](../rdm/definitions/Definitions.html#directID){target="_blank"}. Also assess whether a direct identifier will be used in your analysis. For example, names and contact information, which are direct identifiers, are usually collected because you need to stay in touch with participants, but these variables don't usually need to be used in the analysis. Alternatively, facial images in video recordings, which are also are direct identifiers, may actually be essential for your analysis. Also consider whether the direct identifiers you are planning to collect even *need* to be collected for you to conduct your research: ask yourself if you could carry out your research without collecting some or all of these direct identifiers?
+
+</details>
+
+#### Step 3: Assess if data can be de-identified during collection {#step3}
+
+<details>
+<summary>Expand for details</summary>
+
+Consider whether or not you *need* to collect direct identifiers simultaneously with the other research data. For example, can you carry out one process that collects the direct identifiers and a separate process that collects the data you need for your research? <br> Considerations for how you can apply this concept are shown below for a variety of data types:
+
+**NB**: *It's strongly recommended to avoid collecting direct identifiers alongside your other data, but sometimes this cannot be avoided (e.g. recording facial images is necessary to observe and analyse facial expressions or personal interactions). At a minimum, take to the time to assess whether you are collecting direct identifiers unnecessarily or whether there are alternative means to collect directly identifying information so that it can be kept separate from your other research data at the outset.*
+
+##### {.tabset .tabset-fade}
+
+
+###### Audiovisual <br> Data
+
+* Is it feasible to record only audio rather than audio and video?
+  + Note that this doesn't make the data anonymous, but it does make the data less identifiable
+
+* Can you name audiovisual files (e.g. recordings of interviews) with a participant ID number rather than a participant name?
+  + It is standard practice to name your audiovisual files **without** using information that directly identifies your research subjects. If you absolutely *must* name your audiovisual files using the participant's name, do this temporarily and then follow the guidance in Step 4 as soon as possible
+
+* Is it feasible not to discuss specific names and places while recording an interview?
+
+* Is it feasible to avoid recording faces?
+
+###### Consent <br> Forms
+
+* Do you need to obtain directly identifying information such as name and contact information with your consent forms?
+  + In some forms of research, this is not necessarily required. It is necessary when doing research that involves repeated measurements, follow-up and communication with participants, especially for safety reasons (for example, this information is required for [WMO-applicable research](https://english.ccmo.nl/investigators/legal-framework-for-medical-scientific-research/your-research-is-it-subject-to-the-wmo-or-not){target="_blank"}). But if you collect all of your data from your participant at one moment and no further feedback or follow-up is required, then there is often no reason that name and/or contact information need to be collected (nor is this required by the [GDPR privacy law](https://gdpr-info.eu/){target="_blank"}). You still need to obtain [valid consent](https://assets.vu.nl/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/ae86a9d8-90a8-4d05-a924-4f6646a5351f/Informed_Consent_and_Information_Letter_Checklist_tcm263-917997.pdf){target="_blank"} because the data you collect from the subject can still be [indirectly identifying](../rdm/definitions/Definitions.html#indirectID){target="_blank"}, but you can reduce the risk of re-identification of your subjects by not collecting any unnecessary directly identifying information. 
+
+###### Imaging <br> Data
+
+* Can you name the imaging files using a participant ID number rather than a participant name? Does the participant name *need* to appear on the imaging file?
+  + Whenever possible, try to name your imaging files **without** using information that directly identifies your research subjects. If you absolutely *must* name your imaging files using the participant's name, do this temporarily and then follow the guidance in Step 4 as soon as possible
+
+* Does directly identifying information *need* to be recorded on the image?
+  + Whenever possible, don't include this information in the image itself. If you absolutely *must* include this information in the image, make sure to follow the guidance in Step 4
+
+###### Physical <br> Measurements and <br> Other Tabular Data
+
+* Is it feasible to record measurements while only identifying the participant with a participant ID number?
+
+* Will your method of collecting data collect direct identifiers that you don't need (e.g. location data from a smart device)? If so, what can you do to avoid this?
+  + Before you use an app or smart device for data collection, contact the [RDM Support Desk](https://vu.nl/en/employee/university-library/rdm-support-desk){target="_blank"} to find out if this is appropriate; many apps and smart devices collect data that you may not expect. Alternatively, you can contact the technicians at [TO3](https://vu.nl/en/employee/behavioural-and-movement-sciences-getting-started/technical-support-for-research-to3){target="_blank"} to request an in-house solution or to borrow devices that are more appropriate for research data collection. 
+  
+  
+###### Questionnaire <br> Data
+
+* Is it feasible to collect questionnaire responses without also asking for name and contact information in the same questionnaire?
+
+* Is it absolutely necessary to have long open text fields in your questionnaire, such as a "Comments" section? 
+  + It may be a requirement for your purposes, but be aware that these sections are also places where participants may report a **lot** of directly identifying information.
+
+* If you already have the e-mail addresses of your participants, is it feasible to invite them to participate in the questionnaire without uploading those e-mail addresses to the survey tool?
+  + See the "Secure Use of Questionnaire Tools" section in this [guide](https://fgbto3-web.labs.vu.nl/rdm/Images/Secure_Use_of_Questionnaire_Tools.pdf){target="_blank"} for advice on how you can do this
+
+* Will the survey tool collect direct identifiers that you don't need (e.g. IP-addresses)? If so, what can you do to avoid this?
+  + See the "Secure Use of Questionnaire Tools" section in this [guide](https://fgbto3-web.labs.vu.nl/rdm/Images/Secure_Use_of_Questionnaire_Tools.pdf){target="_blank"} for advice on how to avoid unnecessarily collecting direct identifiers like IP-addresses
+ 
+<!-- for some reason if you put both the ended hashes of the tabset as well as </details> you lose the next header in the TOC. If you only have the hashes it works.-->
+
+##### 
+
+#### Step 4: Separate the direct identifiers from research data {#step4}
+
+<details>
+<summary>Expand for details</summary>
+
+If step 3 is not feasible for some or all of the direct identifiers, then the directly identifying variables should be separated from the research data after data collection is complete (**remember** that this only applies to direct identifiers that are not required for your analyses). If you need direct identifiers to keep track of who your participants are, you should use these identifiers to create a [key file](../rdm/definitions/Definitions.html#keyfile){target="_blank"} that you can link to the research data with a random participant identification number. This key file should be kept separate from your other research data, either by storing it on a different [storage solution](Storage.html){target="_blank"} or, if on the same storage solution, in a separate, [encrypted](Encryption.html#fle){target="_blank"} folder that can only be opened by those who absolutely require access.
+
+**NB**: *If your data contain direct identifiers that are necessary for your analysis, the following steps are still useful. In step 4, you can still consider how to separate those direct identifiers that are not required for your analysis and in step 5, you can apply methods to make the [indirectly identifying information](../rdm/definitions/Definitions.html#indirectID){target="_blank"} in your data less identifying, if appropriate. Just remember that when you assess the [privacy risks](PrivacyRisks.html){target="_blank"} after de-identification is done, you still have some directly identifying information present that will impact these risks.*
+
+##### {.tabset .tabset-fade}
+
+###### Audiovisual <br> Data  
+
+* If for some reason the files for audiovisual recordings needed to temporarily be named based on directly identifying information about the participant, change those file names as soon as possible to the participant ID number.
+
+* If appropriate for your research, make a transcript of the audiovisual data and then follow the recommendations for textual data.
+
+* If appropriate for your research, blur facial images and use voice modification
+
+###### Consent <br> Forms
+
+* If your research requires that you be able to re-identify your participants for follow-up and communication purposes, the consent form is your best place to collect the information for this purpose. Whether you are using paper or digital consent forms, you can use the information collected via these forms to create your key file. Your key file can also include details about what the participant consented to (e.g. future follow-up research, sharing of their data, optional sub-studies etc.) so that you can keep track of this information in the future.
+
+* If you determined in step 3 that you don't need to collect directly identifying information with your consent forms for your research, then you don't necessarily need to create a key file. The only reason you may want to do so is if you ask for consent to additional purposes beyond your current research. For example, if your subjects were asked to consent to the sharing of their data for future research and some participants don't consent to this, then you need to keep track of which research data belong to those participants so that their data are not shared for new research. You could therefore create a file of participant identification numbers and the various conditions they did or did not consent to.
+
+
+###### Imaging <br> Data
+
+* If for some reason the imaging files needed to temporarily be named based on directly identifying information about the participant, change those file names as soon as possible to the participant ID number.
+
+* If it couldn't be avoided that direct identifiers were included in the image, remove this information from the imaging data and update the key file with this information as needed. 
+
+* If collecting neuroimaging such as fMRIs, deface the images.
+
+
+###### Physical <br> Measurements <br> and Other <br> Tabular Data
+  
+* If during data collection, you needed to collect physical measurements simultaneously with direct identifiers in one dataset, then once this is no longer necessary you should remove the direct identifiers from the research dataset. Review the directly identifying variables for anything new that should be added to the key file. Once you've updated the key file, you should delete the directly identifying variables from the research dataset. **Remember** that this does not apply to any directly identifying variables that you plan to use in your analyses; any information used for your analyses needs to be maintained for research integrity purposes.
+
+###### Questionnaire <br> Data
+
+* If you need to collect questionnaire data that includes direct identifiers, export the data from the survey tool and review the directly identifying variables for anything new that should be added to the key file. Once you've updated the key file, you should delete the directly identifying variables from the exported questionnaire data. **Remember** that this does not apply to any directly identifying variables that you plan to use in your analyses; any information used for your analyses needs to be maintained for research integrity purposes.
+
+* Take extra care to review open text fields, particularly "Comments" fields. Look for any self-reporting from the participant regarding their name, changes to their address etc. Depending on how you are using your "Comments" sections, you may want to simply copy the information provided by the participant over to the key file, thereby creating a comments variable in the key file. Alternatively, you may just wish to review the information the participant supplied and update the information already present in the key file. If the comment only consists of information relevant to the key file, you can delete it once the key file has been updated. If the comment also includes anything relevant to your research analyses, then keep the information relevant to your research and remove any of the information that you've already included in the key file.
+
+
+###### Textual <br> Data
+
+* If you have text data, such as a transcript of an interview, replace directly identifying information with pseudonyms. See the methods for qualitative data described [here](https://www.cessda.eu/Training/Training-Resources/Library/Data-Management-Expert-Guide/5.-Protect/Anonymisation){target="_blank"} for guidance.
+
+#####
+
+
+#### Step 5: Review and modify indirect identifiers {#step5}
+
+<details>
+<summary>Expand for details</summary>
+
+Carrying out this step will depend on the goals of your research and the statistical testing you aim to do. This means that this step may not be feasible or appropriate for every situation. This step may also only be applicable when you decide you want to share your data with others and therefore need to make it as unidentifiable as possible. Whatever your situation, it is worthwhile to review this step and see if at least some of the suggestions below can be applied to your data to reduce their identifiability. 
+
+The goals of this step is to look at your research data and assess whether it would be possible to single out at least one unique record about one of your research subjects: 
+
+* This may be possible if there's information about research subjects which is highly unique. For example, do you have a variable about occupation and one subject's occupation is Prime Minister of The Netherlands? 
+* This may be possible if you combine several variables about your subjects together into a profile and at least one research subject has a profile that is unique. For example, is there only one 50 year old pregnant subject whose due date is 01-07-2021? 
+
+When doing this assessment, don't forget to consider all of your data assets. For example, you may have a series of blood pressure measurements (which are generally not identifying), but if these measurements are linked via participants ID number to a key file or to detailed questionnaire data, then the blood pressure measurements are still identifiable. Additionally, don't forget that information about your research subjects may be known due to context, such as what you report in your research methods, even if that information isn't included in the data itself. 
+
+Before considering the various types of data, you should have an idea of what variables are indirect identifiers. Look at the variables in your dataset and assess what information could be relevant to re-identifying your research subjects. This is not just information like demographics (age, education, occupation, ethnicity etc.), but could also be specific dates, rare medical conditions, details about a specific event etc. Once you've determined which variables may be identifying, you need to decide to what extent you can modify the content of that variable, while still maintaining research data that are useful for your analysis. Examples are given below for several types of data. You may notice that, for some examples, de-identification happens simultaneously with the data processing you planned to do anyways (e.g. grouping categories with only a few records into larger categories, coding textual information into quantitative variables, coding observations etc.).
+
+##### {.tabset .tabset-fade}
+
+###### Audiovisual <br> Data
+
+* Are there potentially indirectly identifying features in the recording that could be blurred, e.g. unique tattoos?
+
+* Depending on the nature of the research, can the information in the audiovisual recording be recoded into something less identifiable, but more useful for analysis, e.g. coding of observed interactions between subjects?
+
+###### Imaging <br> Data
+
+* Remove any indirectly identifying data included in the image, e.g. age and weight may have automatically been included for calibration purposes. If this information must be maintained for your analysis or for proper interpretation of the data, store this information in a tabular dataset and link the data together via a participant ID number.
+
+* Consider whether the data could be spatially normalized and still useful for analysis
+
+###### Questionnaires, <br> Physical Measurements <br> and Other Tabular Data
+
+* Generalize specific information where possible: 
+  + Convert birthdate to birthyear or, if possible, age
+  + Convert 6-digit postal code to 4-digit postal code
+  + Convert specific dates of events to elapsed period of time between events, if possible
+  + Combine categories with very few records into larger categories (birth country into birth region or all non-Western birth countries into "Non-Western")
+  + Recode highly specific information into more general information
+      + E.g. if you ask about occupation and a respondent fills in Prime Minister of The Netherlands, you could recode the occupation as part of a "politician" category or, if that's not appropriate, just create an "Other" category and include this record there
+
+* Decide what to do with extreme values:
+  + Should cases with extreme values just be excluded from the dataset (e.g. because they are not useful for analysis)?
+  + Alternatively can you create cut-offs, for example everyone aged over 80 is coded as >80 years old?
+
+###### Textual <br> Data
+
+* Is there information present that is pretty unique to the subject or when combined with other details or context could be indirectly identifying? If so can this information be replaced with a pseudonym as described in the methods for qualitative data described [here](https://www.cessda.eu/Training/Training-Resources/Library/Data-Management-Expert-Guide/5.-Protect/Anonymisation){target="_blank"}?
+
+* Can the information be coded into overarching themes rather than highly unique, personal stories?
+
+* Can quotations of the data be created that express the relevant themes, but are generic enough to not be identifying?
+
+#####
+
+
+### What now?
+
+Once you've gone through these steps, you've made your data a lot less identifiable and perhaps also a lot easier to analyse. Before assuming that your data are anonymous at this point, it's important to be aware that for data to be considered anonymous by European legal bodies all of the three following considerations apply:
+
+* It must **not** be possible to single out at least one unique person in the dataset
+* It must **not** be possible to couple together a person's record across different datasets
+* It must **not** be possible to assume, with a strong likelihood, specific information about a person based on the other information present in the dataset
+
+These requirements are pretty difficult to meet. For example, MRI data will always be unique to an individual, unless you spatially normalize it. This doesn't mean that it's impossible to achieve anonymous data, but there may be further work required to get to that level *and* the anonymized data may not be so useful anymore for your planned research analyses. 
+
+**The most important thing to remember is that after you've gone through the de-identification steps in this guide, check whether the three conditions above apply before assuming that your data are now anonymized.**
+
+Lastly, don't forget that most research data doesn't exist in a bubble; you rarely just have imaging data or questionnaire data or physical measurements. The more data you have about a person the easier they are to re-identify. 
+
+
+
+
+

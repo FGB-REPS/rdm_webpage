@@ -1,0 +1,521 @@
+---
+title: "RDM Tools @ FGB: YODA"
+date: "`r Sys.Date()`; Version 1.4"
+output: 
+  html_document:
+    theme: cerulean
+    includes: 
+      after_body: ../../footer.html
+    toc: true
+    toc_depth: 3
+    toc_float: 
+      collapsed: false
+      smooth_scroll: true
+---
+
+<style type="text/css">
+
+/* need to ensure all text is in Roboto so as to be in-line with VU house style*/
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+#TOC {
+  left: 0%;
+  top: 0%;
+}
+
+div.tocify {
+  max-height: 100%;
+
+}
+
+/* if I don't want borders on the TOC and I don't want rounded edges I can call the following to .tocify
+  border-radius: 0;
+  border: none;
+*/
+
+
+.tocify ul, .tocify li {
+  line-height: 25px;
+}
+
+.tocify-header .tocify-item {
+  font-size: 1.2em;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 1.1em;
+}
+
+
+
+/* following two commands get the text of TOC to indent properly */
+
+.tocify-header {
+    text-indent: initial;
+}
+
+.tocify-subheader > .tocify-item {
+  text-indent: initial;
+  padding-left: 2em;
+}
+
+/* attempted to change highlight color on TOC, but nothing works; wanted to improve contrast for accessibility, but had no luck  */
+
+/* max-width refused to change below unless I included the !important tag next to it. Found answer on this stack exchange https://stackoverflow.com/questions/34906002/increase-width-of-entire-html-rmarkdown-output 
+Seems only to be an issue when using TOC; not required to use !important on pages without TOC */
+
+.main-container {
+  max-width: 100% !important;
+  padding-right: 5%;
+  padding-top: 5%;
+  padding-bottom: 10%;
+}
+
+
+h1.title {
+  font-size: 28px;
+  text-align: center;
+}
+
+h4.date { /* this is to affect the size of the date text in the YAML when it prints in html  */
+  font-size: 20px;
+  text-align: center;
+}
+
+p, summary {
+  font-size: 18px;
+}
+
+li {
+  font-size: 18px;
+  margin: 5px;
+}
+
+
+
+#singleindent {
+  margin-left: -2.5em;
+}
+
+#red {
+  border-style: solid;
+  border-width: 3px;
+  border-color: #ed0000;
+  padding: 20px;
+}
+
+#orange {
+  border-style: solid;
+  border-width: 3px;
+  border-color: #ff9000;
+  padding: 20px;
+}
+
+#yellow {
+  border-style: solid;
+  border-width: 3px;
+  border-color: #ffDf00;
+  padding: 20px;
+}
+
+
+#green {
+  border-style: solid;
+  border-width: 3px;
+  border-color: #379e00;
+  padding: 20px;
+}
+
+#blue {
+  border-style: solid;
+  border-width: 3px;
+  border-color: #6e99c4;
+  padding: 20px;
+}
+
+.NB {
+  color: #737373;
+}
+
+
+
+</style>
+
+\
+
+
+Per 2023, YODA is one of the [preferred storage options](../../Security/Storage.html#preferred){target="_blank"} and the [primary archiving solution](../archiving/ArchivingGuidelinesSummary.html){target="_blank"} for FGB research staff. The vast majority of research data produced at the faculty can be stored on YODA and it is the most appropriate option for [archiving](../definitions/Definitions.html#archivingdata){target="_blank"} the kinds of data produced in the faculty. 
+
+The following faculty guide offers more specifics on YODA, its pros and cons, and information on how to use it safely and effectively when working with the kinds of data produced within the faculty. 
+
+This faculty guide does not go into detail on technical information about YODA. Such details are described in the [VU YODA manual](https://yoda.vu.nl/site/){target="_blank"}. Relevant sections of the VU YODA Manual are referenced from this faculty guide. 
+
+
+## What is YODA?
+
+
+YODA (short for "Your Data") is a software tool that helps VU researchers better manage the storage and archiving of their research data, as well as work towards making their data [FAIR](../definitions/Definitions.html#FAIR){target="_blank"}. A brief primer on YODA is found on this [VUweb page](https://vu.nl/en/about-vu/more-about/yoda-simplify-your-research-data-management){target="_blank"} and in this [YouTube video](https://youtu.be/N67v2v62Qn0){target="_blank"}. 
+
+
+
+## What are the advantages of YODA? {#pros}
+
+YODA is a preferred storage and archiving option because:
+
+* YODA is approved for data with high [privacy](../../Security/PrivacyRisks.html){target="_blank"} and/or [confidentiality](../../Security/PrivacyRisks.html#confidentiality){target="_blank"} risks
+  * NB: if your data are _**very**_ high risk (a.k.a. "red" data), YODA may not be an appropriate solution. At a minimum, you will need to take extra measures to protect the data. See the [What are the faculty procedures for working with YODA?](#procedures) for more information.
+  
+* Access to YODA folders can be easily [managed](https://yoda.vu.nl/site/getting-started/user-management.html){target="_blank"} by the YODA "group manager". The group manager manages who is given access to the data, as well as the rights of each user (e.g. read-only rights vs. full read and edit rights).
+
+* YODA does not have a storage limit. It is also free to use for storage up to 500 GB and the [costs](https://yoda.vu.nl/site/getting-started/requesting-space.html){target="_blank"} beyond 500 GB are comparable to [SciStor](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012858){target="_blank"}.
+  
+* YODA is the only VU storage option that doubles as an [archive](https://yoda.vu.nl/site/getting-started/archiving.html){target="_blank"}. FGB researchers are [required to archive](../archiving/ArchivingGuidelinesFull.html#section1.1){target="_blank"} all data that are used in published research articles. 
+
+* YODA allows you to create [structured metadata](https://yoda.vu.nl/site/getting-started/metadata-add.html){target="_blank"} for describing your datasets. This is an important step towards achieving [FAIR data](../definitions/Definitions.html#FAIR){target="_blank"}.
+
+* YODA has a data [publishing](https://yoda.vu.nl/site/getting-started/publishing.html){target="_blank"} option that assigns a permanent identifier to the published materials. This will, at a minimum, openly publish the structured metadata about the dataset; whether the data itself is openly available depends on the chosen data access option. There must be a [metadata publication for any datasets used in a research article](../archiving/ArchivingGuidelinesFull.html#purereg){target="_blank"}, even if the data are not openly available, and YODA offers the easiest method to achieve this requirement. Published metadata in YODA are also ingested into PURE, which means you do not need to [manually register your archived datasets in PURE](../archiving/ArchivingGuidelinesFull.html#purereg){target="_blank"}
+  * **NB**: See the [Data Protection](#protection) and [Tips for Publishing](#furtherPublishing) sections for more information on this topic.
+
+## What can't YODA do? {#cons}
+
+* YODA does *not* provide the means to collect data itself. You will still need to use equipment, questionnaire tools or data-entry forms to collect data. However, once your data have been collected they can be stored on YODA. 
+
+* While YODA supports the generation of structured metadata to describe your datasets, it does not assist with the creation of other forms of data documentation, such as [codebooks](../documentation/Codebooks.html){target="_blank"} or [README files](../archiving/ArchivingGuidelinesFull.html#subsection9){target="_blank"}. However, these sources of data documentation can be produced by other means and stored on YODA. Alternatively this information can be stored elsewhere, and then using the YODA structured metadata, you can cross-reference between the data stored in YODA to the documentation that is stored elsewhere.
+  + **At FGB, a best practice is to openly publish this other documentation on OSF (as long as there are no confidentiality reasons not to publish this documentation), and then link to the DOI for the OSF publication in the YODA metadata. This is especially useful if the data are "restricted access" or "closed", because if all of the documentation are stored alongside the data in YODA, the documentation will also be restricted access or closed upon archiving and publication. See the [Tips for Archiving & Metadata](#furtherArchiving) and [Tips for Publishing](#furtherPublishing) sections for more information on this topic.**
+
+* YODA is not an electric lab notebook and it does not keep a record of data provenance (other than recording the date and time that files have been modified). You still need to manage your various data files and the processing they undergo. You will also need to keep good records of how your data were modified from raw to processed data, as well as how the data were analysed.
+
+* YODA is not a feasible option for high-performance computing (HPC). **If you require HPC, [SciStor](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012858){target="_blank"} is your best alternative. However, by itself SciStor is not appropriate for high ("orange") or very high risk ("red") data. If you have (very) high risk ("red" or "orange") data _and_ require high-performance computing, contact [IT for Research](mailto:itvo@vu.nl) for further assistance.**
+
+* YODA has some other technical limitations, including:
+  + YODA does not support working on files by multiple people simultaneously. 
+  + YODA does not use a [desktop client](https://wiki.surfnet.nl/display/RDRIVE/ownCloud+desktop+client){target="_blank"} to sync data to a local folder on your computer. 
+    + There are several [ways](https://yoda.vu.nl/site/getting-started/getting-started-drive.html){target="_blank"} to access data in YODA, but the most stable (and therefore recommended) option is to use [Cyberduck](https://yoda.vu.nl/site/getting-started/yoda-disk-cyberduck.html){target="_blank"}. The use of Cyberduck is discussed further below in the [data protection](#protection) section. Because of this limitation, YODA may not be the most appropriate option if your data are being frequently manipulated and modified, or if your data volumes are *very* large. 
+  + YODA does not offer fine-grained access rights for each subfolder you create. If not everyone involved in your research team is allowed access to all of the data, you will need multiple YODA groups to manage access to the data. This is discussed further [below](#accessmgmt). 
+<div id="singleindent">
+  **If these technical limitations will severely hinder your research, [Research Drive](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012856){target="_blank"} will likely be your best alternative. However, Research Drive does not have standard approval for high ("orange") or very high risk ("red") data. If you have _very high risk_ ("red") data and Research Drive appears to be your best alternative, contact the [RDM Support Desk](mailto:rdm@vu.nl). They will connect you to IT Security for further assistance. If you have _high risk_ ("orange") data see the [FGB Storage Guide](../../Security/Storage.html#preferred){target="_blank"} for further guidance on how to properly protect this data in Research Drive.**
+</div>
+
+\
+Further information on alternatives to YODA is found in the [FGB Storage Guide](../../Security/Storage){target="_blank"}.
+
+## What are the faculty procedures for working with YODA? {#procedures}
+
+### Initial planning
+    
+<!--as a subnote on step 1, I could put our faculty advice with regards to kostenplaats, particularly for studies that are already active, i.e. don't have additional grant funding for YODA. In that case which kostenplaats need to be cited. -->
+<div id="storageRequirements"></div>
+1. **Determine total storage requirements**:
+    * Knowing the expected total storage will help you to estimate the potential [costs](https://yoda.vu.nl/site/getting-started/requesting-space.html){target="_blank"}. 
+        * NB: This only applies if you will need to store and archive over 500GB of data. Below 500GB storage and archiving in YODA is free.
+        * NB2: You will need to determine which cost unit, order number or WBS element needs to be cited when completing your YODA request form. Even if you will not need more than 500GB of data, you need to provide this information during the intake process. If you are uncertain which cost unit/order number/WBS element to use, contact [Project Control](mailto:projectcontrol.fgb@vu.nl) for assistance.
+<div id="privacyRisks"></div>
+2. **Determine privacy/confidentiality risks**:
+    * Knowing the [privacy](../../Security/PrivacyRisks.html){target="_blank"} and/or [confidentiality](../../Security/PrivacyRisks.html#confidentiality){target="_blank"} risks posed by your data is important for determining how best to [handle and protect](#protection) the data while it is stored on YODA. Make sure to do this assessment for all of your [data assets](../definitions/Definitions.html#dataasset){target="_blank"}.
+        * NB: If you plan to store [very high-risk](../../Security/PrivacyRisks.html){target="_blank"} data in YODA, first contact rdm@vu.nl to determine whether YODA will be appropriate in your situation. If YODA is allowed, there are [additional data protection measures](#protection) that you will always need to follow.
+<div id="deidentification"></div>
+3. **Assess the feasibility and extent of data de-identification**:
+    * Whenever possible try to [de-identify](../../Security/Deidentification.html){target="_blank"} the data you plan to store in YODA as much as possible. By planning ahead on de-identification, you can better plan how to define your folder structure and how your data will be organized. De-identification usually lowers the privacy/confidentiality risk level for your data and if you lower these risks, you can limit how many additional [security measures](#protection) you will need to apply.
+        * NB: De-identification may not be appropriate in all cases or for all of your data, particularly your raw data; any de-identification done to your raw data must not irrevocably alter the integrity of the data. This is explained further in the [FGB Archiving Guidelines](../archiving/ArchivingGuidelinesFull.html#subsection4){target="_blank"}.
+        * NB2: If by de-identifying your data you are able to lower the risk from very high-risk to high-risk, you do not need to contact rdm@vu.nl for assistance. YODA can be used for all high-risk data.
+<div id="folderStructure"></div>
+4. **Determine an appropriate folder structure & who should have access to the data**:
+    * There is no one standard [folder structure](https://dmeg.cessda.eu/Data-Management-Expert-Guide/2.-Organise-Document/File-naming-and-folder-structure){target="_blank"}; you will need to define one that suits your data, your research purposes and the composition of your research team. You should discuss your planned folder structure in your data management plan. Because there is no one-size-fits-all solution, you can request guidance, if necessary, from the [FGB data stewards](mailto:research.data.fgb@vu.nl). <div id="accessmgmt"></div>
+    * An important consideration for your folder structure is whether everyone involved in your research project needs to have access to *all* of the data. This is important because in YODA the highest level folder for your project (called the "data compartment") is managed as a single group by the "[Group Manager](https://yoda.vu.nl/site/getting-started/user-management.html){target="_blank"}". The group manager should be a senior researcher on the project, such as the PI. They must be someone who is able to determine who else is allowed access to the data and what each user's access rights should be. Be aware: everyone given access to a data compartment has access to all of the folders and subfolders in that data compartment. The group manager can limit the rights of these users by giving them read-only access, but a read-only user can still view *and* download the data. If you determine that some data and materials must not be accessible to all members of the larger research group, you will need to request additional YODA data compartments from the [YODA admin](https://yoda.vu.nl/site/getting-started/requesting-space.html){target="_blank"}. 
+        * In the step 3, if you determined that de-identification of your data is possible by separating [directly identifying information](../definitions/Definitions.html#directID){target="_blank"} from the rest of the research data, and if not everyone on the research team needs access to the directly identifying data, then you should store this information in a separate YODA data compartment. That way you can ensure that only the members of the research team who _need_ to view the directly identifying data are able to do so.
+    * Once you have determined how many data compartments are needed, you can further define your folder structure within each data compartment. For example, you may want subfolders for:
+        * Sub-projects of the main research project
+        * Raw data
+        * Processed data
+        * Data processing and analysis scripts
+        * Research documentation
+        * Research output/results (e.g. tables, graphs, manuscripts)
+<div id="singleindent">
+It can also be useful to create separate subfolders if you are planning to openly [publish](https://yoda.vu.nl/site/getting-started/publishing.html){target="_blank"} some of your data and/or supporting materials. This is because when you archive and publish in YODA, you do so for an entire folder, so if you want some data and materials to be publicly available and some not, you will need to publish these individually in separate folders. This is explained further below in the sections on [Data Protection](#protection) and [Further Guidance](#furtherArchiving). Additionally, this [instruction manual](https://fgb-rdm.nl/Images/yoda_archiving_instructions.pdf){target="_blank"} offers a step-by-step guide for how to organize your files and folders if some data will be openly available and some will be restricted access.
+</div>
+4. **Determine what additional data protection measures must be applied**:
+    * In the next [section](#protection), the data protection measures are listed for each privacy/confidentiality risk level posed by your data. 
+        * NB: If both higher and lower risk data are all stored in the same data compartment, you should apply the measures necessary for the highest risk data present. The exception here is encryption: if the advice is to encrypt the higher risk data, but not the lower risk data, and they are both stored in the same data compartment, you only need to encrypt the higher risk data.
+
+<!-- ADD ALSO GUIDANCE ON DATASET REGISTRATION: THAT IF YODA IS NOT USED THEN RESEARCHERS ARE REQUIRED TO REGISTER INFORMATION ABOUT THEIR DATASETS IN PURE. There isn't a way right now to import the YODA data directly into PURE, so researchers will have to do both -->
+<!--Per April 2023 YODA support group meeting, some data stewards are opting to just wait until the information can be read into PURE. Will need to decide how to approach and eventually update archiving guidelines -->
+<!--Per May 2024 and after discussion with Dimitri Unger, have opted to update that YODA can be used for PURE registration as the process is mostly complete. Will discuss in section below -->
+
+### Data Protection {#protection}
+
+The protection measures advised here are in addition to the [basic security measures](../../Security/SecurityBasics.html){target="_blank"} that you are expected to apply to all research situations. The most important thing you *must* do regardless of the risks posed by your data is to activate [full-disk encryption](../../Security/Encryption.html#fde){target="_blank"} on your computer. If you have a VU green workspace, this is already active.
+
+Some additional basic terms of use for YODA are listed [here](https://yoda.vu.nl/docs/terms_of_use.pdf){target="_blank"}.
+
+##### {.tabset .tabset-fade}
+
+###### "Red" Data {#red}
+
+You may not be able to use YODA for very high-risk data. First contact the [RDM Support Desk](mailto:rdm@vu.nl?subject=Assistance%20requested:%20storage%20of%20very%20high%20risk%20data%20in%20YODA). They will bring you into contact with IT Security to determine if your data can be stored on YODA.
+
+If YODA can be used to store your data, you *must* follow these basic security measures, as well as any additional measures advised on an individual basis by the FGB research data stewards and/or YODA administrator.
+
+
+<h4><strong>Encryption</strong></h4>
+
+* The data must be [encrypted at the file level](../../Security/Encryption.html#fle){target="_blank"} [*](#encryptionNB).
+
+<h4><strong>Multifactor Authentication</strong></h4>
+
+* All users who have access to folders containing "Red" data must have multi-factor authentication (MFA) activated. MFA is automatically active for all YODA users per 22 Feb 2024.
+  * MFA for both internal and external users is provided via SURF's SRAM system. This [manual](https://yoda.vu.nl/site/docs/YODA_Upgrade_1.9_SRAM_INFO_Users_v02_20240206.pdf){target="_blank"} explains how to set up MFA for both existing users and new users.
+  * Ensure that any external users (anyone without a VU account) use their institutional/professional e-mail address to sign in to YODA; it is not allowed to use personal e-mail addresses for this purpose. 
+
+<h4><strong>Handling of Downloaded Data</strong></h4>
+
+* The best way to upload and download data in YODA is via [Cyberduck](https://yoda.vu.nl/site/getting-started/yoda-disk-cyberduck.html){target="_blank"}. However you *must* remember that with Cyberduck all of the files you access from YODA need to be copied locally. When working with "Red" data this means:
+    * **It is imperative that you have [full-disk encryption](../../Security/Encryption.html#fde){target="_blank"} activated on your computer**
+    * You must properly manage where the files are copied to on your computer, so that you can keep track of them. When setting up your connection to YODA with Cyberduck, you must define to which directory (folder location) the downloaded files should be copied to. This way you can better manage your local files, prevent accidental overwriting of these files and, most importantly, allow you to easily [delete](../../Security/SecurityBasics.html#removal){target="_blank"} all of the files in this location when you no longer need them stored locally.
+    * You must ensure that even read-only users are aware of these rules. Even though they are not able to modify any data in YODA, they can still download data. You must ensure that all read-only users will properly manage data that they have stored locally and that they remove the data from their computer as soon as it is no longer required.
+    * When working with "Red" data, all users *must* use a work computer for local data storage. Do not use your personal device. If you have *absolutely* no other option that to use your personal computer, you must:
+      * Ensure you are following all of the [basic security measures](../../Security/SecurityBasics.html){target="_blank"} required by the faculty
+      * Obtain a [hardware-encrypted](../../Security/PhysicalTransport.html#usb){target="_blank"} external hard drive and protect it with a strong [password](../../Security/SecurityBasics.html#passwords){target="_blank"}. All data that need to be copied from YODA via Cyberduck must be copied to this hardware-encrypted external hard drive instead of your personal computer's hard drive. Once the data on this hard drive is no longer needed, the data must be [permanently removed](../../Security/SecurityBasics.html#removal){target="_blank"} from the external hard drive or the external hard drive must be destroyed.
+        * NB: This hard drive must be _**dedicated**_ to this single research project and must be kept safe and secure at all times. This external hard drive **should not** be used for any other purpose and it should only be physically transported from one location to another when it is _**absolutely**_ necessary. The reason for using an encrypted external hard drive when using your personal computer is to partition the "Red" data from all other data on your personal hard drive and to make it easier to delete later. **It is not intended for day-to-day physical transport of the data**.
+        * If this option is not feasible, contact the [RDM Support Desk](mailto:rdm@vu.nl) for further guidance.
+
+<h4><strong>Students & YODA</strong></h4>
+
+* It is generally not recommended to allow students access to "Red" data. If this is absolutely necessary, then in addition to the measures described here, students must follow all of the requirements on this [page](../../Security/SecurityForStudents.html){target="_blank"}, particularly the requirements for the [storage of "Red" data](../../Security/SecurityForStudents.html#storage){target="_blank"}.
+
+<h4><strong>Secure Archiving & Publishing</strong></h4>
+
+* When archiving and publishing "Red" data in YODA, the data access option **must never** be "Open - Freely retrievable". When filling in the metadata form, under "Data Package Access" choose "restricted access" if you plan to provide access upon a valid request to [reuse](../definitions/Definitions.html#reusedata){target="_blank"} the data. Choose "closed access" if the data should never be accessed except for [verification purposes](../archiving/ArchivingGuidelinesFull.html#section1.1){target="_blank"}.
+  * You are required to plan for ongoing access requests. This means you must determine and document in your data management plan:
+    * Who will grant access to the data on the long-term?
+    * What is a valid request? Who can make valid requests?
+    * Are the data allowed to be reused for new purposes? (This depends on whether consent was obtained for this purpose. Discuss this further with the [FGB Privacy Champion](mailto:research.data.fgb@vu.nl) _**before**_ sharing any data for new purposes.)
+    * What legal considerations are necessary to share the data, e.g. data sharing agreements? 
+        + For assistance with data sharing agreements, contact legal@vu.nl
+
+* When filling in the metadata form, select "Custom license" in the "License" field
+  * See [below](#furtherArchiving) for more information on licensing data 
+
+* When filling in the metadata form, the "Data classification" field for "Red" data should be entered as "Very High"
+
+-------------------------
+
+<div id="encryptionNB" class="NB">
+*NB: When archiving encrypted data, there needs to be a plan for the long-term storage of the de-encryption keys. Ask the YODA administrators to keep a copy of the de-encryption keys, then print a copy of the keys and archive that in your department's paper archive for the same duration that the data will be archived.
+</div>
+
+###### "Orange" Data {#orange}
+
+<h4><strong>Key Files</strong></h4>
+
+* If the "Orange" data in question are [key files](../definitions/Definitions.html#keyfile){target="_blank"} these should be stored in a separate YODA data compartment from the rest of your data. Access to this data compartment must be limited to only those research team members who need to be able to identify your research subjects.
+  * If it is not feasible to organize and save your key files in a separate data compartment, the key files should be [encrypted](../../Security/Encryption.html#fle){target="_blank"} [*](#encryptionNB2) and kept in a separate subfolder from the de-identified research data. Only the research team members who need access to the key files should be given the de-encryption keys.
+
+<h4><strong>Multifactor Authentication</strong></h4>
+
+* All users who have access to folders containing "Orange" data must have multi-factor authentication (MFA) activated. MFA is automatically active for all YODA users per 22 Feb 2024.
+  * MFA for both internal and external users is provided via SURF's SRAM system. This [manual](https://yoda.vu.nl/site/docs/YODA_Upgrade_1.9_SRAM_INFO_Users_v02_20240206.pdf){target="_blank"} explains how to set up MFA for both existing users and new users.
+  * Ensure that any external users (anyone without a VU account) use their institutional/professional e-mail address to sign in to YODA; it is not allowed to use personal e-mail addresses for this purpose. 
+
+<h4><strong>Handling of Downloaded Data</strong></h4>
+
+* The best way to upload and download data in YODA is via [Cyberduck](https://yoda.vu.nl/site/getting-started/yoda-disk-cyberduck.html){target="_blank"}. However you *must* remember that with Cyberduck all of the files you access from YODA need to be copied locally. When working with "Orange" data this means:
+    * **It is imperative that you have [full-disk encryption](../../Security/Encryption.html#fde){target="_blank"} activated on your computer**
+    * You must properly manage where the files are copied to on your computer, so that you can keep track of them. When setting up your connection to YODA with Cyberduck, you must define to which directory (folder location) the downloaded files should be copied to. This way you can better manage your local files, prevent accidental overwriting of these files and, most importantly, allow you to easily [delete](../../Security/SecurityBasics.html#removal){target="_blank"} all of the files in this location when you no longer need them stored locally.
+    * You must ensure that even read-only users are aware of these rules. Even though they are not able to modify any data in YODA, they can still download data. You must ensure that all read-only users will properly manage data that has been stored locally and that they remove it from their computer as soon as it is no longer required.
+    * When working with "Orange" data, you *must* use your work computer. Do not use your personal device. If your personal device is your only option for accessing the data, you must:
+      * Ensure you are following all of the [basic security measures](../../Security/SecurityBasics.html){target="_blank"} required by the faculty
+      * Obtain a [hardware-encrypted](../../Security/PhysicalTransport.html#usb){target="_blank"} external hard drive and protect it with a strong [password](../../Security/SecurityBasics.html#passwords){target="_blank"}. All data that need to be copied from YODA via Cyberduck must be copied to this hardware-encrypted external hard drive. Once the data on this hard drive is no longer needed, the data must be [permanently removed](../../Security/SecurityBasics.html#removal){target="_blank"} from the external hard drive or the external hard drive must be destroyed.
+        * NB: This hard drive must be _**dedicated**_ to this single research project and must be kept safe and secure at all times. This external hard drive **should not** be used for any other purpose and it should only be physically transported from one location to another when it is _**absolutely**_ necessary. The reason for using an encrypted external hard drive when using your personal computer is to partition the "Orange" data from all other data on your personal hard drive and to make it easier to delete later. **The hard-drive is not intended for day-to-day physical transport of the data**.
+        * If this option is not feasible, contact the [RDM Support Desk](mailto:rdm@vu.nl) for further guidance.
+
+<h4><strong>Students & YODA</strong></h4>
+
+* Students who have access to the data must follow all of the requirements on this [page](../../Security/SecurityForStudents.html){target="_blank"}, particularly the requirements for the [storage of "Orange" data](../../Security/SecurityForStudents.html#storage){target="_blank"}.
+
+<h4><strong>Secure Archiving & Publishing</strong></h4>
+
+* When archiving and publishing "Orange" data in YODA, the data access option **must never** be "Open - Freely retrievable". When filling in the metadata form, under "Data Package Access" choose "restricted access" if you plan to provide access upon a valid request to [reuse](../definitions/Definitions.html#reusedata){target="_blank"} the data. Choose "closed access" if the data should never be accessed except for [verification purposes](../archiving/ArchivingGuidelinesFull.html#section1.1){target="_blank"}.
+  * You are required to plan for ongoing access requests. This means you must determine and document in your data management plan:
+    * Who will grant access to the data on the long-term?
+    * What is a valid request? Who can make valid requests?
+    * Are the data allowed to be reused for new purposes? (This depends on whether consent was obtained for this purpose. Discuss this further with the [FGB Privacy Champion](mailto:research.data.fgb@vu.nl) _**before**_ sharing any data for new purposes.)
+    * What legal considerations are necessary to share the data, e.g. data sharing agreements? 
+        + For assistance with data sharing agreements, contact legal@vu.nl
+
+* When filling in the metadata form, select "Custom license" in the "License" field
+  * See [below](#furtherArchiving) for more information on licensing data 
+
+* When filling in the metadata form, the "Data classification" field for "Orange" data should be filled in as "High"
+
+-------------------------
+
+<div id="encryptionNB2" class="NB">
+*NB: When archiving encrypted data, there needs to be a plan for the long-term storage of the de-encryption keys. Ask the YODA administrators to keep a copy of the de-encryption keys, then print a copy of the keys and archive that in your department's paper archive for the same duration that the data will be archived.
+</div>
+
+###### "Yellow" Data {#yellow}
+
+<h4><strong>Multifactor Authentication</strong></h4>
+
+* All users who have access to data compartments containing "Yellow" data must have multi-factor authentication (MFA) activated. MFA is automatically active for all YODA users per 22 Feb 2024.
+  * MFA for both internal and external users is provided via SURF's SRAM system. This [manual](https://yoda.vu.nl/site/docs/YODA_Upgrade_1.9_SRAM_INFO_Users_v02_20240206.pdf){target="_blank"} explains how to set up MFA for both existing users and new users.
+  * Ensure that any external users (anyone without a VU account) use their institutional/professional e-mail address to sign in to YODA; it is not allowed to use personal e-mail addresses for this purpose. 
+
+<h4><strong>Handling of Downloaded Data</strong></h4>
+
+* The best way to upload and download data in YODA is via [Cyberduck](https://yoda.vu.nl/site/getting-started/yoda-disk-cyberduck.html){target="_blank"}. However you *must* remember that with Cyberduck all of the files you access from YODA need to be copied locally. When working with "Yellow" data this means:
+    * **It is imperative that you have [full-disk encryption](../../Security/Encryption.html#fde){target="_blank"} activated on your computer**
+    * You must properly manage where the files are copied to on your computer, so that you can keep track of them. When setting up your connection to YODA with Cyberduck, you must define to which directory (folder location) the downloaded files should be copied to. This way you can better manage your local files, prevent accidental overwriting of these files and, most importantly, allow you to easily [delete](../../Security/SecurityBasics.html#removal){target="_blank"} all of the files in this location when you no longer need them stored locally.
+    * You must ensure that even read-only users are aware of these rules. Even though they are not able to modify any data in YODA, they can still download data. You must ensure that all read-only users will properly manage data that has been stored locally and that they remove it from their computer as soon as it is no longer required.
+
+<h4><strong>Students & YODA</strong></h4>
+
+* Students who have access to the data must follow all of the requirements on this [page](../../Security/SecurityForStudents.html){target="_blank"}, particularly the requirements for the [storage of "Yellow" data](../../Security/SecurityForStudents.html#storage){target="_blank"}.
+
+<h4><strong>Secure Archiving & Publishing</strong></h4>
+
+* When archiving and publishing "Yellow" data in YODA, the data access option **must never** be "Open - Freely retrievable". When filling in the metadata form, under "Data Package Access" choose "restricted access" if you plan to provide access upon a valid request to [reuse](../definitions/Definitions.html#reusedata){target="_blank"} the data. Choose "closed access" if the data should never be accessed except for [verification purposes](../archiving/ArchivingGuidelinesFull.html#section1.1){target="_blank"}.
+  * You are required to plan for ongoing access requests. This means you must determine and document in your data management plan:
+    * Who will grant access to the data on the long-term?
+    * What is a valid request? Who can make valid requests?
+    * Are the data allowed to be reused for new purposes? (This depends on whether consent was obtained for this purpose. Discuss this further with the [FGB Privacy Champion](mailto:research.data.fgb@vu.nl) _**before**_ sharing any data for new purposes.)
+    * What legal considerations are necessary to share the data, e.g. data sharing agreements? 
+        + For assistance with data sharing agreements, contact legal@vu.nl
+
+* When filling in the metadata form, select "Custom license" in the "License" field
+  * See [below](#furtherArchiving) for more information on licensing data 
+
+* When filling in the metadata form, the "Data classification" for "Yellow" data should be filled in as "Medium"
+
+
+###### "Green" Data {#green}
+
+The following information applies to lower risk *personal* data. If your data are not [personal data](../definitions/Definitions.html#personaldata){target="_blank"}, and they have a low [confidentiality](../../Security/PrivacyRisks.html#confidentiality){target="_blank"} risk, they can be handled as "Blue" data in YODA (see next tab). 
+  * **NB: It is the researcher's responsibility to determine whether or not the data are personal data. If you are uncertain, contact the [FGB Privacy Champion](mailto:research.data.fgb@vu.nl) before making the data open**.
+  
+Green data may be lower risk, but it is still wise to prevent unauthorized access to the data, since that could cause corruption or loss of the data. The following guidance will help with this.
+
+<h4><strong>Multifactor Authentication</strong></h4>
+
+* MFA is automatically active for all YODA users per 22 Feb 2024.
+  * MFA for both internal and external users is provided via SURF's SRAM system. This [manual](https://yoda.vu.nl/site/docs/YODA_Upgrade_1.9_SRAM_INFO_Users_v02_20240206.pdf){target="_blank"} explains how to set up MFA for both existing users and new users.
+  * Ensure that any external users (anyone without a VU account) use their institutional/professional e-mail address to sign in to YODA; it is not allowed to use personal e-mail addresses for this purpose.
+
+<h4><strong>Handling of Downloaded Data</strong></h4>
+
+* The best way to upload and download data in YODA is via [Cyberduck](https://yoda.vu.nl/site/getting-started/yoda-disk-cyberduck.html){target="_blank"}. However you *must* remember that with Cyberduck all of the files you access from YODA need to be copied locally. When working with "Green" data this means:
+    * You must properly manage where the files are copied to on your computer, so that you can keep track of them. When setting up your connection to YODA with Cyberduck, you must define to which directory (folder location) the downloaded files should be copied to. This way you can better manage your local files, prevent accidental overwriting of these files and, most importantly, allow you to easily [delete](../../Security/SecurityBasics.html#removal){target="_blank"} all of the files in this location when you no longer need them stored locally.
+    * You must ensure that even read-only users are aware of these rules. Even though they are not able to modify any data in YODA, they can still download data. You must ensure that all read-only users will properly manage data that has been stored locally and that they remove it from their computer as soon as it is no longer required.
+
+<h4><strong>Students & YODA</strong></h4>
+
+* Students who have access to the data must follow all of the requirements on this [page](../../Security/SecurityForStudents.html){target="_blank"}, particularly the requirements for storage of ["green & blue" data](../../Security/SecurityForStudents.html#storage){target="_blank"}.
+
+<h4><strong>Secure Archiving & Publishing</strong></h4>
+
+* When archiving and publishing "Green" data in YODA, the data access option **cannot** be open *by default* because the data are still technically [personal data](../definitions/Definitions.html#personaldata){target="_blank"} under the [GDPR](https://gdpr-info.eu/){target="_blank"}. However, if you obtained valid consent from your participants to the public sharing of their data, then open data access may be possible. In that case, you can choose the "Open - Freely retrievable" option under "Data Package Access" in the metadata form. 
+  * **NB: You _must_ discuss this with the [FGB Privacy Champion](mailto:research.data.fgb@vu.nl) _prior_ to obtaining consent from your participants and _prior_ to openly publishing the data**.
+* If the "Green" data cannot be openly published, then when filling in the metadata form, under "Data Package Access" choose "restricted access" if you plan to provide access upon a valid request to [reuse](../definitions/Definitions.html#reusedata){target="_blank"} the data. Choose "closed access" if the data should never be accessed except for [verification purposes](../archiving/ArchivingGuidelinesFull.html#section1.1){target="_blank"}.
+  * You are required to plan for ongoing access requests. This means you must determine and document in your data management plan:
+    * Who will grant access to the data on the long-term?
+    * What is a valid request? Who can make valid requests?
+    * Are the data allowed to be reused for new purposes? (This depends on whether consent was obtained for this purpose. Discuss this further with the [FGB Privacy Champion](mailto:research.data.fgb@vu.nl) _**before**_ sharing any data for new purposes.)
+    * What legal considerations are necessary to share the data, e.g. data sharing agreements? 
+        + For assistance with data sharing agreements, contact legal@vu.nl
+    
+
+* When filling in the metadata form, the "License" field should filled in with "Custom license" if the data are archived as "restricted access" or "closed". If the data are archived as "open - freely retrievable", select an appropriate license from the available options.
+  * See [below](#furtherArchiving) for more information on licensing data 
+
+* When filling in the metadata form, the "Data classification" for "Green" data should be:
+    * "Medium" if the data must be archived as "restricted access" or "closed" (see previous point)
+    * "Low" if the data can be archived as "open - freely retrievable" (see previous point)
+
+###### "Blue" Data {#blue}
+
+
+Even if your data are anonymous/anonymized or non-personal data with a low confidentiality risk, there are measures you should apply to keep the data safe. Even though the data are fairly low-risk with regards to privacy and confidentiality, they still have value to you and you don't want them to be publicly disclosed before you are ready to share them. You should also prevent unauthorized access to the data, since that could cause corruption or loss of the data. 
+
+<h4><strong>Multifactor Authentication</strong></h4>
+
+* MFA is automatically active for all YODA users per 22 Feb 2024.
+  * MFA for both internal and external users is provided via SURF's SRAM system. This [manual](https://yoda.vu.nl/site/docs/YODA_Upgrade_1.9_SRAM_INFO_Users_v02_20240206.pdf){target="_blank"} explains how to set up MFA for both existing users and new users.
+  * Ensure that any external users (anyone without a VU account) use their institutional/professional e-mail address to sign in to YODA; it is not allowed to use personal e-mail addresses for this purpose.
+  
+<h4><strong>Handling of Downloaded Data</strong></h4>
+
+* The best way to upload and download data in YODA is via [Cyberduck](https://yoda.vu.nl/site/getting-started/yoda-disk-cyberduck.html){target="_blank"}. With Cyberduck all of the files you access from YODA need to be copied locally. It is therefore wise to properly manage where the files are copied to on your computer, so that you can keep track of them. When setting up your connection to YODA with Cyberduck, you should define to which directory (folder location) the downloaded files should be copied to. By managing your local files well, you can prevent accidental overwriting of these local files.
+
+<h4><strong>Students & YODA</strong></h4>
+
+* Students who have access to the data must follow all of the requirements on this [page](../../Security/SecurityForStudents.html){target="_blank"}, particularly the requirements for storage of ["green & blue" data](../../Security/SecurityForStudents.html#storage){target="_blank"}.
+
+<h4><strong>Secure Archiving & Publishing</strong></h4>
+
+* When archiving and publishing "Blue" data in YODA, the default is to make the data open. When filling in the metadata form, under "Data Package Access" in the metadata form, choose the "Open - Freely retrievable" option. 
+  * If the data are about human research subjects, it is the researcher's responsibility to determine whether or not the data are truly anonymous/anonymized. If you are uncertain, contact the [FGB Privacy Champion](mailto:research.data.fgb@vu.nl) before making the data openly accessible.
+
+* When filling in the metadata form, select an appropriate license from the available options in the "License" field
+  * See [below](#furtherArchiving) for more information on licensing data 
+
+* When filling in the metadata form, the "Data classification" for "Blue" data should be filled in as "Low"  
+
+#####
+
+
+
+### Further guidance {#further}
+
+#### Tips During Active Research {#furtherResearch}
+
+* During the active research phase, you should store your data in the [YODA "research" folder](https://yoda.vu.nl/site/getting-started/getting-started-portal.html){target="_blank"}. This is where the data compartments that the YODA admin creates for you will first appear.
+
+* During your active research, you may have data that you want to avoid accidentally modifying, but that aren't ready to be archived. To protect this data from accidental alteration, you can "lock" the folder containing the data by clicking the "Action" button on the top right and selecting "Lock". The locked data are then made read-only. Locking data is reversible (simply select "Unlock" from the "Action" button), whereas archiving data in the "YODA vault" is permanent. 
+    * "Locking" in YODA has nothing to do with encryption or preventing access to a folder. 
+    * You don't need to lock an entire data compartment. Simply navigate to the folder you want to lock and the "Action" button will appear within that folder.
+    * It's a good idea to lock folders containing raw data to prevent unintentional alteration. This is especially important if the raw data cannot be replicated. 
+  
+* During active research and when collaborating with others, you must be very careful to avoid simultaneous use and modification of a data file. YODA has no way to handle simultaneous modification, **so whoever saves the data last wins**. 
+  * To avoid this, make sure only one user at a time is working with a given data file.
+
+#### Tips for Archiving & Metadata {#furtherArchiving}
+
+* Once your research is complete and the associated data and materials (called the "YODA data package") need to be archived, you should archive the data package in the YODA ["vault"](https://yoda.vu.nl/site/getting-started/archiving.html){target="_blank"}. Information on _when_ you should archive your research materials, as well as _which materials_ should be archived with the data, can be found in the [FGB Archiving Guidelines](../archiving/ArchivingGuidelinesSummary.html){target="_blank"}
+  * Detailed guidance with screenshots on how to archive open and restricted data simultaneously can be found in this [instruction manual](https://fgb-rdm.nl/Images/yoda_archiving_instructions.pdf){target="_blank"}
+  * When you archive data in the vault, you will need to complete the [metadata form](https://yoda.vu.nl/site/getting-started/metadata-add.html){target="_blank"}.
+      * The mandatory fields in the YODA metadata form don't account for all of the information required by our faculty archiving guidelines. Make sure to also include the information required by these [guidelines](https://fgb-rdm.nl/rdm/archiving/ArchivingGuidelinesFull.html#subsection9){target="_blank"} when filling in the YODA metadata form.
+      * A YODA data manager will review the metadata and make sure that it is sufficient and complete. **The data manager is _not_ responsible for checking whether you have chosen the correct setting for the "data classification" and "data package access" fields. It is up to you to have determined this prior to submitting your data to the vault. You can get support ahead of time from the [FGB privacy champions](mailto:research.data.fgb@vu.nl) or the [RDM Support Desk](mailto:rdm@vu.nl)**. <div id="safePublishing"></div>
+  * As discussed in the [data protection](#protection) section, the data package access field must, in most cases, be either "restricted access" or "closed". If you obtained consent from your research participants to share the data for [reuse](../definitions/Definitions.html#reusedata){target="_blank"}, select "restricted access"; if you did not obtain this consent or the data cannot be reused, select "closed". "Closed" data are still subject to verification and research integrity requirements.
+  * If you have some data to submit to the archive that must be "restricted access" or "closed" and some other data that can be "open", make sure to create a subfolder for the "open" data and a separate subfolder for the "restricted access"/"closed" data. Then submit each set of data to the vault separately at the level of each of these subfolders. In other words, go to the "restricted access" folder, make sure the metadata is accurate and then submit to the vault from this folder. Repeat this process for the "open access" folder. If you submit everything all at once at the top level folder of your data compartment, the system will only follow what has been entered into the "data package access" field for this top level folder. This would mean that all of the subfolders within this top level folder will either all be "open" or all be "restricted"/"closed".
+      * If you've submitted both an "open access" folder and a "restricted access"/"closed" folder to the vault, you can still ensure that these folders stay linked by cross-referencing to the folders in the "related data package" metadata field. This field can also be used to reference other related materials that are stored in locations other than YODA (for example, documentation stored on OSF) and this field can be used to reference any research articles published using the data. 
+  * If some of the metadata will be the same across several subfolders, you can save time by entering the common information at the level of the "parent" folder (i.e. the folder that contains all of the subfolders). **NB: You do _not_ need to fill in all of the required fields at this point, since that information may vary for each of your subfolders). Required fields only need to be filled in when you are ready to submit a folder to the vault**. Once you've filled in the common information for the parent folder, go to the subfolder, choose to "clone from parent folder" and the metadata from the parent folder will be copied into the metadata for the subfolder. 
+  * When you are completing your metadata, you also need to select an appropriate license: "restricted access" and "closed" data require a custom license, and "open-freely retrievable" data need to be licensed with one of the options listed in the metadata form
+    * You can find more information on the open licenses on the [Creative Commons webpage](https://creativecommons.org/share-your-work/){target="_blank"}
+    * If you need to use a custom license, you can obtain a template from the [FGB Research Data Stewards](mailto:research.data.fgb@vu.nl)
+    * **NB:** You need to make the completed custom license openly available to any party that may need to request access to the data. Therefore, you can't submit the license document in the same folder as restricted access/closed data because any third party won't be able to see the license without requesting access first (defeating the purpose of the license). FGB recommends publishing the license on [OSF](https://osf.io/abwzm/){target="_blank"} and cross-referencing to this OSF publication in your YODA metadata in the "related data package" field. You can also consider putting all of the research documentation that can be openly shared with others (such as the [README](https://fgb-rdm.nl/rdm/archiving/ArchivingGuidelinesFull.html#subsection9){target="_blank"}) on OSF and cross-referencing to this OSF publication in the YODA metadata. And a third option is to use separate a YODA folder, one that is categorized as "open-freely retrievable", for the license and all of the documentation that can be openly published, and then cross-referencing to this in your YODA metadata.
+  * After data are accepted to the vault, they can no longer be changed. The metadata however can still be modified if necessary.
+
+  
+#### Tips for Publishing {#furtherPublishing}
+
+* You can [publish](https://yoda.vu.nl/site/getting-started/publishing.html){target="_blank"} any materials that have been submitted to the vault. Publishing is required when the data have been used for a research article. **This does not mean that the data are made openly available as long as you followed the guidance in the section on [Data Protection](#protection).** Most FGB datasets will be ["restricted access" or "closed"](#safePublishing), resulting in the metadata being openly published (and therefore visible to the world), which gives the dataset a DOI permanent identifier, but the dataset itself will not be openly available.
+  * If you submitted a subfolder to the vault with materials that are allowed to be open access, as described [previously in the Tips for Archiving](#safePublishing), then those materials will be openly available once you publish this subfolder. 
+  * Metadata can be updated after publishing if changes are necessary
+    * This is especially useful if you publish subfolders separately, but need to cross-reference them to each other (see [previous "Tips for Archiving" section](#safePublishing)). You can return to the metadata field "related data package" after publishing is complete and add the DOIs for the cross-referenced subfolders. You can also add the DOIs for any openly published licenses or other documentation that have been published on OSF.
+  * If you publish in YODA, the metadata from that publication will be used by the VU to register your dataset in [PURE](https://vu.nl/en/employee/research-data-support/vu-research-portal-pure){target="_blank"}. PURE registration of datasets is a [requirement](../archiving/ArchivingGuidelinesFull.html#section4){target="_blank"} whenever data are archived. 
+    
+
+
+
+## Who can I speak with for assistance?
+
+At FGB, you can start by contacting the [faculty data stewards](mailto:research.data.fgb@vu.nl). They are responsible for basic YODA questions. If they are unable to assist you, you will be forwarded to the YODA administrators.
+
+## Reference materials
+
+* [VU YODA manual](https://yoda.vu.nl/site/){target="_blank"}: provides technical guidance on the processes described above, such as how to carry out the group manager function or how to set up a connection with Cyberduck. 
+
+* [SURF YODA manual](https://servicedesk.surf.nl/wiki/display/WIKI/Yoda+user+guide){target="_blank"}: provides further technical advice that supplements the VU YODA manual.

@@ -1,0 +1,131 @@
+---
+title: "RDM @ FGB: External RDM Training Events"
+date: "2022-12-07; Version 1.0"
+runtime: shiny
+output: 
+  html_document:
+    theme: cerulean
+---
+
+
+<style type="text/css">
+
+/* need to ensure all text is in Roboto so as to be in-line with VU house style*/
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.main-container {
+  max-width: 2400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5%;
+  padding-bottom: 30%;
+  padding-right: 10%;
+  padding-left: 10%;
+}
+
+h1.title {
+  font-size: 28px;
+  text-align: center;
+}
+
+h4.date { /* this is to affect the size of the date text in the YAML when it prints in html  */
+  font-size: 20px;
+  text-align: center;
+}
+
+p, summary {
+  font-size: 18px;
+}
+
+li {
+  font-size: 18px;
+  margin: 5px;
+}
+
+
+a {
+  color: #157bb7;
+}
+
+h1, h2, h3, h4 {
+  color: #105d89;
+}
+
+</style>
+
+\
+\
+
+VU Amsterdam offers a variety of training programs and workshops to help you learn about research data management. See the [VU Research Data Support page](https://vu.nl/en/about-vu/more-about/training-and-workshops){target="_blank"} for the latest information on these events.
+
+Below you can find information on training events offered by external organizations. FGB and VU Amsterdam are not affiliated with any provider of these external training programs. Therefore, any questions about the event should be directed to the organization responsible. You can find contact information for each event via the event link.
+
+\
+
+
+```{r setup, include=FALSE}
+##this is how you set standard options that are used frequently in the document. In this case, that r chucks will always display
+##see https://rmarkdown.rstudio.com/lesson-3.html for list of chunk options
+knitr::opts_chunk$set(echo = FALSE)
+
+#in order to create an R-shiny app with Rmarkdown I used the information on this page as a basis https://shiny.rstudio.com/articles/interactive-docs.html with some guidance from this tutorial https://shiny.rstudio.com/tutorial/written-tutorial/lesson1/ (however mainly used the one on RMarkdown because a lot of the extra steps are handled by doing it in RMarkdown)
+
+```
+
+
+```{r}
+events <- readxl::read_xlsx("data/training_events.xlsx")
+#make sire start and end date are set as.Date()
+events$event_startdate <- as.Date(events$event_startdate)
+events$event_enddate <- as.Date(events$event_enddate)
+#make a df for just future events
+
+events_current <- dplyr::filter(events, event_startdate >= Sys.Date())
+```
+
+```{r}
+
+#used single checkbox from the widget gallery https://shiny.rstudio.com/gallery/widget-gallery.html
+
+ # Copy the line below to make a checkbox
+  checkboxInput("checkbox", label = "Include past events", value = FALSE)
+
+
+```
+
+
+
+
+```{r results='asis'}
+# used this page to help with rendering data table https://shiny.rstudio.com/articles/datatables.html
+
+DT::renderDataTable({
+  if (input$checkbox != TRUE) {
+    #used DT package for interactive table. See https://rstudio.github.io/DT/
+    DT::datatable(events_current, colnames = c("Start Date", "End Date", "Event Name", "Event Provider", "Event Description", "Event Link", "Keywords"),
+              rownames = FALSE,
+              filter = 'top', options = list(
+                pageLength = 20, autoWidth = TRUE
+              ),
+            escape = FALSE
+            )
+    }
+  else {
+    DT::datatable(events, colnames = c("Start Date", "End Date", "Event Name", "Event Provider", "Event Description", "Event Link", "Keywords"),
+              rownames = FALSE,
+              filter = 'top', options = list(
+                pageLength = 20, autoWidth = TRUE
+                ),
+            escape = FALSE
+            
+            )
+    }
+})
+
+
+```
+
+

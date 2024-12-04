@@ -1,0 +1,31 @@
+Discussion points for YODA
+
+For REPS
+
+1. Re: very-high risk data. Originally said to contact rdm@vu.nl to check if YODA is feasible, but maybe better if researchers contact research.data.fgb@vu.nl to see if "very high-risk" data can go in YODA or not based on our assessment
+  a. Will discuss with Stephan where the cut-off is for when very high-risk can never, ever, ever go in YODA. If such a cut-off is crossed by a researcher then we forward them to rdm@vu.nl. Sound good?
+
+2. Re: MFA and medium-risk data. I've added a statement that until MFA is available and if external users need to be added, to contact research.data.fgb@vu.nl so that there can be a discussion about either alternative storage solutions or encryption. Is that a good idea?
+  a. We could technically apply this same logic to high-risk data, but I'd rather not have workarounds for high-risk data. Medium-risk data seems a safer option to experiment.
+  
+3. I've stated for medium-risk data that the data access field must never be filled in as open. This is because this data is still very much personal data with some risk and so I'm not convinced consent can be validly obtained for public disclosure. With low-risk data, it is still technically/legally personal data, but I think consent can be more easily and validly obtained for public disclosure.
+  a. I've included a statement about contact the privacy champions to discuss public disclosure and consent for low-risk data; do we want to consider this at all for medium-risk or just avoid opening that door altogether?
+
+4. Addressing the order number/cost unit/WBS element question, particularly for active studies.
+  
+  
+For Brett/Peter/Diogenes
+
+1. Did some tests and it looks like a cryptomator vault can easily be made when connecting to the network drive. Do you see any risks or problems with this? Specifically risk of data loss/corruption? In other words, if data need to be encrypted is Cyberduck always the preferred option? --> answered
+
+2. Are you happy enough with my explanations for connecting to YODA? That for high and very high risk, the preference is for the network drive, but that Cyberduck can be decided upon if the user's needs suggest Cyberduck would be better --> answered
+  
+3. Just to make sure I understand properly: if an upper level folder is has the data package access set to open, but a subfolder is closed, I can be assured that the data won't be published in that subfolder with the "closed" tag? --> answered
+
+
+
+Security questions
+
+1. Should we advise for high and very-high risk data to copy data via Cyberduck to an encrypted external hard drive that can be wiped with KillDisk later on? Or will the data end up in the local hard drive's cache anyway which defeats the purpose of partitioning the data to a single external hard drive? Meaning it's better just to ensure that data are copied to a specific folder and that that folder is deleted when active research is complete? (This deletion from the local hard drive should be sufficient without any extra "secure" deletion methods because all of our computers should use SSD flash drives now; can make a caveat to contact IT about data deletion if using an older computer with an HDD)
+
+2. If someone's only option for working with very high-risk and high-risk data is their personal computer, how do we feel about using an encrypted drive then?

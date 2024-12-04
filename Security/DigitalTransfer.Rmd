@@ -1,0 +1,323 @@
+---
+title: "FGB Security Tips: Digital Data Transfer"
+date: "2024-07-17; Version 3.1"
+output: 
+  html_document:
+    theme: cerulean
+    includes: 
+      after_body: ../footer.html
+---
+
+
+<style type="text/css">
+
+/* change font for whole text so that it's in line with house style. For webpages that is Roboto  */
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.main-container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5%;
+  padding-bottom: 15%;
+  padding-right: 10%;
+  padding-left: 10%;
+}
+
+h1.title {
+  font-size: 28px;
+  text-align: center;
+}
+
+h4.date { /* this is to affect the size of the date text in the YAML when it prints in html  */
+  font-size: 20px;
+  text-align: center;
+}
+
+/* improve contrast for all a-tags and headers for accessibility */
+
+a {
+  color: #157bb7;
+}
+
+h1, h2, h3, h4 {
+  color: #105d89;
+}
+
+p {
+  font-size: 18px;
+}
+
+li {
+  font-size: 18px;
+  margin: 5px;
+}
+
+
+#red {
+  border-style: solid;
+  border-width: 3px;
+  border-color: #ed0000;
+  padding: 1%;
+}
+
+#orange {
+  border-style: solid;
+  border-width: 3px;
+  border-color: #ff9000;
+  padding: 1%;
+}
+
+#yellow {
+  border-style: solid;
+  border-width: 3px;
+  border-color: #ffDf00;
+  padding: 1%;
+}
+
+#green {
+  border-style: solid;
+  border-width: 3px;
+  border-color: #379e00;
+  padding: 1%;
+}
+
+#blue {
+  border-style: solid;
+  border-width: 3px;
+  border-color: #6e99c4;
+  padding: 1%;
+}
+
+</style>
+
+\
+\
+Before you determine which digital data transfer option to use, you should assess the [privacy risk](PrivacyRisks.html){target="_blank"} (and where applicable the [confidentiality risk](PrivacyRisks.html#confidentiality){target="_blank"}) for the [data asset(s)](../rdm//definitions/Definitions.html#dataasset){target="_blank"} you plan to transfer. This will help you to determine the most appropriate and secure method for your data.
+
+**The following guidance is applicable to most collaborative situations, however, if you are working with and sharing data with students or research interns, make sure that [additional precautions](SecurityForStudents.html){target="_blank"} are taken to protect the data.**
+
+**Additionally, if data are to be shared with external users (i.e. non-VU employees), ensure that any necessary contracts or agreements, such as data sharing agreements, have been set up prior to sharing. Contact legal@vu.nl for further assistance.**
+
+
+  
+## {.tabset .tabset-fade}
+
+### Red Data {#red}
+
+It may not be possible to transfer this kind of data digitally. However, if you are *already* using [YODA](../rdm/tools/YODAInstructionsFGB.html){target="_blank"} for the storage of "red" data, the data can be shared with the recipient(s) via YODA.
+
+* You can provide access to the data by [adding the recipient to the YODA "group" you manage](https://yoda.vu.nl/site/getting-started/user-management.html){target="_blank"}. **Don't forget**: the person added to your YODA group has access to *all* of the files for that [group](../rdm/tools/YODAInstructionsFGB.html#accessmgmt){target="_blank"}. If the recipient only needs access to a specific set of data, you *must* request a separate YODA folder for this purpose. Add the recipient to this new YODA group and ensure that only the data the recipient _needs_ to see is stored in this separate YODA folder.
+  * The recipient *must* have multi-factor authentication (MFA) activated.
+    * MFA is not available to external users (users without a VUnet ID) as of early 2023. See the [section on "Red" data](../rdm/tools/YODAInstructionsFGB.html#protection){target="_blank"} in the FGB YODA manual for guidance until MFA is available to external users (estimated Sept 2023).
+  * The data *must* be encrypted. Further information on file-level encryption is found [here](Encryption.html#fle){target="_blank"}. The recipient must ensure that they are also appropriately encrypting the data on their end, and they must always have [full-disk encryption](Encryption.html#fde){target="_blank"} activated on their computer.
+  * The recipient must follow the [instructions for the appropriate use of Cyberduck](../rdm/tools/YODAInstructionsFGB.html#protection){target="_blank"} for "red" data when uploading and downloading data.
+  * Even if the recipient has only been given read-only access, they must agree to [delete](SecurityBasics.html#removal){target="_blank"} all files they download from YODA once they are no longer required (unless other agreements have been made).
+
+\
+If YODA is not a feasible solution, contact the [RDM Support Desk](mailto:rdm@vu.nl) for further assistance.
+
+<!---Commenting out previous versions
+
+* If a research partner or team member needs access to the data, add the user who needs access via [Research Drive](https://wiki.surfnet.nl/display/RDRIVE/Share+with+other+Research+Drive+users){target="_blank"}. Make sure the added user knows how to work safely in Research Drive and ensure that they only have access to the files that they need to see. Also ensure that they have appropriate [access rights](https://wiki.surfnet.nl/display/RDRIVE/Set+permissions+when+sharing+files+and+folders){target="_blank"}. Finally, the new user will need to install whichever [encryption software](Encryption.html#fle){target="_blank"} has been used to protect the data on their own computer in order to de-encrypt the data. Make sure to securely provide the new user with the password to de-encrypt the data (i.e. not via e-mail).
+  + **Do not share red data via a public link in Research Drive.**
+
+
+  
+--->
+  
+  
+### Orange Data {#orange}
+
+#### **YODA**
+
+If you are using [YODA](../rdm/tools/YODAInstructionsFGB.html){target="_blank"} for the storage of "orange" data, the data can be shared with the recipient(s) via YODA.
+
+* You can provide access to the data by [adding the recipient to the YODA "group" you manage](https://yoda.vu.nl/site/getting-started/user-management.html){target="_blank"}. **Don't forget**: the person added to your YODA group has access to *all* of the files for that [group](../rdm/tools/YODAInstructionsFGB.html#accessmgmt){target="_blank"}. If the recipient only needs access to a specific set of data, you *must* request a separate YODA folder for this purpose. Add the recipient to this new YODA group and ensure that only the data the recipient _needs_ to see is stored in this separate YODA folder.
+  + The recipient *must* have multi-factor authentication (MFA) activated.
+    + MFA is not available to external users (users without a VUnet ID) as of early 2023. See the [section on "Orange" data](../rdm/tools/YODAInstructionsFGB.html#protection){target="_blank"} in the FGB YODA manual for guidance until MFA is available to external users (estimated Sept 2023).
+  + The recipient must ensure that they always have [full-disk encryption](Encryption.html#fde){target="_blank"} activated on their computer.
+  + The recipient must follow the [instructions for the appropriate use of Cyberduck](../rdm/tools/YODAInstructionsFGB.html#protection){target="_blank"} for "orange" data when uploading and downloading data.
+  + Even if the recipient has only been given read-only access, they must agree to [delete](SecurityBasics.html#removal){target="_blank"} all files they download from YODA once they are no longer required (unless other agreements have been made).
+
+<br>
+
+#### **Research Drive**
+
+If you are using [Research Drive](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012856){target="_blank"} for data storage and you need to share the data with a research collaborator or research team member, you can add the user who needs access using these [instructions](https://wiki.surfnet.nl/display/RDRIVE/Share+with+other+Research+Drive+users){target="_blank"}.
+
+* **Do not share "orange" data via a public link in Research Drive.**
+* Make sure the added user knows how to [work safely in Research Drive](Storage.html#preferred){target="_blank"}.
+    * The recipient *must* have multi-factor authentication (MFA) activated.
+    * The recipient must ensure that they always have [full-disk encryption](Encryption.html#fde){target="_blank"} activated on their computer.
+* Ensure that the recipient will **only** have access to the files that they need to see. If you give them access to a folder, they will have access to all subfolders within that folder.
+* Ensure that the recipient has appropriate [access rights](https://wiki.surfnet.nl/display/RDRIVE/Set+permissions+when+sharing+files+and+folders){target="_blank"} (i.e. whether they can only read files or also modify/upload files). 
+* The "orange" data will, in most cases, be encrypted in Research Drive. Make sure the new user installs whichever [encryption software](Encryption.html#fle){target="_blank"} has been used to protect the data on their own computer in order to de-encrypt the data. Make sure to use a **secure method** to provide the new user with the password to de-encrypt the data (e.g. not via regular e-mail, but either through a phone call or via [ZIVVER](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012860){target="_blank"}).
+
+<br>
+
+#### **Teams/SharePoint**
+
+If you are using [Teams/SharePoint](https://services.vu.nl/esc?id=emp_taxonomy_topic&topic_id=4d4956d7978f09d0e553359fe153afb3){target="_blank"} for data storage[**](#teamsNBor), you can share data with a research collaborator or team member using Teams. 
+
+* Make sure the added user knows how to [work safely in Teams](Storage.html#preferred){target="_blank"}.
+    * The recipient *must* have multi-factor authentication (MFA) activated.
+    * The recipient must ensure that they always have [full-disk encryption](Encryption.html#fde){target="_blank"} activated on their computer.
+* Ensure that the recipient will **only** have access to the files that they need to see. If you give them access to a folder, they will have access to all subfolders within that folder.
+    * Also make sure to set an [expiration date](https://vunl.sharepoint.com/:u:/r/sites/CollaborationServices/SitePages/en/Blijf-in-controle-van-je-gedeelde-data.aspx?csf=1&web=1&e=2IyOkA){target="_blank"} on sharing with any users outside your Teams "Team".
+* Ensure that the recipient has appropriate access rights (i.e. whether they can only read files or also modify/upload files). 
+* The "orange" data will, in most cases, be encrypted in Teams. Make sure the new user installs whichever [encryption software](Encryption.html#fle){target="_blank"} has been used to protect the data on their own computer in order to de-encrypt the data. Make sure to use a **secure method** to provide the new user with the password to de-encrypt the data (e.g. not via regular e-mail, but either through a phone call or via [ZIVVER](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012860){target="_blank"}).
+
+###### {#teamsNBor}
+**_Teams/Sharepoint is not generally recommended for the storage of research data. See the [storage guide](Storage.html){target="_blank"} for more information on when and when not to use Teams._
+
+<br>
+
+#### **ZIVVER/SURFFileSender**
+
+If YODA and Research Drive are not appropriate for your purposes:
+
+* Use [ZIVVER](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012860){target="_blank"} 
+    + Require that the recipient must enter a code that they receive via SMS to be able to read the e-mail. 
+    + Put an expiry on the message so that after a certain period the e-mail is no longer available to both the recipient and yourself.
+    + Further information on the use of ZIVVER is found in this [guide](https://fgb-rdm.nl/Images/ZIVVER_digital_consent.pdf){target="_blank"}.
+* Use [SURFFileSender](https://www.surf.nl/en/surffilesender-send-large-files-securely-and-encrypted){target="_blank"} 
+    + Make sure encryption is activated. 
+    + Make sure to use a strong [de-encryption password](SecurityBasics.html#passwords){target="_blank"}. Always provide the recipient with the password via another method (for example, call the recipient to provide the password verbally). **Do not** send the password in another e-mail.
+* Require that the recipient stores the received data in a secure manner and that they delete the data once it is no longer required (unless other agreements have been made).
+
+\
+If the above options are not feasible, contact the [RDM Support Desk](mailto:rdm@vu.nl) for further assistance.
+
+
+### Yellow Data {#yellow}
+
+#### **YODA**
+
+If you are using [YODA](../rdm/tools/YODAInstructionsFGB.html){target="_blank"} for the storage of "yellow" data, the data can be shared with the recipient(s) via YODA.
+
+* You can provide access to the data by [adding the recipient to the YODA "group" you manage](https://yoda.vu.nl/site/getting-started/user-management.html){target="_blank"}. **Don't forget**: the person added to your YODA group has access to *all* of the files for that [group](../rdm/tools/YODAInstructionsFGB.html#accessmgmt){target="_blank"}. If the recipient only needs access to a specific set of data, you *must* request a separate YODA folder for this purpose. Add the recipient to this new YODA group and ensure that only the data the recipient _needs_ to see is stored in this separate YODA folder.
+  + The recipient *must* have multi-factor authentication (MFA) activated.
+    + MFA is not available to external users (users without a VUnet ID) as of early 2023. See the [section on "Yellow" data](../rdm/tools/YODAInstructionsFGB.html#protection){target="_blank"} in the FGB YODA manual for guidance until MFA is available to external users (estimated Sept 2023).
+  + The recipient must ensure that they always have [full-disk encryption](Encryption.html#fde){target="_blank"} activated on their computer.
+  + The recipient must follow the [instructions for the appropriate use of Cyberduck](../rdm/tools/YODAInstructionsFGB.html#protection){target="_blank"} for "yellow" data when uploading and downloading data.
+  + Even if the recipient has only been given read-only access, they must agree to [delete](SecurityBasics.html#removal){target="_blank"} all files they download from YODA once they are no longer required (unless other agreements have been made).
+
+<br>
+
+#### **Research Drive & SURFdrive**
+
+If you are using [Research Drive](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012856){target="_blank"} for data storage and you need to share the data with a research collaborator or research team member, you can add the user who needs access using these [instructions](https://wiki.surfnet.nl/display/RDRIVE/Share+with+other+Research+Drive+users){target="_blank"}. [SURFdrive](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012728){target="_blank"} can also be used to share "yellow" data. Any user that can log into SURFconnext can be given access to a SURFdrive file or folder. 
+
+**NB**: SURFdrive is generally discouraged for ongoing storage of research data (see the [Secure Storage Guide](Storage.html#nonpreferred){target="_blank"} for more information). If you are sharing data with research collaborators, Research Drive or YODA are the preferred options. 
+  
+  * **If absolutely necessary**, "yellow" data may be shared in Research Drive or SURFdrive via a public link, but that link **must be secured with a password** that is provided to the recipient via another method (i.e. via an SMS or a phone call rather than another e-mail). It is also advised to set an expiry on the link after which the recipient can no longer access the files. The link must also be deleted once the recipient no longer requires access.
+  * Make sure the added user knows how to work safely in [Research Drive](Storage.html#preferred){target="_blank"} or [SURFdrive](Storage.html#nonpreferred){target="_blank"}. 
+      * The recipient *must* have multi-factor authentication (MFA) activated in Research Drive.
+      * The recipient must ensure that they always have [full-disk encryption](Encryption.html#fde){target="_blank"} activated on their computer.
+  * Ensure that the recipient will **only** have access to the files that they need to see. If you give them access to a folder, they will have access to all subfolders within that folder.
+  * Ensure that the recipient has appropriate [access rights](https://wiki.surfnet.nl/display/RDRIVE/Set+permissions+when+sharing+files+and+folders){target="_blank"} (i.e. whether they can only read files or also modify and/or upload files). 
+
+<br>
+
+#### **Teams/SharePoint**
+
+If you are using [Teams/SharePoint](https://services.vu.nl/esc?id=emp_taxonomy_topic&topic_id=4d4956d7978f09d0e553359fe153afb3){target="_blank"} for data storage[**](#teamsNByel), you can share data with a research collaborator or team member using Teams. 
+
+* Make sure the added user knows how to [work safely in Teams](Storage.html#preferred){target="_blank"}.
+    * The recipient *must* have multi-factor authentication (MFA) activated.
+    * The recipient must ensure that they always have [full-disk encryption](Encryption.html#fde){target="_blank"} activated on their computer.
+* Ensure that the recipient will **only** have access to the files that they need to see. If you give them access to a folder, they will have access to all subfolders within that folder.
+    * Also make sure to set an [expiration date](https://vunl.sharepoint.com/:u:/r/sites/CollaborationServices/SitePages/en/Blijf-in-controle-van-je-gedeelde-data.aspx?csf=1&web=1&e=2IyOkA){target="_blank"} on sharing with any users outside your Teams "Team".
+* Ensure that the recipient has appropriate access rights (i.e. whether they can only read files or also modify/upload files). 
+
+###### {#teamsNByel}
+**_Teams/Sharepoint is not generally recommended for the storage of research data. See the [storage guide](Storage.html){target="_blank"} for more information on when and when not to use Teams._
+
+<br>
+
+#### **ZIVVER/SURFFileSender**
+
+If YODA, Research Drive and SURFdrive are not appropriate for your purposes:
+
+* Use [ZIVVER](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012860){target="_blank"} 
+    + Require that the recipient must enter a code that they receive via SMS to be able to read the e-mail. 
+    + Put an expiry on the message so that after a certain period the e-mail is no longer available to both the recipient and yourself.
+    + Further information on the use of ZIVVER is found in this [guide](https://fgb-rdm.nl/Images/ZIVVER_digital_consent.pdf){target="_blank"}.
+* Use [SURFFileSender](https://www.surf.nl/en/surffilesender-send-large-files-securely-and-encrypted){target="_blank"} 
+    + Make sure encryption is activated. 
+    + Make sure to use a strong [de-encryption password](SecurityBasics.html#passwords){target="_blank"}. Always provide the recipient with the password via another method (for example, call the recipient to provide the password verbally). **Do not** send the password in another e-mail.
+* Require that the recipient stores the received data in a secure manner and that they delete the data once it is no longer required (unless other agreements have been made).
+
+\
+If the above options are not feasible, contact the [RDM Support Desk](mailto:rdm@vu.nl) for further assistance.
+
+
+### Green Data {#green}
+
+#### **YODA**
+
+If you are using [YODA](../rdm/tools/YODAInstructionsFGB.html){target="_blank"} for the storage of "green" data, the data can be shared with the recipient(s) via YODA.
+
+* You can provide access to the data by [adding the recipient to the YODA "group" you manage](https://yoda.vu.nl/site/getting-started/user-management.html){target="_blank"}. **Don't forget**: the person added to your YODA group has access to *all* of the files for that [group](../rdm/tools/YODAInstructionsFGB.html#accessmgmt){target="_blank"}. If the recipient only needs access to a specific set of data, you *must* request a separate YODA folder for this purpose. Add the recipient to this new YODA group and ensure that only the data the recipient _needs_ to see is stored in this separate YODA folder.
+* Make sure the recipient follows the [FGB security advice](../rdm/tools/YODAInstructionsFGB.html#protection){target="_blank"} for working with "Green" data in YODA.
+
+<br>
+
+#### **Research Drive & SURFdrive**
+
+If you are using [Research Drive](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012856){target="_blank"} for data storage and you need to share the data with a research collaborator or research team member, you can add the user who needs access using these [instructions](https://wiki.surfnet.nl/display/RDRIVE/Share+with+other+Research+Drive+users){target="_blank"}. [SURFdrive](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012728){target="_blank"} can also be used to share "green" data. Any user that can log into SURFconnext can be given access to a SURFdrive file or folder. 
+
+**NB**: SURFdrive is generally discouraged for ongoing storage of research data (see the [Secure Storage Guide](Storage.html#nonpreferred){target="_blank"} for more information). If you are sharing data with research collaborators, Research Drive or YODA are the preferred options. 
+
+* If you need use a public link to share the data via Research Drive/SURFdrive, rather than providing the user access to the file in the ways described above, it is still recommended to secure this link with a password that you share with the recipient via SMS or a phone call. If you opt not to do so, you should, at a minimum, set an expiry on the link after which time the recipient can no longer access the file. Delete this link when it is no longer needed.
+* Make sure the added user knows how to work safely in [Research Drive](Storage.html#preferred){target="_blank"} or [SURFdrive](Storage.html#nonpreferred){target="_blank"}. 
+    + The recipient must ensure that they always have [full-disk encryption](Encryption.html#fde){target="_blank"} activated on their computer.
+* Ensure that the recipient will **only** have access to the files that they need to see. If you give them access to a folder, they will have access to all subfolders within that folder.
+* Ensure that the recipient has appropriate [access rights](https://wiki.surfnet.nl/display/RDRIVE/Set+permissions+when+sharing+files+and+folders){target="_blank"} (i.e. whether they can only read files or also modify and/or upload files). 
+
+<br>
+
+#### **Teams/SharePoint**
+
+If you are using [Teams/SharePoint](https://services.vu.nl/esc?id=emp_taxonomy_topic&topic_id=4d4956d7978f09d0e553359fe153afb3){target="_blank"} for data storage[**](#teamsNBgr), you can share data with a research collaborator or team member using Teams. 
+
+* Ensure that the recipient will **only** have access to the files that they need to see. If you give them access to a folder, they will have access to all subfolders within that folder.
+    * Also make sure to set an [expiration date](https://vunl.sharepoint.com/:u:/r/sites/CollaborationServices/SitePages/en/Blijf-in-controle-van-je-gedeelde-data.aspx?csf=1&web=1&e=2IyOkA){target="_blank"} on sharing with any users outside your Teams "Team".
+* Ensure that the recipient has appropriate access rights (i.e. whether they can only read files or also modify/upload files). 
+
+###### {#teamsNBgr}
+**_Teams/Sharepoint is not generally recommended for the storage of research data. See the [storage guide](Storage.html){target="_blank"} for more information on when and when not to use Teams._
+
+<br>
+
+#### **ZIVVER/SURFFileSender/Internal E-mail**
+
+If YODA, Research Drive and SURFdrive are not appropriate for your purposes:
+
+* "Green" data may be sent via internal VU e-mail without encryption
+* You can use [ZIVVER](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012860){target="_blank"} or [SURFFileSender](https://www.surf.nl/en/surffilesender-send-large-files-securely-and-encrypted){target="_blank"}. It is not as crucial to use an access code with ZIVVER or encryption with SurfFileSender when sending "green" data, however it is still a good idea to do so whenever possible. At a minimum, you should always put an expiry date on e-mails sent via ZIVVER/SurfFileSender.
+  + Further information on the use of ZIVVER is found in this [guide](https://fgb-rdm.nl/Images/ZIVVER_digital_consent.pdf){target="_blank"}. 
+
+\
+If the above options are not feasible, contact the [RDM Support Desk](mailto:rdm@vu.nl) for further assistance.
+
+
+### Blue Data {#blue}
+
+Although "Blue Data" are not subject to privacy or confidentiality laws, it is still recommended to prevent their diversion to unauthorized individuals because your data are valuable and you don't want them to end up publicly available before you are ready (you don't want to get scooped!). It is, therefore, advised to at least follow the recommendations described under "Green Data", as these methods help to prevent the diversion of transferred data.
+
+\
+If the above options are not feasible, contact the [RDM Support Desk](mailto:rdm@vu.nl) for further assistance.
+
+
+##
+
+
+
+
+
+

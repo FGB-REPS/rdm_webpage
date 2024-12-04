@@ -1,0 +1,2045 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+  <!-- Local CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <title class="title">FAQs for FGB Researchers about Research Data
+    Management, Privacy and Security</title>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="jquery-3.4.1.min.js"></script>
+  <script src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+  <img class="headerImage" src="../Images/VU_logo_RGB_wit__Behavioural_Movement_Sciences_EN.jpg"
+  alt="Faculty of Behavioural and Movement Sciences Logo" >
+  <div class="jumbotron">
+    <h3 id="main_title">FAQs for FGB Researchers about Research Data
+      Management, Privacy and Security</h3>
+      <br>
+      <p>The following is a list of frequently asked questions from FGB researchers
+        on the topics of research data management (RDM), privacy (in particular,
+        with regards to the European <a href="https://gdpr-info.eu/"
+        target="_blank">General Data Protection Regulation (GDPR)</a>)
+        and security requirements at the faculty and
+        the VU. This list will be updated as regularly as possible as new
+        developments are made, as new tools become available or as policies,
+        guidelines, and other rules change.
+      </p>
+  </div>
+
+<!-- create function for search boxes -->
+
+<script>
+
+  function search(string){
+    window.find(string);
+  }
+
+
+</script>
+
+  <div class="container-fluid">
+
+
+    <!-- General FAQ section-->
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+              <!--removed hyperlink for header because per 2023-03-28 decided no
+              more drop-down with the cards; just have them open already
+              This also means following from each javascript function for linked
+              questions:
+              $("#collapseOne").collapse('show');
+              was removed for all linked General FAQ as the first command after
+              $(...).click(function() { ...
+              <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                General FAQ
+              </a>
+            -->
+                General FAQ
+            </div>
+            <!-- Removed following because no longer necessary after deciding per
+            2023-03-28 that each card no longer needs dropdown function; will just always be open
+            <div id="collapseOne" class="collapse">
+            Closing div tag was also commented out
+            -->
+              <div class="card-body">
+                <a href="#q1_gen" data-toggle="collapse">What do I need to prepare
+                  before starting my research?</a>
+                <div id="q1_gen" class="collapse" >
+                  <p>You can find information on what to prepare prior to
+                    starting your research on this
+                    <a href="https://vu.nl/en/employee/research-data-management-fbms/before-research-fgb" target="_blank">
+                    VUweb page</a>.
+                  </p>
+                  <p>The following FAQs also offer answers to many of the questions that come
+                    up prior to starting your research:
+                    <ul>
+                      <li>
+                        <a href="#dmpFAQ" class="ref_q1_rdm" onclick="return false;">
+                          I need to write a data management
+                          plan (DMP) to get funding for my research. How can I do this?
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#costFAQ" class="ref_q7_rdm" onclick="return false;">
+                          How much does data storage at the VU cost?</a>
+                      </li>
+                      <li>
+                        <a href="#dpiaFAQ" class="ref_q11_priv" onclick="return false;">
+                          Do I need to
+                          complete a data protection impact assessment (DPIA)</a>
+                      </li>
+                      <li>
+                        <a href="#roleFAQ" class="ref_q8_priv" onclick="return false;">
+                          How can I determine what my role is (controller, joint controller
+                          or processor) under the GDPR?</a>
+                      </li>
+                      <li>
+                        <a href="#procFAQ" class="ref_q9_priv" onclick="return false;">
+                          I need to hire a company to help with data processing
+                          (for example, questionnaire, app or database developers).
+                          Is there a standard processing agreement that
+                          I can use when hiring a processor?</a>
+                      </li>
+                      <li>
+                        <a href="#agreeFAQ" class="ref_q10_priv" onclick="return false;">
+                          Are there standard VU agreements for working with other
+                          research institutions?</a>
+                      </li>
+                      <li>
+                        <a href="#storageFAQ" class="ref_q1_sec" onclick="return false;">
+                          How do I know if I am storing my data in the correct location?</a>
+                      </li>
+                      <li>
+                        <a href="#emailFAQ" class="ref_q2_sec" onclick="return false;">
+                          I want to e-mail data to my colleague/student.
+                          How can I do this?</a>
+                      </li>
+                    </ul>
+                  </p>
+                  <p>
+                    In terms of priority, you should first determine
+                    which concerns will add to the costs of your research so that
+                    you can properly calculate how much funding you require from
+                    your grant provider. In addition to data storage costs, there may also be
+                    costs when hiring a third
+                    party software provider or when receiving in-house
+                    technical support from the faculty's
+                    <a href="https://vu.nl/en/employee/behavioural-and-movement-sciences-getting-started/technical-support-for-research-to3" target="_blank">
+                    Technical Support department.</a>
+                    You should also start the processes related to setting up contracts
+                    or getting privacy/security support as early as possible in your planning as
+                    these steps can take quite some time.
+                  </p>
+                </div>
+                <br></br>
+                <a href="#q2_gen" data-toggle="collapse">What's the difference between
+                  privacy and security?</a>
+                <div id="q2_gen" class="collapse" >
+                  <p>
+                    Basically, privacy is about the rights of and risks for your
+                    research participants. It doesn't matter
+                    whether data was directly
+                    collected from research participants or indirectly
+                    obtained from another institution;
+                    if data are about individual people and the data are not anonymous, then
+                    it is necessary to protect the data.
+                    (For more information on what is and isn't anonymous data,
+                    see the question
+                    <a href="#anonFAQ" class="ref_q1_priv"
+                    onclick="return false;">The GDPR only applies to personal data,
+                    but my data are anonymous.
+                      Why do I have to worry about the GDPR?</a>).
+                  </p>
+                  <p>
+                    Security has more to do with the risks for FGB and VU Amsterdam.
+                    Privacy plays a role in this.
+                    If we don't sufficiently protect the privacy of research participants,
+                    it can damage our institution's reputation,
+                    which could make it more difficult to recruit participants in the future.
+                    Good security keeps information
+                    <a href="https://fgb-rdm.nl/rdm/definitions/Definitions.html#confidentialdata" target="_blank">
+                    confidential</a> when personal information needs to be kept private
+                    or when information needs to be kept secret for other reasons.
+                    Good security also helps to minimize the risks that could arise from the loss
+                    or corruption of your data.
+                  </p>
+                </div>
+                <br></br>
+                <a href="#q3_gen" data-toggle="collapse" id="openFAQ">
+                  How can I meet the FAIR principles/Open Data
+                  requirements if my data are subject to the GDPR?</a>
+                <script>
+                  $(document).ready(function() {
+                    $(".ref_q3_gen").click(function() {
+                      // following command no longer needed since no collapse anymore $("#collapseOne").collapse('show');
+                      $("#q3_gen").collapse('show');
+                      $('html, body').animate({
+                        scrollTop: parseInt($("#openFAQ").offset().top)
+                      }, 1000, function() {
+                        $("#openFAQ").fadeOut();
+                        $("#openFAQ").fadeIn();
+                        $("#openFAQ").fadeOut();
+                        $("#openFAQ").fadeIn();
+                      });
+                    });
+                  });
+                </script>
+                <div id="q3_gen" class="collapse" >
+                  <p>
+                    FAIR data and open data are not the same thing.
+                    It is also not a requirement
+                    of the FAIR principles that data
+                    be openly and publicly accessible to everyone in the world.
+                    If the GDPR applies to your data,
+                    it won't be possible make the data 100% publicly
+                    accessible, but the data can still be made FAIR.
+                    Oftentimes, you can openly publish the documentation and metadata
+                    <em>about</em> your data; by doing so
+                    you make your data more FAIR without making it publicly available.
+                  </p>
+                  <p>
+                    Documentation and metadata that you can publish (as long as
+                    there isn't any confidential information present) to improve the FAIR-ness
+                    of your data include:
+                      <ul>
+                        <li>
+                          Information describing the data, where they have been archived and how
+                          they may be accessed. This information can be published via
+                          <a href="https://yoda.vu.nl/site/getting-started/metadata-add.html" target="_blank">YODA<a/>,
+                          <a href="https://vu.nl/en/employee/research-data-support/vu-research-portal-pure" target="_blank">PURE</a>
+                          or <a href="https://osf.io/" target="_blank">OSF</a>.
+                        </li>
+                        <li>
+                          Other documentation about the data, such as the
+                          <a href="https://fgb-rdm.nl/rdm/archiving/ArchivingGuidelinesFull.html#subsection9" target="_blank">
+                            README file</a> or the
+                          <a href="https://fgb-rdm.nl/rdm/documentation/Codebooks.html" target="_blank">
+                            codebook(s)</a> used to interpret the datasets
+                        </li>
+                        <li>
+                          Scripts, software or code that were used to process and analyse the data
+                            <ul>
+                              <li>
+                                Make sure to remove any absolute directory
+                                paths (e.g. "/home/myresearch/data/analysis/")
+                                in the code you share publicly
+                                as this information can be a security risk
+                              </li>
+                            </ul>
+                        </li>
+                      </ul>
+                  </p>
+                  <p>
+                    It's important to be aware that data that are subject to the GDPR must be
+                    archived on a <a href="https://libguides.vu.nl/rdm/selecting-archive" target="_blank">
+                    VU archive</a>. You shouldn't aim to meet the FAIR principles by storing
+                    this kind of data on an external archive.
+                    There are ways to manage access to the data even when they are stored on
+                    a VU archive. This is discussed further in the question
+                    <a href="#fairFAQ" class="ref_q3_rdm"
+                    onclick="return false;">
+                      What are the FAIR principles? How can
+                      I apply them in my work at the VU?</a>
+                  </p>
+                  <p>
+                    For further information on the FAIR principles
+                    and how to apply them,
+                    see the question <a href="#fairFAQ" class="ref_q3_rdm"
+                    onclick="return false;">
+                      What are the FAIR principles? How can I apply them
+                      in my work at the VU?</a>.
+                  </p>
+
+                </div>
+              </div>
+              <!-- no longer needed now that cards are always open, no longer collapsible
+              </div>
+            -->
+          </div>
+        </div>
+      </div>
+<!--The order and numbering of the questions below changed per 12-05-2020 because
+the order didn't make sense for the reader. It didn't make sense to change the
+numbering of the questions so the order of the numbering no longer makes sense-->
+
+      <!-- RDM FAQ section-->
+        <div class="row">
+          <div class="col-sm p-0">
+            <div class="card">
+              <div class="card-header">
+                <!--removed hyperlink for header because per 2023-03-28 decided no
+                more drop-down with the cards; just have them open already
+                This also means following from each javascript function for linked
+                questions:
+                $("#collapseTwo").collapse('show');
+                was removed for all linked RDM FAQ as the first command after
+                $(...).click(function() { ...
+                <a class="card-link" data-toggle="collapse" href="#collapseTwo">
+                  Research Data Management FAQ
+                </a>
+              -->
+              Research Data Management FAQ
+              </div>
+              <!-- Removed following because no longer necessary after deciding per
+              2023-03-28 that each card no longer needs dropdown function; will just always be open
+              <div id="collapseTwo" class="collapse">
+              Closing div tag was also commented out
+              -->
+                <div class="card-body">
+                  <input placeholder="Search data management questions" type="text"
+                  id="searchrdm" style = "width:80%;">
+                  <!-- original search method; didn't search on hitting enter
+                  <input type="button" value="Go" onclick="search(document.getElementById('searchrdm').value)">
+                  -->
+                  <button id="rdmBtn"
+                  onclick="search(document.getElementById('searchrdm').value)">
+                  Go</button>
+                  <script>
+                  var input = document.getElementById("searchrdm");
+                  input.addEventListener("keypress", function(event) {
+                    if (event.key === "Enter") {
+                      event.preventDefault();
+                      document.getElementById("rdmBtn").click();
+                    }
+                  });
+                </script>
+                  <br></br>
+                  <h6>Data Management Plans</h6>
+                  <a href="#q1_rdm" data-toggle="collapse" id="dmpFAQ">I need to
+                    write a data management
+                    plan (DMP) to get funding for my research.
+                    How can I do this?</a>
+                  <script>
+                    $(document).ready(function() {
+                      $(".ref_q1_rdm").click(function() {
+                        // following command no longer needed since no collapse anymore $("#collapseTwo").collapse('show');
+                        $("#q1_rdm").collapse('show');
+                        $('html, body').animate({
+                          scrollTop: parseInt($("#dmpFAQ").offset().top)
+                        }, 1000, function() {
+                          $("#dmpFAQ").fadeOut();
+                          $("#dmpFAQ").fadeIn();
+                          $("#dmpFAQ").fadeOut();
+                          $("#dmpFAQ").fadeIn();
+                        });
+                      });
+                    });
+                  </script>
+                  <div id="q1_rdm" class="collapse" >
+                    <p>
+                      The VU
+                      provides a tool called
+                      <a href="https://dmponline.vu.nl" target="_blank">
+                        DMPonline</a>, which includes various funder templates
+                      as well as a VU specific template that has been approved
+                      by NWO and ZonMw.
+                      If you wish to use the VU DMP template in DMPonline, click on the
+                      "Create Plan" button,
+                      and then under "Select the primary funding organisation"
+                      check the tick box that says "No funder associated with this plan".
+                      This will cause the VU DMP template to appear.</p>
+                      <p>If you need advice on your DMP,
+                      you can contact the FGB Research Data Stewards via the e-mail
+                      <a href="mailto: research.data.fgb@vu.nl">
+                        research.data.fgb@vu.nl</a>.
+                    </p>
+                  </div>
+                  <br></br>
+                  <a href="#q6_rdm" data-toggle="collapse" id="metadataFAQ">I'm
+                    writing a data management plan (DMP) and the template is
+                    asking about which
+                    metadata standards, metadata schema, ontologies,
+                    terminologies and controlled vocabulary I will use.
+                    What does this mean?</a>
+                    <script>
+                      $(document).ready(function() {
+                        $(".ref_q6_rdm").click(function() {
+                          // following command no longer needed since no collapse anymore $("#collapseTwo").collapse('show');
+                          $("#q6_rdm").collapse('show');
+                          $('html, body').animate({
+                            scrollTop: parseInt($("#metadataFAQ").offset().top)
+                          }, 1000, function() {
+                            $("#metadataFAQ").fadeOut();
+                            $("#metadataFAQ").fadeIn();
+                            $("#metadataFAQ").fadeOut();
+                            $("#metadataFAQ").fadeIn();
+                          });
+                        });
+                      });
+                    </script>
+                  <div id="q6_rdm" class="collapse" >
+                    <p>
+                      Metadata are
+                      data about data and there are both discipline-specific and
+                      generic metadata. Generic
+                      metadata, or project-level metadata,
+                      provide details about what information your data contain,
+                      where and when the data were created, and by
+                      whom the data were collected/created, as
+                      well as information for a reuser of the data about what
+                      the terms of use are and how that reuser
+                      can get acess to the data. Discipline-specific or data-level
+                      metadata provide additional information
+                      that is specific and relevant to certain types of
+                      data and disciplines. Whether you
+                      use metadata standards (also known as metadata schema)
+                      or not, you <em>will</em> create metadata in
+                      your research: any codebooks, cleaning and analysis scripts,
+                      and other documentation about your research are all metadata.
+                      However, by using internationally recognized metadata
+                      standards for your research, you will
+                      ensure that you record and report sufficient information so
+                      that others can readily find your data, determine if they
+                      are allowed to access your data, and, ultimately,
+                      understand how to use your data.
+                    </p>
+                    <p>
+                      For the purposes of your DMP, it is generally sufficent
+                      just to report which generic metadata
+                      standard you will use to describe your data and research project.
+                      CERIF, DataCite and Dublin Core
+                      are all good metadata standards that are
+                      frequently used to create generic metadata.
+                      Because it's VU policy to register all archived datasets in
+                      <a href="https://vu.nl/en/employee/research-data-support/vu-research-portal-pure"
+                      target="_blank">PURE</a>, which uses CERIF, you can report
+                      in your DMP that you
+                      will use, at a minimum, the CERIF metadata standard. If you
+                      plan to archive your data in a trusted repository, the
+                      repository may require that you use a specific metadata standard
+                      that you can also report in the DMP.
+                      Additionally, if your research involves surveys, you can
+                      report in your DMP that you'll use the discipline-specific
+                      <a href="https://ddialliance.org/" target="_blank">
+                        Data Documentation Initiative(DDI) metadata standard</a>.
+                    </p>
+                    <p>
+                      If you look up information about metadata standards, you
+                      will see a lot of information about machine-readable formats.
+                      These formatted metadata are usually created when
+                      you fill in a form about your data.
+                      For example, when you register your dataset in PURE, structured
+                      CERIF metadata is created behind the scenes. That means for
+                      your generic metadata, the most important thing you should
+                      do is find out what information you will need to report for
+                      a certain metadata standard and record that information during
+                      your research, even in a simple text file. Then you will have that
+                      information on hand when you need to report it later on.
+                      For more information on recording metadata, including
+                      templates for making your own machine-readable metadata, see this
+                      <a href="https://www.cessda.eu/Training/Training-Resources/Library/Data-Management-Expert-Guide/2.-Organise-Document/Documentation-and-metadata"
+                      target="_blank">
+                        page</a> from the CESSDA Research Data Management tutorial.
+                      For your discipline-specific metadata, if you have structured
+                      data and are using a codebook to describe all of your variables,
+                      you can try making a
+                      <a href="https://ddialliance.org/training/getting-started-new-content/create-a-codebook"
+                      target="_blank">DDI codebook</a> which can be read by both
+                      people and machines.
+                    </p>
+                    <p>
+                      In addition to metadata standards, you may be asked
+                      in your DMP about what ontologies, terminologies and/or
+                      controlled vocabularies you will use. There is a lot of overlap
+                      between these topics and metadata standards and some of the
+                      concepts are quite complex. Ontologies have to do more with
+                      taking the information reported in a metadata standard and
+                      making that information understandable to machines. Most of
+                      the work happens behind the scenes, so unless you are being
+                      explicitly asked to figure out ontologies, don't worry too
+                      much about that concept. What you can report in your DMP
+                      are any standards for terminology or controlled vocabulary
+                      you plan to use. You may already apply the concept of
+                      controlled vocabularies in your research, e.g. in a survey where only
+                      a specific set of answers are allowed
+                      for questions about ethnicity, highest level of education
+                      or language proficiency. Something that will make your data
+                      more understandable to others is if you aim to use terminology
+                      and controlled vocabularies that are (inter)nationally
+                      agreed upon and well recognized in your discipline, rather
+                      than generating new vocabularies and terminolgy just for
+                      your research.
+                    </p>
+                  </div>
+                  <br></br>
+                  <h6>Data Management Software</h6>
+                  <a href="#rdm_q_castor" data-toggle="collapse" id="castorFAQ">
+                    I want to use Castor/I'm already using Castor for data collection.
+                    Where can I find more information on how to use it?</a>
+                  <script>
+                    $(document).ready(function() {
+                      $(".ref_q_castor").click(function() {
+                        // following command no longer needed since no collapse anymore $("#collapseTwo").collapse('show');
+                        $("#rdm_q_castor").collapse('show');
+                        $('html, body').animate({
+                          scrollTop: parseInt($("#castorFAQ").offset().top)
+                        }, 1000, function() {
+                          $("#castorFAQ").fadeOut();
+                          $("#castorFAQ").fadeIn();
+                          $("#castorFAQ").fadeOut();
+                          $("#castorFAQ").fadeIn();
+                        });
+                      });
+                    });
+                  </script>
+                  <div id="rdm_q_castor" class="collapse" >
+                    <p>
+                      <a href="https://helpdesk.castoredc.com/" target="_blank">
+                      Castor EDC</a> is a software tool
+                      that can be used to create data entry forms and manage databases.
+                      It is available for use by FGB researchers, but
+                      in order to use it properly at FGB, you <strong>must</strong> review the
+                      <a href="https://fgb-rdm.nl/rdm/tools/Castor_spelregels.html" target="_blank">
+                      Castor "Spelregels"</a>.
+                    </p>
+                  </div>
+                  <br></br>
+                  <h6>Storage and Archiving</h6>
+                  <a href="#q7_rdm" data-toggle="collapse" id="costFAQ">
+                    How much does data storage at the VU cost?</a>
+                  <script>
+                    $(document).ready(function() {
+                      $(".ref_q7_rdm").click(function() {
+                        // following command no longer needed since no collapse anymore $("#collapseTwo").collapse('show');
+                        $("#q7_rdm").collapse('show');
+                        $('html, body').animate({
+                          scrollTop: parseInt($("#costFAQ").offset().top)
+                        }, 1000, function() {
+                          $("#costFAQ").fadeOut();
+                          $("#costFAQ").fadeIn();
+                          $("#costFAQ").fadeOut();
+                          $("#costFAQ").fadeIn();
+                        });
+                      });
+                    });
+                  </script>
+                  <div id="q7_rdm" class="collapse" >
+                    <p>
+                      Storage costs vary depending on which storage option you use.
+                      You will also need to determine the costs of storage during and
+                      after your research.
+                      You can get the most up-to-date information on storage costs
+                      on <a href="https://vu.nl/en/research/storagefinder"
+                      target="_blank">this page</a> by selecting the storage solution
+                      you plan to use. A pop-up window will show you the costs.
+                      You can also find information on costs of storage solutions
+                      managed by the VU NeRDS program on
+                      <a href="https://vu.nl/en/employee/research-data-support/costs-research-en-archiving-storage"
+                      target="_blank">this page</a>.
+                      Note that grant providers don't usually cover the costs of
+                      storage after research (a.k.a. archiving),
+                      however the VU NeRDS program
+                      subsidizes the costs of archiving in
+                      <a href="https://fgb-rdm.nl/rdm/tools/YODAInstructionsFGB.html" target="_blank">YODA</a>
+                      (this cost model is described
+                      <a href="https://vu.nl/en/employee/research-data-support/costs-research-en-archiving-storage"
+                      target="_blank">here</a>). Archiving up to 500 GB of data will
+                      be covered by the VU; <strong>anything above this amount should be
+                      billed to your department</strong>.
+                    </p>
+                  </div>
+                  <br></br>
+
+                  <a href="#q4_rdm" data-toggle="collapse" id="archFAQ">
+                    How can I meet my archiving requirements?</a>
+                  <script>
+                    $(document).ready(function() {
+                      $(".ref_q4_rdm").click(function() {
+                        // following command no longer needed since no collapse anymore $("#collapseTwo").collapse('show');
+                        $("#q4_rdm").collapse('show');
+                        $('html, body').animate({
+                          scrollTop: parseInt($("#archFAQ").offset().top)
+                        }, 1000, function() {
+                          $("#archFAQ").fadeOut();
+                          $("#archFAQ").fadeIn();
+                          $("#archFAQ").fadeOut();
+                          $("#archFAQ").fadeIn();
+                        });
+                      });
+                    });
+                  </script>
+                  <div id="q4_rdm" class="collapse" >
+                    <p>
+                      You can find information on how to meet your archiving
+                      requirements on this
+                      <a href="https://fgb-rdm.nl/rdm/archiving/ArchivingGuidelinesSummary.html" target="_blank">
+                      page</a>
+                      summarizing the <a href="https://fgb-rdm.nl/rdm/archiving/ArchivingGuidelinesFull.html" target="_blank">
+                      FGB Archiving Guidelines</a>.
+                    </p>
+                  </div>
+                  <br></br>
+                  <a href="#q8_rdm" data-toggle="collapse">Where should I archive
+                    paper documents from my research (e.g.
+                    paper informed consent forms, questionnaires etc.)? And
+                    can I destroy the original paper
+                    copies if I make a scanned copy of the information?</a>
+                  <div id="q8_rdm" class="collapse" >
+                    <p>
+                      Every department has a paper archive and you can contact
+                      your department's secretaries to make use of these
+                      archives for your paper data.
+                    </p>
+                    <p>
+                      The original paper copies should not be destroyed after the information
+                      has been digitized. Further explanation can be found in the
+                      <a href="https://fgb-rdm.nl/rdm/archiving/ArchivingGuidelinesFull.html#paperarchiving" target="_blank">
+                      FGB Archiving Guidelines</a>.
+                    </p>
+                  </div>
+                  <br></br>
+
+                  <h6>Open Science and the FAIR Principles</h6>
+                  <a href="#q3_rdm" data-toggle="collapse" id="fairFAQ">What
+                    are the FAIR principles? How can
+                    I apply them in my work at the VU?</a>
+                    <script>
+                      $(document).ready(function() {
+                        $(".ref_q3_rdm").click(function() {
+                          // following command no longer needed since no collapse anymore $("#collapseTwo").collapse('show');
+                          $("#q3_rdm").collapse('show');
+                          $('html, body').animate({
+                            scrollTop: parseInt($("#fairFAQ").offset().top)
+                          }, 1000, function() {
+                            $("#fairFAQ").fadeOut();
+                            $("#fairFAQ").fadeIn();
+                            $("#fairFAQ").fadeOut();
+                            $("#fairFAQ").fadeIn();
+                          });
+                        });
+                      });
+                    </script>
+                  <div id="q3_rdm" class="collapse" >
+                    <p>
+                      The FAIR principles were developed to give structure and
+                      guidance in how to
+                      achieve good data management, especially for data that
+                      will be reused in the future
+                      (by you, your research team, or other third parties).
+                      There is no
+                      requirement that FAIR data be made publicly available, a.k.a. open.
+                      Additionally, just because
+                      a dataset is openly available, doesn't mean that it is
+                      FAIR. There are many
+                      datasets publicly available right now that are not
+                      reusable because there is
+                      insufficient documentation about the data to be able to
+                      fully understand, interpret
+                      and use that data.
+                    </p>
+                    <p>
+                      The F in FAIR refers to findable data. This means that
+                      an individual can
+                      find the right dataset for their needs and purposes.
+                      VU researchers can improve the findability of their data
+                      by publishing metadata about their data on YODA or OSF, or
+                      by registering their data in
+                      <a href="https://vu.nl/en/employee/research-data-support/vu-research-portal-pure"
+                      target="_blank">PURE</a>.
+                      It is a requirement at VU Amsterdam that all archived
+                      data be registered in PURE. If you publish metadata
+                      on OSF, this information will be imported
+                      into PURE automatically. It is not currently possible
+                      for metadata in YODA to be imported to PURE so you will
+                      need to register this information separately in PURE.
+                      It is imperative that data be registered in PURE so that
+                      VU Amsterdam can better monitor and report on
+                      data production activities at our institution.
+                      <br/>
+                      Another consideration for findability that isn't specifically discussed
+                      by the FAIR principles,
+                      is to strive to make your data findable to you and your
+                      research team by using logical folder structures
+                      and file naming conventions for
+                      your datasets, scripts and documentation. This data management
+                      <a href="https://www.cessda.eu/Training/Training-Resources/Library/Data-Management-Expert-Guide/2.-Organise-Document/File-naming-and-folder-structure"
+                      target="_blank"> tutorial </a> provides
+                      many useful tips for how to organize your
+                      work, name your files
+                      and structure your folders.
+                    </p>
+                    <p> The A in FAIR refers to accessible data. This term
+                      leads to a lot of confusion, but it does
+                      <strong>NOT</strong> mean that your data must be publicly
+                      accessible. It means that
+                      there needs to be clear documentation regarding <em>how</em> the
+                      data can be accessed, <em>if</em> appropriate. If the GDPR applies
+                      to your data (which is the case for most data in the faculty), access
+                      to the data should only be given upon request. There are several things
+                      you will need to address when planning to manage access to the
+                      data:
+                      <ul>
+                        <li>
+                          You'll need to make participants aware that data may need to be
+                          shared for verification purposes after the data been used in
+                          a research article
+                        </li>
+                        <li>
+                          You'll need to obtain consent from participants to the sharing and
+                          reuse of their data for new research purposes. They'll
+                          need to be sufficiently informed about:
+                          <ul>
+                            <li> What those new research purposes
+                              may be
+                            </li>
+                            <li>
+                              The kinds of third parties the data may be shared with
+                            </li>
+                            <li>
+                              Whether the data will leave the EU/EEA
+                            </li>
+                            <li>
+                              How the data will be protected when shared with others
+                            </li>
+                          </ul>
+                          You can get help with these issues by contacting the
+                          <a href="mailto: research.data.fgb@vu.nl">
+                          FGB Privacy Champions</a>.
+                        </li>
+                        <li>
+                          You'll need to plan how to manage ongoing access to the data.
+                          You should document these plans, for example in your data management plan,
+                          and ensure that this documentation is findable well into the future.
+                        </li>
+                        <li>
+                          You'll need to determine how data can be safely shared with third parties.
+                          This includes drawing up data sharing agreements. You can get help with
+                          these agreements by contacting
+                          <a href="mailto: legal@vu.nl">
+                          IXA</a>.
+                        </li>
+                      </ul>
+                    </p>
+
+                    <p>
+                      The I in FAIR means data and metadata (data about data)
+                      should be Interoperable.
+                      Basically it means that both humans
+                      and computers can properly interpret and understand the data and metadata.
+                      One way to achieve this is using standards when
+                      creating metadata or by using vocabularly that is also used
+                      by other researchers in your field.
+                      See the question
+                      <a href="#metadataFAQ" class="ref_q6_rdm"
+                      onclick="return false;">I'm
+                        writing a data management plan (DMP) and the template is
+                        asking about which
+                        metadata standards, metadata schema, ontologies,
+                        terminologies and controlled vocabulary I will use.
+                        What does this mean? </a> for more information
+                      about metadata. In addition to creating metadata about
+                      your research data, you can also improve the
+                      interoberability of your data by using open-source
+                      software (e.g. R or Python) and data formats (e.g. csv, txt).
+                      If someone needs to use proprietary software
+                      to open and analyze your data files, then
+                      the data are less readily interoperable.
+                      <br/>
+                      Additional
+                      infrastructure at the
+                      VU is being developed to support researchers in
+                      meeting the Interoperability
+                      requirement; this information will be communicated
+                      as this infrastructure becomes available. For now,
+                      focus on maintaining good documentation about your
+                      data, for example, by:
+                      <ul>
+                        <li>
+                          Maintaining logbooks about data collection and cleaning
+                        </li>
+                        <li>
+                          Creating codebooks to describe variable names and value
+                          codes
+                        </li>
+                        <li>
+                          Saving all scripts, code or syntaxes used to clean and
+                          analyse your data.
+                        </li>
+                      </ul>
+                    </p>
+                    <p>
+                      Finally, the R in FAIR means reusable. In simple terms,
+                      it's a summary of the F, A, I
+                      aspects of the FAIR principles: if you meet those
+                      requirements, your data should be reusable.
+                      There are some more details that apply here, but those will
+                      be explained as the FAIR data infrastructure at the VU
+                      develops.
+                    </p>
+                    <p>
+                      It is important to be aware that making your data FAIR does
+                      not guarantee that
+                      your data are of a high quality. Following the FAIR
+                      principles only ensures that
+                      data can be reused by others. The best way to ensure data
+                      quality is to
+                      effectively plan for research data management before
+                      starting your research. Take
+                      the time to think about which variables are necessary to
+                      answer your research
+                      question and whether the planned methods of collecting data
+                      for these
+                      variables could lead to unreliable results. For example,
+                      if you are creating a
+                      question in a questionnaire that contains both open text
+                      fields (e.g. "other, namely", "Comments") alongside questions with
+                      pre-defined answers, consider
+                      whether there is a risk of collecting conflicting
+                      information. There
+                      isn't a perfect way to deal with such issues; it
+                      ultimately depends on
+                      what information you need to answer your research question.
+                      If you plan ahead, however, you can choose different
+                      ways to collect the necessary information. Or you can develop
+                      a data cleaning protocol for managing any
+                      inconsistencies as they arise; a documented protocol will
+                      ensure that all members of your research team
+                      clean the data in a consistent manner. Finally, any
+                      data cleaning steps should be well documented using code
+                      or in a logbook so that there is a clear record of how
+                      data were modified prior to analysis. This helps with transparency
+                      and prevents any questions about academic misconduct from arising.
+                    </p>
+                  </div>
+                  <br></br>
+                  <a href="#q5_rdm" data-toggle="collapse">My funder or a
+                    journal is requiring that I make my data
+                    publicly available, but my data falls under the GDPR.
+                    What should I do?</a>
+                  <div id="q5_rdm" class="collapse" >
+                    <p>
+                      If your
+                      data are subject to the GDPR, you shouldn't make them
+                      publicly available, but you can publish information about
+                      the data and how they can be accessed (the "A" in FAIR-data).
+                      See the questions <a href="#openFAQ" class="ref_q3_gen"
+                      onclick="return false;">
+                      How can I meet the FAIR principles/Open Data
+                      requirements if my data are subject to the GDPR?
+                      </a> and <a href="#fairFAQ" class="ref_q3_rdm"
+                      onclick="return false;">
+                      What are the FAIR principles? How can
+                      I apply them in my work at the VU?</a> for information on how to make
+                      your data FAIR even if they cannot be made publicly
+                      available. Addressing the issue in this way should be sufficient
+                      for your funder or the journal.
+                    </p>
+                  </div>
+                  <br></br>
+                  <h6>Open Access Publishing</h6>
+                    <a href="#q_oaPubl" data-toggle="collapse">How can I publish my
+                    research articles in an open access manner?</a>
+                    <div id="q_oaPubl" class="collapse" >
+                      <p>
+                        The VU has an Open Access publishing policy since Jan 1, 2023.
+                        You can find guidance and help on this topic on this
+                        <a href="https://vu.nl/en/about-vu/divisions/university-library/more-about/frequently-asked-questions-about-the-vu-open-access-policy"
+                        target="_blank">page</a>.
+                      </p>
+                    </div>
+                  <br></br>
+                  <h6>More Information</h6>
+                  <a href="#q2_rdm" data-toggle="collapse">Why is everyone
+                    talking about research data
+                    management so much?</a>
+                  <div id="q2_rdm" class="collapse" >
+                    <p>
+                      Good research data management not only helps a research
+                      project run more smoothly,
+                      it can result in higher quality data and improve the
+                      validity and reproducibility of your study results.
+                      There have been cases where published studies have been
+                      retracted because
+                      the variables used in the analysis
+                      were mislabeled, leading to completely invalid and
+                      misleading results.
+                      Clear documentation could have helped to avoid this.
+                      Clear documentation also makes your data more understandable
+                      to yourself, your internal research team and any future
+                      users of the data.
+                    </P>
+                    <p>
+                      Planning ahead with research data management helps you to
+                      ensure the privacy and security
+                      of your research data; for example, you may need to plan
+                      out a good method for collecting
+                      data outside the VU. Writing this down in a data
+                      management plan gives everyone in your research team a clear
+                      understanding of what their responsibilities are and shows
+                      any data protection authorities
+                      that you’ve considered the risks and taken appropriate and
+                      strategic measures to minimize these risks.
+                    </p>
+                    <p>
+                      Data management planning can also help minimize the amount
+                      of work required to clean your data;
+                      for example, by building validation checks into your data
+                      entry forms, you prevent impossible values (e.g. age of 200)
+                      from being entered.
+                      Additionally, if you will be using questionnaires in your
+                      research and you take the time
+                      during data management planning to think about the structure
+                      of your questionnaire,
+                      you can determine where and when open text fields are
+                      absolutely necessary, minimizing the amount of
+                      text data that will need to be recoded into categorical
+                      data during data processing.
+                    </p>
+                    <p>
+                      Finally, data management planning helps with preparing for
+                      archiving and publishing of research data.
+                      Data archiving after an article is published is a
+                      requirement of the
+                      <a href="https://www.vsnu.nl/files/documents/Netherlands%20Code%20of%20Conduct%20for%20Research%20Integrity%202018.pdf"
+                      target="_blank">VSNU Code
+                      of Conduct for Research Integrity</a>.
+                      There have been numerous cases around the world where
+                      research publications
+                      have been retracted because the original data were not
+                      findable, meaning that the validity of the research findings
+                      could not be confirmed.
+                      Additionally, data should not only be archived to
+                      allow for verification of research findings, but also
+                      described clearly and effectively
+                      through documentation and metadata so that others who
+                      may need to check
+                      the data can fully understand the data
+                      and interpret them. Archiving takes a lot of work, but
+                      the stress of archiving can be
+                      reduced if you plan ahead for it during your data management
+                      planning (by thinking ahead about
+                      what parts of your research need to be archived, what
+                      documentation is necessary to understand the data
+                      and which archiving location should be used.)
+                    </p>
+                    <p>
+                      These are just a few examples of how research data
+                      management plays a role in how smoothly your research
+                      project will run. It’s not necessary to know all of the
+                      details about data management at the start of your research,
+                      but it is important to document what <em>is</em> known at
+                      the start of a project and to regularly review and update
+                      the data management plan as more information becomes
+                      available.
+                    </p>
+                  </div>
+                  <br></br>
+                  <!-- Last question for RDM section -->
+                    <a href="#qlast_rdm" data-toggle="collapse">Where can I find
+                      more information about research data management?</a>
+                    <div id="qlast_rdm" class="collapse" >
+                      <p>
+                        You can find
+                        additional information about research data management
+                        on the
+                        <a href="https://vu.nl/en/employee/research-data-management-fbms"
+                        target="_blank">
+                          faculty research data management support page</a> .
+                      </p>
+                    </div>
+
+                </div>
+              <!-- no longer needed now that cards are always open, no longer collapsible
+              </div>
+            -->
+            </div>
+          </div>
+          <!-- Privacy FAQ section -->
+            <div class="col-sm p-0">
+              <div class="card">
+                <div class="card-header">
+                  <!--removed hyperlink for header because per 2023-03-28 decided no
+                  more drop-down with the cards; just have them open already
+                  This also means following from each javascript function for linked
+                  questions:
+                  $("#collapseThree").collapse('show');
+                  was removed for all linked privacy FAQ as the first command after
+                  $(...).click(function() { ...
+                  <a class="card-link" data-toggle="collapse" href="#collapseThree">
+                    Privacy FAQ
+                  </a>
+                -->
+                    Privacy FAQ
+                </div>
+                <!-- Removed following because no longer necessary after deciding per
+                2023-03-28 that each card no longer needs dropdown function; will just always be open
+                <div id="collapseThree" class="collapse">
+                Closing div tag was also commented out
+                -->
+                  <div class="card-body">
+                    <input placeholder="Search privacy questions" type="text"
+                    id="searchpriv" style = "width:80%;">
+                    <!-- original search method
+                    <input type="button" value="Go" onclick="search(document.getElementById('searchpriv').value)">-->
+
+                    <button id="privBtn"
+                    onclick="search(document.getElementById('searchpriv').value)">
+                    Go</button>
+                    <script>
+                    var input = document.getElementById("searchpriv");
+                    input.addEventListener("keypress", function(event) {
+                      if (event.key === "Enter") {
+                        event.preventDefault();
+                        document.getElementById("privBtn").click();
+                      }
+                    });
+                    </script>
+
+                    <br></br>
+                    <h6>General GDPR Concerns</h6>
+                    <a href="#q2_priv" data-toggle="collapse">What is the GDPR and what does it mean for me as a researcher?</a>
+                    <div id="q2_priv" class="collapse" >
+                      <p>
+                        This <a href="https://assets.vu.nl/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/57e5d5e6-54dc-4904-be0d-0baaa6cc8b73/AVG%20Take-home%20points%20voor%20FGB%20onderzoekers%3F.pdf"
+                        target="_blank">document</a>
+                        provides a summary of what the GDPR means for you as a researcher.
+                      </p>
+                    </div>
+                    <br></br>
+                    <a href="#q1_priv" data-toggle="collapse" id="anonFAQ">The GDPR only applies to personal data, but
+                      my data are anonymous. Why do I have to worry about the GDPR?</a>
+                      <script>
+                        $(document).ready(function() {
+                          $(".ref_q1_priv").click(function() {
+                            // following command no longer needed since no collapse anymore $("#collapseThree").collapse('show');
+                            $("#q1_priv").collapse('show');
+                            $('html, body').animate({
+                              scrollTop: parseInt($("#anonFAQ").offset().top)
+                            }, 1000, function() {
+                              $("#anonFAQ").fadeOut();
+                              $("#anonFAQ").fadeIn();
+                              $("#anonFAQ").fadeOut();
+                              $("#anonFAQ").fadeIn();
+                            });
+                          });
+                        });
+                      </script>
+                    <div id="q1_priv" class="collapse" >
+                      <p>
+                        This is a complex issue. The GDPR has broadened the definition of personal data to:
+                        “any information relating to an identified or identifiable natural person; an
+                        identifiable natural person is one who can be identified, directly or indirectly,
+                        in particular by reference to an identifier such as a name, an identification number,
+                        location data, an online identifier or to one or more factors specific to the physical,
+                        physiological, genetic, mental, economic, cultural or social identity of that natural person”.
+                        It is the indirect identification of individuals that makes it difficult to say with certainty
+                        that data about people are anonymous because through the combination of several indirect identifiers
+                        or by coupling these identifiers with publicly available data a person could
+                        actually be quite easily identified. In a world of Big Data, AI and learning algorithms
+                        it's almost never possible to 100% guarantee anonimity when data about
+                        people are collected. Additionally the rules that the Dutch Data Protection Authority
+                        applies when considering if data are anonymous are quite strict. For data about people to
+                        be anonymous, the following three conditions must all apply:
+                        <ol>
+                          <li>
+                            Is must not be possible to single out a unique individual within the dataset
+                          </li>
+                          <li>
+                            It must not be possible to couple together separate records on an individual
+                          </li>
+                          <li>
+                            It must not be possible to infer, with significant likelihood, additional
+                            data values about an individual based on the data available in the dataset
+                          </li>
+                        </ol>
+                      </p>
+                      <p>
+                        Because of these very strict rules, the faculty advises all researchers using data about humans
+                        to treat such data as personal data under the GDPR. This means that all
+                        data about people should be protected with at least some security measures such as those suggested in this
+                        <a href="https://fgb-rdm.nl/Security/SecurityBasics.html" target="_blank">
+                          guide</a>. <a href="https://fgb-rdm.nl/Security/PrivacyRisks.html"
+                          target="_blank">Lower risk data</a>
+                        (e.g. benign information about healthy adults)
+                        don't require as many or as strict security measures, but at a minimum
+                        these data should be saved in a pseudonymized manner (i.e. no names and contact information
+                        stored in the same dataset as the research data) and these data should be stored on and shared through VU
+                        approved facilities.
+                      </p>
+                      <p>
+                        For more tips about personal data, pseudonymous data and anonymous data and when the GDPR
+                        does or doesn't apply, see this
+                        <a href="https://doi.org/10.5281/zenodo.3584842" target="_blank">
+                          postcard</a> from the National Coordination Point for RDM.
+                        Finally, if you think your data are anonymous, check first with the
+                        <a href="mailto: research.data.fgb@vu.nl">FGB Privacy Champions</a> whether
+                        this is actually the case. If your data truly are anonymous, then the GDPR does not
+                        apply to you data.
+                      </p>
+                    </div>
+                    <br></br>
+                    <h6>GDPR Rules and Requirements</h6>
+                    <a href="#q3_priv" data-toggle="collapse">Am I allowed to collect BSNs from research participants?</a>
+                    <div id="q3_priv" class="collapse" >
+                      <p>
+                        No.
+                      </p>
+                      <p>
+                        Newer privacy requirements in The Netherlands <strong>do not allow</strong> us to collect BSNs anymore.
+                        In the past, researchers whose studies offered financial compensation to participants were required to collect
+                        administrative information, including BSNs, and submit this information to VU Financial Affairs.
+                        <strong>This is no longer required</strong>.
+                        The Dutch Tax Authority has now changed its procedures and research participants are responsible
+                        for filing income from research participation (if the total annual compensation is above €1500).
+                      </p>
+                      <p>
+                        It is also not allowed to collect BSNs for any other research purposes. If, for some reason, this information
+                        is imperative to your research, you <strong>must</strong> contact
+                        <a href="mailto:privacy@vu.nl">VU Legal Affairs</a> <strong>prior</strong> to starting
+                        your research to determine whether there is any valid legal argument for you to collect BSNs.
+                      </p>
+                      <p>
+                        <strong>You are not allowed to collect BSNs without the approval of the VU Legal Affairs department</strong>
+                      </p>
+                    </div>
+                    <br></br>
+                    <a href="#q4_priv" data-toggle="collapse">I am working on a grant that requires
+                      information or a declaration from the Data Protection Officer for the VU. Who do I need to contact for this?</a>
+                    <div id="q4_priv" class="collapse" >
+                      <p>
+                        The Data Protection Officer for the VU can be reached at
+                        <a href="mailto: functionarisgegevensbescherming@vu.nl"> functionarisgegevensbescherming@vu.nl</a>.
+                      </p>
+                    </div>
+                    <br></br>
+                    <a href="#q7_priv" data-toggle="collapse">I am working with personal data; who do I need to register this information with?</a>
+                    <div id="q7_priv" class="collapse" >
+                      <p>
+                        Under the GDPR, it is no longer necessary to register the processing of personal
+                        data with the Data Projection Authority for the Netherlands. Instead a data processing
+                        registry must be maintained by the VU. In order to meet this requirement, you are
+                        asked to complete a data management plan (DMP) or registration form via
+                        <a href="https://dmponline.vu.nl/" target="_blank">DMPonline</a>. First log in
+                        to DMPonline with your VUnet ID and then:
+                        <ol>
+                          <li>Select "Create plans"</li>
+                          <li>Make sure Vrije Universiteit Amsterdam is listed under "Select the primary
+                            research organisation"</li>
+                          <li>Under "Select the primary funding organisation" select the box that says
+                          "No funder associated with this plan"</a>
+                          <li>Once "Which DMP template would you like to use?" appears select either:
+                            <ul>
+                              <li>The VU DMP template if you still need to write a data management plan.
+                                This is the default option for most cases and this DMP is approved by both
+                                NWO and ZonMw for their grant applications.
+                              </li>
+                              <li>
+                                The GDPR registration form if you have already written a DMP
+                                without using DMPonline (or if you used a DMPonline template other than the "VU DMP template
+                                2021 v1.3"). This option allows you to enter the necessary
+                                information for the processing register without
+                                have to write a new DMP.
+                              </li>
+                            </ul>
+                        </ol>
+                        Once you have completed the appropriate form in DMPonline, this information
+                        will be imported to th VU's processing register.
+                        For further information please contact the
+                        <a href="mailto: research.data.fgb@vu.nl">FGB Privacy Champions</a>.
+                      </p>
+                    </div>
+                    <br></br>
+                    <a href="#q13_priv" data-toggle="collapse">What should I do when I receive privacy
+                      sensitive information from participants, parents, schools, hospitals etc. in the form of an e-mail?</a>
+                    <div id="q13_priv" class="collapse" >
+                      <p>
+                        Unfortunately, this isn’t really something that can be avoided, particularly
+                        when the information is coming from participants or their parents. With regards to
+                        institutional third parties such as schools, hospitals or clinics that you are working with,
+                        contact the institution to determine whether data will continue to be transferred in this way
+                        so that a safe method can be agreed upon. If data will continue to be shared with you in this way,
+                        you should set up data transfer methods in line with this
+                        <a href="https://fgb-rdm.nl/Security/DigitalTransfer.html" target="_blank">
+                          guide</a>. For example, it's possible to set up access to a
+                        SURFdrive file or create a guest user in SURFFileSender for third parties
+                        including for those that don't normally have access to SURF products. SURFdrive
+                        and SURFFileSender are safer methods than e-mail is that your partners can
+                        use if they need to share sensitive information with you.
+                      </p>
+                      <p>
+                        If you receive a single e-mail containing sensitive information,
+                        simply contact the sender to say you have recorded the
+                        information in a safe location and deleted the e-mail. Advise the sender to delete
+                        the e-mail from their outbox and then let him or her know that e-mailing is not a
+                        particularly safe method for sending sensitive information; if sensitive information
+                        needs to be sent again in the future, advise the sender to first contact the research
+                        team to set up a safer method of transfer, such as with ZIVVER. You can
+                        find more information on ZIVVER on this
+                        <a href="https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012860" target="_blank">
+                        IT Service Portal page</a>. For additional information on ZIVVER, see this
+                        <a href="https://fgb-rdm.nl/Images/ZIVVER_digital_consent.pdf" target="_blank">
+                        instruction manual</a>: it explains how to use ZIVVER for obtaining digital consent, which
+                        is discussed further in the question
+                        <a href="#digitalFAQ" class="ref_q21_priv" onclick="return false;">How can I obtain consent from participants digitally, but
+                        also securely and in a way that follows the privacy rules?</a>).
+                      </p>
+                      <p>
+                        It is understandable that if A LOT of these kinds of e-mails are received,
+                        that they will not be addressed immediately. Just try to manage them
+                        in a timely manner; your research team can document in your research data
+                        management plan or data protection impact assessment
+                        what standard response you should send when receiving these
+                        e-mails and the time frame within which you will address these e-mails. The GDPR
+                        does not define any time frame to manage such situations; instead you simply need
+                        to document how you handle personal data, so it is your responsibility to define
+                        a reasonable time frame (for example, 2 weeks), then document that time frame
+                        and stick to it.
+                      </p>
+                    </div>
+                    <br></br>
+                    <a href="#qInt_priv" data-toggle="collapse" id="internatFAQ">
+                      What do I do if I
+                      plan to share research data outside of the EU/EEA?</a>
+                    <script>
+                      $(document).ready(function() {
+                        $(".ref_qInt_priv").click(function() {
+                          // following command no longer needed since no collapse anymore $("#collapseThree").collapse('show');
+                          $("#qInt_priv").collapse('show');
+                          $('html, body').animate({
+                            scrollTop: parseInt($("#internatFAQ").offset().top)
+                          }, 1000, function() {
+                            $("#internatFAQ").fadeOut();
+                            $("#internatFAQ").fadeIn();
+                            $("#internatFAQ").fadeOut();
+                            $("#internatFAQ").fadeIn();
+                          });
+                        });
+                      });
+                    </script>
+                    <div id="qInt_priv" class="collapse" >
+                      <p>
+                        Under the GDPR,
+                        there are specific rules you must follow if you plan to
+                        share non-anonymous data outside of the EU/EEA.
+                        The most feasible
+                        options for meeting these rules are to send the data to
+                        a <a href="https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/adequacy-decisions_en"
+                        target="_blank">country</a>
+                        that has an adequate level of data protection
+                        according to the European Commission.
+                        Note that in Canada, this only applies to
+                        commercial organizations and in the U.S., this only applies to
+                        commericial organizations that are certified under the
+                        <a href="https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/eu-us-data-transfers_en"
+                        target="_blank">Privacy Shield framework</a>.
+                        If there is no equivalency status, then you
+                        can have the receiving party in the other country
+                        sign a <a href="https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/standard-contractual-clauses-scc_en"
+                        target="_blank">Standard Contractual Clause<a>.
+                        If none of these
+                        options are feasible, contact the
+                        <a href="mailto: research.data.fgb@vu.nl">FGB Privacy
+                        Champion</a> for further assistance.
+                      </p>
+                    </div>
+                    <br></br>
+
+                    <h6>Informed Consent Requirements</h6>
+                    <a href="#q5_priv" data-toggle="collapse">I am working on a longitudinal study and I
+                      obtained consent from some participants prior to the GDPR coming into force.
+                      Do I need to get consent again for these participants?</a>
+                    <div id="q5_priv" class="collapse" >
+                      <p>
+                        The first thing to check is whether the informed
+                        consent methods used prior to the GDPR meet GDPR requirements.
+                        This <a href="https://assets.vu.nl/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/ae86a9d8-90a8-4d05-a924-4f6646a5351f/Informed_Consent_and_Information_Letter_Checklist_tcm263-917997.pdf" target="_blank">
+                          document</a> includes information about the requirements for valid
+                        consent under the GDPR. If you determine that the manner in which consent
+                        was previously obtained is not valid under the GDPR and you still need to
+                        continue using participant data, then first try to contact participants (if you still have
+                        their contact information)
+                        to renew consent in a manner that is valid under the GDPR. If it is no longer
+                        possible to contact participants (e.g. all contact information has been deleted)
+                        then it is not absolutely necessary to renew consent under the GDPR, but you
+                        will need to document clearly in a data management plan or data protection impact
+                        assessment that it was impossible to contact the participants to renew consent
+                        under the GDPR rules and provide an explanation as to why this was impossible.
+                      </p>
+                    </div>
+                    <br></br>
+                    <a href="#q6_priv" data-toggle="collapse">Due to the nature of my research, informed
+                      consent is not a feasible option (e.g. studies with children regarding criminal
+                      behaviour, abuse etc. where it might be inappropriate to obtain consent from parents).
+                      How can I carry out my research in a legal manner?</a>
+                    <div id="q6_priv" class="collapse" >
+                      <p>
+                        This question will need to be partially addressed by the
+                        <a href="https://vu.nl/en/employee/behavioural-and-movement-sciences-getting-started/the-scientific-and-ethical-review-board-vcwe" target="_blank">
+                          FGB Ethical Committee (in Dutch the VCWE)</a>
+                        during the ethical approval process; they can inform you about whether doing your research without
+                        obtaining consent can be ethically justified. With regards to privacy law,
+                        there is an option for data processing without explicit
+                        consent under the GDPR but it is important to discuss
+                        your desire to use this option with the
+                        <a href="mailto: research.data.fgb@vu.nl">FGB Privacy Champion</a>
+                        as early as possible in your research planning.
+                      </p>
+                    </div>
+                    <br></br>
+                    <a href="#q21_priv" data-toggle="collapse" id="digitalFAQ">How can I obtain consent from participants digitally, but
+                    also securely and in a way that follows the privacy rules?</a>
+                    <script>
+                      $(document).ready(function() {
+                        $(".ref_q21_priv").click(function() {
+                          // following command no longer needed since no collapse anymore $("#collapseThree").collapse('show');
+                          $("#q21_priv").collapse('show');
+                          $('html, body').animate({
+                            scrollTop: parseInt($("#digitalFAQ").offset().top)
+                          }, 1000, function() {
+                            $("#digitalFAQ").fadeOut();
+                            $("#digitalFAQ").fadeIn();
+                            $("#digitalFAQ").fadeOut();
+                            $("#digitalFAQ").fadeIn();
+                          });
+                        });
+                      });
+                    </script>
+                    <div id="q21_priv" class="collapse" >
+                      <p>
+                        It is generally preferred that consent be obtained with a paper consent form, but
+                        in many cases, it may be more appropriate to use digital consent.
+                        If your research is not medical in nature and not subject
+                        to any of the medical research regulations (namely, the WMO law, the GCP guidelines or the Medical Device Regulation),
+                        then there are no restrictions on using digital consent instead of paper consent.
+                        If you are conducting medical research and it is subject to any of the medical research regulations, you should check with the
+                        <a href="mailto: metc@vumc.nl"> VUmc METC</a> as to whether paper consent forms are required. As of mid-2022
+                        digital consent is allowed in some <a href="https://www.ccmo.nl/publicaties/publicaties/2022/08/31/handreiking-elektronische-toestemmingsverlening"
+                        target="_blank">cases of WMO-research</a>, but you should always check with the METC
+                        if your research is allowed to use digital consent.
+                      </p>
+                      <p>
+                        If digital consent is an option for you, the second thing you want to
+                        ensure is that you can obtain consent legally:
+                        <ul>
+                          <li>
+                            Potential participants must have
+                            consented to their contact information being used for such a purpose before you
+                            contact them. For example, you could receive a list of potential participants that are
+                            recruited by an external partner, but first that external partner must have
+                            obtained consent to share the e-mail addresses with us so that we can
+                            contact the potential participants about participating in our study.
+                          </li>
+                          <li>
+                            You need to follow the advice from this
+                            <a href="https://assets.vu.nl/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/ae86a9d8-90a8-4d05-a924-4f6646a5351f/Informed_Consent_and_Information_Letter_Checklist_tcm263-917997.pdf"
+                            target="_blank">checklist</a>
+                            to ensure that the information you provide follows legal requirements
+                          </li>
+                          <li>
+                            You want to make sure you are contacting and obtaining consent from
+                            the correct person. The best way to do that is with a form of 2-factor
+                            authentication with the help of the ZIVVER tool. This
+                            <a href="https://fgb-rdm.nl/Images/ZIVVER_digital_consent.pdf" target="_blank">
+                            instruction manual</a>
+                            will help you with setting up ZIVVER and using it for obtaining consent.
+                          </li>
+                        </ul>
+                      </p>
+                      <p>
+                        If you are running a survey with a panel provider (see the question
+                        <a href="#panelsFAQ" class="ref_q19_priv" onclick="return false;">
+                        Do I need to set up a processing agreement with panel providers, such as MTurk or Prolific Academic?
+                        </a>), you should obtain consent using your questionnaire tool at the very start of your survey.
+                        Make sure the information provided to participants, as well as the way consent is obtained, follows the requirements of this
+                        <a href="https://assets.vu.nl/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/ae86a9d8-90a8-4d05-a924-4f6646a5351f/Informed_Consent_and_Information_Letter_Checklist_tcm263-917997.pdf"
+                        target="_blank">checklist</a>.
+                      </p>
+                    </div>
+                    <br></br>
+
+                    <h6>Collaborations and Contracts</h6>
+                    <a href="#q8_priv" data-toggle="collapse" id="roleFAQ">How can I determine what my role is (controller, joint
+                      controller or processor) under the GDPR?</a>
+                      <script>
+                        $(document).ready(function() {
+                          $(".ref_q8_priv").click(function() {
+                            // following command no longer needed since no collapse anymore $("#collapseThree").collapse('show');
+                            $("#q8_priv").collapse('show');
+                            $('html, body').animate({
+                              scrollTop: parseInt($("#roleFAQ").offset().top)
+                            }, 1000, function() {
+                              $("#roleFAQ").fadeOut();
+                              $("#roleFAQ").fadeIn();
+                              $("#roleFAQ").fadeOut();
+                              $("#roleFAQ").fadeIn();
+                            });
+                          });
+                        });
+                      </script>
+                    <div id="q8_priv" class="collapse" >
+                      <p>
+                        The ICO, the Data Protection Authority for the UK, created a
+                        <a href="https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/key-definitions/controllers-and-processors/" target="_blank">checklist</a> to
+                        help you determine which role(s) you will have for the planned data processing.
+                        You can also use this checklist to determine whether third parties that you are going
+                        to work with will function as joint controllers and/or processors. It's necessary to
+                        determine what everyone's role is because you can then determine if agreements
+                        between the various parties need to be signed and if so, which type of agreement.
+                      </p>
+                    </div>
+                    <br></br>
+                    <a href="#q9_priv" data-toggle="collapse" id="procFAQ">I need to hire a company to help with data processing (for example,
+                      questionnaire, app or database developers). Is there a standard processing agreement that I can use when
+                      hiring a processor?</a>
+                      <script>
+                        $(document).ready(function() {
+                          $(".ref_q9_priv").click(function() {
+                            // following command no longer needed since no collapse anymore $("#collapseThree").collapse('show');
+                            $("#q9_priv").collapse('show');
+                            $('html, body').animate({
+                              scrollTop: parseInt($("#procFAQ").offset().top)
+                            }, 1000, function() {
+                              $("#procFAQ").fadeOut();
+                              $("#procFAQ").fadeIn();
+                              $("#procFAQ").fadeOut();
+                              $("#procFAQ").fadeIn();
+                            });
+                          });
+                        });
+                      </script>
+                    <div id="q9_priv" class="collapse" >
+                      <p>
+                        Check first if the VU or FGB already has a contract with the company
+                        you wish to hire or with another company that provides a similar solution.
+                        The <a href="mailto: research.data.fgb@vu.nl">FGB Privacy Champions</a>
+                        can help you with this. Also check if the faculty
+                        technicians
+                        <a href="https://vu.nl/en/employee/behavioural-and-movement-sciences-getting-started/technical-support-for-research-to3" target="_blank">(TO3)</a>
+                        could create an in-house solution for you so that an external
+                        company doesn't need to be hired.
+                      </p>
+                      <p>
+                        If a new company needs to be hired, use the standard VU model processing agreement,
+                        which you can obtain from the <a href="mailto: research.data.fgb@vu.nl">FGB Privacy Champion</a>.
+                        The main text of this model agreement must not be changed, but the annexes at the end of the
+                        agreement need to be filled in. Contact
+                        the <a href="mailto: research.data.fgb@vu.nl">FGB Privacy Champion</a> to review Annex 1 and contact
+                        the <a href="mailto: rdm@vu.nl" target="_blank">RDM support desk</a>
+                        to get support from an IT expert who can review Annex 3 to check that the security measures of the company are sufficient.
+                        Be aware: it's very likely that the IT expert who will review Annex 3 will want to see a data classification about
+                        the data that will be collected or stored by the company you are hiring. This will help the expert in their
+                        assessment as to whether the security measures are sufficient. You can complete a data classification
+                        with this <a href="https://vu.nl/en/research/dataclassification" target="_blank">tool</a>, although check first
+                        with your supervisor or research teammembers as to whether a data classification has already been completed.
+                      </p>
+                      <p>
+                        Please note that some companies will wish to use their own model processing agreement. If it’s absolutely not possible to
+                        use the VU model then it may be possible to use the model of the company; however the FGB Privacy Champion will
+                        need to check the processor's model to make sure it meets the needs of the VU.
+                      </p>
+                      <p>
+                        In all cases, setting up a processing agreement with an external company will take time, regardless of
+                        which model agreement is used. To help avoid trying to set up such agreements last minute, make sure to plan
+                        ahead in your data management planning as to whether an external company needs to be hired so that
+                        the process of setting up an agreement with that company happens well before data collection needs to begin.
+                      </p>
+                    </div>
+                    <br></br>
+                    <a href="#q19_priv" data-toggle="collapse" id="panelsFAQ">Do
+                      I need to set up a processing agreement with
+                      panel providers, such as MTurk or Prolific Academic?</a>
+                      <script>
+                        $(document).ready(function() {
+                          $(".ref_q19_priv").click(function() {
+                            // following command no longer needed since no collapse anymore $("#collapseThree").collapse('show');
+                            $("#q19_priv").collapse('show');
+                            $('html, body').animate({
+                              scrollTop: parseInt($("#panelsFAQ").offset().top)
+                            }, 1000, function() {
+                              $("#panelsFAQ").fadeOut();
+                              $("#panelsFAQ").fadeIn();
+                              $("#panelsFAQ").fadeOut();
+                              $("#panelsFAQ").fadeIn();
+                            });
+                          });
+                        });
+                      </script>
+                    <div id="q19_priv" class="collapse" >
+                      <p>
+                        If you are using a panel provider to recruit participants by having the provider
+                        share a link for your survey, there is no need to set up a processing agreement
+                        with that provider. The provider is in this case an independent controller, according to
+                        the GDPR, meaning they are responsible for the data they collect and maintain; the VU
+                        is also an independent controller and we are responsible for the data we
+                        collect through the surveys. But neither party sees that data of the other party
+                        so there is no need for an agreement. This applies even if the panel provider
+                        is located outside of the EU/EEA.
+                      </p>
+                      <p>
+                        If you are using panel providers to recruit participants located outside the EU/EEA,
+                        be aware that other privacy laws may apply to the data collected;
+                        the VU is required to meet both GDPR requirements
+                        and international privacy laws when working with international participants.
+                        Finally, the only other thing to keep in mind when recruiting participants with panel providers
+                        is that you must ensure that you have a GDPR-compliant informed consent process at the
+                        start of the survey. Review this
+                        <a href="https://assets.vu.nl/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/ae86a9d8-90a8-4d05-a924-4f6646a5351f/Informed_Consent_and_Information_Letter_Checklist_tcm263-917997.pdf"
+                        target="_blank">checklist</a>
+                        to make sure your consent process is valid.
+                      </p>
+                    </div>
+                    <br></br>
+
+                    <a href="#q10_priv" data-toggle="collapse" id="agreeFAQ">Are there standard VU agreements for working with other research institutions?</a>
+                    <script>
+                      $(document).ready(function() {
+                        $(".ref_q10_priv").click(function() {
+                          // following command no longer needed since no collapse anymore $("#collapseThree").collapse('show');
+                          $("#q10_priv").collapse('show');
+                          $('html, body').animate({
+                            scrollTop: parseInt($("#agreeFAQ").offset().top)
+                          }, 1000, function() {
+                            $("#agreeFAQ").fadeOut();
+                            $("#agreeFAQ").fadeIn();
+                            $("#agreeFAQ").fadeOut();
+                            $("#agreeFAQ").fadeIn();
+                          });
+                        });
+                      });
+                    </script>
+                    <div id="q10_priv" class="collapse" >
+                      <p>
+                        The VU has developed model agreements for situations where the VU functions as a
+                        joint controller with another party (see the question <a href="#roleFAQ" class="ref_q8_priv" onclick="return false;">
+                          How can I determine what my role is (controller, joint
+                          controller or processor) under the GDPR? </a>
+                        for further information on what a "controller" is).
+                        You can obtain this model agreement from the <a href="mailto: research.data.fgb@vu.nl">FGB Privacy Champion</a>.
+                      </p>
+                      <p>
+                        Additional agreements, such as collaboration agreements, may need to be set up
+                        when working with third parties. You can contact
+                        <a href="mailto: legal@vu.nl"> Legal Affairs</a> for assistance with this process.
+                      </p>
+                    </div>
+                    <br></br>
+
+                    <a href="#q17_priv" data-toggle="collapse">I am an external PhD candidate/I am supervising an
+                      external PhD candidate. What kind of privacy/data sharing agreements need to be signed
+                      before data collection begins?</a>
+                    <div id="q17_priv" class="collapse" >
+                      <p>
+                        A good starting point to assess what kind of privacy agreements are necessary is to complete
+                        this <a href="https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/key-definitions/controllers-and-processors/" target="_blank">checklist</a>
+                        and see whether the VU and the third party are joint controllers. If they are joint controllers,
+                        a joint controller agreement needs to be signed; you can obtain a model agreement
+                        from the <a href="mailto: research.data.fgb@vu.nl">FGB Privacy Champion</a>. You should also consider
+                        where the research data will be collected from and stored because if all data are maintained
+                        externally by the third party and the PhD candidate is employed by that third party,
+                        generally no joint controller or data sharing agreements are required. However, if the
+                        third party has no facilities for maintaining the data long-term after the research
+                        project is complete (namely for archiving the research data) data may need to be transferred to the
+                        VU at which point a data sharing agreement and potentially a joint controller agreement will be
+                        necessary. You can contact <a href="mailto: legal@vu.nl">Legal Affairs</a> for help with drawing up a data sharing agreement.
+                      </p>
+                      <p>
+                        Make sure to also review the question <a href="#servicesFAQ" class="ref_q5_sec" onclick="return false;">
+                          I am an external PhD candidate/I am supervising
+                          an external PhD candidate. Can I make use of services licensed by the VU, such as Qualtrics or
+                          Survalyzer?</a> for more information about the use of VU-licensed services by
+                        external PhD candidates.
+                      </p>
+                    </div>
+                    <br></br>
+
+                    <h6>Working with Students</h6>
+                    <a href="#q12_priv" data-toggle="collapse">It is not feasible for my student to complete their
+                      research project at a VU workstation. What other options are there?</a>
+                    <div id="q12_priv" class="collapse" >
+                      <p>
+                        This <a href="https://fgb-rdm.nl/Security/SecurityForStudents.html" target="_blank">
+                        document</a> provides guidance on how to handle privacy risks when students are using research data, including
+                        where and how the data should be stored.
+                        If the data are higher risk, but the guidance above isn't feasible, one solution is to
+                        <a href="https://fgb-rdm.nl/Security/Deidentification.html" target="_blank">de-identify the data</a>
+                        before giving the student access so that privacy risks are reduced.</a>
+                      </p>
+                    </div>
+                    <br></br>
+                    <a href="#q15_priv" data-toggle="collapse">Who is responsible if students
+                      working with personal data are not sufficiently careful and a data breach occurs?</a>
+                    <div id="q15_priv" class="collapse" >
+                      <p>
+                        This is a complex question. Ultimately the VU would bear the brunt of the responsibility
+                        if a breach occurs. However students are responsible for handling data carefully according to
+                        the requirements of the VU. In order to ensure students behave appropriately while under VU supervision,
+                        students must carefully read, understand and sign confidentiality agreements before they work with
+                        research data. If students will be collecting or transporting data outside of the VU or they will
+                        be borrowing equipment from the TO3 Borrowing Service, they must also read this
+                        <a href="https://fgb-rdm.nl/Security/SecurityBasics.html"
+                        target="_blank">guide on security basics </a> and this
+                        <a href="https://fgb-rdm.nl/Security/PhysicalTransport.html"
+                        target="_blank">guide on physical transport of data </a>
+                        so that they know how to carefully handle the data until they can store it in a safe VU
+                        location. It is also a good idea to develop a protocol for collecting data outside the VU that will be documented in the
+                        data management plan so that everyone collecting and transporting data knows what their responsibilities
+                        are; having clear, documented procedures that everyone must follow will minimize
+                        the risks of leaking data.
+                      </p>
+                    </div>
+                    <br></br>
+                    <a href="#q16_priv" data-toggle="collapse">Where can I get a confidentiality
+                      agreement for my student to sign?</a>
+                    <div id="q16_priv" class="collapse" >
+                      <p>
+                        If the student will be conducting research under the sole supervision of the VU
+                        and there isn’t another third party (e.g. a hospital, long-term care centre, physiotherapy
+                        clinic etc.) involved in the data collection, then a confidentiality agreement can be obtained
+                        from your department or section head. He or she can also sign this agreement on behalf of the
+                        Director of Operations for the Faculty. If all data collection and data storage will take
+                        place at the location of a third party, and the only role for the VU is to provide
+                        supervision for the research internship, then the third party is responsible for
+                        setting up a confidentiality agreement with the student.
+                      </p>
+                      <p>
+                        If both the third party and the VU are responsible for the data that the student
+                        will work with (i.e. data collection and/or storage happens at both the VU and the
+                        third party location) then the student must sign confidentiality agreements
+                        for both the VU and the third party. It is advised that the supervisor
+                        review the confidentiality agreement template in this situation to make sure
+                        that there isn't anything in the agreement that might a problem for the
+                        collaboration; if there seems to be a problem,
+                        contact the <a href="mailto: research.data.fgb@vu.nl">FGB Privacy Champion</a>
+                        for advice.
+                      </p>
+                    </div>
+                    <br></br>
+
+                    <h6>Data Protection Measures</h6>
+                    <a href="#q11_priv" data-toggle="collapse" id="dpiaFAQ">Do I need to complete a data protection impact assessment (DPIA)?</a>
+                    <script>
+                      $(document).ready(function() {
+                        $(".ref_q11_priv").click(function() {
+                          // following command no longer needed since no collapse anymore $("#collapseThree").collapse('show');
+                          $("#q11_priv").collapse('show');
+                          $('html, body').animate({
+                            scrollTop: parseInt($("#dpiaFAQ").offset().top)
+                          }, 1000, function() {
+                            $("#dpiaFAQ").fadeOut();
+                            $("#dpiaFAQ").fadeIn();
+                            $("#dpiaFAQ").fadeOut();
+                            $("#dpiaFAQ").fadeIn();
+                          });
+                        });
+                      });
+                    </script>
+                    <div id="q11_priv" class="collapse" >
+                      <p>
+                        Because of the type of research that is done at FGB, it's very likely that a DPIA will need to be
+                        carried out before you begin your research project. First you can check whether it's legally required that
+                        you complete a DPIA by completing a pre-DPIA. You can contact the
+                        <a href="mailto: research.data.fgb@vu.nl">FGB Privacy Champions</a> for this pre-DPIA form;
+                        they can also provide you with the
+                        full DPIA form, as well as give advice and feedback on the completed form.
+                    </div>
+                    <br></br>
+
+                    <a href="#q14_priv" data-toggle="collapse">I cannot remove directly identifying information
+                      (e.g. name, address, photographs/videos of face) from my data based on the nature of my data
+                      or the complexity of my project (necessary to maintain names on certain documents so as not
+                      to share ID codes with third parties such as teachers or care providers). How can I meet the GDPR requirements?</a>
+                    <div id="q14_priv" class="collapse" >
+                      <p>
+                        If your data are <a href="https://fgb-rdm.nl/Security/PrivacyRisks.html" target="_blank">
+                        very high-risk</a>, and it's not feasible to <a href="https://fgb-rdm.nl/Security/Deidentification.html">de-identify</a>
+                        the data as a way of reducing privacy risks, then you should discuss this
+                        with the <a href="mailto: research.data.fgb@vu.nl">FGB Privacy Champions</a>. You should also
+                        ask for support from an IT security expert, via the
+                        <a href="mailto: rdm@vu.nl" target="_blank">RDM support desk</a>.
+                        They can assist you in thinking of alternative solutions and if necessary they can
+                        start the process of developing a custom data storage solution.
+                      </p>
+                    </div>
+                    <br></br>
+
+                    <h6>Privacy and Data Management Software</h6>
+                    <a href="#q18_priv" data-toggle="collapse">I’ve heard there are issues with
+                      Qualtrics and the GDPR. Can I use Qualtrics as a survey tool
+                      and if not, what can I use?
+                      <strong>UPDATE DEC 2020</strong></a>
+                    <div id="q18_priv" class="collapse" >
+                      <p>
+                        As of December 2020, the issues with Qualtrics under the
+                        GDPR have been resolved. It is now possible to collect
+                        personal data with Qualtrics for your research. FGB has also
+                        maintained the license for the alternative questionnaire
+                        tool Survalyzer. There are a variety of reasons why
+                        you may want to use one questionnaire tool over the
+                        other. Additionally, there are important steps you can
+                        take when using either of these questionnaire tools to
+                        make your data extra secure. For more information on these
+                        matters, please refer to this
+                        <a href="https://fgb-rdm.nl/Images/Secure_Use_of_Questionnaire_Tools.pdf"
+                        target="_blank">guide</a> on the secure use of questionnaire
+                        tools.
+                      </p>
+                    </div>
+                    <br></br>
+
+                    <a href="#q20_priv" data-toggle="collapse">I have access to Google Drive and other Google Suite
+                      products with my VUnet ID; does this mean that Google services like Google Drive are "GDPR-proof"?</a>
+                    <div id="q20_priv" class="collapse" >
+                      <p>
+                        No. The reason you can use your VUnet ID to log in to these services
+                        is so that they can be used for educational purposes. Google Drive
+                        remains an inappopriate solution for storing and sharing data that
+                        falls under the purview of the GDPR or any other sensitive types of data.
+                      </p>
+                    </div>
+                    <br></br>
+
+                    <a href="#qFraud_priv" data-toggle="collapse">I’m running an online survey with a monetary reward for participation.
+                      How should I prepare for potentially fraudulent responses?</a>
+                    <div id="qFraud_priv" class="collapse" >
+                      <p>
+                        The most important thing you should do is clarify in the information letter shown to potential survey
+                        respondents how many times they are allowed to participate. Also state that responses to your survey that are clearly fraudulent
+                        (e.g. it's clear that a bot was used to repeatedly fill in the survey) will <strong><em>not</em></strong> be compensated.
+                      </p>
+                      <p>
+                        Some survey programs, like Qualtrics, offer technical methods to help prevent fraud, however
+                        these methods are not very effective and if you use them, you will need to include additional information about cookies
+                        in the information you give to your participants. It is therefore recommended to <strong><em>not</em></strong>
+                        use these methods and instead simply monitor for signs of fraudulent responses,
+                        such as surveys completed repeatedly from very similar
+                        e-mail addresses and survey completion times that are impossible for a human to achieve.
+                      </p>
+                      <p>
+                        If you suspect that a survey respondent is fraudulently responding to your survey, do not contact
+                        this person. Contact instead the <a href="mailto: research.data.fgb@vu.nl">
+                        FGB Privacy Champions</a> for further assistance.
+                      </p>
+                    </div>
+
+
+                    <br></br>
+
+                    <h6>More Information</h6>
+                    <!-- Last question for privacy section -->
+                      <a href="#qlast_priv" data-toggle="collapse">Where can I learn more about privacy issues?</a>
+                      <div id="qlast_priv" class="collapse" >
+                        <p>
+                          There are a variety of free online courses available to learn about the GDPR and privacy
+                          issues. These include:
+                        </p>
+                        <ul>
+                          <li>
+                            <a href="https://maken.wikiwijs.nl/125518/Privacy_in__Research" target="_blank">
+                              SURF: Privacy in Research</a>
+                          </li>
+                          <li>
+                            <a href="https://my.goodhabitz.com/en-gb/online-course/55862/gdpr-compliant.html" target="_blank">
+                              GoodHabitz: GDPR Compliant*</a>
+                          </li>
+                        </ul>
+                        <p style="color:#737373">
+                          *To make use of the GoodHabitz program,
+                          you may need to login via this
+                          <a href="https://vu.nl/en/employee/learning-and-development/e-learning" target="_blank">
+                          VU page</a> because the Single Sign On with your VU account doesn't always work
+                          directly when on the GoodHabitz site.
+                          Once logged in switch the language to English and then search for the topic "GDPR".
+                          If you'd prefer to study in Dutch, search for the topic "AVG".
+                        </p>
+                      </div>
+                      <br></br>
+                  </div>
+                <!-- no longer needed now that cards are always open, no longer collapsible
+                </div>
+                -->
+              </div>
+            </div>
+            <!-- Security FAQ section -->
+              <div class="col-sm p-0">
+                <div class="card">
+                  <div class="card-header">
+                    <!--removed hyperlink for header because per 2023-03-28 decided no
+                    more drop-down with the cards; just have them open already
+                    This also means following from each javascript function for linked
+                    questions:
+                    $("#collapseThree").collapse('show');
+                    was removed for all linked privacy FAQ as the first command after
+                    $(...).click(function() { ...
+                    <a class="card-link" data-toggle="collapse" href="#collapseFour">
+                      Security and Technical FAQ
+                    </a>
+                  -->
+                    Security and Technical FAQ
+                  </div>
+                  <!-- Removed following because no longer necessary after deciding per
+                  2023-03-28 that each card no longer needs dropdown function; will just always be open
+                  <div id="collapseFour" class="collapse">
+                  Closing div tag was also commented out
+                  -->
+                    <div class="card-body h-100">
+                      <input placeholder="Search security and technical questions" type="text"
+                      id="searchsec" style = "width:80%;">
+                      <!-- original search method
+                      <input type="button" value="Go" onclick="search(document.getElementById('searchsec').value)">
+                      -->
+                      <button id="secBtn"
+                      onclick="search(document.getElementById('searchsec').value)">
+                      Go</button>
+                      <script>
+                      var input = document.getElementById("searchsec");
+                      input.addEventListener("keypress", function(event) {
+                        if (event.key === "Enter") {
+                          event.preventDefault();
+                          document.getElementById("secBtn").click();
+                        }
+                      });
+                      </script>
+                      <br></br>
+                      <h6>Secure Communication, Data Collection and Data Sharing</h6>
+                      <a href="#q8_sec" data-toggle="collapse">What are my options for conducting
+                        video calls?</a>
+                      <div id="q8_sec" class="collapse" >
+                        <p>
+                          There are two options for video calling at VU Amsterdam: Microsoft Teams and Zoom.
+                          Zoom should only be used in non-sensitive situations. This means that Zoom <strong>cannot</strong>
+                          be used for the purposes of data collection in research, such as interviews with
+                          research subjects. More information on Zoom is available
+                          <a href="https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012866" target="_blank">
+                          here
+                        </a>.
+                        </p>
+                        <p>
+                          If you need to use video calling for research purposes, the best option is
+                          Microsoft Teams, however, Teams has also not been officially approved for this purpose.
+                          It is therefore advised to discuss it's use with IT Security to determine whether
+                          Teams is indeed appropriate for your research purposes.
+                          IT Security can also advise on whether any additional
+                          measures can be applied to protect the data. IT Security can be contacted
+                          via the <a href="mailto: rdm@vu.nl" target="_blank">RDM support desk</a>.
+                        </p>
+                      </div>
+                      <br></br>
+
+                      <a href="#q2_sec" data-toggle="collapse" id="emailFAQ">I want to e-mail data to my colleague/student. How can I do this?</a>
+                      <script>
+                        $(document).ready(function() {
+                          $(".ref_q2_sec").click(function() {
+                            // following command no longer needed since no collapse anymore $("#collapseFour").collapse('show');
+                            $("#q2_sec").collapse('show');
+                            $('html, body').animate({
+                              scrollTop: parseInt($("#emailFAQ").offset().top)
+                            }, 1000, function() {
+                              $("#emailFAQ").fadeOut();
+                              $("#emailFAQ").fadeIn();
+                              $("#emailFAQ").fadeOut();
+                              $("#emailFAQ").fadeIn();
+                            });
+                          });
+                        });
+                      </script>
+                      <div id="q2_sec" class="collapse" >
+                        <p>
+                          E-mailing data without additional security measures is strongly discouraged, even if
+                          it seems like the data are anonymous (because the standards that one must meet
+                          to call data anonymous are much stricter that many people realize and much of our
+                          research data do not meet these standards). The VU has multiple options for sending data safely, so
+                          it is advised to use these solutions. See this
+                          <a href="https://fgb-rdm.nl/Security/DigitalTransfer.html"
+                          target="_blank">guide</a> for information about these options. On
+                          <a href="https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012860&sys_kb_id=e445774487d1191010be65b40cbb351b&spa=1" target="_blank">
+                            ServiceNow</a> you can also find more
+                          information about the security extension, ZIVVER, that can be used with Outlook to secure e-mail traffic.
+                          If you aren't sure how to use ZIVVER on a personal computer, a red workstation or MacOS/Linux check out this
+                          <a href="https://fgb-rdm.nl/Images/ZIVVER_digital_consent.pdf" target="_blank">
+                          instruction manual</a> about using ZIVVER for obtaining digital consent (discussed in the question
+                          <a href="#digitalFAQ" class="ref_q21_priv" onclick="return false;">How can I obtain consent from participants digitally, but
+                          also securely and in a way that follows the privacy rules?</a>).
+                          This manual explains how you can set up ZIVVER on these types of workstations.
+                        </p>
+                      </div>
+                      <br></br>
+                      <a href="#q6_sec" data-toggle="collapse">I need to collect data on location outside the VU
+                        (e.g. at a school, gym, hospital etc). What can I use to collect the data and how can
+                        I get it back to the VU safely?</a>
+                      <div id="q6_sec" class="collapse" >
+                        <p>
+                          See this
+                          <a href="https://fgb-rdm.nl/Security/PhysicalTransport.html"
+                          target="_blank">guide</a>
+                          for information on how to safely transport data to and from the VU. This guide also describes the
+                          TO3 borrowing service from which researchers and their assistants can borrow devices
+                          for offsite data collection.
+                        </p>
+                      </div>
+                      <br></br>
+
+                      <h6>Secure Data Storage and Data Deletion</h6>
+                      <a href="#q1_sec" data-toggle="collapse" id="storageFAQ">How do I know if I am storing my data in the correct location?</a>
+                      <script>
+                        $(document).ready(function() {
+                          $(".ref_q1_sec").click(function() {
+                            // following command no longer needed since no collapse anymore $("#collapseFour").collapse('show');
+                            $("#q1_sec").collapse('show');
+                            $('html, body').animate({
+                              scrollTop: parseInt($("#storageFAQ").offset().top)
+                            }, 1000, function() {
+                              $("#storageFAQ").fadeOut();
+                              $("#storageFAQ").fadeIn();
+                              $("#storageFAQ").fadeOut();
+                              $("#storageFAQ").fadeIn();
+                            });
+                          });
+                        });
+                      </script>
+                      <div id="q1_sec" class="collapse" >
+                        <p>
+                          See this <a href="https://fgb-rdm.nl/Security/Storage.html" target="_blank">
+                          guide</a> for information and advice on where to store your data.
+                          If your situation is very complex and you still have questions, contact the
+                          <a href="mailto: rdm@vu.nl">
+                            Research Data Support Desk</a> for advice.
+                        </p>
+                      </div>
+                      <br></br>
+                      <a href="#q4_sec" data-toggle="collapse">How can I permanently delete data from my
+                        computer's hard drive or an external hard drive?</a>
+                      <div id="q4_sec" class="collapse" >
+                        <p>
+                          See the <a href="https://fgb-rdm.nl/Security/SecurityBasics.html#removal" target="_blank">
+                          FGB Security Basics</a> for information on how to properly delete data from your
+                          computer's hard drive and/or an external hard drive.
+                        </p>
+                      </div>
+                      <br></br>
+
+                      <h6>General Security Practices</h6>
+                      <a href="#q5_sec" data-toggle="collapse" id="servicesFAQ">I am an external PhD candidate/I am supervising
+                        an external PhD candidate. Can I make use of services licensed by the VU, such as Qualtrics or
+                        Survalyzer?</a>
+                        <script>
+                          $(document).ready(function() {
+                            $(".ref_q5_sec").click(function() {
+                              // following command no longer needed since no collapse anymore $("#collapseFour").collapse('show');
+                              $("#q5_sec").collapse('show');
+                              $('html, body').animate({
+                                scrollTop: parseInt($("#servicesFAQ").offset().top)
+                              }, 1000, function() {
+                                $("#servicesFAQ").fadeOut();
+                                $("#servicesFAQ").fadeIn();
+                                $("#servicesFAQ").fadeOut();
+                                $("#servicesFAQ").fadeIn();
+                              });
+                            });
+                          });
+                        </script>
+                      <div id="q5_sec" class="collapse" >
+                        <p>
+                          Unfortunately external PhD candidates are not allowed to use VU-licensed services.
+                          These are only to be used by VU employees and students. It is a good idea to check whether
+                          the external PhD candidate can make use of services within the institution they are
+                          associated with. If that is not possible, an option is to set up a VU guest account,
+                          but this can cost a lot of money and it does not necessary guarantee immediate access
+                          to VU licensed services; often more steps need to be carried out. Therefore it is
+                          advised to contact the
+                          <a href="mailto: rdm@vu.nl" target="_blank">
+                            Research Data Support Desk</a> for more information
+                          and support on this complex issue.
+                        </p>
+                      </div>
+                      <br></br>
+
+                      <a href="#q7_sec" data-toggle="collapse">I need to shorten a URL for a website related to my
+                        study. I can just use bitly, right?</a>
+                      <div id="q7_sec" class="collapse" >
+                        <p>
+                          Actually, your best option for creating a short URL for your research (and also
+                          for any educational purposes) is <a href="https://edu.nl/" target="_blank">edu.nl</a>. This is a service
+                          offered by SURF to all researchers, students and staff with access to
+                          SURF services and the main advantage is that the URL that is created does
+                          not track the website visitors, which can be an issue with things like bitly.
+                        </p>
+                      </div>
+                      <br></br>
+
+                      <a href="#q9_sec" data-toggle="collapse">What should I do if I suspect
+                        a data breach has occured?</a>
+                      <div id="q9_sec" class="collapse" >
+                        <p>
+                          Inform the <a href="https://services.vu.nl" target="_blank">IT Service Desk</a>
+                          immediately with a high priority message. Provide them with details about what happened, the type of
+                          data that may have been leaked and a description of the population
+                          from which the data were collected. The Service Desk will forward your
+                          question on to the Security Operations and Control Centre and the
+                          VU Legal Department, who will review the issue and determine what kind
+                          of follow-up is necessary.
+                        </p>
+                        <p> You must also inform the faculty's Research and Policy Support (REPS) team
+                          via <a href="mailto:research.data.fgb@vu.nl">research.data.fgb@vu.nl</a>. Set
+                          the message to high priority and include "data breach" in the subject line.
+                        </p>
+                        <p>
+                          For more information on data breaches (a.k.a. data leaks), see this
+                          <a href="https://vu.nl/en/employee/emergencies/data-leaks-and-other-incidents"
+                          target="_blank"> VU page</a>.
+                        </p>
+                      </div>
+                      <br></br>
+
+                      <a href="#q_KnowSec" data-toggle="collapse">What is Knowledge Security and how do I address it
+                        in my research preparations?</a>
+                      <div id="q_KnowSec" class="collapse" >
+                        <p>
+                          Knowledge Security is applicable if you are collaborating with an international partner
+                          and/or hiring a new international employee. The VU and FGB have created guidance frameworks
+                          to help you meet the requirements:
+                          <ul>
+                            <li><a href="https://assets-us-01.kc-usercontent.com/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/e0feabb1-e39a-4975-a21a-4112e409c5f6/Knowledge%20Security%20Framework%20VU.pdf" target="_blank">VU Amsterdam Knowledge Security Framework</a></li>
+                            <li><a href="https://assets-us-01.kc-usercontent.com/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/92256a12-da97-40f2-9d5d-10927bbf9e96/2024%20knowledge%20security%20directive%20FBMS_ra.v.1.EN.pdf" target="_blank">Knowledge Security Directive Faculty of Behavioural and Movement Sciences</a></li>
+                          </ul>
+                        </p>
+                      </div>
+                      <br></br>
+
+                      <h6>More Information</h6>
+                      <!-- Last question for security section -->
+                        <a href="#qlast_sec" data-toggle="collapse">Where can I learn more about security?</a>
+                        <div id="qlast_sec" class="collapse">
+                          <p>
+                            There is a basic <a href="https://my.goodhabitz.com/en-gb/online-course/61872/information-security.html"
+                            target="_blank">security course</a> available on GoodHabitz. To make use of this program,
+                            you may need to login via this
+                            <a href="https://vu.nl/en/employee/learning-and-development/e-learning" target="_blank">
+                            VU page</a> because the Single Sign On with your VU account doesn't always work
+                            directly when on the GoodHabitz site.
+                            Once logged in switch the language to English and then search for the topic "Information Security".
+                            If you'd prefer to study in Dutch, search for the topic "Informatiebeveiliging".
+                            <br><br>
+                            Additionally this
+                            <a href="https://fgb-rdm.nl/Security/SecurityBasics.html"
+                            target="_blank">guide on security basics</a>
+                            from the faculty provides useful tips on protecting your data.
+                          </p>
+                        </div>
+                        <br></br>
+                    </div>
+                   <!-- no longer needed now that cards are always open, no longer collapsible
+                   </div>
+                   -->
+                </div>
+              </div>
+        </div>
+  </div>
+
+
+
+
+</body>
+
+</html>

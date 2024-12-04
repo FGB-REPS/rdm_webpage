@@ -1,0 +1,72 @@
+---
+title: "Archiving @ FGB: Secure Archiving"
+date: "2022-06-15; Version 1.0"
+output: 
+  html_document:
+    theme: cerulean
+---
+
+## {#CSS}
+
+<style type="text/css">
+
+
+.main-container {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5%;
+  padding-bottom: 30%;
+  padding-right: 10%;
+  padding-left: 10%;
+}
+
+h1.title {
+  font-size: 28px;
+  text-align: center;
+}
+
+h4.date { /* this is to affect the size of the date text in the YAML when it prints in html  */
+  font-size: 20px;
+  text-align: center;
+}
+
+p {
+  font-size: 18px;
+}
+
+li {
+  font-size: 18px;
+  margin: 5px;
+}
+
+summary { /* this is copied from the bootstrap css for cerulean; by using the following I can change the text from the summary
+class so that if looks like a header within the cerulean theme*/
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  color: #317eac;
+}
+
+#indent {
+  margin-left: 3em; /* this indents an entire paragraph */
+}
+
+</style>
+
+
+### Some starting notes
+
+It is necessary to balance the privacy and security risks posed by the data and materials in the archiving package with the need to preserve unadulterated data for verification purposes. There are some important considerations that you need to be aware of in this regard:
+
+* It is not always appropriate to de-identify the data you plan to archive, particularly the raw data, because de-identification may require irrevocable modifications to that data, which defeats the purpose of archiving unadulterated raw data. De-identification of raw data can be applied at the most up to step 4 of this de-identification [guide](../security/Deidentification.html#Step_4:_Separate_the_direct_identifiers_from_research_data){target="_blank"} where the higher risk data is separated from the lower risk data. However, this may not always be appropriate for all types of raw data, such as audiovisual data where blurring of facial images still constitutes irrevocable modification. Basically, in some cases your data may remain at a higher level of privacy risk and that simply means these data will need to be archived in more secure secure archive *[secure_archive_page(WHEN READY!)*.
+* In many cases the [privacy](https://fgb-rdm.nl/Security/PrivacyRisks.html){target="_blank"} and [confidentiality](https://fgb-rdm.nl/Security/PrivacyRisks.html#confidentiality){target="_blank"} risks may vary for different [data assets](../definitions/Definitions.html#dataasset){target="_blank"} in your archiving package. If it is feasible to separate these data assets, you can archive the higher risk data/materials in a more secure archive separately from the lower risk data/materials. Just ensure that you also archive documentation such as a ReadMe file that describes where all of your data and materials can be found.
+  + Be aware that if you have to maintain a link between the higher and lower risk data/materials, such as through a respondent identifier, the lower risk materials will carry a slightly higher risk
+
+
+  + Determining which data need to be archived and whether or not it is necessary to preserve sensitive data, as described [here](https://libguides.vu.nl/rdm/selecting-data-archiving){target="_blank"}. Bear in mind however,
+  + 
+    
+  + When separate sensitive data from the rest or attempting any de-identification of the raw data, make sure to following this [de-identification guide](../security/Deidentification.html). In particular, 
+  + Assessing the content of the archiving package for [privacy](https://fgb-rdm.nl/Security/PrivacyRisks.html){target="_blank"} and [confidentiality](https://fgb-rdm.nl/Security/PrivacyRisks.html#confidentiality){target="_blank"} risks. If the risks vary amongst [data assets](../definitions/Definitions.html#dataasset){target="_blank"} and/or between the data and the supplementary materials, you can archive the higher risk data/materials separately from the lower risk data/materials Just ensure that you also archive documentation such as a ReadMe file that includes the cross-references to data and materials archived elsewhere.
+  

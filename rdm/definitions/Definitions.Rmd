@@ -1,0 +1,178 @@
+---
+title: "Research Data Management @FGB: Definitions"
+date: "`r Sys.Date()`; Version 1.5"
+output: 
+  html_document:
+    theme: cerulean
+    includes: 
+      after_body: ../../footer.html
+---
+
+<style>
+
+/* need to ensure all text is in Roboto so as to be in-line with VU house style*/
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.main-container {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5%;
+  padding-bottom: 30%;
+  padding-right: 10%;
+  padding-left: 10%;
+}
+
+h1.title {
+  font-size: 28px;
+  text-align: center;
+}
+
+h4.date { /* this is to affect the size of the date text in the YAML when it prints in html  */
+  font-size: 20px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+p {
+  font-size: 18px;
+}
+
+li {
+  font-size: 18px;
+  margin: 7px;
+}
+
+
+#NB {
+  margin-left: 3em; /* this indents an entire paragraph */
+}
+
+
+</style>
+
+
+<!--NOTE: The footnotes of the FGB_RDM_Policy were updated because the definition section of that document changed the footnote order. The cross-refs for FGB_RDM_Policy and FGB_Policy_Positions_GDPR are also update as of 14-04-2021.-->
+<!-- NOTE: The introduction and section on re-identification of PrivacyRisks.Rmd and the definitions on this page are highly cross-referenced (specificaly re: data assets, personal data, directly identifying data and indirectly identifiable data. There is also a cross-reference between pseudonymous data and a footnote now in PrivacyRisks.Rmd. Per 07-04-2021 all references are up to date. After any major changes to this document or the Privacy Risks guide, make sure to check for any problems with the cross-references -->
+<!-- NOTE: What is described above for PrivacyRisks.Rmd also applies to Deidentification.Rmd: data assets are cross-referenced in Step 1; directly identifying data are-cross referenced in step 2; indirectly identifying information is cross-referenced in step 3 in the section on consent forms, as well as the NB of step 4 (just in case it was missed in step 3).-->
+
+
+### Archiving package (a.k.a. **data package**): {#archivingpackage}
+* The materials, such as data, [metadata](#metadata), code and other documentation that need to be archived after a [research project](#researchproject) is complete and/or a research article based on these materials has been published. 
+* Is also referred to as a "data package", which is now the primary and preferred terminology for this concept.
+
+
+
+### Archiving research data: {#archivingdata}
+* The creation of a secure and immutable copy of research data, associated metadata, accompanying documentation, and software code (where relevant) with the intention to ensure (conditional) access for as long as necessary.
+* Archiving essential to research integrity and the verification of research results. Archiving **is required** for [all data underlying your published research articles](../archiving/ArchivingGuidelinesSummary.html#whenarchive){target="_blank"}.
+
+
+
+### Confidential data: {#confidentialdata}
+* Data which may only be accessed by authorized individuals. Personal data are one type of confidential data, but the term also applies to information about a business and its management, intellectual property, proprietary information and so forth. When determining the extent to which data must be kept confidential, the risks to the organization (such as VU Amsterdam) need to be considered (whereas when assessing privacy risks, the risks to an individual person are considered).
+
+
+
+### Data asset {#dataasset}
+* A collection of data in a similar form with a similar purpose. Examples are found in the [VU Research Support Handbook](https://rdm.vu.nl/topics/data-management-plan.html#data-assets){target="_blank"}. Additional examples relevant to FGB are described under [Step 1 of the De-identification guide](../../Security/Deidentification.html#step1){target="_blank"}.
+
+
+
+### Directly identifying data (a.k.a direct identifiers): {#directID}
+* Data, such as name, address, photographs/video recordings of faces, for which little to no effort and no additional information are required to determine to whom the data belong.
+
+<div id="NB">
+_NB: There isn't really a perfect delineation between direct and [indirect](#indirectID) identifiers, but, rather, more of a sliding scale. Something may be a direct identifier because of it's uniqueness (e.g. a unique tattoo) or based on context (e.g. the current Prime Minister of the Netherlands). It is important to be aware of any of these less commonly considered direct identifiers when you are working on [de-identifying](../../Security/Deidentification.html){target="_blank"} your data._
+</div>
+
+
+### FAIR principles: {#FAIR}
+* Guiding principles for managing research data, and the associated metadata, so that the (meta)data can be properly understood, interpreted and reused. FAIR (meta)data should be findable, accessible, interoperable and reusable.
+
+
+
+### Indirectly identifiable data (a.k.a indirect identifiers): {#indirectID}
+* Data that require more effort as well as additional information to determine to whom the data belong. Indirectly identifiable data include genetic information, data that are unique to an individual (e.g. MRIs, EEGs), datasets with extreme or unusual values (e.g. extreme physical measurements unique to elite athletes, highly unique employment history) or any other characteristics about a person (e.g. ethnicity, gender, occupation and/or education) that when combined into one record, can single out that person as unique in your dataset. Indirectly identifiable data may not immediately identify an individual, but they do provide the _potential_ for identification of that individual. More information on important aspects to consider about indirectly identifiable data can be found in the [Privacy Risks guide](../../Security/PrivacyRisks.html#reID){target="_blank"}.
+
+
+
+### Interoperable (meta)data: {#interoperablemetadata}
+* (Meta)data that are findable, accessible and reusable by machines regardless of the software or operating system in use.
+
+
+
+### Key file: {#keyfile}
+* A dataset containing the information necessary to re-identify the research subjects in your research dataset(s). Generally, a key file consists of:
+  + A random identification code that together the information about each research subject that is present in the key file and the research dataset(s)
+  + [Directly identifying data](#directID) about the research subject, often data that isn't important for the research analysis
+  + Details about what aspects of the [research project](#researchproject) that the research subject consented to, if applicable
+
+
+### Logbook/laboratory notebook: {#logbook}
+* Research documentation that is an essential part of data provenance and research integrity. A logbook ensures that:
+    + There is a record of problems, decisions and solutions made during the progress of your research
+    + There is a record of all data corrections/manipulations
+    + There is an easily retrievable record of decisions made by the research team
+    + It is possible to continue the work you started (because of the clear record of what already happened)
+* This [page](https://aph-qualityhandbook.org/set-up-conduct/study-preparation/1-1-organizing-your-work/logbook/){target="_blank"} gives more background on logbooks/lab notebooks and provides an example of how to design a logbook
+
+
+### Metadata: {#metadata}
+* Data that describe and explain details about your research data so that this research data can be found, properly understood and, if appropriate, [reused](#reusedata) well into the future.
+
+
+
+### Personal data: {#personaldata}
+* Any data that can be linked to an individual person. Personal data may be [directly identifying](#directID) or [indirectly identifiable](#indirectID).
+
+<div id="NB">
+_NB: Personal data do not necessarily need to be considered “sensitive” data to receive protection under the GDPR. If your data are considered personal, based on the definition above, they must be handled in accordance with the GPDR, regardless of whether or not you consider the data sensitive._
+
+
+_NB2: Almost all data about human subjects are considered personal data under the GDPR. The vast majority of the data collected at FGB are about human beings and should therefore be treated as personal data unless you have confirmed with an expert that the data are anonymous. This [reference card on anonymity](https://zenodo.org/records/3584842){target="_blank"} from the National Coordination Point for RDM further explains this concept._
+</div>
+
+
+### Processed data: {#processeddata}
+
+* Data that have been modified in order to: 1) correct for errors or data entry mistakes, 2) convert the data to a form that can be more readily analysed and/or 3) reduce the identifiability of the data. 
+
+
+### Pseudonymous data: {#pseuddata}
+* Generally, the term pseudonymous data is synonymous with [indirectly identifiable data](#indirectID), with some [legal caveats](../../Security/PrivacyRisks.html#pseudonymization){target="_blank"}. 
+
+
+### Publishing research data: {#publishingdata}
+* The process of making ([archived](#archivingdata)) research data, associated metadata, accompanying documentation, and software code (where relevant) persistently and uniquely findable and accessible online. If the published data may be [reused](#reusedata), the accompanying metadata explains who may reuse the data and for what purposes.
+
+<div id="NB">
+_NB1: Publishing data does not mean that the data must be open access or publicly accessible. Access to the data can be restricted and granted upon valid request._ 
+
+_NB2: Data underlying a [published research article must be published](../archiving/ArchivingGuidelinesFull.html#purereg){target="_blank"} (in addition to being [archived](#archivingdata)) so that, at a minimum, the metadata can be found and reviewed by others._
+</div>
+
+
+
+### Raw data: {#rawdata}
+
+* Information and/or materials that are directly collected from a source, such as a research subject. These are the basis of your research and, in 99.9% of cases, an [archived](#archivingdata) copy of this data should be preserved for research integrity purposes.
+
+### Research project: {#researchproject}
+
+* The research activities described in a research proposal that is submitted for ethical review. If ethical review is not applicable, a research project is any research activity aimed at answering a hypothesis; all activities aimed at answering one overarching hypothesis can be described as a single research project.
+
+
+### Reuse of data: {#reusedata}
+
+* Usage of existing data by **any _authorized_** party for new purposes beyond the originally intended research goals. Reuse may be new research that is in-line with the original project, entirely new research questions or, where appropriate, completely different purposes, such as educational or commercial purposes. 
+
+<div id="NB">
+_NB: The purposes for which data may be reused and the parties which may be authorized to reuse the data depends on whether the data are [personal](#personaldata)/[confidential](#confidentialdata) data, as well as what the research participants consented to with regards to data reuse. The [FGB data stewards and privacy champions](mailto:research.data.fgb@vu.nl) can assist with determining if data may be reused, as well as how to develop your consent forms to ask for consent to reuse from your participants._
+</div>

@@ -1,0 +1,180 @@
+---
+title: "FGB Security Tips: The Basics"
+date: "2023-05-01; Version 1.4"
+output: 
+  html_document:
+    theme: cerulean
+    includes: 
+      after_body: ../footer.html
+---
+
+
+<style type="text/css">
+
+/* change font for whole text so that it's in line with house style. For webpages that is Roboto  */
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.main-container {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5%;
+  padding-bottom: 25%;
+  padding-right: 7%;
+  padding-left: 7%;
+}
+
+h1.title {
+  font-size: 28px;
+  text-align: center;
+}
+
+h4.date { /* this is to affect the size of the date text in the YAML when it prints in html  */
+  font-size: 20px;
+  text-align: center;
+}
+
+/* improve contrast for all a-tags and headers for accessibility */
+
+a {
+  color: #157bb7;
+}
+
+h1, h2, h3, h4 {
+  color: #105d89;
+}
+
+#intro p {
+  font-size: 22px;
+  color: black;
+}
+
+p {
+  font-size: 18px;
+}
+
+li {
+  font-size: 18px;
+  margin: 5px;
+}
+
+summary {
+  font-size: 18px;
+}
+
+</style>
+
+\
+
+<div id = "intro">
+
+**The following are simple, but good security practices. They should be applied regardless of whether or not your research data are sensitive.**
+
+</div>
+
+
+### Make use of VU-approved storage solutions
+
+* Don't store your research data on free cloud solutions such as Google Drive or DropBox. 
+
+* Make sure your storage solution is appropriate for the security risks posed by your data. Use this [guide](Storage.html){target="_blank"} on VU storage options to help you.
+
+
+
+### Storage on portable media must be _**temporary**_ & storage on local hard drives should be properly managed. {#portable}
+
+
+* Portable media should only be used temporarily, e.g. for physically transporting data. Use this [guide](PhysicalTransport.html){target="_blank"} for further information on how to protect your data during transport.
+
+* VU-approved storage solutions have automatic back-ups to prevent data loss; if you only use portable media or your computer's local hard drive for storage you will need to back-up everything manually. 
+
+* Keep track of *where* on your local hard drive you are saving research data. Oftentimes, local data storage cannot be entirely avoided, for example, when using the sync client for Research Drive or Cyberduck for YODA. Make sure you know which folder directory the data have been stored in so that when you no longer need these data on your computer's hard drive, you can [fully delete](#removal) *all* of the data. 
+
+
+
+### Be careful with digital data transfers
+
+
+
+* Make sure to consider the security risks posed by your data prior to any digital transfers. Use this [guide](DigitalTransfer.html){target="_blank"} on digital data transfer to help you.
+
+
+
+### Use laptops & desktop computers in a secure manner {#laptops}
+
+
+* Enable full disk [encryption](Encryption.html#fde){target="_blank"} on your computer. This is to prevent unauthorized access to any data on your hard drive.
+  
+* Always require a strong [password](#passwords) to login to your computer and update this regularly.
+
+* Update your computer regularly.
+
+* Always lock your screen when you are not using your computer.
+
+* When working onsite at the VU campus, keep your laptop secured to your desk and store it in a locked cabinet when you are done for the day. When offsite, don't leave your laptop unattended.
+
+* [Remove](#removal) all data stored locally on your laptop before travelling with it internationally. Contact the [IT Service Desk](https://services.vu.nl){target="_blank"} for further advice if you need to travel abroad with your laptop.
+
+
+### Be smart with your internet usage {#internet}
+
+
+* Avoid the use of public Wi-Fi. If you _absolutely_ need to use it, activate [eduVPN](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012741){target="_blank"} while connected and then remove this guest network after use.
+
+* MacBook users should turn on the Firewall (via System Preferences > Security & Privacy). The Firewall is already active for Windows users.
+
+* Avoid accessing your data while travelling abroad and **never** use public workstations such as internet cafes to access research data. Contact the [IT Service Desk](https://services.vu.nl){target="_blank"} for further advice if you need to access your research data from abroad.
+
+* Don't open links found in suspicious e-mails. You can forward any suspicious e-mails as an attachment to the [IT Service Desk's](https://services.vu.nl){target="_blank"} contact form so that they can update their security protocols; afterwards you should delete the e-mail immediately.
+
+* Make sure your computer has an active virus scanner running on it and keep it up-to-date.
+
+
+### Always use strong passwords and, where possible, multi-factor authentication {#passwords}
+
+
+* Use strong passwords. This [page](https://infosec.ed.ac.uk/how-to-protect/lock-your-devices/passwords){target="_blank"} from the University of Edinburgh provides several good tips on passwords. 
+  + Make your passwords long (15 characters or more) and include capital and lower-case letters, as well as numbers and special characters. To help with remembering passwords, use passphrases rather than one long word and replace some of the letters in the phrase with numbers or special characters. 
+  * More and more services at the VU are accessed via SURFconnext which uses your VUnet password. Change this password on a regular basis and **never** share it with anyone.
+
+* Have a plan for managing passwords. This is especially important when several people need to know these passwords, as well as to prevent loss of access to the data when a staff member stops working at VU Amsterdam.
+  + Consider using a password manager that runs offline, such as [KeePassXC](https://keepassxc.org/){target="_blank"}.
+  
+* Whenever possible, activate multi-factor authentication (MFA). MFA _**must**_ be active whenever you are working with higher-risk data (["red", "orange", or "yellow" data](PrivacyRisks.html){target="_blank"}) data.
+
+
+### Remove data from devices when no longer required {#removal}
+
+
+* When you are returning devices borrowed from [TO3](https://vu.nl/en/employee/behavioural-and-movement-sciences-getting-started/technical-support-for-research-to3){target="_blank"} or returning a VU workstation at the end of your employment, make sure to completely wipe all of the data files from the hard drive. You can permanently delete everything on the hard drive using tools like [KillDisk](https://www.killdisk.com/killdisk-freeware.htm){target="_blank"}. 
+
+* If your computer is still in use, you sometimes need to delete files, but you don't want to wipe the entire hard drive. If your computer has an SSD hard drive (most modern computers have this), you can simply delete the files as you normally would. No special apps are necessary. **Make sure to empty the trash folder!** 
+  * If your computer does not have an SSD (instructions to check this are found [here](https://www.lifewire.com/is-my-storage-ssd-or-hdd-5191369){target="_blank"}) or your computer is running a Windows version earlier than 10, contact the [IT Service Desk](https://services.vu.nl){target="_blank"} for advice on securely deleting individual data files from your hard drive.
+
+
+
+### Report data breaches immediately
+
+
+* Even if a [data breach](https://vu.nl/en/employee/emergencies/data-leaks-and-other-incidents){target="_blank"} (a.k.a. "data leak" or "datalek" in Dutch) is merely suspected, you _**must**_ report the event to the [IT Service Desk](https://services.vu.nl){target="_blank"} as soon as you become aware of the situation. The issue will be reviewed by experts who can assess the seriousness of the situation and determine what actions need to be taken.
+  + Also inform the faculty's Research and Policy Support team of the (suspected) data breach via research.data.fgb@vu.nl. Set the e-mail to high priority and include "data breach" or "datalek" in the subject heading.
+
+
+### In-depth security guides {#indepth}
+
+* [Privacy Risk Categorization](PrivacyRisks.html){target="_blank"}
+* [De-identification of Data](Deidentification.html){target="_blank"}
+* [Encryption](Encryption.html){target="_blank"}
+* [Secure Storage Guide](Storage.html){target="_blank"}
+* [Secure Digital Data Transfer Guide](DigitalTransfer.html){target="_blank"}
+* [Secure Physical Data Transport Guide](PhysicalTransport.html){target="_blank"}
+* [Security for Students](SecurityForStudents.html){target="_blank"}
+
+### Support
+
+The [IT Service Desk](https://services.vu.nl){target="_blank"} has answers to the most frequently asked questions. If the answer to your question is not there, you can contact IT directly via the contact form. <br>
+The [RDM Support Desk](https://vu.nl/en/employee/university-library/rdm-support-desk){target="_blank"} can be contacted for complex security questions related to your research data.

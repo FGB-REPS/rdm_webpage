@@ -1,0 +1,367 @@
+---
+title: "FGB Security Tips: Safe Practices for Students Working With Research Data"
+date: "2024-07-01; Version 4.0"
+output: 
+  html_document:
+    theme: cerulean
+    toc: true
+    toc_depth: 3
+    toc_float: 
+      collapsed: false
+      smooth_scroll: true
+    includes: 
+      after_body: ../footer.html
+
+---
+
+<style>
+
+/* change font for whole text so that it's in line with house style. For webpages that is Roboto  */
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+#TOC {
+  left: 0%;
+  top: 0%;
+}
+
+
+div.tocify {
+  width: 13%;
+}
+
+.tocify ul, .tocify li {
+  line-height: 25px;
+  padding: 2px 10px 2px 5px;
+}
+
+
+/* following two commands get the text of TOC to indent properly */
+
+.tocify-header {
+    text-indent: initial;
+}
+
+.tocify-subheader > .tocify-item {
+  text-indent: initial;
+  padding-left: 2em;
+}
+
+/* max-width refused to change below unless I included the !important tag next to it. Found answer on this stack exchange https://stackoverflow.com/questions/34906002/increase-width-of-entire-html-rmarkdown-output 
+Seems only to be an issue when using TOC; not required to use !important on pages without TOC */
+
+.main-container {
+  max-width: 100% !important;
+  padding-right: 5%;
+  padding-top: 5%;
+  padding-bottom: 10%;
+}
+
+
+h1.title {
+  font-size: 28px;
+  text-align: center;
+}
+
+h4.date { /* this is to affect the size of the date text in the YAML when it prints in html  */
+  font-size: 20px;
+  text-align: center;
+}
+
+/* improve contrast for all a-tags and headers for accessibility */
+
+a {
+  color: #157bb7;
+}
+
+h1, h2, h3, h4 {
+  color: #105d89;
+}
+
+p {
+  font-size: 18px;
+}
+
+li {
+  font-size: 18px;
+  margin: 7px;
+}
+
+/* improve contrast for all a-tags and headers for accessibility */
+
+a {
+  color: #157bb7;
+}
+
+h1, h2, h3, h4 {
+  color: #105d89;
+}
+
+#red {
+  border-style: solid;
+  border-width: 3px;
+  border-color: #ed0000;
+  padding: 2%;
+}
+
+#orange {
+  border-style: solid;
+  border-width: 3px;
+  border-color: #ff9000;
+  padding: 2%;
+}
+
+#yellow {
+  border-style: solid;
+  border-width: 3px;
+  border-color: #ffDf00;
+  padding: 2%;
+}
+
+#greenblue {
+  border-style: solid;
+  border-width: 3px;
+  border-top-color: #379e00;
+  border-left-color: #379e00;
+  border-bottom-color: #6e99c4;
+  border-right-color: #6e99c4;
+  padding: 2%;
+}
+
+
+</style>
+
+\
+\
+
+Most departments within the FGB take on students for research internships or as temporary research assistants. When students work with research data, the confidentiality of the information, the privacy of the research subjects and the overall security of the data are at risk if students are not taught how to correctly manage and protect this research data. To determine the best methods for your student(s) to safely manage and work with research data, start by determining the [privacy risks](PrivacyRisks.html){target="_blank"} (and where applicable the [confidentiality risks](PrivacyRisks.html#confidentiality){target="_blank"}) for the [data asset(s)](../rdm/definitions/Definitions.html#dataasset){target="_blank"} that the student(s) will have access to.
+
+**All students are expected to read, understand and apply the [Security Basics](SecurityBasics.html){target="_blank"}.**
+
+### Nondisclosure Agreements
+
+Students that are working with "Red", "Orange", "Yellow", or "Green" data must sign a nondisclosure agreement (sometimes called a confidentiality agreement) before starting their research. For students conducting research solely under the supervision of FGB, a template agreement can be obtained from your section/department head, who will also sign it on behalf of the FGB director of business operations. If the student is working at another institution where all data collection and storage will take place, and the role of FGB is solely supervision of the research internship, then the other institution is responsible for setting up such an agreement with the student.
+
+If FGB and another institution are both responsible for the data that the student will work with (e.g. data collection and/or storage happen at both FGB and the other institution) then the student must sign agreements with both FGB and the other institution. The FGB supervisor should review the FGB template agreement in such a situation to ensure that there aren't any issues impacting collaboration with the other institution; if there seems to be a problem, contact [Legal Affairs](mailto: legal@vu.nl) for advice.
+
+### Providing Data {#providing}
+
+Ensure that you use an appropriate method, based on the privacy and/or confidentiality risks, to provide data to your students. You can either digitally share the data (which is discussed in further detail [below](#storage)) or [physically provide](PhysicalTransport.html#portable){target="_blank"} the data (for example, with an [encrypted USB-stick](PhysicalTransport.html#usb){target="_blank"}). 
+
+  * The digital methods of sharing data are generally preferred, especially the higher risk the data are. Physically transporting data should only be used when absolutely necessary because devices can easily be lost during transport.
+
+### Data Storage Considerations {#storage}
+
+Although VU Amsterdam offers many [data storage](Storage.html){target="_blank"} options, not all of these options are available to students. The following section provides guidance on data storage options for students with consideration for the privacy and confidentiality risks posed by the data. The focus of this section is to describe solutions for data storage while a student is processing and/or analysing data. If students are involved in data collection, see the [relevant section below](#collection).
+
+_NB: The research data used in a research project can have a variety of risk categories: the raw data may be "Red" data, but the processed data may be "Yellow" or "Green". It is recommended, where appropriate, to first [de-identify](Deidentification.html){target="_blank"} the data as much as possible to help reduce the risks before providing data to the student._
+
+#### {.tabset .tabset-fade}
+
+##### Red data {#red}
+
+
+Very often, "Red" data needs to be stored on a custom storage solution that is developed with the support of IT. If this applies to your research, you should discuss the need for student access with the IT developers who set up your custom storage solution.
+
+\
+
+<h4><strong>YODA</strong></h4>
+
+If your "Red" data have been approved for storage in YODA, you can [add the student(s) to the YODA "group" you manage](https://yoda.vu.nl/site/getting-started/user-management.html){target="_blank"}
+  
+  * Follow the instructions in the [Digital Data Transfer Guide](DigitalTransfer.html){target="_blank"} to securely share "Red" data using YODA.
+  * Make sure the student reviews and follows the security requirements for "Red" data in [YODA](../rdm/tools/YODAInstructionsFGB.html#protection){target="_blank"}, particularly that they:
+      + Download the appropriate [encryption](Encryption.html#fle){target="_blank"} software to de-encrypt the provided data 
+      + Log in to YODA using their VU student e-mail address. This is the primary way to ensure that multi-factor authentication (MFA) is activated. If a VU student e-mail is not an option, contact [RDM Support Desk](mailto: rdm@vu.nl) for advice.
+  * Make sure the YODA [group](../rdm/tools/YODAInstructionsFGB.html#accessmgmt){target="_blank"} you add the student to does not allow them access to data they should not have access to.
+    
+\
+
+<h4><strong>Use of VU Workstation vs Personal Computer</strong></h4>
+  
+It is strongly recommended that students working with "Red" data work on campus on VU workstations under the supervision of their supervisor. If they absolutely need to use their personal computer they must:
+  
+  * Ensure they are following all of the [basic security measures](SecurityBasics.html){target="_blank"} required by the faculty, particularly that they:
+      + Activate [Full-Disk Encryption](Encryption.html#fde){target="_blank"} on their computer
+      + Activate virus and malware scanners on their computer
+      + Follow the [best practices](SecurityBasics.html#laptops){target="_blank"} for working on laptops
+  * Ensure that the data accessed in YODA via Cyberduck is copied to a [hardware-encrypted](PhysicalTransport.html#usb){target="_blank"} external hard drive that is protected with a strong [password](SecurityBasics.html#passwords){target="_blank"}. The data **must not** be copied to the student's local hard drive.
+      + Once the student no longer requires access to the data, the data must be [permanently removed](SecurityBasics.html#removal){target="_blank"} from the external hard drive or the external hard drive must be destroyed.
+      + The hard drive must be dedicated to this single purpose and must be kept safe and secure at all times. This external hard drive should not be used to transport data for other research projects and it should only be physically transported from one location to another when it is absolutely necessary. **It is not meant for day-to-day physical transport of the data**.
+
+\
+
+<h4><strong>Working from Home</strong></h4>
+
+Whenever a student must work with "Red" data from home, they must also:
+
+  * Ensure that the data are not viewed by others, such as roommates or family members, and they **must not** work in public spaces
+  * Ensure that they don't use public Wi-Fi while working with these data; when using their own Wi-FI they must utilize a VPN
+
+\
+
+<h4><strong>Alternatives</strong></h4>  
+
+If none of the above options are feasible, contact the [RDM Support Desk](mailto: rdm@vu.nl) for advice.
+
+#####	Orange data {#orange}
+
+The recommendations for "Red" data should be applied to "Orange" data whenever possible, except for the recommendation that the student should work onsite at the VU. They are allowed to work remotely and on their own device with the precautions listed for the use of personal computers.
+
+\
+
+<h4><strong>YODA</strong></h4>
+
+If you are already storing "Orange" data in [YODA](../rdm/tools/YODAInstructionsFGB.html){target="_blank"}, you can [add the student(s) to the YODA "group" you manage](https://yoda.vu.nl/site/getting-started/user-management.html){target="_blank"} to provide them access to "Orange" data.
+
+  * Follow the instructions in the [Digital Data Transfer Guide](DigitalTransfer.html){target="_blank"} to securely share "Orange" data using YODA.
+  * Make sure the student reviews and follows the security requirements for "Orange" data in [YODA](../rdm/tools/YODAInstructionsFGB.html#protection){target="_blank"}, particularly that they:
+    + Log in to YODA using their VU student e-mail address. This is the primary way to ensure that multi-factor authentication (MFA) is activated. If a VU student e-mail is not an option, contact [RDM Support Desk](mailto: rdm@vu.nl) for advice.
+  * Make sure the YODA [group](../rdm/tools/YODAInstructionsFGB.html#accessmgmt){target="_blank"} you add the student to does not allow them access to data they should not have access to.
+
+\
+
+<h4><strong>Research Drive, SciStor & Teams/SharePoint</strong></h4>    
+    
+If you are already using [Research Drive](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012856){target="_blank"}, [SciStor](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012858){target="_blank"} or [Teams/SharePoint](https://services.vu.nl/esc?id=emp_taxonomy_topic&topic_id=4d4956d7978f09d0e553359fe153afb3){target="_blank"} for the storage of "Orange" data, it is possible to provide students access to the data stored there. However there are some caveats:
+
+  * Research Drive can only be used for research purposes; it is not intended for student activities that are *purely educational*. If you are uncertain whether or not your student can use Research Drive, contact the [RDM Support Desk](mailto: rdm@vu.nl) for advice.
+  * If using Research Drive or Teams, make sure to follow the instructions in the [Digital Data Transfer Guide](DigitalTransfer.html){target="_blank"} to securely share the "Orange" data. Additionally:   
+      + If the student is accessing data in Research Drive or Teams on their personal computer, any data that are synced or copied locally must be stored on a [hardware-encrypted](PhysicalTransport.html#usb){target="_blank"} external hard drive that is protected with a strong [password](SecurityBasics.html#passwords){target="_blank"}. The data **must not** be copied to the student's local hard drive.
+      + Once the student no longer requires access to the data, the data must be [permanently removed](SecurityBasics.html#removal){target="_blank"} from the external hard drive or the external hard drive must be destroyed.
+      + The hard drive must be dedicated to this single purpose and must be kept safe and secure at all times. This external hard drive should not be used to transport data for other research projects and it should only be physically transported from one location to another when it is absolutely necessary. **It is not meant for day-to-day physical transport of the data**.
+  * Students can be provided access to data in SciStor, however you should contact [IT for Research](mailto: itvo.ucit@vu.nl) for support. Inform the IT for Research engineers that the data are high risk, so that they can provide advice on how the student can securely access the data.
+
+\
+
+<h4><strong>ZIVVER/SURFFileSender</strong></h4>  
+
+If YODA, Research Drive or SciStor are not feasible, the data can be sent to the student using [ZIVVER](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012860){target="_blank"}  or [SURFFileSender](https://www.surf.nl/en/surffilesender-send-large-files-securely-and-encrypted){target="_blank"}. Follow the instructions for "Orange" data in the [Digital Data Transfer Guide](DigitalTransfer.html){target="_blank"} on how to safely use these tools to send data to students.
+
+  * When using these tools to send data, students will need to store the data somewhere securely. If the student is using their personal computer, the data must be stored on a [hardware-encrypted](PhysicalTransport.html#usb){target="_blank"} external hard drive that is protected with a strong [password](SecurityBasics.html#passwords){target="_blank"}. The data **must not** be copied to the student's local hard drive on their personal computer.
+      + Once the student no longer requires access to the data, the data must be [permanently removed](SecurityBasics.html#removal){target="_blank"} from the external hard drive or the external hard drive must be destroyed.
+      + The hard drive must be dedicated to this single purpose and must be kept safe and secure at all times. This external hard drive should not be used to transport data for other research projects and it should only be physically transported from one location to another when it is absolutely necessary. **It is not meant for day-to-day physical transport of the data**.
+      
+\
+
+<h4><strong>Use of Personal Computer</strong></h4>
+
+Whenever a student must work with "Orange" data on their own device, they must also:
+
+  * Activate virus and malware scanners on their computer
+  * Activate [Full-Disk Encryption](Encryption.html#fde){target="_blank"}
+  * Follow the [best practices](SecurityBasics.html#laptops){target="_blank"} for working on laptops
+  * Download the appropriate [encryption](Encryption.html#fle){target="_blank"} software to de-encrypt any encrypted data.
+
+\
+
+<h4><strong>Working from Home</strong></h4>
+
+Whenever a student must work with "Orange" data from home, they must also:
+
+  * Ensure that the data are not viewed by others, such as roommates or family members, and they **must not** work in public spaces, other than at the VU campus. If on campus they should avoid working on the data in busy areas.
+  * Ensure that they don't use public Wi-Fi while working with these data; when using their own Wi-FI they must utilize a VPN
+
+\
+
+<h4><strong>Alternatives</strong></h4>  
+
+If none of the above options are feasible, contact the [RDM Support Desk](mailto: rdm@vu.nl) for advice.
+
+##### Yellow data {#yellow}
+
+When providing students with "Yellow" data, any of the options listed for "Orange" data (i.e. YODA, Research Drive, SciStor, ZIVVER and SurfFileSender) can be used. [SURF Drive](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012728){target="_blank"} may be used to provide students with data, however, the options listed under "Orange" data are preferred (see the [Secure Storage Guide](Storage.html#nonpreferred){target="_blank"} for more information). 
+
+\
+
+<h4><strong>YODA</strong></h4>
+
+If you are already storing "Yellow" data in [YODA](../rdm/tools/YODAInstructionsFGB.html){target="_blank"}, you can [add the student(s) to the YODA "group" you manage](https://yoda.vu.nl/site/getting-started/user-management.html){target="_blank"} to provide them access to "Yellow" data.
+
+  * Follow the instructions in the [Digital Data Transfer Guide](DigitalTransfer.html){target="_blank"} to securely sharing "Yellow" data using YODA.
+  * Make sure the student reviews and follows the security requirements for "Yellow" data in [YODA](../rdm/tools/YODAInstructionsFGB.html#protection){target="_blank"}.
+  * Make sure the YODA [group](../rdm/tools/YODAInstructionsFGB.html#accessmgmt){target="_blank"} you add the student to does not allow them access to data they should not have access to.
+
+\
+
+<h4><strong>Research Drive, SciStor, SURFdrive, Teams/Sharepoint, ZIVVER & SURFFileSender</strong></h4> 
+
+You can also share "Yellow" data with students via [Research Drive](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012856){target="_blank"}, [SciStor](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012858){target="_blank"}, [SURF Drive](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012728){target="_blank"},
+[Teams/SharePoint](https://services.vu.nl/esc?id=emp_taxonomy_topic&topic_id=4d4956d7978f09d0e553359fe153afb3){target="_blank"}, [ZIVVER](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012860){target="_blank"}  or [SURFFileSender](https://www.surf.nl/en/surffilesender-send-large-files-securely-and-encrypted){target="_blank"}. There are a few important things to be aware of however:
+
+  * Research Drive can only be used for research purposes; it is not intended for student activities that are *purely educational*. If you are uncertain whether or not your student can use Research Drive, contact the [RDM Support Desk](mailto: rdm@vu.nl) for advice.
+  * Students unfortunately cannot be added as users on SURFdrive folders. In general, "Yellow" data should not be shared via a SURFdrive public link, however, you may share the data with students in this manner as long as the link is sent to the student's VU e-mail address using a strong password and a short expiry date on the link. The student will need to download the data from the public link, and once the student has the data, the public link should be deleted.
+  * Make sure to follow the instructions in the [Digital Data Transfer Guide](DigitalTransfer.html){target="_blank"} to securely share the "Yellow" data for whichever option you choose.
+    + This guide does not apply to SciStor. You can contact [IT for Research](mailto: itvo.ucit@vu.nl) for support if you don't know how to give a student access to your SciStor storage space.
+
+\
+
+<h4><strong>Use of Personal Computer</strong></h4>
+
+Students working with "Yellow" data may store the data directly on the hard drives of their own computers. However, they should still follow good practices when working with their personal computers:
+
+  * The student must never store the data on WeTransfer, Google Drive, DropBox or any other unapproved cloud storage option
+    + Back-up suggestions to prevent data loss are described [below](#backups)
+  * The data needs to be well managed in a dedicated folder that can be [deleted](SecurityBasics.html#removal){target="_blank"} once the student no longer needs the data
+  * The student must ensure that their computer has active virus and malware scanners
+  * The student must activate [Full-Disk Encryption](Encryption.html#fde){target="_blank"} on their computer
+  * If using a laptop, they must also follow the [best practices](SecurityBasics.html#laptops){target="_blank"} for working on laptops
+
+\
+
+<h4><strong>Working from Home/Offsite</strong></h4>  
+
+Whenever a student must work with "Yellow" data from home/offsite, they must also:
+
+  * Ensure that the data are not viewed by others, such as roommates or family members, and they **must not** work in public spaces, other than on the VU campus 
+  * Avoid using [public Wi-Fi](SecurityBasics.html#internet){target="_blank"} while working with these data; if this absolutely cannot be avoided, they _**must**_ have a VPN activated before using the public Wi-Fi network 
+
+\
+
+<h4><strong>Alternatives</strong></h4>  
+
+If none of the above options are feasible, contact the [RDM Support Desk](mailto: rdm@vu.nl) for advice.
+
+##### Green and Blue Data {#greenblue}
+
+Any of the data storage options listed under "Yellow" data may be used for "Green" and "Blue" data.
+
+  * See section on "Green" data in the [Digital Data Transfer Guide](DigitalTransfer.html){target="_blank"} for information on how to digitally provide the students with "Green" or "Blue" data
+  * Students given access to "Green" or "Blue" data via YODA should review the relevant sections on data protection in the [YODA manual](../rdm/tools/YODAInstructionsFGB.html#protection){target="_blank"} 
+  * Students working with "Green" or "Blue" data may store these data directly on the hard drives of their own personal computers, however, they should still follow good practices when working with personal computers:
+    + The data must not also be stored on WeTransfer, Google Drive, DropBox or any other unapproved cloud storage option
+       + Back-up suggestions to prevent data loss are described [below](#backups)
+    + The data needs to be well managed in a dedicated folder that can be [deleted](SecurityBasics.html#removal){target="_blank"} once the student no longer needs the data
+    + If [public Wi-Fi](SecurityBasics.html#internet){target="_blank"} needs to be used while working with the data, a VPN should first be activated before using the public Wi-Fi network 
+    + [Full-Disk Encryption](Encryption.html#fde){target="_blank"} must be active on the computer
+    + If using a laptop, they should follow the [best practices](SecurityBasics.html#laptops){target="_blank"} for working on laptops
+
+If none of the above options are feasible, contact the [RDM Support Desk](mailto: rdm@vu.nl) for advice.
+
+####
+
+### Back-ups and Returning Data {#backups}
+
+If a student cannot be given access to a VU storage option (e.g. YODA, Research Drive, SciStor) and they must, therefore, store the data on an encrypted external hard drive or on their computer's hard drive, there will be an increased risk of data loss. The supervisor should make a back-up plan with the student in this case. The data should be securely transferred to the supervisor in a similar method to how the data was [provided](#providing) to the student, and the supervisor should store the backed-up data on an appropriate [VU storage option](Storage.html){target="_blank"}. It is up to the supervisor as to how often the data need to be backed up (at a minimum, once per month); back-ups should happen more frequently for data that will be used for research publications and for data that are extremely valuable and not easily replaced.
+
+When the student has completed working with the data, they need to return the data to their supervisor via an [appropriate method](#providing) and then [delete](SecurityBasics.html#removal){target="_blank"} the data from the external hard drive or their computer's local hard drive. This applies to all data regardless of the privacy/confidentiality risk.
+
+### Data Collection Considerations {#collection}
+
+Students may also be tasked with collecting raw data at an offsite location and then physically transporting the data back to the VU campus for storage. These students require guidance from their supervisors on how to securely transport these data. Advice on how to securely transport data can be found in this [guide](PhysicalTransport.html){target="_blank"}; students are expected to read the relevant sections of this guide, particularly the [general tips](PhysicalTransport.html#general){target="_blank"}. The researchers responsible for these students should also provide the students with clear instructions specific to the research project so that they know exactly what is expected of them. If a data collection process is particularly complex and/or there are many people responsible for data collection, it is recommended to create a data collection protocol that everyone on the research team can refer to as needed.
+
+### Data Documentation
+
+Regardless of the privacy or confidentiality risks posed by the research data, students are expected to document all of their work, particularly any code (a.k.a. SPSS syntax, R script etc.) that is used to process and analyse the data. Students involved with data collection should be instructed on any relevant information that should be documented about the data collection process, for example in logbooks or lab journals. 
+
+Documentation is important for ensuring the integrity and quality of the research data, which is especially important if the students are working with data that will be used for future research publications. At a minimum, good documentation by students will assist their supervisors in understanding and reviewing the data at the end of their internships.
+
+### Support
+
+For IT support on setting up (remote) access to VU networks for students, contact the [IT Service Desk](https://services.vu.nl){target="_blank"} .
+
+For faculty-level support, contact the Technical Support for Research (TO3) [Helpdesk](https://vu.nl/en/employee/behavioural-and-movement-sciences-getting-started/technical-support-for-research-to3){target="_blank"}. They can provide [equipment](PhysicalTransport.html#to3){target="_blank"} for short-term data collection and storage, such as encrypted external hard drives, and if given sufficient notice, they can develop solutions for more complex research projects.
+
+If the recommendations of this guide are not feasible, contact the [RDM Support Desk](mailto: rdm@vu.nl). They will bring you into contact with the relevant specialists in IT who can develop an alternative solution.

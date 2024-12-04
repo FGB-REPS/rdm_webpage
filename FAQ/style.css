@@ -1,0 +1,66 @@
+.headerImage {
+  width:500px;
+  object-fit: scale-down; max-width: 100%
+}
+
+.jumbotron {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  font-family: 'Roboto Condensed',sans-serif!important;
+}
+
+.container-fluid {
+  font-family: 'Roboto Condensed',sans-serif!important;
+}
+
+.col {
+  margin: 0;
+  padding: 0;
+}
+
+h6 {
+  text-decoration: underline;
+  color: grey;
+  font-weight: bold;
+}
+
+#listbreak {
+  margin: 0;
+  padding: 0;
+}
+
+#main_title {
+  text-align: center;
+}
+
+/* need to use different color for hyperlinks to improve contrast and
+accessibilityu */
+
+a {
+  color: #157bb7;
+}
+
+/* also need to make the hyperlink for the title sections slightly darker
+because the background is grey for each card section header */
+
+/* don't need this code anymore because have removed the collapse function
+for each card, so there's no more hyperlink on the card headers
+
+a.card-link {
+  color: #105d89;
+}
+*/
+.card {
+  border-bottom: 0;
+  /*
+  made height 100% for each card because each card would otherwise be its own height based on
+  how many questions there are. You don't see the difference as much
+  when the bottom border is removed, but the right and left borders that touch
+  for each card show just slightly where the card would end if the bottom
+  border was showing (the border is a bit thicker until the questions for that
+  card run out). Now that all cards are same height in the bottom row, the left and
+  right borders are a consistent thickness.
+  */
+  height: 100%;
+}

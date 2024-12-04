@@ -1,0 +1,961 @@
+---
+title: "Guidelines for the Archiving of Academic Research for Faculties of Behavioural and Social Sciences in the Netherlands <br>
+March 2022 <br><br>
+A Publication by the Committee Scientific Integrity, Data Storage and Reproducibility from the Deans of Social Sciences in the Netherlands (DSW)<br><br>
+With Local Guidelines for Implementation by the Faculty of Behavioural and Movement Sciences <br>"
+date: '2022-07-27; Version 3.0'
+output: 
+  html_document:
+    theme: cerulean
+---
+
+
+
+<!--opted to not put in a TOC because it squishes the text too much. I might manually write one in with hyperlinks, but I won't make the automated version-->
+
+<!--IMPORTANT: have opted to use this Rmd solely to create the html doc and then do further editing/formatting in the html doc (and keep the other word doc I create manaully as well). THis is because editing this Rmd is going to be a huge problem because of the position of the text and because there are many limitaitons to what I can do in terms of formatting the html. Better to just do it direclty in the html. I will use this Rmd solely to create the starting html and all of the structure and then I will edit a version of it that will be the final webpage version of the html. I've changed the name of this Rmd and the subsequent html doc so that it's clear these are for prep work. I will also no longer create a word doc via knitr because it's better just to use the version I've already created in word and use that to create the pdf.
+-->
+
+<!-- file name changed to ArchivingGuidelinesFull_prep.Rmd so that I can create a separate html from this Rmd to work on as needed, but then save that html with the name I want for the webpage without overwriting it
+-->
+
+<style type="text/css">
+
+
+.main-container {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5%;
+}
+
+h1.title {
+  font-size: 28px;
+  text-align: center;
+}
+
+h4.date { /* this is to affect the size of the date text in the YAML when it prints in html  */
+  font-size: 20px;
+  text-align: center;
+}
+
+p {
+  font-size: 20px;
+}
+
+li {
+  font-size: 18px;
+  margin: 5px;
+}
+
+
+
+
+/*adjust the rest of the table styling */
+
+table {
+  width: 100%;
+}
+
+
+
+/*use following to first have all borders on table shown with collapse, then the follow up is to remove what isn't wanted */
+
+/*first step makes it so that borders are added to the whole table; it doesn't seem to show up until the following step where I define the colour and weight */
+
+table {
+  border-collapse: collapse;
+}
+
+
+/*these steps let me remove the left border from the first column. Also added specifics on the weight and colour of the inner border here by defining that as the right border for the th and td objects*/
+
+table tr td:first-child {
+  border-left: 0;
+  border-right: 2px solid #ddd;
+}
+
+/*I will leave the right border for the header as 0 because I don't need to have two columns for each header, there is only one bit of text that is relevant*/
+
+table tr th:first-child {
+  border-left: 0;
+  border-right: 0;
+}
+
+/*these steps let me remove the right border from the last coloumn*/
+
+table tr td:last-child {
+  border-right: 0;
+}
+
+table tr th:last-child {
+  border-right: 0;
+}
+
+
+
+table, th td { 
+  vertical-align: top;
+  border-bottom: 2px solid #ddd;
+}
+
+/*I have made the top border of each header invisible because with the set up where I need a separate table for each section if I remove an extra border it's less obvious that there is a separate table*/
+
+table, th { 
+  border-top: 0;
+}
+
+th {
+  font-size: 18px;
+  padding: 5px;
+}
+
+td {
+  font-size: 18px;
+  padding: 5px;
+}
+
+/*also adjust the settings for the intro table that has a separate id called .intro */
+
+#intro th {
+  border-collapse: collapse;
+  border-style: hidden;
+}
+
+
+#intro td {
+  border-collapse: collapse;
+  border-style: hidden;
+  border: 2px solid #ddd;
+}
+
+#intro th {
+  font-size: 28px;
+  color: #5C8BAF;
+}
+
+/*make the td text as small as possible because even though it's just written as spaces (&nbsp;) for the markdown to work properly it still takes up as many pixels as normal text would and we want the extra row that isn't seen below the header to be as small as possible (this whole extra table is just there so that the text for National Guidelines and Local Implementation sit in the correct spots) */
+
+#intro td {
+  font-size: 2px;
+}
+
+#intro tr td:first-child {
+  border-left: 0;
+  border-right: 0;
+}
+
+#intro tr td:last-child {
+  border-left: 0;
+  border-right: 0;
+}
+
+/*tried really hard for tables that have more than one row to be specific to the table in question, but that selector just doesn't seem to be working with the css. If there is more than one row in a table I want to drop the borders, but it seems that at least for this specific case if I try to select based on an id or with the table.class option and give a class to the table, it just doesn't want to work, it's not recognizing the table I'm looking for and I'm not sure how to get it to do what I want. However, I think for any of these cases of tables with multiple rows, I don't want there to be a border for each row after all, so it should be fine to just define that broadly for all tables where this is the case.*/
+/*Also according this page https://css-tricks.com/useful-nth-child-recipies/ if I write nth_child(n+2) it will select everything from the 2nd case onwards no matter how many there are in total */
+
+table tr:nth-child(n+2) td {
+  border-top: 0;
+}
+
+
+/*the following css works but only if I modify the html directly: I could use this to indent rows of a table from row 2 on, but unfortunately I cannot make this work from RMarkdown because it seems that if I write the <table> tag around the markdown version of the table the doubled up table tags seem to prevent the html and css from communication. Whereas if I modify the one table tag that is created bassed on the markdown coding, and I put the class indent into that tag than the following css does what it needs to to indent the text. I will leave this statement here to allow for the option that after I create the html from RMarkdown that I make some further minor adjustments to the html directly; I would also need to do that each time I update the html*/
+
+table.indent tr:nth-child(n+2) td {
+  padding-left: 3em;
+}
+
+
+hr { /*this adjusts the weight and colour of the line that breaks sections (the -------- in markdown)*/
+  border: 1px solid #ddd;
+}
+
+/*I've tried different wayts to indent text that is emphasized or strong, but without divs or putting this text into it's own cell, it just won't work out how I want: it will only indent the first line not the entire bit of text. Will therefore let that option go */
+
+.footnotes {
+  margin-top: 5%;
+  color: #989898;
+}
+
+
+
+</style>
+
+<br>
+
+
+
+---------------------------------------  
+
+
+
+In the following sections, the guidelines published by the DSW at the national level are presented on the left, while the local implementation of these guidelines at the Faculty of Behavioural and Movement Sciences (FGB) at the Vrije Universiteit is presented on the right and is based on the principle “apply or explain”. FGB complies with the national guidelines, but where it does not comply, explanation for this deviation as well as further guidance is provided.
+For answers to questions about these guidelines and the faculty’s implementation of them, please contact the [FGB Research Policy and Support Team (REPS)](research.data.fgb@vu.nl).
+
+<br>
+
+<!--&nbsp; is used to preseve blank spaces. Also for this intro table that I am only creating to ensure that the text stays in the correct position no matter how big the browser window is, I don't have any text in the td sections of the table after the header, so I need to but the spaces there for the table function to be recognized by markdown -->
+<!-- I've also put a class around this table so that I can adjust the css for this table separately from the rest of the tables -->
+
+
+<div id="intro">
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  National Guidelines                                                                               Local Implementation (FGB)
+
+------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------
+&nbsp;                                                                                            &nbsp;
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+</div>
+
+
+<!--in order to allow for internal links with IDs I need to make separate tables for each section because it's not possible to put div inside a table and there's no other way to make an anchor to link to -->
+<!--Also made the table columns below much wider than probably necessary because I'll run into trouble with including hyperlinks if they aren't wide enough. Plus with them being so wide I won't have to 
+hard return the text as much-->
+
+<div id="section1">
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. Preamble                                                  
+
+------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------
+The principles of honesty, scrupulousness, transparency, independence, and responsibility form    FGB complies with this introduction, with the additional caveat that the distinction between 
+the basis of research integrity (UNL, 2018). Abiding by these principles enlarges trust and       quantitative and qualitative data, and the manner in which these data should be handled, is
+quality of academic research, thereby improving its relevance to society. The current guideline   not so clear cut. This is discussed further in the faculty’s implementation of these guidelines:
+is developed with input from all DSW faculties and offers guidance for the archiving of academic  in short, FGB argues that quantitative and qualitative data should not be handled
+research published by researchers at the Dutch faculties of social and behavioural sciences,      differently. Differential handling of data has less to do with broad definitions of quantitative
+drawn from the principles of scrupulousness, transparency, and responsibility. The guideline      and qualitative and more to do with the specific kind of data being archived (e.g. administrative
+seeks to improve archiving of social and behavioural research using both quantitative and         data, questionnaire responses, experimental measurements, (neuro)imaging, audiovisual
+qualitative methods, in order to safeguard continued availability of qualitative or quantitative  recordings, textual data) and the privacy and/or security risks posed by the data, which
+research data, detailed descriptions of research materials and approaches, and an overview of     are not necessary inherently greater just because data is qualitative. The faculty
+the data processing and publication processes after the research has been published.<br><br>      therefore sees these guidelines as a baseline standard for all research data regardless of
+This guideline is not meant to replace other existing guidelines or regulations related to data   whether it is considered qualitative or quantitative, and the faculty will provide additional 
+management, open science, data processing agreements and privacy aspects in the design stage of   support to researchers on its research support webpages for guidance
+a research project. The document can be seen as an initiative that is part                        on the specific handling of specifics kinds of data.
+of a broader effort to promote research integrity among 
+researchers focusing on both quantitative and qualitative 
+studies at faculties of behavioural and social sciences in the Netherlands. Rather than 
+functioning as a strict straightjacket, it intends to provide a clear guideline, which can be 
+further fleshed out under the motto ‘apply or explain’, taking into account existing regulations 
+at the faculty or university level.<br><br>
+Researchers working in the social and behavioural sciences at a Dutch university will be held 
+to these standards to ensure that research integrity in general and transparency in particular 
+can be ensured. Given the various distinct methodologies of scholarly research carried out under 
+the general “social science” header, there are two main approaches that can be identified and 
+should be implemented to ensure scientific integrity and its future assessment. The first is 
+primarily for quantitative research designs and quantitative data that can most often relatively 
+easily be de-identified (pseudonymized or anonymized) and stored in a repository in full. The 
+second is for scientific research that is structured by qualitative and interpretive research 
+designs and epistemologies that generate data and information that may have a different character 
+and most often cannot be de-identified and stored in an identical manner as quantitative data. 
+Regardless of methodological approach, all researchers have an obligation to follow the standards 
+of integrity and transparency set in this document. All researchers must be aware of the specific 
+regulations that govern their type of research and adhere to these regulations[^1] (except where 
+motivated exceptions are allowed).\
+&nbsp; 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+</div>
+
+<!--I put an extra space before the list of referenced guidelines so that the following section is actually in a new row which if I adjust the css in the html as described above, will allow this extra row to be indented -->
+
+<div id="section1.1">
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1.1 Purpose of these guidelines                                                   
+
+------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------
+These guidelines for the archiving of academic research set out the preconditions for the         The FGB complies with this requirement, however archiving may be appropriate on more occasions
+archiving of data, materials and information that form the basis for publications – in other      than simply after publication.<br><br> 
+words, (descriptions of) data, materials and information that are needed in order for academic    Data must always be archived after a research article is accepted for publication. Other
+peers and other consumers of the research to replicate, reproduce, and/ or assess the published   situations where archiving may be appropriate include: \
+research results. These guidelines relate to the data, materials and information with respect to  &nbsp;&nbsp;&bull; Upon completion of a research project, regardless of whether or not the
+publications that appear in their definitive form as of 1 September 2021[^2]. The guidelines are  data were used in a publication (especially when the data may be of use for a new project)\
+based on the principle of retroactive accountability, i.e. reporting after a publication has      &nbsp;&nbsp;&bull; Upon completion of raw data collection to ensure
+appeared. The norm behind these guidelines is that each researcher is responsible for archiving   secure storage and to prevent loss or modification of the raw data\
+data, materials and information, and the publications based on them, in a responsible and         Archiving data in these cases is highly recommended, but not an absolute requirement. It is
+transparent way, in order to keep the data for future verification or checking by academic        the responsibility of the research team to determine if the data should be archived 
+peers, and re-use. In situations where this document does not provide clear-cut rules,            in these situations.\
+researchers are expected to act in the spirit of these guidelines rather than observing them      \
+to the letter.<br><br>                                                                            These guidelines only address
+Faculties will be expected to apply these national guidelines. The guidelines will be             [data archiving](../definitions/Definitions.html#archivingdata){target="_blank"},
+evaluated every two years, under the responsibility of the deans of the faculties of social       which is necessary to: \
+and behavioural sciences (DSW).                                                                    &nbsp;&nbsp;&bull; Facilitate verification and replicability of research as
+                                                                                                  required by the VSNU Code of Conduct for Research Integrity\
+                                                                                                  &nbsp;&nbsp;&bull; Meet legal requirements for medical research
+                                                                                                  that is subject to WMO regulations and/or Good Clinical Practice (GCP) Guidelines.\
+                                                                                                  [Publishing data](../definitions/Definitions.html#publishingdata){target="_blank"}
+                                                                                                  for reuse by third parties is not addressed in these guidelines.\ 
+                                                                                                  \
+                                                                                                  This document is informed by the references cited at the end of the FGB Research Data Management
+                                                                                                  [Policy](../../policies/FGB_RDM_Policy.html){target="_blank"}, 
+                                                                                                  as well as the following regulations regarding the Good Clinical Practice (GCP) guidelines: \
+
+                                                                                                  &bull; Guideline on GCP compliance in relation to
+                                                                                                  trial master file (paper and/or electronic)
+                                                                                                  for content, management, archiving, audit and inspection of clinical trials[^3]\
+                                                                                                  \
+                                                                                                  &bull; Regulation (EU) No 536/2014 of the European Parliament and of the Council
+                                                                                                  of 16 April 2014 on clinical trials on medicinal products for human use, repealing
+                                                                                                  Directive 2001/20/EC[^4]\
+                                                                                                  \
+                                                                                                  &bull; Commission Directive 2005/28/EC of 8 April 2005 laying down principles
+                                                                                                  and detailed guidelines for good clinical practice as regards investigational medicinal
+                                                                                                  products for human use, as well as the requirements for authorization of the manufacturing
+                                                                                                  and importation of such products[^5]\
+                                                                                                  \
+                                                                                                  &bull; Directive 2001/20/EC of the European Parliament and of the Council of 4
+                                                                                                  April 2001 on the approximation of the laws, regulations and administrative provisions of the 
+                                                                                                  Member States relating to the implementation of good clinical practice in the 
+                                                                                                  conduct of clinical trials on medicinal products for human use[^6]\
+                                                                                                  &nbsp; 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+</div>
+
+
+<div id="section1.2">
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1.2 To whom do these guidelines apply?                                                   
+
+------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------
+These guidelines apply to all faculty staff members who conduct research in the context of a      FGB complies with this requirement.\
+temporary or permanent employment contract, all PhD candidates who conduct research under the     \
+supervision of a professor, and all research master’s students. The guidelines do not apply to    It is, however, recommended to have Bachelor’s and one-year Master’s students produce
+bachelor’s and one-year master’s students, unless their research results in an academic           an informal archiving package to their research supervisors. This document does not need to
+publication. Research conducted by bachelor’s and one-year master’s students falls under          be nearly as extensive as a formal archiving package, but should contain the datasets
+the formal responsibility of their supervisors.\                                                  (raw and final), code/syntaxes used, any other documentation on data processing and analyses,
+All researchers at the faculty must adhere to The Netherlands Code of Conduct for Research        and the final research paper. Research supervisors should determine the appropriate storage 
+Integrity[^7]. These guidelines are a concrete embodiment of the principle of transparency        location and duration of storage for these data.\ 
+and the related norms set out in the UNL Code of Conduct. The Netherlands Code of Conduct         **NB:** If Bachelor’s or Master’s students produce data that are used for a publication, then
+also requires researchers to make data as open as possible after publication or to                the data archiving guidelines below do apply. If these data are subject to the WMO or GCP,
+document valid reasons for not sharing the data.                                                  supervisors must ensure that the data are stored for the duration required by these regulations.
+\
+&nbsp; 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+</div>
+
+<div id="section1.3">
+<!--to show a bullet within a table need to use a special html entity &bull; rather than markdown shorthand. To indent the bullets unfortunately the html entity for tab doesn't work anymore but if I put the entity for space four times that is equivalent to a tab. However this only indents the first line which doesn't make for great readability and there's no way to indent the whole thing because of not being able to use div's within a table. Will just opt for spaces-->
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1.3 Raw data, personal data and research data                                                    
+
+------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------
+Within the framework of the transparency and replicability of research, raw data must of course   FGB clarifies this section because in many cases raw data cannot be de-identified without
+be retained. Raw data are the unedited data that are collected within the framework of a          irrevocably impacting the integrity of the raw data (such as with audiovisual data). 
+research project, for example:<br><br>                                                            The impact on the integrity of that data also depends on the extent to which the data will
+&bull; Registrations derived from experimental research\                                          be de-identified.  Raw data should only be de-identified in so far as the integrity 
+\                                                                                                 of the original data is maintained, in other words, if the manipulations required to de-identify
+&bull; Survey data from questionnaires completed within the framework of research                 data irrevocably change the raw data, then the raw data must be maintained it its original 
+(including longitudinal research), collected by the researcher themselves or by                   form and instead additional security measures should be applied to protect the data.\  
+an external fieldwork organization\                                                               \
+\                                                                                                 See [section 2.1.1](#section2.1.1), subsection 4 for additional explanation.
+&bull; (Transcripts of) video material collected within the framework of qualitative 
+research (open interviews, observations)\
+\
+&bull; Notes taken within the framework of qualitative research or research using
+source material\ 
+\
+&bull; Raw data must always be de-identified as soon as and insofar possible so that
+they cannot be directly traced back to people or groups of people. Data that can be directly
+or indirectly traced back to a person are known as personal data. This includes
+not only name and address details, but also photographs,audio - and video material, and
+other identifying information. The de-identified raw data and the personal data together
+form the research data\
+&nbsp;
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+</div>
+
+<div id="section2">
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. Guidelines concerning publication packages                                                   
+
+------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------
+These guidelines relate to all research publications listed in the faculty’s academic annual      FGB refers to the required documentation as an ‘archiving package’ because archiving may be
+report. In order to ensure the transparency of qualitative and quantitative empirical             required in more instances than just after the publication of a research article; 
+research, all information that is needed to be able to assess the results must be archived        additionally, this avoids confusion with the publication of data. 
+(in English). This information is stored in a ‘publication package’.\ 
+&nbsp;
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+</div>
+
+ 
+
+
+<div id="section2.1">
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2.1 What must be stored in a publication package?                                                  
+
+------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------
+We make a distinction between publication packages resulting from quantitative research and       FGB does not make a distinction in these guidelines between quantitative and qualitative data.
+from qualitative research projects, while noting the existence of mixed methods that employ       The basic principles of archiving and what should be archived apply to both kinds of data.
+both qualitative and quantitative elements and should be handled according to their main focus.   This will be discussed in more detail in [section 2.1.2](#section2.1.2)\
+                                                                                                  \
+                                                                                                  The contents of an archiving package will differ depending on the purpose of archiving
+                                                                                                  ([see section 1.1](#section1.1)). The following sections specifically describe what should be 
+                                                                                                  included in an archiving package after a research article has been published;
+                                                                                                  for other purposes of archiving, some materials may not exist, such as a manuscript.
+                                                                                                  This is not an issue for these other purposes so long as the archiving package contains
+                                                                                                  whatever is necessary to correctly interpret its contents. Additionally,
+                                                                                                  regardless of the purpose of archiving, an archiving package should provide enough
+                                                                                                  information that one could repeat the process that produced the data. This does not necessarily
+                                                                                                  mean that the data can be perfectly replicated, as this is extremely difficult in the
+                                                                                                  social sciences whether the data are qualitative or quantitative. However, if the
+                                                                                                  archiving package contains sufficient information on the data collection process, another
+                                                                                                  researcher can replicate your workflow in order to produce similar data. Even for data
+                                                                                                  that cannot be reproduced in any way, such as interview data, including the materials
+                                                                                                  that explain the process of conducting and recording the interview contributes to transparency.\
+                                                                                                  \
+                                                                                                  If data were initially archived upon the completion of data collection, and the data
+                                                                                                  are subsequently used for a research publication, it is not necessary to archive the
+                                                                                                  data again; one can simply refer back to the location where the raw data were
+                                                                                                  initially archived. This is discussed below in [section 2.1.1](#section2.1.1) subsection 4 on 
+                                                                                                  raw data.\
+                                                                                                  &nbsp;
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+</div>
+
+
+<div id="section2.1.1">
+
+
+<!--for this section I need to actually have subrows of a normal table to help the lines line up without getting complicated. Will use css to remove the lines-->
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2.1.1 Quantitative research                                               
+
+------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------
+The following materials must be stored for each published empirical study (article, volume, book  Compliance or deviation at FGB is addressed for each requirement below. FGB also applies these
+chapter, PhD thesis chapter, Research Master’s thesis, consultable internal report, etc.):\       requirements to both quantitative and qualitative data. Additional guidance on what needs to be
+                                                                                                  archived for specific kinds of data, such as. survey data, audiovisual data, textual data etc.
+                                                                                                  is being developed by the faculty. When this is ready, it will be found on the faculty’s
+                                                                                                  Research Data Management support 
+                                                                                                  [page](https://vu.nl/en/employee/research-data-management-fbms){target="_blank"}.\
+                                                                                                  &nbsp;
+                                                                                                  
+1. The published (or accepted) manuscript or publication.                                         1. This requirement depends on the reason for archiving. If there is no associated publication, 
+                                                                                                  a research protocol or research proposal should be archived.\
+                                                                                                  &nbsp;
+
+2.  A brief description of the problem definition, research design, data collection (sampling,    2. This information does not need to be submitted separately in the archiving package if it
+selection and representativeness of informants) and methods used. An electronic version of the    is clearly described in the research publication, protocol or proposal. 
+published manuscript will generally suffice.\ 
+&nbsp;
+
+3. The instructions, procedures, the design of the experiment and stimulus materials              3. This information does not need to be submitted separately in the archiving package if it is
+(interview guide, questionnaires, surveys, tests) that can reasonably be deemed necessary         sufficiently described in the research publication, protocol or proposal, excluding
+in order to replicate the research. The materials must be available in the language               stimulus materials, which should be provided in full. Sufficiently described means
+in which the research was conducted. The publication package must be in English.                  that someone else could read the information and accurately carry out the same procedures.\
+                                                                                                  \
+                                                                                                  If several different languages were used in the stimulus materials, all versions used
+                                                                                                  should be submitted in the archiving package. There should ideally be an English translation
+                                                                                                  of all of these materials, even if an English version was not used to conduct
+                                                                                                  the research (i.e. for purposes of greater transparency).\
+                                                                                                  &nbsp;
+
+4. When using primary data, the (de-identified) raw data files (providing the most direct         4. As stated in [section 1.3](#section1.3), raw data should only be de-identified if the integrity of the
+registration of the behaviour or reactions of test subjects/respondents, for example an           raw data can be maintained: in general, one can de-identify data up to step 4 of this
+unfiltered export file of an online survey or raw time series for an EEG measurement, e-dat       [de-identification guide](../../security/Deidentification.html){target="_blank"}
+files for an E-Prime behaviour experiment, recordings or transcripts of interviews,               without irrevocably impacting the integrity of the raw data; note that modifications to           
+descriptions of observations, archive and other source or media material). Documentation of       audiovisual data such as blurring or voice modification is an irrevocable change. 
+the steps taken to de-identify the data and a blank consent form. If the raw data files have      It is also important to note that while this level of de-identification makes it more 
+been accessibly stored in an external archive (such as storage facilities at DANS), making        difficult to re-identify the raw data, this is not the same as anonymization. Lastly, once
+reference to the files in this archive will suffice. Such externally archived raw data may        one begins step 5 in the
+include primary or secondary data. Raw data may not be changed once they have been made           [de-identification guide](../../security/Deidentification.html){target="_blank"}, 
+digitally available.                                                                              data can no longer be considered raw data.\
+                                                                                                  \
+                                                                                                  The identifiable data that has been separated from the raw data may need to be archived
+                                                                                                  as well. This is required if these identifiable data need to be recombined with the
+                                                                                                  de-identified data in order to accurately verify the results published in the 
+                                                                                                  research article. Additionally, identifiable data in the form of informed consent data 
+                                                                                                  need to be preserved in order to demonstrate that valid consent was obtained from the 
+                                                                                                  research participants.  See [section 3.2](#section3.2)
+                                                                                                  for more detailed information on the handling of informed consent data.\
+                                                                                                  \
+                                                                                                  Identifiable data must be stored in a high-security archive and, where possible, 
+                                                                                                  kept separate from the de-identified research data.\
+                                                                                                  \
+                                                                                                  **NB**:  In some situations, the data to be archived are not in the possession of the FGB researcher
+                                                                                                  who is creating the archiving package, e.g. research with business data that cannot
+                                                                                                  leave the company’s servers. If the researcher is unable to store the data in a VU archive, 
+                                                                                                  an agreement should be made with the owner of the data to ensure that the data will
+                                                                                                  be stored appropriately for the agreed upon time frame, including an agreed upon 
+                                                                                                  location so that the data are findable upon request. The agreement must also allow for
+                                                                                                  access to the archived data should verification or replication of the research results be necessary. 
+                                                                                                  If the data were also (pre)-processed by the external organization, the external 
+                                                                                                  organization must either provide documentation of this processing so that it can be 
+                                                                                                  included in the archiving package submitted by the FGB researcher or access to this
+                                                                                                  information must be included in the agreement that is made with the external organization.\
+                                                                                                  \
+                                                                                                  The FGB researcher is still required to submit an archiving package with all of the other
+                                                                                                  required components. The archiving package must also include the agreement made with the
+                                                                                                  owner of the data so that someone reviewing the archiving package can determine where
+                                                                                                  the data can be found and how they can be accessed.\
+                                                                                                  &nbsp;
+                                                                                                  
+5. Computer code (for example Atlas.ti, SPSS/JASP syntax file, MATLAB analysis scripts,           5. FGB also requires that a non-proprietary copy of all code must be provided. Many
+R code) describing the steps taken to process the raw data into analysis data, including          programs have code/syntaxes that can be opened in a text editor (e.g. SPSS and SAS); if this
+brief explanations of the steps in English, for example a brief description of the steps          is not possible a copy of the code must be provided in text format. In addition to the
+taken in the qualitative analysis of primary research data, i.e. themes, domains, taxonomies,     code, the program used and version number must be documented. 
+components.\
+&nbsp;
+
+6. The data files (either raw or processed) that were eventually analysed when preparing          6. FGB also advises that any intermediate files created during the processing of raw data into
+the article (e.g. an SPSS data file after transforming variables, after applying selections,      processed data do not need to be archived, as long as the code showing these processing steps
+etc.) The latter is not necessary if the raw data file was directly analysed.                     has been submitted (or, if this code has already been archived, a reference to the location
+                                                                                                  of this code is included in the archiving package). If storage space is limited, the processed
+                                                                                                  data do not need to be archived as long as the raw data, processing code and analysis code
+                                                                                                  are included in the archiving package and the processed data can be regenerated with the processing code.\
+                                                                                                  \
+                                                                                                  If the raw and/or processed data files are in a proprietary format (e.g. .sav, .xlsx, .doc),
+                                                                                                  FGB strongly recommends that non-propriety (e.g. .csv, .txt) copies of the data files are also
+                                                                                                  archived, whenever possible.\
+                                                                                                  &nbsp;
+                                                                                                  
+7. Computer code (for example syntax files from SPSS/JASP, Atlas.ti, Matlab, R; syntaxes of       7. See sub-section 5 above
+tailored software) describing the steps taken to process the analysis data into results in 
+the manuscript, including brief explanations of the steps in English.\
+&nbsp;
+
+8. The data management plan\                                                                       8. FGB complies with this requirement. 
+&nbsp;
+
+9. A readme file (metadata) describing which documents and files can be found where and how       9. FGB complies with this expectation with some additional caveats. The information required
+they should be interpreted. The readme file must also contain the following information:\         in the described readme file generally overlaps with many generic metadata standards that
+\                                                                                                 are used when registering datasets, for example in PURE (see [section 4](#section4)), or when datasets
+a. Name of the person who stored the documents or files\                                          are deposited into trusted repositories. Unfortunately, not all generic metadata standards 
+\                                                                                                 require the specific detail described in this section. To ensure that relevant information
+b. Division of roles among authors, indicating at least who analysed the data\                    is not lost, FGB researchers should create a readme file that meets the requirements
+\                                                                                                 described in this section, save this file in a non-proprietary format, such as .txt,
+c. Date on which the manuscript was accepted, including reference\                                and archive this readme file with the other components of the archiving package. Researchers
+\                                                                                                 should then also use this readme file as a reference when filling in registration forms
+d. Date/period of data collection\                                                                in PURE or when depositing data in a trusted repository so that the overlapping information is consistent.\
+\                                                                                                 \
+e. Names of people who collected the data\                                                        **NB**: It is not expected that researchers create structured, machine-readable metadata when
+\                                                                                                 writing the readme file. Instead, the VU is developing solutions that will allow researchers
+f. If relevant: addresses of field locations where data were collected and contact persons        to create readme files and other metadata files that can be exported in a structured,
+(if any)\                                                                                         machine-readable format.\
+\                                                                                                 \
+g. Whether or not an ethical assessment took place before the research, and, if relevant,         In addition to what is described in this section, FGB also requires documentation that
+study reference from and statements made by the Ethics Review Committee\                          describes the data files themselves. For quantitative data files there must be a description
+\                                                                                                 of the data structure (wide files vs long files) and the number of records (rows) and variables
+h. Whether the data is made open or not and if not, a valid reason for not opening up             (columns) in each data file. For both quantitative and qualitative data, there needs to be
+the data                                                                                          a clear indication of which version(s) of the data file(s) were used in the publication, 
+                                                                                                  if applicable, and if multiple files are archived, there needs to be a clear description 
+                                                                                                  of what all the files represent and how they relate to each other. This documentation may
+                                                                                                  be written in the readme file or in a codebook, whichever is more logical for the research project.\
+                                                                                                  &nbsp;
+
+The readme file must be sufficiently clear. A relevant fellow researcher must be able to          FGB agrees with this expectation. Additionally, it is expected that the FGB researcher utilize
+replicate the results discussed in the publication based on the components of the                 standard terminology that is generally agreed upon by their discipline(s) when writing 
+publication package.\                                                                              the ReadMe file, as well as other documentation about the data, such as a codebook.\
+&nbsp;
+
+10. Documents relating to the ethical approval or a reference to such documents.\                 10. FGB complies with this requirement.
+&nbsp;
+
+&nbsp;                                                                                            **Addendum: Paper Archiving**\
+                                                                                                  \
+                                                                                                  **NB**: Currently, VU policy on the digitalization of paper documents prescribes that original
+                                                                                                  paper documentation (e.g. informed consent forms, lab books etc.) must not be replaced
+                                                                                                  by digital versions of these data sources. This means that even if paper documents are
+                                                                                                  scanned and saved in a digital format, the paper documents must not be destroyed until
+                                                                                                  the archiving term is complete. This policy may change if digitization techniques at
+                                                                                                  the VU are validated, at which point these guidelines will be updated.\
+                                                                                                  \
+                                                                                                  **NB2**: For all studies subject to the GCP guidelines and/or the WMO, original paper
+                                                                                                  documents _**must not be destroyed**_ until the archiving term is complete, even 
+                                                                                                  if a digital copy is made. The Inspection Agency for Healthcare and Youth does not 
+                                                                                                  allow the destruction of paper medical charts or informed consent forms until the archiving 
+                                                                                                  term is complete.\
+                                                                                                  &nbsp;
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+</div>
+
+
+<div id="section2.1.2">
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2.1.2  Qualitative research                                                  
+
+------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------
+For qualitative, interpretative methodologies, a distinction should be made between the two main  FGB does not comply with this requirement. This is because the guidance here on the archival of
+criteria for research integrity, i.e., transparency and reproduction. Transparency is a valid     qualitative data is insufficient. See [sections 2.1](#section2.1) and [2.1.1](#section2.1.1) 
+and legitimate demand also for qualitative research (and data), but reproduction is not           above for more information on how
+considered possible in all cases, due to the very nature of the research designs and              qualitative data should be archived, i.e. with the same standard applied to quantitative data.\
+epistemology. Qualitative data are often impossible to fully de-identify and the research data    \
+is often gathered in forms and formats that cannot be stored in a digital repository.\            FGB also does not agree with the idea that reproducibility is an impossible goal with qualitative
+\                                                                                                 data. Reproducibility is the process of reanalyzing the data already collected and confirming
+Of course, some of these data may be highly sensitive and cannot be shared with others without    that the same results can be produced. If qualitative data are properly archived with sufficient
+breaking ethical rules and the confidentiality that is often guaranteed to informants and other   documentation and metadata, reproduction is entirely possible. Replication (the process of
+(human) sources of information. But as the aim of these guidelines is not sharing data but        replicating the results with new data) is more difficult, however another researcher could utilize
+storing data, qualitative research should also be archived. Sensitive data should be stored       the same procedures to carry out a new study and while they may not perfectly replicate the
+on secured faculty servers. And when the format does not allow researchers to store original      same results, they may be able to demonstrate consistent results, and potentially demonstrate
+objects, it suffices to store pictures of the material. These data should be stored safely        generalization to other populations. And regardless of whether replication is possible, by
+in a way that is accessible to the researcher who gathered the data.\                             archiving qualitative data in line with [section 2.1.1](#section2.1.1), researchers are transparent 
+\                                                                                                 about the methods involved in the production of the data, which contributes to research integrity.\ 
+Researchers are therefore expected to store their data safely and to make specific plans for      \
+the time period of storage of their data, where and in which manner the data will be stored,      FGB further deviates from this section because both qualitative and quantitative data can be      
+and what will be done with the data once the research project ends or, for longterm ongoing       difficult to anonymize, however de-identification is actually feasible with qualitative data. It depends
+research, once the researcher retires from research reporting etc. This calls for an elaborate    on how much identifying information can be removed from the data to still allow it to be
+and transparent data management plan or another, similar or equivalent form of data storage       useful for analysis. For more information see this  
+plan that describes: what kind of data will be gathered, by whom, in what format, where and       [de-identification guide](../../security/Deidentification.html){target="_blank"}.\
+in which form these will be stored, and to what extent and under what conditions this data        \
+will be shared and with whom, and any specific steps that will be taken to share the data         The secure storage of sensitive data also applies to both qualitative and quantitative data. Any 
+that is safe to be shared. The researcher should be aware that according to the Netherlands       sensitive, non-anonymous data needs to be stored in a secure archive. [Section 3.2](#section3.2)
+Code of Conduct for Research Integrity there may be (highly exceptional) cases in which           discusses the secure handling of identifiable data, particularly informed consent data, when that
+there are compelling reasons for components of the research, including data, not to be disclosed  needs to be maintained for the entirety of the archiving term.
+to an investigation into alleged research misconduct. Such cases must be recorded and the         The requirement to make ongoing plans for the handling of the archived data during the
+consent of the board of the institution must be obtained prior to storing the components and/or   archiving term also applies to both qualitative and quantitative data. See [sections 2.4](#section2.4)
+data in question. This documented exception must also be mentioned in any results                 and [3.3](#section3.3) for more information. 
+published[^8].\
+\
+In addition to safely storing data, the (qualitative) researcher shall make sure to maintain  
+a record of the following metadata:\
+
+1.	The dates that the researcher carried out the data collection (e.g. dates of interviews 
+or observation, period(s) of time spent in the field (start date and return date), etc.;\
+2.	The type of activities carried out (e.g., participant observation, number of interviews, 
+frequency and character of observation, familiarizing oneself with the field, informal and 
+formal conversations, other types of recording activities);\
+3.	Interview and observation guides (if available);\
+4.	Any hard evidence of the period of time spent in the field (e.g. flight reservations, 
+train tickets, etc.).\
+&nbsp;
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+</div>
+
+ 
+<div id="section2.2">
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2.2 When must a publication package be stored?                                                  
+
+------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------
+A publication package must be stored within one month after the definitive publication of the     FGB complies with this requirement with one exception: when archiving data used in a research
+manuscript. A publication package must be stored for each submitted research master’s thesis. A   publication, FGB researchers are expected to prepare an archiving package during the course their
+publication package must be stored for each empirical chapter of a PhD thesis submitted to the    research and then submit the archiving package as soon as the research manuscript is accepted
+thesis committee (or one single publication package if the thesis is a monograph).\               for publication by the journal.\
+\                                                                                                 \
+Once a publication package has been stored, it will be fixed and can then no longer be            Additionally, with regards to other purposes for archiving:\
+modified (read only).                                                                             \
+                                                                                                  &bull; If data are to be archived upon completion of a research project, regardless of
+                                                                                                  whether any publications were generated (see [section 1.1](#section1.1)), the archiving package should be 
+                                                                                                  submitted within one month of completion of the project. For particularly complex projects
+                                                                                                  (spanning 10+ years and/or with 10+ different data sources), archiving packages may be
+                                                                                                  submitted up to three months after completion of the project.\
+                                                                                                  \
+                                                                                                  &bull; If an FGB researcher opts to archive the raw data upon completion of data
+                                                                                                  collection (see [section 1.1](#section1.1)),
+                                                                                                  the researcher can determine the timing of submission, although it is recommended to archive
+                                                                                                  these data as soon as possible after data collection is complete.\
+                                                                                                  &nbsp;
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+</div>   
+   
+<div id="section2.3">
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2.3 Who is responsible for storing publication packages?                                                 
+
+------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------
+&bull; If the first author works at one of the faculties of behavioural and social sciences,      &bull; FGB complies with this requirement. Additionally, when archiving for purposes other than after
+they will always be responsible for the archiving of the publication package, i.e. the storage    a research article has been published (see [section 1.1](#section1.1)), 
+of raw and edited data, syntax and materials, and additional information about the publication    the lead researcher for the project 
+process as discussed above. Second or later authors who work at a faculty of behavioural and      (e.g. project coordinator, primary investigator and/or project leader) is responsible for
+social sciences must know that the data have been carefully stored and how this has been          the archiving package. They may delegate the process to the researcher most directly responsible
+arranged. This is particularly relevant if the first author does not work at a faculty of         for the project, but the lead researcher remains ultimately responsible for ensuring the 
+behavioural and social sciences.\                                                                  completeness and appropriate storage of the archiving package.
+&nbsp;
+
+&bull; If the first author works at one of the faculties of behavioural and social sciences, the  &bull; FGB deviates from this requirement: if the lead author is not an FGB staff member, the FGB
+second or later author may assume that the first author will follow the guidelines of his or      co-authors are responsible for ensuring that the archiving package meets the standards of these
+her own university, and the second or later author will not have to create a publication          guidelines, regardless of whether the first author works at another Faculty of Behavioural
+package.                                                                                          and Social Sciences. Additionally, if the lead author is not an FGB staff member and does
+                                                                                                  not have adequate data archiving options at their facility, the FGB co-authors should work
+                                                                                                  together with the lead author to find an appropriate archiving solution.\
+                                                                                                  &nbsp;
+
+&bull; For PhD candidates and research master’s students, the primary supervisor or the           &bull;FGB complies with this requirement. In addition, if FGB supervisors delegate this task to their
+day-to-day supervisor respectively are responsible for storing publication packages. The          candidate/student, they are expected to inform the candidate/student about these guidelines
+primary supervisor or day-to-day supervisor may delegate the execution of this task, but          at the start of the PhD/Master’s project so that the candidate/student can appropriately
+they will continue to bear final responsibility.                                                  plan for data archiving upon completion of the project. The supervisor is ultimately responsible
+                                                                                                  for ensuring the completeness and appropriate storage of the archiving package.\
+                                                                                                  &nbsp;
+
+&bull; In collaborative projects a specific plan to clarify responsibilities related to the       &bull; FGB complies with the requirement. Specific plans for collaborative projects should be drawn
+data after the project might be required. The person who coordinates the research programme       up to confirm and document the responsibilities for archiving. This is also discussed further in
+thatcovers the publication (which, depending on the faculty in question, could be a professor,    [section 2.1.1](#section2.1.1) subsection 4 regarding data 
+head of programme or head of department) is ultimately responsible.\                              that is not in the possession of FGB researchers.
+&nbsp;
+
+&bull; Adherence to the guideline will be discussed in performance and appraisal interviews.       &bull; FGB complies with this requirement
+Formal final responsibility lies with the dean.\
+&nbsp;
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+</div>   
+   
+                 
+<div id="section2.4">
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2.4 Who has access to the publication package?                                               
+
+------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------
+Publication packages should be accessible by more than one researcher. The first author will      FGB complies with this requirement, with some additional considerations.\
+have reading rights, but no right to delete or change versions. The first author will have        \
+writing rights for adding new versions. If a faculty has appointed a ‘co-pilot’ to check the      When data are archived for purposes other than in relation to a research publication
+analysis or a data steward to consider data management compliance, they will also be assigned     (see [section 1.1](#section1.1)), the lead researcher for the project should have reading
+reading rights. The faculty board can assign reading rights to a specific official to prepare     rights to the archiving package and they should ensure that at least one other
+for audits of publication packages on its behalf, for example, the coordinator of a research      person has reading rights.\
+programme or a member of an academic integrity committee. After publication, academic peers       \
+should be granted access to the publication package if they make a reasonable request to          In all cases, there should be a plan in place to ensure that access to the archiving package
+verify or examine the published research results in the context of academic debate.               can be maintained even if those with reading rights no longer work at FGB. The department
+                                                                                                  heads are ultimately responsible for ensuring the continuity and maintenance of these reading
+                                                                                                  rights. Department heads do not need to have reading rights themselves and can instead
+                                                                                                  delegate that reading rights must also be given to the direct supervisor of the researcher
+                                                                                                  submitting the archiving package. Departments should also determine how best to handle
+                                                                                                  the increasing number of data access requests, such as with a Data Access Committee,
+                                                                                                  in cases where there isn’t already a solution in place.\
+                                                                                                  \
+                                                                                                  FGB has not appointed co-pilots or official auditors at this time. This may be developed
+                                                                                                  in the future.\
+                                                                                                  &nbsp;
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+</div>               
+
+
+<div id="section3.1">
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3.1 Minimum storage period                                            
+
+------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------
+For the retention period regarding research, a distinction is made between research data (and     FGB agrees with the distinction between data and the supporting materials (documentation, metadata,
+software) and the documentation of the process that has been carried out.\                        research code/software etc.) with regards to the storage period. Due to the variety of research
+\                                                                                                 conducted at FGB, further detail on these storage periods is required.\
+Publication packages must be centrally stored on a secure faculty server facility for at least    With regards to data: \
+10 years after the publication appeared. In the event of research (or secondary research) data    \
+including personal data, the principle of data minimization (conform GDPR regulation) must be     &bull;	Specific information on the handling of personal data is discussed in [section 3.2](#section3.2)\
+applied as soon as possible. The Netherlands Code of Conduct for Research Integrity offers        \
+options to deviate from the retention period of 10 years. However, in that case the raw and       &bull; For research not subject to the WMO act or GCP guidelines, an archiving package created
+processed data must be saved for a period suitable for the discipline and the methodology.        in relation to a research publication must be archived for a minimum of 10 years from the
+The following could be taken into consideration when deciding on the retention period:\           date of publication (in accordance with VU and FGB RDM policies). If an archiving package is
+\                                                                                                 created upon completion of a research project, but data were not used in any publications
+&bull; the nature (and especially the privacy sensitivity) of the data;\                          (see [section 1.1](#section1.1)), the lead researcher responsible
+\                                                                                                 for the archiving package should determine an appropriate duration for archiving. If raw data
+&bull; the need for source material to substantiate the results;\                                 are archived upon completion of data collection to ensure the secure storage of raw 
+\                                                                                                 data (see [section 1.1](#section1.1)), the archiving duration depends on what is subsequently done with
+&bull; the applied scientific value of the research results;\                                     the data. The raw data should, of course, be maintained during the entirety of the 
+\                                                                                                 research project and if the data are used in any research publications, then the archiving
+&bull; the effort to make the data available for re-use;\                                         duration should be a minimum of 10 years from the date that the most recent research article was published.\
+\                                                                                                 \
+&bull; the efforts of long-term preservation;\                                                    &bull; For research subject to the WMO act, but not the GCP guidelines, the archiving package
+\                                                                                                 must be archived for a minimum of 15 years from the last date a subject in the study was treated.\
+&bull; the usefulness of source material for follow-up research.\                                 __NB__: Regarding archiving packages created for a research publication, if the 15-year
+\                                                                                                 archiving period will expire before 10 years have elapsed from the date the article was
+The retention period of data management plans and data management protocols of projects,          published, then the storage duration of 10 years from the date of publication takes precedence.
+faculties and research institutes is at least 10 years, but not shorter than the retention        \
+period of the dataset[^9]. These documents primarily relate to policy making,                     &bull; For research subject to the GCP-guidelines, the archiving package must be stored for a
+execution and financing of research, and quality assessment. Also included here are the           minimum of 20 years if the Directive 2001/20 EC applies or 25 years if the Regulation 536/2014
+(legal) advice of ethical committees and evaluations and further agreements with                  applies. If uncertain about which legislation applies, contact research.data.fgb@vu.nl for advice.\
+research partners.                                                                                __NB__: For archiving packages created for a research publication, if the 20 or 25-year 
+                                                                                                  archiving period will expire before 10 years have elapsed from the date the article was published,
+                                                                                                  then the storage duration of 10 years from the date of publication takes precedence.\
+                                                                                                  \
+                                                                                                  &bull; In some cases, data are reused for new purposes and the results are published in a new 
+                                                                                                  research article. In such a case, the storage duration is extended for another 10 years from
+                                                                                                  the publication date of the new research article.\
+                                                                                                  \
+                                                                                                  &bull; Once the storage term is complete and if there is no intention to
+                                                                                                  [publish](../definitions/Definitions.html#publishingdata){target="_blank"}
+                                                                                                  the research data, the research data should be destroyed, as well as any personal data linked
+                                                                                                  to the research data (see [section 3.2](#section3.2))\
+                                                                                                  \
+                                                                                                  With regards to supporting materials/documentation:\
+                                                                                                  \
+                                                                                                  &bull; If there are no intellectual property restrictions on these materials, and it has been
+                                                                                                  confirmed that no personal data from research participants has been included in any of the
+                                                                                                  documentation or software, these supporting materials can be archived indefinitely. Even after
+                                                                                                  the data are no longer available, the persistent storage of the supporting materials supports 
+                                                                                                  transparency and research integrity, as well as allowing other researchers to conduct 
+                                                                                                  replication studies based on the earlier work.\
+                                                                                                  \
+                                                                                                  Lastly, if FGB researchers are confident that the data that will be included in their 
+                                                                                                  archiving package are anonymous and/or not subject to intellectual property restrictions, 
+                                                                                                  these data may be archived indefinitely.  FGB researchers must discuss these issues with 
+                                                                                                  relevant experts at FGB (research.data.fgb@vu.nl) and VU (rdm@vu.nl) before assuming that the
+                                                                                                  archiving package may be stored indefinitely. Further guidance can also be found on this 
+                                                                                                  [page](../../security/PrivacyRisks.html){target="_blank"}
+                                                                                                  about privacy risks and anonymous data
+                                                                                                  and this [de-identification guide](../../security/Deidentification.html){target="_blank"}.\
+                                                                                                  &nbsp;
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+</div> 
+  
+<div id="section3.2">
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3.2 Data minimization and retention                                           
+
+------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------
+Data that can be traced back to individuals may in principle not be linkable to research data     FGB complies with this requirement with some deviations and further specifications.\
+when this is no longer necessary for the purposes of the study. These personal data must be       \
+destroyed once they are no longer necessary for the purpose for which they were collected.        &bull; For the majority of non-WMO research at FGB, 
+Some specific studies may require retention of data that can be traced back to individuals,       [directly identifying](../definitions/Definitions.html#directID){target="_blank"}
+for example for the purpose of follow-up research or for longitudinal studies. Technical and      personal data is collected via informed consent data and this information is linked to the research
+organizational measures to protect the rights of data subjects need to be documented and will     data via a participant identifier. Such informed consent data needs to be stored in a highly
+preferably be standardized for specific research scenarios. Protecting the right of data          secure archive and kept separate, where possible, from the research data
+subjects is particularly important for raw data that cannot be de-identified (for example,        (see [section 3.3](#section3.3) of the national guidelines). 
+video- and audio data).\                                                                          If there is no need to be able to re-identify any participant once the data have been
+\                                                                                                 archived, then the link between the informed consent data and research data can be deleted.
+One complicating factor lies in the wish to retain personal data for the purpose of reviewing     This is because consent cannot be revoked for data that has been archived, so the link
+the integrity of the research itself, for example to check whether the participants did indeed    necessary to re-identify subjects is not required. However, the informed consent data 
+participate in the research. If such integrity reviews are regarded as part of the research       should, still be archived for the same term as the research data because the GDPR requires 
+whose integrity is reviewed and considered necessary in the field it is allowed to store data     that researchers must be able to demonstrate that consent was obtained legally (i.e. the
+that can be traced back to individuals for this purpose. When research is published, such         existence of the completed consent forms is sufficient; they do not need to be linked to the
+personal data must be stored separately; not in the publication package. As an alternative        data for this purpose).\ 
+option, researchers, faculties and research institutes can develop a protocol to monitor the      \
+integrity of the research before archiving, after which the personal data can be deleted. It is   There are, however, some situations that deviate from the information above:\
+not necessary to store the personal data for the sole purpose of enabling participants to         \
+exercise their rights under the GDPR.\                                                            &bull; If the research project is subject to the WMO law and/or GCP guidelines, the link between
+\                                                                                                 personal data and research data must be maintained for the entire storage term. This 
+The head of the relevant department or research program is responsible for monitoring the         is because it is required that the data about a research subject can be re-identified for
+destruction of the research data on the required date. Official final responsibility lies         safety purposes for at least 15 years after treatment (for the WMO law) or 20-25 years
+with the dean.                                                                                    after treatment (for the GCP guidelines)\
+                                                                                                  \
+                                                                                                  &bull; If the researcher wishes to publish and/or reuse the research data, and the research
+                                                                                                  data cannot be fully anonymized, consent from the research subjects must be obtained in order
+                                                                                                  to share and reuse the data for new purposes. This means that the link between the personal
+                                                                                                  informed consent data and the research data must be maintained as long as the data are in
+                                                                                                  use in order to demonstrate that the research subjects consented to data publication and to
+                                                                                                  allow subjects the right to revoke consent to any future reuse.\
+                                                                                                  \
+                                                                                                  &bull; In some forms of research, consent can be obtained without collecting personal data; 
+                                                                                                  this is applicable to research where the directly identifying information that would be 
+                                                                                                  collected on the consent form is more identifying than any of the research data that would be
+                                                                                                  collected. In such a situation, obtaining a name and signature just for consent purposes
+                                                                                                  would be in conflict with data minimization efforts. There is no requirement under the GDPR
+                                                                                                  law to collect a name or signature on a consent form, only that there is an indication of
+                                                                                                  active approval, such as a box that has been ticked by the subject as an indicator of
+                                                                                                  consent. In such a case, consent data should still be maintained for as long as the
+                                                                                                  research data are archived to demonstrate that consent was legally obtained, however this consent
+                                                                                                  data does not need to be stored separately in a highly secure archive because no personal data
+                                                                                                  is present.\
+                                                                                                  &nbsp;
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+</div>    
+    
+<div id="section3.3">
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3.3 How are storage and archiving of research data arranged?                                          
+
+------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------
+&bull; The raw de-identified data must be saved on a faculty server that satisfies the relevant   FGB complies with these requirements, with some additional explanation and deviations:\
+requirements for data storage in terms of security, robustness and automatic back-up facilities.  \
+The recommendation is to save the raw data in read-only format, before the data are made          &bull; Firstly, digital archiving storage is provided at a VU-level rather than at the level
+available for processing. Raw data stored in this way become fixed, which means that researchers  of FGB and there are different options available for different purposes. Paper archiving
+will no longer be able to modify them deliberately or by accident.                                is provided at the faculty level on a departmental basis. FGB researchers are expected to use
+                                                                                                  an archive that sufficiently protects their data based on the privacy & security risks posed
+                                                                                                  by the data, even after de-identification. The VU Library and FGB data stewards provide
+                                                                                                  support to FGB researchers in determining which archive to choose.\ 
+                                                                                                  The recommendation in the national guidelines to archive raw data in a read-only format before
+                                                                                                  they are made available for processing is essentially the same concept as archiving raw
+                                                                                                  data upon the completion of data collection (see the reasons for archiving in
+                                                                                                  [section 1.1](#section1.1)); the goal is to ensure that raw data are fixed which prevents tampering of
+                                                                                                  the data and therefore contributes to research integrity.
+                                                                                                  
+                                                                                                  
+&bull; All data that can be traced back to individuals must be stored on a second faculty server, &bull; FGB complies with this requirement where possible (see [section 3.2](#section3.2)). 
+which is physically separate from the first faculty server and thus from the raw data. If a       As discussed in [sections 1.3](#section1.3) and [2.1.1](#section2.1.1) subsection 4,
+key is required to link pseudonymized raw data to the personal data, this key must be stored      it is often impossible to fully de-identify raw data without irrevocably changing the
+on the second faculty server. This includes raw data that cannot be de-identified and must        content of that data. This means that the de-identified data still needs to be stored in an
+be stored, such as audio- and video data in its original format that cannot be transcribed.       archive with a higher level of security. Because the VU can only offer so many archiving options, this
+                                                                                                  means that the raw data that has been de-identified as much as possible and the
+                                                                                                  [directly identifying](../definitions/Definitions.html#directID){target="_blank"} personal data
+                                                                                                  may need to be stored in the same archive. FGB researchers can consider submitting two related 
+                                                                                                  archiving packages, one with the directly identifying personal data and one with everything else,
+                                                                                                  while ensuring that in the documentation for both archiving packages there is a cross-reference
+                                                                                                  to the location of the other archiving package. FGB researchers can also consider encrypting 
+                                                                                                  the directly identifying personal data, however they should discuss this with an IT security
+                                                                                                  expert at the VU first to determine how to manage the encryption and de-encryption
+                                                                                                  of the archived data during the entire archiving term. 
+
+&bull; External storage of raw data, for example in national or international data archives       &bull; If data are archived externally in a national or international archive, FGB does not require that
+such as DANS – which makes the data publicly available, retrievable and citable – is              the data also be archived locally at the VU. FGB only requires that there is sufficient information
+recommended and in some cases required, for example when NWO requires this in a contract.         documented in the archiving package about where the externally archived data can be found
+However, this does not relieve researchers of their duty to store the data internally on          (see [sections 2.1](#section2.1), [2.1.1](#section2.1.1) subsection 4 and [2.3](#section2.3)).
+the first faculty server.                                                                         FGB researchers are expected to check that they are allowed to archive data externally, mainly
+                                                                                                  with regards to privacy concerns. 
+
+&bull; Individual storage on an own hard drive, USB stick or cloud solution such as Dropbox does  &bull; FGB agrees that individual storage is insufficient for archiving purposes. FGB researchers 
+not suffice. Data that are collected within the framework of PhD[^10]  or postdoc research must   are required to use an archive offered by the VU or, where appropriate, an external archive which,
+be archived in such a way that continuity is ensured when the PhD candidate or postdoc in         ideally, should have CoreTrustSeal certification and be, where possible, discipline-specific.  
+question leaves the faculty. 
+
+&bull; These storage requirements do not apply to sections of raw data that are managed by        &bull; All FGB researchers, not just PhD candidates or postdocs, are expected to maintain a level of
+external organizations. Researchers who use data from external organizations must verify that     documentation and file management that will ensure that another researcher can assume the
+the organization in question stores its data in accordance with a protocol that satisfies the     original researcher’s tasks, regardless of whether the original researcher is employed
+requirements of these faculty guidelines.                                                         temporarily. To meet this requirement, FGB researchers are expected to prepare their research
+                                                                                                  data management plans with archiving in mind. This means that all of the materials that are
+                                                                                                  required for the archiving package are prepared and updated throughout the research process and 
+                                                                                                  that these materials are maintained in VU approved storage options with regular back-ups to
+                                                                                                  avoid data loss.\
+                                                                                                  &nbsp;
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+</div>                  
+    
+         
+<div id="section4">
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4. Faculty-specific policy                                           
+
+------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------
+Individual faculties can choose to add the following rules to the above-mentioned guidelines      Of the rules listed, the FGB will apply the following:
+concerning publication packages and storage of raw data:                                         
+                                                                                                 
+1.	Faculties may decide that the guidelines also apply to data collected within the framework    1.	Bachelor’s and one-year Master’s students should prepare informal archiving packages, whenever
+of one-year master’s and bachelor’s research projects. The supervisor can then be appointed        possible. See [section 1.3](#section1.3) for details.
+as the responsible party.
+
+2.	Faculties may decide to extend these guidelines to include storage of all data, including     2.	The FGB recommends, but does not require, that all research data be archived. 
+research that has not been published. This must be set out in a data management plan.             See [section 1.1](#section1.1) for details.
+
+3.	Faculties may define rules concerning ownership of data, for example that storage of data     3.	Data ownership is determined at the start of a project and defined in the research data management
+in a publication package will not result in a change of ownership.                                plan. Within FGB, data archiving will not change this pre-defined ownership. If the first author 
+                                                                                                  archives a dataset that is owned by another institution, they must include this ownership 
+                                                                                                  information in documentation of the archiving package.
+                                                                                                  
+4.	Faculties may decide to make random inspections to check the existence and quality of         4. TBD
+publication packages.                                                                             
+
+5.	Faculties may use different time periods and, for example, indicate that a publication        5.	 FGB researchers are expected to prepare and store the archiving package at the time of acceptance
+package must be archived upon acceptance (rather than publication) of a manuscript.               of the manuscript. See [section 2.2](#section2.2) for details.
+
+6.	Faculties may decide that each manuscript must state where the data are stored (a data        6.	FGB researchers are expected to state in the research publication manuscript where data
+statement) and which roles the various authors played.                                            are archived and who to contact regarding questions about the data. 
+
+                                                                                                  Finally, all VU researchers are required to register a project-level description (also known as
+                                                                                                  project-level metadata) about their archived datasets in PURE, OSF, DataverseNL or YODA.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+</div>                       
+
+
+<!--Footnotes-->
+[^1]: For specific regulation regarding the ethical, legal and social implications of health-related research, researchers can consult the ELSI Servicedesk.
+[^2]: Originally, around 2017 and 2018, this document was the result of the efforts of a committee established to this end by the DSW, consisting of Marc van Veldhoven (UvT, later replaced by Jelte Wicherts), Rob Eisinga (RU), Rosanne Janssen (UM) and Peter van der Heijden (UU). This latest version has been edited by the DSW committee Scientific Integrity, data storage and reproducibility, consisting of Peter van der Heijden (UU), Sander Nieuwenhuis (UL), Jelte Wicherts (UvT) and Esther Hoorn (RUG), using suggestions of a group of qualitative researchers of the UL (Wolfgang Kaltenbrunner, Marianne Maeckelbergh, Joop van Holsteijn and others).
+[^3]: https://www.ema.europa.eu/documents/scientific-guideline/draft-guideline-good-clinical-practice-compliance-relation-trial-master-file-paper/electronic-content-management-archiving-audit-inspection-clinical-trials_en.pdf
+[^4]: https://ec.europa.eu/health/sites/health/files/files/eudralex/vol-1/reg_2014_536/reg_2014_536_en.pdf
+[^5]: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32005L0028&from=NL
+[^6]: https://ec.europa.eu/health/sites/health/files/files/eudralex/vol-1/dir_2001_20/dir_2001_20_en.pdf
+[^7]: Netherlands Code of Conduct for Research Integrity, Standards for good research practices. https://doi.org/10.17026/dans- 2cj-nvwu
+[^8]: Netherlands Code of Conduct for Research Integrity, Standards for good research practices, 3.2 Design, 12 B.  https://doi.org/10.17026/dans-2cj-nvwu
+[^9]: https://www.nationaalarchief.nl/archiveren/kennisbank/selectielijst-universiteiten-en-universitair-medische-centra-2020 [accessed March 18, 2021]
+[^10]: Each individual section of a PhD thesis (or the thesis as a whole) officially counts as a publication, even if it has not been published as such in a journal.
+     
+
+
+ 
+
+
+   
+
+
+
+
+
+

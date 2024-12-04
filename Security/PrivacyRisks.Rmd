@@ -1,0 +1,317 @@
+---
+title: "FGB Security Tips: Assessing Privacy Risks"
+date: "2024-05-27; Version 1.6"
+output: 
+  html_document:
+    theme: cerulean
+    includes: 
+      after_body: ../footer.html
+---
+
+
+<style type="text/css">
+
+/* change font for whole text so that it's in line with house style. For webpages that is Roboto  */
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.main-container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5%;
+  padding-bottom: 15%;
+  padding-right: 10%;
+  padding-left: 10%;
+}
+
+h1.title {
+  font-size: 28px;
+  text-align: center;
+}
+
+h4.date { /* this is to affect the size of the date text in the YAML when it prints in html  */
+  font-size: 20px;
+  text-align: center;
+}
+
+p {
+  font-size: 18px;
+}
+
+li {
+  font-size: 18px;
+  margin: 5px;
+}
+
+/* improve contrast for all a-tags and headers for accessibility */
+
+a {
+  color: #157bb7;
+}
+
+h1, h2, h3, h4 {
+  color: #105d89;
+}
+
+table {
+  width: 100%;
+}
+
+table, td { 
+  padding: 10px;
+  vertical-align: top;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+}
+
+#red {
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-width: 3px;
+  border-color: #ed0000;
+}
+
+#orange {
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-width: 3px;
+  border-color: #ff9000;
+}
+
+#yellow {
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-width: 3px;
+  border-color: #ffDf00;
+}
+
+#green {
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-width: 3px;
+  border-color: #379e00;
+}
+
+#blue {
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-width: 3px;
+  border-color: #6e99c4;
+}
+
+/* changed color of footnotes per 2022-11-02 from #989898 to #737373 to improve accesibility (contrast of color) */
+
+.footnotes {
+  color: #737373;
+}
+
+#confidtable {
+  width: 80%;
+  margin-left: 5%;
+}
+
+#confidtable th {
+  text-align: left;
+}
+
+
+
+#confidtable th  {
+  border-width: 3px;
+}
+
+/* to change the color from the second column onwards select th + th. This will change everything from the second column onwards. So then for the third column do th + th + th which will start the selection from the third column and to select the last column just select th:last-child */
+
+#confidtable th + th {
+  border-color: #ed0000;
+}
+
+#confidtable th + th + th {
+  border-color: #ff9000;
+}
+
+#confidtable th + th + th + th {
+  border-color: #ffDf00;
+}
+
+
+#confidtable th:last-child {
+  border-color: #6e99c4;
+}
+
+
+
+
+</style>
+
+
+\ <!--this adds a space  -->
+
+Data about human beings are very rarely [anonymous](https://www.lcrdm.nl/files/lcrdm/2020-01/Anonymization%20-%20reference%20card%20for%20researchers.pdf){target="_blank"}. Even if the data do not contain information such as name or address, the data may still pose privacy risks to the people they are about, especially if it is possible to re-identify individuals within the data you are using for your research.  
+
+The table below can be used to determine privacy risk categories for different types of data. There will always be grey areas when looking at privacy risk, particularly when considering the [vulnerability](#vulnerability) of the research subjects, the [sensitivity](#sensitivity) of the information and the [re-identifiability of the data](#reID). The guidance below cannot capture every possible situation, so, like all good things, think of this advice as a spectrum. If in doubt, opt for a higher risk category. Also, not all of the data in your research will have the same level of privacy risk and the privacy risks for each type of data may change as you clean, recode and modify the data from a [raw](../rdm/definitions/Definitions.html#rawdata){target="_blank"} to [processed](.., /rdm/definitions/Definitions.html#processeddata){target="_blank"} form. You should assess the risks for each separate [data asset](../rdm/definitions/Definitions.html#dataasset){target="_blank"} and also consider how each data asset's risk will change over the course of the [research life cycle](https://libguides.vu.nl/rdm/overview){target="_blank"}. If some data are higher risk than others, you can store these data separately in a more secure storage option.
+
+Once you've determined the privacy risk category for each data asset, you can use these categories to inform your choices about how your data can be [de-identified](Deidentification.html){target="_blank"}, [safely used by students/interns](SecurityForStudents.html){target="_blank"}, [safely transported physically](PhysicalTransport.html){target="_blank"}, [securely transferred digitally](DigitalTransfer.html){target="_blank"}, and [securely stored](Storage.html){target="_blank"}.
+
+--------------------
+  
+## {.tabset .tabset-fade}
+
+
+### Red Data {#red}
+
+  
+<!-- &nbsp; can be used to make the columns wider. it's a blank space  &bull; is the html code for a bullet point-->
+
+| | |
+| --- | --------------- |
+| _Privacy Risk_ | Very high-risk |
+| _Description_ | &bull; [Directly identifying](#reID) data from [vulnerable people](#vulnerability) about [sensitive topics](#sensitivity) |
+| _Impact of a Breach_ | &bull; Severity of harm to research subjects and/or damage to the reputation of VU Amsterdam would be very high <br>&bull;	The likelihood of harm or damages after a breach is very high |
+| _Examples_ | &bull; Video interviews with children talking about abuse <br>&bull; Raw transcripts of interviews with refugees talking about their home country <br>&bull;	Open text responses (e.g. diary-type feedback) from patients with mental or physical conditions/disabilities <br>&bull;	Open text responses or detailed interviews with employees describing their satisfaction with their employer <br>&bull;	Raw neuroimages (not de-faced) of vulnerable subjects with serious medical conditions <br>&bull;	Genetic data from vulnerable subjects that indicates a risk for disease or disorders  |
+  
+### Orange Data {#orange}
+  
+| | |
+| --- | --------------- |
+| _Privacy Risk_ | High-risk |
+| _Description_ | &bull; [Directly identifying](#reID) data from [non-vulnerable people](#vulnerability) about [non-sensitive topics](#sensitivity) <br> **OR**<br>&bull; [Directly identifying](#reID) data from [vulnerable people](#vulnerability) about [non-sensitive topics](#sensitivity)  <br>**OR**<br>&bull; [Directly identifying](#reID) data from [non-vulnerable people](#vulnerability) about [sensitive topics](#sensitivity)  <br>**OR**<br>&bull; Data from [vulnerable people](#vulnerability) about [sensitive topics](#sensitivity) that has been made slightly [less identifiable](#reID) by removing easily identifying information (e.g. name, contact information) |
+| _Impact of a Breach_ | &bull;	Severity of harm to research subjects and/or damage to the reputation of VU Amsterdam would be high <br>&bull;	The likelihood of harm or damages after a breach is moderate to high |
+| _Examples_ | &bull;	Key files containing names and contact information of research subjects<br>&bull; Data containing date of birth and 6-digit postal code of research subjects <br>&bull; Video observations of children playing<br>&bull;	Video observations of team-building activities<br>&bull;	Raw neuroimages (not de-faced) of non-vulnerable subjects <br>&bull;	Raw questionnaire data about sensitive topics<br>&bull;	Raw questionnaire data from vulnerable subjects containing detailed demographic information<br>&bull;	Genetic data from non-vulnerable subjects |
+
+
+
+### Yellow Data {#yellow}
+  
+| | |
+| --- | --------------- |
+| _Privacy Risk_ | Medium to high risk |
+| _Description_ | &bull;	Data from [non-vulnerable people](#vulnerability) about [non-sensitive topics](#sensitivity) that been made slightly [less identifiable](#reID) by removing easily identifying information (e.g. name, contact information) <br> **OR**<br>&bull; Data from [vulnerable people](#vulnerability) and/or about [sensitive topics](#sensitivity) that has undergone additional [de-identification steps](Deidentification.html){target="_blank"} beyond the removal of easily identifying information (e.g. name, contact information) |
+| _Impact of a Breach_ | &bull;	Severity of harm to research subjects and/or damage to the reputation of VU Amsterdam would be moderate to high <br>&bull; The likelihood of harms or damages after a breach is moderate to low |
+| _Examples_ | &bull;	IP- and MAC-addresses of research subjects <br>&bull; Raw questionnaire data from non-vulnerable subjects containing demographic information<br>&bull;	Questionnaire data about sensitive topics and/or vulnerable people that has been processed to make re-identification more difficult<br>&bull;	Video recordings with faces blurred and voices modified<br>&bull;	Transcripts of interviews in which the identifying information is replaced with pseudonyms<br>&bull;	Repeated physical measurements on vulnerable subjects that include the dates and times the measurements occurred<br>&bull;	De-faced neuroimages of vulnerable people<br>&bull;	Extensive kinematic measurements that are used to identify sensitive information such as movement disorders |
+
+### Green Data {#green}
+  
+| | |
+| --- | --------------- |
+| _Privacy Risk_ | Medium to low risk |
+| _Description_ | &bull;	Data from [non-vulnerable people](#vulnerability) about [non-sensitive topics](#sensitivity) that has undergone additional [de-identification steps](Deidentification.html){target="_blank"} beyond the removal of easily identifying information (e.g. name, contact information) |
+| _Impact of a Breach_ | &bull;	Severity and likelihood of harm to research subjects after a breach are low<br>&bull;	Damage to the reputation of VU Amsterdam is still possible, but likelihood is lower and the impact would be less severe |
+| _Examples_ | &bull;	Data that contain a unique record for at least one research subject, e.g.:<br>&nbsp;&nbsp;-	De-faced neuroimages of non-vulnerable people<br>&nbsp;&nbsp;-	Extensive kinematic measurements from non-vulnerable subjects<br>&nbsp;&nbsp;-	Any other datasets that contain sufficient information to create a unique record for one or more research subjects |
+
+### Blue Data {#blue}
+  
+| | |
+| --- | --------------- |
+| _Privacy Risk_ | Little to no risk |
+| _Description_ | &bull;	Data that cannot be [re-identified](#reID) whatsoever, regardless of the [vulnerability](#vulnerability) of the research subjects or the [sensitivity](#sensitivity) of the information |
+| _Impact of a Breach_ | &bull;	Research subjects will suffer no direct[**](#NB) harm and VU Amsterdam will suffer no damages to its reputation |
+| _Examples_ | &bull;	Highly variable physical measurements, e.g. blood pressure, heart rate, blood glucose, body temperature<br>&bull;	Likert scale responses in a questionnaire<br>&bull;	Coded qualitative data<br>&bull;	Summary statistics <br><br>**NB**: If your data can still be linked to identifying information (e.g. through participant identifiers that link to a separate [key file](../rdm/definitions/Definitions.html#keyfile){target="_blank"}), the data are not anonymous and therefore not "blue". Such data would be "green" or "yellow" depending on the sensitivity of the information and vulnerability of the research subjects. If it is possible _and_ appropriate to delete this last link to the identifying information, then the data can be considered anonymous. |
+
+##### {#NB}
+###### **NB: Although research subjects will not be directly harmed, the conclusions drawn from research results or the misuse of published research software can impact the wider population to which the research subjects belong. Such ethical considerations should be discussed with the [FGB Scientific and Ethical Review Board](https://vu.nl/en/about-vu/faculties/faculty-of-behavioural-and-movement-sciences/more-about/faculty-committees){target="_blank"}.
+
+
+##
+
+\
+
+
+
+### Confidentiality Risk versus Privacy Risk {#confidentiality}
+
+Confidentiality and privacy overlap, however, confidentiality is about how a data breach would impact our institution while privacy considers how a data breach would impact our research subjects. Confidentiality concerns have been taken into consideration in the guidance above so that the privacy risks you determine can also be viewed as confidentiality risks.
+
+If your data are not about human subjects, they may still need to be kept [confidential](../rdm/definitions/Definitions.html#confidentialdata){target="_blank"}, for example, when working with business secrets or intellectual property. If you are working with a third party, especially a business, they may require you to keep their data confidential. Below are some examples of different confidentiality risks for non-human data:
+
+  
+
+<div id="confidtable">
+
+| | Red Data | Orange Data | Yellow Data | Blue Data* |
+| -------- | ----------- | ----------- | ----------- | ----------- | 
+| _Confidentiality Risk_ | Very high-risk | High-risk | Medium-risk | Low-risk | 
+| _Examples_ |&bull; Data that are classified as "secret" | &bull; Commercially sensitive data <br/>&bull; Politically sensitive data <br/>&bull; Data subject to non-disclosure agreements | &bull; Patents & other intellectual property <br/> &bull; AI algorithms that could benefit other countries <br/> &bull; Unpublished research output with novel results <br/> &bull; Internal procedures and policies | &bull; Data that can be publicly disclosed |
+  
+</div>
+
+* Green data aren't listed here because the primary distinction between Green and Blue _privacy_ risks is that Green data are still technically personal data while Blue data are anonymous or anonymized data. There isn't a comparable category to Green data when assessing the confidentiality risks of non-personal data, therefore low confidentiality risk data should be handled as Blue data. Be aware that although Blue data can be publicly disclosed, you should assess, when publishing these data, whether there should be any limitations on how these data are reused. Even publicly available data can have limits placed on how they are reused by applying [restrictive licenses](https://creativecommons.org/about/cclicenses/){target="_blank"}, such as those that don't allow reuse for commercial purposes. More information on data licensing is found [here](https://dmeg.cessda.eu/Data-Management-Expert-Guide/6.-Archive-Publish/Publishing-with-CESSDA-archives/Licensing-your-data){target="_blank"}.
+
+--------------------
+
+### Important Factors in Privacy Risk
+
+\
+
+# {#vulnerability}
+1. **The vulnerability of the research subjects:** 
+
+* Vulnerable research subjects have an additional risk of harm (socially, physically, emotionally, financially) if their personal information is made public. The greater the vulnerability of the research subjects, the greater the potential for serious harm.
+
+* Vulnerable research subjects include, but are not limited to: 
+  * children
+  * people who identify as LGBTQIA2S+
+  * refugees
+  * ethnic or religious minorities
+
+* The vulnerability of the research subjects can also depend on the context of the research, e.g. employees in organizational psychology research; students in learning analytics research. These contextual risks can also compound the risks for research subjects with other "typical" vulnerability characteristics, e.g. employees who are immigrants.
+
+\
+
+# {#sensitivity}
+2. **The sensitivity of the information being used:** 
+
+* Sensitive data include "special" data types that receive extra legal attention under the [General Data Protection Regulation (GDPR)](https://gdpr-info.eu/art-9-gdpr/){target="_blank"}:
+  * race or ethnicity 
+  * political opinions
+  * religious or philosophical beliefs,
+  * trade union membership
+  * genetic data
+  * biometric data (used to identify a person such as fingerprints or iris scans)
+  * health data
+  * data about sexuality or sexual activity
+  
+  ##### _Data that are defined as "special" by the GDPR may not necessarily be considered sensitive by the general public (e.g. normal physical measurements in average, healthy people are considered health data under the GDPR). If data are "special", there are additional [legal rules](https://assets.vu.nl/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/57e5d5e6-54dc-4904-be0d-0baaa6cc8b73/AVG%20Take-home%20points%20voor%20FGB%20onderzoekers%3F.pdf){target="_blank"} that must be followed, regardless of whether or not the data are deemed sensitive._
+
+* Sensitive data are **also** any information that is considered sensitive by the general public, such as:
+  * employment status 
+  * income and other financial data
+  * student grades and performance
+  * location data
+
+* Data may also be more sensitive because the research subjects are more vulnerable, e.g. a refugee describing their experiences in their home country.
+
+* Sensitive data that are not included in list of GDPR "special" data types do not need to meet the additional legal requirements for "special" data; however, *all* sensitive data should be treated with extra care because of the risk to the research subjects' privacy.
+
+\
+
+# {#reID}
+3. **The ease with which research subjects can be re-identified in the data:** 
+
+* Data are [personal data](../rdm/definitions/Definitions.html#personaldata){target="_blank"} if they are [directly identifying](../rdm/definitions/Definitions.html#directID){target="_blank"} or [indirectly identifiable](../rdm/definitions/Definitions.html#indirectID){target="_blank"}: 
+  + Directly identifying data are what most people think of as personal data: name, contact information, facial images etc. This information isn't _always_ directly identifying (e.g. a name like Jan Smit is very common in The Netherlands, so that name alone might not be enough to identify someone). Regardless, it's generally agreed that these types of data should be handled with extra care and that these types of data should be ideally stored separately from other research data. 
+  + Indirectly identifiable data can also be referred to as pseudonymous data (although there are some caveats[^1] to this). The ease with which a research subject could be *re-identified* from indirectly identifiable data depends on several factors such as: 
+    + How much information has been collected about each research subject? 
+    + How specific is the information about each research subject?
+    + How unique is the information about each research subject?
+      + _Unique information may be a result of one variable with extreme values or a combination of several variables that create a record that is distinct from all others in the dataset_
+    + Could the data be linked to publicly available information, such as social media profiles?
+  + It is *very* important to consider how easily indirectly identifiable data can be re-identified. If only the most cursory of efforts has been made to de-identify the data (most commonly, only removing names and contact information from the dataset), then the research subjects usually remain at risk of re-identification due to the wealth of other information present in the dataset. If someone tells you a dataset is "pseudonymous", it is also a good idea to assess how easily these data could be re-identified, since not everyone has the same idea about what pseudonymous means^[1](#fn1)^. 
+
+
+* As long as data are identifiable, they cannot be referred to as [anonymous data](https://www.lcrdm.nl/files/lcrdm/2020-01/Anonymization%20-%20reference%20card%20for%20researchers.pdf){target="_blank"} and the legal rules of the [GDPR](https://assets.vu.nl/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/57e5d5e6-54dc-4904-be0d-0baaa6cc8b73/AVG%20Take-home%20points%20voor%20FGB%20onderzoekers%3F.pdf){target="_blank"} must be followed. This means the GDPR applies to pseudonymous data.
+
+* Not all identifiable data pose the same level of privacy risk: oftentimes, raw data often pose higher privacy risks because of greater re-identifiability (e.g. video recordings), and therefore require additional data protection measures (such as [high security storage](Storage.html){target="_blank"}); as the data are cleaned, recoded and analysed they become less identifiable (e.g. coded interactions) and require fewer data protection measures. [De-identification](Deidentification.html){target="_blank"} is therefore an important part of data processing that can be used to protect the privacy of your research participants; the identifiability of the data is the only factor you can change since it's not possible to reduce the vulnerability of your research subjects or the sensitivity of your research topic.
+
+
+
+
+<!-- Footnotes -->
+
+# {#pseudonymization}
+
+[^1]: The legal definition of pseudonymization according to the [GDPR](https://gdpr-info.eu/art-4-gdpr/){target="_blank"} is quite strict. Essentially, according to the GDPR, pseudonymous data requires additional information for the data to be re-identified and if that additional information is deleted, the data become anonymous. In real life, the situation is more complicated. A dataset with no directly identifying data may still contain indirectly identifiable data (often demographic information) that can be used to single out unique records, which could then be used to re-identify people using publicly available information or based on context clues. You could [de-identify](Deidentification.html){target="_blank"} this dataset further and, if done correctly, you would ensure that the only way to re-identify the research subjects would be with an identification code and a key file. Both the former and latter versions of this dataset would be called "pseudonymized" by a layperson, but under the GDPR only the latter version is legally considered to be pseudonymized. The main takeaway from this is that even if someone says their data are pseudonymous, you should investigate to what extent the data have been pseudonymized: do they mean the GDPR's strict definition of pseudonymized or do they simply mean that the directly identifying data have been removed from the dataset?
+

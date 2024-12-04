@@ -1,0 +1,171 @@
+---
+title: "FGB Security Tips: Encryption"
+date: "2023-04-24; Version 1.6"
+output: 
+  html_document:
+    theme: cerulean
+    includes: 
+      after_body: ../footer.html
+    toc: true
+    toc_depth: 3
+    toc_float: 
+      collapsed: false
+      smooth_scroll: true
+---
+
+
+<style type="text/css">
+
+/* change font for whole text so that it's in line with house style. For webpages that is Roboto  */
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+#TOC {
+  left: 0%;
+  top: 0%;
+}
+
+div.tocify {
+  max-height: 100%;
+
+}
+
+/* if I don't want borders on the TOC and I don't want rounded edges I can call the following to .tocify
+  border-radius: 0;
+  border: none;
+*/
+
+
+.tocify ul, .tocify li {
+  line-height: 25px;
+}
+
+.tocify-header .tocify-item {
+  font-size: 1.2em;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 1.1em;
+}
+
+
+
+/* following two commands get the text of TOC to indent properly */
+
+.tocify-header {
+    text-indent: initial;
+}
+
+.tocify-subheader > .tocify-item {
+  text-indent: initial;
+  padding-left: 2em;
+}
+
+/* attempted to change highlight color on TOC, but nothing works; wanted to improve contrast for accessibility, but had no luck  */
+
+/* max-width refused to change below unless I included the !important tag next to it. Found answer on this stack exchange https://stackoverflow.com/questions/34906002/increase-width-of-entire-html-rmarkdown-output 
+Seems only to be an issue when using TOC; not required to use !important on pages without TOC */
+
+.main-container {
+  max-width: 100% !important;
+  padding-right: 5%;
+  padding-top: 5%;
+  padding-bottom: 10%;
+}
+h1.title {
+  font-size: 28px;
+  text-align: center;
+}
+
+h4.date { /* this is to affect the size of the date text in the YAML when it prints in html  */
+  font-size: 20px;
+  text-align: center;
+}
+
+/* improve contrast for all a-tags and headers for accessibility */
+
+a {
+  color: #157bb7;
+}
+
+h1, h2, h3, h4 {
+  color: #105d89;
+}
+
+p {
+  font-size: 18px;
+}
+
+li {
+  font-size: 18px;
+  margin: 5px;
+}
+
+</style>
+
+
+Encryption is a useful measure you can apply to protect your data, especially when other data protection methods, such as high-security [storage options](Storage.html){target="_blank"} or [de-identification](Deidentification.html){target="_blank"} of the data, are not feasible or when multiple protection methods should be applied to the data. The following provides a basic description of a few encryption methods and how they should be applied.
+
+### Full Disk Encryption {#fde}
+
+Full disk encryption (FDE) encrypts the hard drive of your computer. This is important because if your computer is lost or stolen the hard drive can be removed and the information on it can be accessed if it hasn't been encrypted, even if your computer is password-protected. Anyone working with research data that is stored, even temporarily, on their computer's local hard drive must ensure that FDE is active.
+
+*NB: If you are storing data on [YODA](../rdm/tools/YODAInstructionsFGB.html#protection){target="_blank"} you will likely access the data via [Cyberduck](https://yoda.vu.nl/site/getting-started/yoda-disk-cyberduck.html){target="_blank"}. This is a program which securely copies data from YODA to your computer. Because a local copy of the data is stored on your computer, you should always have FDE active when using YODA and Cyberduck.*
+
+*NB2: If your data are stored on [Research Drive](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012856){target="_blank"} or [SURF Drive](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012728){target="_blank"} and you use the [desktop client](https://wiki.surfnet.nl/display/RDRIVE/ownCloud+desktop+client){target="_blank"} to sync data to a local file on your computer, you should always have FDE active and you should take additional measures (measures for [Research Drive](Storage.html#preferred){target="_blank"} and measures for [SURFDrive](Storage.html#nonpreferred){target="_blank"}) to keep the data secure.*
+
+* Windows users: Windows OS generally uses Bitlocker for FDE. Bitlocker is installed on all VU green and orange work stations: if these VU computers are using Windows 10, then Bitlocker is already active. If a green or orange work station uses Windows 7, you need to activate Bitlocker yourself. If you have a VU red work station, ensure that you install and activate Bitlocker. If you have to activate Bitlocker yourself make sure to enable the recovery option. Once Bitlocker is activated, it will de-encrypt the hard drive every time you login to your computer and re-encrypt it when you lock your computer. Additional security options can be added on top of your password, if desired. Contact the [IT Service Desk](https://services.vu.nl){target="_blank"} for additional support if the information provided here is insufficient for your purposes. 
+
+* Mac users: MacBooks come with FileVault installed as FDE software. Simply go to _System Preferences > Security & Privacy_ to turn on FileVault. Make sure to keep the recovery key somewhere safe. Whenever you login to your MacBook it will de-encrypt the hard drive and the hard drive will be re-encrypted when you lock your MacBook.
+
+<!-- had to delete a line about additional info in VUnet on FDE because that page doens't exist after the migration and I couldn't find any other similar information on VUweb or AskIT -->
+
+
+### Filesystem-level Encryption {#fle}
+
+Filesystem-level encryption (FLE) encrypts individual files or entire folders. There are many different types of FLE software and unfortunately, VU IT does not provide support for these encryption tools. Many are free and fairly easy to use, however. Unfortunately, if you work on a green or orange workstation you will need to get help from the [IT Service Desk](https://services.vu.nl){target="_blank"} to install most of these encryption tools. Also, if the encrypted files and folders need to accessed on more than one computer, than every computer needs to have the software installed to be able to de-encrypt the files/folders.
+
+<div id="cryptomator"></div>
+
+* [Cryptomator](https://cryptomator.org/){target="_blank"}: Cryptomator is a fairly easy encryption tool to use that is available for Windows, MacOS, Linux, Android and iOS. With Cryptomator, you create "vaults" within which the files and folders that you want to protect are stored. It's your best option if you want to encrypt an entire folder that is stored on SURF Drive or Research Drive because it's built to work well with cloud-based storage. It also works well with Cyberduck, which is the primary program used to access data stored in YODA.
+  + _Follow this [guide](https://yoda.vu.nl/site/getting-started/yoda-disk-cryptomator.html){target="_blank"} to set up Cryptomator in Cyberduck if you are using Cyberduck to connect to YODA._
+    + _NB: When you unlock the Cryptomator vault via Cyberduck, the default setting is to save the de-encryption password. If you save this password, it will be saved in your operating system's keychain. You won't be prompted again on your device to enter the password unless you delete it from your keychain. It's still important to save the de-encryption password in a [password manager](SecurityBasics.html#passwords){target="_blank"} because you may need to share the password with a collaborator or it may get deleted from the keychain. **Be aware that if you opt to save the de-encryption password in your keychain it means that the vault is essentially always open when you are logged into your computer. Therefore, always lock your screen when you away from your computer and never share login credentials. Alternatively, you can simply never save the password and always enter it when you need to open the Cryptomator vault.**_
+  + _If you use SURFdrive or Research Drive, Cryptomator vaults can only be unlocked if you sync your encrypted files to the [SURF Drive](https://www.surf.nl/en/surfdrive-store-and-share-your-files-securely-in-the-cloud/downloads-for-surfdrive?dst=n1463){target="_blank"} or [Research Drive](https://wiki.surfnet.nl/display/RDRIVE/ownCloud+desktop+client){target="_blank"} desktop application._
+    + _If you are using Cryptomator with the SURF Drive or Research Drive desktop application, the changes you make to files or folders in your vault sometimes don't appear to sync with your Drive. If that happens, simply restart the SURF Drive or Research Drive desktop application._ 
+    + _If you share an encrypted vault with a user who does not have access to the SURF Drive or Research Drive desktop application, it isn't immediately apparent how to de-encrypt the vault. The other user will need to have Cryptomator installed. They will need to download the encrypted file you have shared with them, which appears as a .tar-file. They should store this .tar-file in an appropriate location on their computer and unzip it. They can then go to the Cryptomator app and select "Open an existing vault" by pressing the + sign. This will open a dialogue box that allows them to select the unzipped .tar-file from the location that they stored it in. They will see a file called "masterkey.cryptomator", which they should select. This will add the vault to their Cryptomator app and they can then open the vault with the password you've securely provided._
+
+ 
+<div id="veracrypt"></div>
+
+* [VeraCrypt](https://www.veracrypt.fr/en/Home.html){target="_blank"}: VeraCrypt is a bit more complex than Cryptomator to use, but it's also a good encryption tool if you need to encrypt several files simultaneously in one folder. It is available for Windows, MacOS and Linux. This [page](https://www.veracrypt.fr/en/Beginner%27s%20Tutorial.html){target="_blank"} provides extensive instructions on how to set up a basic "container" within which you will store all of the files and folders that need to be encrypted. It doesn't work quite as well with cloud-based storage, (SURF drive and Research Drive), so it should only be used on your local computer or for portable media which doesn't have built-in encryption capabilities.
+
+<div id="aescrypt"></div>
+
+* [AES Crypt](https://www.aescrypt.com/download/){target="_blank"}: AES Crypt can be used on Windows, MacOS and Linux systems; you can either install the easy to use graphical user interface (GUI) or if you are familiar with the command line you can install the console version. AES Crypt allows you to easily encrypt individual files by simply right-clicking on the file and choosing a password.  
+  + _AES Crypt will create a new copy of your file in an encrypted form, and everytime you de-encrypt that file, it will create a new un-encrypted copy. If you are only opening the file to view its contents, make sure to delete the unencrypted copy after use. If you update the unencrypted file, make sure to encrypt this updated version and overwrite the old encrypted file._ 
+  + _MacOS users don't automatically have the right-click option for encrypting and de-encrypting, and the use of the GUI-app isn't immediately clear. You can either install the "Extension to Enable Right-Clicking" so then when you right-click on a file, you see an option to encrypt or de-encrypt, or you just drag the file you want to encrypt/de-encrypt to the icon for the AES Crypt app. The app itself does not open._
+
+<div id="sevenzip"></div>
+
+* [7Zip Encryption](https://www.7-zip.org/){target="_blank"}: 7Zip encryption only runs on Windows; it may already be installed on your Windows workstation. You can technically access it from a MacOS or Linux workstation via the virtual Windows 10 green workspace, but this should only be done if none of the above options are feasible for you. 
+  + _When you want to create an encrypted file or folder, right-click, go to 7ZIP and select "Add to archive"; a dialogue box will open where you can enter a password; if you don't add a password, a 7ZIP file will still be created, but anyone will be able to open the file_
+  + _When you want to open an encrypted file or folder, right-click, go to 7ZIP and select "Extract file"; a dialogue box will open where you can enter the password.
+  + _As with AES Crypt, 7ZIP will create a new copy of your file in an encrypted form, and everytime you de-encrypt that file, it will create an un-encrypted copy. If you are only opening the file to view it's contents, make sure to delete the unencrypted copy after use. If you update the unencrypted file, make sure to encrypt this updated version and overwrite the old encrypted file._
+
+### Encrypted Portable Media {#portable}
+
+Information on encrypted portable media can be found in the guide on [Secure Physical Data Transport](PhysicalTransport.html#portable){target="_blank"}.
+
+### Passwords
+
+Set strong passwords when encrypting your media. For further information on strong passwords, review the [Security Basics](SecurityBasics.html#passwords){target="_blank"}.
+
+### Long-term encryption
+
+Encryption standards change over time because, as computers become more powerful, it becomes easier to break older encryption methods. If encrypted files will be stored for long periods of time, it is important to re-assess regularly whether the encryption used still meets current standards. Updates are necessary whenever an encryption standard has been cracked or has been shown to be vulnerable. The [IT Service Desk](https://services.vu.nl){target="_blank"} can help with this assessment.
+
+It is also important to make a plan for the long-term management of the de-encryption keys. This is particularly important when archived data need to be encrypted. Within FGB, data will usually be archived in [YODA](../rdm/tools/YODAInstructionsFGB.html){target="_blank"}. When you archive your data in YODA, your best plan is to contact the YODA administrators to give them a copy of the de-encryption key. Then print a copy of the de-encryption key and archive this in your department's paper archive.
+
+
