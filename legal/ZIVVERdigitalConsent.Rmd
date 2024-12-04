@@ -1,0 +1,108 @@
+---
+title: "Using ZIVVER for Digital Consent"
+date: "`r Sys.Date()`; Version 1.1"
+output: 
+  html_document:
+    theme: cerulean
+    includes: 
+      after_body: ../footer.html
+---
+
+<style type="text/css">
+
+/* change font for whole text so that it's in line with house style. For webpages that is Roboto  */
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.main-container {
+  max-width: 80%;
+  padding-right: 5%;
+  padding-top: 5%;
+  padding-bottom: 10%;
+}
+
+
+
+h1.title {
+  font-size: 28px;
+  text-align: center;
+}
+
+h4.date { /* this is to affect the size of the date text in the YAML when it prints in html  */
+  font-size: 20px;
+  text-align: center;
+}
+
+
+p {
+  font-size: 18px;
+}
+
+li {
+  font-size: 18px;
+  margin: 5px;
+}
+
+/* improve contrast for all a-tags and headers for accessibility */
+
+a {
+  color: #157bb7;
+}
+
+h1, h2, h3, h4 {
+  color: #105d89;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+#NB {
+  margin-left: 3em; /* this indents an entire paragraph */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-left: 3%;
+}
+
+#diffImg {
+  max-width: 100%;
+  height: auto;
+  margin-left: 0.5%;
+}
+
+</style>
+
+
+## Instructions for Windows users (or when using the Remote Windows 10 Desktop)
+
+Before starting, check if your Outlook desktop app has the ZIVVER plugin installed. There should be a tab for ZIVVER at the top of the application window if the plugin is already installed (this will be the case when using the Remote Desktop).<br>![Zivver Outlook Plugin](../Images/zivver_windows_plugin.png)<br> If you don't see a tab for ZIVVER, go to [download.vu.nl](https://download.vu.nl){target="_blank"} to install the plugin. If you are unable to install the plugin, simply follow the [directions for MacOS/Linux users](#maclinux) to use ZIVVER in the browser app.
+
+1. Open Outlook and start a new e-mail.
+2. On the top left of the new e-mail window (above the To: field), find and turn on the ZIVVER toggle.<br>![ZIVVER Outlook toggle off](../Images/zivver_windows_toggleoff.png)<br> There should now be a notification bar that says "Secure mailing is on".<br>![ZIVVER Outlook toggle on](../Images/zivver_windows_toggleon.png)<br> 
+3. Enter the e-mail of the recipient. Because the recipient will likely not have a VU e-mail address, you will see an exclamation mark show up on the top right side of the notification bar. Click on this icon.<br>![ZIVVER Outlook verification warning](../Images/zivver_windows_verifWrn.png)<br><div id="sameInstr"></div>
+4. A pop-up box will ask you to choose an identity verification method.<br>![ZIVVER Outlook verification method](../Images/zivver_windows_verifMeth.png)<br> The preferred option is to send an SMS to the recipient on their mobile phone. 
+   a. If the recipient does not have a mobile phone that can receive an SMS, select the Access Code option and enter a password. Do not share this password with the participant via e-mail; call them to provide them with the access code.
+   b. If you need to change the verification method or update the information used in the verification method, you can simply click on the icon of the person with the little shield next to them (to the right of the clock).
+5. Complete the e-mail text with all of the necessary information and attachments.
+   a. One option is to provide the information letter and consent form in the attachments. Alternatively, you can provide the information letter in the attachments and the text of the consent form in the body of the e-mail.
+   b. Make sure the content of your consent form and information letter confirm to the necessary ethical and legal requirements. See this [checklist](ICFChecklist.html){target="_blank"} for more information. 
+6. Once the e-mail is sent, the recipient will receive an e-mail from you with a link that takes them to the secure ZIVVER environment. This link will ask them to authenticate using the method selected in step 4. 
+7. Once authenticated, the recipient can read your e-mail and attachments, as well as reply within the online ZIVVER environment. 
+   a. If both the information letter and consent form are found in the attachments, the recipient can download and print these, indicate and sign their consent, and reupload the completed consent form to send back to you.
+   b. If the consent text is in the body of the e-mail, the recipient can copy this text into their reply, indicate that "yes, they do give consent", as well as their name and the date. (A [signature is not legally required by the GDPR](ICFChecklist.html#digital){target="_blank"})
+8. Save the response you receive as a PDF in an [appropriate storage location](../Security/Storage.html){target="_blank"}.
+
+
+## Instructions for MacOS/Linux users {#maclinux}
+
+1. Open the [ZIVVER online app](https://app.zivver.com/){target="_blank"} and login with your VU credentials
+    a. Simply enter your VU e-mail and the page will automatically redirect to the VU login page; make sure to replace your e-mail with your VU ID in the username field.
+2. Start a new e-mail by clicking on the pencil symbol at the bottom of the screen:<img src="../Images/zivver_mac_newMsg.png" alt="ZIVVER online new message" id="diffImg">
+3. Fill in the recipient's e-mail address and click on the warning that pops up.<br>![ZIVVER online recipient verification](../Images/zivver_mac_verifWrn.png)<br> 
+4. Follow [steps 4 through 8 above](#sameInstr).

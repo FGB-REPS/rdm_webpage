@@ -1,0 +1,223 @@
+---
+title: "GDPR Take-Home Points for FGB Researchers"
+date: "`r Sys.Date()`; Version 1.1"
+output: 
+  html_document:
+    theme: cerulean
+    toc: true
+    toc_depth: 4
+    toc_float: 
+      collapsed: false
+      smooth_scroll: true
+    includes: 
+      after_body: ../footer.html
+---
+
+
+<style type="text/css">
+
+/* change font for whole text so that it's in line with house style. For webpages that is Roboto  */
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+#TOC {
+  left: 0%;
+  top: 0%;
+}
+
+
+/* width of the TOC needs to be defined in div.tocify because it allows the width to be low when the TOC is next to the text, but let's it expand when it moves to above the text in a very small screen like on a mobile */
+
+div.tocify {
+  width: 15%;
+}
+
+.tocify ul, .tocify li {
+  line-height: 25px;
+}
+
+.tocify-header .tocify-item {
+  font-size: 1.2em;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 1.1em;
+}
+
+
+
+/* following two commands get the text of TOC to indent properly */
+
+.tocify-header {
+    text-indent: initial;
+}
+
+.tocify-subheader > .tocify-item {
+  text-indent: initial;
+  padding-left: 2em;
+}
+
+/* attempted to change highlight color on TOC, but nothing works; wanted to improve contrast for accessibility, but had no luck  */
+
+/* max-width refused to change below unless I included the !important tag next to it. Found answer on this stack exchange https://stackoverflow.com/questions/34906002/increase-width-of-entire-html-rmarkdown-output 
+Seems only to be an issue when using TOC; not required to use !important on pages without TOC */
+
+.main-container {
+  max-width: 100% !important;
+  padding-right: 5%;
+  padding-top: 5%;
+  padding-bottom: 10%;
+}
+
+
+
+h1.title {
+  font-size: 28px;
+  text-align: center;
+}
+
+h4.date { /* this is to affect the size of the date text in the YAML when it prints in html  */
+  font-size: 20px;
+  text-align: center;
+}
+
+
+p {
+  font-size: 18px;
+}
+
+li {
+  font-size: 18px;
+  margin: 5px;
+}
+
+/* improve contrast for all a-tags and headers for accessibility */
+
+a {
+  color: #157bb7;
+}
+
+h1, h2, h3, h4 {
+  color: #105d89;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+#NB {
+  margin-left: 3em; /* this indents an entire paragraph */
+}
+
+</style>
+
+
+\
+\
+
+The General Data Protection Regulation (GDPR) has important implications for FGB researchers. This page summarizes the main issues you will need to bear in mind while conducting research within the faculty.
+
+### When does the GDPR apply to my research? {#GDPRapplies}
+
+**Almost all** research conducted by FGB researchers is subject to the GDPR. The GDPR regulates the processing of personal data and in the legislation:
+
+  * Processing means basically all research activities being done with the data, namely:
+    + Collecting
+    + Adapting
+    + Storing
+    + Analysing
+    + Archiving
+    + Deletion
+  * Personal data means more than just an individual's name or contact information. This is explained further in this [definition](../rdm/definitions/Definitions.html#personaldata){target="_blank"} of personal data. Much of your research data *is* personal data.
+  
+The GDPR applies to all personal data processed by researchers who work for the VU, regardless of whether the processing takes place in the EU or not. If processing by a VU researcher takes place outside of the European Economic Area (EU + Iceland, Norway and Liechtenstein), there may also be local privacy laws that compliment or supersede the GDPR. 
+
+\
+
+### When does the GDPR _**not**_ apply to my research? {#noGDPRapplies}
+
+The GDPR doesn't apply when:
+
+* The data are about deceased individuals or "legal persons" (i.e. corporations)
+  + **NB**: If the data about deceased individuals can be linked to living individuals, the GDPR *does* apply
+* Data are anonymous, however, this is rarely the case for data from FGB. Only ["Blue" data (from the FGB Privacy Risks Categorization](../Security/PrivacyRisks.html){target="_blank"}) are anonymous
+* Data are not from human research subjects, such as animal studies
+
+\
+
+### What are the most important parts of the GDPR for me to know?
+
+#### Controllers and Processors {#GDPRroles}
+
+The GDPR defines various roles and in most research cases our institution, the Stichting VU, will be defined as the _data controller_: the party responsible for deciding the aims and purposes of the data processing. You decide these things as a researcher (i.e. your research question and how you plan to answer it), but the VU as your employer is the responsible party. There can also be more than one controller:
+
+1. If you're collaborating with another research institution on (some of) the same data, and both institutions are deciding on the aims and purposes of the research, both the VU and the other institution will be joint controllers. A joint controller agreement will need to be drawn up between the institutions (in addition to any collaboration or consortium agreements)
+2. If you're sharing data with another research institution that will use it independently to do research on that data, there won't be a joint controller relationship, but a data sharing agreement will need to be set up.
+
+
+Any organizations that are hired to process (some of) the data on your behalf are defined as _processors_. These parties do not determine the aims and purposes of any data processing, they only work with the data in a manner that has been defined for them by the data controller. Processors currently working for the VU include SURF, Qualtrics, Castor and Survalyzer, amongst others.
+
+\
+
+&#10146; **_Any time_ that a third party is going to be given access to (some of) your research data, you _must_ determine: the role of the third party; whether the necessary agreements with that third party are in place and; if agreements are not in place, which types of agreements need to be arranged. The [FGB Privacy Champion](mailto:research.data.fgb@vu.nl) can help you get started with the first two concerns mentioned and they will also connect you to the correct people in the VU Legal department should any new agreements need to be drawn up.**
+
+**NB: Additional contracts and legal advice may be necessary when working with/sharing data with third parties located outside of the EU.**
+
+\
+
+#### Legal Grounds for Processing {#grounds}
+
+The primary legal ground for data processing in research is informed consent. More information on how to carry out informed consent in a way that is in-line with the GDPR can be found in [this checklist](ICFChecklist.html){target="_blank"}.
+
+<div id="LegInt"></div>
+"Legitimate interests" as a legal ground for data processing is also an option in cases where informed consent is not feasible. _**However**_ the rules for using this option are quite strict, especially if your data fall into the [special category](#special). If you are considering this option for your research, discuss this with the [FGB Privacy Champion](mailto:research.data.fgb@vu.nl) before pursuing it. **It is very important to assess this as early as possible in your research planning!**
+
+\
+
+#### Special Categories of Data {#special}
+
+The GDPR defines several types of data as "special". To use these data in your research you must must meet additional legal requirements. These types of data are ethnicity, religion, sexuality, health data, genetics, biometric data for identification purposes (e.g. fingerprints), political opinions and information on trade union memberships. The vast majority of data collected within FGB will be considered "special" data even if they don't seem all that sensitive. For example, reaction time data, data from a FitBit and kinematic data are all considered health data, even when they are collected from healthy adults without any known medical concerns. More information on what makes data sensitive vs. "special" is found [here](../Security/PrivacyRisks#sensitivity){target="_blank"}.
+
+If the data you plan to use are "special" under the GDPR, informed consent is the best [legal ground](#grounds) upon which to base your data processing. If consent is not feasible, speak to the [FGB Privacy Champion](mailto:research.data.fgb@vu.nl) as soon as possible.
+
+\
+
+#### Registration of Personal Data Processing {#registration}
+
+Registration of personal data processing for research purposes is achieved using DMPonline. Registration of data processing in DMPonline is described in detail below with a section from the VU's [Research Support Handbook](https://rdm.vu.nl/topics/data-management-plan.html#register-your-processing-activities){target="_blank"}:
+
+<iframe id="s-lg-widget-frame-x" width= "1000" height = "1490" scrolling="no" style="border: none" data-external="1"
+src="https://rdm.vu.nl/topics/data-management-plan.html#how-does-registration-of-personal-data-processing-work-in-research" ></iframe>
+
+
+
+\
+
+
+#### Data Protection {#protection}
+
+The GDPR requires that you adequately protect the data you are working with. There are several ways you can protect the data, including:
+
+* Don't collect more data than you need to answer your research question
+* Maintain the accuracy and organization of your data by creating, maintaining and following a data management plan (which you should also discuss with the [FGB Data Stewards](mailto:research.data.fgb@vu.nl))
+* Assess whether a **data protection impact assessment (DPIA)** needs to be carried out with the help of the [FGB Privacy Champion](mailto:research.data.fgb@vu.nl), particularly if you are working with [vulnerable populations](../Security/PrivacyRisks.html#vulnerability){target="_blank"} and/or [sensitive research topics](../Security/PrivacyRisks.html#sensitivity){target="_blank"}.
+* [De-identify](../Security/Deidentification.html){target="_blank"} your data as soon and as much as possible
+* Apply sufficient [security measures](../Security/SecurityBasics.html){target="_blank"} to your data and make sure the measures are appropriate for the [risks](../Security/PrivacyRisks.html){target="_blank"} posed by your data
+* **If you suspect that data have been leaked, contact the [IT Service Desk](https://services.vu.nl){target="_blank"} immediately with an urgent message. Also inform the [FGB REPS](mailto:research.data.fgb@vu.nl) team.**
+  + A data breach includes: a lost USB stick, a hacked VU account, e-mailing data to the wrong e-mail address, a stolen laptop etc.
+  + More information on this topic is found [here](https://vu.nl/en/employee/emergencies/data-leaks-and-other-incidents){target="_blank"}
+
+\
+
+### Additional Information
+
+* FGB has set out some policy positions on how to handle certain aspects of the GDPR with regards to research in the faculty. You can find that information [here](../Policies/FGB_Policy_Positions_GDPR.html){target="_blank"}.
+
+* Your starting point for support on privacy and research in the faculty is always the [FGB Privacy Champion](mailto:research.data.fgb@vu.nl). 
+
+* Additionally, you can find more detailed information on the GDPR and the VU [here](https://vu.nl/en/employee/privacy-and-information-security/working-with-personal-data){target="_blank"} and [here](https://assets.vu.nl/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/ad3de0e7-b935-471a-8d31-51c06ba47c88/Privacy%20five-step%20plan.pdf){target="_blank"}.
+
+* The full GDPR text can be found [here](https://gdpr-info.eu/){target="_blank"} and the Dutch implementation legislation for the GDPR (UAVG) can be found [here](https://wetten.overheid.nl/BWBR0040940/2018-05-25){target="_blank"}.
+

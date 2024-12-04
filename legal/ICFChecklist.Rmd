@@ -1,0 +1,346 @@
+---
+title: "GDPR Checklist for Informed Consent Forms and Information Letters"
+date: "`r Sys.Date()`; Version 2.0"
+output: 
+  html_document:
+    theme: cerulean
+    toc: true
+    toc_depth: 4
+    toc_float: 
+      collapsed: false
+      smooth_scroll: true
+    includes: 
+      after_body: ../footer.html
+---
+
+
+<style type="text/css">
+
+/* change font for whole text so that it's in line with house style. For webpages that is Roboto  */
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+#TOC {
+  left: 0%;
+  top: 0%;
+}
+
+
+/* width of the TOC needs to be defined in div.tocify because it allows the width to be low when the TOC is next to the text, but let's it expand when it moves to above the text in a very small screen like on a mobile */
+
+div.tocify {
+  width: 15%;
+}
+
+.tocify ul, .tocify li {
+  line-height: 25px;
+}
+
+.tocify-header .tocify-item {
+  font-size: 1.2em;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 1.1em;
+}
+
+
+
+/* following two commands get the text of TOC to indent properly */
+
+.tocify-header {
+    text-indent: initial;
+}
+
+.tocify-subheader > .tocify-item {
+  text-indent: initial;
+  padding-left: 2em;
+}
+
+/* attempted to change highlight color on TOC, but nothing works; wanted to improve contrast for accessibility, but had no luck  */
+
+/* max-width refused to change below unless I included the !important tag next to it. Found answer on this stack exchange https://stackoverflow.com/questions/34906002/increase-width-of-entire-html-rmarkdown-output 
+Seems only to be an issue when using TOC; not required to use !important on pages without TOC */
+
+.main-container {
+  max-width: 100% !important;
+  padding-right: 5%;
+  padding-top: 5%;
+  padding-bottom: 40%;
+}
+
+
+
+h1.title {
+  font-size: 28px;
+  text-align: center;
+}
+
+h4.date { /* this is to affect the size of the date text in the YAML when it prints in html  */
+  font-size: 20px;
+  text-align: center;
+}
+
+
+p {
+  font-size: 18px;
+}
+
+li {
+  font-size: 18px;
+  margin: 5px;
+}
+
+/* improve contrast for all a-tags and headers for accessibility */
+
+a {
+  color: #157bb7;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #105d89;
+}
+
+h4, h5 {
+  font-size: 22px;
+}
+
+#NB {
+  margin-left: 3em; /* this indents an entire paragraph */
+}
+
+.indent1 {
+  margin-left: 3em; /* this indents an entire paragraph */
+}
+
+.indent2 {
+  margin-left: 6em; /* this indents an entire paragraph */
+}
+
+.footnotes {
+  color: #737373;
+}
+
+
+#table1 {
+  max-width: 70% !important;
+  margin-left: 6em;
+}
+
+#table1 td:nth-child(1) {
+  width: 20%;
+}
+
+#table1 td:nth-child(2) {
+  width: 50%;
+}
+
+#table2 {
+  max-width: 90% !important;
+  margin-left: 6em;
+}
+
+#table2 td:nth-child(1) {
+  width: 20%;
+}
+
+#table2 td:nth-child(2) {
+  width: 40%;
+}
+
+#table2 td:nth-child(3) {
+  width: 30%;
+}
+
+#table3 {
+  max-width: 80% !important;
+  margin-left: 6em;
+}
+
+#table3 td:nth-child(1) {
+  width: 20%;
+}
+
+#table3 td:nth-child(2) {
+  width: 60%;
+}
+
+table, td { 
+  vertical-align: top;
+  text-align: left;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+</style>
+
+
+\
+\
+
+When conducting research at FGB, it is imperative that data are used ethically *and* legally. The vast majority of data used in our faculty's research are [personal data](../rdm/definitions/Definitions.html#personaldata){target="_blank"}[^1] and when personal data are utilized for research, the [General Data Protection Regulation (GDPR)](GDPRBasics.html#GDPRapplies){target="_blank"} applies. Under this regulation, one of our most fundamental requirements is to inform people that we are using their data in our research. The following checklist helps you ensure that you are meeting the requirements imposed by the GDPR.
+
+
+
+
+## Required Information {#reqInfo}
+
+### Privacy Statement {#privStat}
+
+The VU's Legal Affairs department has developed a privacy statement template which you can obtain from the [FGB Privacy Champion](mailto:research.data.fgb@vu.nl). This statement ensures that all legal requirements are met and it should ideally be published somewhere online so that research subjects can refer back to it at a later stage or review it should there be any changes to the information that was given at the outset. FGB recommends publishing the privacy statement on [OSF](https://osf.io/){target="_blank"} so that there is a permanent public location where the privacy statement can be found. You can refer to this location in your information letter and consent form so that participants can investigate the detailed privacy aspects of the research at their leisure without being overwhelmed by too much information. 
+
+Some privacy-related topics should still be addressed in the information letter and/or consent form. The following section explains how to adjust your consent forms and information letters to meet these requirements, as well as how to use the privacy statement by itself in the rare cases where consent cannot be obtained.
+
+##### {.tabset .tabset-fade}
+
+###### Information Requirements for Consent Processes
+
+This section supplements the existing informed consent form and information letter templates created by the [FGB Scientific and Ethical Review Board (VCWE)](https://vu.nl/en/employee/behavioural-and-movement-sciences-getting-started/the-scientific-and-ethical-review-board-vcwe){target="_blank"}. These templates ensure that all ethical requirements are met but they only address some, not all, of the legal requirements of the GDPR.
+
+
+<h4>&#10003; Withdrawing Consent</h4>
+
+* Inform the participant that they will not suffer any harm or detriment as a result of withdrawing their consent
+* Assess how you will handle data if consent if revoked and adjust the template text as needed:
+  + If you can delete any data collected prior to analysis without detrimentally harming your research (e.g. deletion of a survey respondent's record), then you should adjust the text in the template from *"data collected up to [the point that consent is withdrawn] will be used for the research"* to <em>"any data collected **and** already analysed when consent is withdrawn will still be used for the research and cannot be deleted before the end of the storage duration"</em>.
+  + If you cannot delete a participant's data immediately after data collection because it would detrimentally harm your research (e.g. the participant revokes consent *after* they have already participated in a recorded focus group), then use the text already present in the template.
+  + Additional information on this complex topic is found in the [FGB Policy Positions on the GDPR](../Policies/FGB_Policy_Positions_GDPR.html#art5){target="_blank"}. At a minimum, inform the participant that any questions or concerns about the ongoing use of their data after consent is withdrawn should be posed to the contact person for the study or the [VU Data Protection Officer](mailto:functionarisgegevensbescherming@vu.nl).
+* Younger research participants have the right to reassess their consent when they turn 16 if their data will still be in use at that time. Ensure that young participants and their parents are aware of this right. Make sure to briefly explain how data will be handled if a child revokes their consent at 16 (as discussed in the previous point). More information on children and informed consent is found in [later sections](#children) .
+  
+<h4>&#10003; Specific Data and Specific Purposes</h4>
+
+* It is imperative that *all* of the types of data that are used in your research are listed in the information letter. The specific purpose for which each type of data will be used in your research must also be listed. 
+  + Make sure to name any [special categories](GDPRBasics.html#special){target="_blank"} of data
+  + You don't need to specify formats or go into specifics for each type of data, but it should be clear to the participant what information on them will be used and why
+    + E.g. questionnaire data about your psychological complaints & personality type, video data of your interactions with a work team, transcripts of our interview with you etc.
+  + One way to approach this so participants can easily understand it is to include a table, for example:
+
+<div id="table1">
+| Type of Data | Purpose in the Study |
+| -- | --- |
+| Name, contact info | For contact with participant during study |
+| [*All of your awesome research data*] | [*How that data will answer your awesome research thesis*] |
+</div>
+
+
+<div class="indent2">
+In this example, all of the research data are used for one specific research goal. If you have several different research goals and different data will be used for each one, make sure to explain which data are used for which research goals. 
+</div>
+
+* If some of your research goals are optional, you should present a summarized version of the table again in the consent form with an additional column allowing participants to consent to the optional goals, where applicable:
+
+<div id="table2">
+| Type of Data | Purpose in the Study | Consent |
+| -- | --- | -- |
+| Name, contact info | Maintenance of contact with participant during study | Participating in this study means consenting to this purpose |
+| [*All of your awesome research data*] | [*How that data will answer your awesome research thesis*] | Participating in this study means consenting to this purpose |
+| Questionnaire data | Questionnaire sub-study answering [*awesome optional sub-study question*] | Yes &#9744; <br> No &#9744; |
+</div>
+
+<div class="indent1">
+If there aren't any optional research goals, the table does not need to be repeated in the consent form; just be clear that participating in the study means consenting to all of the research purposes.
+
+* NB: If one of your research goals is making the data available for [reuse](../rdm/definitions/Definitions.html#reusedata){target="_blank"}, that goal should generally be optional in the consent form. If that is not possible for your research, discuss it with the [FGB Privacy Champion](mailto:research.data.fgb@vu.nl).
+</div>
+
+* Include or remove any other relevant consent options (e.g. "do you consent to video recordings being used for educational purposes?") already present in the template. Make sure that any options you include in the consent form are adequately explained in the information letter or privacy statement (e.g. how will the video recordings be used for educational purposes; will there be any de-identification; for whose education will they be used etc.)
+
+* If any of the data collected about your participants is obtained indirectly (e.g. coupling their demographic information to an existing registry), you need also need to inform them of this, what data is being collected and what the source of that data is.
+
+<h4>&#10003; Who is Accessing the Data? </h4>
+
+* Adjust the existing text in the information letter template so that it only mentions the parties who will have access to the data, e.g. if your research doesn't have safety monitors, information about them shouldn't be included in the final versions of your information letters/ICFs.
+* Mention the use of any [processors](GDPRBasics.html#GDPRroles){target="_blank"} or [joint controllers](GDPRBasics.html#GDPRroles){target="_blank"} that may have access to the data in the information letter and refer to the privacy statement for further information. Don't use the terms processor or joint controller, just state that some third parties may have access to the data, but that the data are kept secure.
+* Explain any other situations where a third party may need access to the data:
+  1. Data *might* be shared with other researchers for new research. Ensure that the explanation of this is logical for your goals and to include a separate consent option for this in your consent form
+      a. In some cases, you might choose that data sharing is not optional; a participant either participates and the data are shared or they don't participate at all. If you choose that route you **_must_** make this clear to participants, and be aware of the implications for your own research (since this will impact who wants to participate). If this is a route you wish to pursue, make sure to discuss it with the [FGB Privacy Champion](mailto:research.data.fgb@vu.nl).
+      b. Be explicit about which data about your participants will be shared with third parties.
+  2. All data that are used for a research publication **_must_** be [archived](../rdm/definitions/Definitions.html#archivingdata){target="_blank"} to allow for verification. Explain that this can occur, that this is not optional and this applies to all data used to answer your research question, however any party requesting access will be appropriately vetted. 
+
+
+
+<h4>&#10003; Data Storage Duration </h4>
+
+* Include the correct [data storage term](../rdm/archiving/ArchivingGuidelinesSummary.html#howlong){target="_blank"} in the information letter for your research (10 years is standard, but does not apply to all research).
+  + If any of the data from your study will be openly published for reuse, inform the participant of this and that this means these data will be findable online indefinitely. Be clear about which data this applies to.
+    + Make sure to discuss your plan to openly publish your data with the [FGB Data Stewards and/or Privacy Champion](mailto:research.data.fgb@vu.nl)!
+  + If you will share (some of) the data upon request for new research, the storage term will likely last longer (i.e. 10 years after each new research publication with the data). Explain that in such a case, the data they may be saved for longer than 10 years after the current study. Give participants the opportunity to ask further questions about this.
+
+
+<h4>&#10003; Other Required Information </h4>
+
+* Participants need to be informed that they have rights under the GPDR. You do not need to go into any further detail in the information letter, simply refer to the privacy statement where they can learn more about their rights and how to exercise them.
+
+###### Information Requirements at Other Moments
+
+There are other situations, aside from informed consent processes, where information must be provided to individuals whose data you are using. In these situations, information is provided through a publicly available privacy statement. You can contact the [FGB Privacy Champion](mailto:research.data.fgb@vu.nl) for a privacy statement template. 
+
+<!-- I'm using h5 tags for the headers in this tab so that the headers don't show up on the ToC. I don't need them to be there. -->
+
+<h5>&#10003; When are these other moments? </h5>
+
+Situations where information must be made available to the individuals whose data you are using include the following:
+
+* If consent is **_absolutely_** not feasible for your research. Possible cases where this may apply are discussed in the [Code of Ethics](https://vu.nl/en/employee/behavioural-and-movement-sciences-getting-started/the-scientific-and-ethical-review-board-vcwe){target="_blank"}.
+  + If your research involves [personal data](../rdm/definitions/Definitions.html#personaldata){target="_blank"}, but consent is not feasible, contact the [FGB Privacy Champion](mailto:research.data.fgb@vu.nl) ASAP to discuss possible [legal alternatives](GDPRBasics.html#grounds){target="_blank"} to consent.
+* If you are reusing data from a third-party and the GDPR applies to these data (see article 4 of the [FGB Policy Positions on the GDPR](../Policies/FGB_Policy_Positions_GDPR.html#art4){target="_blank"}), information must still be provided to the original research subjects about what their data will be used for. 
+  + It is, of course, the responsibility of the third-party to legally collect and share the data with you, but you are responsible for providing some publicly available information about what you plan to do with the data.
+* If you are conducting longitudinal research that started before 2018 (when the GDPR came in to force), it is important to check that your consent procedures meet GDPR requirements. If your original consent process did not meet GDPR requirements, but there is no way to renew consent with the participants, you must still make information that meets GDPR requirements publicly available.
+* If children who are participating in your research reach 16 years of age while you're still using their data, they must be given the opportunity to reaffirm the consent they previously gave with their parents/guardians. If these participants can no longer be directly contacted, the information must be made publicly available to them.
+  + See ["Children and Consent"](#children) for more details.
+
+
+<h5>&#10003; Who is Accessing the Data? </h5>
+
+* The privacy statement template addresses almost all of the requirements for these extra information moments, including most of the concerns about who has access to the data. However, it does not currently account for data sharing for reuse or reviewing archived data for verification of research findings. This information should also be included in the privacy statement. The [FGB Privacy Champion](mailto:research.data.fgb@vu.nl) can help you adjust the text of the template to address these concerns.
+
+#####
+
+---------------
+
+## GDPR Principles for Consent {#consentPrinciples}
+
+In addition to the required information, there are also some basic principles that must be applied for consent to be legal under the GDPR.
+
+<h3>&#10003; Consent Must Be Freely Given</h3>
+
+* Consent must always be voluntary. Assess whether there is any power imbalance between you and the participants that could influence whether they feel free to consent.
+
+<h3>&#10003; Consent Must Be Unambiguous and Explicit </h3>
+
+* "Unambiguous" consent means that consent must involve a clearly affirmative and deliberate action by the participant; in other words, the participant must actively "opt-in".
+* "Explicit" consent is required when [special categories](GDPRBasics.html#special){target="_blank"} of data are used in your research. Explicit consent means that the individuals are fully informed about what special data are collected and how those data will be used.
+
+
+## Children and Consent {#children}
+
+* The [FGB Ethical Guidelines](https://assets.vu.nl/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/c3fbf71b-9589-413c-bee5-8e9270b89d3c/ethiek-reglement-adh-landelijk-nov-2016_tcm263-810069.pdf){target="_blank"} require that children from 12-16 years give consent to participate in research in addition to the consent from their parents/guardians. Children under 12 must assent to participating.
+* The GDPR requires consent from at least one parent/guardian for anyone under 16 years of age if their [personal data](../rdm/definitions/Definitions.html#personaldata){target="_blank"} are used in your research. 
+  + If a participant was younger than 16 when they originally gave consent for the use of their data, and the data are still in use after they turn 16, then attempts should be made to reaffirm the original consent. Aim to contact this participant so that they have the opportunity to affirm, change or withdraw their consent
+    + If the individual does not respond, or it is impossible to reach them, the consent obtained from their parents is still valid for the **specific purposes** described in the original information letter. 
+    + If reaching these participants will be impossible, you must at least publish a [privacy statement](#privStat) about the ongoing use of the data. 
+
+## Digital Consent {#digital}
+
+* Consent is often collected with paper forms, but in some cases digital consent may be preferable. 
+  + Most [WMO research](https://english.ccmo.nl/investigators/legal-framework-for-medical-scientific-research/your-research-is-it-subject-to-the-wmo-or-not){target="_blank"} requires the use paper consent forms, however, digital consent is now possible in [some cases](https://www.ccmo.nl/publicaties/publicaties/2022/08/31/handreiking-elektronische-toestemmingsverlening){target=_blank}. If in doubt about whether you can use digital consent for your WMO research, contact the [Amsterdam UMC METC](mailto:metc@vumc.nl) for advice.
+  + For all non-WMO research, you may use digital consent if necessary. Under the GDPR, you are not required to obtain a research participant's signature on a consent form, you just a clear indication that they "opted-in", such as by checking a tickbox via Qualtrics or Survalyzer. However, if you prefer or are required to obtain a signature on your consent forms, this can also be achieved with digital consent: 
+    + If you use Qualtrics via the VU Single Sign-On, you can add a [signature field](https://www.qualtrics.com/support/survey-platform/survey-module/editing-questions/question-types-guide/specialty-questions/signature/){target="_blank"} to a digital consent form. 
+    + You can also use ZIVVER to securely send consent forms to participants and receive a scanned, signed copy in return. More information on setting up ZIVVER for this purpose is found in this [instruction manual](ZIVVERdigitalConsent.html){target="_blank"}.
+* With digital consent, always make sure you are allowed to use someone's contact information for requesting their consent digitally. You aren't allowed to just send digital consent forms to a list of e-mail addresses that some third-party gave you unless all of those people consented to being contacted.
+* Ideally you should ensure that consent is validly obtained from the correct person, especially when working with vulnerable populations. Two-factor authentication can help with this, e.g. a participant can fill in their digital consent along with their e-mail address; afterwards, they confirm their participation in an e-mail they receive.
+
+## Maintenance of Consent Documentation
+
+* Consent form documentation needs to be maintained for as long as the data are in use.
+  + Consent forms need to be kept for at least the same duration that your data are [archived](../rdm/definitions/Definitions.html#archivingdata){target="_blank"}.
+  + If the data will be reused for new research and the data are [personal data](../rdm/definitions/Definitions.html#personaldata){target="_blank"} the consent forms will need to be saved for as long as the data are available to be reused.
+* If you originally obtained consent on paper, you need to maintain this original paper version, even if you scanned a copy of the consent form. This is a requirement for all [WMO research](https://english.ccmo.nl/investigators/legal-framework-for-medical-scientific-research/your-research-is-it-subject-to-the-wmo-or-not){target="_blank"}, but also VU policy for all other forms of research until validated methods for digitizing paper consent forms can be implemented.
+  + See the [FGB Archiving Guidelines](../rdm/archiving/ArchivingGuidelinesFull.html#paperarchiving){target="_blank"} for more information on paper archiving.
+
+
+<!--- footnotes --->
+
+[^1]: The GDPR does not apply if *and only if* all of your data fall into the ["Blue" category of Privacy Risk](../Security/PrivacyRisks.html){target="_blank"}. If all of your research data are "Blue", there can still be an imperative for an informed consent process. For example, if the data you are collecting are "Blue" data from a research participant in the lab, you still need to inform the subject of what to expect during their participation and get their consent to participate. In such a situation, obtaining consent without collecting additional personal data such as a name and signature is often advisable (e.g. the participant should be given information and give their consent by ticking a checkbox), however you should discuss this with the [FGB Scientific and Ethical Review Board (VCWE)](https://vu.nl/en/employee/behavioural-and-movement-sciences-getting-started/the-scientific-and-ethical-review-board-vcwe){target="_blank"} before proceeding.
