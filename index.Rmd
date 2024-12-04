@@ -64,8 +64,8 @@ li {
 
 # Policies
 
-* [FGB RDM Policy](/Policies/FGB_RDM_Policy.html){target="_blank"}
-* [FGB policy positions on the GDPR](/Policies/FGB_Policy_Positions_GDPR.html){target="_blank"}
+* [FGB RDM Policy](Policies/FGB_RDM_Policy.html){target="_blank"}
+* [FGB policy positions on the GDPR](Policies/FGB_Policy_Positions_GDPR.html){target="_blank"}
 
 
 # Research Data Management Guidance
