@@ -1,10 +1,7 @@
 ---
 title: "Research Data Management Policy for the Faculty of Behavioural and Movement Sciences"
-date: "2024-05-13; Version 2.7"
+date: "`r Sys.Date()`; Version 2.7"
 output:
-  word_document:
-    toc: yes
-    toc_depth: '4'
   html_document:
     theme: cerulean
     toc: yes
@@ -12,9 +9,6 @@ output:
     toc_float:
       collapsed: no
       smooth_scroll: yes
-knit: (function(inputFile, encoding) {
-  rmarkdown::render(inputFile, encoding = encoding,
-  output_format = "all") })
 ---
 
 
@@ -35,11 +29,10 @@ knit: (function(inputFile, encoding) {
   output_format = "all") })
 
 The word document is a temporary document, and I've ignored it in gitignore. The word document needs to be changed to DIN Pro font and then exported as a PDF "Best for electronic distribution" and store in ../../pdfs_rdm_framework/rdm_policy/1.currently_published_versions
+I have decided to no longer generate the word and PDF versions so this section is simply comment out
 -->
 
-<!-- 
-Because this document produces both an html and word version so that the word version can be used to create a PDF, all hyperlinks for the fgb-rdm.nl webpage need to be written out in full rather than with "../" otherwise the hyperlinks in the PDF-version won't work
--->
+
 
 <!--
 Reference to the other policy and guideline documents, specifically the archiving guidelines and the GDPR policy positions goes through this hyperlink https://vu.nl/en/employee/research-data-management-fbms/policies-guidelines-fgb to avoid confusion or difficulty finding the right page with updates to the documents/pages
@@ -153,21 +146,21 @@ This policy supplements the VU Research Data Management Policy by:
 
 ### Definitions {#definitions}
 
-* [_Research project_](https://fgb-rdm.nl/rdm/definitions/Definitions.html#researchproject){target="_blank"}
+* [_Research project_](../rdm/definitions/Definitions.html#researchproject){target="_blank"}
 
-* [_Personal data_](https://fgb-rdm.nl/rdm/definitions/Definitions.html#personaldata){target="_blank"}
+* [_Personal data_](../rdm/definitions/Definitions.html#personaldata){target="_blank"}
 
-* [_Confidential data_](https://fgb-rdm.nl/rdm/definitions/Definitions.html#confidentialdata){target="_blank"}
+* [_Confidential data_](../rdm/definitions/Definitions.html#confidentialdata){target="_blank"}
 
-* [_Archiving research data_](https://fgb-rdm.nl/rdm/definitions/Definitions.html#archivingdata){target="_blank"}
+* [_Archiving research data_](../rdm/definitions/Definitions.html#archivingdata){target="_blank"}
 
-* [_Publishing research data_](https://fgb-rdm.nl/rdm/definitions/Definitions.html#publishingdata){target="_blank"}
+* [_Publishing research data_](../rdm/definitions/Definitions.html#publishingdata){target="_blank"}
 
-* [_Metadata_](https://fgb-rdm.nl/rdm/definitions/Definitions.html#metadata){target="_blank"}
+* [_Metadata_](../rdm/definitions/Definitions.html#metadata){target="_blank"}
 
-* [_FAIR principles_](https://fgb-rdm.nl/rdm/definitions/Definitions.html#FAIR){target="_blank"}
+* [_FAIR principles_](../rdm/definitions/Definitions.html#FAIR){target="_blank"}
 
-* [_Interoperable (meta)data_](https://fgb-rdm.nl/rdm/definitions/Definitions.html#interoperablemetadata){target="_blank"}
+* [_Interoperable (meta)data_](../rdm/definitions/Definitions.html#interoperablemetadata){target="_blank"}
 
 
 ### Policy Principles {#principles}
@@ -314,9 +307,9 @@ Reference to the other policy and guideline documents, specifically the archivin
 
 [^1]: See [FGB Policy Positions on the GDPR](https://vu.nl/en/employee/research-data-management-fbms/policies-guidelines-fgb){target="_blank"} for important legal implications with regards to privacy.
 
-[^2]: See [FGB Security Tips: The Basics](https://fgb-rdm.nl/Security/SecurityBasics.html){target="_blank"}, particularly [FGB Security Tips: Safe Practices for Students Working With Research Data](https://fgb-rdm.nl/Security/SecurityForStudents.html){target="_blank"} for more information.
+[^2]: See [FGB Security Tips: The Basics](../Security/SecurityBasics.html){target="_blank"}, particularly [FGB Security Tips: Safe Practices for Students Working With Research Data](../Security/SecurityForStudents.html){target="_blank"} for more information.
 
-[^3]: See [FGB Security Tips: The Basics](https://fgb-rdm.nl/Security/SecurityBasics.html){target="_blank"} and the associated [In-Depth Guides](https://fgb-rdm.nl/Security/SecurityBasics.html#indepth){target="_blank"}.
+[^3]: See [FGB Security Tips: The Basics](../Security/SecurityBasics.html){target="_blank"} and the associated [In-Depth Guides](../Security/SecurityBasics.html#indepth){target="_blank"}.
 
 [^4]: The faculty implementation of the [Code of Ethics for Research in the Social and Behavioural Sciences Involving Human Participants](https://assets.vu.nl/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/c3fbf71b-9589-413c-bee5-8e9270b89d3c/ethiek-reglement-adh-landelijk-nov-2016_tcm263-810069.pdf){target="_blank"} outlines the ethical standards expected of every FGB researcher.
 

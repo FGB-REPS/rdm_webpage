@@ -1,13 +1,9 @@
 ---
 title: "FGB Policy Positions on the GDPR"
-date: "2023-11-15; Version 2.2"
+date: "`r Sys.Date()`; Version 2.2"
 output:
   html_document: 
     theme: cerulean
-  word_document: default
-knit: (function(inputFile, encoding) {
-  rmarkdown::render(inputFile, encoding = encoding,
-  output_format = "all") })
 ---
 
 <!-- I used this code to allow me to generate html and docx at the same time:
@@ -20,6 +16,7 @@ knit: (function(inputFile, encoding) {
   output_format = "all") })
 
 The word document is a temporary document, and I've ignored it in gitignore. The word document needs to be changed to DIN Pro font and then exported as a PDF "Best for electronic distribution" and store in ../../pdfs_rdm_framework/rdm_policy/1.currently_published_versions
+I have decided to no longer generate the word and PDF versions so this section is simply comment out
 -->
 
 
@@ -101,14 +98,14 @@ The European General Data Protection Regulation (GDPR) specifies how personal da
 <div id="art1">
 </div>
 
-1.	[Directly identifying personal data](https://fgb-rdm.nl/rdm/definitions/Definitions.html#directID){target="_blank"} (e.g. name, address, contact information) may be maintained for the entire duration of a [research project](https://fgb-rdm.nl/rdm/definitions/Definitions.html#researchproject){target="_blank"} if this information is required to carry out the project. For example, it may be necessary to: contact individuals about the next phase of the project; contact participants for a follow-up project, if they have given consent to be contacted for that reason; or for communication with participants’ caregivers or teachers who may need to provide supplementary information about participants, but who should not know the identification code under which participants are registered by the research team. Directly identifying personal data should be stored separately from other research data, at a higher level of security than [indirectly identifying information](https://fgb-rdm.nl/rdm/definitions/Definitions.html#indirectID){target="_blank"} and they should only be accessible to those individuals (usually research assistants and data managers) who absolutely require access to them and only for the period for which access is required (i.e. once access is no longer required, access rights should be revoked). 
+1.	[Directly identifying personal data](../rdm/definitions/Definitions.html#directID){target="_blank"} (e.g. name, address, contact information) may be maintained for the entire duration of a [research project](../rdm/definitions/Definitions.html#researchproject){target="_blank"} if this information is required to carry out the project. For example, it may be necessary to: contact individuals about the next phase of the project; contact participants for a follow-up project, if they have given consent to be contacted for that reason; or for communication with participants’ caregivers or teachers who may need to provide supplementary information about participants, but who should not know the identification code under which participants are registered by the research team. Directly identifying personal data should be stored separately from other research data, at a higher level of security than [indirectly identifying information](../rdm/definitions/Definitions.html#indirectID){target="_blank"} and they should only be accessible to those individuals (usually research assistants and data managers) who absolutely require access to them and only for the period for which access is required (i.e. once access is no longer required, access rights should be revoked). 
     a.	If it is not feasible to store directly identifying data in a separate storage location from all other research data, these data should be stored in a separate folder with controlled access rights to only those who need to know these data and ideally with encryption on the folder or the file itself that contains the data.
     b.	If it is not feasible to separate directly identifying data from the research data which need to be analyzed (e.g. photographs or audiovisual data), the storage solution used for the data should provide the highest possible level of security and/or encryption should be used.
-    c.	Information on how to archive directly identifying personal data can be found in the [local FGB implementation of the DSW National Guidelines on Archiving](https://fgb-rdm.nl/rdm/archiving/ArchivingGuidelinesFull.html#section3){target="_blank"}.
+    c.	Information on how to archive directly identifying personal data can be found in the [local FGB implementation of the DSW National Guidelines on Archiving](../rdm/archiving/ArchivingGuidelinesFull.html#section3){target="_blank"}.
     
 <div class="NB">
 
-NB: The Security Tips on [De-identification](https://fgb-rdm.nl/Security/Deidentification.html){target="_blank"} and on [Secure Storage](https://fgb-rdm.nl/Security/Storage.html){target="_blank"} provide additional guidance on how to handle directly identifying data.
+NB: The Security Tips on [De-identification](../Security/Deidentification.html){target="_blank"} and on [Secure Storage](../Security/Storage.html){target="_blank"} provide additional guidance on how to handle directly identifying data.
 
 </div>
 
@@ -117,7 +114,7 @@ NB: The Security Tips on [De-identification](https://fgb-rdm.nl/Security/Deident
 <div id="art2">
 </div>
 
-2.	The fundamental legal basis for conducting a [research project](https://fgb-rdm.nl/rdm/definitions/Definitions.html#researchproject){target="_blank"} using personal data should, in the majority of cases, be the informed and freely given consent of participants. Legitimate interests can in some specific cases be invoked as an alternative legal basis for conducting a research project if obtaining informed and freely given consent is impossible or would impair the aims of said project. In order to use legitimate interests as a legal ground for conducting a research project, the benefits of the research project must outweigh the rights of the individuals whose data are being used. Additional conditions are also required if [special categories of personal data](https://gdpr-info.eu/art-9-gdpr/){target="_blank"} will be processed on the basis of legitimate interests (see Rule 5 from [Privacy in Scientific Research – 10 Key Rules](https://assets.vu.nl/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/b55f1a58-e848-4b92-8a74-b62c646d6590/10%20key%20Privacy%20rules%20in%20scientific%20research.pdf){target="_blank"}). Situations where legitimate interests may be more appropriate than obtaining consent include, but are not limited to: 
+2.	The fundamental legal basis for conducting a [research project](../rdm/definitions/Definitions.html#researchproject){target="_blank"} using personal data should, in the majority of cases, be the informed and freely given consent of participants. Legitimate interests can in some specific cases be invoked as an alternative legal basis for conducting a research project if obtaining informed and freely given consent is impossible or would impair the aims of said project. In order to use legitimate interests as a legal ground for conducting a research project, the benefits of the research project must outweigh the rights of the individuals whose data are being used. Additional conditions are also required if [special categories of personal data](https://gdpr-info.eu/art-9-gdpr/){target="_blank"} will be processed on the basis of legitimate interests (see Rule 5 from [Privacy in Scientific Research – 10 Key Rules](https://assets.vu.nl/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/b55f1a58-e848-4b92-8a74-b62c646d6590/10%20key%20Privacy%20rules%20in%20scientific%20research.pdf){target="_blank"}). Situations where legitimate interests may be more appropriate than obtaining consent include, but are not limited to: 
     a.	Child abuse (cannot ethically inform the parents, but the child is <16 years old)
     b.	Youth crime (cannot ethically inform the parents, but the child is <16 years old)
     c.	Misconduct in public organizations/the church/social support (cannot inform the individuals responsible for misconduct without risking harm to others or to the aims of the research project)
@@ -172,7 +169,7 @@ Oftentimes, excessive effort would be required to determine who the research sub
 <div id="art5">
 </div>
 
-5.	A [research project](https://fgb-rdm.nl/rdm/definitions/Definitions.html#researchproject){target="_blank"} is exempt from the GDPR’s right to be forgotten if data erasure “renders impossible or seriously impairs the achievement of the objectives” of the project. If a study participant wishes to exercise this right, but the project is already in the analysis phase or later, researchers may refuse this right. The reasoning is that once data have been analysed, published and/or archived, the data can no longer be deleted without severely impairing the integrity and aims of the research. Regardless, requests for the right to be forgotten must always be forwarded to the VU Data Protection Officer (functionarisgegevensbescherming@vu.nl), who will lead the communications between the requesting participant and the researchers.
+5.	A [research project](../rdm/definitions/Definitions.html#researchproject){target="_blank"} is exempt from the GDPR’s right to be forgotten if data erasure “renders impossible or seriously impairs the achievement of the objectives” of the project. If a study participant wishes to exercise this right, but the project is already in the analysis phase or later, researchers may refuse this right. The reasoning is that once data have been analysed, published and/or archived, the data can no longer be deleted without severely impairing the integrity and aims of the research. Regardless, requests for the right to be forgotten must always be forwarded to the VU Data Protection Officer (functionarisgegevensbescherming@vu.nl), who will lead the communications between the requesting participant and the researchers.
     a.	If a participant revokes their consent to a research project, the usage of any data already collected depends on the nature of the research project and the phase of the research cycle when consent is revoked. If a research project consists of repeated measurements and a participant revokes consent by saying that they no longer wish to be contacted or to take part in the study, all of the data collected up until that point may still be used, unless the individual exercises the right to be forgotten and the erasure of the data is not detrimental to the aims of the research project. If a participant revokes consent to the entirety of the research project, without invoking the right to be forgotten, and the research project is still in the data collection phase, the data do not need to be deleted, but they may not be used for analysis; if the research project is in the analysis phase or later when the participant revokes consent to the entirety of the research project, the data _**cannot**_ be deleted; these data however should be flagged as not to be used for any follow-up research projects.
 
 <br>
@@ -203,7 +200,7 @@ Oftentimes, excessive effort would be required to determine who the research sub
 <div id="art9">
 </div>
 
-9.	Non-digital personal data (such as saliva samples or written documents) must be protected from theft, loss, damage and unauthorized access, just like any other personal data. Safe transport of non-digital data is described in the [FGB Security Tips on Physical Transport](https://fgb-rdm.nl/Security/PhysicalTransport.html#analog){target="_blank"}.
+9.	Non-digital personal data (such as saliva samples or written documents) must be protected from theft, loss, damage and unauthorized access, just like any other personal data. Safe transport of non-digital data is described in the [FGB Security Tips on Physical Transport](../Security/PhysicalTransport.html#analog){target="_blank"}.
 
 <!--Footnotes-->
 
