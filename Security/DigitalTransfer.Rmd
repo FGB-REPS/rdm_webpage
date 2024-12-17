@@ -183,7 +183,7 @@ If YODA and Research Drive are not appropriate for your purposes:
 * Use [ZIVVER](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012860){target="_blank"} 
     + Require that the recipient must enter a code that they receive via SMS to be able to read the e-mail. 
     + Put an expiry on the message so that after a certain period the e-mail is no longer available to both the recipient and yourself.
-    + Further information on the use of ZIVVER is found in this [guide](../Images/ZIVVERdigitalConsent.html){target="_blank"}.
+    + Further information on the use of ZIVVER is found in this [guide](../legal/ZIVVERdigitalConsent.html){target="_blank"}.
 * Use [SURFFileSender](https://www.surf.nl/en/surffilesender-send-large-files-securely-and-encrypted){target="_blank"} 
     + Make sure encryption is activated. 
     + Make sure to use a strong [de-encryption password](SecurityBasics.html#passwords){target="_blank"}. Always provide the recipient with the password via another method (for example, call the recipient to provide the password verbally). **Do not** send the password in another e-mail.
@@ -246,7 +246,7 @@ If YODA, Research Drive and SURFdrive are not appropriate for your purposes:
 * Use [ZIVVER](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012860){target="_blank"} 
     + Require that the recipient must enter a code that they receive via SMS to be able to read the e-mail. 
     + Put an expiry on the message so that after a certain period the e-mail is no longer available to both the recipient and yourself.
-    + Further information on the use of ZIVVER is found in this [guide](../Images/ZIVVERdigitalConsent.html){target="_blank"}.
+    + Further information on the use of ZIVVER is found in this [guide](../legal/ZIVVERdigitalConsent.html){target="_blank"}.
 * Use [SURFFileSender](https://www.surf.nl/en/surffilesender-send-large-files-securely-and-encrypted){target="_blank"} 
     + Make sure encryption is activated. 
     + Make sure to use a strong [de-encryption password](SecurityBasics.html#passwords){target="_blank"}. Always provide the recipient with the password via another method (for example, call the recipient to provide the password verbally). **Do not** send the password in another e-mail.
@@ -300,7 +300,7 @@ If YODA, Research Drive and SURFdrive are not appropriate for your purposes:
 
 * "Green" data may be sent via internal VU e-mail without encryption
 * You can use [ZIVVER](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012860){target="_blank"} or [SURFFileSender](https://www.surf.nl/en/surffilesender-send-large-files-securely-and-encrypted){target="_blank"}. It is not as crucial to use an access code with ZIVVER or encryption with SurfFileSender when sending "green" data, however it is still a good idea to do so whenever possible. At a minimum, you should always put an expiry date on e-mails sent via ZIVVER/SurfFileSender.
-  + Further information on the use of ZIVVER is found in this [guide](../Images/ZIVVERdigitalConsent.html){target="_blank"}. 
+  + Further information on the use of ZIVVER is found in this [guide](../legal/ZIVVERdigitalConsent.html){target="_blank"}. 
 
 \
 If the above options are not feasible, contact the [RDM Support Desk](mailto:rdm@vu.nl) for further assistance.
