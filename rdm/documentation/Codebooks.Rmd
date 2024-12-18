@@ -65,7 +65,7 @@ Codebooks are important sources of data documentation. They can have different p
 Codebooks (sometimes called data dictionaries) are essential to understanding your data (both for yourself and any other users). Without a codebook it's often impossible to make sense of the information present in your data since variable names alone are often not enough to understand what a variable represents. Your codebook is also required for the correct interpretation of categorical variables and the meaning their values. Various statistical programs offer ways to label your variables and the values of your categorical variables, however, it is always advised to have a separate codebook containing this information, particularly when data are saved in a proprietary format. Codebooks can also be used to document variable-level information, so a codebook separate from your dataset is an essential document. 
 \
 \
-The [RDM LibGuide](https://libguides.vu.nl/rdm/data-documentation){target="_blank"} describes the elements that are essential for  a good codebook. You should also aim to include in your codebook (where applicable):
+The [VU Open Research Support Handbook](https://rdm.vu.nl/topics/data-documentation.html#codebook){target="_blank"} describes the elements that are essential for  a good codebook. You should also aim to include in your codebook (where applicable):
 
 * What each record in the dataset refers to
   + In the case of questionnaires, this is usually a single respondent, but might also be a household
