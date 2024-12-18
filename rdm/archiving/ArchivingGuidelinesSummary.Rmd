@@ -177,7 +177,7 @@ The vast majority of data used within the faculty is considered [personal data](
 * If your data can be [de-identified](../../Security/Deidentification.html){target="_blank"} enough that they fall under the "Blue" category from the [Privacy Risk categorization](../../Security/PrivacyRisks.html){target="_blank"}, then you can use other archives, such as [DataverseNL](https://dataverse.nl/dataverse/vuamsterdam){target="_blank"} or an external [data repository](https://www.re3data.org/){target="_blank"}.
   **It is *very* important, however, that when de-identifying your data that you do not irrevocably modify the raw data. Irrevocable modification defeats the purpose of archiving unadulterated raw data. See [How Do I Meet Privacy and Security Requirements?](#privacy_security) for further explanation.**
   + You should check with the [FGB Privacy Champion](research.data.fgb@vu.nl) that your data are indeed "Blue" data before archiving them in a less secure archive than YODA.
-  + If your data cannot be de-identified to the "Blue" category level, it may still be possible to archive the supporting materials (e.g. research code, codebooks, interview scipts etc.) in archives or data repositories other than YODA. Just make sure these supporting materials don't contain any personal or [confidential information](https://fgb-rdm.nl/Security/PrivacyRisks.html#confidentiality){target="_blank"}.
+  + If your data cannot be de-identified to the "Blue" category level, it may still be possible to archive the supporting materials (e.g. research code, codebooks, interview scipts etc.) in archives or data repositories other than YODA. Just make sure these supporting materials don't contain any personal or [confidential information](../../Security/PrivacyRisks.html#confidentiality){target="_blank"}.
 
 
 <br>
@@ -240,7 +240,7 @@ The duration of archiving depends on the reason you are archiving as well as on 
 * If you are conducting medical research, the duration of archiving will depend on which laws and regulations apply. To determine which archiving duration applies, see this [page](https://english.ccmo.nl/investigators/data-retention-periods-for-medical-research){target="_blank"} from the CCMO or [section 3.1](ArchivingGuidelinesFull.html#section3.1){target=_blank} from the full archiving guidelines
 
   
-* Any data that falls under the "Blue" category from the [Privacy Risk categorization](../../Security/PrivacyRisks.html){target="_blank"} and/or supporting materials that don't contain any [personal](../definitions/Definitions.html#personaldata){target="_blank"} and/or [confidential information](https://fgb-rdm.nl/Security/PrivacyRisks.html#confidentiality){target="_blank"} can be archived indefinitely, unless any other contracts or agreements apply that limit the archiving duration. 
+* Any data that falls under the "Blue" category from the [Privacy Risk categorization](../../Security/PrivacyRisks.html){target="_blank"} and/or supporting materials that don't contain any [personal](../definitions/Definitions.html#personaldata){target="_blank"} and/or [confidential information](../../Security/PrivacyRisks.html#confidentiality){target="_blank"} can be archived indefinitely, unless any other contracts or agreements apply that limit the archiving duration. 
 
 <br>
 <div class="reference">
