@@ -297,23 +297,17 @@ overflow-y: auto;
 border: 1px solid #ddd;
 border-radius: 4px;
 }
-.tabset-dropdown > .nav-tabs > li.active:before {
-content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+content: "\e259";
 font-family: 'Glyphicons Halflings';
 display: inline-block;
 padding: 10px;
 border-right: 1px solid #ddd;
 }
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-content: "";
-border: none;
-}
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-content: "";
+content: "\e258";
 font-family: 'Glyphicons Halflings';
-display: inline-block;
-padding: 10px;
-border-right: 1px solid #ddd;
+border: none;
 }
 .tabset-dropdown > .nav-tabs > li.active {
 display: block;
@@ -355,7 +349,7 @@ display: none;
 
 
 <h1 class="title toc-ignore">RDM Tools @ FGB: Castor ‘Spelregels’</h1>
-<h4 class="date">2022-11-03; Version 1.0</h4>
+<h4 class="date">2024-12-18; Version 1.0</h4>
 
 </div>
 
@@ -458,8 +452,7 @@ securely stored on a VU storage option.
 <li>If the data are still being analysed, you can find an appropriate
 solution via the <a href="https://vu.nl/en/research/storagefinder" target="_blank">VU Storage Finder</a></li>
 <li>If all analyses are complete and the data only need to be archived,
-the exported data must be archived in a <a href="https://libguides.vu.nl/rdm/selecting-archive" target="_blank">VU
-archive</a></li>
+the exported data must be archived in a [VU archive]<a href="https://rdm.vu.nl/guides/publish-and-share.html#selecting-an-archive" class="uri">https://rdm.vu.nl/guides/publish-and-share.html#selecting-an-archive</a>){target=“_blank”}</li>
 </ol></li>
 <li>Once all of the data have been securely stored or archived at the
 VU, contact <a href="https://helpdesk.castoredc.com/contact-us" target="_blank">Castor Support</a> to have all of the data stored by

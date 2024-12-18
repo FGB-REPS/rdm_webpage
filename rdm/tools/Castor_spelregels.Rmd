@@ -1,6 +1,6 @@
 ---
 title: "RDM Tools @ FGB: Castor 'Spelregels'"
-date: "2022-11-03; Version 1.0"
+date: "`r Sys.Date()`; Version 1.0"
 output: 
   html_document:
     theme: cerulean
@@ -89,7 +89,7 @@ Castor is a data management software that is available to FGB researchers, parti
 6. When you complete your research you should follow the [Castor guidance](https://helpdesk.castoredc.com/can-i-lock-and-archive-my-study-once-it-is-complete?from_search=99167795){target="_blank"} on ending a study. Additionally you must do the following:
     a. After all data have been exported from Castor, they should be securely stored on a VU storage option. 
         i. If the data are still being analysed, you can find an appropriate solution via the [VU Storage Finder](https://vu.nl/en/research/storagefinder){target="_blank"}
-        ii. If all analyses are complete and the data only need to be archived, the exported data must be archived in a [VU archive](https://libguides.vu.nl/rdm/selecting-archive){target="_blank"}
+        ii. If all analyses are complete and the data only need to be archived, the exported data must be archived in a [VU archive]https://rdm.vu.nl/guides/publish-and-share.html#selecting-an-archive){target="_blank"}
     b. Once all of the data have been securely stored or archived at the VU, contact [Castor Support](https://helpdesk.castoredc.com/contact-us){target="_blank"} to have all of the data stored by Castor deleted. Otherwise the data will be automatically stored on Castor's servers for 25 years.
 
 
