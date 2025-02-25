@@ -1,9 +1,10 @@
 ---
 title: "FGB Security Tips: Assessing Privacy Risks"
-date: "2024-05-27; Version 1.6"
+date: "`r Sys.Date()`; Version 1.7"
 output: 
   html_document:
     theme: cerulean
+    anchor_sections: TRUE
     includes: 
       after_body: ../footer.html
 ---
@@ -15,6 +16,13 @@ output:
 
 body {
   font-family: 'Roboto', sans-serif;
+}
+
+/* the follow CSS code allows me to take the automatically included anchor sections (that I made active in the YAML with anchor_sections: TRUE) and change the icon that is shown from a hash to a link symbol from the bootstrap icon library */
+
+a.anchor-section::before {
+    content: "&#xe144";
+    font-family: 'Glyphicons Halflings';
 }
 
 .main-container {
@@ -150,7 +158,7 @@ table, td {
 
 \ <!--this adds a space  -->
 
-Data about human beings are very rarely [anonymous](https://www.lcrdm.nl/files/lcrdm/2020-01/Anonymization%20-%20reference%20card%20for%20researchers.pdf){target="_blank"}. Even if the data do not contain information such as name or address, the data may still pose privacy risks to the people they are about, especially if it is possible to re-identify individuals within the data you are using for your research.  
+Data about human beings are very rarely [anonymous](../Images/Anonymization-reference-card-for-researchers.pdf){target="_blank"}. Even if the data do not contain information such as name or address, the data may still pose privacy risks to the people they are about, especially if it is possible to re-identify individuals within the data you are using for your research.  
 
 The table below can be used to determine privacy risk categories for different types of data. There will always be grey areas when looking at privacy risk, particularly when considering the [vulnerability](#vulnerability) of the research subjects, the [sensitivity](#sensitivity) of the information and the [re-identifiability of the data](#reID). The guidance below cannot capture every possible situation, so, like all good things, think of this advice as a spectrum. If in doubt, opt for a higher risk category. Also, not all of the data in your research will have the same level of privacy risk and the privacy risks for each type of data may change as you clean, recode and modify the data from a [raw](../rdm/definitions/Definitions.html#rawdata){target="_blank"} to [processed](.., /rdm/definitions/Definitions.html#processeddata){target="_blank"} form. You should assess the risks for each separate [data asset](../rdm/definitions/Definitions.html#dataasset){target="_blank"} and also consider how each data asset's risk will change over the course of the research life cycle. If some data are higher risk than others, you can store these data separately in a more secure storage option.
 
@@ -242,12 +250,13 @@ If your data are not about human subjects, they may still need to be kept [confi
 
 --------------------
 
-### Important Factors in Privacy Risk
+\
+
+### Important Factors in Privacy Risk {#privacyRiskFactors}
 
 \
 
-# {#vulnerability}
-1. **The vulnerability of the research subjects:** 
+#### The vulnerability of the research subjects: {#vulnerability}
 
 * Vulnerable research subjects have an additional risk of harm (socially, physically, emotionally, financially) if their personal information is made public. The greater the vulnerability of the research subjects, the greater the potential for serious harm.
 
@@ -261,8 +270,7 @@ If your data are not about human subjects, they may still need to be kept [confi
 
 \
 
-# {#sensitivity}
-2. **The sensitivity of the information being used:** 
+#### The sensitivity of the information being used: {#sensitivity}
 
 * Sensitive data include "special" data types that receive extra legal attention under the [General Data Protection Regulation (GDPR)](https://gdpr-info.eu/art-9-gdpr/){target="_blank"}:
   * race or ethnicity 
@@ -288,8 +296,7 @@ If your data are not about human subjects, they may still need to be kept [confi
 
 \
 
-# {#reID}
-3. **The ease with which research subjects can be re-identified in the data:** 
+#### The ease with which research subjects can be re-identified in the data: {#reID}
 
 * Data are [personal data](../rdm/definitions/Definitions.html#personaldata){target="_blank"} if they are [directly identifying](../rdm/definitions/Definitions.html#directID){target="_blank"} or [indirectly identifiable](../rdm/definitions/Definitions.html#indirectID){target="_blank"}: 
   + Directly identifying data are what most people think of as personal data: name, contact information, facial images etc. This information isn't _always_ directly identifying (e.g. a name like Jan Smit is very common in The Netherlands, so that name alone might not be enough to identify someone). Regardless, it's generally agreed that these types of data should be handled with extra care and that these types of data should be ideally stored separately from other research data. 

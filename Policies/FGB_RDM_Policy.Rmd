@@ -1,14 +1,17 @@
 ---
 title: "Research Data Management Policy for the Faculty of Behavioural and Movement Sciences"
-date: "`r Sys.Date()`; Version 2.7"
+date: "`r Sys.Date()`; Version 2.8"
 output:
   html_document:
     theme: cerulean
+    anchor_sections: TRUE
     toc: yes
     toc_depth: 4
     toc_float:
       collapsed: no
       smooth_scroll: yes
+    includes: 
+      after_body: ../footer.html
 ---
 
 
@@ -46,6 +49,12 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+/* the follow CSS code allows me to take the automatically included anchor sections (that I made active in the YAML with anchor_sections: TRUE) and change the icon that is shown from a hash to a link symbol from the bootstrap icon library */
+
+a.anchor-section::before {
+    content: "&#xe144";
+    font-family: 'Glyphicons Halflings';
+}
 
 #TOC {
   left: 0%;

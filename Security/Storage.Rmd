@@ -1,9 +1,10 @@
 ---
 title: "FGB Security Tips: Storage"
-date: "2024-07-17; Version 4.1"
+date: "`r Sys.Date()`; Version 4.2"
 output: 
   html_document:
     theme: cerulean
+    anchor_sections: TRUE
     includes: 
       after_body: ../footer.html
     toc: true
@@ -20,6 +21,13 @@ output:
 
 body {
   font-family: 'Roboto', sans-serif;
+}
+
+/* the follow CSS code allows me to take the automatically included anchor sections (that I made active in the YAML with anchor_sections: TRUE) and change the icon that is shown from a hash to a link symbol from the bootstrap icon library */
+
+a.anchor-section::before {
+    content: "&#xe144";
+    font-family: 'Glyphicons Halflings';
 }
 
 #TOC {
@@ -204,7 +212,7 @@ table tr:nth-child(3)   {
 
 **This guide is about the storage of research data and documentation _during_ research. Information on how to [archive data](../rdm/definitions/Definitions.html#archivingdata){target="_blank"} is available [here](../rdm/archiving/ArchivingGuidelinesSummary.html){target="_blank"}.**
 
-## Faculty Storage Recommendations for Research Data
+## Faculty Storage Recommendations for Research Data {#FGBrecs}
 
 There are a variety of data storage options available at the VU which can get a bit confusing. FGB recommends **three primary options** for the storage of **research** data: [YODA](../rdm/tools/YODAInstructionsFGB.html){target="_blank"}, [Research Drive](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012856){target="_blank"}, and [SciStor](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012858){target="_blank"}. Additionally, 
 [Teams/SharePoint](https://services.vu.nl/esc?id=emp_taxonomy_topic&topic_id=4d4956d7978f09d0e553359fe153afb3){target="_blank"} has been approved for the storage of research data, **but FGB recommends only using it if the three primary options are not feasible because Teams suffers from various functionality issues.** You can always discuss your options with the [FGB Research Data Stewards](mailto:research.data.fgb@vu.nl) if you are unsure which option to use.
@@ -386,7 +394,7 @@ Encrypted portable storage is *always* a temporary solution. Its primary use is 
 \
 
 
-## Additional Tips for Data Storage
+## Additional Tips for Data Storage {#additionalTips}
 
 * You will often have several [data assets](../rdm/definitions/Definitions.html#dataasset){target="_blank"} each with its own [privacy risk](PrivacyRisks.html){target="_blank"} categorization. If you are storing all of these files in one storage location, choose the storage option that protects the data with the highest privacy risk. If a higher-risk data asset can be used to re-identify the research subjects in a lower-risk de-identified dataset (e.g. a key file (higher-risk) that can identify subjects in your pseudonymized questionnaires(lower-risk)) you should:
     + Store the higher risk data in a separate storage location from the lower risk data, or
@@ -402,7 +410,7 @@ Encrypted portable storage is *always* a temporary solution. Its primary use is 
 
 \
 
-## More Information and Gettting Access
+## More Information and Gettting Access {#moreInfo}
 
 * [FGB YODA Manual](../rdm/tools/YODAInstructionsFGB.html){target="_blank"}
   + [Getting access](https://yoda.vu.nl/site/getting-started/requesting-space.html){target="_blank"}

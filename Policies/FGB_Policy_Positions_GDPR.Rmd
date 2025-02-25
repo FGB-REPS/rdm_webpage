@@ -1,9 +1,12 @@
 ---
 title: "FGB Policy Positions on the GDPR"
-date: "`r Sys.Date()`; Version 2.2"
+date: "`r Sys.Date()`; Version 2.3"
 output:
   html_document: 
     theme: cerulean
+    anchor_sections: TRUE
+    includes: 
+      after_body: ../footer.html
 ---
 
 <!-- I used this code to allow me to generate html and docx at the same time:
@@ -41,6 +44,13 @@ body {
   padding-bottom: 40%;
   padding-right: 10%;
   padding-left: 10%;
+}
+
+/* the follow CSS code allows me to take the automatically included anchor sections (that I made active in the YAML with anchor_sections: TRUE) and change the icon that is shown from a hash to a link symbol from the bootstrap icon library */
+
+a.anchor-section::before {
+    content: "&#xe144";
+    font-family: 'Glyphicons Halflings';
 }
 
 h1.title {
@@ -95,8 +105,8 @@ The European General Data Protection Regulation (GDPR) specifies how personal da
 
 \
 
-<div id="art1">
-</div>
+
+### Position 1 {#art1}
 
 1.	[Directly identifying personal data](../rdm/definitions/Definitions.html#directID){target="_blank"} (e.g. name, address, contact information) may be maintained for the entire duration of a [research project](../rdm/definitions/Definitions.html#researchproject){target="_blank"} if this information is required to carry out the project. For example, it may be necessary to: contact individuals about the next phase of the project; contact participants for a follow-up project, if they have given consent to be contacted for that reason; or for communication with participants’ caregivers or teachers who may need to provide supplementary information about participants, but who should not know the identification code under which participants are registered by the research team. Directly identifying personal data should be stored separately from other research data, at a higher level of security than [indirectly identifying information](../rdm/definitions/Definitions.html#indirectID){target="_blank"} and they should only be accessible to those individuals (usually research assistants and data managers) who absolutely require access to them and only for the period for which access is required (i.e. once access is no longer required, access rights should be revoked). 
     a.	If it is not feasible to store directly identifying data in a separate storage location from all other research data, these data should be stored in a separate folder with controlled access rights to only those who need to know these data and ideally with encryption on the folder or the file itself that contains the data.
@@ -111,8 +121,7 @@ NB: The Security Tips on [De-identification](../Security/Deidentification.html){
 
 <br>
 
-<div id="art2">
-</div>
+### Position 2 {#art2}
 
 2.	The fundamental legal basis for conducting a [research project](../rdm/definitions/Definitions.html#researchproject){target="_blank"} using personal data should, in the majority of cases, be the informed and freely given consent of participants. Legitimate interests can in some specific cases be invoked as an alternative legal basis for conducting a research project if obtaining informed and freely given consent is impossible or would impair the aims of said project. In order to use legitimate interests as a legal ground for conducting a research project, the benefits of the research project must outweigh the rights of the individuals whose data are being used. Additional conditions are also required if [special categories of personal data](https://gdpr-info.eu/art-9-gdpr/){target="_blank"} will be processed on the basis of legitimate interests (see Rule 5 from [Privacy in Scientific Research – 10 Key Rules](https://assets.vu.nl/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/b55f1a58-e848-4b92-8a74-b62c646d6590/10%20key%20Privacy%20rules%20in%20scientific%20research.pdf){target="_blank"}). Situations where legitimate interests may be more appropriate than obtaining consent include, but are not limited to: 
     a.	Child abuse (cannot ethically inform the parents, but the child is <16 years old)
@@ -138,8 +147,7 @@ NB: Legitimate interests **CANNOT** be used as grounds to conduct any clinical r
 
 <br>
 
-<div id="art3">
-</div>
+### Position 3 {#art3}
 
 3.	FGB is working to meet the FAIR-principles and data sharing goals. However, almost all of the data utilized at FGB is about human subjects and the vast majority of this data cannot be sufficiently anonymized to both meet current definitions for anonymity and remain useful for new research. This means that when data are collected at FGB, researchers should ensure that informed consent is also obtained from participants for the reuse of the data, regardless of whether the data will be reused by the original research team or by new researchers at other institutions in the future. It should be clear to the subject reading the consent form whether they are giving consent to the former, the latter or both.
 
@@ -153,8 +161,7 @@ For research projects that have already started, but for which consent was not o
 
 <br>
 
-<div id="art4">
-</div>
+### Position 4 {#art4}
 
 4.	FGB researchers are encouraged to utilize existing sources of research data, for example, data found in research data repositories. Despite these data being available for reuse, it is still the responsibility of FGB researchers to: 
     a.	Determine whether the data could be considered personal data under the GDPR and, therefore, whether it is legal for the data to be reused;
@@ -166,39 +173,34 @@ Oftentimes, excessive effort would be required to determine who the research sub
 
 <br>
 
-<div id="art5">
-</div>
+### Position 5 {#art5}
 
 5.	A [research project](../rdm/definitions/Definitions.html#researchproject){target="_blank"} is exempt from the GDPR’s right to be forgotten if data erasure “renders impossible or seriously impairs the achievement of the objectives” of the project. If a study participant wishes to exercise this right, but the project is already in the analysis phase or later, researchers may refuse this right. The reasoning is that once data have been analysed, published and/or archived, the data can no longer be deleted without severely impairing the integrity and aims of the research. Regardless, requests for the right to be forgotten must always be forwarded to the VU Data Protection Officer (functionarisgegevensbescherming@vu.nl), who will lead the communications between the requesting participant and the researchers.
     a.	If a participant revokes their consent to a research project, the usage of any data already collected depends on the nature of the research project and the phase of the research cycle when consent is revoked. If a research project consists of repeated measurements and a participant revokes consent by saying that they no longer wish to be contacted or to take part in the study, all of the data collected up until that point may still be used, unless the individual exercises the right to be forgotten and the erasure of the data is not detrimental to the aims of the research project. If a participant revokes consent to the entirety of the research project, without invoking the right to be forgotten, and the research project is still in the data collection phase, the data do not need to be deleted, but they may not be used for analysis; if the research project is in the analysis phase or later when the participant revokes consent to the entirety of the research project, the data _**cannot**_ be deleted; these data however should be flagged as not to be used for any follow-up research projects.
 
 <br>
 
-<div id="art6">
-</div>
+### Position 6 {#art6}
 
 6.	Any requests from a research participant for the GDPR’s right to data portability[^1]  will be reviewed on a case-by-case basis with the VU Data Protection Officer (functionarisgegevensbescherming@vu.nl). Such requests are not expected to occur very often, and as such, FGB researchers are **NOT** required to prepare for any such requests (i.e. by ensuring that the data in question are machine-readable). FGB researchers are not obliged to execute requests for data portability if this would risk the privacy of other individuals or severely harm the aims of the research project, but, ultimately, the decision to approve a request for data portability lies with the Data Protection Officer for the VU. 
 
-<div id="art7">
-</div>
-
 <br>
+
+### Position 7 {#art7}
 
 7.	Long-term research projects should occasionally update consent. This should be done if there are any fundamental changes to the nature of the study, such as a change to the purpose of the study, the types of data collected, or any planned data sharing that was not mentioned earlier. FGB researchers should also review their consent forms every ten years to determine if consent needs to be refreshed. 
     a.	Consent forms from long-term research projects that started prior to the implementation of the GDPR should be reviewed for compliance with the GDPR. If found to be non-compliant, researchers must attempt to refresh participant consent. If it is not possible to obtain refreshed consent from all participants, for example, due to changes in contact information, data may continue to be used based on the original consent; however, an updated information letter about the changes to consent and participant rights should be made public, such as on a study website, so that the individuals who could not be contacted can find such information and can contact the researchers for more information, if necessary. FGB researchers can contact the FGB privacy champion for advice on what to include in this information letter. This [checklist](../legal/ICFchecklist.html){target="_blank"} also provides guidance on what information is needed.
 
 <br>
 
-<div id="art8">
-</div>
+### Position 8 {#art8}
 
 8.	FGB researchers are expected to assess whether a [Data Protection Impact Assessment](https://assets.vu.nl/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/ad3de0e7-b935-471a-8d31-51c06ba47c88/Privacy%20five-step%20plan.pdf){target="_blank"} (DPIA)[^2] must be completed and to complete the DPIA to the best of their abilities. The FGB privacy champion will provide initial advice on DPIAs and if complex issues are identified, the privacy champion will forward the DPIA to the privacy lawyers in VU Legal and Institutional Affairs for additional support. 
     a.	DPIAs should be occasionally refreshed for long-term research projects. For cohort studies with discreet collection phases, DPIAs should be reviewed and updated prior to each new collection phase if at least 5 years have elapsed since the last collection phase. Long-term registries (e.g. NTR, NAR) that are continuously collecting data should conduct a new DPIA at least every 5 to 10 years. Any research project that previously required a DPIA must complete a new DPIA if there are fundamental changes to the project, such as new purposes, new methods of data collection or new technologies being utilized for data collection and analysis.
 
 <br>
 
-<div id="art9">
-</div>
+### Position 9 {#art9}
 
 9.	Non-digital personal data (such as saliva samples or written documents) must be protected from theft, loss, damage and unauthorized access, just like any other personal data. Safe transport of non-digital data is described in the [FGB Security Tips on Physical Transport](../Security/PhysicalTransport.html#analog){target="_blank"}.
 

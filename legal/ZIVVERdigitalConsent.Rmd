@@ -1,9 +1,10 @@
 ---
 title: "Using ZIVVER for Digital Consent"
-date: "`r Sys.Date()`; Version 1.1"
+date: "`r Sys.Date()`; Version 1.2"
 output: 
   html_document:
     theme: cerulean
+    anchor_sections: TRUE
     includes: 
       after_body: ../footer.html
 ---
@@ -24,7 +25,12 @@ body {
   padding-bottom: 10%;
 }
 
+/* the follow CSS code allows me to take the automatically included anchor sections (that I made active in the YAML with anchor_sections: TRUE) and change the icon that is shown from a hash to a link symbol from the bootstrap icon library */
 
+a.anchor-section::before {
+    content: "&#xe144";
+    font-family: 'Glyphicons Halflings';
+}
 
 h1.title {
   font-size: 28px;

@@ -1,9 +1,10 @@
 ---
 title: "RDM Tools @ FGB: YODA"
-date: "`r Sys.Date()`; Version 1.5"
+date: "`r Sys.Date()`; Version 1.6"
 output: 
   html_document:
     theme: cerulean
+    anchor_sections: TRUE
     includes: 
       after_body: ../../footer.html
     toc: true
@@ -19,6 +20,13 @@ output:
 
 body {
   font-family: 'Roboto', sans-serif;
+}
+
+/* the follow CSS code allows me to take the automatically included anchor sections (that I made active in the YAML with anchor_sections: TRUE) and change the icon that is shown from a hash to a link symbol from the bootstrap icon library */
+
+a.anchor-section::before {
+    content: "&#xe144";
+    font-family: 'Glyphicons Halflings';
 }
 
 #TOC {

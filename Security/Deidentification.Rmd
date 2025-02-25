@@ -1,9 +1,10 @@
 ---
 title: "FGB Security Tips: De-identification of Data"
-date: "2023-10-18; Version 1.0.1"
+date: "`r Sys.Date()`; Version 1.1"
 output: 
   html_document:
     theme: cerulean
+    anchor_sections: TRUE
     toc: true
     toc_depth: 4
     toc_float: 
@@ -21,6 +22,14 @@ output:
 body {
   font-family: 'Roboto', sans-serif;
 }
+
+/* the follow CSS code allows me to take the automatically included anchor sections (that I made active in the YAML with anchor_sections: TRUE) and change the icon that is shown from a hash to a link symbol from the bootstrap icon library */
+
+a.anchor-section::before {
+    content: "&#xe144";
+    font-family: 'Glyphicons Halflings';
+}
+
 
 #TOC {
   left: 0%;
@@ -163,7 +172,7 @@ Once you have an idea of what your data assets are, consider the variables that 
 
 </details>
 
-#### Step 3: Assess if data can be de-identified during collection {#step3}
+#### Step 3: Assess if de-identification can start during data collection {#step3}
 
 <details>
 <summary>Expand for details</summary>

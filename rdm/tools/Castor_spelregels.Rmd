@@ -1,9 +1,12 @@
 ---
 title: "RDM Tools @ FGB: Castor 'Spelregels'"
-date: "`r Sys.Date()`; Version 1.0"
+date: "`r Sys.Date()`; Version 1.1"
 output: 
   html_document:
     theme: cerulean
+    anchor_sections: TRUE
+    includes: 
+      after_body: ../../footer.html
 ---
 
 ## {#CSS}
@@ -27,6 +30,14 @@ body {
   padding-right: 10%;
   padding-left: 10%;
 }
+
+/* the follow CSS code allows me to take the automatically included anchor sections (that I made active in the YAML with anchor_sections: TRUE) and change the icon that is shown from a hash to a link symbol from the bootstrap icon library */
+
+a.anchor-section::before {
+    content: "&#xe144";
+    font-family: 'Glyphicons Halflings';
+}
+
 
 h1.title {
   font-size: 28px;
@@ -67,30 +78,47 @@ li {
 
 Castor is a data management software that is available to FGB researchers, particularly those conducting medical research. You can find all the information you need to work with Castor in this [manual](https://helpdesk.castoredc.com/){target="_blank"}. However there are some additional rules ("spelregels") you must follow to use Castor at the Faculty.
 
-1. You _**must**_ use the Castor billing code. 
-    a. While it's possible to create an account and run a small study for free, if you do so without the billing code, the data are not sufficiently protected and you are not following GDPR requirements
-    b. You can request the billing code via research.data.fgb@vu.nl
-2. Ensure that you are using the Netherlands server for data storage
-    a. The Dutch version is accessed via [https://data.castoredc.com/](https://data.castoredc.com/){target="_blank"} 
-3. You _**must**_ activate two-factor authentication when you create your Castor account and you must keep this active the entire time you use Castor
-    a. Instructions on this are found [here](https://helpdesk.castoredc.com/en_US/2-introduction-and-getting-started/two-factor-authentication){target="_blank"}
-4. You are strongly advised to read the Castor manual, particularly the [EDC manual](https://helpdesk.castoredc.com/en_US/2-castor-edc-manual){target="_blank"}
-    a. The following sections are particularly important:
-        i. [How to use Castor EDC system in a secure way - Best practices](https://helpdesk.castoredc.com/en_US/2-introduction-and-getting-started/how-to-use-castor-edc-system-in-a-secure-way-best-practices){target="_blank"}
-        ii. [Castor EDC/CMDS Tips and tricks - Before starting](https://helpdesk.castoredc.com/en_US/2-introduction-and-getting-started/tips-and-tricks-before-starting){target="_blank"}
-        iii. [The structure of Castor EDC/CDMS](https://helpdesk.castoredc.com/en_US/2-create-your-study-forms/3-the-structure-of-castor){target="_blank"}
-        iv. [Field properties: validations (edit checks) and dependencies(field logic) in EDC/CDMS](https://helpdesk.castoredc.com/en_US/fields-and-field-properties/field-properties-validations-edit-checks-and-dependencies-field-logic){target="_blank"}
-        v. [The 'Users' tab (User Management) in EDC/CDMS](https://helpdesk.castoredc.com/en_US/manage-your-study/the-users-tab-user-management){target="_blank"}
-        vi. [Encryption module](https://helpdesk.castoredc.com/en_US/encryption-module){target="_blank"}
-        vii. [EDC/CDMS Tips for Data Managers](https://helpdesk.castoredc.com/en_US/tips-for-data-managers/tips-for-data-managers){target="_blank"}
-5. You should [encrypt](https://helpdesk.castoredc.com/en_US/encryption-module/encrypt-specific-fields){target="_blank"} fields in Castor that contain [highly sensitive](../../Security/PrivacyRisks.html){target="_blank"} information
-    a. This is a minimum requirement for information like name, date of birth or other [direct identifiers](../definitions/Definitions.html#directID){target="_blank"}
-    b. If a single field contains a lot of detailed information about a participant, such as an open text field, this should also be encrypted
-6. When you complete your research you should follow the [Castor guidance](https://helpdesk.castoredc.com/can-i-lock-and-archive-my-study-once-it-is-complete?from_search=99167795){target="_blank"} on ending a study. Additionally you must do the following:
-    a. After all data have been exported from Castor, they should be securely stored on a VU storage option. 
-        i. If the data are still being analysed, you can find an appropriate solution via the [VU Storage Finder](https://vu.nl/en/research/storagefinder){target="_blank"}
-        ii. If all analyses are complete and the data only need to be archived, the exported data must be archived in a [VU archive]https://rdm.vu.nl/guides/publish-and-share.html#selecting-an-archive){target="_blank"}
-    b. Once all of the data have been securely stored or archived at the VU, contact [Castor Support](https://helpdesk.castoredc.com/contact-us){target="_blank"} to have all of the data stored by Castor deleted. Otherwise the data will be automatically stored on Castor's servers for 25 years.
+### Step 1 {#step1}
+
+* You _**must**_ use the Castor billing code.
+    + While it's possible to create an account and run a small study for free, if you do so without the billing code, the data are not sufficiently protected and you are not following GDPR requirements
+    + You can request the billing code via research.data.fgb@vu.nl
+
+### Step 2 {#step2}
+
+* Ensure that you are using the Netherlands server for data storage
+    + The Dutch version is accessed via [https://data.castoredc.com/](https://data.castoredc.com/){target="_blank"} 
+
+### Step 3 {#step3}
+
+* You _**must**_ activate two-factor authentication when you create your Castor account and you must keep this active the entire time you use Castor
+    + Instructions on this are found [here](https://helpdesk.castoredc.com/en_US/2-introduction-and-getting-started/two-factor-authentication){target="_blank"}
+
+### Step 4 {#step4}
+
+* You are strongly advised to read the Castor manual, particularly the [EDC manual](https://helpdesk.castoredc.com/en_US/2-castor-edc-manual){target="_blank"}
+    + The following sections are particularly important:
+        + [How to use Castor EDC system in a secure way - Best practices](https://helpdesk.castoredc.com/en_US/2-introduction-and-getting-started/how-to-use-castor-edc-system-in-a-secure-way-best-practices){target="_blank"}
+        + [Castor EDC/CMDS Tips and tricks - Before starting](https://helpdesk.castoredc.com/en_US/2-introduction-and-getting-started/tips-and-tricks-before-starting){target="_blank"}
+        + [The structure of Castor EDC/CDMS](https://helpdesk.castoredc.com/en_US/2-create-your-study-forms/3-the-structure-of-castor){target="_blank"}
+        + [Field properties: validations (edit checks) and dependencies(field logic) in EDC/CDMS](https://helpdesk.castoredc.com/en_US/fields-and-field-properties/field-properties-validations-edit-checks-and-dependencies-field-logic){target="_blank"}
+        + [The 'Users' tab (User Management) in EDC/CDMS](https://helpdesk.castoredc.com/en_US/manage-your-study/the-users-tab-user-management){target="_blank"}
+        + [Encryption module](https://helpdesk.castoredc.com/en_US/encryption-module){target="_blank"}
+        + [EDC/CDMS Tips for Data Managers](https://helpdesk.castoredc.com/en_US/tips-for-data-managers/tips-for-data-managers){target="_blank"}
+        
+### Step 5 {#step5} 
+
+* You should [encrypt](https://helpdesk.castoredc.com/en_US/encryption-module/encrypt-specific-fields){target="_blank"} fields in Castor that contain [highly sensitive](../../Security/PrivacyRisks.html){target="_blank"} information
+    + This is a minimum requirement for information like name, date of birth or other [direct identifiers](../definitions/Definitions.html#directID){target="_blank"}
+    + If a single field contains a lot of detailed information about a participant, such as an open text field, this should also be encrypted
+
+### Step 6 {#step6}
+
+* When you complete your research you should follow the [Castor guidance](https://helpdesk.castoredc.com/can-i-lock-and-archive-my-study-once-it-is-complete?from_search=99167795){target="_blank"} on ending a study. Additionally you must do the following:
+    + After all data have been exported from Castor, they should be securely stored on a VU storage option. 
+        + If the data are still being analysed, you can find an appropriate solution via the [VU Storage Finder](https://vu.nl/en/research/storagefinder){target="_blank"}
+        + If all analyses are complete and the data only need to be archived, the exported data must be archived in a [VU archive](https://rdm.vu.nl/guides/publish-and-share.html#selecting-an-archive){target="_blank"}
+    + Once all of the data have been securely stored or archived at the VU, contact [Castor Support](https://helpdesk.castoredc.com/contact-us){target="_blank"} to have all of the data stored by Castor deleted. Otherwise the data will be automatically stored on Castor's servers for 25 years.
 
 
 

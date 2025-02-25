@@ -1,23 +1,72 @@
 ---
 title: "Archiving @ FGB: Summary of FGB Archiving Guidelines"
-date: "`r Sys.Date()`; Version 1.6"
+date: "`r Sys.Date()`; Version 1.7"
 output: 
   html_document:
     theme: cerulean
+    anchor_sections: TRUE
+    toc: yes
+    toc_depth: 3
+    toc_float:
+      collapsed: no
+      smooth_scroll: yes
+    includes: 
+      after_body: ../../footer.html
 ---
-## {#CSS}
+
 
 <style type="text/css">
 
 
+#TOC {
+  left: 0%;
+  top: 0%;
+}
+
+
+
+div.tocify {
+  width: 15%;
+}
+
+.tocify ul, .tocify li {
+  line-height: 25px;
+}
+
+.tocify-header .tocify-item {
+  font-size: 1.2em;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 1.1em;
+}
+
+/* following two commands get the text of TOC to indent properly */
+
+.tocify-header {
+    text-indent: initial;
+}
+
+.tocify-subheader > .tocify-item {
+  text-indent: initial;
+  padding-left: 2em;
+}
+
+/* max-width refused to change below unless I included the !important tag next to it. Found answer on this stack exchange https://stackoverflow.com/questions/34906002/increase-width-of-entire-html-rmarkdown-output 
+Seems only to be an issue when using TOC; not required to use !important on pages without TOC */
+
 .main-container {
-  max-width: 80%;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 100% !important;
+  padding-right: 5%;
   padding-top: 5%;
-  padding-bottom: 30%;
-  padding-right: 10%;
-  padding-left: 10%;
+  padding-bottom: 10%;
+}
+
+/* the follow CSS code allows me to take the automatically included anchor sections (that I made active in the YAML with anchor_sections: TRUE) and change the icon that is shown from a hash to a link symbol from the bootstrap icon library */
+
+a.anchor-section::before {
+    content: "&#xe144";
+    font-family: 'Glyphicons Halflings';
 }
 
 /* need to ensure all text is in Roboto so as to be in-line with VU house style*/
@@ -96,10 +145,8 @@ The following is a summary of the [FGB Implementation of the National Guidelines
 
 -------------------------
 
-<div id="whyarchive">
-<details>
-<summary>Why Archiving?</summary> 
-<br>
+## Why Archiving? {#whyarchive}
+
 Data and supplementary materials from your research should be archived because:
 
 * Archiving promotes research integrity and transparency by:
@@ -115,13 +162,9 @@ Data and supplementary materials from your research should be archived because:
 Summarized from guideline sections: [1](ArchivingGuidelinesFull.html#section1){target=_blank} and [1.1](ArchivingGuidelinesFull.html#section1.1){target=_blank}
 </div>
 
-</details>
-</div>
-<br>
-<div id="whatarchive">
-<details>
-<summary>What to Archive?</summary> 
-<br>
+
+## What to Archive? {#whatarchive}
+
 You should archive whatever would be necessary to properly interpret your data. This includes data, but also documentation about the data and the research process, as well as code scripts used in the process of your research
 
 * There should be sufficient documentation in the archived materials so that another researcher could reanalyse your data and reproduce your research results without ever contacting you. 
@@ -138,13 +181,9 @@ Summarized from guideline sections: [2.1](ArchivingGuidelinesFull.html#section2.
 
 <!--Could maybe add a statement here about PURE registration?-->
 
-</details>
-</div>
-<br>
-<div id="whenarchive">
-<details>
-<summary>When to Archive?</summary> 
-<br>
+
+## When to Archive? {#whenarchive} 
+
 A data package *must* be archived whenever you publish a research article. Researchers are expected to manage their data efficiently during the course of their research so that they can archive the data and supporting materials **as soon as their research article is accepted for publication**. 
  
 Additionally, archiving is recommended, but not required, when:
@@ -157,14 +196,8 @@ Additionally, archiving is recommended, but not required, when:
 Summarized from guideline sections: [1.1](ArchivingGuidelinesFull.html#section1.1){target=_blank} and [2.2](ArchivingGuidelinesFull.html#section2.2){target=_blank}
 </div>
 
-</details>
-</div>
-<br>
-<div id="wherearchive">
-<details>
-<summary>Where to Archive?</summary> 
-<br>
 
+## Where to Archive? {#wherearchive} 
 
 <!--Include the follow section when further along with a page on the various archives and which one to pick
 * The choice of archive depends mainly on the privacy and security risks of the data and materials in the archiving package. See this [page](SecureArchiving.html){target="_blank"} for more information on which archive to choose.
@@ -183,16 +216,11 @@ The vast majority of data used within the faculty is considered [personal data](
 <br>
 <div class="reference">
 Summarized from guideline sections: [1.3](ArchivingGuidelinesFull.html#section1.3){target=_blank}, [2.1.1](ArchivingGuidelinesFull.html#subsection4){target=_blank} and [3.3](ArchivingGuidelinesFull.html#section3.3){target=_blank}
-
 </div>
-</details>
-</div>
-<br>
-<div id="whoarchive">
-<details>
-<summary>Who Needs to Archive?</summary> 
 
-### Who do the guidelines apply to?
+## Who Needs to Archive? {#whoarchive}
+
+### Who do the guidelines apply to? {#guidelinesapply}
 
 * The FGB archiving guidelines apply to all researchers conducting research within the faculty. 
 
@@ -200,7 +228,7 @@ Summarized from guideline sections: [1.3](ArchivingGuidelinesFull.html#section1.
   + For Bachelor's and one-year Master's students who don't publish any research articles, it is still recommended that they provide an informal data package of their work to their supervisor as a way to practice archiving. The supervisor can decide whether these materials needs to be preserved.
 
 
-### Who is responsible for archiving?
+### Who is responsible for archiving? {#responsibleparty}
 
 * If you are the first author on a research paper, you are responsible for archiving. If the first author works at another research facility, you should make sure that the first author will ensure that the data are archived.
 
@@ -212,7 +240,7 @@ Summarized from guideline sections: [1.3](ArchivingGuidelinesFull.html#section1.
 
 
 
-### Who should have access to the archived data?
+### Who should have access to the archived data? {#accessrequirements}
 
 * Whoever is responsible for archiving should have access to the archived data and supporting materials.
   + There should also be at least one other person who also has access to the archived materials.
@@ -222,13 +250,9 @@ Summarized from guideline sections: [1.3](ArchivingGuidelinesFull.html#section1.
 Summarized from guideline sections: [1.2](ArchivingGuidelinesFull.html#section1.2){target=_blank}, [2.3](ArchivingGuidelinesFull.html#section2.3){target=_blank} and [2.4](ArchivingGuidelinesFull.html#section2.4){target=_blank}
 </div>
 
-</details>
-</div>
-<br>
-<div id="howlong">
-<details>
-<summary>How Long Should Archiving Last?</summary>
-<br>
+
+## How Long Should Archiving Last? {#howlong}
+
 The duration of archiving depends on the reason you are archiving as well as on other policies and laws.
 
 * For research that isn't subject to the [WMO law](https://english.ccmo.nl/investigators/legal-framework-for-medical-scientific-research/your-research-is-it-subject-to-the-wmo-or-not){target="_blank"}, the [Good Clinical Practice (GCP) Guidelines](https://www.ema.europa.eu/en/documents/scientific-guideline/guideline-content-management-archiving-clinical-trial-master-file-paper/electronic_en.pdf){target="_blank"} or the other regulations mentioned in [section 1.1](ArchivingGudelinesFull.html#section1.1){target="_blank"} of the full archiving guidelines:
@@ -247,13 +271,9 @@ The duration of archiving depends on the reason you are archiving as well as on 
 Summarized from guideline section: [3.1](ArchivingGuidelinesFull.html#section3.1){target=_blank}
 </div>
 
-</details>
-</div>
-<br>
-<div id="privacy_security">
-<details>
-<summary>How Do I Meet Privacy and Security Requirements?</summary>
-<br>
+
+## How Do I Meet Privacy and Security Requirements? {#privacy_security}
+
 It is important that the archived data are protected, particularly when these data are considered [personal](../definitions/Definitions.html#personaldata){target="_blank"}, but you must also ensure that the integrity of the raw data is maintained. 
 
 * Raw data can usually be [de-identified](../../Security/Deidentification.html){target="_blank"}, but it's important that they are not irrevocably altered in the process. Generally, you can  de-identify the data up to step 4 of this de-identification [guide](../../Security/Deidentification.html#Step_4:_Separate_the_direct_identifiers_from_research_data){target="_blank"} without irrevocably altering the raw data. **Only de-identify raw data to a point where it could be returned to its original state**.
@@ -280,12 +300,7 @@ Summarized from guideline sections: [1.3](ArchivingGuidelinesFull.html#section1.
 [3.3](ArchivingGuidelinesFull.html#section3.3){target=_blank}
 </div>
 
-</details>
-<br>
-<div id="addtl_info">
-<details>
-<summary>Anything else?</summary>
-<br>
+## Anything else? {#addtl_info}
 
 Archived data must be persistently findable when the data are used in a research publication. Archived data must also be registered in PURE for VU administrative purposes. FGB researchers can meet these requirements by archiving their data in YODA and publishing those data, even if the data are kept closed or restricted access to prevent/limit [data reuse](../definitions/Definitions.html#reusedata){target="_blank"} of the data. The metadata published in YODA will be automatically uploaded to PURE, meaning the researcher is not required to make a separate PURE registration. 
 
@@ -293,6 +308,4 @@ Archived data must be persistently findable when the data are used in a research
 <div class="reference">
 Summarized from guideline section: [4](ArchivingGuidelinesFull.html#purereg){target=_blank}
 </div>
-</details>
-</div>
-<br>
+
