@@ -1,6 +1,6 @@
 ---
 title: "FGB Security Tips: De-identification of Data"
-date: "`r Sys.Date()`; Version 1.1"
+date: "`r Sys.Date()`; Version 1.2"
 output: 
   html_document:
     theme: cerulean
@@ -344,17 +344,9 @@ Before considering the various types of data, you should have an idea of what va
 
 ### What now?
 
-Once you've gone through these steps, you've made your data a lot less identifiable and perhaps also a lot easier to analyse. Before assuming that your data are anonymous at this point, it's important to be aware that for data to be considered anonymous by European legal bodies all of the three following considerations apply:
+Once you've gone through these steps, you've made your data a lot less identifiable and perhaps also a lot easier to analyse. However, before assuming that your data are fully anonymous at this point, check with the [faculty privacy champions](mailto:research.data.fgb@vu.nl) because the legal interpretation of what constitutes anonymous data can be quite strict, particularly in higher-risk circumstances. 
 
-* It must **not** be possible to single out at least one unique person in the dataset
-* It must **not** be possible to couple together a person's record across different datasets
-* It must **not** be possible to assume, with a strong likelihood, specific information about a person based on the other information present in the dataset
-
-These requirements are pretty difficult to meet. For example, MRI data will always be unique to an individual, unless you spatially normalize it. This doesn't mean that it's impossible to achieve anonymous data, but there may be further work required to get to that level *and* the anonymized data may not be so useful anymore for your planned research analyses. 
-
-**The most important thing to remember is that after you've gone through the de-identification steps in this guide, check whether the three conditions above apply before assuming that your data are now anonymized.**
-
-Lastly, don't forget that most research data doesn't exist in a bubble; you rarely just have imaging data or questionnaire data or physical measurements. The more data you have about a person the easier they are to re-identify. 
+Lastly, don't forget that most research data doesn't exist in a bubble; you rarely just have imaging data or questionnaire data or physical measurements. The more data you have about a person that can all be linked together into one record, the easier that person is to re-identify. When linkage of records is still possible (e.g. through a random identifier), an otherwise anonymous dataset won't be anonymous without the removal of the link. The [faculty privacy champions](mailto:research.data.fgb@vu.nl) can guide you further on how to address this issue while still meeting your GDPR requirements.
 
 
 

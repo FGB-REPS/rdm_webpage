@@ -1505,7 +1505,7 @@ font-size: 0.95em;
 
 <h1 class="title toc-ignore">FGB Security Tips: De-identification of
 Data</h1>
-<h4 class="date">2025-02-25; Version 1.1</h4>
+<h4 class="date">2025-03-03; Version 1.2</h4>
 
 </div>
 
@@ -2098,33 +2098,21 @@ themes, but are generic enough to not be identifying?</p></li>
 <div id="what-now" class="section level3 hasAnchor">
 <h3 class="hasAnchor">What now?<a href="#what-now" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Once you’ve gone through these steps, you’ve made your data a lot
-less identifiable and perhaps also a lot easier to analyse. Before
-assuming that your data are anonymous at this point, it’s important to
-be aware that for data to be considered anonymous by European legal
-bodies all of the three following considerations apply:</p>
-<ul>
-<li>It must <strong>not</strong> be possible to single out at least one
-unique person in the dataset</li>
-<li>It must <strong>not</strong> be possible to couple together a
-person’s record across different datasets</li>
-<li>It must <strong>not</strong> be possible to assume, with a strong
-likelihood, specific information about a person based on the other
-information present in the dataset</li>
-</ul>
-<p>These requirements are pretty difficult to meet. For example, MRI
-data will always be unique to an individual, unless you spatially
-normalize it. This doesn’t mean that it’s impossible to achieve
-anonymous data, but there may be further work required to get to that
-level <em>and</em> the anonymized data may not be so useful anymore for
-your planned research analyses.</p>
-<p><strong>The most important thing to remember is that after you’ve
-gone through the de-identification steps in this guide, check whether
-the three conditions above apply before assuming that your data are now
-anonymized.</strong></p>
+less identifiable and perhaps also a lot easier to analyse. However,
+before assuming that your data are fully anonymous at this point, check
+with the <a href="mailto:research.data.fgb@vu.nl">faculty privacy
+champions</a> because the legal interpretation of what constitutes
+anonymous data can be quite strict, particularly in higher-risk
+circumstances.</p>
 <p>Lastly, don’t forget that most research data doesn’t exist in a
 bubble; you rarely just have imaging data or questionnaire data or
-physical measurements. The more data you have about a person the easier
-they are to re-identify.</p>
+physical measurements. The more data you have about a person that can
+all be linked together into one record, the easier that person is to
+re-identify. When linkage of records is still possible (e.g. through a
+random identifier), an otherwise anonymous dataset won’t be anonymous
+without the removal of the link. The <a href="mailto:research.data.fgb@vu.nl">faculty privacy champions</a> can
+guide you further on how to address this issue while still meeting your
+GDPR requirements.</p>
 </div>
 
 
