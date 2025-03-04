@@ -1,6 +1,6 @@
 ---
 title: "Research Data Management Policy for the Faculty of Behavioural and Movement Sciences"
-date: "`r Sys.Date()`; Version 2.8"
+date: "`r Sys.Date()`; Version 2.9"
 output:
   html_document:
     theme: cerulean
@@ -285,7 +285,7 @@ Reference to the other policy and guideline documents, specifically the archivin
 
 [FGB implementation of the “National Guidelines for Archiving of Academic Research for Faculties of Behavioural and Social Sciences” (2022)](https://vu.nl/en/employee/research-data-management-fbms/policies-guidelines-fgb){target="_blank"}
 
-[VU Research Data Management Policy of VU Amsterdam (Version 2.0, 2020)](https://libguides.vu.nl/ld.php?content_id=35189052){target="_blank"}
+[VU Research Data Management Policy of VU Amsterdam (Version 3.0, 2024)](https://rdm.vu.nl/public/policies-regulations/RDSM-policy-VU-EN-v3.0.pdf){target="_blank"}
 
 [VSNU Code of Conduct for Research Integrity (2018)](https://www.nwo.nl/sites/nwo/files/documents/Netherlands%2BCode%2Bof%2BConduct%2Bfor%2BResearch%2BIntegrity_2018_UK.pdf){target="_blank"}
 
