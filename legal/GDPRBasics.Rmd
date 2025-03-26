@@ -223,7 +223,7 @@ The GDPR requires that you adequately protect the data you are working with. The
 
 * FGB has set out some policy positions on how to handle certain aspects of the GDPR with regards to research in the faculty. You can find that information [here](../Policies/FGB_Policy_Positions_GDPR.html){target="_blank"}.
 
-* FGB also has a [workflow for processing standard privacy agreements](../Images/privacy_agreement_flow_fgb_2025.pdf) that all FGB staff should be aware of and follow.
+* FGB also has a [workflow for processing standard privacy agreements](../Images/privacy_agreement_flow_fgb_2025.pdf){target="_blank"} that all FGB staff should be aware of and follow.
 
 * Your starting point for support on privacy and research in the faculty is always the [FGB Privacy Champion](mailto:research.data.fgb@vu.nl). 
 

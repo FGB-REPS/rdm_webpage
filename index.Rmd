@@ -1,6 +1,6 @@
 ---
 title: "Research Data Management @ FGB"
-date: "`r Sys.Date()`; version 1.1"
+date: "`r Sys.Date()`; version 1.2"
 output: 
   html_document:
     theme: cerulean
@@ -98,7 +98,7 @@ li {
 * [GDPR Take-home points](legal/GDPRBasics.html){target="_blank"}
 * [Informed Consent Form and Information Letter Checklist](legal/ICFChecklist.html){target="_blank"}
 * [How to use ZIVVER to obtain digital consent](legal/ZIVVERdigitalConsent.html){target="_blank"}
-* [Workflow for processing standard privacy agreements](Images/privacy_agreement_flow_fgb_2025.pdf)
+* [Workflow for processing standard privacy agreements](Images/privacy_agreement_flow_fgb_2025.pdf){target="_blank"}
 
 
 # Financial Concerns
