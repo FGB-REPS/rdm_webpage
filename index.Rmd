@@ -103,5 +103,5 @@ li {
 
 # Financial Concerns
 
-* [Bulk participant declarations form](finance/bulk_participant_declarations/participant_declarations_instructions_EN.html){target="_blank"}
+* [Bulk participant declarations form](finance/participant_declarations_instructions_EN.html){target="_blank"}
 * [Registration form for WMO research requiring participants' insurance](https://fgbto3-web.labs.vu.nl/rdm/wmo-insurance/){target="_blank"}
