@@ -98,3 +98,10 @@ li {
 * [GDPR Take-home points](legal/GDPRBasics.html){target="_blank"}
 * [Informed Consent Form and Information Letter Checklist](legal/ICFChecklist.html){target="_blank"}
 * [How to use ZIVVER to obtain digital consent](legal/ZIVVERdigitalConsent.html){target="_blank"}
+* [Workflow for processing standard privacy agreements](Images/privacy_agreement_flow_fgb_2025.pdf)
+
+
+# Financial Concerns
+
+* [Bulk participant declarations form](finance/bulk_participant_declarations/participant_declarations_instructions_EN.html){target="_blank"}
+* [Registration form for WMO research requiring participants' insurance](https://fgbto3-web.labs.vu.nl/rdm/wmo-insurance/){target="_blank"}
