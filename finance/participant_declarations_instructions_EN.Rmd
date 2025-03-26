@@ -2,14 +2,10 @@
 title: "Bulk Participant Declarations Instructions"
 date: "2024-02-19"
 output:
-  word_document: default
   html_document:
     theme: cerulean
     include:
       before_body: header_EN.html
-knit: (function(inputFile, encoding) {
-  rmarkdown::render(inputFile, encoding = encoding,
-  output_format = "all") })
 ---
 
 

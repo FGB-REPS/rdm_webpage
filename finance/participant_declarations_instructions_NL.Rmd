@@ -2,14 +2,10 @@
 title: "Handleiding gebruik formulier t.b.v. vergoeding onderzoeksparticipanten"
 date: "2024-02-19"
 output:
-  word_document: default
   html_document:
     include:
       before_body: header_NL.html
     theme: cerulean
-knit: (function(inputFile, encoding) {
-  rmarkdown::render(inputFile, encoding = encoding,
-  output_format = "all") })
 ---
 
 
