@@ -1,0 +1,119 @@
+---
+title: "Handleiding gebruik formulier t.b.v. vergoeding onderzoeksparticipanten"
+date: "2024-02-19"
+output:
+  word_document: default
+  html_document:
+    include:
+      before_body: header_NL.html
+    theme: cerulean
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding,
+  output_format = "all") })
+---
+
+
+<style type="text/css">
+
+/* change font for whole text so that it's in line with house style. For webpages that is Roboto  */
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.main-container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 40%;
+  padding-right: 10%;
+  padding-left: 10%;
+}
+
+h1.title {
+  font-size: 36px;
+  text-align: center;
+}
+
+h4.date { /* this is to affect the size of the date text in the YAML when it prints in html  */
+  font-size: 28px;
+  text-align: center;
+}
+
+/* improve contrast for all a-tags and headers for accessibility */
+
+a {
+  color: #157bb7;
+}
+
+h1, h2, h3, h4 {
+  color: #105d89;
+}
+
+p {
+  font-size: 18px;
+}
+
+li {
+  font-size: 18px;
+  margin: 5px;
+}
+
+.footnotes {
+  color: #737373;
+}
+
+</style>
+
+
+
+Dit  Qualtrics template dient te worden gebruikt om gegevens te verzamelen van onderzoeksparticipanten die vergoed worden voor hun deelname aan jouw onderzoek. 
+Deze handleiding legt uit hoe:
+
+* [Het Qualtrics template te gebruiken](#form)
+* [De Excel export van de verzamelde data te genereren](#export)
+* [Deze export met VU Financiën kan worden gedeeld en tot uitbetaling kan worden overgegaan](#lastSteps)
+
+## Voorbereiding declaratieformulier {#form}
+
+1. Kies voor een “nieuw project aanmaken” in Qualtrics en selecteer de optie "een nieuwe enquête" maken
+2. Kies een geschikte titel zoals “Vergoedingsformulier voor Onderzoeksproject X”. Selecteer onder “Hoe wilt u uw enquête beginnen?”  de optie “Een QSF-bestand importeren” en importeer het template dat door REPS aan je is verstrekt. 
+3. Verander **géén** van de namen of velden in de enquête. De introductietekst mag wel worden aangepast. Vervang alleen de tekst binnen de {} met informatie die van toepassing is op jouw onderzoek.  
+    a. Kies een sluitingsdatum, vóór deze datum dient het formulier door de participant te zijn ingevuld. Dit voorkomt individuele declaraties op enig moment.
+    b. In principe ben jij of iemand anders uit het project contactpersoon voor vragen. Uiteraard is het [FGB REPS team](mailto:research.data.fgb@vu.nl) voor jou beschikbaar als je het antwoord op de vraag niet weet.
+4. Selecteer “Enquêteopties” voordat je het formulier publiceert (4e icoon links boven). Kies daarna voor “Beveiliging” en controleer het volgende:
+    a.  De enquête moet voor iedereen beschikbaar zijn
+    b. "Meerdere keren indienen voorkomen" moet **uit** staan
+    c. "Indexering voorkomen" moet **aan** zijn gevinkt
+    d. "Antwoorden anonimiseren" **moet aan** zijn gevinkt (IP-adressen/locatie data mag niet worden verzameld!)
+5. Selecteer “Publiceren” wanneer het formulier gereed is. Kies daarna bij “Distributies” voor de optie “Anonieme link”. Deze anonieme link dien je aan de participanten te verstrekken zodat zij het formulier kunnen invullen.
+
+
+## Data exporteren en bulk Excel overzicht voorbereiden {#export}
+
+1. Na de sluitingsdatum , selecteer je bij het tabblad “Distributies” voor “Antwoordenverzameling pauzeren”. Selecteer de eerste optie, deze voorkomt dat respondenten het formulier nog kunnen invullen. Indien het formulier gedeeltelijk is ingevuld wordt dit wel bewaard.
+    a. Wanneer een respondent de deadline heeft gemist of het formulier gedeeltelijk heeft ingevuld en contact opneemt, dan kan de antwoordverzameling worden hervat.
+2. Kies voor het tabblad “Gegevens en analyse” en selecteer “Exporteren en importeren”. Selecteer daarna “Gegevens exporteren” en kies voor de “Excel” export optie. **Laat hierbij  de default opties staan** (“Alle velden downloaden” en “Keuzetekst gebruiken” moeten geselecteerd zijn)
+3. Open de Excel download:
+    a. Verwijder de volgende onnodige velden: “StartDate” t/m “UserLanguage”. **De eerste kolom in het overzicht moet “Initialen” zijn.** <br/>
+        NB: De kolomvolgorde is belangrijk voor VU Financiën, dus download alle velden en verwijder alleen hetgeen hierboven aangegeven.
+    b. Verwijder de tweede regel van de export (de regel die de tekst van de vragen bevat) zodat enkel de regel met de naam van de kolommen plus de gegevens van de participanten overblijven.
+    c. Controleer de laatste variabelen in het overzicht (“XtraToelichtVERWIJDR”) om te kijken of respondenten informatie hebben ingevuld. Als er informatie aanwezig is, vervang de tekst in de  velden “Anders” met de informatie van de respondent. Zodra je dit heb gedaan, verwijder dan deze extra kolommen uit het Excel overzicht. **De laatste kolom moet “DeclaratieBedrag” zijn (dit moet kolom Y zijn)**.
+        + NB1: Wanneer de respondent de volledige naam van een land heeft ingevuld, zet dit dan om naar een 2-letter ISO-code. Je kan de juiste codes [hier](https://www.iso.org/obp/ui/#home){target="_blank"} vinden. De BIC/SWIFT code moet altijd 11-karakters lang zijn en dus aangevuld met “XXX” indien korter dan 11 karakters.
+        + NB2: Het is onwaarschijnlijk dat je deze extra (bovenstaande) stap moet doen. Indien dit wel een enkele keer moet **zorg dan dat je niet vergeet de extra kolommen te verwijderen voordat je het overzicht naar VU Financiën verstuurd!**
+4. Vul de volgende velden in met informatie over je onderzoek. Deze velden bevatten dezelfde informatie voor alle participanten, dus je hoeft enkel de eerste regel in te vullen en vervolgens een drag-down om de informatie te kopiëren naar alle regels:
+    a. "VUReferentie" is het WBS Element waarop wordt bekostigd (max 50 karakters)
+    b. "KorteOmschrijving" moet ingevuld met de (korte) naam van de studie (max 25 karakters)
+    c. "Toelichting" moet ingevuld met relevante informatie voor de budgethouder, vooral als het een sub-studie binnen een groter onderzoeksproject betreft. Maak ook duidelijk dat het een vergoeding voor participanten betreft (max 1024 karakters)
+    d. "ValutaCode" moet ingevuld met EUR
+    e. "Declaratie bedrag" moet ingevuld worden met het bedrag dat de participanten dienen te ontvangen.
+5. Pas **GEEN** andere regels of kolommen aan. **"BSN", "Geboortedatum" en "Declaratieregel Omschrijving" moeten leeg blijven**
+
+
+## Laatste stappen {#lastSteps}
+
+Als het Excel overzicht klaar is, kun je deze indienen bij FSC Betalingsopdrachten via betalingsopdrachten.fsc@vu.nl.
+
+
+
+

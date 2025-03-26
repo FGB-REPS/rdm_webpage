@@ -1,0 +1,115 @@
+---
+title: "Bulk Participant Declarations Instructions"
+date: "2024-02-19"
+output:
+  word_document: default
+  html_document:
+    theme: cerulean
+    include:
+      before_body: header_EN.html
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding,
+  output_format = "all") })
+---
+
+
+<style type="text/css">
+
+/* change font for whole text so that it's in line with house style. For webpages that is Roboto  */
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.main-container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 40%;
+  padding-right: 10%;
+  padding-left: 10%;
+}
+
+h1.title {
+  font-size: 36px;
+  text-align: center;
+}
+
+h4.date { /* this is to affect the size of the date text in the YAML when it prints in html  */
+  font-size: 28px;
+  text-align: center;
+}
+
+/* improve contrast for all a-tags and headers for accessibility */
+
+a {
+  color: #157bb7;
+}
+
+h1, h2, h3, h4 {
+  color: #105d89;
+}
+
+p {
+  font-size: 18px;
+}
+
+li {
+  font-size: 18px;
+  margin: 5px;
+}
+
+.footnotes {
+  color: #737373;
+}
+
+</style>
+
+This template Qualtrics form must be used when collecting the information needed to reimburse research subjects for their participation in your research. The following instructions explain how to:
+
+* [Use and prepare the Qualtrics template declaration form](#form)
+* [Generate and prepare the Excel export of the collected data](#export)
+* [Share the export with VU Finance so that your participants can receive their reimbursement](#lastSteps)
+
+## Declaration Form Preparation {#form}
+
+1. Create a new project in Qualtrics and select the option to "create a Survey from scratch"
+2. Choose an appropriate title such as "Reimbursement Form for Research Study X". When you are prompted with the question "How do you want to start your survey?" select "Import a QSF file" and import the template Qualtrics form that the REPS team has provided
+3. Do not change any of the names or fields in the survey except for specific sections of text in the Introduction. Replace only the text within the {} with the correct information for your study. 
+    a. You must choose an appropriate closing date before which participants must fill in the form. This prevents individual declarations coming in at random times.
+    b. You or someone else within your own research project must serve as the contact person, but you are of course allowed to contact the [FGB REPS team](mailto:research.data.fgb@vu.nl) if you are uncertain how to answer a participant's question
+4. Before you publish the survey, select "Survey Options" from the 4th icon on the top left side of the screen. Go to "Security" and double check the following:
+    a. The survey should be available to anyone
+    b. "Prevent multiple submissions" should be **off**
+    c. "Prevent indexing" should be **on**
+    d. "Anonymize responses" **MUST be on** (you are not allowed to collect the IP addresses and other location data from the respondents!)
+5. Once the form is ready, select "Publish" and then from the "Distributions" tab select the "Anonymous link" option. Provide your participants with this anonymous link.
+
+
+## Exporting Data and Preparing Bulk Excel Sheet {#export}
+
+1. Once the closing date for requesting reimbursement has ended, go to the "Distributions" tab and select "Pause response collection". Select the first option shown which stops respondents from finishing their answers and records the partial responses.
+    a. If a respondent does not fill in all of their information or a respondent contacts you saying they missed the deadline, you can always unpause response collection to allow them to finish their application. 
+2. Go to the "Data & Analysis" tab and select "Export & Import". Then select "Export Data" and choose the "Excel" export option. **Do not change the default options** ("Download all fields" & "Use choice text" should both be selected)
+3. Open the downloaded Excel sheet and delete the unnecessary fields, as follows:
+    a. Remove the columns created by Qualtrics: these will be "StartDate" through "UserLanguage". **The first column in the final version of the spreadsheet must be "Initialen"** <br>
+      NB: The order of the columns is imperative to VU Finance, so it is safest to download all fields and delete the columns that are unnecessary.
+    b. Delete the second row of the export (the row that contains the text of the questions in the Qualtrics form). This should leave you with only a row of column names followed immediately by the respondent data
+    c. Check the last variables in the table that start with "XtraToelichtVERWIJDR" to see if any respondents filled in information in these fields regarding their home country, the country of their bank and/or their BIC/SWIFT code. If any information is listed here, replace the relevant fields that currently state "Other" with the information provided by the participant. Then delete these extra columns from the Excel sheet. **The last column of the Excel sheet must be "DeclaratieBedrag" and this must be in column "Y" in the spreadsheet**.
+        + NB1: If the respondent filled in the full name of their country, ensure that you only fill in the 2-letter code which can be found [here](https://www.iso.org/obp/ui/#home){target="_blank"}. The BIC/SWIFT code must be exactly 11 characters long; if this is not the case with the code provided by the participant, add "XXX" to the end of the code.
+        + NB2: It is unlikely that this extra step will be necessary. In either case **do not forget to delete the extra columns before submitting the spreadsheet to VU Finance!**
+4. Fill in the following fields with information about your study. These fields will be the same for all participants of a given study, so you can simply fill in the first few rows with the necessary information and use the drag-down option in Excel to copy the information to all other rows:
+    a. "VUReferentie" needs to be filled in with the WBS Element that will be used to declare the reimbursement costs (max 50 characters)
+    b. "KorteOmschrijving" needs to be filled in with the (short) Title of the Study (max 25 characters)
+    c. "Toelichting" should be filled in with further relevant information for the budget holder, especially if this declaration relates to a specific sub-study within a larger research project. Additionally, indicate that the submitted declaration is for participant reimbursement (max 1024 characters)
+    d. "ValutaCode" needs to be filled in with EUR
+    e. "Declaratie bedrag" needs to be filled in with the amount that the participant will receive for their participation
+5. Do **NOT** modify any other rows or columns. **"BSN", "Geboortedatum" and "Declaratieregel Omschrijving" must all be left blank**
+
+
+## Final Steps {#lastSteps}
+
+Once the Excel spreadsheet is complete, submit the spreadsheet to FSC Betalingsopdrachten via betalingsopdrachten.fsc@vu.nl. 
+
+
+
