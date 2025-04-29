@@ -1,6 +1,6 @@
 ---
-title: "Research Data Management Policy for the Faculty of Behavioural and Movement Sciences"
-date: "`r Sys.Date()`; Version 2.9"
+title: "Research Data & Software Management Policy for the Faculty of Behavioural and Movement Sciences"
+date: "`r Sys.Date()`; Version 3.0"
 output:
   html_document:
     theme: cerulean
@@ -15,31 +15,7 @@ output:
 ---
 
 
-<!-- I used this code to allow me to generate html and docx at the same time:
-output:
-  word_document:
-    toc: yes
-    toc_depth: '4'
-  html_document:
-    theme: cerulean
-    toc: yes
-    toc_depth: 4
-    toc_float:
-      collapsed: no
-      smooth_scroll: yes
-knit: (function(inputFile, encoding) {
-  rmarkdown::render(inputFile, encoding = encoding,
-  output_format = "all") })
 
-The word document is a temporary document, and I've ignored it in gitignore. The word document needs to be changed to DIN Pro font and then exported as a PDF "Best for electronic distribution" and store in ../../pdfs_rdm_framework/rdm_policy/1.currently_published_versions
-I have decided to no longer generate the word and PDF versions so this section is simply comment out
--->
-
-
-
-<!--
-Reference to the other policy and guideline documents, specifically the archiving guidelines and the GDPR policy positions goes through this hyperlink https://vu.nl/en/employee/research-data-management-fbms/policies-guidelines-fgb to avoid confusion or difficulty finding the right page with updates to the documents/pages
--->
 
 <style type="text/css">
 
@@ -138,16 +114,17 @@ li {
 
 ### Introduction {#introduction}
 
-This document describes the policy for research data management within the Faculty of Behavioural and Human Movement Sciences (FGB) and defines how the principles described in the VU Research Data Management Policy (Version 2.0, 17-2-2020) are to be implemented at the faculty level.
-The policy is also informed by the VSNU Code of Conduct for Research Integrity, the VSNU Code of Conduct on the Use of Personal Data in Scientific Research, the Federa Code of Conduct for Responsible Use of Human Tissue in Medical Research, the Federa Code of Conduct for the Use of Data in Health Research, the Standard Evaluation Protocol (SEP 2015-2021), ICH Good Clinical Practice Guidelines, the Medical Research with Humans Act (WMO), the Medical Treatment Agreement Act (WGBO), the General Data Protection Regulation (GDPR) and the national implementation of the GDPR (UAVG). 
+This document describes the policy for research data & software management within the Faculty of Behavioural and Human Movement Sciences (FGB) and defines how the principles described in the [VU Research Data and Software Management Policy (Version 3.0, 17-12-2024)](https://rdm.vu.nl/public/policies-regulations/RDSM-policy-VU-EN-v3.0.pdf){target="_blank"} are to be implemented at the faculty level.
+
+The policy is also informed by the VSNU Code of Conduct for Research Integrity, the VSNU Code of Conduct on the Use of Personal Data in Scientific Research, the Federa Code of Conduct for Responsible Use of Human Tissue in Medical Research, the Federa Code of Conduct for the Use of Data in Health Research, the Standard Evaluation Protocol (SEP 2021-2027), ICH Good Clinical Practice Guidelines, the Medical Research with Humans Act (WMO), the Medical Treatment Agreement Act (WGBO), the General Data Protection Regulation (GDPR) and the national implementation of the GDPR (UAVG). 
 
 Data are defined within FGB and this policy as digital/digitizable information (spreadsheets or databases consisting of values representing quantitative or qualitative variables; audiovisual recordings; transcriptions; imaging data) and non-digitizable data (human or animal tissue samples, handwritten notes, paper consent forms) in so far as the non-digitizable data must be maintained in their original form for a certain period of time.
 
 ### Purpose of this Policy {#purpose}
 
-This policy supplements the VU Research Data Management Policy by:
+This policy supplements the VU Research Data & Software Management Policy by:
 
-1.	Defining the roles and responsibilities within FGB regarding research data management
+1.	Defining the roles and responsibilities within FGB regarding research data & software management
 
 2.	Advising researchers on the balance between open science and data protection legislation
 
@@ -172,22 +149,22 @@ This policy supplements the VU Research Data Management Policy by:
 * [_Interoperable (meta)data_](../rdm/definitions/Definitions.html#interoperablemetadata){target="_blank"}
 
 
+
 ### Policy Principles {#principles}
 
-In addition to the points listed in the general VU Research Data Management Policy, the following policy principles apply within FGB:
+In addition to the points listed in the general VU Research Data & Software Management Policy, the following policy principles apply within FGB:
 
 1.	Research data management is an essential component of every research project. This means:
     a.	At a minimum, every new research project from the implementation date of this policy requires a data management plan if that project receives external funding.
     b.  Ongoing longitudinal cohort studies are advised to implement data management plans if this has not already been done. 
     c.	Research projects without external funding are still advised, but not required, to complete data management plans. 
-    d.	Research projects that started prior to the implementation date of this policy should, at a minimum, write a plan for archiving the data created during the research project.
-    e.	Data management plans should be updated whenever there are significant developments in a research project that impacts the collection, processing, analysis, storage, publication and/or deletion of the data.
+    d.	Data management plans should be updated whenever there are significant developments in a research project that impacts the collection, processing, analysis, storage, publication and/or deletion of the data.
 
 2.	Data should be made accessible for reuse through the application of the FAIR principles, while also respecting the constraints of privacy, ethics, facilities, and finances.[^1] 
 
 3.	Effective research data management skills and the FAIR-principles are essential elements in the education of PhD candidates and students following research-based Masters and Bachelors programs. 
 
-4.	Research data management requires teamwork within the faculty. Every individual should know their own responsibilities, but should also be aware of the support services available to them and make use of these services, as required.
+4.	Research data & software management requires teamwork within the faculty. Every individual should know their own responsibilities, but should also be aware of the support services available to them and make use of these services, as required.
 
 
 ### Responsibilities {#responsibilities}
@@ -197,36 +174,35 @@ In addition to the points listed in the general VU Research Data Management Poli
 1.	It is assumed that researchers know and apply the VSNU Scientific Code of Conduct for Research Integrity, the VSNU Code of Conduct on the Use of Personal Data in Scientific Research, the VU RDM Policy, and the FGB RDM policy. Researchers conducting research projects that fall under the purview of the WMO should also be familiar with the relevant legislation and codes of conduct as described by the CCMO and the VUmc METc.
 
 2.	Researchers who work with personal data are required to understand and comply with the privacy requirements of the GDPR and UAVG and conduct their research in a manner that ensures that data privacy, confidentiality and integrity are maintained throughout the project
-    a.  Researchers are expected to comply with the requirements for a personal data processing register
+    a.  Researchers are expected to comply with the requirements for a [personal data processing register](https://fgb-rdm.nl/legal/GDPRBasics.html#Registration_of_Personal_Data_Processing){target="_blank"}
     b.	Researchers must ensure that students and interns working temporarily within FGB can work in a manner that meets all privacy requirements.[^2]
     c.	Students, interns and other individuals not officially working for VU Amsterdam, but for whom VU Amsterdam is responsible, must sign a confidentiality statement if they will be working with confidential and/or personal data.^[2](#fn2)^
     d.	Researchers who supervise research assistants and/or data managers must ensure that these individuals are sufficiently aware of their privacy requirements and that they are able to transport and/or access data securely when working remotely.[^3] 
 
-3.	Researchers are responsible for determining who is allowed to access (some of) the research data both within the faculty and between institutions. Senior researchers, project coordinators and project leaders should assist junior researchers and interns with this determination; advice from the FGB privacy champion and/or FGB research data steward can be requested, in cases of uncertainty.
-    a.	Researchers are responsible for completing the appropriate agreements with external parties prior to starting a research project. 
-        i.	For research using personal data, a joint controller agreement should be completed between all parties that are responsible for and have access to (some of) the personal data. A processing agreement must be signed if a third-party processor has been hired to process personal data on behalf of VU Amsterdam. Researchers should contact the FGB privacy champion for advice on which agreements need to be signed and for copies of model agreements that can be used for these purposes. 
-        ii.	It is recommended that for any collaborative, multi-institutional projects, researchers set up collaboration and/or consortium agreements with all involved parties prior to the commencement of the research project to address issues such as data ownership, intellectual property rights, author rights and so forth. Researchers should contact IXA for support with these types of agreements.
-        iii.	If data will be obtained from or shared with third parties that are otherwise not involved in the research project, it is recommended that a data transfer agreement be signed by both parties. Researchers can contact IXA for support on setting up such an agreement or for reviewing any agreements that have already been drawn up by the third-party. 
-        iv.	If data are obtained from a third party that did not actively share the data with the FGB researchers, the FGB researchers must ensure that they are allowed to use these data. 
-        v.	If data obtained from a third-party are about human subjects, the researcher should confirm with the FGB privacy champion that they are allowed to use the data, regardless of whether the third party claims that the data are anonymous.
+3.	Researchers are responsible for determining who is allowed to access (some of) the research data both within the faculty and between institutions. Principal investigators, senior researchers, project coordinators and project leaders should assist junior researchers and interns with this determination; advice from the FGB privacy champion and/or FGB research data steward can be requested, in cases of uncertainty.
+    a.	Researchers are responsible for completing the appropriate agreements with external parties prior to starting a research project.[^4] 
+    b.  Researchers must ensure they are allowed to use any data they have obtained from third parties.
+        i.	If data are obtained from a third party that did not actively share the data with the FGB researchers, the FGB researchers must ensure that they are allowed to use these data. 
+        ii.	If data obtained from a third-party are about human subjects, the researcher should confirm with the FGB privacy champion that they are allowed to use the data, regardless of whether the third party claims that the data are anonymous.
 
 4.	Researchers are responsible for determining which documents (e.g. data management plans, data protection impact assessments, data classifications etc.) must be completed for their research project and for the completion of these documents early in the planning stages of their research
     a.	The completion of documents may be delegated, but senior researchers (project leaders, project coordinators and, where applicable, department heads) are ultimately responsible for the content of these documents.
     b.	All researchers and research assistants involved in a project should review and comply with the research data management plan. Researchers should seek advice from experts (1. data managers for the project, 2. the FGB research data stewards or 3. University Library RDM experts) when writing the data management plan so that potential problems and possible solutions can be identified prior to the commencement of the research project.
     c.	Researchers should update documents as needed, as well as maintaining project-specific metadata (e.g. lab notes, logbooks, code/syntax/scripts for cleaning and analysing the data, codebooks etc.) throughout the research lifecycle.
-    d.	Researchers should instill good documentation and data management practices in any students or interns under their supervision, particularly when the research conducted by these students is used for publications and/or future research projects.
+    d.	Researchers should instill good documentation and data/software management practices in any students or interns under their supervision, particularly when the research conducted by these students is used for publications and/or future research projects.
 
-5.	Researchers are expected to determine the appropriate facilities, systems and tools for effective research data management, seeking advice from ITVO, TO3 and the FGB research data stewards as required. 
+5.	Researchers are expected to determine the appropriate facilities, systems and tools for effective research data & software management, seeking advice from ITVO, TO3 and the FGB research data stewards as required. 
 
-6.	Researchers are expected to seek advice regarding the ethics and scientific integrity of their research. They are responsible for determining if the project must be approved by an METc, the CCMO or an external body as required by their research funder. If none of these conditions apply, researchers are strongly advised to submit their research proposals to the Scientific and Ethical Review Board (VCWE) for ethical review, while recognizing that the VCWE cannot be held accountable for the researchers’ ethical conduct.[^4] 
+6.	Researchers are expected to seek advice regarding the ethics and scientific integrity of their research. They are responsible for determining if the project must be approved by an METc, the CCMO or an external body as required by their research funder. If none of these conditions apply, researchers are strongly advised to submit their research proposals to the Scientific and Ethical Review Board (VCWE) for ethical review, while recognizing that the VCWE cannot be held accountable for the researchers’ ethical conduct.[^5] 
 
-7.	Research data must be archived according the local FGB implementation of the DSW National Guidelines on Archiving.[^5] 
-    a.	Whether or not metadata and documentation from a research project are openly published, researchers should ensure that this information is registered in CRIS/PURE for VU reporting purposes on all archived data. If metadata and documentation have already been published elsewhere, researchers can contact the CRIS administrator (vuresearchportal.ub@vu.nl) and request that the administrator register this information on the researchers' behalf in CRIS/PURE.
+7. Research data must be archived according the local FGB implementation of the DSW National Guidelines on Archiving.[^6]
 
 #### Department heads {#departmentheads}
-8.	Department heads[^6]  are ultimately responsible for the data collected by researchers in their department. In addition to supporting the management of research data when researchers terminate their employment at VU Amsterdam (as described in the [VU RDM policy](https://libguides.vu.nl/ld.php?content_id=35189052){target="_blank"} under Responsibilities, articles 2 and 7):
+8.	Department heads[^7]  are ultimately responsible for the data collected by researchers in their department. In addition to supporting the management of research data when researchers terminate their employment at VU Amsterdam (as described in the [VU Research Data and Software Management Policy (Version 3.0, 17-12-2024)](https://rdm.vu.nl/public/policies-regulations/RDSM-policy-VU-EN-v3.0.pdf){target="_blank"} under Responsibilities, article 9):
     a.	Departments heads will represent the “data owner” in documentation where a specific individual must be named, such as on data classification forms;
     b.	Department heads are responsible for maintaining reading rights to all archived research data within their department.
+
+**ARE WE STILL OK WITH THIS FGB VERSION OF THE DEPT HEAD ADDITIONAL RESPONSIBILITIES?**
 
 #### Faculty board {#facultyboard}
 9.	The board will require the teaching of FAIR data management principles in the bachelor, masters, and graduate level curricula.
@@ -240,38 +216,43 @@ In addition to the points listed in the general VU Research Data Management Poli
     a.	Develop and maintain a library of tools, guidelines, protocols and courses that help FGB researchers to comply with good RDM practices and to promote the achievement of the FAIR data principles;
     b.	Provide advice to FGB staff about RDM and privacy issues, as required;
     c.	Maintain a network of communication with FGB department-level data managers and research data support services from other faculties and the VU library;
-    d.	Conduct internal audits to monitor compliance with this RDM policy.
+    d.	Conduct internal audits to monitor compliance with this RDM policy;
+    e.  Develop procedures to support the faculty with data verification requests and data reuse requests.
+    
+**DO WE LIKE THE NEW ADDITION TO THE LAST POINT; THIS COVERS THE OPEN DATA SHARING PROPOSAL WORK THAT WE ARE DOING?**
+
 
 #### Faculty director {#facultydirector}
 13.	The director will ensure the proper functioning, security, and reliability of FGB facilities for data storage and management.
 
 14.	The director will sign contractual agreements with third parties, such as processing agreements with data processors, data sharing agreements and so forth, on behalf of the Stichting VU.
+    a. For agreements under 50.000 euro, section heads can sign on behalf of the faculty director.
+
+**DID I GET THE PART ABOUT THE SECTION HEADS' SIGNING POWER CORRECT?**
 
 #### Inter-faculty institutes {#institutes}
-15.	For institutions that span multiple faculties, a separate RDM policy may be created, while still acknowledging the spirit of the policies from the respective faculties. Any major conflicts in RDM policy between faculties can be discussed with the research data stewards from the respective faculties and with the University Library RDM experts to determine an appropriate compromise.
+15.	For institutions that span multiple faculties, a separate RDSM policy may be created, while still acknowledging the spirit of the policies from the respective faculties. Any major conflicts in RDSM policy between faculties can be discussed with the research data stewards from the respective faculties and with the University Library RDSM experts to determine an appropriate compromise.
 
 ### Procedures {#procedures}
 
-1.	This RDM policy took effect on February 1, 2019. All responsible parties are henceforth expected to be aware of their tasks and to have reviewed any applicable documents.
+1.	This RDM policy originally took effect on February 1, 2019. The most recent major update was implemented on May 1, 2025. All responsible parties are henceforth expected to be aware of their tasks and to have reviewed any applicable documents.
 
-2.	The data archiving requirements were phased in over course of 2019 and all responsible parties are henceforth expected to understand and carry out their responsibilities on this topic. The FAIR data practices were introduced in 2019 and the faculty continues to promote these practices by developing guidance on the topic and by working with central VU services on the development of systems to support the implementation of these practices.
-
-3.	Research institutes will report annually on their activities to support data management.
+2.	Research institutes will report annually on their activities to support data & software management.
 
 ### Facilities and Support {#support}
 
 1.	FGB provides access to mass storage with backups within the VU network. Expansion needs will be evaluated annually.
     a.	FGB, in collaboration with the other faculties, will work to improve upon existing mass storage options to create solutions specific to the types of data created within FGB that also meet the research requirements of FGB researchers. A particular focus will be given to extremely large data files.
-    b.	Support for complex IT and/or security questions can be sought via the [RDM Support Desk](rdm@vu.nl). Details are described in article 3 under “Facilities” of the VU RDM Policy.
+    b.	Support for complex IT and/or security questions can be sought via the [RDM Support Desk](rdm@vu.nl). 
     c.	Any actual or potential data breaches must be reported immediately to the [IT Service Desk](https://services.vu.nl){target="_blank"}. The (potential) data breach must also be reported to the faculty's Research and Policy Support (REPS) team via research.data.fgb@vu.nl.
 
-2.	FGB researchers can request support from the faculty’s Technical Support Department (TO3). TO3 technicians manage and develop the labs, equipment, devices, software and hardware that are necessary for high quality research within FGB. Tasks include developing apps and web forms, providing support with online questionnaires, developing innovative research solutions such as Wi-Fi-enabled accelerometry or non-invasive stress measurements, and providing technical support in a variety of laboratory settings, ranging from human movement and psychological experiments to animal- and cell-based research. 
-    a.	Researchers requiring technical support should contact the TO3 technicians as early as possible in their project planning. 
+2.	FGB researchers can request support from the faculty’s [Technical Support Department (TO3)](https://vu.nl/en/employee/behavioural-and-movement-sciences-getting-started/technical-support-for-research-to3){target="_blank"}. TO3 technicians manage and develop many of the labs, equipment, devices, software and hardware that are necessary for high quality research within FGB. Tasks include developing apps and web forms, providing support with online questionnaires, developing innovative research solutions such as Wi-Fi-enabled accelerometry or non-invasive stress measurements, and providing technical support in a variety of laboratory settings, ranging from human movement and psychological experiments to animal- and cell-based research. 
+    a.	Researchers requiring technical support should contact the [TO3 technicians](mailto:techsupport.fgb@vu.nl) as early as possible in their project planning. 
 
-3. FGB researchers can contact the [Research and Policy Support (REPS)](https://vu.nl/en/research/more-about/research-and-policy-support-reps-team){target="_blank"} team with questions about research data management, privacy & legal concerns, and policy issues on research & valorization. The team consists of:
-    a.  Research data stewards who can be contacted (research.data.fgb@vu.nl) for questions about research data management, data management plans and the FAIR data principles.
-        i.	Support for research data management, alongside policies and guidelines, can also be found on the [faculty support page for research data management](https://vu.nl/en/employee/research-data-management-fbms){target="_blank"}.
-    b.  Privacy champions (research.data.fgb@vu.nl) who can be contacted for support on issues related to privacy in research. A privacy champion is the first point of contact, but if an issue is particularly complex the question will be elevated to the privacy lawyers from the VU Legal and Institutional Affairs Department.
+3. FGB researchers can contact the [Research and Policy Support (REPS)](https://vu.nl/en/research/more-about/research-and-policy-support-reps-team){target="_blank"} team with questions about research data & software management, privacy & legal concerns, and policy issues on research & valorization. The team consists of:
+    a.  Research data stewards who can be contacted (research.data.fgb@vu.nl) for questions about research data management, data management plans and the FAIR data principles. Research data stewards will also conduct training sessions on good data and software management.
+        i.	Support for research data & software management, alongside policies and guidelines, can also be found on the [faculty support page for research data management](https://vu.nl/en/employee/research-data-management-fbms){target="_blank"}.
+    b.  Privacy officers (research.data.fgb@vu.nl) who can be contacted for support on issues related to privacy in research. The FGB privacy officer is the first point of contact, but if an issue is particularly complex the question will be elevated to the privacy lawyers from the VU Legal and Institutional Affairs Department.
         i.	Support for privacy concerns can also be found on the [faculty support page for privacy, legal and security concerns](https://vu.nl/en/employee/research-data-management-fbms/privacy-legal-and-security-concerns-fgb){target="_blank"}.
     c. The [FGB Research Policy Advisor](https://vu.nl/en/research/more-about/research-and-policy-support-reps-team){target="_blank"} who can advise researchers about research impact and valorization.
 
@@ -283,9 +264,9 @@ In addition to the points listed in the general VU Research Data Management Poli
 Reference to the other policy and guideline documents, specifically the archiving guidelines and the GDPR policy positions goes through this hyperlink https://vu.nl/en/employee/research-data-management-fbms/policies-guidelines-fgb to avoid confusion or difficulty finding the right page with updates to the documents/pages
 -->
 
-[FGB implementation of the “National Guidelines for Archiving of Academic Research for Faculties of Behavioural and Social Sciences” (2022)](https://vu.nl/en/employee/research-data-management-fbms/policies-guidelines-fgb){target="_blank"}
+[FGB implementation of the “National Guidelines for Archiving of Academic Research for Faculties of Behavioural and Social Sciences” (2022)](../rdm/archiving/ArchivingGuidelinesFull.html){target="_blank"}
 
-[VU Research Data Management Policy of VU Amsterdam (Version 3.0, 2024)](https://rdm.vu.nl/public/policies-regulations/RDSM-policy-VU-EN-v3.0.pdf){target="_blank"}
+[VU Research Data & Software Management Policy of VU Amsterdam (Version 3.0, 2024)](https://rdm.vu.nl/public/policies-regulations/RDSM-policy-VU-EN-v3.0.pdf){target="_blank"}
 
 [VSNU Code of Conduct for Research Integrity (2018)](https://www.nwo.nl/sites/nwo/files/documents/Netherlands%2BCode%2Bof%2BConduct%2Bfor%2BResearch%2BIntegrity_2018_UK.pdf){target="_blank"}
 
@@ -314,14 +295,16 @@ VSNU Code of Conduct on the Using Personal Data in Scientific Research (not curr
 Reference to the other policy and guideline documents, specifically the archiving guidelines and the GDPR policy positions goes through this hyperlink https://vu.nl/en/employee/research-data-management-fbms/policies-guidelines-fgb to avoid confusion or difficulty finding the right page with updates to the documents/pages
 -->
 
-[^1]: See [FGB Policy Positions on the GDPR](https://vu.nl/en/employee/research-data-management-fbms/policies-guidelines-fgb){target="_blank"} for important legal implications with regards to privacy.
+[^1]: See [FGB Policy Positions on the GDPR](FGB_Policy_Positions_GDPR.html){target="_blank"} for important legal implications with regards to privacy.
 
 [^2]: See [FGB Security Tips: The Basics](../Security/SecurityBasics.html){target="_blank"}, particularly [FGB Security Tips: Safe Practices for Students Working With Research Data](../Security/SecurityForStudents.html){target="_blank"} for more information.
 
 [^3]: See [FGB Security Tips: The Basics](../Security/SecurityBasics.html){target="_blank"} and the associated [In-Depth Guides](../Security/SecurityBasics.html#indepth){target="_blank"}.
 
-[^4]: The faculty implementation of the [Code of Ethics for Research in the Social and Behavioural Sciences Involving Human Participants](https://assets.vu.nl/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/c3fbf71b-9589-413c-bee5-8e9270b89d3c/ethiek-reglement-adh-landelijk-nov-2016_tcm263-810069.pdf){target="_blank"} outlines the ethical standards expected of every FGB researcher.
+[^4]: See the [Workflow for processing standard privacy agreements](../Images/privacy_agreement_flow_fgb_2025.pdf){target="_blank"} for information on determining which agreements are needed and how to put those agreements in place. Further information on the necessary agreements and when they need to be applied is also found in the [GDPR Take-Home Points for Researchers](../legal/GDPRBasics.html#What_are_the_most_important_parts_of_the_GDPR_for_me_to_know){target="_blank"}.
 
-[^5]: Detailed information on the requirements for data archiving within FGB can be found in the [FGB Implementation of the National Guidelines for Archiving of Academic Research for Faculties of Behavioural and Social Sciences](https://vu.nl/en/employee/research-data-management-fbms/policies-guidelines-fgb){target="_blank"}. For research projects conducted by an interdisciplinary research institute, the institute may have separate guidelines on archiving data.
+[^5]: The faculty implementation of the [Code of Ethics for Research in the Social and Behavioural Sciences Involving Human Participants](https://assets.vu.nl/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/c3fbf71b-9589-413c-bee5-8e9270b89d3c/ethiek-reglement-adh-landelijk-nov-2016_tcm263-810069.pdf){target="_blank"} outlines the ethical standards expected of every FGB researcher.
 
-[^6]: In this section, the responsibilities of a department head are tied to the position of department head, not the individual. When one individual steps down from this role, the new individual takes over the responsibilities of their predecessor.
+[^6]: Detailed information on the requirements for data archiving within FGB can be found in the [FGB Implementation of the National Guidelines for Archiving of Academic Research for Faculties of Behavioural and Social Sciences](../rdm/archiving/ArchivingGuidelinesFull.html){target="_blank"}. For research projects conducted by an interdisciplinary research institute, the institute may have separate guidelines on archiving data.
+
+[^7]: In this section, the responsibilities of a department head are tied to the position of department head, not the individual. When one individual steps down from this role, the new individual takes over the responsibilities of their predecessor.

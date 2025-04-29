@@ -1,6 +1,6 @@
 ---
 title: "Research Data Management @FGB: Definitions"
-date: "`r Sys.Date()`; Version 1.6"
+date: "`r Sys.Date()`; Version 2.0"
 output: 
   html_document:
     theme: cerulean
@@ -72,9 +72,7 @@ li {
 
 
 ### Archiving package (a.k.a. **data package**): {#archivingpackage}
-* The materials, such as data, [metadata](#metadata), code and other documentation that need to be archived after a [research project](#researchproject) is complete and/or a research article based on these materials has been published. 
-* Is also referred to as a "data package", which is now the primary and preferred terminology for this concept.
-
+* See [data package](#datapackage)
 
 
 ### Archiving research data: {#archivingdata}
@@ -90,6 +88,12 @@ li {
 
 ### Data asset {#dataasset}
 * A collection of data in a similar form with a similar purpose. Examples are found in the [VU Research Support Handbook](https://rdm.vu.nl/topics/data-management-plan.html#data-assets){target="_blank"}. Additional examples relevant to FGB are described under [Step 1 of the De-identification guide](../../Security/Deidentification.html#step1){target="_blank"}.
+
+
+
+### Data package: {#datapackage}
+* The materials, such as data, [metadata](#metadata), code and other documentation that need to be archived after a [research project](#researchproject) is complete and/or a research article based on these materials has been published. 
+* May also be referred to as an "archiving package" or a "publication package".
 
 
 
@@ -172,10 +176,21 @@ _NB2: Data underlying a [published research article must be published](../archiv
 
 * Information and/or materials that are directly collected from a source, such as a research subject. These are the basis of your research and, in 99.9% of cases, an [archived](#archivingdata) copy of this data should be preserved for research integrity purposes.
 
+### Research data: {#researchdata}
+
+* Information that is captured for the purpose of underpinning academic research. Depending on the discipline it may consist of, for example, text, images, sound, spreadsheets, databases, statistical data, geographic data, etc
+
 ### Research project: {#researchproject}
 
 * The research activities described in a research proposal that is submitted for ethical review. If ethical review is not applicable, a research project is any research activity aimed at answering a hypothesis; all activities aimed at answering one overarching hypothesis can be described as a single research project.
 
+### Research software: {#researchsoftware}
+
+* “[Research Software](https://zenodo.org/records/5504016){target="_blank"} includes source code files, algorithms, scripts, computational workflows and
+executables that were created during the research process or for a research purpose. Software
+components (e.g., operating systems, libraries, dependencies, packages, scripts, etc.) that are
+used for research but were not created during or with a clear research intent should be considered
+software in research and not Research Software.”
 
 ### Reuse of data: {#reusedata}
 
