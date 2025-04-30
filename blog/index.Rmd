@@ -57,11 +57,13 @@ table, td {
 }
 
 
-table td:first-of-type {
+table tr td:first-of-type {
     width: 20%;
+    padding-bottom: 20px;
 }
-table td:nth-of-type(2) {
+table tr td:nth-of-type(2) {
     width: 80%;
+    padding-bottom: 20px;
 }
 
 </style>
