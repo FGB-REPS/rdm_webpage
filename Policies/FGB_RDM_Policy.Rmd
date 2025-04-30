@@ -180,7 +180,7 @@ In addition to the points listed in the general VU Research Data & Software Mana
     d.	Researchers who supervise research assistants and/or data managers must ensure that these individuals are sufficiently aware of their privacy requirements and that they are able to transport and/or access data securely when working remotely.[^3] 
 
 3.	Researchers are responsible for determining who is allowed to access (some of) the research data both within the faculty and between institutions. Principal investigators, senior researchers, project coordinators and project leaders should assist junior researchers and interns with this determination; advice from the FGB privacy champion and/or FGB research data steward can be requested, in cases of uncertainty.
-    a.	Researchers are responsible for completing the appropriate agreements with external parties prior to starting a research project.[^4] 
+    a.	Researchers are responsible for completing the appropriate agreements with external parties prior to starting a research project. These agreements may be related to privacy regulations[^4] and/or other [legal concerns](#legalAffairs). 
     b.  Researchers must ensure they are allowed to use any data they have obtained from third parties.
         i.	If data are obtained from a third party that did not actively share the data with the FGB researchers, the FGB researchers must ensure that they are allowed to use these data. 
         ii.	If data obtained from a third-party are about human subjects, the researcher should confirm with the FGB privacy champion that they are allowed to use the data, regardless of whether the third party claims that the data are anonymous.
@@ -226,9 +226,8 @@ In addition to the points listed in the general VU Research Data & Software Mana
 13.	The director will ensure the proper functioning, security, and reliability of FGB facilities for data storage and management.
 
 14.	The director will sign contractual agreements with third parties, such as processing agreements with data processors, data sharing agreements and so forth, on behalf of the Stichting VU.
-    a. For agreements under 50.000 euro, section heads can sign on behalf of the faculty director.
+    a. For contractual agreements under 50.000 euro, department managers are mandated to sign contractual agreements on behalf of the faculty director.
 
-**DID I GET THE PART ABOUT THE SECTION HEADS' SIGNING POWER CORRECT?**
 
 #### Inter-faculty institutes {#institutes}
 15.	For institutions that span multiple faculties, a separate RDSM policy may be created, while still acknowledging the spirit of the policies from the respective faculties. Any major conflicts in RDSM policy between faculties can be discussed with the research data stewards from the respective faculties and with the University Library RDSM experts to determine an appropriate compromise.
@@ -255,8 +254,8 @@ In addition to the points listed in the general VU Research Data & Software Mana
     b.  Privacy officers (research.data.fgb@vu.nl) who can be contacted for support on issues related to privacy in research. The FGB privacy officer is the first point of contact, but if an issue is particularly complex the question will be elevated to the privacy lawyers from the VU Legal and Institutional Affairs Department.
         i.	Support for privacy concerns can also be found on the [faculty support page for privacy, legal and security concerns](https://vu.nl/en/employee/research-data-management-fbms/privacy-legal-and-security-concerns-fgb){target="_blank"}.
     c. The [FGB Research Policy Advisor](https://vu.nl/en/research/more-about/research-and-policy-support-reps-team){target="_blank"} who can advise researchers about research impact and valorization.
-
-5.	VU Legal Affairs (legal@vu.nl) can be contacted to draw up legal agreements that go beyond privacy requirements, such as consortium agreements, data sharing/transfer agreements, data ownership agreements etc. They can also support researchers with questions about the intellectual property created during a research project and the potential for patenting that intellectual property. 
+<div id="legalAffairs"></div>
+4.	VU Legal Affairs (legal@vu.nl) can be contacted to draw up legal agreements that go beyond privacy requirements, such as consortium agreements, data sharing/transfer agreements, data ownership agreements etc. They can also support researchers with questions about the intellectual property created during a research project and the potential for patenting that intellectual property. 
 
 ### Reference Material {#references}
 
@@ -301,7 +300,7 @@ Reference to the other policy and guideline documents, specifically the archivin
 
 [^3]: See [FGB Security Tips: The Basics](../Security/SecurityBasics.html){target="_blank"} and the associated [In-Depth Guides](../Security/SecurityBasics.html#indepth){target="_blank"}.
 
-[^4]: See the [Workflow for processing standard privacy agreements](../Images/privacy_agreement_flow_fgb_2025.pdf){target="_blank"} for information on determining which agreements are needed and how to put those agreements in place. Further information on the necessary agreements and when they need to be applied is also found in the [GDPR Take-Home Points for Researchers](../legal/GDPRBasics.html#What_are_the_most_important_parts_of_the_GDPR_for_me_to_know){target="_blank"}.
+[^4]: See the [Workflow for processing standard privacy agreements](../Images/privacy_agreement_flow_fgb_2025.pdf){target="_blank"} for information on determining which privacy agreements are needed and how to put those agreements in place. Further information on the necessary privacy agreements and when they need to be applied is also found in the [GDPR Take-Home Points for Researchers](../legal/GDPRBasics.html#What_are_the_most_important_parts_of_the_GDPR_for_me_to_know){target="_blank"}.
 
 [^5]: The faculty implementation of the [Code of Ethics for Research in the Social and Behavioural Sciences Involving Human Participants](https://assets.vu.nl/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/c3fbf71b-9589-413c-bee5-8e9270b89d3c/ethiek-reglement-adh-landelijk-nov-2016_tcm263-810069.pdf){target="_blank"} outlines the ethical standards expected of every FGB researcher.
 
