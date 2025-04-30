@@ -291,7 +291,7 @@ It is important that the archived data are protected, particularly when these da
 
 * The forms need to be saved to serve as evidence that consent was legally obtained. Depending on the nature of the research, the link between the consent form and the data itself may or may not need to be maintained. [Section 3.2](ArchivingGuidelinesFull.html#section3.2){target="_blank"} of the full guidelines explains this further. Once the archiving term is complete, assess whether the research data can be destroyed. Once the research data are destroyed the consent forms should also be destroyed.
 * Even if the consent forms do not include any personal data, it is still necessary to save the consent forms for the same duration as the archived research data.
-* If paper consent forms were scanned into a digital form, it is not allowed to destroy the original paper copies if your research is subject to the WMO. For non-WMO research, you may destroy the consent forms after digitization as long as you follow the faculty-approved digitization guidelines. See this [statement](ArchivingGuidelinesFull.html#paperarchiving){target="_blank"} in the full guidelines for more information.
+* If paper consent forms were scanned into a digital form, it is not allowed to destroy the original paper copies if your research is subject to the WMO. For non-WMO research, you may destroy the consent forms after digitization as long as you follow the [faculty-approved digitization guidelines](DigitizingICFs.html){target="_blank"}. See this [statement](ArchivingGuidelinesFull.html#paperarchiving){target="_blank"} in the full guidelines for more information.
 </div>
 
 <br>
