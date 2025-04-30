@@ -55,7 +55,9 @@ li {
 \
 \
 
+# Blog: Announcements and Updates
 
+* [Blog](blog/){target="_blank"}
 
 # Frequently asked questions on RDM, Privacy & Security
 
