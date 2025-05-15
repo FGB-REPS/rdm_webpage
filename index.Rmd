@@ -1,6 +1,6 @@
 ---
 title: "Research Data Management @ FGB"
-date: "`r Sys.Date()`; version 1.3"
+date: "`r Sys.Date()`; version 1.4"
 output: 
   html_document:
     theme: cerulean
@@ -83,6 +83,7 @@ li {
 * RDM tools
   + [Castor instructions](rdm/tools/Castor_spelregels.html){target="_blank"}
   + [YODA instructions](rdm/tools/YODAInstructionsFGB.html){target="_blank"}
+  + [Qualtrics & Survalyzer instructions](rdm/tools/SecureUseOfQuestionnaireTools.html){target="_blank"}
   
 
 # Security Guidance

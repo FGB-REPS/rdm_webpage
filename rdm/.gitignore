@@ -8,6 +8,9 @@
 archiving/questions_for_datastewards.txt
 training/training_events.xlsx
 
+# files to ignore
+
+SecureUseOfQuestionnaireTools_files/
 
 # Node artifact files
 node_modules/

@@ -26,6 +26,15 @@ Policies/FGB_RDM_Policy.pdf
 Policies/FGB_Policy_Positions_GDPR.docx
 Policies/FGB_Policy_Positions_GDPR.pdf
 
+# files to ignore
+
+archiving/questions_for_datastewards.txt
+training/training_events.xlsx
+
+# folders to ignore
+
+SecureUserOfQuestionnaireTools_files/
+
 
 # Cross referencing file for file and folder locations
 CrossReferencedFiles.txt
