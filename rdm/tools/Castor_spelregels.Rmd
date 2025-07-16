@@ -76,7 +76,7 @@ li {
 
 
 
-Castor is a data management software that is available to FGB researchers, particularly those conducting medical research. You can find all the information you need to work with Castor in this [manual](https://helpdesk.castoredc.com/){target="_blank"}. However there are some additional rules ("spelregels") you must follow to use Castor at the Faculty.
+Castor is a data management software that is available to FGB researchers, particularly those conducting medical research. You can find all the information you need to work with Castor in this [manual](https://helpdesk.castoredc.com/hc/en-us/sections/26269456973725-Castor-CDMS-Manual){target="_blank"}. However there are some additional rules ("spelregels") you must follow to use Castor at the Faculty.
 
 ### Step 1 {#step1}
 
@@ -96,10 +96,10 @@ Castor is a data management software that is available to FGB researchers, parti
 
 ### Step 4 {#step4}
 
-* You are strongly advised to read the Castor manual, particularly the [EDC manual](https://helpdesk.castoredc.com/en_US/2-castor-edc-manual){target="_blank"}
+* You are strongly advised to read the Castor manual, particularly the [Castor manual](https://helpdesk.castoredc.com/hc/en-us/sections/26269456973725-Castor-CDMS-Manual){target="_blank"}
     + The following sections are particularly important:
         + [How to use Castor EDC system in a secure way - Best practices](https://helpdesk.castoredc.com/en_US/2-introduction-and-getting-started/how-to-use-castor-edc-system-in-a-secure-way-best-practices){target="_blank"}
-        + [Castor EDC/CMDS Tips and tricks - Before starting](https://helpdesk.castoredc.com/en_US/2-introduction-and-getting-started/tips-and-tricks-before-starting){target="_blank"}
+        + [Castor EDC/CMDS Tips and tricks - Before starting](https://helpdesk.castoredc.com/hc/en-us/articles/27036238817053-Castor-CDMS-Tips-tricks-Beginners){target="_blank"}
         + [The structure of Castor EDC/CDMS](https://helpdesk.castoredc.com/en_US/2-create-your-study-forms/3-the-structure-of-castor){target="_blank"}
         + [Field properties: validations (edit checks) and dependencies(field logic) in EDC/CDMS](https://helpdesk.castoredc.com/en_US/fields-and-field-properties/field-properties-validations-edit-checks-and-dependencies-field-logic){target="_blank"}
         + [The 'Users' tab (User Management) in EDC/CDMS](https://helpdesk.castoredc.com/en_US/manage-your-study/the-users-tab-user-management){target="_blank"}
@@ -114,11 +114,11 @@ Castor is a data management software that is available to FGB researchers, parti
 
 ### Step 6 {#step6}
 
-* When you complete your research you should follow the [Castor guidance](https://helpdesk.castoredc.com/can-i-lock-and-archive-my-study-once-it-is-complete?from_search=99167795){target="_blank"} on ending a study. Additionally you must do the following:
+* When you complete your research you should follow the [Castor guidance](https://helpdesk.castoredc.com/hc/en-us/articles/27247484782749-Can-I-lock-and-archive-my-study-once-it-is-complete){target="_blank"} on ending a study. Additionally you must do the following:
     + After all data have been exported from Castor, they should be securely stored on a VU storage option. 
         + If the data are still being analysed, you can find an appropriate solution via the [VU Storage Finder](https://vu.nl/en/research/storagefinder){target="_blank"}
         + If all analyses are complete and the data only need to be archived, the exported data must be archived in a [VU archive](https://rdm.vu.nl/guides/publish-and-share.html#selecting-an-archive){target="_blank"}
-    + Once all of the data have been securely stored or archived at the VU, contact [Castor Support](https://helpdesk.castoredc.com/contact-us){target="_blank"} to have all of the data stored by Castor deleted. Otherwise the data will be automatically stored on Castor's servers for 25 years.
+    + Once all of the data have been securely stored or archived at the VU, contact [Castor Support](https://helpdesk.castoredc.com/hc/en-us/requests/new){target="_blank"} to have all of the data stored by Castor deleted. Otherwise the data will be automatically stored on Castor's servers for 25 years.
 
 
 
