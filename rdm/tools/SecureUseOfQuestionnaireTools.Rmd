@@ -1,9 +1,15 @@
 ---
 title: "RDM Tools @ FGB: Qualtrics & Survalyzer"
-date: "`r Sys.Date()`; Version 2.0"
+date: "`r Sys.Date()`; Version 2.1"
 output: 
   html_document:
     theme: cerulean
+    anchor_sections: TRUE
+    toc: true
+    toc_depth: 3
+    toc_float: 
+      collapsed: false
+      smooth_scroll: true
     includes: 
       after_body: ../../footer.html
 ---
@@ -17,16 +23,47 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+/* the follow CSS code allows me to take the automatically included anchor sections (that I made active in the YAML with anchor_sections: TRUE) and change the icon that is shown from a hash to a link symbol from the bootstrap icon library */
+
+a.anchor-section::before {
+    content: "&#xe144";
+    font-family: 'Glyphicons Halflings';
+}
+
+#TOC {
+  left: 0%;
+  top: 0%;
+}
+
+
+div.tocify {
+  width: 13%;
+}
+
+
+
+/* following two commands get the text of TOC to indent properly */
+
+.tocify-header {
+    text-indent: initial;
+}
+
+.tocify-subheader > .tocify-item {
+  text-indent: initial;
+  padding-left: 2em;
+}
+
 /* 2022-10-11: I made the max-width on this particular document 2000px when all the others were at 1600px; this is because I noticed an issue with the positioning of the tabsets (they aren't right next to each other as desired) when in full screen mode on the wide screen monitor. Will check if this is an issue on other pages and adjust max-width as necessary */
 
+/* max-width refused to change below unless I included the !important tag next to it. Found answer on this stack exchange https://stackoverflow.com/questions/34906002/increase-width-of-entire-html-rmarkdown-output 
+Seems only to be an issue when using TOC; not required to use !important on pages without TOC */
+
+
 .main-container {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 100% !important;
   padding-top: 5%;
   padding-bottom: 10%;
-  padding-right: 10%;
-  padding-left: 10%;
+  padding-right: 5%;
 }
 
 h1.title {
@@ -109,10 +146,66 @@ While both Qualtrics and Survalyzer have processing agreements and contracts wit
 
 | | Qualtrics | Survalyzer |
 | -- | ---- | ----  |
-| **Data Privacy** | &bull;  Generally avoid using the email distribution system (i.e. where you upload a list of participant e-mails to automatically send out unique survey links)[^1]. You *must* avoid this when the data you'll collect are [privacy category orange or red](../../Security/PrivacyRisks.html){target="_blank"}. This [manual](https://fgbto3-web.labs.vu.nl/rdm/Images/SendingSurveysinQualtricsWithoutUploadingEmails.pdf){target="_blank"} explains an alternative approach. <br>&bull; Under "Survey Options" ensure that: <br>&nbsp;&nbsp;&nbsp;&nbsp;&bull; "Prevent Indexing" is selected <br>&nbsp;&nbsp;&nbsp;&nbsp;&bull; "Secure Participants' Files" is selected <br>&nbsp;&nbsp;&nbsp;&nbsp;&bull; "Anonymize Response" is selected <br>&bull; In "Survey Flow", add an "End of Survey" block, then go to "Customize" in this block and select "Do NOT record any personal information and remove panel association" | &bull;  Generally avoid using the email distribution system (i.e. where you upload a list of participant e-mails to automatically send out unique survey links)^[1](#fn1)^. You *must* avoid this when the data you'll collect are [privacy category orange or red](../../Security/PrivacyRisks.html){target="_blank"}. This [manual](https://fgbto3-web.labs.vu.nl/rdm/Images/SendingSurveysinSurvalyzerWithoutUploadingEmails.pdf){target="_blank"} explains an alternative approach.  |
+| **Data Privacy** | &bull;  Generally avoid using the email distribution system (i.e. where you upload a list of participant e-mails to automatically send out unique survey links)[^1]. You *must* avoid this when the data you'll collect are [privacy category orange or red](../../Security/PrivacyRisks.html){target="_blank"}. The [instructions below](#qNoEmails) explain an alternative approach. <br>&bull; Under "Survey Options" ensure that: <br>&nbsp;&nbsp;&nbsp;&nbsp;&bull; "Prevent Indexing" is selected <br>&nbsp;&nbsp;&nbsp;&nbsp;&bull; "Secure Participants' Files" is selected <br>&nbsp;&nbsp;&nbsp;&nbsp;&bull; "Anonymize Response" is selected <br>&bull; In "Survey Flow", add an "End of Survey" block, then go to "Customize" in this block and select "Do NOT record any personal information and remove panel association" | &bull;  Generally avoid using the email distribution system (i.e. where you upload a list of participant e-mails to automatically send out unique survey links)^[1](#fn1)^. You *must* avoid this when the data you'll collect are [privacy category orange or red](../../Security/PrivacyRisks.html){target="_blank"}. The [instructions below](#qNoEmails) explain an alternative approach.  |
 | **Data Integrity** | &bull; If you are conducting a longitudinal study with multiple follow-up questionnaires, do not use the default question names; give each question a unique name <br>&bull; Test the survey flow *before* sending the questionnaire to respondents <br>&bull; Before sending out the survey, check the exported data for issues, such as incorrect response coding. If you are randomizing your survey blocks/questions, make sure when exporting your data to select "Export viewing order data for randomized surveys" <br>&bull; Download and save a copy of the questionnaire to serve as documentation of your response codes, question labels and survey routing <br>&bull; It is generally recommended to export the response data in a non-proprietary format such as csv. You can also export an SPSS or Excel copy if that's easier for you to work with, but a copy of the raw data in csv format is strongly recommended | &bull; If you are conducting a longitudinal study with multiple follow-up questionnaires, do not use the default question names; give each question a unique name  <br>&bull; Test the survey flow *before* sending the questionnaire to respondents <br>&bull; Before sending out the survey, test the exported data for any issues, such as incorrect response coding or issues with how questions are labeled (particularly if your questionnaire has complex routing depending on the respondents’ answers) <br>&bull; Download and save a copy of the questionnaire to serve as documentation of your response codes, question labels and survey routing|
 
+<br>
 
+### How to send out surveys without using the built-in e-mail distrbution system? {#qNoEmails}
+
+#### {.tabset .tabset-fade}
+
+##### Qualtrics
+
+1. Create a spreadsheet with the variable names FirstName and PrimaryEmail on the first row. Under FirstName fill in the ID numbers used to identify your study participants. In e-mail enter a fake e-mail address that follows standard e-mail conventions (e.g. email@email.com). You can fill in the same e-mail address for every row. Save your file as a .csv file (in Excel, when you “Save as” you can use the csv option; don’t worry about the formatting warnings).
+2. In Qualtrics, click on “Contacts” on the top right part of your screen and then click “Create Contact List”.
+3. Give the contact list a name (the name isn’t overly important, especially if you are just sending out your surveys only one time. If you are sending out repeated surveys, then make sure to have a name that makes it clear which sample of participants belongs to which round of the survey, for example by calling your sample “Round1_20200130”)
+4. “Import from a File” is already selected, so click on “Browse” and upload the csv file you made in step 1.
+5. Once the upload is complete you will see that ‘X’ number of “Members” are in your contact list. ‘X’ should be the number of participants you included in the csv file from step 1.
+6. Return to your survey by clicking on “Projects” on the upper right corner of the screen and then select the “Distributions” option.
+7. Of the options on the left-hand side of the screen, select “Personalized Links” and then click the green button on the right side that says “Generate Links”
+8. This will open a window in which you should click on “Select Contacts”>”Use contacts from my library”, and then select the contact list you made in steps 2-5. Click on “Select entire contact list”. (You can also change when the links expire if you choose. The default is after 60 days).
+9. Finally, click “Generate Links” and a csv of your generated survey links will automatically be downloaded.
+10. Now you need to merge this downloaded file with a list of your participant IDs and their respective e-mail addresses, so that you have a list of participant ID numbers, e-mail addresses and the survey link that refers to the participant. Because the generated links won’t create a variable for your participant ID, you had to put the ID numbers under the variable “FirstName”, but you can now change the name of that variable in the downloaded file to the name of your participant ID variable. If you want to send out personalized messages, you can also include participant names in the final merged Excel file. You can use whatever coupling method you wish to merge the survey links to the e-mail addresses by coupling the files together based on the participant ID code; just make sure the final output is an excel file.
+11. Before you start Mail Merge in Microsoft Word, particularly if you are working on a MacOS, make sure your default e-mail program is Microsoft Outlook. That should be the case with Windows users, but for MacOS users, open the MacOS Mail app, select Mail>Preferences and then choose Microsoft Office as your default e-mail reader. If Microsoft Word was running when you changed this default, make sure to quit and restart Microsoft Word before starting Mail Merge.
+12. Additionally, if you are using a functional e-mail account for communication about the study, and you want the e-mail to be sent from that account and not your personal account, go to Microsoft Outlook, click on Outlook>Preferences and then change your default account to the functional e-mail account.
+13. When you are ready to start Mail Merge open a new Word document and click on Mailings>Start Mail Merge and then select “E-mail messages”
+14. Now click on “Select Recipients” and choose “Use an Existing List…”. This will prompt you to upload a file, so now you should upload the merged file you created with the participant ID numbers, e-mail addresses, survey links, and potentially names, if you want to have personalized e-mails. Word will warn you about opening the excel file, but you know it’s a trusted source, so continue onwards. A window will open, asking if you want a specific cell range, but you want the entire workbook, so don’t change anything in this prompt, just click “Ok”.
+15. Ignore the prompt to “Filter Recipients” because you want to e-mail everyone on your list.
+16. Now type the text of your message and when you want to insert information that is specific to the individual participant go to “Insert Merge Field” and select the variable you want to show up in the text. For example, if you want a personal message with the participant’s name in it, type “Dear” and then select “Insert Merge Field” and select the name variable you created. Then you will see the text written as “Dear <<Name>>”. Then you could say “Here is the link to the survey:” and insert the survey link, which will end up looking like “Here is the link to the survey: <<Personal_Link>>”.
+17. Once you are finished with the text, click on “Finish and Merge” and select “Merge to E-mail”. When the pop-up opens, click on “To” and select the e-mail variable. Choose a subject line that you want the participants to see when they receive the e-mail and finally, decide if you want the message to just appear as text within the e-mail (default), html (doesn’t really change much for most e-mails) or as an attachment (this is not recommended because then there will be no text in the e-mail body, just an attachment that includes all the information; participants probably won’t like that).
+18. Select “Mail Merge to Outbox”. You will receive a warning about scripts and viruses, and this will pop-up for each of the e-mails you are going to send. So click on “Don’t notifiy me about this again” and choose to continue with sending the message. Now your e-mails will be sent. Hooray!
+
+----------------------
+
+<br>
+
+##### Survalyzer
+
+1. Create an excel sheet with the field names ID, Email, First Name, Last Name, Language, Cell Phone Number, Token and StudyID (or instead of StudyID, if you have a specific name for your participant ID code, such as the name of your study combined with the letters “ID”, you can use that, particularly if you use that specific variable name when referring to your participant identifier in other datasets).
+2. Only fill in the cells beneath StudyID with all of the participant identification numbers that will need to receive an e-mail. All the other columns can remain blank; these column names only need to be included for Survalyzer to be able to read your Excel file.
+3. Go to Survalyzer, select the “Samples” tab and then select “Create New Sample”.
+4. Give the sample a name (the name isn’t overly important, especially if you are just sending out the surveys the one time. If you are sending out repeated surveys, then make sure to have a name that makes it clear which sample of participants belongs to which round of the survey, for example by calling your sample “Round1_20200130”)
+5. Now select “Import from a File” and then upload the excel file you created.
+6. It should report that “X” number of records have been created (X being however many participants to whom you plan to send a survey link).
+7. Once the upload is complete you will end up at a page about the “Members” of your sample. The ID number shown here has been automatically generated by Survalyzer, and you can ignore it. There will be a “!” symbol under e-mail because you didn’t upload any e-mails, but that’s not a problem, since you don’t want to upload any e-mails.
+8. Click on the “<” button at the top of the screen next to the “Members” tab, then return to your survey by selecting the “Surveys” tab.
+9. Open your survey by clicking on it and then select the “Distribute” tab. Below “Distributor Invitations” you will see a list of distribution options if you haven’t already created a distribution method. You can also select an option by scrolling over the green button “Add Distributor” and selecting “Link List”.
+10. You will be directed to a page to select the sample you created, e.g. based on the name we created above, you would see “Round1_20200130”; click on that name to select that sample.
+11. Once the Link List is generated you can click on “Download Link List” and an Excel file with unique Survey links will be generated.
+12. Now you need to merge this downloaded Excel file with a list of your participant IDs and their respective e-mail addresses, so that you have a list of participant ID numbers, e-mail addresses and the survey link that refers to the participant. If you want to send out personalized messages, you can also include participant names in the final merged Excel file. You can use whatever coupling method you wish to merge the survey links to the e-mail addresses by coupling the files together based on the participant ID code; just make sure the final output is an excel file.
+13. Before you start Mail Merge in Microsoft Word, particularly if you are working on a MacOS, make sure your default e-mail program is Microsoft Outlook. That should be the case with Windows users, but for MacOS users, open the MacOS Mail app, select Mail>Preferences and then choose Microsoft Office as your default e-mail reader. If Microsoft Word was running when you changed this default, make sure to quit and restart Microsoft Word before starting Mail Merge.
+14. Additionally, if you are using a functional e-mail account for communication about the study, and you want the e-mail to be sent from that account and not your personal account, go to Microsoft Outlook, click on Outlook>Preferences and then change your default account to the functional e-mail account.
+15. When you are ready to start Mail Merge open a new Word document and click on Mailings>Start Mail Merge and then select “E-mail messages”
+16. Now click on “Select Recipients” and choose “Use an Existing List…”. This will prompt you to upload a file, so now you should upload the merged file you created with the participant ID numbers, e-mail addresses, survey links, and potentially names, if you want to have personalized e-mails. Word will warn you about opening the excel file, but you know it’s a trusted source, so continue onwards. A window will open, asking if you want a specific cell range, but you want the entire workbook, so don’t change anything in this prompt, just click “Ok”.
+17. Ignore the prompt to “Filter Recipients” because you want to e-mail everyone on your list.
+18. Now type the text of your message and when you want to insert information that is specific to the individual participant go to “Insert Merge Field” and select the variable you want to show up in the text. For example, if you want a personal message with the participant’s name in it, type “Dear” and then select “Insert Merge Field” and select the name variable you created. Then you will see the text written as “Dear <<Name>>”. Then you could say “Here is the link to the survey:” and insert the survey link, which will end up looking like “Here is the link to the survey: <<Personal_Link>>”.
+19. Once you are finished with the text, click on “Finish and Merge” and select “Merge to E-mail”. When the pop-up opens, click on “To” and select the e-mail variable. Choose a subject line that you want the participants to see when they receive the e-mail and finally, decide if you want the message to just appear as text within the e-mail (default), html (doesn’t really change much for most e-mails) or as an attachment (this is not recommended because then there will be no text in the e-mail body, just an attachment that includes all the information; participants probably won’t like that).
+20. Select “Mail Merge to Outbox”. You will receive a warning about scripts and viruses, and this will pop-up for each of the e-mails you are going to send. So click on “Don’t notifiy me about this again” and choose to continue with sending the message. Now your e-mails will be sent. Hooray!
+
+-------------------------
+
+<br>
 
 ### What do I do when I'm done my research or when I'm done collecting data with Qualtrics/Survalyzer? {#qToolsDone}
 
