@@ -121,7 +121,7 @@ table, td {
 VU Amsterdam has a university-wide contract and processing agreement with Qualtrics. Any VU employee can sign into [Qualtrics using their VU single sign-on details](vuamsterdam.eu.qualtrics.com){target="_blank"}. 
 FGB also has a faculty-wide contract and processing agreement with [Survalyzer](https://vrijeuniversiteit.survalyzer-eu.app/){target="_blank"}. Access to Survalyzer can be requested by contacting the [Faculty Survey Administrator](mailto:qualtrics.fgb@vu.nl). For Survalyzer, there are a limited number of workspaces available to FGB, so the Survey Admin may have to reject your request for access.
 
-### Why are there two questionnaire tools?
+### Why are there two questionnaire tools? {#qWhyTwo}
 
 Survalyzer was introduced originally because the faculty was able to set up a [processing agreement](../../legal/GDPRBasics.html#GDPRroles){target="_blank"} with Survalyzer's provider. At that time, the VU was unable to get a processing agreement in place with Qualtrics, which limited how Qualtrics could be used in the faculty, particularly for surveys collecting sensitive information. Both options now have processing agreements in place (covering the GDPR requirements), but each option still requires some enhancements to their security measures to allow for the highest risk data to be collected using only one of the options. In other words, if the content of your survey is high-risk ([privacy category orange or red](../../Security/PrivacyRisks.html){target="_blank"}), it's advised to use Survalyzer for collecting the [directly identifying information](../definitions/Definitions.html#directID){target="_blank"} (e.g. names, contact information, digital consent) and Qualtrics for collecting the other [research data](../definitions/Definitions.html#researchdata){target="_blank"}. This is explained further [below in the section on secure use of these tools](#qToolsSec).
 
@@ -152,6 +152,8 @@ While both Qualtrics and Survalyzer have processing agreements and contracts wit
 <br>
 
 ### How to send out surveys without using the built-in e-mail distrbution system? {#qNoEmails}
+
+There may be [some situations (see above)](#qToolsSec) where it is safer for your participants' privacy to **not** use Qualtrics' or Survalyzer's built-in e-mail distribution system. The following instructions explain how you can bypass these systems for each questionnaire tool.
 
 #### {.tabset .tabset-fade}
 
