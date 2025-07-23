@@ -197,7 +197,7 @@ If the data you plan to use are "special" under the GDPR, informed consent is th
 Registration of personal data processing for research purposes is achieved using DMPonline. Registration of data processing in DMPonline is described in detail below with a section from the VU's [Research Support Handbook](https://rdm.vu.nl/topics/data-management-plan.html#register-your-processing-activities){target="_blank"}:
 
 <iframe id="s-lg-widget-frame-x" width= "1000" height = "1490" scrolling="no" style="border: none" data-external="1"
-src="" ></iframe>
+src="https://rdm.vu.nl/guides/comply-with-gdpr.html#register-your-processing-activities" ></iframe>
 
 
 
