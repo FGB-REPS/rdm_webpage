@@ -80,6 +80,7 @@ table tr td:nth-of-type(2) {
 
 | | |
 | -- | ----------------------- |
+| 2025/08/11; Jessica Hrudey | Updated [archiving guidelines summary](../rdm/archiving/ArchivingGuidelinesSummary.html){target="_blank"} to include DataverseNL as an archiving location for Green data |
 | 2025/07/22; Jessica Hrudey | Put content from [Qualtrics](https://fgbto3-web.labs.vu.nl/rdm/Images/SendingSurveysinQualtricsWithoutUploadingEmails.pdf){target="_blank"}/[Survalyzer](https://fgbto3-web.labs.vu.nl/rdm/Images/SendingSurveysinSurvalyzerWithoutUploadingEmails.pdf){target="_blank"} PDF manuals on how to work around e-mail distribution systems into text of [html page on use of Qualtrics and Survalyzer](../rdm/tools/SecureUseOfQuestionnaireTools.html){target="_blank"} |
 | 2025/05/19; Jessica Hrudey | Added fifth policy principle to [FGB RDM Policy](../Policies/FGB_RDM_Policy.html){target="_blank"} requiring pre-registration of all research projects that require a data management plan |
 | 2025/05/15; Jessica Hrudey | Updated and converted PDF on secure use of qualtrics and survalyzer to [new html page on use of Qualtrics and Survalyzer](../rdm/tools/SecureUseOfQuestionnaireTools.html){target="_blank"}.

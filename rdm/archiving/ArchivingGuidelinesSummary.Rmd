@@ -1,6 +1,6 @@
 ---
 title: "Archiving @ FGB: Summary of FGB Archiving Guidelines"
-date: "`r Sys.Date()`; Version 2.0"
+date: "`r Sys.Date()`; Version 2.1"
 output: 
   html_document:
     theme: cerulean
@@ -205,13 +205,15 @@ Summarized from guideline sections: [1.1](ArchivingGuidelinesFull.html#section1.
 
 <!--Can also delete or modify this following statement when the more detailed page on picking an archive is complete
 -->
-The vast majority of data used within the faculty is considered [personal data](../definitions/Definitions.html#personaldata){target="_blank"} and therefore should be stored in a secure archive. The default archive at FGB for most situations is [YODA](../tools/YODAInstructionsFGB.html){target="_blank"}.
+The vast majority of data used within the faculty is considered [personal data](../definitions/Definitions.html#personaldata){target="_blank"} and therefore should be stored in a secure archive. The default archive at FGB for most situations and data types is [YODA](../tools/YODAInstructionsFGB.html){target="_blank"}.
 
-* If your data can be [de-identified](../../Security/Deidentification.html){target="_blank"} enough that they fall under the "Blue" category from the [Privacy Risk categorization](../../Security/PrivacyRisks.html){target="_blank"}, then you can use other archives, such as [DataverseNL](https://dataverse.nl/dataverse/vuamsterdam){target="_blank"} or an external [data repository](https://www.re3data.org/){target="_blank"}.
-  **It is *very* important, however, that when de-identifying your data that you do not irrevocably modify the raw data. Irrevocable modification defeats the purpose of archiving unadulterated raw data. See [How Do I Meet Privacy and Security Requirements?](#privacy_security) for further explanation.**
-  + You should check with the [FGB Privacy Champion](research.data.fgb@vu.nl) that your data are indeed "Blue" data before archiving them in a less secure archive than YODA.
-  + If your data cannot be de-identified to the "Blue" category level, it may still be possible to archive the supporting materials (e.g. research code, codebooks, interview scipts etc.) in archives or data repositories other than YODA. Just make sure these supporting materials don't contain any personal or [confidential information](../../Security/PrivacyRisks.html#confidentiality){target="_blank"}.
+* If your data are low enough risk and/or can be [de-identified](../../Security/Deidentification.html){target="_blank"}[*](#deIDnote) enough that they fall under the "Green" category from the [Privacy Risk categorization](../../Security/PrivacyRisks.html){target="_blank"}, then you can use [DataverseNL](https://dataverse.nl/dataverse/vuamsterdam){target="_blank"} instead of YODA if YODA does not meet your requirements.
+* If your data are low enough risk and/or can be [de-identified](../../Security/Deidentification.html){target="_blank"}[*](#deIDnote) enough that they fall under the "Blue" category from the [Privacy Risk categorization](../../Security/PrivacyRisks.html){target="_blank"}, then you can use [DataverseNL](https://dataverse.nl/dataverse/vuamsterdam){target="_blank"} or an external [data repository](https://www.re3data.org/){target="_blank"} instead of YODA if YODA does not meet your requirements.
+  + You should check with the [FGB Privacy Champion](research.data.fgb@vu.nl) that your data are indeed "Blue" data before archiving them in an external data repository.
+* If your data cannot be de-identified to the "Green" or "Blue" category level, it may still be possible to archive the supporting materials (e.g. research code, codebooks, interview scipts etc.) in archives or data repositories other than YODA. Just make sure these supporting materials don't contain any personal or [confidential information](../../Security/PrivacyRisks.html#confidentiality){target="_blank"}.
 
+<div id="deIDnote"></div>
+&#42; **It is *very* important to remember that when you are de-identifying your data that you do not irrevocably modify the raw data. Irrevocable modification defeats the purpose of archiving unadulterated raw data. See [How Do I Meet Privacy and Security Requirements?](#privacy_security) for further explanation.**
 
 <br>
 <div class="reference">
