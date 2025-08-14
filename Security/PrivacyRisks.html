@@ -370,7 +370,7 @@ display: none;
 
 <h1 class="title toc-ignore">FGB Security Tips: Assessing Privacy
 Risks</h1>
-<h4 class="date">2025-02-25; Version 1.7</h4>
+<h4 class="date">2025-08-14; Version 2.0</h4>
 
 </div>
 
@@ -481,6 +481,9 @@ border-color: #ffDf00;
 #confidtable th:last-child {
 border-color: #6e99c4;
 }
+#indent {
+padding-left: 3.5em;
+}
 </style>
 <p> <!--this adds a space  --></p>
 <p>Data about human beings are very rarely <a href="../Images/Anonymization-reference-card-for-researchers.pdf" target="_blank">anonymous</a>. Even if the data do not contain
@@ -489,13 +492,15 @@ risks to the people they are about, especially if it is possible to
 re-identify individuals within the data you are using for your
 research.</p>
 <p>The table below can be used to determine privacy risk categories for
-different types of data. There will always be grey areas when looking at
-privacy risk, particularly when considering the <a href="#vulnerability">vulnerability</a> of the research subjects, the <a href="#sensitivity">sensitivity</a> of the information and the <a href="#reID">re-identifiability of the data</a>. The guidance below
-cannot capture every possible situation, so, like all good things, think
-of this advice as a spectrum. If in doubt, opt for a higher risk
-category. Also, not all of the data in your research will have the same
-level of privacy risk and the privacy risks for each type of data may
-change as you clean, recode and modify the data from a <a href="../rdm/definitions/Definitions.html#rawdata" target="_blank">raw</a> to <a href="..,%20/rdm/definitions/Definitions.html#processeddata" target="_blank">processed</a> form. You should assess the risks for each
+different types of data. The privacy risks are based on three pillars:
+the <a href="#vulnerability">vulnerability</a> of the research subjects,
+the <a href="#reID">re-identifiability of the data</a> and the <a href="#harm">risk of harm</a> to the research subjects that is posed by
+the information in the data. The guidance below cannot capture every
+possible situation, so think of this advice as a spectrum. If in doubt,
+opt for a higher risk category. Also, not all of the data in your
+research will have the same level of privacy risk and the privacy risks
+for each type of data may change as you clean, recode and modify the
+data from a <a href="../rdm/definitions/Definitions.html#rawdata" target="_blank">raw</a> to <a href="..,%20/rdm/definitions/Definitions.html#processeddata" target="_blank">processed</a> form. You should assess the risks for each
 separate <a href="../rdm/definitions/Definitions.html#dataasset" target="_blank">data asset</a> and also consider how each data asset’s
 risk will change over the course of the research life cycle. If some
 data are higher risk than others, you can store these data separately in
@@ -523,7 +528,8 @@ transferred digitally</a>, and <a href="Storage.html" target="_blank">securely s
 </tr>
 <tr class="even">
 <td><em>Description</em></td>
-<td>• <a href="#reID">Directly identifying</a> data from <a href="#vulnerability">vulnerable people</a> about <a href="#sensitivity">sensitive topics</a></td>
+<td>• <a href="#reID">Directly identifying</a> data from <a href="#vulnerability">vulnerable people</a> containing information that
+<a href="#harm">elevate the risks of harm</a></td>
 </tr>
 <tr class="odd">
 <td><em>Impact of a Breach</em></td>
@@ -535,12 +541,13 @@ harm or damages after a breach is very high</td>
 <td><em>Examples</em></td>
 <td>• Video interviews with children talking about abuse <br>• Raw
 transcripts of interviews with refugees talking about their home country
-<br>• Open text responses (e.g. diary-type feedback) from patients with
-mental or physical conditions/disabilities <br>• Open text responses or
-detailed interviews with employees describing their satisfaction with
-their employer <br>• Raw neuroimages (not de-faced) of vulnerable
-subjects with serious medical conditions <br>• Genetic data from
-vulnerable subjects that indicates a risk for disease or disorders</td>
+<br>• Diaries from vulnerable patients with mental or physical
+conditions/disabilities <br>• Raw transcripts of interviews with
+non-white employees describing their satisfaction with their employer
+<br>• Raw neuroimages (not de-faced) of vulnerable subjects with serious
+medical or mental health conditions <br>• Non-pseudonymous genetic data
+from vulnerable subjects that indicates a risk for disease or
+disorders</td>
 </tr>
 </tbody>
 </table>
@@ -559,13 +566,18 @@ vulnerable subjects that indicates a risk for disease or disorders</td>
 </tr>
 <tr class="even">
 <td><em>Description</em></td>
-<td>• <a href="#reID">Directly identifying</a> data from <a href="#vulnerability">non-vulnerable people</a> about <a href="#sensitivity">non-sensitive topics</a> <br>
+<td>• <a href="#reID">Directly identifying</a> data from <a href="#vulnerability">non-vulnerable people</a> containing information
+that does <a href="#harm">NOT elevate the risks of harm</a> <br>
 <strong>OR</strong><br>• <a href="#reID">Directly identifying</a> data
-from <a href="#vulnerability">vulnerable people</a> about <a href="#sensitivity">non-sensitive topics</a>
+from <a href="#vulnerability">vulnerable people</a> containing
+information that does <a href="#harm">NOT elevate the risks of harm</a>
 <br><strong>OR</strong><br>• <a href="#reID">Directly identifying</a>
-data from <a href="#vulnerability">non-vulnerable people</a> about <a href="#sensitivity">sensitive topics</a> <br><strong>OR</strong><br>•
-Data from <a href="#vulnerability">vulnerable people</a> about <a href="#sensitivity">sensitive topics</a> that has been made slightly <a href="#reID">less identifiable</a> by removing easily identifying
-information (e.g. name, contact information)</td>
+data from <a href="#vulnerability"><strong>non-vulnerable</strong>
+people</a> containing information that <a href="#harm">elevate the risks
+of harm</a> <br><strong>OR</strong><br>• Data from <a href="#vulnerability">vulnerable people</a> containing information that
+<a href="#harm">elevate the risks of harm</a> that has been made
+slightly <a href="#reID">less identifiable</a> by removing easily
+identifying information (e.g. name, contact information)</td>
 </tr>
 <tr class="odd">
 <td><em>Impact of a Breach</em></td>
@@ -580,9 +592,9 @@ subjects<br>• Data containing date of birth and 6-digit postal code of
 research subjects <br>• Video observations of children playing<br>•
 Video observations of team-building activities<br>• Raw neuroimages (not
 de-faced) of non-vulnerable subjects <br>• Raw questionnaire data about
-sensitive topics<br>• Raw questionnaire data from vulnerable subjects
-containing detailed demographic information<br>• Genetic data from
-non-vulnerable subjects</td>
+sensitive or stigmatized topics<br>• Raw questionnaire data from
+vulnerable subjects containing detailed demographic information<br>•
+Genetic data from non-vulnerable subjects</td>
 </tr>
 </tbody>
 </table>
@@ -601,13 +613,13 @@ non-vulnerable subjects</td>
 </tr>
 <tr class="even">
 <td><em>Description</em></td>
-<td>• Data from <a href="#vulnerability">non-vulnerable people</a> about
-<a href="#sensitivity">non-sensitive topics</a> that been made slightly
-<a href="#reID">less identifiable</a> by removing easily identifying
-information (e.g. name, contact information) <br>
-<strong>OR</strong><br>• Data from <a href="#vulnerability">vulnerable
-people</a> and/or about <a href="#sensitivity">sensitive topics</a> that
-has undergone additional <a href="Deidentification.html" target="_blank">de-identification steps</a> beyond the removal of easily
+<td>• Data from <a href="#vulnerability">non-vulnerable people</a>
+containing information that does <a href="#harm">NOT elevate the risks
+of harm</a> that been made slightly <a href="#reID">less
+identifiable</a> by removing easily identifying information (e.g. name,
+contact information) <br> <strong>OR</strong><br>• Data from <a href="#vulnerability">vulnerable people</a> and/or containing
+information that does <a href="#harm">NOT elevate the risks of harm</a>
+that has undergone additional <a href="Deidentification.html" target="_blank">de-identification steps</a> beyond the removal of easily
 identifying information (e.g. name, contact information)</td>
 </tr>
 <tr class="odd">
@@ -620,13 +632,13 @@ likelihood of harms or damages after a breach is moderate to low</td>
 <td><em>Examples</em></td>
 <td>• IP- and MAC-addresses of research subjects <br>• Raw questionnaire
 data from non-vulnerable subjects containing demographic
-information<br>• Questionnaire data about sensitive topics and/or
-vulnerable people that has been processed to make re-identification more
-difficult<br>• Video recordings with faces blurred and voices
-modified<br>• Transcripts of interviews in which the identifying
-information is replaced with pseudonyms<br>• Repeated physical
-measurements on vulnerable subjects that include the dates and times the
-measurements occurred<br>• De-faced neuroimages of vulnerable
+information<br>• Questionnaire data about sensitive/stigmatized topics
+and/or vulnerable people that has been processed to make
+re-identification more difficult<br>• Video recordings with faces
+blurred and voices modified<br>• Transcripts of interviews in which the
+identifying information is replaced with pseudonyms<br>• Repeated
+physical measurements on vulnerable subjects that include the dates and
+times the measurements occurred<br>• De-faced neuroimages of vulnerable
 people<br>• Extensive kinematic measurements that are used to identify
 sensitive information such as movement disorders</td>
 </tr>
@@ -647,10 +659,11 @@ sensitive information such as movement disorders</td>
 </tr>
 <tr class="even">
 <td><em>Description</em></td>
-<td>• Data from <a href="#vulnerability">non-vulnerable people</a> about
-<a href="#sensitivity">non-sensitive topics</a> that has undergone
-additional <a href="Deidentification.html" target="_blank">de-identification steps</a> beyond the removal of easily
-identifying information (e.g. name, contact information)</td>
+<td>• Data from <a href="#vulnerability">non-vulnerable people</a>
+containing information that does <a href="#harm">NOT elevate the risks
+of harm</a> that has undergone additional <a href="Deidentification.html" target="_blank">de-identification steps</a>
+beyond the removal of easily identifying information (e.g. name, contact
+information)</td>
 </tr>
 <tr class="odd">
 <td><em>Impact of a Breach</em></td>
@@ -664,8 +677,10 @@ severe</td>
 <td>• Data that contain a unique record for at least one research
 subject, e.g.:<br>  - De-faced neuroimages of non-vulnerable
 people<br>  - Extensive kinematic measurements from non-vulnerable
-subjects<br>  - Any other datasets that contain sufficient information
-to create a unique record for one or more research subjects</td>
+subjects<br>  - Highly variable physical measurements, e.g. blood
+pressure, heart rate, blood glucose, body temperature<br>  - Any other
+datasets that contain sufficient information to create a unique record
+for one or more research subjects</td>
 </tr>
 </tbody>
 </table>
@@ -686,7 +701,7 @@ to create a unique record for one or more research subjects</td>
 <td><em>Description</em></td>
 <td>• Data that cannot be <a href="#reID">re-identified</a> whatsoever,
 regardless of the <a href="#vulnerability">vulnerability</a> of the
-research subjects or the <a href="#sensitivity">sensitivity</a> of the
+research subjects or the <a href="#harm">risks of harm</a> posed by the
 information</td>
 </tr>
 <tr class="odd">
@@ -696,17 +711,15 @@ and VU Amsterdam will suffer no damages to its reputation</td>
 </tr>
 <tr class="even">
 <td><em>Examples</em></td>
-<td>• Highly variable physical measurements, e.g. blood pressure, heart
-rate, blood glucose, body temperature<br>• Likert scale responses in a
-questionnaire<br>• Coded qualitative data<br>• Summary statistics
-<br><br><strong>NB</strong>: If your data can still be linked to
-identifying information (e.g. through participant identifiers that link
-to a separate <a href="../rdm/definitions/Definitions.html#keyfile" target="_blank">key file</a>), the data are not anonymous and therefore
-not “blue”. Such data would be “green” or “yellow” depending on the
-sensitivity of the information and vulnerability of the research
-subjects. If it is possible <em>and</em> appropriate to delete this last
-link to the identifying information, then the data can be considered
-anonymous.</td>
+<td>• Likert scale responses in a questionnaire<br>• Coded qualitative
+data<br>• Summary statistics <br><br><strong>NB</strong>: If your data
+can still be linked to identifying information (e.g. through participant
+identifiers that link to a separate <a href="../rdm/definitions/Definitions.html#keyfile" target="_blank">key
+file</a>), the data are not anonymous and therefore not “blue”. Such
+data would be “green” or “yellow” depending on the sensitivity of the
+information and vulnerability of the research subjects. If it is
+possible <em>and</em> appropriate to delete this last link to the
+identifying information, then the data can be considered anonymous.</td>
 </tr>
 </tbody>
 </table>
@@ -801,72 +814,6 @@ found <a href="https://dmeg.cessda.eu/Data-Management-Expert-Guide/6.-Archive-Pu
 <h3 class="hasAnchor">Important Factors in Privacy Risk<a href="#privacyRiskFactors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><br />
 </p>
-<div id="vulnerability" class="section level4 hasAnchor">
-<h4 class="hasAnchor">The vulnerability of the research subjects:<a href="#vulnerability" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<ul>
-<li><p>Vulnerable research subjects have an additional risk of harm
-(socially, physically, emotionally, financially) if their personal
-information is made public. The greater the vulnerability of the
-research subjects, the greater the potential for serious harm.</p></li>
-<li><p>Vulnerable research subjects include, but are not limited to:</p>
-<ul>
-<li>children</li>
-<li>people who identify as LGBTQIA2S+</li>
-<li>refugees</li>
-<li>ethnic or religious minorities</li>
-</ul></li>
-<li><p>The vulnerability of the research subjects can also depend on the
-context of the research, e.g. employees in organizational psychology
-research; students in learning analytics research. These contextual
-risks can also compound the risks for research subjects with other
-“typical” vulnerability characteristics, e.g. employees who are
-immigrants.</p></li>
-</ul>
-<p><br />
-</p>
-</div>
-<div id="sensitivity" class="section level4 hasAnchor">
-<h4 class="hasAnchor">The sensitivity of the information being used:<a href="#sensitivity" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<ul>
-<li><p>Sensitive data include “special” data types that receive extra
-legal attention under the <a href="https://gdpr-info.eu/art-9-gdpr/" target="_blank">General Data Protection Regulation (GDPR)</a>:</p>
-<ul>
-<li>race or ethnicity</li>
-<li>political opinions</li>
-<li>religious or philosophical beliefs,</li>
-<li>trade union membership</li>
-<li>genetic data</li>
-<li>biometric data (used to identify a person such as fingerprints or
-iris scans)</li>
-<li>health data</li>
-<li>data about sexuality or sexual activity</li>
-</ul>
-<h5 id="data-that-are-defined-as-special-by-the-gdpr-may-not-necessarily-be-considered-sensitive-by-the-general-public-e.g.-normal-physical-measurements-in-average-healthy-people-are-considered-health-data-under-the-gdpr.-if-data-are-special-there-are-additional-legal-rules-that-must-be-followed-regardless-of-whether-or-not-the-data-are-deemed-sensitive." class="hasAnchor"><em>Data that are defined as “special” by the GDPR may
-not necessarily be considered sensitive by the general public
-(e.g. normal physical measurements in average, healthy people are
-considered health data under the GDPR). If data are “special”, there are
-additional <a href="https://assets.vu.nl/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/57e5d5e6-54dc-4904-be0d-0baaa6cc8b73/AVG%20Take-home%20points%20voor%20FGB%20onderzoekers%3F.pdf" target="_blank">legal rules</a> that must be followed, regardless of
-whether or not the data are deemed sensitive.</em><a href="#data-that-are-defined-as-special-by-the-gdpr-may-not-necessarily-be-considered-sensitive-by-the-general-public-e.g.-normal-physical-measurements-in-average-healthy-people-are-considered-health-data-under-the-gdpr.-if-data-are-special-there-are-additional-legal-rules-that-must-be-followed-regardless-of-whether-or-not-the-data-are-deemed-sensitive." class="anchor-section" aria-label="Anchor link to header"></a></h5></li>
-<li><p>Sensitive data are <strong>also</strong> any information that is
-considered sensitive by the general public, such as:</p>
-<ul>
-<li>employment status</li>
-<li>income and other financial data</li>
-<li>student grades and performance</li>
-<li>location data</li>
-</ul></li>
-<li><p>Data may also be more sensitive because the research subjects are
-more vulnerable, e.g. a refugee describing their experiences in their
-home country.</p></li>
-<li><p>Sensitive data that are not included in list of GDPR “special”
-data types do not need to meet the additional legal requirements for
-“special” data; however, <em>all</em> sensitive data should be treated
-with extra care because of the risk to the research subjects’
-privacy.</p></li>
-</ul>
-<p><br />
-</p>
-</div>
 <div id="reID" class="section level4 hasAnchor">
 <h4 class="hasAnchor">The ease with which research subjects can be
 re-identified in the data:<a href="#reID" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -922,6 +869,119 @@ of the data is the only factor you can change since it’s not possible to
 reduce the vulnerability of your research subjects or the sensitivity of
 your research topic.</p></li>
 </ul>
+<p><br />
+</p>
+</div>
+<div id="vulnerability" class="section level4 hasAnchor">
+<h4 class="hasAnchor">The vulnerability of the research subjects:<a href="#vulnerability" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li><p>Vulnerable research subjects have an additional risk of harm
+(socially, physically, emotionally, financially) if their personal
+information is made public. The greater the vulnerability of the
+research subjects, the greater the potential for serious harm.</p></li>
+<li><p>Vulnerable research subjects include, but are not limited to:</p>
+<ul>
+<li>children</li>
+<li>people who identify as LGBTQ+</li>
+<li>refugees</li>
+<li>ethnic or religious minorities</li>
+</ul></li>
+<li><p>When assessing the vulnerability of the research subjects, bear
+in mind that we are looking at what vulnerability characteristics are
+known or disclosed within the data. If you are not actively studying a
+specific vulnerable population and you do not need to collect data that
+could identify someone as vulnerable, then that information should not
+be collected in order to minimize the risks to the research subjects.
+For example, if you do not need to know the ethnicity or sexuality of
+your research subjects, you should not collect that information within
+your research data. That way you can minimize the overall privacy risks
+by minimizing the vulnerabilities of the research subjects studied.
+However, there may be situations where collection of this information is
+unavoidable, e.g. video recordings of research subjects will also
+collect skin colour and any religious clothing. Keep such cases in the
+back of your mind when assessing the overall privacy risks; even if you
+are not actively studying a vulnerable population, consider whether you
+will collect data that could identify someone as part of a vulnerable
+population when you are assessing the <a href="#harm">risks of harm</a>
+to the research subject.</p></li>
+</ul>
+<p><br />
+</p>
+<div id="sensitivity">
+
+</div>
+<p><!---- put an extra div ID here to allow the tag using sensitivity to continue to work while updating all hyperlinks --></p>
+</div>
+<div id="harm" class="section level4 hasAnchor">
+<h4 class="hasAnchor">The risk of harm posed by the information being
+used:<a href="#harm" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>The risk of harm posed by the information in the data is the most
+complex and subjective consideration in assessing the privacy risks.
+Your goal is to consider what information your research data contain and
+whether that information, either in combination with or in addition to
+the vulnerability of your research subjects, poses elevated risks of
+harm to the research subjects. Information that could increase the risks
+of harm to your research subjects include subject matter that is
+sensitive, taboo or stigmatized in nature. The risk of harm is elevated
+if the research subjects would experience further risks to their
+well-being if the information is made public beyond the disclosure of
+their vulnerability characteristics. For example, a dataset containing
+the names of LGBTQ research subjects is only high-risk (orange data) as
+long as the only information leaked is the research subjects’ names.
+Such a situation is not ideal, but no further information beyond names
+has been disclosed. However, if the leaked information included
+information about the research subjects’ sexuality and, especially if
+the data included further detail about the research subjects’ sexual
+experiences, that would constitute an elevated risk of harm due to the
+information contained in the data (i.e. very high-risk or red data).
+Because of these complex nuances, it is imperative that you thoroughly
+contemplate how much damage the public disclosure of your research data
+would pose to your research subjects.
+<ul>
+<li>If in doubt, contact the <a href="research.data.fgb@vu.nl">FGB
+Privacy Officer</a> for support.</li>
+</ul></li>
+<li>Some other topics that <em>may potentially</em> increase the risk of
+harm to your subjects, include:
+<ul>
+<li>employment status</li>
+<li>income and other financial data</li>
+<li>student grades and performance</li>
+<li>location data</li>
+</ul></li>
+</ul>
+<div id="indent">
+<p>The risk of harm in these cases will often depend on the
+vulnerability characteristics of the research subjects, for example,
+employment status of the average Dutch person is someone sensitive, but
+does not pose an elevated risk, while employment status of an asylum
+seeker could have political ramifications for the research subject in
+question and may risk their safety and well-being.</p>
+</div>
+<ul>
+<li>If the data are <a href="https://fgb-rdm.nl/legal/GDPRBasics.html#special" target="_blank">“special” under the GDPR</a> the risk of harm
+<em>may</em> be elevated but this is not always the case; if your
+research data fall into the “special” category it is a warning sign to
+thoroughly assess for elevated risks of harm posed by the data.
+<ul>
+<li>“Special” data are subject to additional legal requirements under
+the GDPR regardless of the risks of harm posed by these data. More
+information is found on the <a href="https://fgb-rdm.nl/legal/GDPRBasics.html#special" target="_blank">GDPR Take-Home Points page</a></li>
+<li>If your data pose additional risks to the research subjects, but are
+not “special” data types under the GDPR, they do not need to meet the
+additional legal requirements for “special” data. However, these data
+should of course be treated with extra care because of the risk to the
+research subjects’ privacy and well-being.</li>
+</ul></li>
+<li>Elevated risks of harm can also apply to non-personal data, such as
+a company’s financial records. If the disclosure of this information
+could negatively impact an individual or organisation, this suggests a
+potentially elevated <a href="#confidentiality">confidentiality
+risk</a>.</li>
+</ul>
+<p><br />
+</p>
 <!-- Footnotes -->
 </div>
 </div>
@@ -956,6 +1016,8 @@ have been removed from the dataset?<a href="#fnref1" class="footnote-back">↩�
 </div>
 
 
+
+
 <style>
 #footer {
 font-family: 'Roboto', sans-serif;
@@ -976,12 +1038,24 @@ hr {
 color: #BEBEBE;
 border: 1px solid;
 }
+img {
+width: 30px;
+}
+.filter-blue {
+filter: invert(27%) sepia(44%) saturate(1601%) hue-rotate(169deg) brightness(93%) contrast(91%);
+}
 </style>
+
 
 <div id="footer">
   <hr />
   <p id="footer_header" style="text-align: center;">Feedback on this page?</p>
-  <p style="text-align: center;">Contact <a href="mailto:research.data.fgb@vu.nl">research.data.fgb@vu.nl</a></p>
+  <p style="text-align: center;">Contact <a href="mailto:research.data.fgb@vu.nl">research.data.fgb@vu.nl</a>
+  or submit a suggestion to the GitHub repo <a href="https://github.com/FGB-REPS/rdm_webpage" target="_blank">
+    <img role="img" src="data:image/png;base64,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" class="filter-blue"></a></p>
+
+
+
 </div>
 
 

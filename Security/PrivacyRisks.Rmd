@@ -1,6 +1,6 @@
 ---
 title: "FGB Security Tips: Assessing Privacy Risks"
-date: "`r Sys.Date()`; Version 1.7"
+date: "`r Sys.Date()`; Version 2.0"
 output: 
   html_document:
     theme: cerulean
@@ -151,7 +151,9 @@ table, td {
 }
 
 
-
+#indent {
+  padding-left: 3.5em;
+}
 
 </style>
 
@@ -160,7 +162,7 @@ table, td {
 
 Data about human beings are very rarely [anonymous](../Images/Anonymization-reference-card-for-researchers.pdf){target="_blank"}. Even if the data do not contain information such as name or address, the data may still pose privacy risks to the people they are about, especially if it is possible to re-identify individuals within the data you are using for your research.  
 
-The table below can be used to determine privacy risk categories for different types of data. There will always be grey areas when looking at privacy risk, particularly when considering the [vulnerability](#vulnerability) of the research subjects, the [sensitivity](#sensitivity) of the information and the [re-identifiability of the data](#reID). The guidance below cannot capture every possible situation, so, like all good things, think of this advice as a spectrum. If in doubt, opt for a higher risk category. Also, not all of the data in your research will have the same level of privacy risk and the privacy risks for each type of data may change as you clean, recode and modify the data from a [raw](../rdm/definitions/Definitions.html#rawdata){target="_blank"} to [processed](.., /rdm/definitions/Definitions.html#processeddata){target="_blank"} form. You should assess the risks for each separate [data asset](../rdm/definitions/Definitions.html#dataasset){target="_blank"} and also consider how each data asset's risk will change over the course of the research life cycle. If some data are higher risk than others, you can store these data separately in a more secure storage option.
+The table below can be used to determine privacy risk categories for different types of data. The privacy risks are based on three pillars: the [vulnerability](#vulnerability) of the research subjects, the [re-identifiability of the data](#reID) and the [risk of harm](#harm) to the research subjects that is posed by the information in the data. The guidance below cannot capture every possible situation, so think of this advice as a spectrum. If in doubt, opt for a higher risk category. Also, not all of the data in your research will have the same level of privacy risk and the privacy risks for each type of data may change as you clean, recode and modify the data from a [raw](../rdm/definitions/Definitions.html#rawdata){target="_blank"} to [processed](.., /rdm/definitions/Definitions.html#processeddata){target="_blank"} form. You should assess the risks for each separate [data asset](../rdm/definitions/Definitions.html#dataasset){target="_blank"} and also consider how each data asset's risk will change over the course of the research life cycle. If some data are higher risk than others, you can store these data separately in a more secure storage option.
 
 Once you've determined the privacy risk category for each data asset, you can use these categories to inform your choices about how your data can be [de-identified](Deidentification.html){target="_blank"}, [safely used by students/interns](SecurityForStudents.html){target="_blank"}, [safely transported physically](PhysicalTransport.html){target="_blank"}, [securely transferred digitally](DigitalTransfer.html){target="_blank"}, and [securely stored](Storage.html){target="_blank"}.
 
@@ -177,18 +179,18 @@ Once you've determined the privacy risk category for each data asset, you can us
 | | |
 | --- | --------------- |
 | _Privacy Risk_ | Very high-risk |
-| _Description_ | &bull; [Directly identifying](#reID) data from [vulnerable people](#vulnerability) about [sensitive topics](#sensitivity) |
+| _Description_ | &bull; [Directly identifying](#reID) data from [vulnerable people](#vulnerability) containing information that [elevate the risks of harm](#harm) |
 | _Impact of a Breach_ | &bull; Severity of harm to research subjects and/or damage to the reputation of VU Amsterdam would be very high <br>&bull;	The likelihood of harm or damages after a breach is very high |
-| _Examples_ | &bull; Video interviews with children talking about abuse <br>&bull; Raw transcripts of interviews with refugees talking about their home country <br>&bull;	Open text responses (e.g. diary-type feedback) from patients with mental or physical conditions/disabilities <br>&bull;	Open text responses or detailed interviews with employees describing their satisfaction with their employer <br>&bull;	Raw neuroimages (not de-faced) of vulnerable subjects with serious medical conditions <br>&bull;	Genetic data from vulnerable subjects that indicates a risk for disease or disorders  |
+| _Examples_ | &bull; Video interviews with children talking about abuse <br>&bull; Raw transcripts of interviews with refugees talking about their home country <br>&bull;	Diaries from vulnerable patients with mental or physical conditions/disabilities <br>&bull;	Raw transcripts of interviews with non-white employees describing their satisfaction with their employer <br>&bull;	Raw neuroimages (not de-faced) of vulnerable subjects with serious medical or mental health conditions <br>&bull;	Non-pseudonymous genetic data from vulnerable subjects that indicates a risk for disease or disorders  |
   
 ### Orange Data {#orange}
   
 | | |
 | --- | --------------- |
 | _Privacy Risk_ | High-risk |
-| _Description_ | &bull; [Directly identifying](#reID) data from [non-vulnerable people](#vulnerability) about [non-sensitive topics](#sensitivity) <br> **OR**<br>&bull; [Directly identifying](#reID) data from [vulnerable people](#vulnerability) about [non-sensitive topics](#sensitivity)  <br>**OR**<br>&bull; [Directly identifying](#reID) data from [non-vulnerable people](#vulnerability) about [sensitive topics](#sensitivity)  <br>**OR**<br>&bull; Data from [vulnerable people](#vulnerability) about [sensitive topics](#sensitivity) that has been made slightly [less identifiable](#reID) by removing easily identifying information (e.g. name, contact information) |
+| _Description_ | &bull; [Directly identifying](#reID) data from [non-vulnerable people](#vulnerability) containing information that does [NOT elevate the risks of harm](#harm) <br> **OR**<br>&bull; [Directly identifying](#reID) data from [vulnerable people](#vulnerability) containing information that does [NOT elevate the risks of harm](#harm)  <br>**OR**<br>&bull; [Directly identifying](#reID) data from [**non-vulnerable** people](#vulnerability) containing information that [elevate the risks of harm](#harm)  <br>**OR**<br>&bull; Data from [vulnerable people](#vulnerability) containing information that [elevate the risks of harm](#harm) that has been made slightly [less identifiable](#reID) by removing easily identifying information (e.g. name, contact information) |
 | _Impact of a Breach_ | &bull;	Severity of harm to research subjects and/or damage to the reputation of VU Amsterdam would be high <br>&bull;	The likelihood of harm or damages after a breach is moderate to high |
-| _Examples_ | &bull;	Key files containing names and contact information of research subjects<br>&bull; Data containing date of birth and 6-digit postal code of research subjects <br>&bull; Video observations of children playing<br>&bull;	Video observations of team-building activities<br>&bull;	Raw neuroimages (not de-faced) of non-vulnerable subjects <br>&bull;	Raw questionnaire data about sensitive topics<br>&bull;	Raw questionnaire data from vulnerable subjects containing detailed demographic information<br>&bull;	Genetic data from non-vulnerable subjects |
+| _Examples_ | &bull;	Key files containing names and contact information of research subjects<br>&bull; Data containing date of birth and 6-digit postal code of research subjects <br>&bull; Video observations of children playing<br>&bull;	Video observations of team-building activities<br>&bull;	Raw neuroimages (not de-faced) of non-vulnerable subjects <br>&bull;	Raw questionnaire data about sensitive or stigmatized topics<br>&bull;	Raw questionnaire data from vulnerable subjects containing detailed demographic information<br>&bull;	Genetic data from non-vulnerable subjects |
 
 
 
@@ -197,27 +199,27 @@ Once you've determined the privacy risk category for each data asset, you can us
 | | |
 | --- | --------------- |
 | _Privacy Risk_ | Medium to high risk |
-| _Description_ | &bull;	Data from [non-vulnerable people](#vulnerability) about [non-sensitive topics](#sensitivity) that been made slightly [less identifiable](#reID) by removing easily identifying information (e.g. name, contact information) <br> **OR**<br>&bull; Data from [vulnerable people](#vulnerability) and/or about [sensitive topics](#sensitivity) that has undergone additional [de-identification steps](Deidentification.html){target="_blank"} beyond the removal of easily identifying information (e.g. name, contact information) |
+| _Description_ | &bull;	Data from [non-vulnerable people](#vulnerability) containing information that does [NOT elevate the risks of harm](#harm) that been made slightly [less identifiable](#reID) by removing easily identifying information (e.g. name, contact information) <br> **OR**<br>&bull; Data from [vulnerable people](#vulnerability) and/or containing information that does [NOT elevate the risks of harm](#harm) that has undergone additional [de-identification steps](Deidentification.html){target="_blank"} beyond the removal of easily identifying information (e.g. name, contact information) |
 | _Impact of a Breach_ | &bull;	Severity of harm to research subjects and/or damage to the reputation of VU Amsterdam would be moderate to high <br>&bull; The likelihood of harms or damages after a breach is moderate to low |
-| _Examples_ | &bull;	IP- and MAC-addresses of research subjects <br>&bull; Raw questionnaire data from non-vulnerable subjects containing demographic information<br>&bull;	Questionnaire data about sensitive topics and/or vulnerable people that has been processed to make re-identification more difficult<br>&bull;	Video recordings with faces blurred and voices modified<br>&bull;	Transcripts of interviews in which the identifying information is replaced with pseudonyms<br>&bull;	Repeated physical measurements on vulnerable subjects that include the dates and times the measurements occurred<br>&bull;	De-faced neuroimages of vulnerable people<br>&bull;	Extensive kinematic measurements that are used to identify sensitive information such as movement disorders |
+| _Examples_ | &bull;	IP- and MAC-addresses of research subjects <br>&bull; Raw questionnaire data from non-vulnerable subjects containing demographic information<br>&bull;	Questionnaire data about sensitive/stigmatized topics and/or vulnerable people that has been processed to make re-identification more difficult<br>&bull;	Video recordings with faces blurred and voices modified<br>&bull;	Transcripts of interviews in which the identifying information is replaced with pseudonyms<br>&bull;	Repeated physical measurements on vulnerable subjects that include the dates and times the measurements occurred<br>&bull;	De-faced neuroimages of vulnerable people<br>&bull;	Extensive kinematic measurements that are used to identify sensitive information such as movement disorders |
 
 ### Green Data {#green}
   
 | | |
 | --- | --------------- |
 | _Privacy Risk_ | Medium to low risk |
-| _Description_ | &bull;	Data from [non-vulnerable people](#vulnerability) about [non-sensitive topics](#sensitivity) that has undergone additional [de-identification steps](Deidentification.html){target="_blank"} beyond the removal of easily identifying information (e.g. name, contact information) |
+| _Description_ | &bull;	Data from [non-vulnerable people](#vulnerability) containing information that does [NOT elevate the risks of harm](#harm) that has undergone additional [de-identification steps](Deidentification.html){target="_blank"} beyond the removal of easily identifying information (e.g. name, contact information) |
 | _Impact of a Breach_ | &bull;	Severity and likelihood of harm to research subjects after a breach are low<br>&bull;	Damage to the reputation of VU Amsterdam is still possible, but likelihood is lower and the impact would be less severe |
-| _Examples_ | &bull;	Data that contain a unique record for at least one research subject, e.g.:<br>&nbsp;&nbsp;-	De-faced neuroimages of non-vulnerable people<br>&nbsp;&nbsp;-	Extensive kinematic measurements from non-vulnerable subjects<br>&nbsp;&nbsp;-	Any other datasets that contain sufficient information to create a unique record for one or more research subjects |
+| _Examples_ | &bull;	Data that contain a unique record for at least one research subject, e.g.:<br>&nbsp;&nbsp;-	De-faced neuroimages of non-vulnerable people<br>&nbsp;&nbsp;-	Extensive kinematic measurements from non-vulnerable subjects<br>&nbsp;&nbsp;-	Highly variable physical measurements, e.g. blood pressure, heart rate, blood glucose, body temperature<br>&nbsp;&nbsp;-	Any other datasets that contain sufficient information to create a unique record for one or more research subjects |
 
 ### Blue Data {#blue}
   
 | | |
 | --- | --------------- |
 | _Privacy Risk_ | Little to no risk |
-| _Description_ | &bull;	Data that cannot be [re-identified](#reID) whatsoever, regardless of the [vulnerability](#vulnerability) of the research subjects or the [sensitivity](#sensitivity) of the information |
+| _Description_ | &bull;	Data that cannot be [re-identified](#reID) whatsoever, regardless of the [vulnerability](#vulnerability) of the research subjects or the [risks of harm](#harm) posed by the information |
 | _Impact of a Breach_ | &bull;	Research subjects will suffer no direct[**](#NB) harm and VU Amsterdam will suffer no damages to its reputation |
-| _Examples_ | &bull;	Highly variable physical measurements, e.g. blood pressure, heart rate, blood glucose, body temperature<br>&bull;	Likert scale responses in a questionnaire<br>&bull;	Coded qualitative data<br>&bull;	Summary statistics <br><br>**NB**: If your data can still be linked to identifying information (e.g. through participant identifiers that link to a separate [key file](../rdm/definitions/Definitions.html#keyfile){target="_blank"}), the data are not anonymous and therefore not "blue". Such data would be "green" or "yellow" depending on the sensitivity of the information and vulnerability of the research subjects. If it is possible _and_ appropriate to delete this last link to the identifying information, then the data can be considered anonymous. |
+| _Examples_ | &bull;	Likert scale responses in a questionnaire<br>&bull;	Coded qualitative data<br>&bull;	Summary statistics <br><br>**NB**: If your data can still be linked to identifying information (e.g. through participant identifiers that link to a separate [key file](../rdm/definitions/Definitions.html#keyfile){target="_blank"}), the data are not anonymous and therefore not "blue". Such data would be "green" or "yellow" depending on the sensitivity of the information and vulnerability of the research subjects. If it is possible _and_ appropriate to delete this last link to the identifying information, then the data can be considered anonymous. |
 
 ##### {#NB}
 ###### **NB: Although research subjects will not be directly harmed, the conclusions drawn from research results or the misuse of published research software can impact the wider population to which the research subjects belong. Such ethical considerations should be discussed with the [FGB Scientific and Ethical Review Board](https://vu.nl/en/about-vu/faculties/faculty-of-behavioural-and-movement-sciences/more-about/faculty-committees){target="_blank"}.
@@ -256,46 +258,6 @@ If your data are not about human subjects, they may still need to be kept [confi
 
 \
 
-#### The vulnerability of the research subjects: {#vulnerability}
-
-* Vulnerable research subjects have an additional risk of harm (socially, physically, emotionally, financially) if their personal information is made public. The greater the vulnerability of the research subjects, the greater the potential for serious harm.
-
-* Vulnerable research subjects include, but are not limited to: 
-  * children
-  * people who identify as LGBTQIA2S+
-  * refugees
-  * ethnic or religious minorities
-
-* The vulnerability of the research subjects can also depend on the context of the research, e.g. employees in organizational psychology research; students in learning analytics research. These contextual risks can also compound the risks for research subjects with other "typical" vulnerability characteristics, e.g. employees who are immigrants.
-
-\
-
-#### The sensitivity of the information being used: {#sensitivity}
-
-* Sensitive data include "special" data types that receive extra legal attention under the [General Data Protection Regulation (GDPR)](https://gdpr-info.eu/art-9-gdpr/){target="_blank"}:
-  * race or ethnicity 
-  * political opinions
-  * religious or philosophical beliefs,
-  * trade union membership
-  * genetic data
-  * biometric data (used to identify a person such as fingerprints or iris scans)
-  * health data
-  * data about sexuality or sexual activity
-  
-  ##### _Data that are defined as "special" by the GDPR may not necessarily be considered sensitive by the general public (e.g. normal physical measurements in average, healthy people are considered health data under the GDPR). If data are "special", there are additional [legal rules](https://assets.vu.nl/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/57e5d5e6-54dc-4904-be0d-0baaa6cc8b73/AVG%20Take-home%20points%20voor%20FGB%20onderzoekers%3F.pdf){target="_blank"} that must be followed, regardless of whether or not the data are deemed sensitive._
-
-* Sensitive data are **also** any information that is considered sensitive by the general public, such as:
-  * employment status 
-  * income and other financial data
-  * student grades and performance
-  * location data
-
-* Data may also be more sensitive because the research subjects are more vulnerable, e.g. a refugee describing their experiences in their home country.
-
-* Sensitive data that are not included in list of GDPR "special" data types do not need to meet the additional legal requirements for "special" data; however, *all* sensitive data should be treated with extra care because of the risk to the research subjects' privacy.
-
-\
-
 #### The ease with which research subjects can be re-identified in the data: {#reID}
 
 * Data are [personal data](../rdm/definitions/Definitions.html#personaldata){target="_blank"} if they are [directly identifying](../rdm/definitions/Definitions.html#directID){target="_blank"} or [indirectly identifiable](../rdm/definitions/Definitions.html#indirectID){target="_blank"}: 
@@ -312,6 +274,49 @@ If your data are not about human subjects, they may still need to be kept [confi
 * As long as data are identifiable, they cannot be referred to as [anonymous data](https://www.lcrdm.nl/files/lcrdm/2020-01/Anonymization%20-%20reference%20card%20for%20researchers.pdf){target="_blank"} and the legal rules of the [GDPR](https://assets.vu.nl/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/57e5d5e6-54dc-4904-be0d-0baaa6cc8b73/AVG%20Take-home%20points%20voor%20FGB%20onderzoekers%3F.pdf){target="_blank"} must be followed. This means the GDPR applies to pseudonymous data.
 
 * Not all identifiable data pose the same level of privacy risk: oftentimes, raw data often pose higher privacy risks because of greater re-identifiability (e.g. video recordings), and therefore require additional data protection measures (such as [high security storage](Storage.html){target="_blank"}); as the data are cleaned, recoded and analysed they become less identifiable (e.g. coded interactions) and require fewer data protection measures. [De-identification](Deidentification.html){target="_blank"} is therefore an important part of data processing that can be used to protect the privacy of your research participants; the identifiability of the data is the only factor you can change since it's not possible to reduce the vulnerability of your research subjects or the sensitivity of your research topic.
+
+\
+
+#### The vulnerability of the research subjects: {#vulnerability}
+
+* Vulnerable research subjects have an additional risk of harm (socially, physically, emotionally, financially) if their personal information is made public. The greater the vulnerability of the research subjects, the greater the potential for serious harm.
+
+* Vulnerable research subjects include, but are not limited to: 
+  * children
+  * people who identify as LGBTQ+
+  * refugees
+  * ethnic or religious minorities
+
+* When assessing the vulnerability of the research subjects, bear in mind that we are looking at what vulnerability characteristics are known or disclosed within the data. If you are not actively studying a specific vulnerable population and you do not need to collect data that could identify someone as vulnerable, then that information should not be collected in order to minimize the risks to the research subjects. For example, if you do not need to know the ethnicity or sexuality of your research subjects, you should not collect that information within your research data. That way you can minimize the overall privacy risks by minimizing the vulnerabilities of the research subjects studied. However, there may be situations where collection of this information is unavoidable, e.g. video recordings of research subjects will also collect skin colour and any religious clothing. Keep such cases in the back of your mind when assessing the overall privacy risks; even if you are not actively studying a vulnerable population, consider whether you will collect data that could identify someone as part of a vulnerable population when you are assessing the [risks of harm](#harm) to the research subject.
+
+\
+
+<div id="sensitivity"></div> <!---- put an extra div ID here to allow the tag using sensitivity to continue to work while updating all hyperlinks -->
+
+#### The risk of harm posed by the information being used: {#harm}
+
+* The risk of harm posed by the information in the data is the most complex and subjective consideration in assessing the privacy risks. Your goal is to consider what information your research data contain and whether that information, either in combination with or in addition to the vulnerability of your research subjects, poses elevated risks of harm to the research subjects. Information that could increase the risks of harm to your research subjects include subject matter that is sensitive, taboo or stigmatized in nature. The risk of harm is elevated if the research subjects would experience further risks to their well-being if the information is made public beyond the disclosure of their vulnerability characteristics. For example, a dataset containing the names of LGBTQ research subjects is only high-risk (orange data) as long as the only information leaked is the research subjects' names. Such a situation is not ideal, but no further information beyond names has been disclosed. However, if the leaked information included information about the research subjects' sexuality and, especially if the data included further detail about the research subjects' sexual experiences, that would constitute an elevated risk of harm due to the information contained in the data (i.e. very high-risk or red data). Because of these complex nuances, it is imperative that you thoroughly contemplate how much damage the public disclosure of your research data would pose to your research subjects.
+  + If in doubt, contact the [FGB Privacy Officer](research.data.fgb@vu.nl) for support.
+
+* Some other topics that *may potentially* increase the risk of harm to your subjects, include:
+  * employment status 
+  * income and other financial data
+  * student grades and performance
+  * location data
+
+<div id="indent">  
+The risk of harm in these cases will often depend on the vulnerability characteristics of the research subjects, for example, employment status of the average Dutch person is someone sensitive, but does not pose an elevated risk, while employment status of an asylum seeker could have political ramifications for the research subject in question and may risk their safety and well-being.
+</div>
+
+* If the data are ["special" under the GDPR](https://fgb-rdm.nl/legal/GDPRBasics.html#special){target="_blank"} the risk of harm *may* be elevated but this is not always the case; if your research data fall into the "special" category it is a warning sign to thoroughly assess for elevated risks of harm posed by the data.
+  + "Special" data are subject to additional legal requirements under the GDPR regardless of the risks of harm posed by these data. More information is found on the [GDPR Take-Home Points page](https://fgb-rdm.nl/legal/GDPRBasics.html#special){target="_blank"}
+  + If your data pose additional risks to the research subjects, but are not "special" data types under the GDPR, they do not need to meet the additional legal requirements for "special" data. However, these data should of course be treated with extra care because of the risk to the research subjects' privacy and well-being.
+
+* Elevated risks of harm can also apply to non-personal data, such as a company’s financial records. If the disclosure of this information could negatively impact an individual or organisation, this suggests a potentially elevated [confidentiality risk](#confidentiality).
+
+
+\
+
 
 
 
