@@ -1,6 +1,6 @@
 ---
 title: "FGB Security Tips: Assessing Privacy Risks"
-date: "`r Sys.Date()`; Version 2.0"
+date: "`r Sys.Date()`; Version 2.1"
 output: 
   html_document:
     theme: cerulean
