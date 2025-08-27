@@ -1,6 +1,6 @@
 ---
 title: "Research Data Management @FGB: Definitions"
-date: "`r Sys.Date()`; Version 2.0"
+date: "`r Sys.Date()`; Version 2.1"
 output: 
   html_document:
     theme: cerulean
@@ -60,6 +60,11 @@ li {
 
 #NB {
   margin-left: 3em; /* this indents an entire paragraph */
+  
+summary {
+  font-size: 18px;
+}
+  
 }
 
 
@@ -167,6 +172,25 @@ _NB2: Almost all data about human subjects are considered personal data under th
 <div id="NB">
 _NB1: Publishing data does not mean that the data must be open access or publicly accessible. Access to the data can be restricted and granted upon valid request._ 
 
+<details id="publTypes">
+<summary>**More information on types of publishing**</summary>
+
+<h4> Open data publishing: </h4>
+
+* Published data are fully accessible to the public via an online repository. Anyone can view, download, and reuse the data, provided they comply with the terms of the associated license (e.g., Creative Commons).
+
+<h4>  Restricted data publishing: </h4> 
+
+* Published data can be reused, but the access is controlled. Potential users must submit a request for access and meet specific requirements, as outlined in the reuse license, before accessing the data. While the data are not publicly accessible, metadata and descriptions of the data are available openly online.
+
+<h4>  Closed data publishing: </h4> 
+
+* Published data are not available for reuse under any circumstances, often due to privacy concerns, ethical considerations, or intellectual property restrictions. However, metadata and descriptions of the data are available openly online.
+
+</details>
+
+\
+
 _NB2: Data underlying a [published research article must be published](../archiving/ArchivingGuidelinesFull.html#purereg){target="_blank"} (in addition to being [archived](#archivingdata)) so that, at a minimum, the metadata can be found and reviewed by others._
 </div>
 
@@ -197,5 +221,5 @@ software in research and not Research Software.”
 * Usage of existing data by **any _authorized_** party for new purposes beyond the originally intended research goals. Reuse may be new research that is in-line with the original project, entirely new research questions or, where appropriate, completely different purposes, such as educational or commercial purposes. 
 
 <div id="NB">
-_NB: The purposes for which data may be reused and the parties which may be authorized to reuse the data depends on whether the data are [personal](#personaldata)/[confidential](#confidentialdata) data, as well as what the research participants consented to with regards to data reuse. The [FGB data stewards and privacy champions](mailto:research.data.fgb@vu.nl) can assist with determining if data may be reused, as well as how to develop your consent forms to ask for consent to reuse from your participants._
+_NB: The purposes for which data may be reused and the parties which may be authorized to reuse the data depends on whether the data are [personal](#personaldata)/[confidential](#confidentialdata) data, as well as what the research participants consented to with regards to data reuse. [How the data are published](#publTypes) will also impact how reuse can and cannot be carried out. The [FGB data stewards and privacy champions](mailto:research.data.fgb@vu.nl) can assist with determining if data may be reused, as well as how to develop your consent forms to ask for consent to reuse from your participants._
 </div>
