@@ -1,6 +1,6 @@
 ---
 title: "RDM Tools @ FGB: YODA"
-date: "`r Sys.Date()`; Version 1.6"
+date: "`r Sys.Date()`; Version 1.7"
 output: 
   html_document:
     theme: cerulean
@@ -490,6 +490,8 @@ Even if your data are anonymous/anonymized or non-personal data with a low confi
   * To avoid this, make sure only one user at a time is working with a given data file.
 
 #### Tips for Archiving & Metadata {#furtherArchiving}
+
+As a starting point, you can use this [YODA archiving checklist](../../Images/meta_archiving_guide_yoda_v2.1.docx) to make sure you've done all the necessary steps to archive data in YODA. The following information goes into even further detail if you need it.
 
 * Once your research is complete and the associated data and materials (called the "YODA data package") need to be archived, you should archive the data package in the YODA ["vault"](https://yoda.vu.nl/site/getting-started/archiving.html){target="_blank"}. Information on _when_ you should archive your research materials, as well as _which materials_ should be archived with the data, can be found in the [FGB Archiving Guidelines](../archiving/ArchivingGuidelinesSummary.html){target="_blank"}
   * Detailed guidance with screenshots on how to archive open and restricted data simultaneously can be found in this [instruction manual](../../Images/yoda_archiving_instructions.pdf){target="_blank"}

@@ -1,6 +1,6 @@
 ---
 title: "Archiving @ FGB: Summary of FGB Archiving Guidelines"
-date: "`r Sys.Date()`; Version 2.1"
+date: "`r Sys.Date()`; Version 2.2"
 output: 
   html_document:
     theme: cerulean
@@ -205,7 +205,7 @@ Summarized from guideline sections: [1.1](ArchivingGuidelinesFull.html#section1.
 
 <!--Can also delete or modify this following statement when the more detailed page on picking an archive is complete
 -->
-The vast majority of data used within the faculty is considered [personal data](../definitions/Definitions.html#personaldata){target="_blank"} and therefore should be stored in a secure archive. The default archive at FGB for most situations and data types is [YODA](../tools/YODAInstructionsFGB.html){target="_blank"}.
+The vast majority of data used within the faculty is considered [personal data](../definitions/Definitions.html#personaldata){target="_blank"} and therefore should be stored in a secure archive. The default archive at FGB for most situations and data types is [YODA](../tools/YODAInstructionsFGB.html){target="_blank"}. Following this [YODA archiving checklist](../../Images/meta_archiving_guide_yoda_v2.1.docx) to ensure that you are archiving everything that needs to be archived in YODA in the correct way.
 
 * If your data are low enough risk and/or can be [de-identified](../../Security/Deidentification.html){target="_blank"}[*](#deIDnote) enough that they fall under the "Green" category from the [Privacy Risk categorization](../../Security/PrivacyRisks.html){target="_blank"}, then you can use [DataverseNL](https://dataverse.nl/dataverse/vuamsterdam){target="_blank"} instead of YODA if YODA does not meet your requirements.
 * If your data are low enough risk and/or can be [de-identified](../../Security/Deidentification.html){target="_blank"}[*](#deIDnote) enough that they fall under the "Blue" category from the [Privacy Risk categorization](../../Security/PrivacyRisks.html){target="_blank"}, then you can use [DataverseNL](https://dataverse.nl/dataverse/vuamsterdam){target="_blank"} or an external [data repository](https://www.re3data.org/){target="_blank"} instead of YODA if YODA does not meet your requirements.
