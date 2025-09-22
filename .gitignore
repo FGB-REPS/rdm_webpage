@@ -3,7 +3,7 @@
 .RData
 .Ruserdata
 .DS_Store
-.htaccess
+
 
 /backup_pages
 /code_experiments
@@ -15,9 +15,9 @@
 # Learn more about .gitignore:
 #     https://www.atlassian.com/git/tutorials/saving-changes/gitignore
 
-# Ignore .htaccess and .Rhistory files
+# Ignore  .Rhistory files
 
-*.htaccess
+
 *.Rhistory
 
 # Ignore Word and PDF versions of the policy and policy positions documents
