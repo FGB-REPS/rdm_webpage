@@ -6,8 +6,8 @@ RedirectMatch 404 /\.git.*
 
 # Redirect fgb-rdm.nl/rdm to fgb-rdm.nl
 
-Redirect 301 "rdm/" "https://fgb-rdm.nl/"
+Redirect 301 "/rdm/index.html" "https://fgb-rdm.nl/index.html"
 
 # Redirect wmo insurance form found on fgb-rdm.nl to fgbto3-web.labs.vu.nl
 
-Redirect 301 "/wmo-insurance/" "https://fgbto3-web.labs.vu.nl/rdm/wmo-insurance/"
+Redirect 301 "/wmo-insurance" "https://fgbto3-web.labs.vu.nl/rdm/wmo-insurance/"
