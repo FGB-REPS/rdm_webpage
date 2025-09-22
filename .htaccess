@@ -1,3 +1,6 @@
+
+RewriteEngine On
+
 # Prevent any (accidental) access to .git folder/files
 
 RedirectMatch 404 /\.git.*
