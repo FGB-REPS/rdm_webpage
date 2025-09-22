@@ -1,6 +1,4 @@
 
-RewriteEngine On
-
 # Prevent any (accidental) access to .git folder/files
 
 RedirectMatch 404 /\.git.*
@@ -8,8 +6,8 @@ RedirectMatch 404 /\.git.*
 
 # Redirect fgb-rdm.nl/rdm to fgb-rdm.nl
 
-Redirect https://fgb-rdm.nl/rdm/ https://fgb-rdm.nl/
+Redirect 301 "rdm/" "https://fgb-rdm.nl/"
 
 # Redirect wmo insurance form found on fgb-rdm.nl to fgbto3-web.labs.vu.nl
 
-Redirect https://fgb-rdm.nl/wmo-insurance/ https://fgbto3-web.labs.vu.nl/rdm/wmo-insurance/
+Redirect 301 "/wmo-insurance/" "https://fgbto3-web.labs.vu.nl/rdm/wmo-insurance/"
