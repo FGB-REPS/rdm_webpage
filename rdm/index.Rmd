@@ -1,6 +1,5 @@
 ---
-output: 
-  html_document:
-    layout: forward
-    target: https://fgb-rdm.nl/
+output: html_document
+layout: forward
+target: https://fgb-rdm.nl/
 ---
