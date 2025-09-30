@@ -80,6 +80,8 @@ table tr td:nth-of-type(2) {
 
 | | |
 | -- | ----------------------- |
+| 2025/09/30; Jessica Hrudey | Added redirects on deprecated URLs to correct URLs |
+| 2025/09/10; Jessica Hrudey | Added Yoda archiving checklist to [Yoda instructions](../rdm/tools/YODAInstructionsFGB.html){target="_blank"} |
 | 2025/08/27; Jessica Hrudey | Added extra header for privacy risks table to [privacy risks page](../Security/PrivacyRisks.html){target="_blank"} and added extra definitions for types of data publishing to [Definitions page](../rdm/definitions/Definitions.html){target="_blank"} |
 | 2025/08/14; Jessica Hrudey | Redefined sensitivity of data to risk of harm on the [privacy risks page](../Security/PrivacyRisks.html){target="_blank"} and on the [GDPR Take-home points page](../legal/GDPRBasics.html){target="_blank"} to more clearly define what is represented by that concept |
 | 2025/08/11; Jessica Hrudey | Updated [archiving guidelines summary](../rdm/archiving/ArchivingGuidelinesSummary.html){target="_blank"} to include DataverseNL as an archiving location for Green data |
