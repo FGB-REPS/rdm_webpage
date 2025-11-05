@@ -1,6 +1,6 @@
 ---
 title: "Research Data Management @ FGB"
-date: "`r Sys.Date()`; version 1.4"
+date: "`r Sys.Date()`; version 1.5"
 output: 
   html_document:
     theme: cerulean
@@ -66,7 +66,7 @@ li {
 
 # Policies
 
-* [FGB RDM Policy](Policies/FGB_RDM_Policy.html){target="_blank"}
+* [FGB RDM policy](Policies/FGB_RDM_Policy.html){target="_blank"}
 * [FGB policy positions on the GDPR](Policies/FGB_Policy_Positions_GDPR.html){target="_blank"}
 
 
@@ -88,21 +88,26 @@ li {
 
 # Security Guidance
 
-* [Security Basics](Security/SecurityBasics.html){target="_blank"}
-* [Privacy Risk Categorization](Security/PrivacyRisks.html){target="_blank"}
-* [De-identification of Data](Security/Deidentification.html){target="_blank"}
+* [Security basics](Security/SecurityBasics.html){target="_blank"}
+* Privacy risk guidance
+    + [Privacy risks guidance app](https://risk_levels_app.rshiny.labs.vu.nl/){target="_blank"}
+    + [Privacy risks explained](Security/PrivacyRisks.html){target="_blank"}
+* [De-identification of data](Security/Deidentification.html){target="_blank"}
 * [Encryption](Security/Encryption.html){target="_blank"}
-* [Secure Storage Guide](Security/Storage.html){target="_blank"}
-* [Secure Digital Data Transfer Guide](Security/DigitalTransfer.html){target="_blank"}
-* [Secure Physical Data Transport Guide](Security/PhysicalTransport.html){target="_blank"}
-* [Security for Students](Security/SecurityForStudents.html){target="_blank"}
+* [Secure storage guide](Security/Storage.html){target="_blank"}
+* [Secure digital data transfer guide](Security/DigitalTransfer.html){target="_blank"}
+* [Secure physical data transport guide](Security/PhysicalTransport.html){target="_blank"}
+* [Security for students](Security/SecurityForStudents.html){target="_blank"}
 
 # Legal Guidance
 
-* [GDPR Take-home points](legal/GDPRBasics.html){target="_blank"}
-* [Informed Consent Form and Information Letter Checklist](legal/ICFChecklist.html){target="_blank"}
+* [GDPR take-home points](legal/GDPRBasics.html){target="_blank"}
+* Informed consent guidance
+    + [Informed Consent Form and Information Letter Checklist](legal/ICFChecklist.html){target="_blank"}
+    + [Informed consent generator](https://icf.rshiny.labs.vu.nl/){target="_blank"}
 * [How to use ZIVVER to obtain digital consent](legal/ZIVVERdigitalConsent.html){target="_blank"}
 * [Workflow for processing standard privacy agreements](Images/privacy_agreement_flow_fgb_2025.pdf){target="_blank"}
+
 
 
 # Financial Concerns
