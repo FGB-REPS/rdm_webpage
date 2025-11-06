@@ -1,6 +1,6 @@
 ---
 title: "FGB Security Tips: Assessing Privacy Risks"
-date: "`r Sys.Date()`; Version 2.2"
+date: "`r Sys.Date()`; Version 2.3"
 output: 
   html_document:
     theme: cerulean
@@ -185,7 +185,7 @@ Once you've determined the privacy risk category for each data asset, you can us
 | _Privacy Risk_ | Very high-risk |
 | _Description_ | &bull; [Directly identifying](#reID) data from [vulnerable people](#vulnerability) containing information that [elevate the risks of harm](#harm) |
 | _Impact of a Breach_ | &bull; Severity of harm to research subjects and/or damage to the reputation of VU Amsterdam would be very high <br>&bull;	The likelihood of harm or damages after a breach is very high |
-| _Examples_ | &bull; Video interviews with children talking about abuse <br>&bull; Raw transcripts of interviews with refugees talking about their home country <br>&bull;	Diaries from vulnerable patients with mental or physical conditions/disabilities <br>&bull;	Raw transcripts of interviews with non-white employees describing their satisfaction with their employer <br>&bull;	Raw neuroimages (not de-faced) of vulnerable subjects with serious medical or mental health conditions <br>&bull;	Non-pseudonymous genetic data from vulnerable subjects that indicates a risk for disease or disorders  |
+| _Example_ | &bull; Video interviews with children talking about abuse  |
   
 ### Orange Data {#orange}
   
@@ -194,7 +194,7 @@ Once you've determined the privacy risk category for each data asset, you can us
 | _Privacy Risk_ | High-risk |
 | _Description_ | &bull; [Directly identifying](#reID) data from [non-vulnerable people](#vulnerability) containing information that does [NOT elevate the risks of harm](#harm) <br> **OR**<br>&bull; [Directly identifying](#reID) data from [vulnerable people](#vulnerability) containing information that does [NOT elevate the risks of harm](#harm)  <br>**OR**<br>&bull; [Directly identifying](#reID) data from [**non-vulnerable** people](#vulnerability) containing information that [elevate the risks of harm](#harm)  <br>**OR**<br>&bull; Data from [vulnerable people](#vulnerability) containing information that [elevate the risks of harm](#harm) that has been made slightly [less identifiable](#reID) by removing easily identifying information (e.g. name, contact information) |
 | _Impact of a Breach_ | &bull;	Severity of harm to research subjects and/or damage to the reputation of VU Amsterdam would be high <br>&bull;	The likelihood of harm or damages after a breach is moderate to high |
-| _Examples_ | &bull;	Key files containing names and contact information of research subjects<br>&bull; Data containing date of birth and 6-digit postal code of research subjects <br>&bull; Video observations of children playing<br>&bull;	Video observations of team-building activities<br>&bull;	Raw neuroimages (not de-faced) of non-vulnerable subjects <br>&bull;	Raw questionnaire data about sensitive or stigmatized topics<br>&bull;	Raw questionnaire data from vulnerable subjects containing detailed demographic information<br>&bull;	Genetic data from non-vulnerable subjects |
+| _Example_ | &bull;	Key files containing names and contact information of healthy adults |
 
 
 
@@ -205,7 +205,7 @@ Once you've determined the privacy risk category for each data asset, you can us
 | _Privacy Risk_ | Medium to high risk |
 | _Description_ | &bull;	Data from [non-vulnerable people](#vulnerability) containing information that does [NOT elevate the risks of harm](#harm) that been made slightly [less identifiable](#reID) by removing easily identifying information (e.g. name, contact information) <br> **OR**<br>&bull; Data from [vulnerable people](#vulnerability) and/or containing information that does [NOT elevate the risks of harm](#harm) that has undergone additional [de-identification steps](Deidentification.html){target="_blank"} beyond the removal of easily identifying information (e.g. name, contact information) |
 | _Impact of a Breach_ | &bull;	Severity of harm to research subjects and/or damage to the reputation of VU Amsterdam would be moderate to high <br>&bull; The likelihood of harms or damages after a breach is moderate to low |
-| _Examples_ | &bull;	IP- and MAC-addresses of research subjects <br>&bull; Raw questionnaire data from non-vulnerable subjects containing demographic information<br>&bull;	Questionnaire data about sensitive/stigmatized topics and/or vulnerable people that has been processed to make re-identification more difficult<br>&bull;	Video recordings with faces blurred and voices modified<br>&bull;	Transcripts of interviews in which the identifying information is replaced with pseudonyms<br>&bull;	Repeated physical measurements on vulnerable subjects that include the dates and times the measurements occurred<br>&bull;	De-faced neuroimages of vulnerable people<br>&bull;	Extensive kinematic measurements that are used to identify sensitive information such as movement disorders |
+| _Example_ | &bull;	IP- and MAC-addresses of healthy adults |
 
 ### Green Data {#green}
   
@@ -214,7 +214,7 @@ Once you've determined the privacy risk category for each data asset, you can us
 | _Privacy Risk_ | Medium to low risk |
 | _Description_ | &bull;	Data from [non-vulnerable people](#vulnerability) containing information that does [NOT elevate the risks of harm](#harm) that has undergone additional [de-identification steps](Deidentification.html){target="_blank"} beyond the removal of easily identifying information (e.g. name, contact information) |
 | _Impact of a Breach_ | &bull;	Severity and likelihood of harm to research subjects after a breach are low<br>&bull;	Damage to the reputation of VU Amsterdam is still possible, but likelihood is lower and the impact would be less severe |
-| _Examples_ | &bull;	Data that contain a unique record for at least one research subject, e.g.:<br>&nbsp;&nbsp;-	De-faced neuroimages of non-vulnerable people<br>&nbsp;&nbsp;-	Extensive kinematic measurements from non-vulnerable subjects<br>&nbsp;&nbsp;-	Highly variable physical measurements, e.g. blood pressure, heart rate, blood glucose, body temperature<br>&nbsp;&nbsp;-	Any other datasets that contain sufficient information to create a unique record for one or more research subjects |
+| _Example_ | &bull; Highly variable physical measurements (e.g. blood pressure, heart rate, blood glucose, body temperature) from healthy adults |
 
 ### Blue Data {#blue}
   
@@ -223,7 +223,7 @@ Once you've determined the privacy risk category for each data asset, you can us
 | _Privacy Risk_ | Little to no risk |
 | _Description_ | &bull;	Data that cannot be [re-identified](#reID) whatsoever, regardless of the [vulnerability](#vulnerability) of the research subjects or the [risks of harm](#harm) posed by the information |
 | _Impact of a Breach_ | &bull;	Research subjects will suffer no direct[**](#NB) harm and VU Amsterdam will suffer no damages to its reputation |
-| _Examples_ | &bull;	Likert scale responses in a questionnaire<br>&bull;	Coded qualitative data<br>&bull;	Summary statistics <br><br>**NB**: If your data can still be linked to identifying information (e.g. through participant identifiers that link to a separate [key file](../rdm/definitions/Definitions.html#keyfile){target="_blank"}), the data are not anonymous and therefore not "blue". Such data would be "green" or "yellow" depending on the sensitivity of the information and vulnerability of the research subjects. If it is possible _and_ appropriate to delete this last link to the identifying information, then the data can be considered anonymous. |
+| _Examples_ | &bull;	Likert scale responses from healthy adults in a questionnaire about benign topics <br><br>**NB**: If your data can still be linked to identifying information (e.g. through participant identifiers that link to a separate [key file](../rdm/definitions/Definitions.html#keyfile){target="_blank"}), the data are not anonymous and therefore not "blue". Such data would be "green" or "yellow" depending on the sensitivity of the information and vulnerability of the research subjects. If it is possible _and_ appropriate to delete this last link to the identifying information, then the data can be considered anonymous. |
 
 ##### {#NB}
 ###### **NB: Although research subjects will not be directly harmed, the conclusions drawn from research results or the misuse of published research software can impact the wider population to which the research subjects belong. Such ethical considerations should be discussed with the [FGB Scientific and Ethical Review Board](https://vu.nl/en/about-vu/faculties/faculty-of-behavioural-and-movement-sciences/more-about/faculty-committees){target="_blank"}.
