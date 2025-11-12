@@ -1,6 +1,6 @@
 ---
 title: "GDPR Checklist for Informed Consent Forms and Information Letters"
-date: "`r Sys.Date()`; Version 2.1"
+date: "`r Sys.Date()`; Version 2.2"
 output: 
   html_document:
     theme: cerulean
@@ -190,6 +190,7 @@ table, td {
 
 When conducting research at FGB, it is imperative that data are used ethically *and* legally. The vast majority of data used in our faculty's research are [personal data](../rdm/definitions/Definitions.html#personaldata){target="_blank"}[^1] and when personal data are utilized for research, the [General Data Protection Regulation (GDPR)](GDPRBasics.html#GDPRapplies){target="_blank"} applies. Under this regulation, one of our most fundamental requirements is to inform people that we are using their data in our research. The following checklist helps you ensure that you are meeting the requirements imposed by the GDPR.
 
+The faculty has also developed an [Informed Consent Form Generator tool](https://icfg.rshiny.labs.vu.nl/){target="_blank"} to facilitate the creation of informed consent forms and information letters for participants. This tool is still in an initial version and may not cover all use-cases, but it has been developed to attempt to cover most of the content of what is mentioned on this page (NB: the tool does not provide a [privacy statement](#privStat) currently, but will hopefully be tooled to offer that in the future. Additionally, the tool does not currently generate ICFs for child participants nor for WMO-applicable research). The output that is generated is based on the existing informed consent form and information letter templates for adults created by the [FGB Scientific and Ethical Review Board (VCWE)](https://vu.nl/en/employee/behavioural-and-movement-sciences-getting-started/the-scientific-and-ethical-review-board-vcwe){target="_blank"}. At this time, it is still recommended to review this page after completing the tool to check that all requirements relevant to your situation have been included.
 
 
 
@@ -205,13 +206,13 @@ Some privacy-related topics should still be addressed in the information letter 
 
 ###### Information Requirements for Consent Processes
 
-This section supplements the existing informed consent form and information letter templates created by the [FGB Scientific and Ethical Review Board (VCWE)](https://vu.nl/en/employee/behavioural-and-movement-sciences-getting-started/the-scientific-and-ethical-review-board-vcwe){target="_blank"}. These templates ensure that all ethical requirements are met but they only address some, not all, of the legal requirements of the GDPR.
+This section supplements the existing informed consent form and information letter templates created by the [FGB Scientific and Ethical Review Board (VCWE)](https://vu.nl/en/employee/behavioural-and-movement-sciences-getting-started/the-scientific-and-ethical-review-board-vcwe){target="_blank"}, as well as how these templates have been implemented within the [Informed Consent Form Generator tool](https://icfg.rshiny.labs.vu.nl/){target="_blank"}. The templates ensure that all ethical requirements are met but they only address some, not all, of the legal requirements of the GDPR. The implementation of the templates within the [Informed Consent Form Generator tool](https://icfg.rshiny.labs.vu.nl/){target="_blank"} is an ongoing process, so the following information is important to review if your use case is not currently addressed by the ICF generator (i.e. consent forms for children or WMO-applicable research). 
 
 
 <h4>&#10003; Withdrawing Consent</h4>
 
 * Inform the participant that they will not suffer any harm or detriment as a result of withdrawing their consent
-* Assess how you will handle data if consent if revoked and adjust the template text as needed:
+* Assess how you will handle data if consent is revoked and adjust the template text as needed:
   + If you can delete any data collected prior to analysis without detrimentally harming your research (e.g. deletion of a survey respondent's record), then you should adjust the text in the template from *"data collected up to [the point that consent is withdrawn] will be used for the research"* to <em>"any data collected **and** already analysed when consent is withdrawn will still be used for the research and cannot be deleted before the end of the storage duration"</em>.
   + If you cannot delete a participant's data immediately after data collection because it would detrimentally harm your research (e.g. the participant revokes consent *after* they have already participated in a recorded focus group), then use the text already present in the template.
   + Additional information on this complex topic is found in the [FGB Policy Positions on the GDPR](../Policies/FGB_Policy_Positions_GDPR.html#art5){target="_blank"}. At a minimum, inform the participant that any questions or concerns about the ongoing use of their data after consent is withdrawn should be posed to the contact person for the study or the [VU Data Protection Officer](mailto:functionarisgegevensbescherming@vu.nl).
@@ -223,63 +224,32 @@ This section supplements the existing informed consent form and information lett
   + Make sure to name any [special categories](GDPRBasics.html#special){target="_blank"} of data
   + You don't need to specify formats or go into specifics for each type of data, but it should be clear to the participant what information on them will be used and why
     + E.g. questionnaire data about your psychological complaints & personality type, video data of your interactions with a work team, transcripts of our interview with you etc.
-  + One way to approach this so participants can easily understand it is to include a table, for example:
 
-<div id="table1">
-| Type of Data | Purpose in the Study |
-| -- | --- |
-| Name, contact info | For contact with participant during study |
-| [*All of your awesome research data*] | [*How that data will answer your awesome research thesis*] |
-</div>
-
-
-<div class="indent2">
-In this example, all of the research data are used for one specific research goal. If you have several different research goals and different data will be used for each one, make sure to explain which data are used for which research goals. 
-</div>
-
-* If some of your research goals are optional, you should present a summarized version of the table again in the consent form with an additional column allowing participants to consent to the optional goals, where applicable:
-
-<div id="table2">
-| Type of Data | Purpose in the Study | Consent |
-| -- | --- | -- |
-| Name, contact info | Maintenance of contact with participant during study | Participating in this study means consenting to this purpose |
-| [*All of your awesome research data*] | [*How that data will answer your awesome research thesis*] | Participating in this study means consenting to this purpose |
-| Questionnaire data | Questionnaire sub-study answering [*awesome optional sub-study question*] | Yes &#9744; <br> No &#9744; |
-</div>
-
-<div class="indent1">
-If there aren't any optional research goals, the table does not need to be repeated in the consent form; just be clear that participating in the study means consenting to all of the research purposes.
-
-* NB: If one of your research goals is making the data available for [reuse](../rdm/definitions/Definitions.html#reusedata){target="_blank"}, that goal should generally be optional in the consent form. If that is not possible for your research, discuss it with the [FGB Privacy Champion](mailto:research.data.fgb@vu.nl).
-</div>
-
-* Include or remove any other relevant consent options (e.g. "do you consent to video recordings being used for educational purposes?") already present in the template. Make sure that any options you include in the consent form are adequately explained in the information letter or privacy statement (e.g. how will the video recordings be used for educational purposes; will there be any de-identification; for whose education will they be used etc.)
+* If some of your research goals are optional (i.e. participants have the option to decline an optional research goal, while still participating in the overall study), it should be clear in the information letter which data will only be used for this optional goal. Additionally, in the consent form there should be a separate question about this optional research goal where participants can indicate whether or not they consent.
+    + The output from the [Informed Consent Form Generator tool](https://icfg.rshiny.labs.vu.nl/){target="_blank"} includes some of the recurring optional research goals (i.e. use of images for educational purposes), however, you will need to include the additional information mentioned above in the information letter and consent form if you have optional research goals specific to your study.
 
 * If any of the data collected about your participants is obtained indirectly (e.g. coupling their demographic information to an existing registry), you need also need to inform them of this, what data is being collected and what the source of that data is.
 
 <h4>&#10003; Who is Accessing the Data? </h4>
 
-* Adjust the existing text in the information letter template so that it only mentions the parties who will have access to the data, e.g. if your research doesn't have safety monitors, information about them shouldn't be included in the final versions of your information letters/ICFs.
-* Mention the use of any [processors](GDPRBasics.html#GDPRroles){target="_blank"} or [joint controllers](GDPRBasics.html#GDPRroles){target="_blank"} that may have access to the data in the information letter and refer to the privacy statement for further information. Don't use the terms processor or joint controller, just state that some third parties may have access to the data, but that the data are kept secure.
-* Explain any other situations where a third party may need access to the data:
-  1. Data *might* be shared with other researchers for new research. Ensure that the explanation of this is logical for your goals and to include a separate consent option for this in your consent form
-      a. In some cases, you might choose that data sharing is not optional; a participant either participates and the data are shared or they don't participate at all. If you choose that route you **_must_** make this clear to participants, and be aware of the implications for your own research (since this will impact who wants to participate). If this is a route you wish to pursue, make sure to discuss it with the [FGB Privacy Champion](mailto:research.data.fgb@vu.nl).
-      b. Be explicit about which data about your participants will be shared with third parties.
-  2. All data that are used for a research publication **_must_** be [archived](../rdm/definitions/Definitions.html#archivingdata){target="_blank"} to allow for verification. Explain that this can occur, that this is not optional and this applies to all data used to answer your research question, however any party requesting access will be appropriately vetted. 
+* The output from the [Informed Consent Form Generator tool](https://icfg.rshiny.labs.vu.nl/){target="_blank"} along with the [privacy statement](#privStat) should cover all of the relevant information here. However, if there are any other parties with access to the data that have not been covered in the informed consent generator output nor the privacy statement, make sure to include them, preferably in the privacy statement to avoid information overload in the participant information letter.
+
+* While it is addressed in the output from the [Informed Consent Form Generator tool](https://icfg.rshiny.labs.vu.nl/){target="_blank", it is imperative that your participants have a clear understanding about what future sharing of data with other researchers looks like. Make sure that the following is clear:
+    1. Data might be shared with other researchers for new research. Ensure that the explanation of this is logical for your goals and to include a separate consent option for this in your consent form
+        a. In some cases, you might choose that data sharing is not optional; a participant either participates and the data are shared or they don’t participate at all. If you choose that route you must make this clear to participants, and be aware of the implications for your own research (since this will impact who wants to participate). If this is a route you wish to pursue, make sure to discuss it with the FGB Privacy Champion.
+        b. Be explicit about which data about your participants will be shared with third parties.
+    2. All data that are used for a research publication must be archived to allow for verification. Explain that this can occur, that this is not optional and this applies to all data used to answer your research question, however any party requesting access will be appropriately vetted.
 
 
 
 <h4>&#10003; Data Storage Duration </h4>
 
-* Include the correct [data storage term](../rdm/archiving/ArchivingGuidelinesSummary.html#howlong){target="_blank"} in the information letter for your research (10 years is standard, but does not apply to all research).
+* The output from the [Informed Consent Form Generator tool](https://icfg.rshiny.labs.vu.nl/){target="_blank"} should result in the correct [data storage term](../rdm/archiving/ArchivingGuidelinesSummary.html#howlong){target="_blank"} in the information letter for your research (10 years is standard, but does not apply to all research). Note that:
   + If any of the data from your study will be openly published for reuse, inform the participant of this and that this means these data will be findable online indefinitely. Be clear about which data this applies to.
     + Make sure to discuss your plan to openly publish your data with the [FGB Data Stewards and/or Privacy Champion](mailto:research.data.fgb@vu.nl)!
   + If you will share (some of) the data upon request for new research, the storage term will likely last longer (i.e. 10 years after each new research publication with the data). Explain that in such a case, the data they may be saved for longer than 10 years after the current study. Give participants the opportunity to ask further questions about this.
 
 
-<h4>&#10003; Other Required Information </h4>
-
-* Participants need to be informed that they have rights under the GPDR. You do not need to go into any further detail in the information letter, simply refer to the privacy statement where they can learn more about their rights and how to exercise them.
 
 ###### Information Requirements at Other Moments
 
