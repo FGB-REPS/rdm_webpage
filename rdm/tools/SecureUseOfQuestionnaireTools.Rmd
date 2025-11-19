@@ -118,7 +118,7 @@ table, td {
 
 ## Comparing Qualtrics & Survalyzer {#qToolsComp}
 
-VU Amsterdam has a university-wide contract and processing agreement with Qualtrics. Any VU employee can sign into [Qualtrics using their VU single sign-on details](vuamsterdam.eu.qualtrics.com){target="_blank"}. 
+VU Amsterdam has a university-wide contract and processing agreement with Qualtrics. Any VU employee can sign into [Qualtrics using their VU single sign-on details](https://vuamsterdam.eu.qualtrics.com){target="_blank"}. 
 FGB also has a faculty-wide contract and processing agreement with [Survalyzer](https://vrijeuniversiteit.survalyzer-eu.app/){target="_blank"}. Access to Survalyzer can be requested by contacting the [Faculty Survey Administrator](mailto:qualtrics.fgb@vu.nl). For Survalyzer, there are a limited number of workspaces available to FGB, so the Survey Admin may have to reject your request for access.
 
 ### Why are there two questionnaire tools? {#qWhyTwo}
