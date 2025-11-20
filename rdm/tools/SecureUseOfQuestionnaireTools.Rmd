@@ -1,6 +1,6 @@
 ---
 title: "RDM Tools @ FGB: Qualtrics & Survalyzer"
-date: "`r Sys.Date()`; Version 2.1"
+date: "`r Sys.Date()`; Version 2.1.1"
 output: 
   html_document:
     theme: cerulean
