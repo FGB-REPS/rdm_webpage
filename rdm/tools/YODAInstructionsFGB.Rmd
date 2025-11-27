@@ -184,7 +184,7 @@ YODA is a preferred storage and archiving option because:
 
 * YODA allows you to create [structured metadata](https://yoda.vu.nl/site/getting-started/metadata-add.html){target="_blank"} for describing your datasets. This is an important step towards achieving [FAIR data](../definitions/Definitions.html#FAIR){target="_blank"}.
 
-* YODA has a data [publishing](https://yoda.vu.nl/site/getting-started/publishing.html){target="_blank"} option that assigns a permanent identifier to the published materials. This will, at a minimum, openly publish the structured metadata about the dataset; whether the data itself is openly available depends on the chosen data access option. There must be a [metadata publication for any datasets used in a research article](../archiving/ArchivingGuidelinesFull.html#purereg){target="_blank"}, even if the data are not openly available, and YODA offers the easiest method to achieve this requirement. Published metadata in YODA are also ingested into PURE, which means you do not need to [manually register your archived datasets in PURE](../archiving/ArchivingGuidelinesFull.html#purereg){target="_blank"}
+* YODA has a data [publishing](https://yoda.vu.nl/site/getting-started/publishing.html){target="_blank"} option that assigns a permanent identifier to the published materials. This will, at a minimum, openly publish the structured metadata about the dataset; whether the data itself is openly available depends on the chosen data access option. There must be a [PURE registration for any datasets used in a research article](../archiving/ArchivingGuidelinesFull.html#purereg){target="_blank"}, even if the data are not openly available, and YODA offers the easiest method to achieve this requirement. Published metadata in YODA can be easily imported into PURE. **You still need to register your datasets in PURE**, but the [import option](https://libguides.vu.nl/pure-managing-publications/add-datasets){target="_blank"} greatly facilitates the process.
   * **NB**: See the [Data Protection](#protection) and [Tips for Publishing](#furtherPublishing) sections for more information on this topic.
 
 ## What can't YODA do? {#cons}
@@ -250,7 +250,8 @@ It can also be useful to create separate subfolders if you are planning to openl
 
 <!-- ADD ALSO GUIDANCE ON DATASET REGISTRATION: THAT IF YODA IS NOT USED THEN RESEARCHERS ARE REQUIRED TO REGISTER INFORMATION ABOUT THEIR DATASETS IN PURE. There isn't a way right now to import the YODA data directly into PURE, so researchers will have to do both -->
 <!--Per April 2023 YODA support group meeting, some data stewards are opting to just wait until the information can be read into PURE. Will need to decide how to approach and eventually update archiving guidelines -->
-<!--Per May 2024 and after discussion with Dimitri Unger, have opted to update that YODA can be used for PURE registration as the process is mostly complete. Will discuss in section below -->
+<!--Per May 2024 and after discussion with colleagues, have opted to update that YODA can be used for PURE registration as the process is mostly complete. Will discuss in section below -->
+<!-- Per Nov 2025 learned that auto ingest of YODA data into PURE is not possible. Researchers have to make a registration in PURE, but they can import YODA data rather than filling everything in -->
 
 ### Data Protection {#protection}
 
@@ -516,7 +517,7 @@ As a starting point, you can use this [YODA archiving checklist](../../Images/me
   * If you submitted a subfolder to the vault with materials that are allowed to be open access, as described [previously in the Tips for Archiving](#safePublishing), then those materials will be openly available once you publish this subfolder. 
   * Metadata can be updated after publishing if changes are necessary
     * This is especially useful if you publish subfolders separately, but need to cross-reference them to each other (see [previous "Tips for Archiving" section](#safePublishing)). You can return to the metadata field "related data package" after publishing is complete and add the DOIs for the cross-referenced subfolders. You can also add the DOIs for any openly published licenses or other documentation that have been published on OSF.
-  * If you publish in YODA, the metadata from that publication will be used by the VU to register your dataset in [PURE](https://vu.nl/en/employee/research-data-support/vu-research-portal-pure){target="_blank"}. PURE registration of datasets is a [requirement](../archiving/ArchivingGuidelinesFull.html#section4){target="_blank"} whenever data are archived. 
+  * If you publish in YODA, the metadata from that publication can be imported into [PURE](https://vu.nl/en/employee/research-data-support/vu-research-portal-pure){target="_blank"} when you register your dataset. PURE registration of datasets is a [requirement](../archiving/ArchivingGuidelinesFull.html#section4){target="_blank"} whenever data are archived. 
     
 
 

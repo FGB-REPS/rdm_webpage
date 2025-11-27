@@ -80,6 +80,7 @@ table tr td:nth-of-type(2) {
 
 | | |
 | -- | ----------------------- |
+| 2025/11/27; Jessica Hrudey | Updated [archiving guidelines](../rdm/archiving/ArchivingGuidelinesFull.html){target="_blank"} & [summary](../rdm/archiving/ArchivingGuidelinesSummary.html){target="_blank"}, [yoda instructions](../rdm/tools/YODAInstructionsFGB.html){target="_blank"} and [FAQ](../FAQ/index.html){target="_blank"} about PURE not offering auto-ingest of metadata and need for manual creation of PURE registration, but option to import metadata from YODA. |
 | 2025/11/05; Jessica Hrudey | [New app](https://risk_levels_app.rshiny.labs.vu.nl/){target="_blank"} for advising on privacy risks is live. Also added reference to this app on the [privacy risks page](../Security/PrivacyRisks.html){target="_blank"} and the [landing page](../index.html){target="_blank"}. Also added reference to ICF generator on [landing page](../index.html){target="_blank"} |
 | 2025/09/30; Jessica Hrudey | Added redirects on deprecated URLs to correct URLs |
 | 2025/09/10; Jessica Hrudey | Added Yoda archiving checklist to [Yoda instructions](../rdm/tools/YODAInstructionsFGB.html){target="_blank"} |
