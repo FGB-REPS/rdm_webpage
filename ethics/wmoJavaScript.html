@@ -1,0 +1,283 @@
+<script>
+
+// overall function to clean up div classes after any transitions either on initial pt 1 guidance or later quiz pt 2 guidance
+
+function removeClassOnTransitionEnd(element, ...classNames) {
+  const handleTransitionEnd = (e) => {
+    if (e.propertyName === 'transform') {
+      element.classList.remove(...classNames);
+      element.removeEventListener('transitionend', handleTransitionEnd);
+    }
+  };
+  element.addEventListener('transitionend', handleTransitionEnd);
+}
+
+// overall function for resetting answers and any buttons that are showing if user goes from quiz to guidance info
+
+function resetAnswersButtons(classAnswers, classButtons) {
+  const answers = document.querySelectorAll(classAnswers);
+  answers.forEach(answer => answer.reset());
+  answers.forEach(answer => answer.dataset.answered = "false");
+
+  const buttons = document.querySelectorAll(classButtons); // hide all next buttons again
+  buttons.forEach(button => button.style.display = "none");
+};
+
+// function to adjust wrapper height based on which guidance is shown
+
+function adjustWrapperHeight(div) {
+    const wrapper = document.getElementById("guidance-wrapper");
+    const height = div.offsetHeight;
+    wrapper.style.setProperty("--wrapper-height", height + "px");
+}
+
+// script pt 1 for handling which guidance material to show
+
+const form = document.getElementById("whichRoute");  // constant to identify the form DOM
+
+
+let currentDiv = null;
+let outgoingDiv = null;
+
+// last two variables necessary for animation to run smoothly
+
+
+// add event listenter to form so that on change the selected guidance div shows up
+// and comes in from the right while the previous one goes out to the left and fades away
+
+form.addEventListener('change', (event) => {
+
+  const selected = event.target.value;  // use input value then concat with Guidance to capture the chosen Div
+  const selectedDiv = document.getElementById(selected + 'Guidance');
+
+
+  const guides = document.querySelectorAll('.guidance');
+  guides.forEach(guide => guide.classList.remove('show', 'hide-left')); // clean up any CSS transition labels that may be present from quiz questions
+
+
+
+ if (currentDiv === selectedDiv) {
+    return; // no change has occurred, nothing happens
+ }
+
+
+
+  // If changed, show the div that matches the selected value
+
+ if (currentDiv) {  // If currentDiv is not null (i.e. there hasn't been a div selected yet) need to clean up CSS so that div can disappear as desired
+
+
+
+  outgoingDiv = currentDiv; // set currentDiv to outgoingDiv and the run following on outgoingDiv so that it disappears and stays away during all other steps
+                            // if not done this way will get overlaps with calling same div as selectedDiv and will also run into problems with hide-left not
+                            // being properly removed
+
+
+    // Slide out outgoingDiv to the left
+   outgoingDiv.classList.remove('show');
+   outgoingDiv.classList.add('hide-left');
+
+    // When the slide-out finishes, clean up by removing hide-left (ensures that upon later changes div will come in from the right not the left)
+  removeClassOnTransitionEnd(outgoingDiv, 'hide-left');
+
+ };
+
+
+
+
+      // Prepare the new guidance to come from the right (remove any previous show or hide-left transitions)
+
+   selectedDiv.classList.remove('hide-left', 'show');
+
+      // Force browser to reflow so transition triggers properly
+   void selectedDiv.offsetWidth;
+
+      // Then trigger its slide in
+   selectedDiv.classList.add('show');
+   adjustWrapperHeight(selectedDiv);
+
+      if (selectedDiv.id === 'quizGuidance') { // when selectedDiv is the quiz then also show the first question of the quiz (otherwise quiz won't reset when reselecting this div)
+       let quest1 = document.getElementById('quest1')
+       quest1.classList.add('show');
+      } else { // when selectedDiv is not the quiz reset all quiz class divs & all quiz answers
+
+       const quizzes = document.querySelectorAll('.quiz');
+      quizzes.forEach(quiz => quiz.classList.remove('show', 'hide-left')); // clean up any CSS transition labels that may be present from quiz questions
+
+      // reset quiz answers and buttons
+
+      resetAnswersButtons('.answers', '.manual-next')
+
+      }
+
+
+      // Update reference
+   currentDiv = selectedDiv;
+
+
+
+ });
+
+// script pt 2 handling the quiz
+
+const q1 = document.getElementById("answersQ1");
+const q2 = document.getElementById("answersQ2");
+const q3 = document.getElementById("answersQ3");
+const btn2_1 = document.getElementById("btn2_1");
+const btn3_2 = document.getElementById("btn3_2");
+const btn1_2 = document.getElementById("btn1_2");
+const btn2_3 = document.getElementById("btn2_3");
+
+  // create function that sends user directly to relevant guide if chosen answer should send them there
+
+function resultGuid(element, radioId = null) {
+  quizGuidance.classList.add('hide-left');
+  element.classList.add('show');
+
+   removeClassOnTransitionEnd(quizGuidance, 'hide-left', 'show');
+
+  const quests = document.querySelectorAll('.quiz');
+  quests.forEach(quest => quest.classList.remove('show', 'hide-left')); // reset all of quiz questions so that if quiz is shown again we start over from q1
+
+  // reset currentDiv to element currently showing so that currentDiv runs properly in pt 1
+
+  currentDiv = element;
+
+  // reset guidance radio button to the appropriate one presented from the quiz
+  if (radioId) {
+    document.getElementById(radioId).checked = true;
+  }
+
+  // reset quiz answers and buttons
+
+  resetAnswersButtons('.answers', '.manual-next')
+
+
+};
+
+// create function to have user go to next question if chosen answer forces them to move forward in quiz
+
+function nextQ(currentQuestId, nextQuestId) {
+  let currentQ = document.getElementById(currentQuestId)
+  let nextQ = document.getElementById(nextQuestId)
+
+
+  // Slide out currentQ to the left
+   currentQ.classList.remove('show');
+   currentQ.classList.add('hide-left');
+
+      // Prepare the new guidance to come from the right (remove any previous show or hide-left transitions)
+
+   nextQ.classList.remove('hide-left', 'show');
+
+      // Force browser to reflow so transition triggers properly
+   void nextQ.offsetWidth;
+
+      // Then trigger its slide in
+   nextQ.classList.add('show');
+
+};
+
+// create functions that allow the Next button to appear only if user is on a question that has already been answered
+// and they need the Next button to advance (happens if they used the Back button in the quiz to go back)
+
+// create function for auto-navigation when question is answered for the first time
+// will then add this q1, q2, q3 event listeners
+
+function handleQuizChange(currentQuestId, nextQuestId, formId) {
+  const form = document.getElementById(formId);
+  const alreadyAnswered = form.dataset.answered === "true"; // data-answered attribute is set to false in html on load
+
+  if (!alreadyAnswered) {
+    form.dataset.answered = "true";
+    nextQ(currentQuestId, nextQuestId);
+  }
+
+  // Show/hide button depending on whether we’ve answered
+  toggleNextIfAnswered(currentQuestId, formId);
+}
+
+// function to toggle the next button to showing if question already has an answer
+
+function toggleNextIfAnswered(questionId, formId) {
+  const form = document.getElementById(formId);
+  const button = document.querySelector(`#${questionId} .manual-next`);
+
+  if (form.dataset.answered === "true") {
+    setTimeout(() => {
+    button.style.display = "inline-block";
+    }, 500); // use setTimeout to delay appearance of next button
+  } else {
+    button.style.display = "none";
+  }
+}
+
+
+q1.addEventListener('change', (event) => {
+ const answer1 = event.target.value;
+
+  if (answer1 === 'yes') {
+
+   resultGuid(wmoGuidance, 'displayWMO');
+
+  } else if (answer1 ==='no' || answer1 === 'unsure') {
+
+   handleQuizChange('quest1', 'quest2', 'answersQ1');
+
+}
+
+});
+
+
+q2.addEventListener('change', (event) => {
+ const answer2 = event.target.value;
+
+  if (answer2 === 'yes') {
+
+   resultGuid(wmoGuidance, 'displayWMO');
+
+  } else if (answer2 ==='no' || answer2 === 'unsure') {
+
+   handleQuizChange('quest2', 'quest3', 'answersQ2');
+
+}
+
+
+});
+
+q3.addEventListener('change', (event) => {
+ const answer3 = event.target.value;
+
+  if (answer3 === 'yes') {
+
+   resultGuid(nwmoGuidance, 'displayNonWMO');
+
+  } else if (answer3 ==='no') {
+
+   resultGuid(vcweGuidance, 'displayVCWE');
+
+}  else if (answer3 ==='unsure') {
+    resultGuid(helpGuidance);
+}
+
+
+});
+
+btn2_1.addEventListener('click', (event) => {
+      nextQ('quest2','quest1')
+  });
+
+
+btn1_2.addEventListener('click', (event) => {
+      nextQ('quest1','quest2')
+  });
+
+btn3_2.addEventListener('click', (event) => {
+      nextQ('quest3','quest2')
+  });
+
+btn2_3.addEventListener('click', (event) => {
+      nextQ('quest2','quest3')
+  });
+
+</script>
