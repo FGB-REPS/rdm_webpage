@@ -52,7 +52,7 @@ li {
 
 #guidance-wrapper {
     position: relative;
-
+    min-height: 50px;
 }
 
 
@@ -60,31 +60,27 @@ li {
 #guidance-wrapper::after {
     content: "";
     display: block;
-    height: var(--wrapper-height, 0px);
+    
 }
 
-  .guidance, .quiz {
+.guidance, .quiz {
     opacity: 0;
     transform: translateX(100%); /* Start off to the right */
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition: opacity 0.5s ease, transform 0.5s ease;
     position: absolute;
-    left: 0;
-    right: 0;
-    pointer-events: none;
 }
 
- .guidance.show, .quiz.show {
+.guidance.show, .quiz.show {
       position: relative;
       opacity: 1;
       transform: translateX(0); /* Slide into place */
-      pointer-events: auto;
-     /* z-index: 2;  while there is overlap this determines which message is on top */
+      z-index: 2;  /* while there is overlap this determines which message is on top */
     }
     
-  .guidance.hide-left, .quiz.hide-left {
+.guidance.hide-left, .quiz.hide-left {
       opacity: 0;
       transform: translateX(-100%); /* Slide out to the left */
-     /*  z-index: 1; while there is overlap this determines which message is on top */
+      z-index: 1; /*  while there is overlap this determines which message is on top */
   }
 
 
@@ -94,10 +90,7 @@ li {
   width: 50%;
 }
 
-#footer {
-  position: relative;
-  bottom: 0;
-}
+
 
 </style>
 
@@ -124,6 +117,34 @@ li {
 <div class = "guidance">
 
 ## This is guidance on the WMO review process {#wmoGuidance}
+
+### Here's a further test of the push down functionality
+
+Just writing a bunch of text to see what happens!
+
+Lalalalalalalalala
+
+Lalalalalalalalala
+
+Lalalalalalalalala
+
+Lalalalalalalalala
+
+Lalalalalalalalala
+
+Lalalalalalalalala
+
+Lalalalalalalalala
+
+Lalalalalalalalala
+
+Lalalalalalalalala
+
+Lalalalalalalalala
+
+Lalalalalalalalala
+
+Lalalalalalalalala
 
 </div>
 
@@ -165,9 +186,9 @@ li {
 ### Will your research involve semi-invasive procedures, namely drawing blood and/or using rectal thermometers? {#quest2}
 
 <form id="answersQ2" class = "answers" data-answered = "false">
-<label><input type="radio" name="invProc" id="answer1Yes" value="yes">Yes</label><br>
-<label><input type="radio" name="invProc" id="answer1No" value="no">No</label><br>
-<label><input type="radio" name="invProc" id="answer1Unsure" value="unsure"> I'm not sure</label><br>
+<label><input type="radio" name="invProc" id="answer2Yes" value="yes">Yes</label><br>
+<label><input type="radio" name="invProc" id="answer2No" value="no">No</label><br>
+<label><input type="radio" name="invProc" id="answer2Unsure" value="unsure"> I'm not sure</label><br>
 </form>
 
 <div class="d-grid gap-2">
@@ -183,9 +204,9 @@ li {
 ### Is the focus of your research clinical in nature, even though participants are not subject to clinical interventions? {#quest3}
 
 <form id="answersQ3" class = "answers" data-answered = "false">
-<label><input type="radio" name="clinNat" id="answer1Yes" value="yes">Yes</label><br>
-<label><input type="radio" name="clinNat" id="answer1No" value="no">No</label><br>
-<label><input type="radio" name="clinNat" id="answer1Unsure" value="unsure"> I'm not sure</label><br>
+<label><input type="radio" name="clinNat" id="answer3Yes" value="yes">Yes</label><br>
+<label><input type="radio" name="clinNat" id="answer3No" value="no">No</label><br>
+<label><input type="radio" name="clinNat" id="answer3Unsure" value="unsure"> I'm not sure</label><br>
 </form>
 
 <button id="btn3_2" class="btn btn-primary btn-sm">Back</button> 

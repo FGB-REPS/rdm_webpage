@@ -349,7 +349,7 @@ display: none;
 
 
 <h1 class="title toc-ignore">Ethics @ FGB: Ethical Review Processes</h1>
-<h4 class="date">2025-12-02; version 1.0</h4>
+<h4 class="date">2025-12-03; version 1.0</h4>
 
 </div>
 
@@ -385,40 +385,32 @@ margin: 5px;
 }
 #guidance-wrapper {
 position: relative;
+min-height: 50px;
 }
 
 #guidance-wrapper::after {
 content: "";
 display: block;
-height: var(--wrapper-height, 0px);
 }
 .guidance, .quiz {
 opacity: 0;
 transform: translateX(100%); 
-transition: opacity 0.6s ease, transform 0.6s ease;
+transition: opacity 0.5s ease, transform 0.5s ease;
 position: absolute;
-left: 0;
-right: 0;
-pointer-events: none;
 }
 .guidance.show, .quiz.show {
 position: relative;
 opacity: 1;
 transform: translateX(0); 
-pointer-events: auto;
-
+z-index: 2; 
 }
 .guidance.hide-left, .quiz.hide-left {
 opacity: 0;
 transform: translateX(-100%); 
-
+z-index: 1; 
 }
 .btn {
 width: 50%;
-}
-#footer {
-position: relative;
-bottom: 0;
 }
 </style>
 <div id="intro" class="section level3">
@@ -440,6 +432,22 @@ I need help to figure out what process(es) apply to me </label><br>
 </div>
 <div id="wmoGuidance" class="section level2 guidance">
 <h2>This is guidance on the WMO review process</h2>
+<div id="heres-a-further-test-of-the-push-down-functionality" class="section level3">
+<h3>Here’s a further test of the push down functionality</h3>
+<p>Just writing a bunch of text to see what happens!</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+</div>
 </div>
 <div id="nwmoGuidance" class="section level2 guidance">
 <h2>This is guidance on the process of obtaining a non-WMO
@@ -470,9 +478,9 @@ Next
 <h3>Will your research involve semi-invasive procedures, namely drawing
 blood and/or using rectal thermometers?</h3>
 <form id="answersQ2" class="answers" data-answered="false">
-<label><input type="radio" name="invProc" id="answer1Yes" value="yes">Yes</label><br>
-<label><input type="radio" name="invProc" id="answer1No" value="no">No</label><br>
-<label><input type="radio" name="invProc" id="answer1Unsure" value="unsure">
+<label><input type="radio" name="invProc" id="answer2Yes" value="yes">Yes</label><br>
+<label><input type="radio" name="invProc" id="answer2No" value="no">No</label><br>
+<label><input type="radio" name="invProc" id="answer2Unsure" value="unsure">
 I’m not sure</label><br>
 </form>
 <div class="d-grid gap-2">
@@ -489,9 +497,9 @@ Next
 <h3>Is the focus of your research clinical in nature, even though
 participants are not subject to clinical interventions?</h3>
 <form id="answersQ3" class="answers" data-answered="false">
-<label><input type="radio" name="clinNat" id="answer1Yes" value="yes">Yes</label><br>
-<label><input type="radio" name="clinNat" id="answer1No" value="no">No</label><br>
-<label><input type="radio" name="clinNat" id="answer1Unsure" value="unsure">
+<label><input type="radio" name="clinNat" id="answer3Yes" value="yes">Yes</label><br>
+<label><input type="radio" name="clinNat" id="answer3No" value="no">No</label><br>
+<label><input type="radio" name="clinNat" id="answer3Unsure" value="unsure">
 I’m not sure</label><br>
 </form>
 <button id="btn3_2" class="btn btn-primary btn-sm">
@@ -568,13 +576,7 @@ function resetAnswersButtons(classAnswers, classButtons) {
   buttons.forEach(button => button.style.display = "none");
 };
 
-// function to adjust wrapper height based on which guidance is shown
 
-function adjustWrapperHeight(div) {
-    const wrapper = document.getElementById("guidance-wrapper");
-    const height = div.offsetHeight;
-    wrapper.style.setProperty("--wrapper-height", height + "px");
-}
 
 // script pt 1 for handling which guidance material to show
 
@@ -639,7 +641,8 @@ form.addEventListener('change', (event) => {
 
       // Then trigger its slide in
    selectedDiv.classList.add('show');
-   adjustWrapperHeight(selectedDiv);
+
+
 
       if (selectedDiv.id === 'quizGuidance') { // when selectedDiv is the quiz then also show the first question of the quiz (otherwise quiz won't reset when reselecting this div)
        let quest1 = document.getElementById('quest1')
@@ -710,6 +713,10 @@ function nextQ(currentQuestId, nextQuestId) {
   // Slide out currentQ to the left
    currentQ.classList.remove('show');
    currentQ.classList.add('hide-left');
+
+   // This allows it to reset its transform: translateX back to 100%
+    // and wait off-screen properly for the next time it's needed.
+    removeClassOnTransitionEnd(currentQ, 'hide-left');
 
       // Prepare the new guidance to come from the right (remove any previous show or hide-left transitions)
 

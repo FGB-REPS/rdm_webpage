@@ -23,13 +23,7 @@ function resetAnswersButtons(classAnswers, classButtons) {
   buttons.forEach(button => button.style.display = "none");
 };
 
-// function to adjust wrapper height based on which guidance is shown
 
-function adjustWrapperHeight(div) {
-    const wrapper = document.getElementById("guidance-wrapper");
-    const height = div.offsetHeight;
-    wrapper.style.setProperty("--wrapper-height", height + "px");
-}
 
 // script pt 1 for handling which guidance material to show
 
@@ -94,7 +88,8 @@ form.addEventListener('change', (event) => {
 
       // Then trigger its slide in
    selectedDiv.classList.add('show');
-   adjustWrapperHeight(selectedDiv);
+
+
 
       if (selectedDiv.id === 'quizGuidance') { // when selectedDiv is the quiz then also show the first question of the quiz (otherwise quiz won't reset when reselecting this div)
        let quest1 = document.getElementById('quest1')
@@ -165,6 +160,10 @@ function nextQ(currentQuestId, nextQuestId) {
   // Slide out currentQ to the left
    currentQ.classList.remove('show');
    currentQ.classList.add('hide-left');
+
+   // This allows it to reset its transform: translateX back to 100%
+    // and wait off-screen properly for the next time it's needed.
+    removeClassOnTransitionEnd(currentQ, 'hide-left');
 
       // Prepare the new guidance to come from the right (remove any previous show or hide-left transitions)
 
