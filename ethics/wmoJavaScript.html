@@ -48,7 +48,11 @@ form.addEventListener('change', (event) => {
   const guides = document.querySelectorAll('.guidance');
   guides.forEach(guide => guide.classList.remove('show', 'hide-left')); // clean up any CSS transition labels that may be present from quiz questions
 
-
+  // reset all quiz class divs & all quiz answers if any previous input
+  // --> likely want to adjust in future to allow answers to stay on change, but not on page refresh
+  const quizzes = document.querySelectorAll('.quiz');
+  quizzes.forEach(quiz => quiz.classList.remove('show', 'hide-left')); // clean up any CSS transition labels that may be present from quiz questions
+  resetAnswersButtons('.answers', '.manual-next') // reset quiz answers and buttons
 
  if (currentDiv === selectedDiv) {
     return; // no change has occurred, nothing happens
@@ -94,16 +98,8 @@ form.addEventListener('change', (event) => {
       if (selectedDiv.id === 'quizGuidance') { // when selectedDiv is the quiz then also show the first question of the quiz (otherwise quiz won't reset when reselecting this div)
        let quest1 = document.getElementById('quest1')
        quest1.classList.add('show');
-      } else { // when selectedDiv is not the quiz reset all quiz class divs & all quiz answers
-
-       const quizzes = document.querySelectorAll('.quiz');
-      quizzes.forEach(quiz => quiz.classList.remove('show', 'hide-left')); // clean up any CSS transition labels that may be present from quiz questions
-
-      // reset quiz answers and buttons
-
-      resetAnswersButtons('.answers', '.manual-next')
-
       }
+
 
 
       // Update reference
@@ -115,13 +111,55 @@ form.addEventListener('change', (event) => {
 
 // script pt 2 handling the quiz
 
+const historyStack = []; //used to help with navigation of divs in quiz
+
 const q1 = document.getElementById("answersQ1");
 const q2 = document.getElementById("answersQ2");
 const q3 = document.getElementById("answersQ3");
-const btn2_1 = document.getElementById("btn2_1");
-const btn3_2 = document.getElementById("btn3_2");
+const q4 = document.getElementById("answersQ4");
+const q5 = document.getElementById("answersQ5");
+const q6 = document.getElementById("answersQ6");
+const q7 = document.getElementById("answersQ7");
+const q8 = document.getElementById("answersQ8");
+
 const btn1_2 = document.getElementById("btn1_2");
 const btn2_3 = document.getElementById("btn2_3");
+const btn3_4 = document.getElementById("btn3_4");
+const btn4_5 = document.getElementById("btn4_5");
+const btn5_6 = document.getElementById("btn5_6");
+const btn6_7 = document.getElementById("btn6_7");
+const btn7_8 = document.getElementById("btn7_8");
+const btn8_end = document.getElementById("btn8_end");
+
+
+const btn2_1 = document.getElementById("btn2_1");
+const btn3_2 = document.getElementById("btn3_2");
+const btn4_3 = document.getElementById("btn4_3");
+const btn5_4 = document.getElementById("btn5_4");
+const btn6_5 = document.getElementById("btn6_5");
+const btn7_6 = document.getElementById("btn7_6");
+const btn8_7 = document.getElementById("btn8_7");
+
+// create quiz map for when questions simply go to next default questions
+
+const quizMap = {
+    'quest1': { next: 'quest2', form: 'answersQ1' },
+    'quest2': { next: 'quest3', form: 'answersQ2' },
+    'quest3': { next: 'quest4', form: 'answersQ3' },
+    'quest4': { next: 'quest5', form: 'answersQ4' },
+    'quest5': { next: 'quest6', form: 'answersQ5' },
+    'quest6': { next: 'quest7', form: 'answersQ6' },
+    'quest7': { next: 'quest8', form: 'answersQ7' },
+    'quest8': { next: 'quest8', form: 'answersQ8' }
+};
+
+
+// function to obtain selected value of a given formId even when no change has been made
+
+function getSelectedValue(formId) {
+    const selected = document.querySelector(`#${formId} input[type="radio"]:checked`);
+    return selected ? selected.value : null;
+}
 
   // create function that sends user directly to relevant guide if chosen answer should send them there
 
@@ -145,16 +183,16 @@ function resultGuid(element, radioId = null) {
 
   // reset quiz answers and buttons
 
-  resetAnswersButtons('.answers', '.manual-next')
+  // resetAnswersButtons('.answers', '.manual-next')
 
 
 };
 
 // create function to have user go to next question if chosen answer forces them to move forward in quiz
 
-function nextQ(currentQuestId, nextQuestId) {
-  let currentQ = document.getElementById(currentQuestId)
-  let nextQ = document.getElementById(nextQuestId)
+function nextDiv(currentId, nextId) {
+  let currentQ = document.getElementById(currentId)
+  let nextQ = document.getElementById(nextId)
 
 
   // Slide out currentQ to the left
@@ -163,11 +201,11 @@ function nextQ(currentQuestId, nextQuestId) {
 
    // This allows it to reset its transform: translateX back to 100%
     // and wait off-screen properly for the next time it's needed.
-    removeClassOnTransitionEnd(currentQ, 'hide-left');
+    removeClassOnTransitionEnd(currentQ, 'hide-left', 'show');
 
       // Prepare the new guidance to come from the right (remove any previous show or hide-left transitions)
 
-   nextQ.classList.remove('hide-left', 'show');
+   nextQ.classList.remove('hide-left');
 
       // Force browser to reflow so transition triggers properly
    void nextQ.offsetWidth;
@@ -175,27 +213,22 @@ function nextQ(currentQuestId, nextQuestId) {
       // Then trigger its slide in
    nextQ.classList.add('show');
 
+   // Record navigation history
+   if (historyStack.length === 0) {
+      historyStack.push(currentId);
+   }
+    const lastId = historyStack[historyStack.length - 1];
+    if (lastId !== nextId) {
+      historyStack.push(nextId);
+    }
+
+
 };
 
 // create functions that allow the Next button to appear only if user is on a question that has already been answered
 // and they need the Next button to advance (happens if they used the Back button in the quiz to go back)
 
 // create function for auto-navigation when question is answered for the first time
-// will then add this q1, q2, q3 event listeners
-
-function handleQuizChange(currentQuestId, nextQuestId, formId) {
-  const form = document.getElementById(formId);
-  const alreadyAnswered = form.dataset.answered === "true"; // data-answered attribute is set to false in html on load
-
-  if (!alreadyAnswered) {
-    form.dataset.answered = "true";
-    nextQ(currentQuestId, nextQuestId);
-  }
-
-  // Show/hide button depending on whether we’ve answered
-  toggleNextIfAnswered(currentQuestId, formId);
-}
-
 // function to toggle the next button to showing if question already has an answer
 
 function toggleNextIfAnswered(questionId, formId) {
@@ -211,72 +244,450 @@ function toggleNextIfAnswered(questionId, formId) {
   }
 }
 
+function handleQuizChange(currentId, nextId, formId) {
+  const form = document.getElementById(formId);
+  const alreadyAnswered = form.dataset.answered === "true"; // data-answered attribute is set to false in html on load
+
+  if (!alreadyAnswered) {
+    form.dataset.answered = "true";
+    nextDiv(currentId, nextId);
+  } else {
+    nextDiv(currentId, nextId);
+  }
+
+
+  // Show/hide button depending on whether we’ve answered
+  toggleNextIfAnswered(currentId, formId);
+}
+
+
+// create functions for conditionals to determine what the next destination is
+// will be the same for q4-7, but different for the others
+// but this option also helps avoid repeating same lines of code even between the form and button listeners
+
+function getDestOf1(currentId) {
+    const config = quizMap[currentId];
+    const currentAnswer = getSelectedValue(config.form);
+
+    // special logic:
+    if (currentAnswer === 'no') {
+        return 'defVCWEoutcome';
+    } else if (currentAnswer === 'unsure') {
+        return 'suppA'
+    }
+    // Otherwise, return the standard next step from our map
+    return config.next;
+}
+
+
+function getDestOf2(currentId) {
+    const config = quizMap[currentId];
+
+    // no routing/conditionals for this question
+
+    return config.next;
+}
+
+
+function getDestOf3(currentId) {
+    const config = quizMap[currentId];
+
+    // special logic:
+    if (currentAnswer === 'yes') {
+        return 'defWMOoutcome';
+    }
+
+    // Otherwise, return the standard next step from our map
+    return config.next;
+}
+
+
+function getDestOf4_7(currentId) {
+    const config = quizMap[currentId];
+    const q2Answer = getSelectedValue("answersQ2");
+
+    // special logic:
+    if (q2Answer === 'yes' && currentAnswer === 'yes') {
+        return 'defWMOoutcome';
+    }
+
+    // Otherwise, return the standard next step from our map
+    return config.next;
+}
+
+
+
+
+//Overall results after quiz completion:
+//  -> if q1 is no, go immediately to definitely VCWE, but with info about studies without active participants
+//  -> if q1 is unsure, go straight to Support A (Guidance on figuring out study more first)
+//  -> if q2 is yes AND any of q4-8 are yes, go to definitely WMO
+//  -> if q3 is yes, go immediately to definitely WMO
+//  -> if for q4-8 at least one response is yes, but q2-3 are not yes, go to likely WMO, potentially non-WMO/VCWE (i.e. links to all three as well as support info)
+//  -> if q2-8 all no, go to definitely VCWE
+//  -> for q2,4-8 and none of answers are yes, if majority response is no, to likely VCWE page; if majority response is unsure or tied, to support page B
+//  -> if q1-2 are yes and majority of others are no, go to likely non-WMO info (include reference to VCWE); if majority of others is unsure or tied, to support page B
+
+// question 1
 
 q1.addEventListener('change', (event) => {
  const answer1 = event.target.value;
 
-  if (answer1 === 'yes') {
+  if (answer1 === 'no') {
 
-   resultGuid(wmoGuidance, 'displayWMO');
+   handleQuizChange('quest1', 'defVCWEoutcome', 'answersQ1');
 
-  } else if (answer1 ==='no' || answer1 === 'unsure') {
+  } else if (answer1 ==='yes') {
 
    handleQuizChange('quest1', 'quest2', 'answersQ1');
 
+}  else if (answer1 ==='unsure') {
+
+   handleQuizChange('quest1', 'suppA', 'answersQ1');
+
 }
 
 });
 
+//nav buttons for question 1
+
+
+
+btn1_2.addEventListener('click', (event) => {
+  const answer1 = getSelectedValue("answersQ1");
+
+  if (answer1 === 'no') {
+
+   nextDiv('quest1', 'defVCWEoutcome');
+
+  } else if (answer1 ==='yes') {
+
+   nextDiv('quest1', 'quest2');
+
+  }  else if (answer1 ==='unsure') {
+
+    nextDiv('quest1', 'suppA');
+
+  }
+
+});
+
+//question 2
 
 q2.addEventListener('change', (event) => {
- const answer2 = event.target.value;
+  // no conditionals needed here. All answers progress quest2 forward but different answers impact eventual outcome.
 
-  if (answer2 === 'yes') {
-
-   resultGuid(wmoGuidance, 'displayWMO');
-
-  } else if (answer2 ==='no' || answer2 === 'unsure') {
-
-   handleQuizChange('quest2', 'quest3', 'answersQ2');
-
-}
+   handleQuizChange('quest2', 'quest3', 'answersQ2'); // will address answer2 is yes plus yes on quest4-8 within quest4-8
 
 
 });
+
+//nav buttons for question 2
+
+// next
+
+btn2_3.addEventListener('click', (event) => {
+      nextDiv('quest2','quest3')
+  });
+
+
+// back
+
+btn2_1.addEventListener('click', (event) => {
+      nextDiv('quest2','quest1')
+  });
+
+
+
 
 q3.addEventListener('change', (event) => {
  const answer3 = event.target.value;
 
   if (answer3 === 'yes') {
 
-   resultGuid(nwmoGuidance, 'displayNonWMO');
+   handleQuizChange('quest3', 'defWMOoutcome', 'answersQ3');
 
-  } else if (answer3 ==='no') {
+  } else if (answer3 ==='no' || answer3 ==='unsure') {
 
-   resultGuid(vcweGuidance, 'displayVCWE');
+   handleQuizChange('quest3', 'quest4', 'answersQ3');
 
-}  else if (answer3 ==='unsure') {
-    resultGuid(helpGuidance);
 }
 
 
 });
 
-btn2_1.addEventListener('click', (event) => {
-      nextQ('quest2','quest1')
-  });
 
+//nav buttons for question 3
 
-btn1_2.addEventListener('click', (event) => {
-      nextQ('quest1','quest2')
-  });
+// back
 
 btn3_2.addEventListener('click', (event) => {
-      nextQ('quest3','quest2')
+      nextDiv('quest3','quest2')
   });
 
-btn2_3.addEventListener('click', (event) => {
-      nextQ('quest2','quest3')
+// next
+
+btn3_4.addEventListener('click', (event) => {
+  const answer3 = getSelectedValue("answersQ3");
+
+  if (answer3 === 'yes') {
+
+    nextDiv('quest3', 'defWMOoutcome');
+
+  } else if (answer3 ==='no' || answer3 ==='unsure') {
+
+   nextDiv('quest3', 'quest4');
+
+}
   });
+
+
+// question 4
+
+
+q4.addEventListener('change', (event) => {
+
+ const answer4 = event.target.value;
+ // Look at the live state of Q2 right now
+  const currentQ2 = getSelectedValue("answersQ2");
+
+  if (currentQ2 === 'yes' && answer4 === 'yes') {
+
+   handleQuizChange('quest4', 'defWMOoutcome', 'answersQ4');
+
+  } else if (answer4 ==='no' || answer4 ==='unsure' ||
+  (currentQ2 === 'no' && answer4 === 'yes')) {
+
+   handleQuizChange('quest4', 'quest5', 'answersQ4');
+
+}
+
+
+});
+
+//nav buttons for question 4
+
+// back
+
+btn4_3.addEventListener('click', (event) => {
+      nextDiv('quest4','quest3')
+  });
+
+// next
+
+btn4_5.addEventListener('click', (event) => {
+
+  const answer4 = getSelectedValue("answersQ4");
+   // Look at the live state of Q2 right now
+  const currentQ2 = getSelectedValue("answersQ2");
+
+  if (currentQ2 === 'yes' && answer4 === 'yes') {
+
+   nextDiv('quest4', 'defWMOoutcome');
+
+  } else if (answer4 ==='no' || answer4 ==='unsure' ||
+  (currentQ2 === 'no' && answer4 === 'yes')) {
+
+   nextDiv('quest4', 'quest5');
+
+}
+
+
+  });
+
+
+// question 5
+
+q5.addEventListener('change', (event) => {
+
+ const answer5 = event.target.value;
+  // Look at the live state of Q2 right now
+  const currentQ2 = getSelectedValue("answersQ2");
+
+
+  if (currentQ2 === 'yes' && answer5 === 'yes') {
+
+   handleQuizChange('quest5', 'defWMOoutcome', 'answersQ5');
+
+  } else if (answer5 ==='no' || answer5 ==='unsure' ||
+  (currentQ2 === 'no' && answer5 === 'yes')) {
+
+   handleQuizChange('quest5', 'quest6', 'answersQ5');
+
+}
+
+
+});
+
+
+//nav buttons for question 5
+
+// Back
+
+btn5_4.addEventListener('click', (event) => {
+      nextDiv('quest5','quest4')
+  });
+
+// next
+
+btn5_6.addEventListener('click', (event) => {
+
+  const answer5 = getSelectedValue("answersQ5");
+  // Look at the live state of Q2 right now
+  const currentQ2 = getSelectedValue("answersQ2");
+
+  if (currentQ2 === 'yes' && answer5 === 'yes') {
+
+   nextDiv('quest5', 'defWMOoutcome');
+
+  } else if (answer5 ==='no' || answer5 ==='unsure' ||
+  (currentQ2 === 'no' && answer5 === 'yes')) {
+
+   nextDiv('quest5', 'quest6');
+
+}
+  });
+
+
+q6.addEventListener('change', (event) => {
+
+ const answer6 = event.target.value;
+   // Look at the live state of Q2 right now
+  const currentQ2 = getSelectedValue("answersQ2");
+
+  if (currentQ2 === 'yes' && answer6 === 'yes') {
+
+   handleQuizChange('quest6', 'defWMOoutcome', 'answersQ6');
+
+  } else if (answer6 ==='no' || answer6 ==='unsure' ||
+  (currentQ2 === 'no' && answer6 === 'yes')) {
+
+   handleQuizChange('quest6', 'quest7', 'answersQ6');
+
+}
+
+
+});
+
+
+//nav buttons for question 6
+
+// back
+
+btn6_5.addEventListener('click', (event) => {
+      nextDiv('quest6','quest5')
+  });
+
+// next
+
+btn6_7.addEventListener('click', (event) => {
+
+  const answer6 = getSelectedValue("answersQ6");
+     // Look at the live state of Q2 right now
+  const currentQ2 = getSelectedValue("answersQ2");
+
+  if (currentQ2 === 'yes' && answer6 === 'yes') {
+
+   nextDiv('quest6', 'defWMOoutcome');
+
+  } else if (answer6 ==='no' || answer6 === 'unsure' ||
+  (currentQ2 === 'no' && answer6 === 'yes')) {
+
+   nextDiv('quest6', 'quest7');
+
+}
+  });
+
+
+// question 7
+
+
+q7.addEventListener('change', (event) => {
+
+ const answer7 = event.target.value;
+    // Look at the live state of Q2 right now
+  const currentQ2 = getSelectedValue("answersQ2");
+
+  if (currentQ2 === 'yes' && answer7 === 'yes') {
+
+   handleQuizChange('quest7', 'defWMOoutcome', 'answersQ7');
+
+  } else if (answer7 ==='no' || answer7 ==='unsure' ||
+  (currentQ2 === 'no' && answer7 === 'yes')) {
+
+   handleQuizChange('quest7', 'quest8', 'answersQ7');
+
+}
+
+
+});
+
+
+//nav buttons for question 7
+
+
+// back
+
+btn7_6.addEventListener('click', (event) => {
+      nextDiv('quest7','quest6')
+  });
+
+// next
+
+btn7_8.addEventListener('click', (event) => {
+
+  const answer7 = getSelectedValue("answersQ7");
+      // Look at the live state of Q2 right now
+  const currentQ2 = getSelectedValue("answersQ2");
+
+  if (currentQ2 === 'yes' && answer7 === 'yes') {
+
+   nextDiv('quest7', 'defWMOoutcome');
+
+  } else if (answer7 ==='no' || answer7 ==='unsure' ||
+  (currentQ2 === 'no' && answer7 === 'yes')) {
+
+   nextDiv('quest7', 'quest8');
+
+}
+  });
+
+
+
+//nav buttons for question 8
+
+// back
+
+btn8_7.addEventListener('click', (event) => {
+      nextDiv('quest8','quest7')
+  });
+
+// nav buttons back from outcomes to last viewed quiz question
+
+defWMOback.addEventListener('click', (event) => {
+ const lastId = historyStack[historyStack.length - 2];
+
+ nextDiv('defWMOoutcome', lastId);
+
+});
+
+
+defVCWEback.addEventListener('click', (event) => {
+ const lastId = historyStack[historyStack.length - 2];
+
+ nextDiv('defVCWEoutcome', lastId);
+
+});
+
+
+suppAback.addEventListener('click', (event) => {
+ const lastId = historyStack[historyStack.length - 2];
+
+ nextDiv('suppA', lastId);
+
+});
+
+
+
 
 </script>
