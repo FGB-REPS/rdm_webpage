@@ -234,7 +234,7 @@ This section supplements the existing informed consent form and information lett
 
 * The output from the [Informed Consent Form Generator tool](https://icfg.rshiny.labs.vu.nl/){target="_blank"} along with the [privacy statement](#privStat) should cover all of the relevant information here. However, if there are any other parties with access to the data that have not been covered in the informed consent generator output nor the privacy statement, make sure to include them, preferably in the privacy statement to avoid information overload in the participant information letter.
 
-* While it is addressed in the output from the [Informed Consent Form Generator tool](https://icfg.rshiny.labs.vu.nl/){target="_blank", it is imperative that your participants have a clear understanding about what future sharing of data with other researchers looks like. Make sure that the following is clear:
+* While it is addressed in the output from the [Informed Consent Form Generator tool](https://icfg.rshiny.labs.vu.nl/){target="_blank"}, it is imperative that your participants have a clear understanding about what future sharing of data with other researchers looks like. Make sure that the following is clear:
     1. Data might be shared with other researchers for new research. Ensure that the explanation of this is logical for your goals and to include a separate consent option for this in your consent form
         a. In some cases, you might choose that data sharing is not optional; a participant either participates and the data are shared or they don’t participate at all. If you choose that route you must make this clear to participants, and be aware of the implications for your own research (since this will impact who wants to participate). If this is a route you wish to pursue, make sure to discuss it with the FGB Privacy Champion.
         b. Be explicit about which data about your participants will be shared with third parties.
@@ -294,7 +294,7 @@ In addition to the required information, there are also some basic principles th
 
 ## Children and Consent {#children}
 
-* The [FGB Ethical Guidelines](https://assets.vu.nl/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/c3fbf71b-9589-413c-bee5-8e9270b89d3c/ethiek-reglement-adh-landelijk-nov-2016_tcm263-810069.pdf){target="_blank"} require that children from 12-16 years give consent to participate in research in addition to the consent from their parents/guardians. Children under 12 must assent to participating.
+* The [FGB Ethical Guidelines](https://vu.nl/en/employee/research-support/the-scientific-and-ethical-review-board-vcwe){target="_blank"} require that children from 12-16 years give consent to participate in research in addition to the consent from their parents/guardians. Children under 12 must assent to participating.
 * The GDPR requires consent from at least one parent/guardian for anyone under 16 years of age if their [personal data](../rdm/definitions/Definitions.html#personaldata){target="_blank"} are used in your research. 
   + If a participant was younger than 16 when they originally gave consent for the use of their data, and the data are still in use after they turn 16, then attempts should be made to reaffirm the original consent. Aim to contact this participant so that they have the opportunity to affirm, change or withdraw their consent
     + If the individual does not respond, or it is impossible to reach them, the consent obtained from their parents is still valid for the **specific purposes** described in the original information letter. 

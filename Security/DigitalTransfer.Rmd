@@ -110,7 +110,7 @@ Before you determine which digital data transfer option to use, you should asses
 
 It may not be possible to transfer this kind of data digitally. However, if you are *already* using [YODA](../rdm/tools/YODAInstructionsFGB.html){target="_blank"} for the storage of "red" data, the data can be shared with the recipient(s) via YODA.
 
-* You can provide access to the data by [adding the recipient to the YODA "group" you manage](https://yoda.vu.nl/site/getting-started/user-management.html){target="_blank"}. **Don't forget**: the person added to your YODA group has access to *all* of the files for that [group](../rdm/tools/YODAInstructionsFGB.html#accessmgmt){target="_blank"}. If the recipient only needs access to a specific set of data, you *must* request a separate YODA folder for this purpose. Add the recipient to this new YODA group and ensure that only the data the recipient _needs_ to see is stored in this separate YODA folder.
+* You can provide access to the data by [adding the recipient to the YODA "group" you manage](https://rdm.vu.nl/manuals/yoda/yoda_portal/group_manager.html){target="_blank"}. **Don't forget**: the person added to your YODA group has access to *all* of the files for that [group](../rdm/tools/YODAInstructionsFGB.html#accessmgmt){target="_blank"}. If the recipient only needs access to a specific set of data, you *must* request a separate YODA folder for this purpose. Add the recipient to this new YODA group and ensure that only the data the recipient _needs_ to see is stored in this separate YODA folder.
   * The recipient *must* have multi-factor authentication (MFA) activated.
     * MFA is not available to external users (users without a VUnet ID) as of early 2023. See the [section on "Red" data](../rdm/tools/YODAInstructionsFGB.html#protection){target="_blank"} in the FGB YODA manual for guidance until MFA is available to external users (estimated Sept 2023).
   * The data *must* be encrypted. Further information on file-level encryption is found [here](Encryption.html#fle){target="_blank"}. The recipient must ensure that they are also appropriately encrypting the data on their end, and they must always have [full-disk encryption](Encryption.html#fde){target="_blank"} activated on their computer.
@@ -136,7 +136,7 @@ If YODA is not a feasible solution, contact the [RDM Support Desk](mailto:rdm@vu
 
 If you are using [YODA](../rdm/tools/YODAInstructionsFGB.html){target="_blank"} for the storage of "orange" data, the data can be shared with the recipient(s) via YODA.
 
-* You can provide access to the data by [adding the recipient to the YODA "group" you manage](https://yoda.vu.nl/site/getting-started/user-management.html){target="_blank"}. **Don't forget**: the person added to your YODA group has access to *all* of the files for that [group](../rdm/tools/YODAInstructionsFGB.html#accessmgmt){target="_blank"}. If the recipient only needs access to a specific set of data, you *must* request a separate YODA folder for this purpose. Add the recipient to this new YODA group and ensure that only the data the recipient _needs_ to see is stored in this separate YODA folder.
+* You can provide access to the data by [adding the recipient to the YODA "group" you manage](https://rdm.vu.nl/manuals/yoda/yoda_portal/group_manager.html){target="_blank"}. **Don't forget**: the person added to your YODA group has access to *all* of the files for that [group](../rdm/tools/YODAInstructionsFGB.html#accessmgmt){target="_blank"}. If the recipient only needs access to a specific set of data, you *must* request a separate YODA folder for this purpose. Add the recipient to this new YODA group and ensure that only the data the recipient _needs_ to see is stored in this separate YODA folder.
   + The recipient *must* have multi-factor authentication (MFA) activated.
     + MFA is not available to external users (users without a VUnet ID) as of early 2023. See the [section on "Orange" data](../rdm/tools/YODAInstructionsFGB.html#protection){target="_blank"} in the FGB YODA manual for guidance until MFA is available to external users (estimated Sept 2023).
   + The recipient must ensure that they always have [full-disk encryption](Encryption.html#fde){target="_blank"} activated on their computer.
@@ -147,14 +147,14 @@ If you are using [YODA](../rdm/tools/YODAInstructionsFGB.html){target="_blank"} 
 
 #### **Research Drive**
 
-If you are using [Research Drive](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012856){target="_blank"} for data storage and you need to share the data with a research collaborator or research team member, you can add the user who needs access using these [instructions](https://wiki.surfnet.nl/display/RDRIVE/Share+with+other+Research+Drive+users){target="_blank"}.
+If you are using [Research Drive](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012856){target="_blank"} for data storage and you need to share the data with a research collaborator or research team member, you can add the user who needs access using these [instructions](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/128909585/RD+Set+permissions+when+sharing+files+and+folders){target="_blank"}.
 
 * **Do not share "orange" data via a public link in Research Drive.**
 * Make sure the added user knows how to [work safely in Research Drive](Storage.html#preferred){target="_blank"}.
     * The recipient *must* have multi-factor authentication (MFA) activated.
     * The recipient must ensure that they always have [full-disk encryption](Encryption.html#fde){target="_blank"} activated on their computer.
 * Ensure that the recipient will **only** have access to the files that they need to see. If you give them access to a folder, they will have access to all subfolders within that folder.
-* Ensure that the recipient has appropriate [access rights](https://wiki.surfnet.nl/display/RDRIVE/Set+permissions+when+sharing+files+and+folders){target="_blank"} (i.e. whether they can only read files or also modify/upload files). 
+* Ensure that the recipient has appropriate [access rights](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/128909585/RD+Set+permissions+when+sharing+files+and+folders){target="_blank"} (i.e. whether they can only read files or also modify/upload files). 
 * The "orange" data will, in most cases, be encrypted in Research Drive. Make sure the new user installs whichever [encryption software](Encryption.html#fle){target="_blank"} has been used to protect the data on their own computer in order to de-encrypt the data. Make sure to use a **secure method** to provide the new user with the password to de-encrypt the data (e.g. not via regular e-mail, but either through a phone call or via [ZIVVER](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012860){target="_blank"}).
 
 <br>
@@ -199,7 +199,7 @@ If the above options are not feasible, contact the [RDM Support Desk](mailto:rdm
 
 If you are using [YODA](../rdm/tools/YODAInstructionsFGB.html){target="_blank"} for the storage of "yellow" data, the data can be shared with the recipient(s) via YODA.
 
-* You can provide access to the data by [adding the recipient to the YODA "group" you manage](https://yoda.vu.nl/site/getting-started/user-management.html){target="_blank"}. **Don't forget**: the person added to your YODA group has access to *all* of the files for that [group](../rdm/tools/YODAInstructionsFGB.html#accessmgmt){target="_blank"}. If the recipient only needs access to a specific set of data, you *must* request a separate YODA folder for this purpose. Add the recipient to this new YODA group and ensure that only the data the recipient _needs_ to see is stored in this separate YODA folder.
+* You can provide access to the data by [adding the recipient to the YODA "group" you manage](https://rdm.vu.nl/manuals/yoda/yoda_portal/group_manager.html){target="_blank"}. **Don't forget**: the person added to your YODA group has access to *all* of the files for that [group](../rdm/tools/YODAInstructionsFGB.html#accessmgmt){target="_blank"}. If the recipient only needs access to a specific set of data, you *must* request a separate YODA folder for this purpose. Add the recipient to this new YODA group and ensure that only the data the recipient _needs_ to see is stored in this separate YODA folder.
   + The recipient *must* have multi-factor authentication (MFA) activated.
     + MFA is not available to external users (users without a VUnet ID) as of early 2023. See the [section on "Yellow" data](../rdm/tools/YODAInstructionsFGB.html#protection){target="_blank"} in the FGB YODA manual for guidance until MFA is available to external users (estimated Sept 2023).
   + The recipient must ensure that they always have [full-disk encryption](Encryption.html#fde){target="_blank"} activated on their computer.
@@ -210,7 +210,7 @@ If you are using [YODA](../rdm/tools/YODAInstructionsFGB.html){target="_blank"} 
 
 #### **Research Drive & SURFdrive**
 
-If you are using [Research Drive](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012856){target="_blank"} for data storage and you need to share the data with a research collaborator or research team member, you can add the user who needs access using these [instructions](https://wiki.surfnet.nl/display/RDRIVE/Share+with+other+Research+Drive+users){target="_blank"}. [SURFdrive](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012728){target="_blank"} can also be used to share "yellow" data. Any user that can log into SURFconnext can be given access to a SURFdrive file or folder. 
+If you are using [Research Drive](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012856){target="_blank"} for data storage and you need to share the data with a research collaborator or research team member, you can add the user who needs access using these [instructions](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/128909585/RD+Set+permissions+when+sharing+files+and+folders){target="_blank"}. [SURFdrive](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012728){target="_blank"} can also be used to share "yellow" data. Any user that can log into SURFconnext can be given access to a SURFdrive file or folder. 
 
 **NB**: SURFdrive is generally discouraged for ongoing storage of research data (see the [Secure Storage Guide](Storage.html#nonpreferred){target="_blank"} for more information). If you are sharing data with research collaborators, Research Drive or YODA are the preferred options. 
   
@@ -219,7 +219,7 @@ If you are using [Research Drive](https://services.vu.nl/esc?id=kb_article&syspa
       * The recipient *must* have multi-factor authentication (MFA) activated in Research Drive.
       * The recipient must ensure that they always have [full-disk encryption](Encryption.html#fde){target="_blank"} activated on their computer.
   * Ensure that the recipient will **only** have access to the files that they need to see. If you give them access to a folder, they will have access to all subfolders within that folder.
-  * Ensure that the recipient has appropriate [access rights](https://wiki.surfnet.nl/display/RDRIVE/Set+permissions+when+sharing+files+and+folders){target="_blank"} (i.e. whether they can only read files or also modify and/or upload files). 
+  * Ensure that the recipient has appropriate [access rights](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/128909585/RD+Set+permissions+when+sharing+files+and+folders){target="_blank"} (i.e. whether they can only read files or also modify and/or upload files). 
 
 <br>
 
@@ -262,14 +262,14 @@ If the above options are not feasible, contact the [RDM Support Desk](mailto:rdm
 
 If you are using [YODA](../rdm/tools/YODAInstructionsFGB.html){target="_blank"} for the storage of "green" data, the data can be shared with the recipient(s) via YODA.
 
-* You can provide access to the data by [adding the recipient to the YODA "group" you manage](https://yoda.vu.nl/site/getting-started/user-management.html){target="_blank"}. **Don't forget**: the person added to your YODA group has access to *all* of the files for that [group](../rdm/tools/YODAInstructionsFGB.html#accessmgmt){target="_blank"}. If the recipient only needs access to a specific set of data, you *must* request a separate YODA folder for this purpose. Add the recipient to this new YODA group and ensure that only the data the recipient _needs_ to see is stored in this separate YODA folder.
+* You can provide access to the data by [adding the recipient to the YODA "group" you manage](https://rdm.vu.nl/manuals/yoda/yoda_portal/group_manager.html){target="_blank"}. **Don't forget**: the person added to your YODA group has access to *all* of the files for that [group](../rdm/tools/YODAInstructionsFGB.html#accessmgmt){target="_blank"}. If the recipient only needs access to a specific set of data, you *must* request a separate YODA folder for this purpose. Add the recipient to this new YODA group and ensure that only the data the recipient _needs_ to see is stored in this separate YODA folder.
 * Make sure the recipient follows the [FGB security advice](../rdm/tools/YODAInstructionsFGB.html#protection){target="_blank"} for working with "Green" data in YODA.
 
 <br>
 
 #### **Research Drive & SURFdrive**
 
-If you are using [Research Drive](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012856){target="_blank"} for data storage and you need to share the data with a research collaborator or research team member, you can add the user who needs access using these [instructions](https://wiki.surfnet.nl/display/RDRIVE/Share+with+other+Research+Drive+users){target="_blank"}. [SURFdrive](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012728){target="_blank"} can also be used to share "green" data. Any user that can log into SURFconnext can be given access to a SURFdrive file or folder. 
+If you are using [Research Drive](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012856){target="_blank"} for data storage and you need to share the data with a research collaborator or research team member, you can add the user who needs access using these [instructions](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/128909585/RD+Set+permissions+when+sharing+files+and+folders){target="_blank"}. [SURFdrive](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012728){target="_blank"} can also be used to share "green" data. Any user that can log into SURFconnext can be given access to a SURFdrive file or folder. 
 
 **NB**: SURFdrive is generally discouraged for ongoing storage of research data (see the [Secure Storage Guide](Storage.html#nonpreferred){target="_blank"} for more information). If you are sharing data with research collaborators, Research Drive or YODA are the preferred options. 
 
@@ -277,7 +277,7 @@ If you are using [Research Drive](https://services.vu.nl/esc?id=kb_article&syspa
 * Make sure the added user knows how to work safely in [Research Drive](Storage.html#preferred){target="_blank"} or [SURFdrive](Storage.html#nonpreferred){target="_blank"}. 
     + The recipient must ensure that they always have [full-disk encryption](Encryption.html#fde){target="_blank"} activated on their computer.
 * Ensure that the recipient will **only** have access to the files that they need to see. If you give them access to a folder, they will have access to all subfolders within that folder.
-* Ensure that the recipient has appropriate [access rights](https://wiki.surfnet.nl/display/RDRIVE/Set+permissions+when+sharing+files+and+folders){target="_blank"} (i.e. whether they can only read files or also modify and/or upload files). 
+* Ensure that the recipient has appropriate [access rights](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/128909585/RD+Set+permissions+when+sharing+files+and+folders){target="_blank"} (i.e. whether they can only read files or also modify and/or upload files). 
 
 <br>
 

@@ -141,7 +141,7 @@ NB: The privacy champion will discuss the case with the privacy lawyers for Lega
 b.	Complete a [Data Protection Impact Assessment](https://assets.vu.nl/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/ad3de0e7-b935-471a-8d31-51c06ba47c88/Privacy%20five-step%20plan.pdf){target="_blank"}. 
 
 <div class="NB">
-NB: Legitimate interests **CANNOT** be used as grounds to conduct any clinical research that falls under the purview of the [Good Clinical Practice Guidelines](https://www.ich.org/page/efficacy-guidelines#6-2){target="_blank"} and/or the [WMO-law](https://wetten.overheid.nl/BWBR0009408/2018-08-01){target="_blank"}; informed and explicit consent is a requirement for these types of research, except in the extreme case of emergencies (WMO Article 6.4 and ICH-GCP E6/R2 Addendum 4.8.15). 
+NB: Legitimate interests **CANNOT** be used as grounds to conduct any clinical research that falls under the purview of the [Good Clinical Practice Guidelines](https://www.ich.org/page/efficacy-guidelines#6-2){target="_blank"} and/or the [WMO-law](https://wetten.overheid.nl/BWBR0036864/2018-08-01){target="_blank"}; informed and explicit consent is a requirement for these types of research, except in the extreme case of emergencies (WMO Article 6.4 and ICH-GCP E6/R2 Addendum 4.8.15). 
 </div>
 </div>
 

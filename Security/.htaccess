@@ -1,0 +1,7 @@
+# Prevent any (accidental) access to .git folder/files
+
+RedirectMatch 404 /\.git.*
+
+# Other protection measure (used also in wmo_insurance_registration)
+
+Options -Indexes

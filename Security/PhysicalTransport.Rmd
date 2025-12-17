@@ -199,5 +199,5 @@ Whether data are physically locked away or locked with encryption, both methods 
 
 ## Support
 
-If the advice described in this document is not feasible for your research, contact the [TO3 technicians](https://vu.nl/en/employee/behavioural-and-movement-sciences-getting-started/technical-support-for-research-to3){target="_blank"} as soon as possible to discuss possible alternatives. If they cannot assist you, you can get support from VU IT Security via the [Research Data Management Support Desk](https://vu.nl/en/employee/university-library/rdm-support-desk){target="_blank"}.
+If the advice described in this document is not feasible for your research, contact the [TO3 technicians](https://vu.nl/en/employee/research-support/technical-support-for-research-fgb-to3){target="_blank"} as soon as possible to discuss possible alternatives. If they cannot assist you, you can get support from VU IT Security via the [Research Data Management Support Desk](https://vu.nl/en/employee/university-library/rdm-support-desk){target="_blank"}.
 

@@ -177,7 +177,7 @@ Very often, "Red" data needs to be stored on a custom storage solution that is d
 
 <h4><strong>YODA</strong></h4>
 
-If your "Red" data have been approved for storage in YODA, you can [add the student(s) to the YODA "group" you manage](https://yoda.vu.nl/site/getting-started/user-management.html){target="_blank"}
+If your "Red" data have been approved for storage in YODA, you can [add the student(s) to the YODA "group" you manage](https://rdm.vu.nl/manuals/yoda/yoda_portal/group_manager.html){target="_blank"}
   
   * Follow the instructions in the [Digital Data Transfer Guide](DigitalTransfer.html){target="_blank"} to securely share "Red" data using YODA.
   * Make sure the student reviews and follows the security requirements for "Red" data in [YODA](../rdm/tools/YODAInstructionsFGB.html#protection){target="_blank"}, particularly that they:
@@ -222,7 +222,7 @@ The recommendations for "Red" data should be applied to "Orange" data whenever p
 
 <h4><strong>YODA</strong></h4>
 
-If you are already storing "Orange" data in [YODA](../rdm/tools/YODAInstructionsFGB.html){target="_blank"}, you can [add the student(s) to the YODA "group" you manage](https://yoda.vu.nl/site/getting-started/user-management.html){target="_blank"} to provide them access to "Orange" data.
+If you are already storing "Orange" data in [YODA](../rdm/tools/YODAInstructionsFGB.html){target="_blank"}, you can [add the student(s) to the YODA "group" you manage](https://rdm.vu.nl/manuals/yoda/yoda_portal/group_manager.html){target="_blank"} to provide them access to "Orange" data.
 
   * Follow the instructions in the [Digital Data Transfer Guide](DigitalTransfer.html){target="_blank"} to securely share "Orange" data using YODA.
   * Make sure the student reviews and follows the security requirements for "Orange" data in [YODA](../rdm/tools/YODAInstructionsFGB.html#protection){target="_blank"}, particularly that they:
@@ -286,7 +286,7 @@ When providing students with "Yellow" data, any of the options listed for "Orang
 
 <h4><strong>YODA</strong></h4>
 
-If you are already storing "Yellow" data in [YODA](../rdm/tools/YODAInstructionsFGB.html){target="_blank"}, you can [add the student(s) to the YODA "group" you manage](https://yoda.vu.nl/site/getting-started/user-management.html){target="_blank"} to provide them access to "Yellow" data.
+If you are already storing "Yellow" data in [YODA](../rdm/tools/YODAInstructionsFGB.html){target="_blank"}, you can [add the student(s) to the YODA "group" you manage](https://rdm.vu.nl/manuals/yoda/yoda_portal/group_manager.html){target="_blank"} to provide them access to "Yellow" data.
 
   * Follow the instructions in the [Digital Data Transfer Guide](DigitalTransfer.html){target="_blank"} to securely sharing "Yellow" data using YODA.
   * Make sure the student reviews and follows the security requirements for "Yellow" data in [YODA](../rdm/tools/YODAInstructionsFGB.html#protection){target="_blank"}.
@@ -370,6 +370,6 @@ Documentation is important for ensuring the integrity and quality of the researc
 
 For IT support on setting up (remote) access to VU networks for students, contact the [IT Service Desk](https://services.vu.nl){target="_blank"} .
 
-For faculty-level support, contact the Technical Support for Research (TO3) [Helpdesk](https://vu.nl/en/employee/behavioural-and-movement-sciences-getting-started/technical-support-for-research-to3){target="_blank"}. They can provide [equipment](PhysicalTransport.html#to3){target="_blank"} for short-term data collection and storage, such as encrypted external hard drives, and if given sufficient notice, they can develop solutions for more complex research projects.
+For faculty-level support, contact the Technical Support for Research (TO3) [Helpdesk](https://vu.nl/en/employee/research-support/technical-support-for-research-fgb-to3){target="_blank"}. They can provide [equipment](PhysicalTransport.html#to3){target="_blank"} for short-term data collection and storage, such as encrypted external hard drives, and if given sufficient notice, they can develop solutions for more complex research projects.
 
 If the recommendations of this guide are not feasible, contact the [RDM Support Desk](mailto: rdm@vu.nl). They will bring you into contact with the relevant specialists in IT who can develop an alternative solution.
