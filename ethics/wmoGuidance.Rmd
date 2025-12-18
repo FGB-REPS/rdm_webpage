@@ -487,7 +487,7 @@ Overall results after quiz completion:
 
 ## Possibly WMO {#possWMOoutcome}
 
-
+<button id="possWMOback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
 
 </div>
 
