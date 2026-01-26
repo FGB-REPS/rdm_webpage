@@ -1,6 +1,6 @@
 ---
 title: "RDM Tools @ FGB: YODA"
-date: "`r Sys.Date()`; Version 1.7"
+date: "`r Sys.Date()`; Version 2.0"
 output: 
   html_document:
     theme: cerulean
@@ -201,7 +201,8 @@ YODA is a preferred storage and archiving option because:
 * YODA has some other technical limitations, including:
   + YODA does not support working on files by multiple people simultaneously. 
   + YODA does not use a [desktop client](https://wiki.surfnet.nl/display/RDRIVE/ownCloud+desktop+client){target="_blank"} to sync data to a local folder on your computer. 
-    + There are several [ways](https://yoda.vu.nl/site/getting-started/getting-started-drive.html){target="_blank"} to access data in YODA, but the most stable (and therefore recommended) option is to use [Cyberduck](https://yoda.vu.nl/site/getting-started/yoda-disk-cyberduck.html){target="_blank"}. The use of Cyberduck is discussed further below in the [data protection](#protection) section. Because of this limitation, YODA may not be the most appropriate option if your data are being frequently manipulated and modified, or if your data volumes are *very* large. 
+    + There are several [ways](https://rdm.vu.nl/manuals/yoda/data_access/introduction.html){target="_blank"} to access data in YODA; if you are working with particularly large files or data that should not be copied locally, WebDAV or rclone are your best options for connecting to your YODA drive.
+    + If you use an [option](https://rdm.vu.nl/manuals/yoda/data_access/introduction.html){target="_blank"} that downloads data to your device, e.g. Cyberduck, make sure to review the [data protection](#protection) section on how to handle locally copied data. 
   + YODA does not offer fine-grained access rights for each subfolder you create. If not everyone involved in your research team is allowed access to all of the data, you will need multiple YODA groups to manage access to the data. This is discussed further [below](#accessmgmt). 
 <div id="singleindent">
   **If these technical limitations will severely hinder your research, [Research Drive](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012856){target="_blank"} will likely be your best alternative. However, Research Drive does not have standard approval for high ("orange") or very high risk ("red") data. If you have _very high risk_ ("red") data and Research Drive appears to be your best alternative, contact the [RDM Support Desk](mailto:rdm@vu.nl). They will connect you to IT Security for further assistance. If you have _high risk_ ("orange") data see the [FGB Storage Guide](../../Security/Storage.html#preferred){target="_blank"} for further guidance on how to properly protect this data in Research Drive.**
@@ -280,7 +281,8 @@ If YODA can be used to store your data, you *must* follow these basic security m
 
 <h4><strong>Handling of Downloaded Data</strong></h4>
 
-* The best way to upload and download data in YODA is via [Cyberduck](https://yoda.vu.nl/site/getting-started/yoda-disk-cyberduck.html){target="_blank"}. However you *must* remember that with Cyberduck all of the files you access from YODA need to be copied locally. When working with "Red" data this means:
+* Consider using [WebDAV or rclone](https://rdm.vu.nl/manuals/yoda/data_access/introduction.html){target="_blank"} to connect to your YODA drive so that you can avoid the necessity of copying data locally.
+* If you opt to upload and download data in YODA, e.g via [Cyberduck](https://yoda.vu.nl/site/getting-started/yoda-disk-cyberduck.html){target="_blank"}, remember that these files will be copied locally to your device. When working with "Red" data this means:
     * **It is imperative that you have [full-disk encryption](../../Security/Encryption.html#fde){target="_blank"} activated on your computer**
     * You must properly manage where the files are copied to on your computer, so that you can keep track of them. When setting up your connection to YODA with Cyberduck, you must define to which directory (folder location) the downloaded files should be copied to. This way you can better manage your local files, prevent accidental overwriting of these files and, most importantly, allow you to easily [delete](../../Security/SecurityBasics.html#removal){target="_blank"} all of the files in this location when you no longer need them stored locally.
     * You must ensure that even read-only users are aware of these rules. Even though they are not able to modify any data in YODA, they can still download data. You must ensure that all read-only users will properly manage data that they have stored locally and that they remove the data from their computer as soon as it is no longer required.
@@ -330,7 +332,8 @@ If YODA can be used to store your data, you *must* follow these basic security m
 
 <h4><strong>Handling of Downloaded Data</strong></h4>
 
-* The best way to upload and download data in YODA is via [Cyberduck](https://yoda.vu.nl/site/getting-started/yoda-disk-cyberduck.html){target="_blank"}. However you *must* remember that with Cyberduck all of the files you access from YODA need to be copied locally. When working with "Orange" data this means:
+* Consider using [WebDAV or rclone](https://rdm.vu.nl/manuals/yoda/data_access/introduction.html){target="_blank"} to connect to your YODA drive so that you can avoid the necessity of copying data locally
+* If you opt to upload and download data in YODA, e.g via [Cyberduck](https://yoda.vu.nl/site/getting-started/yoda-disk-cyberduck.html){target="_blank"}, remember that these files will be copied locally to your device. When working with "Orange" data this means:
     * **It is imperative that you have [full-disk encryption](../../Security/Encryption.html#fde){target="_blank"} activated on your computer**
     * You must properly manage where the files are copied to on your computer, so that you can keep track of them. When setting up your connection to YODA with Cyberduck, you must define to which directory (folder location) the downloaded files should be copied to. This way you can better manage your local files, prevent accidental overwriting of these files and, most importantly, allow you to easily [delete](../../Security/SecurityBasics.html#removal){target="_blank"} all of the files in this location when you no longer need them stored locally.
     * You must ensure that even read-only users are aware of these rules. Even though they are not able to modify any data in YODA, they can still download data. You must ensure that all read-only users will properly manage data that has been stored locally and that they remove it from their computer as soon as it is no longer required.
@@ -375,7 +378,8 @@ If YODA can be used to store your data, you *must* follow these basic security m
 
 <h4><strong>Handling of Downloaded Data</strong></h4>
 
-* The best way to upload and download data in YODA is via [Cyberduck](https://yoda.vu.nl/site/getting-started/yoda-disk-cyberduck.html){target="_blank"}. However you *must* remember that with Cyberduck all of the files you access from YODA need to be copied locally. When working with "Yellow" data this means:
+* Consider using [WebDAV or rclone](https://rdm.vu.nl/manuals/yoda/data_access/introduction.html){target="_blank"} to connect to your YODA drive so that you can avoid the necessity of copying data locally
+* If you opt to upload and download data in YODA, e.g via [Cyberduck](https://yoda.vu.nl/site/getting-started/yoda-disk-cyberduck.html){target="_blank"}, remember that these files will be copied locally to your device. When working with "Yellow" data this means:
     * **It is imperative that you have [full-disk encryption](../../Security/Encryption.html#fde){target="_blank"} activated on your computer**
     * You must properly manage where the files are copied to on your computer, so that you can keep track of them. When setting up your connection to YODA with Cyberduck, you must define to which directory (folder location) the downloaded files should be copied to. This way you can better manage your local files, prevent accidental overwriting of these files and, most importantly, allow you to easily [delete](../../Security/SecurityBasics.html#removal){target="_blank"} all of the files in this location when you no longer need them stored locally.
     * You must ensure that even read-only users are aware of these rules. Even though they are not able to modify any data in YODA, they can still download data. You must ensure that all read-only users will properly manage data that has been stored locally and that they remove it from their computer as soon as it is no longer required.
@@ -415,7 +419,8 @@ Green data may be lower risk, but it is still wise to prevent unauthorized acces
 
 <h4><strong>Handling of Downloaded Data</strong></h4>
 
-* The best way to upload and download data in YODA is via [Cyberduck](https://yoda.vu.nl/site/getting-started/yoda-disk-cyberduck.html){target="_blank"}. However you *must* remember that with Cyberduck all of the files you access from YODA need to be copied locally. When working with "Green" data this means:
+* Consider using [WebDAV or rclone](https://rdm.vu.nl/manuals/yoda/data_access/introduction.html){target="_blank"} to connect to your YODA drive so that you can avoid the necessity of copying data locally
+* If you opt to upload and download data in YODA, e.g via [Cyberduck](https://yoda.vu.nl/site/getting-started/yoda-disk-cyberduck.html){target="_blank"}, remember that these files will be copied locally to your device. When working with "Green" data this means:
     * You must properly manage where the files are copied to on your computer, so that you can keep track of them. When setting up your connection to YODA with Cyberduck, you must define to which directory (folder location) the downloaded files should be copied to. This way you can better manage your local files, prevent accidental overwriting of these files and, most importantly, allow you to easily [delete](../../Security/SecurityBasics.html#removal){target="_blank"} all of the files in this location when you no longer need them stored locally.
     * You must ensure that even read-only users are aware of these rules. Even though they are not able to modify any data in YODA, they can still download data. You must ensure that all read-only users will properly manage data that has been stored locally and that they remove it from their computer as soon as it is no longer required.
 
@@ -456,7 +461,8 @@ Even if your data are anonymous/anonymized or non-personal data with a low confi
   
 <h4><strong>Handling of Downloaded Data</strong></h4>
 
-* The best way to upload and download data in YODA is via [Cyberduck](https://yoda.vu.nl/site/getting-started/yoda-disk-cyberduck.html){target="_blank"}. With Cyberduck all of the files you access from YODA need to be copied locally. It is therefore wise to properly manage where the files are copied to on your computer, so that you can keep track of them. When setting up your connection to YODA with Cyberduck, you should define to which directory (folder location) the downloaded files should be copied to. By managing your local files well, you can prevent accidental overwriting of these local files.
+* Consider using [WebDAV or rclone](https://rdm.vu.nl/manuals/yoda/data_access/introduction.html){target="_blank"} to connect to your YODA drive so that you can avoid the necessity of copying data locally
+* If you opt to upload and download data in YODA, e.g via [Cyberduck](https://yoda.vu.nl/site/getting-started/yoda-disk-cyberduck.html){target="_blank"}, remember that these files will be copied locally to your device. You should therefore wise properly manage where the files are copied to on your computer, so that you can keep track of them. When setting up your connection to YODA with Cyberduck, you should define to which directory (folder location) the downloaded files should be copied to. By managing your local files well, you can prevent accidental overwriting of these local files.
 
 <h4><strong>Students & YODA</strong></h4>
 
