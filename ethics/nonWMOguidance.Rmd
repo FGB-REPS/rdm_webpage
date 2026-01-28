@@ -1,5 +1,5 @@
 ---
-title: "Ethics @ FGB: Navigating Ethical Reviews of WMO Research"
+title: "Ethics @ FGB: Non-WMO Declarations"
 date: "`r Sys.Date()`; version 1.0"
 output: 
   html_document:
@@ -58,5 +58,5 @@ li {
 </style>
 
 
-```{r, child='text/WMOtext.Rmd', echo=FALSE, results='asis'}
+```{r, child='text/nonWMOtext.Rmd', echo=FALSE, results='asis'}
 ```

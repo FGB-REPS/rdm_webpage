@@ -11,7 +11,7 @@
 
 
 
-<title>Ethics @ FGB: Navigating Ethical Reviews of WMO Research</title>
+<title>Ethics @ FGB: Determining Necessary Ethical Review Processes</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -348,8 +348,8 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Ethics @ FGB: Navigating Ethical Reviews of
-WMO Research</h1>
+<h1 class="title toc-ignore">Ethics @ FGB: Determining Necessary Ethical
+Review Processes</h1>
 <h4 class="date">2026-01-28; version 1.0</h4>
 
 </div>
@@ -385,9 +385,456 @@ margin: 5px;
 font-size: 14px;
 color: #737373;
 }
+#intro-wrapper, #quizGuidance, #helpGuidance {
+margin-left: 30%;
+margin-right: 30%;
+}
+#guidance-wrapper {
+position: relative;
+min-height: 50px;
+}
+
+#guidance-wrapper::after {
+content: "";
+display: block;
+} .guidance, .quiz {
+opacity: 0;
+transform: translateX(100%); 
+transition: opacity 0.5s ease, transform 0.5s ease;
+position: absolute;
+}
+.guidance.show, .quiz.show {
+position: relative;
+opacity: 1;
+transform: translateX(0); 
+z-index: 2; 
+}
+.guidance.hide-left, .quiz.hide-left {
+opacity: 0;
+transform: translateX(-100%); 
+z-index: 1; 
+}
+#wmoGuidance, #nwmoGuidance, #vcweGuidance { margin: 5%; 
+} .btn {
+width: 50%;
+}
 </style>
+<p><br />
+<br />
+</p>
+<p>Almost all research conducted within FGB will require some form of
+ethical review process. Unfortunately, not all FGB research projects can
+be reviewed by the faculty’s <a href="https://vu.nl/en/employee/research-support/the-scientific-and-ethical-review-board-vcwe" target="_blank">Scientific and Ethical Review Board (VCWE)</a> due to
+Dutch laws (primarily, the <a href="https://english.ccmo.nl/investigators/legal-framework-for-medical-scientific-research/your-research-is-it-subject-to-the-wmo-or-not" target="_blank">WMO</a>) on how medical research on humans is conducted.
+Some medical/clinical research <em>must</em> be reviewed by a <a href="https://metc.amsterdamumc.org/" target="_blank">Medical Ethical
+Review Committee (METc)</a>. In other cases, the METc may need to be
+approached for a non-WMO statement indicating that the study does not
+need to be reviewed by the METc, in which case the study should still
+undergo ethical review by the VCWE.</p>
+<p>Determining which situation applies to you can be confusing
+<em>and</em> if you determine that you will need METc review or a
+non-WMO declaration, the process can be quite complicated because the
+METc is external to the VU. The following guide aims to help you
+determine which ethical review process(es) apply to you and once that’s
+known, also helps you navigate the applicable ethical review
+process.</p>
+<p><br />
+</p>
+<div id="intro-wrapper">
+<div id="intro" class="section level2">
+<h2>Which ethical review process do you need information on?</h2>
+<form id="whichRoute">
+<label><input type="radio" name="routePicker" id="displayWMO" value="wmo">
+WMO research review process </label><br>
+<label><input type="radio" name="routePicker" id="displayNonWMO" value="nwmo">
+Non-WMO declaration process </label><br>
+<label><input type="radio" name="routePicker" id="displayVCWE" value="vcwe">
+Standard FGB ethical review for non-clinical research </label><br>
+<label><input type="radio" name="routePicker" id="displayQuiz" value="quiz">
+I need help to figure out what process(es) apply to me </label><br>
+</form>
+</div>
+</div>
+<div id="guidance-wrapper">
+<div id="helpGuidance" class="section level2 guidance">
+<h2>Support</h2>
+<ul>
+<li><a href="mailto:vcwe.fgb@vu.nl">FGB Scientific and Ethical Review
+Committee (VCWE)</a></li>
+<li><a href="mailto:research.data.fgb@vu.nl">Research and Policy Support
+Team (REPS)</a></li>
+</ul>
+</div>
+<div id="wmoGuidance" class="section level2 guidance">
+<h2>WMO requirements and METc assessment for FGB research</h2>
+<div id="heres-a-further-test-of-the-push-down-functionality" class="section level3">
+<h3>Here’s a further test of the push down functionality</h3>
 <p>Here’s some info on WMO processes!</p>
 <p>Wheeeeeeeeeeeeeeee!</p>
+</div>
+</div>
+<div id="nwmoGuidance" class="section level2 guidance">
+<h2>Obtaining a non-WMO declaration from the METc</h2>
+<div id="heres-a-further-test-of-the-push-down-functionality-1" class="section level3">
+<h3>Here’s a further test of the push down functionality</h3>
+<p>This is a test to see if iFrames could work for inserting this text
+into the decision making tool.</p>
+<p>Let’s see!</p>
+<p>Wheeeeee!</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+</div>
+</div>
+<div id="vcweGuidance" class="section level2 guidance">
+<h2>Standard FGB VCWE ethical review process</h2>
+<p>Here’s some info on VCWE processes!</p>
+<p>Wheeeeeeeeeeeeeeee!</p>
+</div>
+<div id="quizGuidance" class="section level2 guidance">
+<p><!-- wrote id and class in one html div because issues with rendering were impacting how divs were working in output html --></p>
+<div id="lets-figure-it-out" class="section level2">
+<h2>Let’s figure it out!</h2>
+<div class="small-text">
+<p><em>Depending on your answers, you will either advance to the next
+question or immediately receive advice on which path applies to you. You
+can always come back to this quiz by reselecting “I need help to figure
+out which process(es) apply to me”.</em></p>
+</div>
+<!-- Quiz questions
+1. Will your research project have human research participants?
+e.g. Includes anything from participants in a lab to people answering an online survey. Excludes reviews of medical records, reuse of existing data or animal experiments. 
+  -> if yes, continue quiz, but no further impact on outcome
+  -> if no, go straight to advice to follow-up with VCWE
+  -> if unsure, go straight to Support A (Guidance on figuring out study more first)
+2. Will your research project aim to answer questions related to illness, health or other medical/clinical topics?
+e.g. Includes anything related to etiology, pathogenesis, signs & symptoms, diagnostics, disease prevention, disease outcomes or treatment of illness.
+  -> if yes, increase likelihood of WMO
+  -> if yes plus at least one yes from q4-8, ALWAYS WMO
+  -> if no, continue survey with decreased likelihood of WMO
+  -> if unsure, continue survey with increased likelihood to Support B (Contact info for support and links to WMO CCMO pages)
+3. Will you take blood samples from your research participants in the course of the research project?
+  -> if yes, ALWAYS WMO
+  -> if no, continue survey (no decrease in WMO likelihood)
+  -> if unsure, go straight to Support A (Guidance on figuring out study more first)
+4. Will your research participants be required to follow specific rules of behaviour?
+e.g. Includes following a specific diet and/or exercise regiment, wearing cumbersome ambulatory monitoring devices for several days, requiring frequent (multiple times per day) self-reporting in a journal/diary for an extended period (several weeks or months).
+  -> if yes, increase likelihood of WMO
+  -> if yes plus yes from q2, ALWAYS WMO
+  -> if no, continue survey with decreased likelihood of WMO
+  -> if unsure, continue survey with increased likelihood to Support B (Contact info for support and links to WMO CCMO pages)
+5. Will your research participants receive experimental treatments as a part of the research project?
+e.g. Includes RCTs comparing an experimental psycho- or physiotherapy protocol against the current gold standard (or where appropriate compared to no treatment), use of experimental medical devices as part of treatment and/or diagnostics.
+  -> if yes, increase likelihood of WMO
+  -> if yes plus yes from q2, ALWAYS WMO
+  -> if no, continue survey with decreased likelihood of WMO
+  -> if unsure, continue survey with increased likelihood to Support B (Contact info for support and links to WMO CCMO pages)
+6. Will your research participants be subjected to procedures that could likely be experienced as physically and/or psychologically invasive?
+e.g. Includes stressful psychological experiments where participants are subjects to extreme emotional and/or ethical pressure, studies of human physical performance that require rectal thermometers to record accurate body temperature measurements, participants with phobias forced to actively confront that phobia in an experimental setting.
+  -> if yes, increase likelihood of WMO
+  -> if yes plus yes from q2, ALWAYS WMO
+  -> if no, continue survey with decreased likelihood of WMO
+  -> if unsure, continue survey with increased likelihood to Support B (Contact info for support and links to WMO CCMO pages)
+7. Will your research participants be subjected to procedures that have a reasonable potential to cause physical and/or psychological harm?
+e.g. Includes experiments in heat labs to investigate the body's response and management of temperature regulation, in-depth psychological interviews on deeply distressing, upsetting or stigmatized topics
+  -> if yes, increase likelihood of WMO
+  -> if yes plus yes from q2, ALWAYS WMO
+  -> if no, continue survey with decreased likelihood of WMO
+  -> if unsure, continue survey with increased likelihood to Support B (Contact info for support and links to WMO CCMO pages)
+8. Will your research participants be administered anything (medications, hormones, supplements) as a part of their participation in your research project?
+e.g. Includes experiments where stress hormones are administered to investigate stress responses and impacts on familial bonding
+  -> if yes, increase likelihood of WMO
+  -> if yes plus yes from q2, ALWAYS WMO
+  -> if no, continue survey with decreased likelihood of WMO
+  -> if unsure, continue survey with increased likelihood to Support B (Contact info for support and links to WMO CCMO pages)
+
+
+Overall results after quiz completion:
+  -> if q1 is no, go immediately to definitely VCWE, but with info about studies without active participants
+  -> if q1 is unsure, go straight to Support A (Guidance on figuring out study more first)
+  -> if q2 is yes and any of q4-8 are yes, go to definitely WMO
+  -> if q3 is yes, go immediately to definitely WMO
+  -> if q3 is unsure, go immediately to Support A (Guidance on figuring out study more first)
+  -> if for q4-8 at least one response is yes, but q2-3 are not yes, go to likely WMO, potentially non-WMO/VCWE (i.e. links to all three as well as support info)
+  -> if q2-8 all no, go to definitely VCWE
+  -> for q2,4-8 and none of answers are yes, if majority response is no, to likely VCWE page; if majority response is unsure or tied, to support page B
+  -> if q1-2 are yes and majority of others are no, go to likely non-WMO info (include reference to VCWE); if majority of others is unsure or tied, to support page B
+  
+-->
+<!--  FGB WMO examples:
+
+- hormone injections for research on stress, familial bonding etc
+- development of diagnostic tools that require exposures in experimental subjects, e.g. pain stimuli
+- investigating physical and/or mental responses to exposures such as external stressors or temperature stimuli
+- testing effectiveness of novel psycho, physio- or exercise therapy treatment protocols
+- testing effectiveness of existing psycho, physio- or exercise therapy treatment protocols in novel populations (often with modifications for population of interest, e.g. foster children, autistic subjects)
+- testing effectiveness of medical devices (e.g. eletrical stimulation mats, augmented reality headsets) in preventing negative sequelae and/or improving treatment outcomes
+- studying medication optimization in psychiatric conditions
+- invasive procedures for obtaining measurements such as tissue biopsies or use of rectal thermometers
+
+-->
+<div id="quest1" class="section level3 quiz">
+<h3>1. Will your research project have human research participants?</h3>
+<details>
+<summary>
+Examples
+</summary>
+<em>e.g. Includes anything from participants in a lab to people
+answering an online survey. Excludes reviews of medical records, reuse
+of existing data or animal experiments.</em>
+</details>
+<form id="answersQ1" class="answers" data-answered="false">
+<!-- the data-* attribute is a way to add some extra attributes to an element where * is my choice of name -->
+<label><input type="radio" name="q1" value="yes">Yes</label><br>
+<label><input type="radio" name="q1" value="no">No</label><br>
+<label><input type="radio" name="q1" value="unsure"> I’m not
+sure</label><br>
+</form>
+<!-- create button that will only show if answers already filled in -->
+<button class="manual-next btn btn-primary btn-sm" id="btn1_2" style="display:none;">
+Next
+</button>
+</div>
+<div id="quest2" class="section level3 quiz">
+<h3>2. Will your research project aim to answer questions related to
+illness, health or other medical/clinical topics?</h3>
+<details>
+<summary>
+Examples
+</summary>
+<em>e.g. Includes anything related to etiology, pathogenesis, signs
+&amp; symptoms, diagnostics, disease prevention, disease outcomes or
+treatment of illness.</em>
+</details>
+<form id="answersQ2" class="answers" data-answered="false">
+<label><input type="radio" name="q2" value="yes">Yes</label><br>
+<label><input type="radio" name="q2" value="no">No</label><br>
+<label><input type="radio" name="q2" value="unsure"> I’m not
+sure</label><br>
+</form>
+<button id="btn2_1" class="btn btn-primary btn-sm">
+Back
+</button>
+<!-- create button that will only show if answers already filled in -->
+<button class="manual-next btn btn-primary btn-sm" id="btn2_3" style="display:none;">
+Next
+</button>
+</div>
+<div id="quest3" class="section level3 quiz">
+<h3>3. Will you take blood samples from your research participants in
+the course of the research project?</h3>
+<form id="answersQ3" class="answers" data-answered="false">
+<label><input type="radio" name="q3" value="yes">Yes</label><br>
+<label><input type="radio" name="q3" value="no">No</label><br>
+<label><input type="radio" name="q3" value="unsure"> I’m not
+sure</label><br>
+</form>
+<button id="btn3_2" class="btn btn-primary btn-sm">
+Back
+</button>
+<!-- create button that will only show if answers already filled in -->
+<button class="manual-next btn btn-primary btn-sm" id="btn3_4" style="display:none;">
+Next
+</button>
+</div>
+<div id="quest4" class="section level3 quiz">
+<h3>4. Will your research participants be required to follow specific
+rules of behaviour?</h3>
+<details>
+<summary>
+Examples
+</summary>
+<em>e.g. Includes following a specific diet and/or exercise regiment,
+wearing cumbersome ambulatory monitoring devices for several days,
+requiring frequent (multiple times per day) self-reporting in a
+journal/diary for an extended period (several weeks or months).</em>
+</details>
+<form id="answersQ4" class="answers" data-answered="false">
+<label><input type="radio" name="q4" value="yes">Yes</label><br>
+<label><input type="radio" name="q4" value="no">No</label><br>
+<label><input type="radio" name="q4" value="unsure"> I’m not
+sure</label><br>
+</form>
+<button id="btn4_3" class="btn btn-primary btn-sm">
+Back
+</button>
+<!-- create button that will only show if answers already filled in -->
+<button class="manual-next btn btn-primary btn-sm" id="btn4_5" style="display:none;">
+Next
+</button>
+</div>
+<div id="quest5" class="section level3 quiz">
+<h3>5. Will your research participants receive experimental treatments
+as a part of the research project?</h3>
+<details>
+<summary>
+Examples
+</summary>
+<em>e.g. Includes RCTs comparing an experimental psycho- or
+physiotherapy protocol against the current gold standard (or where
+appropriate compared to no treatment), use of experimental medical
+devices with the intent to measure health outcomes or improve diagnostic
+output.</em>
+</details>
+<form id="answersQ5" class="answers" data-answered="false">
+<label><input type="radio" name="q5" value="yes">Yes</label><br>
+<label><input type="radio" name="q5" value="no">No</label><br>
+<label><input type="radio" name="q5" value="unsure"> I’m not
+sure</label><br>
+</form>
+<button id="btn5_4" class="btn btn-primary btn-sm">
+Back
+</button>
+<!-- create button that will only show if answers already filled in -->
+<button class="manual-next btn btn-primary btn-sm" id="btn5_6" style="display:none;">
+Next
+</button>
+</div>
+<div id="quest6" class="section level3 quiz">
+<h3>6. Will your research participants be subjected to procedures that
+could likely be experienced as physically and/or psychologically
+invasive?</h3>
+<details>
+<summary>
+Examples
+</summary>
+<em>e.g. Includes stressful psychological experiments where participants
+are subjects to extreme emotional and/or ethical pressure, studies of
+human physical performance that require rectal thermometers to record
+accurate body temperature measurements</em>
+</details>
+<form id="answersQ6" class="answers" data-answered="false">
+<label><input type="radio" name="q6" value="yes">Yes</label><br>
+<label><input type="radio" name="q6" value="no">No</label><br>
+<label><input type="radio" name="q6" value="unsure"> I’m not
+sure</label><br>
+</form>
+<button id="btn6_5" class="btn btn-primary btn-sm">
+Back
+</button>
+<!-- create button that will only show if answers already filled in -->
+<button class="manual-next btn btn-primary btn-sm" id="btn6_7" style="display:none;">
+Next
+</button>
+</div>
+<div id="quest7" class="section level3 quiz">
+<h3>7. Will your research participants be subjected to procedures that
+have a reasonable potential to cause physical and/or psychological
+harm?</h3>
+<details>
+<summary>
+Examples
+</summary>
+<em>e.g. Includes experiments in heat labs to investigate the body’s
+response and management of temperature regulation, in-depth
+psychological interviews on deeply distressing, upsetting or stigmatized
+topics</em>
+</details>
+<form id="answersQ7" class="answers" data-answered="false">
+<label><input type="radio" name="q7" value="yes">Yes</label><br>
+<label><input type="radio" name="q7" value="no">No</label><br>
+<label><input type="radio" name="q7" value="unsure"> I’m not
+sure</label><br>
+</form>
+<button id="btn7_6" class="btn btn-primary btn-sm">
+Back
+</button>
+<!-- create button that will only show if answers already filled in -->
+<button class="manual-next btn btn-primary btn-sm" id="btn7_8" style="display:none;">
+Next
+</button>
+</div>
+<div id="quest8" class="section level3 quiz">
+<h3>8. Will your research participants be administered anything
+(medications, hormones, supplements) as a part of their participation in
+your research project?</h3>
+<details>
+<summary>
+Examples
+</summary>
+<em>e.g. Includes experiments where stress hormones are administered to
+investigate stress responses</em>
+</details>
+<form id="answersQ8" class="answers" data-answered="false">
+<label><input type="radio" name="q8" value="yes">Yes</label><br>
+<label><input type="radio" name="q8" value="no">No</label><br>
+<label><input type="radio" name="q8" value="unsure"> I’m not
+sure</label><br>
+</form>
+<button id="btn8_7" class="btn btn-primary btn-sm">
+Back
+</button>
+<!-- create button that will only show if answers already filled in -->
+<button class="manual-next btn btn-primary btn-sm" id="btn8_end" style="display:none;">
+Next
+</button>
+</div>
+</div>
+<div id="defWMOoutcome" class="section level2 quiz">
+<h2>Definitely WMO</h2>
+<button id="defWMOback" class="manual-back btn btn-primary btn-sm">
+Back to quiz
+</button>
+</div>
+<div id="possWMOoutcome" class="section level2 quiz">
+<h2>Possibly WMO</h2>
+<button id="possWMOback" class="manual-back btn btn-primary btn-sm">
+Back to quiz
+</button>
+</div>
+<div id="possNonWMOoutcome" class="section level2 quiz">
+<h2>Possibly non-WMO</h2>
+<button id="possNonWMOback" class="manual-back btn btn-primary btn-sm">
+Back to quiz
+</button>
+</div>
+<div id="defVCWEoutcome" class="section level2 quiz">
+<h2>Definitely VCWE</h2>
+<button id="defVCWEback" class="manual-back btn btn-primary btn-sm">
+Back to quiz
+</button>
+</div>
+<div id="possVCWEoutcome" class="section level2 quiz">
+<h2>Possibly VCWE</h2>
+<button id="possVCWEback" class="manual-back btn btn-primary btn-sm">
+Back to quiz
+</button>
+</div>
+<div id="suppA" class="section level2 quiz">
+<h2>Support A</h2>
+<button id="suppAback" class="manual-back btn btn-primary btn-sm">
+Back to quiz
+</button>
+</div>
+<div id="suppB" class="section level2 quiz">
+<h2>Support B</h2>
+<button id="suppBback" class="manual-back btn btn-primary btn-sm">
+Back to quiz
+</button>
+</div>
+</div>
+</div>
 
 
 
@@ -431,6 +878,458 @@ filter: invert(27%) sepia(44%) saturate(1601%) hue-rotate(169deg) brightness(93%
 
 
 </div>
+<script>
+
+// overall function to clean up div classes after any transitions either on initial pt 1 guidance or later quiz pt 2 guidance
+
+function removeClassOnTransitionEnd(element, ...classNames) {
+  const handleTransitionEnd = (e) => {
+    if (e.propertyName === 'transform') {
+      element.classList.remove(...classNames);
+      element.removeEventListener('transitionend', handleTransitionEnd);
+    }
+  };
+  element.addEventListener('transitionend', handleTransitionEnd);
+}
+
+// overall function for resetting answers and any buttons that are showing if user goes from quiz to guidance info
+
+function resetAnswersButtons(classAnswers, classButtons) {
+  const answers = document.querySelectorAll(classAnswers);
+  answers.forEach(answer => answer.reset());
+  answers.forEach(answer => answer.dataset.answered = "false");
+
+  const buttons = document.querySelectorAll(classButtons); // hide all next buttons again
+  buttons.forEach(button => button.style.display = "none");
+};
+
+
+
+// script pt 1 for handling which guidance material to show
+
+const form = document.getElementById("whichRoute");  // constant to identify the form DOM
+
+
+let currentDiv = null;
+let outgoingDiv = null;
+
+// last two variables necessary for animation to run smoothly
+
+
+// add event listenter to form so that on change the selected guidance div shows up
+// and comes in from the right while the previous one goes out to the left and fades away
+
+form.addEventListener('change', (event) => {
+
+  const selected = event.target.value;  // use input value then concat with Guidance to capture the chosen Div
+  const selectedDiv = document.getElementById(selected + 'Guidance');
+
+
+  const guides = document.querySelectorAll('.guidance');
+  guides.forEach(guide => guide.classList.remove('show', 'hide-left')); // clean up any CSS transition labels that may be present from quiz questions
+
+  // reset all quiz class divs & all quiz answers if any previous input
+  // --> likely want to adjust in future to allow answers to stay on change, but not on page refresh
+  const quizzes = document.querySelectorAll('.quiz');
+  quizzes.forEach(quiz => quiz.classList.remove('show', 'hide-left')); // clean up any CSS transition labels that may be present from quiz questions
+  resetAnswersButtons('.answers', '.manual-next') // reset quiz answers and buttons
+
+ if (currentDiv === selectedDiv) {
+    return; // no change has occurred, nothing happens
+ }
+
+
+
+  // If changed, show the div that matches the selected value
+
+ if (currentDiv) {  // If currentDiv is not null (i.e. there hasn't been a div selected yet) need to clean up CSS so that div can disappear as desired
+
+
+
+  outgoingDiv = currentDiv; // set currentDiv to outgoingDiv and the run following on outgoingDiv so that it disappears and stays away during all other steps
+                            // if not done this way will get overlaps with calling same div as selectedDiv and will also run into problems with hide-left not
+                            // being properly removed
+
+
+    // Slide out outgoingDiv to the left
+   outgoingDiv.classList.remove('show');
+   outgoingDiv.classList.add('hide-left');
+
+    // When the slide-out finishes, clean up by removing hide-left (ensures that upon later changes div will come in from the right not the left)
+  removeClassOnTransitionEnd(outgoingDiv, 'hide-left');
+
+ };
+
+
+
+
+      // Prepare the new guidance to come from the right (remove any previous show or hide-left transitions)
+
+   selectedDiv.classList.remove('hide-left', 'show');
+
+      // Force browser to reflow so transition triggers properly
+   void selectedDiv.offsetWidth;
+
+      // Then trigger its slide in
+   selectedDiv.classList.add('show');
+
+
+
+      if (selectedDiv.id === 'quizGuidance') { // when selectedDiv is the quiz then also show the first question of the quiz (otherwise quiz won't reset when reselecting this div)
+       let quest1 = document.getElementById('quest1')
+       quest1.classList.add('show');
+      }
+
+
+
+      // Update reference
+   currentDiv = selectedDiv;
+
+
+
+ });
+
+// script pt 2 handling the quiz
+
+const historyStack = []; //used to help with navigation of divs in quiz
+
+const q1 = document.getElementById("answersQ1");
+const q2 = document.getElementById("answersQ2");
+const q3 = document.getElementById("answersQ3");
+const q4 = document.getElementById("answersQ4");
+const q5 = document.getElementById("answersQ5");
+const q6 = document.getElementById("answersQ6");
+const q7 = document.getElementById("answersQ7");
+const q8 = document.getElementById("answersQ8");
+
+const btn1_2 = document.getElementById("btn1_2");
+const btn2_3 = document.getElementById("btn2_3");
+const btn3_4 = document.getElementById("btn3_4");
+const btn4_5 = document.getElementById("btn4_5");
+const btn5_6 = document.getElementById("btn5_6");
+const btn6_7 = document.getElementById("btn6_7");
+const btn7_8 = document.getElementById("btn7_8");
+const btn8_end = document.getElementById("btn8_end");
+
+
+const btn2_1 = document.getElementById("btn2_1");
+const btn3_2 = document.getElementById("btn3_2");
+const btn4_3 = document.getElementById("btn4_3");
+const btn5_4 = document.getElementById("btn5_4");
+const btn6_5 = document.getElementById("btn6_5");
+const btn7_6 = document.getElementById("btn7_6");
+const btn8_7 = document.getElementById("btn8_7");
+
+// create quiz map for when questions simply go to next default questions
+
+const quizMap = {
+    'quest1': { next: 'quest2', form: 'answersQ1' },
+    'quest2': { next: 'quest3', form: 'answersQ2' },
+    'quest3': { next: 'quest4', form: 'answersQ3' },
+    'quest4': { next: 'quest5', form: 'answersQ4' },
+    'quest5': { next: 'quest6', form: 'answersQ5' },
+    'quest6': { next: 'quest7', form: 'answersQ6' },
+    'quest7': { next: 'quest8', form: 'answersQ7' },
+    'quest8': { next: 'suppB', form: 'answersQ8' } // default to suppB block for next if no other routing applied
+};
+
+
+// function to obtain selected value of a given formId even when no change has been made
+
+function getSelectedValue(formId) {
+    const selected = document.querySelector(`#${formId} input[type="radio"]:checked`);
+    return selected ? selected.value : null;
+}
+
+
+
+// create function to have user go to next question if chosen answer forces them to move forward in quiz
+
+function nextDiv(currentId, nextId) {
+  let currentQ = document.getElementById(currentId)
+  let nextQ = document.getElementById(nextId)
+
+
+  // Slide out currentQ to the left
+   currentQ.classList.remove('show');
+   currentQ.classList.add('hide-left');
+
+   // This allows it to reset its transform: translateX back to 100%
+    // and wait off-screen properly for the next time it's needed.
+    removeClassOnTransitionEnd(currentQ, 'hide-left', 'show');
+
+      // Prepare the new guidance to come from the right (remove any previous show or hide-left transitions)
+
+   nextQ.classList.remove('hide-left');
+
+      // Force browser to reflow so transition triggers properly
+   void nextQ.offsetWidth;
+
+      // Then trigger its slide in
+   nextQ.classList.add('show');
+
+   // Record navigation history
+   if (historyStack.length === 0) {
+      historyStack.push(currentId);
+   }
+    const lastId = historyStack[historyStack.length - 1];
+    if (lastId !== nextId) {
+      historyStack.push(nextId);
+    }
+
+
+};
+
+// create functions that allow the Next button to appear only if user is on a question that has already been answered
+// and they need the Next button to advance (happens if they used the Back button in the quiz to go back)
+
+// create function for auto-navigation when question is answered for the first time
+// function to toggle the next button to showing if question already has an answer
+
+function toggleNextIfAnswered(questionId, formId) {
+  const form = document.getElementById(formId);
+  const button = document.querySelector(`#${questionId} .manual-next`);
+
+  if (form.dataset.answered === "true") {
+    setTimeout(() => {
+    button.style.display = "inline-block";
+    }, 500); // use setTimeout to delay appearance of next button
+  } else {
+    button.style.display = "none";
+  }
+}
+
+function handleQuizChange(currentId, nextId, formId) {
+  const form = document.getElementById(formId);
+  const alreadyAnswered = form.dataset.answered === "true"; // data-answered attribute is set to false in html on load
+
+  if (!alreadyAnswered) {
+    form.dataset.answered = "true";
+    nextDiv(currentId, nextId);
+  } else {
+    nextDiv(currentId, nextId);
+  }
+
+
+  // Show/hide button depending on whether we’ve answered
+  toggleNextIfAnswered(currentId, formId);
+}
+
+
+// function to calculate overall answers for quests4-8: identify if any of these are answered as yes, as well as tally total no's and unsures.
+
+function getTally() {
+  const qIds = ['answersQ4', 'answersQ5', 'answersQ6', 'answersQ7', 'answersQ8'];
+
+  let tally = {
+    no: 0,
+    unsure: 0,
+    hasYes: false
+  };
+
+  qIds.forEach(id => {
+    const val = getSelectedValue(id);
+    if (val === 'yes') tally.hasYes = true;
+    if (val === 'no') tally.no++;
+    if (val === 'unsure') tally.unsure++;
+  });
+
+  return tally;
+
+}
+
+// create function for conditionals depending on which question we are at to determine routing
+
+
+function navigateQuiz(currentId, isAutoAdvance = true) {
+    const config = quizMap[currentId];
+    const currentAnswer = getSelectedValue(config.form);
+    const q2Answer = getSelectedValue("answersQ2");
+    const q3Answer = getSelectedValue("answersQ3");
+    const q4Answer = getSelectedValue("answersQ4");
+    const q5Answer = getSelectedValue("answersQ5");
+    const q6Answer = getSelectedValue("answersQ6");
+    const q7Answer = getSelectedValue("answersQ7");
+    const q8Answer = getSelectedValue("answersQ8");
+    let destination = config.next;
+
+    // 1. Determine destination based on current question and routing rules
+    //Overall results after quiz completion:
+//  -> if q1 is no, go immediately to definitely VCWE, but with info about studies without active participants
+//  -> if q1 is unsure, go straight to Support A (Guidance on figuring out study more first)
+//  -> if q2 is yes AND any of q4-8 are yes, go to definitely WMO
+//  -> if q3 is yes, go immediately to definitely WMO
+//  -> if q3 is unsure, go immediately to Support A (Guidance on figuring out study more first)
+//  -> if for q4-8 at least one response is yes, but q2 is not yes, go to likely WMO, potentially non-WMO/VCWE (i.e. links to all three as well as support info)
+//  -> if q2-8 all no, go to definitely VCWE
+//  -> for q2,4-8 and none of answers are yes, if majority response is no, to likely VCWE page; if majority response is unsure or tied, to support page B
+//  -> if q2 is yes and majority of others are no, go to likely non-WMO info (include reference to VCWE); if majority of others is unsure or tied, to support page B
+
+    if (currentId === 'quest1') {
+      // special logic:
+      if (currentAnswer === 'no') {
+        destination = 'defVCWEoutcome';
+      } else if (currentAnswer === 'unsure') {
+        destination = 'suppA';
+      } // NB: quest2 does not need special logic because always advances to quest3
+    } else if (currentId === 'quest3') {
+      // special logic:
+      if (currentAnswer === 'yes') {
+        destination = 'defWMOoutcome';
+      } else if (currentAnswer === 'unsure') {
+        destination = 'suppA';
+      }
+    } else if (['quest4', 'quest5', 'quest6', 'quest7'].includes(currentId)) { // this is like the %in% operator in R
+    // quest8 not included here because this is just for auto-navigation before end of quiz if quest2 and any of above are yes.
+      // special logic:
+      if (q2Answer === 'yes' && currentAnswer === 'yes') {
+        destination = 'defWMOoutcome';
+      }
+    } else if (currentId === 'quest8') { //final special logic should only happen when current Id is at last question because need to look at all responses
+      const counts = getTally(); // determine presence of yes answers/totals no's and unsures in questions 4-8
+
+      // special logic:
+      if (q2Answer !== 'yes' && counts.hasYes) {
+          destination = 'possWMOoutcome';
+        } else if (q2Answer === 'no' && counts.no === 5) {
+          destination = 'defVCWEoutcome';
+        } else if (q2Answer !== 'yes' && (counts.no > counts.unsure)) {
+          destination = 'possVCWEoutcome';
+        } else if (q2Answer === 'yes' && (counts.no > counts.unsure)) {
+          destination = 'possNonWMOoutcome';
+        } else {
+          destination = 'suppB';
+        }
+    }
+
+    // 2. Choose the action based on how the function was called
+    if (isAutoAdvance) {
+        // This is for the first time an answer is provided so that the next button can appear when needed
+        handleQuizChange(currentId, destination, config.form);
+    } else {
+        // This is for the next buttons to function when there is no change to input
+        nextDiv(currentId, destination);
+    }
+}
+
+
+
+
+// question event listeners (auto advance on change)
+
+q1.addEventListener('change', () => navigateQuiz('quest1'));
+q2.addEventListener('change', () => navigateQuiz('quest2'));
+q3.addEventListener('change', () => navigateQuiz('quest3'));
+q4.addEventListener('change', () => navigateQuiz('quest4'));
+q5.addEventListener('change', () => navigateQuiz('quest5'));
+q6.addEventListener('change', () => navigateQuiz('quest6'));
+q7.addEventListener('change', () => navigateQuiz('quest7'));
+q8.addEventListener('change', () => navigateQuiz('quest8'));
+
+
+//next buttons (specific routing, but without auto-advance)
+
+btn1_2.addEventListener('click', () => navigateQuiz('quest1', isAutoAdvance = false));
+btn2_3.addEventListener('click', () => navigateQuiz('quest2', isAutoAdvance = false));
+btn3_4.addEventListener('click', () => navigateQuiz('quest3', isAutoAdvance = false));
+btn4_5.addEventListener('click', () => navigateQuiz('quest4', isAutoAdvance = false));
+btn5_6.addEventListener('click', () => navigateQuiz('quest5', isAutoAdvance = false));
+btn6_7.addEventListener('click', () => navigateQuiz('quest6', isAutoAdvance = false));
+btn7_8.addEventListener('click', () => navigateQuiz('quest7', isAutoAdvance = false));
+btn8_end.addEventListener('click', () => navigateQuiz('quest8', isAutoAdvance = false));
+
+
+// back (back buttons done with nextDiv directly because navigateQuiz goes forward (maybe later can add conditional for forward vs back))
+
+btn2_1.addEventListener('click', (event) => {
+      nextDiv('quest2','quest1')
+  });
+
+btn3_2.addEventListener('click', (event) => {
+      nextDiv('quest3','quest2')
+  });
+
+btn4_3.addEventListener('click', (event) => {
+      nextDiv('quest4','quest3')
+  });
+
+btn5_4.addEventListener('click', (event) => {
+      nextDiv('quest5','quest4')
+  });
+
+btn6_5.addEventListener('click', (event) => {
+      nextDiv('quest6','quest5')
+  });
+
+btn7_6.addEventListener('click', (event) => {
+      nextDiv('quest7','quest6')
+  });
+
+btn8_7.addEventListener('click', (event) => {
+      nextDiv('quest8','quest7')
+  });
+
+// nav buttons back from outcomes to last viewed quiz question
+
+defWMOback.addEventListener('click', (event) => {
+ const lastId = historyStack[historyStack.length - 2];
+
+ nextDiv('defWMOoutcome', lastId);
+
+});
+
+
+defVCWEback.addEventListener('click', (event) => {
+ const lastId = historyStack[historyStack.length - 2];
+
+ nextDiv('defVCWEoutcome', lastId);
+
+});
+
+
+
+possWMOback.addEventListener('click', (event) => {
+ const lastId = historyStack[historyStack.length - 2];
+
+ nextDiv('possWMOoutcome', lastId);
+
+});
+
+
+possNonWMOback.addEventListener('click', (event) => {
+ const lastId = historyStack[historyStack.length - 2];
+
+ nextDiv('possNonWMOoutcome', lastId);
+
+});
+
+
+possVCWEback.addEventListener('click', (event) => {
+ const lastId = historyStack[historyStack.length - 2];
+
+ nextDiv('possVCWEoutcome', lastId);
+
+});
+
+
+suppAback.addEventListener('click', (event) => {
+ const lastId = historyStack[historyStack.length - 2];
+
+ nextDiv('suppA', lastId);
+
+});
+
+suppBback.addEventListener('click', (event) => {
+ const lastId = historyStack[historyStack.length - 2];
+
+ nextDiv('suppB', lastId);
+
+});
+
+
+
+
+</script>
 
 
 

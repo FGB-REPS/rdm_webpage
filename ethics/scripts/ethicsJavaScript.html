@@ -150,7 +150,7 @@ const quizMap = {
     'quest5': { next: 'quest6', form: 'answersQ5' },
     'quest6': { next: 'quest7', form: 'answersQ6' },
     'quest7': { next: 'quest8', form: 'answersQ7' },
-    'quest8': { next: 'quest8', form: 'answersQ8' }
+    'quest8': { next: 'suppB', form: 'answersQ8' } // default to suppB block for next if no other routing applied
 };
 
 
@@ -236,6 +236,28 @@ function handleQuizChange(currentId, nextId, formId) {
 }
 
 
+// function to calculate overall answers for quests4-8: identify if any of these are answered as yes, as well as tally total no's and unsures.
+
+function getTally() {
+  const qIds = ['answersQ4', 'answersQ5', 'answersQ6', 'answersQ7', 'answersQ8'];
+
+  let tally = {
+    no: 0,
+    unsure: 0,
+    hasYes: false
+  };
+
+  qIds.forEach(id => {
+    const val = getSelectedValue(id);
+    if (val === 'yes') tally.hasYes = true;
+    if (val === 'no') tally.no++;
+    if (val === 'unsure') tally.unsure++;
+  });
+
+  return tally;
+
+}
+
 // create function for conditionals depending on which question we are at to determine routing
 
 
@@ -257,10 +279,11 @@ function navigateQuiz(currentId, isAutoAdvance = true) {
 //  -> if q1 is unsure, go straight to Support A (Guidance on figuring out study more first)
 //  -> if q2 is yes AND any of q4-8 are yes, go to definitely WMO
 //  -> if q3 is yes, go immediately to definitely WMO
-//  -> if for q4-8 at least one response is yes, but q2-3 are not yes, go to likely WMO, potentially non-WMO/VCWE (i.e. links to all three as well as support info)
+//  -> if q3 is unsure, go immediately to Support A (Guidance on figuring out study more first)
+//  -> if for q4-8 at least one response is yes, but q2 is not yes, go to likely WMO, potentially non-WMO/VCWE (i.e. links to all three as well as support info)
 //  -> if q2-8 all no, go to definitely VCWE
 //  -> for q2,4-8 and none of answers are yes, if majority response is no, to likely VCWE page; if majority response is unsure or tied, to support page B
-//  -> if q1-2 are yes and majority of others are no, go to likely non-WMO info (include reference to VCWE); if majority of others is unsure or tied, to support page B
+//  -> if q2 is yes and majority of others are no, go to likely non-WMO info (include reference to VCWE); if majority of others is unsure or tied, to support page B
 
     if (currentId === 'quest1') {
       // special logic:
@@ -268,29 +291,36 @@ function navigateQuiz(currentId, isAutoAdvance = true) {
         destination = 'defVCWEoutcome';
       } else if (currentAnswer === 'unsure') {
         destination = 'suppA';
-      }
+      } // NB: quest2 does not need special logic because always advances to quest3
     } else if (currentId === 'quest3') {
       // special logic:
       if (currentAnswer === 'yes') {
         destination = 'defWMOoutcome';
+      } else if (currentAnswer === 'unsure') {
+        destination = 'suppA';
       }
-    } else if (['quest4', 'quest5', 'quest6', 'quest7', 'quest8'].includes(currentId)) { // this is like the %in% operator in R
+    } else if (['quest4', 'quest5', 'quest6', 'quest7'].includes(currentId)) { // this is like the %in% operator in R
+    // quest8 not included here because this is just for auto-navigation before end of quiz if quest2 and any of above are yes.
       // special logic:
       if (q2Answer === 'yes' && currentAnswer === 'yes') {
         destination = 'defWMOoutcome';
       }
-    } else if (currentId === 'quest8') { //final special logic should only happen when current Id is at last question
+    } else if (currentId === 'quest8') { //final special logic should only happen when current Id is at last question because need to look at all responses
+      const counts = getTally(); // determine presence of yes answers/totals no's and unsures in questions 4-8
+
       // special logic:
-      if (q2Answer !== 'yes' && q3Answer !=='yes' &&
-      (q4Answer === 'yes' ||
-      q5Answer === 'yes' ||
-      q6Answer === 'yes' ||
-      q7Answer === 'yes' ||
-      currentAnswer === 'yes'))
-      {
-        destination = 'possWMOoutcome';
-      }
-    }  //THIS IS WHERE WE NEED TO CONTINUE FROM; FIGURING OUT END OF QUIZ LOGIC THAT COMBINES ALL RESPONSES
+      if (q2Answer !== 'yes' && counts.hasYes) {
+          destination = 'possWMOoutcome';
+        } else if (q2Answer === 'no' && counts.no === 5) {
+          destination = 'defVCWEoutcome';
+        } else if (q2Answer !== 'yes' && (counts.no > counts.unsure)) {
+          destination = 'possVCWEoutcome';
+        } else if (q2Answer === 'yes' && (counts.no > counts.unsure)) {
+          destination = 'possNonWMOoutcome';
+        } else {
+          destination = 'suppB';
+        }
+    }
 
     // 2. Choose the action based on how the function was called
     if (isAutoAdvance) {
@@ -326,6 +356,7 @@ btn4_5.addEventListener('click', () => navigateQuiz('quest4', isAutoAdvance = fa
 btn5_6.addEventListener('click', () => navigateQuiz('quest5', isAutoAdvance = false));
 btn6_7.addEventListener('click', () => navigateQuiz('quest6', isAutoAdvance = false));
 btn7_8.addEventListener('click', () => navigateQuiz('quest7', isAutoAdvance = false));
+btn8_end.addEventListener('click', () => navigateQuiz('quest8', isAutoAdvance = false));
 
 
 // back (back buttons done with nextDiv directly because navigateQuiz goes forward (maybe later can add conditional for forward vs back))
@@ -376,6 +407,31 @@ defVCWEback.addEventListener('click', (event) => {
 });
 
 
+
+possWMOback.addEventListener('click', (event) => {
+ const lastId = historyStack[historyStack.length - 2];
+
+ nextDiv('possWMOoutcome', lastId);
+
+});
+
+
+possNonWMOback.addEventListener('click', (event) => {
+ const lastId = historyStack[historyStack.length - 2];
+
+ nextDiv('possNonWMOoutcome', lastId);
+
+});
+
+
+possVCWEback.addEventListener('click', (event) => {
+ const lastId = historyStack[historyStack.length - 2];
+
+ nextDiv('possVCWEoutcome', lastId);
+
+});
+
+
 suppAback.addEventListener('click', (event) => {
  const lastId = historyStack[historyStack.length - 2];
 
@@ -383,11 +439,10 @@ suppAback.addEventListener('click', (event) => {
 
 });
 
-
-possWMOback.addEventListener('click', (event) => {
+suppBback.addEventListener('click', (event) => {
  const lastId = historyStack[historyStack.length - 2];
 
- nextDiv('possWMOoutcome', lastId);
+ nextDiv('suppB', lastId);
 
 });
 

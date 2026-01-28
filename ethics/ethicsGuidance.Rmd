@@ -1,0 +1,507 @@
+---
+title: "Ethics @ FGB: Determining Necessary Ethical Review Processes"
+date: "`r Sys.Date()`; version 1.0"
+output: 
+  html_document:
+    theme: cerulean
+    includes: 
+      after_body: 
+        - ../footer.html
+        - scripts/ethicsJavaScript.html
+---
+
+
+<style type="text/css">
+
+/* need to ensure all text is in Roboto so as to be in-line with VU house style*/
+
+body {
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.main-container {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5%;
+  padding-bottom: 30%;
+  padding-right: 10%;
+  padding-left: 10%;
+
+}
+
+h1.title {
+  font-size: 28px;
+  text-align: center;
+}
+
+h4.date { /* this is to affect the size of the date text in the YAML when it prints in html  */
+  font-size: 20px;
+  text-align: center;
+}
+
+
+
+li {
+  font-size: 18px;
+  margin: 5px;
+}
+
+
+.small-text p {
+  font-size: 14px;
+  color: #737373;
+}
+
+#intro-wrapper, #quizGuidance, #helpGuidance {
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+
+
+#guidance-wrapper {
+    position: relative;
+    min-height: 50px;
+}
+
+
+/* This ensures the wrapper grows to the height of the visible content */
+#guidance-wrapper::after {
+    content: "";
+    display: block;
+    
+} 
+
+
+
+.guidance, .quiz {
+    opacity: 0;
+    transform: translateX(100%); /* Start off to the right */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    position: absolute;
+}
+
+.guidance.show, .quiz.show {
+      position: relative;
+      opacity: 1;
+      transform: translateX(0); /* Slide into place */
+      z-index: 2;  /* while there is overlap this determines which message is on top */
+    }
+    
+.guidance.hide-left, .quiz.hide-left {
+      opacity: 0;
+      transform: translateX(-100%); /* Slide out to the left */
+      z-index: 1; /*  while there is overlap this determines which message is on top */
+  }
+
+
+#wmoGuidance, #nwmoGuidance, #vcweGuidance { 
+  margin: 5%; /* have the guidance divs except quizGuidance have some spacing between the quiz and the guidance, plus a bit of offset with intro text */
+}    
+
+.btn {
+  width: 50%;
+}
+
+
+
+</style>
+
+\
+\
+
+Almost all research conducted within FGB will require some form of ethical review process. Unfortunately, not all FGB research projects can be reviewed by the faculty's [Scientific and Ethical Review Board (VCWE)](https://vu.nl/en/employee/research-support/the-scientific-and-ethical-review-board-vcwe){target="_blank"} due to Dutch laws (primarily, the [WMO](https://english.ccmo.nl/investigators/legal-framework-for-medical-scientific-research/your-research-is-it-subject-to-the-wmo-or-not){target="_blank"}) on how medical research on humans is conducted. Some medical/clinical research *must* be reviewed by a [Medical Ethical Review Committee (METc)](https://metc.amsterdamumc.org/){target="_blank"}. In other cases, the METc may need to be approached for a non-WMO statement indicating that the study does not need to be reviewed by the METc, in which case the study should still undergo ethical review by the VCWE. 
+
+Determining which situation applies to you can be confusing *and* if you determine that you will need METc review or a non-WMO declaration, the process can be quite complicated because the METc is external to the VU. The following guide aims to help you determine which ethical review process(es) apply to you and once that's known, also helps you navigate the applicable ethical review process. 
+
+\
+
+<div id="intro-wrapper">
+## Which ethical review process do you need information on? {#intro}
+
+<form id="whichRoute">
+<label><input type="radio" name="routePicker" id="displayWMO" value="wmo"> WMO research review process </label><br>
+<label><input type="radio" name="routePicker" id="displayNonWMO" value="nwmo"> Non-WMO declaration process </label><br>
+<label><input type="radio" name="routePicker" id="displayVCWE" value="vcwe"> Standard FGB ethical review for non-clinical research </label><br>
+<label><input type="radio" name="routePicker" id="displayQuiz" value="quiz"> I need help to figure out what process(es) apply to me </label><br>
+</form>
+
+</div>
+
+<div id = "guidance-wrapper">
+<div  class = "guidance">
+
+## Support {#helpGuidance}
+
+* [FGB Scientific and Ethical Review Committee (VCWE)](mailto:vcwe.fgb@vu.nl)
+* [Research and Policy Support Team (REPS)](mailto:research.data.fgb@vu.nl)
+
+</div>
+
+<div class = "guidance">
+
+
+
+## WMO requirements and METc assessment for FGB research {#wmoGuidance}
+
+### Here's a further test of the push down functionality
+
+```{r, child='text/WMOtext.Rmd', echo=FALSE, results='asis'}
+```
+
+</div>
+
+
+<div class = "guidance">
+
+## Obtaining a non-WMO declaration from the METc {#nwmoGuidance}
+
+### Here's a further test of the push down functionality
+
+```{r, child='text/nonWMOtext.Rmd', echo=FALSE, results='asis'}
+```
+
+
+</div>
+
+
+<div  class = "guidance">
+
+## Standard FGB VCWE ethical review process {#vcweGuidance}
+
+```{r, child='text/VCWEtext.Rmd', echo=FALSE, results='asis'}
+```
+
+</div>
+
+
+<div  id = "quizGuidance" class = "section level2 guidance" > <!-- wrote id and class in one html div because issues with rendering were impacting how divs were working in output html -->
+
+## Let's figure it out! 
+
+
+<div class = "small-text">
+*Depending on your answers, you will either advance to the next question or immediately receive advice on which path applies to you. You can always come back to this quiz by reselecting "I need help to figure out which process(es) apply to me".*
+</div>
+
+<!-- Quiz questions
+1. Will your research project have human research participants?
+e.g. Includes anything from participants in a lab to people answering an online survey. Excludes reviews of medical records, reuse of existing data or animal experiments. 
+  -> if yes, continue quiz, but no further impact on outcome
+  -> if no, go straight to advice to follow-up with VCWE
+  -> if unsure, go straight to Support A (Guidance on figuring out study more first)
+2. Will your research project aim to answer questions related to illness, health or other medical/clinical topics?
+e.g. Includes anything related to etiology, pathogenesis, signs & symptoms, diagnostics, disease prevention, disease outcomes or treatment of illness.
+  -> if yes, increase likelihood of WMO
+  -> if yes plus at least one yes from q4-8, ALWAYS WMO
+  -> if no, continue survey with decreased likelihood of WMO
+  -> if unsure, continue survey with increased likelihood to Support B (Contact info for support and links to WMO CCMO pages)
+3. Will you take blood samples from your research participants in the course of the research project?
+  -> if yes, ALWAYS WMO
+  -> if no, continue survey (no decrease in WMO likelihood)
+  -> if unsure, go straight to Support A (Guidance on figuring out study more first)
+4. Will your research participants be required to follow specific rules of behaviour?
+e.g. Includes following a specific diet and/or exercise regiment, wearing cumbersome ambulatory monitoring devices for several days, requiring frequent (multiple times per day) self-reporting in a journal/diary for an extended period (several weeks or months).
+  -> if yes, increase likelihood of WMO
+  -> if yes plus yes from q2, ALWAYS WMO
+  -> if no, continue survey with decreased likelihood of WMO
+  -> if unsure, continue survey with increased likelihood to Support B (Contact info for support and links to WMO CCMO pages)
+5. Will your research participants receive experimental treatments as a part of the research project?
+e.g. Includes RCTs comparing an experimental psycho- or physiotherapy protocol against the current gold standard (or where appropriate compared to no treatment), use of experimental medical devices as part of treatment and/or diagnostics.
+  -> if yes, increase likelihood of WMO
+  -> if yes plus yes from q2, ALWAYS WMO
+  -> if no, continue survey with decreased likelihood of WMO
+  -> if unsure, continue survey with increased likelihood to Support B (Contact info for support and links to WMO CCMO pages)
+6. Will your research participants be subjected to procedures that could likely be experienced as physically and/or psychologically invasive?
+e.g. Includes stressful psychological experiments where participants are subjects to extreme emotional and/or ethical pressure, studies of human physical performance that require rectal thermometers to record accurate body temperature measurements, participants with phobias forced to actively confront that phobia in an experimental setting.
+  -> if yes, increase likelihood of WMO
+  -> if yes plus yes from q2, ALWAYS WMO
+  -> if no, continue survey with decreased likelihood of WMO
+  -> if unsure, continue survey with increased likelihood to Support B (Contact info for support and links to WMO CCMO pages)
+7. Will your research participants be subjected to procedures that have a reasonable potential to cause physical and/or psychological harm?
+e.g. Includes experiments in heat labs to investigate the body's response and management of temperature regulation, in-depth psychological interviews on deeply distressing, upsetting or stigmatized topics
+  -> if yes, increase likelihood of WMO
+  -> if yes plus yes from q2, ALWAYS WMO
+  -> if no, continue survey with decreased likelihood of WMO
+  -> if unsure, continue survey with increased likelihood to Support B (Contact info for support and links to WMO CCMO pages)
+8. Will your research participants be administered anything (medications, hormones, supplements) as a part of their participation in your research project?
+e.g. Includes experiments where stress hormones are administered to investigate stress responses and impacts on familial bonding
+  -> if yes, increase likelihood of WMO
+  -> if yes plus yes from q2, ALWAYS WMO
+  -> if no, continue survey with decreased likelihood of WMO
+  -> if unsure, continue survey with increased likelihood to Support B (Contact info for support and links to WMO CCMO pages)
+
+
+Overall results after quiz completion:
+  -> if q1 is no, go immediately to definitely VCWE, but with info about studies without active participants
+  -> if q1 is unsure, go straight to Support A (Guidance on figuring out study more first)
+  -> if q2 is yes and any of q4-8 are yes, go to definitely WMO
+  -> if q3 is yes, go immediately to definitely WMO
+  -> if q3 is unsure, go immediately to Support A (Guidance on figuring out study more first)
+  -> if for q4-8 at least one response is yes, but q2-3 are not yes, go to likely WMO, potentially non-WMO/VCWE (i.e. links to all three as well as support info)
+  -> if q2-8 all no, go to definitely VCWE
+  -> for q2,4-8 and none of answers are yes, if majority response is no, to likely VCWE page; if majority response is unsure or tied, to support page B
+  -> if q1-2 are yes and majority of others are no, go to likely non-WMO info (include reference to VCWE); if majority of others is unsure or tied, to support page B
+  
+-->
+
+<!--  FGB WMO examples:
+
+- hormone injections for research on stress, familial bonding etc
+- development of diagnostic tools that require exposures in experimental subjects, e.g. pain stimuli
+- investigating physical and/or mental responses to exposures such as external stressors or temperature stimuli
+- testing effectiveness of novel psycho, physio- or exercise therapy treatment protocols
+- testing effectiveness of existing psycho, physio- or exercise therapy treatment protocols in novel populations (often with modifications for population of interest, e.g. foster children, autistic subjects)
+- testing effectiveness of medical devices (e.g. eletrical stimulation mats, augmented reality headsets) in preventing negative sequelae and/or improving treatment outcomes
+- studying medication optimization in psychiatric conditions
+- invasive procedures for obtaining measurements such as tissue biopsies or use of rectal thermometers
+
+-->
+
+<div class = "quiz"> 
+
+### 1. Will your research project have human research participants? {#quest1}
+
+<details>
+<summary>Examples</summary>
+*e.g. Includes anything from participants in a lab to people answering an online survey. Excludes reviews of medical records, reuse of existing data or animal experiments.*
+</details>
+
+<form id="answersQ1" class = "answers" data-answered = "false"> <!-- the data-* attribute is a way to add some extra attributes to an element where * is my choice of name -->
+<label><input type="radio" name="q1" value="yes">Yes</label><br>
+<label><input type="radio" name="q1" value="no">No</label><br>
+<label><input type="radio" name="q1" value="unsure"> I'm not sure</label><br>
+</form>
+
+<!-- create button that will only show if answers already filled in -->
+<button class="manual-next btn btn-primary btn-sm" id="btn1_2" style="display:none;">Next</button>
+
+</div>
+
+<div class = "quiz"> 
+
+### 2. Will your research project aim to answer questions related to illness, health or other medical/clinical topics? {#quest2}
+
+<details>
+<summary>Examples</summary>
+*e.g. Includes anything related to etiology, pathogenesis, signs & symptoms, diagnostics, disease prevention, disease outcomes or treatment of illness.*
+</details>
+
+<form id="answersQ2" class = "answers" data-answered = "false">
+<label><input type="radio" name="q2"  value="yes">Yes</label><br>
+<label><input type="radio" name="q2" value="no">No</label><br>
+<label><input type="radio" name="q2"  value="unsure"> I'm not sure</label><br>
+</form>
+
+
+<button id="btn2_1" class="btn btn-primary btn-sm">Back</button> 
+<!-- create button that will only show if answers already filled in -->
+<button class="manual-next btn btn-primary btn-sm" id="btn2_3" style="display:none;">Next</button>
+
+</div>
+
+<div class = "quiz"> 
+
+### 3. Will you take blood samples from your research participants in the course of the research project? {#quest3}
+
+<form id="answersQ3" class = "answers" data-answered = "false">
+<label><input type="radio" name="q3"  value="yes">Yes</label><br>
+<label><input type="radio" name="q3"  value="no">No</label><br>
+<label><input type="radio" name="q3"  value="unsure"> I'm not sure</label><br>
+</form>
+
+
+<button id="btn3_2" class="btn btn-primary btn-sm">Back</button> 
+<!-- create button that will only show if answers already filled in -->
+<button class="manual-next btn btn-primary btn-sm" id="btn3_4" style="display:none;">Next</button>
+
+</div>
+
+<div class = "quiz"> 
+
+### 4. Will your research participants be required to follow specific rules of behaviour? {#quest4}
+
+<details>
+<summary>Examples</summary>
+*e.g. Includes following a specific diet and/or exercise regiment, wearing cumbersome ambulatory monitoring devices for several days, requiring frequent (multiple times per day) self-reporting in a journal/diary for an extended period (several weeks or months).*
+</details>
+
+<form id="answersQ4" class = "answers" data-answered = "false">
+<label><input type="radio" name="q4"  value="yes">Yes</label><br>
+<label><input type="radio" name="q4"  value="no">No</label><br>
+<label><input type="radio" name="q4"  value="unsure"> I'm not sure</label><br>
+</form>
+
+
+<button id="btn4_3" class="btn btn-primary btn-sm">Back</button> 
+<!-- create button that will only show if answers already filled in -->
+<button class="manual-next btn btn-primary btn-sm" id="btn4_5" style="display:none;">Next</button>
+
+</div>
+
+<div class = "quiz"> 
+
+### 5. Will your research participants receive experimental treatments as a part of the research project? {#quest5}
+
+<details>
+<summary>Examples</summary>
+*e.g. Includes RCTs comparing an experimental psycho- or physiotherapy protocol against the current gold standard (or where appropriate compared to no treatment), use of experimental medical devices with the intent to measure health outcomes or improve diagnostic output.*
+</details>
+
+<form id="answersQ5" class = "answers" data-answered = "false">
+<label><input type="radio" name="q5"  value="yes">Yes</label><br>
+<label><input type="radio" name="q5"  value="no">No</label><br>
+<label><input type="radio" name="q5"  value="unsure"> I'm not sure</label><br>
+</form>
+
+
+<button id="btn5_4" class="btn btn-primary btn-sm">Back</button> 
+<!-- create button that will only show if answers already filled in -->
+<button class="manual-next btn btn-primary btn-sm" id="btn5_6" style="display:none;">Next</button>
+
+</div>
+
+<div class = "quiz"> 
+
+### 6. Will your research participants be subjected to procedures that could likely be experienced as physically and/or psychologically invasive? {#quest6}
+
+<details>
+<summary>Examples</summary>
+*e.g. Includes stressful psychological experiments where participants are subjects to extreme emotional and/or ethical pressure, studies of human physical performance that require rectal thermometers to record accurate body temperature measurements*
+</details>
+
+<form id="answersQ6" class = "answers" data-answered = "false">
+<label><input type="radio" name="q6"  value="yes">Yes</label><br>
+<label><input type="radio" name="q6"  value="no">No</label><br>
+<label><input type="radio" name="q6"  value="unsure"> I'm not sure</label><br>
+</form>
+
+
+<button id="btn6_5" class="btn btn-primary btn-sm">Back</button> 
+<!-- create button that will only show if answers already filled in -->
+<button class="manual-next btn btn-primary btn-sm" id="btn6_7" style="display:none;">Next</button>
+
+</div>
+
+<div class = "quiz"> 
+
+### 7. Will your research participants be subjected to procedures that have a reasonable potential to cause physical and/or psychological harm? {#quest7}
+
+<details>
+<summary>Examples</summary>
+*e.g. Includes experiments in heat labs to investigate the body's response and management of temperature regulation, in-depth psychological interviews on deeply distressing, upsetting or stigmatized topics*
+</details>
+
+<form id="answersQ7" class = "answers" data-answered = "false">
+<label><input type="radio" name="q7"  value="yes">Yes</label><br>
+<label><input type="radio" name="q7"  value="no">No</label><br>
+<label><input type="radio" name="q7"  value="unsure"> I'm not sure</label><br>
+</form>
+
+
+<button id="btn7_6" class="btn btn-primary btn-sm">Back</button> 
+<!-- create button that will only show if answers already filled in -->
+<button class="manual-next btn btn-primary btn-sm" id="btn7_8" style="display:none;">Next</button>
+
+</div>
+
+
+<div class = "quiz"> 
+
+### 8. Will your research participants be administered anything (medications, hormones, supplements) as a part of their participation in your research project? {#quest8}
+
+<details>
+<summary>Examples</summary>
+*e.g. Includes experiments where stress hormones are administered to investigate stress responses*
+</details>
+
+<form id="answersQ8" class = "answers" data-answered = "false">
+<label><input type="radio" name="q8"  value="yes">Yes</label><br>
+<label><input type="radio" name="q8"  value="no">No</label><br>
+<label><input type="radio" name="q8"  value="unsure"> I'm not sure</label><br>
+</form>
+
+
+<button id="btn8_7" class="btn btn-primary btn-sm">Back</button> 
+<!-- create button that will only show if answers already filled in -->
+<button class="manual-next btn btn-primary btn-sm" id="btn8_end" style="display:none;">Next</button>
+
+</div>
+
+
+<div class = "quiz">
+
+## Definitely WMO {#defWMOoutcome}
+
+<button id="defWMOback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
+
+</div>
+
+
+<div class = "quiz">
+
+## Possibly WMO {#possWMOoutcome}
+
+<button id="possWMOback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
+
+</div>
+
+
+<div class = "quiz">
+
+## Possibly non-WMO {#possNonWMOoutcome}
+
+<button id="possNonWMOback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
+
+</div>
+
+
+<div class = "quiz">
+
+## Definitely VCWE {#defVCWEoutcome}
+
+<button id="defVCWEback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
+
+</div>
+
+
+<div class = "quiz">
+
+## Possibly VCWE {#possVCWEoutcome}
+
+<button id="possVCWEback" class="manual-back btn btn-primary btn-sm">Back to quiz</button>
+
+</div>
+
+
+<div class = "quiz">
+
+## Support A {#suppA}
+
+<button id="suppAback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
+
+</div>
+
+
+<div class = "quiz">
+
+## Support B {#suppB}
+
+<button id="suppBback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
