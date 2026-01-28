@@ -418,6 +418,9 @@ z-index: 1;
 } .btn {
 width: 50%;
 }
+.inline-button {
+display: inline;
+}
 </style>
 <p><br />
 <br />
@@ -796,6 +799,16 @@ Next
 <button id="defWMOback" class="manual-back btn btn-primary btn-sm">
 Back to quiz
 </button>
+<p>Based on your responses, the WMO applies to your research and you
+will need to undergo review with an METc.</p>
+<ul>
+<li>If you want to stay on this page, but bring up the WMO guidance:
+<button id="intWMOguid" class="inline-button btn btn-primary btn-sm">Click
+here</button></li>
+<li>If you want to open the WMO guidance on a new page:
+<button id="extWMOguid" class="inline-button btn btn-primary btn-sm" onclick="window.open(&#39;WMOguidance.html&#39;,&#39;_blank&#39;);">Click
+here</button></li>
+</ul>
 </div>
 <div id="possWMOoutcome" class="section level2 quiz">
 <h2>Possibly WMO</h2>
@@ -1045,7 +1058,7 @@ function getSelectedValue(formId) {
 
 // create function to have user go to next question if chosen answer forces them to move forward in quiz
 
-function nextDiv(currentId, nextId) {
+function nextDiv(currentId, nextId, recordHistory = true) {
   let currentQ = document.getElementById(currentId)
   let nextQ = document.getElementById(nextId)
 
@@ -1068,14 +1081,16 @@ function nextDiv(currentId, nextId) {
       // Then trigger its slide in
    nextQ.classList.add('show');
 
-   // Record navigation history
-   if (historyStack.length === 0) {
+   // Record navigation history (defaults to true but set to fault when navigating to specific guidance sections)
+   if (recordHistory) {
+    if (historyStack.length === 0) {
       historyStack.push(currentId);
-   }
-    const lastId = historyStack[historyStack.length - 1];
-    if (lastId !== nextId) {
-      historyStack.push(nextId);
     }
+      const lastId = historyStack[historyStack.length - 1];
+      if (lastId !== nextId) {
+       historyStack.push(nextId);
+      }
+   }
 
 
 };
@@ -1326,7 +1341,11 @@ suppBback.addEventListener('click', (event) => {
 
 });
 
+// add event listeners to buttons that redirect to guidance sections once results of quiz given
 
+intWMOguid.addEventListener('click', (event) => {
+      nextDiv('defWMOoutcome','wmoGuidance', recordHistory = false) // don't record history now that leaving quiz
+  });
 
 
 </script>

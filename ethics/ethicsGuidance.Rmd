@@ -105,7 +105,9 @@ li {
   width: 50%;
 }
 
-
+.inline-button {
+  display: inline;
+}
 
 </style>
 
@@ -436,6 +438,11 @@ Overall results after quiz completion:
 ## Definitely WMO {#defWMOoutcome}
 
 <button id="defWMOback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
+
+Based on your responses, the WMO applies to your research and you will need to undergo review with an METc. 
+
+* If you want to stay on this page, but bring up the WMO guidance: <button id="intWMOguid" class="inline-button btn btn-primary btn-sm">Click here</button> 
+* If you want to open the WMO guidance on a new page: <button id="extWMOguid" class="inline-button btn btn-primary btn-sm" onclick="window.open('WMOguidance.html','_blank');">Click here</button>
 
 </div>
 
