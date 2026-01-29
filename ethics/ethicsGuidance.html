@@ -1042,7 +1042,7 @@ filter: invert(27%) sepia(44%) saturate(1601%) hue-rotate(169deg) brightness(93%
 
 function removeClassOnTransitionEnd(element, ...classNames) {
   const handleTransitionEnd = (e) => {
-    if (e.propertyName === 'transform') {
+    if (e.propertyName === 'transform' || e.propertyName === 'opacity') { // recommended to look for transform OR opacity since some browsers may trigger event twice because CSS animates opacity too
       element.classList.remove(...classNames);
       element.removeEventListener('transitionend', handleTransitionEnd);
     }
@@ -1084,6 +1084,9 @@ function performTransition(selectedDiv) {
   const quizzes = document.querySelectorAll('.quiz');
   quizzes.forEach(quiz => quiz.classList.remove('show', 'hide-left')); // clean up any CSS transition labels that may be present from quiz questions
   resetAnswersButtons('.answers', '.manual-next') // reset quiz answers and buttons
+
+  //Clear the history stack of quiz so "Back" buttons don't point to old routes
+  historyStack.length = 0;
 
  if (currentDiv === selectedDiv) {
     return; // no change has occurred, nothing happens
@@ -1240,6 +1243,10 @@ function nextDiv(currentId, nextId, recordHistory = true) {
    }
 
 
+   // update currentDiv for performTransition function so that currentDiv works when radio buttons are selected while on quiz outcomes
+   currentDiv = nextQ;
+
+
 };
 
 // create functions that allow the Next button to appear only if user is on a question that has already been answered
@@ -1364,7 +1371,21 @@ function navigateQuiz(currentId, isAutoAdvance = true) {
         }
     }
 
-    // 2. Choose the action based on how the function was called
+    // 1. Determine if we are heading to an outcome
+    const isOutcome = destination.includes('outcome') || destination.includes('supp');
+
+    // 2. If it's an outcome, hide the narrow quiz container
+    if (isOutcome) {
+        const quizWrapper = document.getElementById('quizGuidance');
+        quizWrapper.classList.remove('show');
+        quizWrapper.classList.add('hide-left');
+
+        // Remove 'show' from the current question so it doesn't stay active behind the scenes
+        const currentQ = document.getElementById(currentId);
+        currentQ.classList.remove('show');
+    }
+
+    // 3. Choose the action based on how the function was called if not yet at outcome
     if (isAutoAdvance) {
         // This is for the first time an answer is provided so that the next button can appear when needed
         handleQuizChange(currentId, destination, config.form);
@@ -1372,7 +1393,7 @@ function navigateQuiz(currentId, isAutoAdvance = true) {
         // This is for the next buttons to function when there is no change to input
         nextDiv(currentId, destination);
     }
-}
+};
 
 
 
@@ -1432,61 +1453,38 @@ btn8_7.addEventListener('click', (event) => {
   });
 
 // nav buttons back from outcomes to last viewed quiz question
-
-defWMOback.addEventListener('click', (event) => {
- const lastId = historyStack[historyStack.length - 2];
-
- nextDiv('defWMOoutcome', lastId);
-
-});
+// first, function to handle these back buttons consistently and ensure that quizWrapper shows again (since its a wrapper with a different width than the quiz outcomes)
 
 
-defVCWEback.addEventListener('click', (event) => {
- const lastId = historyStack[historyStack.length - 2];
+function returnToQuiz(outcomeId) {
+  // 1. Identify the last question from your history stack
+  // Stack might be [quest1, quest2, defWMOoutcome], so index length - 2 is quest2
+  const lastQuestId = historyStack[historyStack.length - 2];
 
- nextDiv('defVCWEoutcome', lastId);
+  if (!lastQuestId) return; // Safety check
 
-});
-
-
-
-possWMOback.addEventListener('click', (event) => {
- const lastId = historyStack[historyStack.length - 2];
-
- nextDiv('possWMOoutcome', lastId);
-
-});
+  // 2. Re-activate the Parent Wrapper (quizGuidance)
+  const quizWrapper = document.getElementById('quizGuidance');
+  quizWrapper.classList.remove('hide-left');
+  void quizWrapper.offsetWidth;
+  quizWrapper.classList.add('show');
 
 
-possNonWMOback.addEventListener('click', (event) => {
- const lastId = historyStack[historyStack.length - 2];
+  // 3. Transition from the outcome back to the specific question
+  nextDiv(outcomeId, lastQuestId, false); // false = don't add 'back' move to history
 
- nextDiv('possNonWMOoutcome', lastId);
+  // 4. Remove the outcome from the stack so it's ready for next time
+  historyStack.pop();
 
-});
+}
 
-
-possVCWEback.addEventListener('click', (event) => {
- const lastId = historyStack[historyStack.length - 2];
-
- nextDiv('possVCWEoutcome', lastId);
-
-});
-
-
-suppAback.addEventListener('click', (event) => {
- const lastId = historyStack[historyStack.length - 2];
-
- nextDiv('suppA', lastId);
-
-});
-
-suppBback.addEventListener('click', (event) => {
- const lastId = historyStack[historyStack.length - 2];
-
- nextDiv('suppB', lastId);
-
-});
+defWMOback.addEventListener('click', () => returnToQuiz('defWMOoutcome'));
+possWMOback.addEventListener('click', () => returnToQuiz('possWMOoutcome'));
+defVCWEback.addEventListener('click', () => returnToQuiz('defVCWEoutcome'));
+possNonWMOback.addEventListener('click', () => returnToQuiz('possNonWMOoutcome'));
+possVCWEback.addEventListener('click', () => returnToQuiz('possVCWEoutcome'));
+suppAback.addEventListener('click', () => returnToQuiz('suppA'));
+suppBback.addEventListener('click', () => returnToQuiz('suppB'));
 
 
 

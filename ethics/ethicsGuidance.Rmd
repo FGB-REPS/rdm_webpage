@@ -171,7 +171,7 @@ Determining which situation applies to you can be confusing *and* if you determi
 </div>
 
 
-<div  id = "quizGuidance" class = "section level2 guidance" > <!-- wrote id and class in one html div because issues with rendering were impacting how divs were working in output html -->
+<div id = "quizGuidance" class = "section level2 guidance"> <!-- wrote id and class in one html div because issues with rendering were impacting how divs were working in output html -->
 
 ## Let's figure it out! 
 
@@ -424,7 +424,10 @@ Overall results after quiz completion:
 
 </div>
 
+
 </div>
+
+
 
 <div class = "guidance">
 
