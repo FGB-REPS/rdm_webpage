@@ -377,6 +377,12 @@ h4.date {
 font-size: 20px;
 text-align: center;
 }
+h1, h2, h3, h4 {
+color: #105d89;
+}
+a {
+color: #157bb7;
+}
 li {
 font-size: 18px;
 margin: 5px;
@@ -385,7 +391,7 @@ margin: 5px;
 font-size: 14px;
 color: #737373;
 }
-#intro-wrapper, #quizGuidance, #helpGuidance {
+#intro-wrapper, #quizGuidance {
 margin-left: 30%;
 margin-right: 30%;
 }
@@ -414,12 +420,25 @@ opacity: 0;
 transform: translateX(-100%); 
 z-index: 1; 
 }
-#wmoGuidance, #nwmoGuidance, #vcweGuidance { margin: 5%; 
-} .btn {
+.btn {
 width: 50%;
+}
+.manual-back {
+width: 10%;
 }
 .inline-button {
 display: inline;
+width: 20%;
+white-space: normal;
+word-wrap: break-word;
+}
+.summaryHeader {
+list-style: none; 
+padding: 10px;
+font-size: 24px; font-weight: bold;
+color: #105d89; }
+.summaryHeader:hover {
+color: #157bb7;
 }
 </style>
 <p><br />
@@ -878,16 +897,17 @@ Back to quiz
 </button>
 <p>Based on your responses, it is <em>likely</em>, but not certain, that
 the WMO applies to your research. It’s a good idea to follow-up with the
-METc that you would be submitting your ethical review to (for FGB, this
-is usually [<a href="mailto:metc@amsterdamumc.nl" class="email">metc@amsterdamumc.nl</a>]) to clarify if you research does
+METc that you’ll be submitting your research to (for FGB, this is
+usually [<a href="mailto:metc@amsterdamumc.nl" class="email">metc@amsterdamumc.nl</a>]) to clarify if you research does
 in fact fall under the WMO. It’s likely that even if the WMO does not
 apply to your research, that you may still require a non-WMO
 declaration.</p>
+<details>
+<summary class="summaryHeader">
+View WMO Guidance
+</summary>
 <button class="inline-button btn btn-primary btn-sm" onclick="window.open(&#39;WMOguidance.html&#39;,&#39;_blank&#39;);">
 Open WMO guidance on new page
-</button>
-<button class="inline-button btn btn-primary btn-sm" onclick="window.open(&#39;nonWMOguidance.html&#39;,&#39;_blank&#39;);">
-Open non-WMO guidance on new page
 </button>
 <p>Here’s some info on WMO processes!</p>
 <p>Wheeeeeeeeeeeeeeee!</p>
@@ -926,7 +946,15 @@ Open non-WMO guidance on new page
 <p>LALALALALALA</p>
 <p>LALALALALALA</p>
 <p>LALALALALALA</p>
-<p>LALALALALALA</p>
+LALALALALALA
+</details>
+<details>
+<summary class="summaryHeader">
+View non-WMO Guidance
+</summary>
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open(&#39;nonWMOguidance.html&#39;,&#39;_blank&#39;);">
+Open non-WMO guidance on new page
+</button>
 <p>This is a test to see if iFrames could work for inserting this text
 into the decision making tool.</p>
 <p>Let’s see!</p>
@@ -955,42 +983,247 @@ into the decision making tool.</p>
 <p>Lalalalalalalalala</p>
 <p>Lalalalalalalalala</p>
 <p>Lalalalalalalalala</p>
+</details>
 </div>
 <div id="possNonWMOoutcome" class="section level2 guidance">
 <h2>Possibly non-WMO</h2>
 <button id="possNonWMOback" class="manual-back btn btn-primary btn-sm">
 Back to quiz
 </button>
+<p>Based on your responses, it is <em>likely</em>, but not certain, that
+the WMO does <em>not</em> apply to your research, but that you
+<em>will</em> need a non-WMO declaration. It’s a good idea to follow-up
+with the METc that you’ll be submitting your research to (for FGB, this
+is usually [<a href="mailto:metc@amsterdamumc.nl" class="email">metc@amsterdamumc.nl</a>]) to clarify your situation.</p>
+<details>
+<summary class="summaryHeader">
+View non-WMO Guidance
+</summary>
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open(&#39;nonWMOguidance.html&#39;,&#39;_blank&#39;);">
+Open non-WMO guidance on new page
+</button>
+<p>This is a test to see if iFrames could work for inserting this text
+into the decision making tool.</p>
+<p>Let’s see!</p>
+<p>Wheeeeee!</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+</details>
+<details>
+<summary class="summaryHeader">
+View WMO Guidance
+</summary>
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open(&#39;WMOguidance.html&#39;,&#39;_blank&#39;);">
+Open WMO guidance on new page
+</button>
+<p>Here’s some info on WMO processes!</p>
+<p>Wheeeeeeeeeeeeeeee!</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+LALALALALALA
+</details>
 </div>
 <div id="defVCWEoutcome" class="section level2 guidance">
 <h2>Definitely VCWE</h2>
 <button id="defVCWEback" class="manual-back btn btn-primary btn-sm">
 Back to quiz
 </button>
+<p>Based on your responses, the WMO does <em>not</em> apply to your
+research nor do you need to complete a non-WMO declaration. You should,
+however, submit your research to the faculty’s ethical review board
+(VCWE) to ensure that it meets all ethical requirements.</p>
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open(&#39;VCWEguidance.html&#39;,&#39;_blank&#39;);">
+Open VCWE guidance on new page
+</button>
+<p>Here’s some info on VCWE processes!</p>
+<p>Wheeeeeeeeeeeeeeee!</p>
 </div>
 <div id="possVCWEoutcome" class="section level2 guidance">
 <h2>Possibly VCWE</h2>
 <button id="possVCWEback" class="manual-back btn btn-primary btn-sm">
 Back to quiz
 </button>
+<p>Based on your responses, it is <em>likely</em>, but not certain, that
+the WMO does <em>not</em> apply to your research and you also likely
+<em>do not</em> need to complete a non-WMO declaration. It’s a good idea
+to follow-up with the METc that you’ll be submitting your research to
+(for FGB, this is usually [<a href="mailto:metc@amsterdamumc.nl" class="email">metc@amsterdamumc.nl</a>]) to clarify your situation. If
+the WMO does not in fact apply to your research, nor do you require a
+non-WMO declaration, then you should still submit your research to the
+faculty’s ethical review board (VCWE) to ensure that it meets all
+ethical requirements.</p>
+<details>
+<summary class="summaryHeader">
+View VCWE Guidance
+</summary>
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open(&#39;VCWEguidance.html&#39;,&#39;_blank&#39;);">
+Open non-WMO guidance on new page
+</button>
+<p>Here’s some info on VCWE processes!</p>
+Wheeeeeeeeeeeeeeee!
+</details>
+<details>
+<summary class="summaryHeader">
+View non-WMO Guidance
+</summary>
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open(&#39;nonWMOguidance.html&#39;,&#39;_blank&#39;);">
+Open non-WMO guidance on new page
+</button>
+<p>This is a test to see if iFrames could work for inserting this text
+into the decision making tool.</p>
+<p>Let’s see!</p>
+<p>Wheeeeee!</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+<p>Lalalalalalalalala</p>
+</details>
+<details>
+<summary class="summaryHeader">
+View WMO Guidance
+</summary>
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open(&#39;WMOguidance.html&#39;,&#39;_blank&#39;);">
+Open WMO guidance on new page
+</button>
+<p>Here’s some info on WMO processes!</p>
+<p>Wheeeeeeeeeeeeeeee!</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+<p>LALALALALALA</p>
+LALALALALALA
+</details>
 </div>
 <div id="suppA" class="section level2 guidance">
 <h2>Support A</h2>
 <button id="suppAback" class="manual-back btn btn-primary btn-sm">
 Back to quiz
 </button>
+<p>You should determine more of what your research will entail before
+assessing the ethical review process that applies to you. You can find
+more information on what you need to consider and prepare at this stage
+on this <a href="https://vu.nl/en/employee/research-data-management-fbms/before-research-fgb" target="_blank">VUweb page</a>. If you feel that your research is fairly
+well planned, and you’re not sure why you landed here, you can contact
+the <a href="mailto:research.data.fgb@vu.nl">Research and Policy Support
+Team (REPS)</a>.</p>
 </div>
 <div id="suppB" class="section level2 guidance">
 <h2>Support B</h2>
 <button id="suppBback" class="manual-back btn btn-primary btn-sm">
 Back to quiz
 </button>
-<ul>
-<li><a href="mailto:vcwe.fgb@vu.nl">FGB Scientific and Ethical Review
-Committee (VCWE)</a></li>
-<li><a href="mailto:research.data.fgb@vu.nl">Research and Policy Support
-Team (REPS)</a></li>
-</ul>
+<p>Your situation is not so clear, meaning its difficult to make an
+assessment of which ethical review process applies to you. We recommend
+first contacting the <a href="mailto:research.data.fgb@vu.nl">Research
+and Policy Support Team (REPS)</a> for support on your research
+planning. You are welcome to also contact the <a href="mailto:vcwe.fgb@vu.nl">FGB Scientific and Ethical Review Committee
+(VCWE)</a> for support.</p>
 </div>
 </div>
 

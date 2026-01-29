@@ -41,6 +41,13 @@ h4.date { /* this is to affect the size of the date text in the YAML when it pri
   text-align: center;
 }
 
+h1, h2, h3, h4 {
+  color: #105d89;
+}
+
+a {
+  color: #157bb7;
+}
 
 
 li {
@@ -54,7 +61,7 @@ li {
   color: #737373;
 }
 
-#intro-wrapper, #quizGuidance, #helpGuidance {
+#intro-wrapper, #quizGuidance {
   margin-left: 30%;
   margin-right: 30%;
 }
@@ -97,16 +104,33 @@ li {
   }
 
 
-#wmoGuidance, #nwmoGuidance, #vcweGuidance { 
-  margin: 5%; /* have the guidance divs except quizGuidance have some spacing between the quiz and the guidance, plus a bit of offset with intro text */
-}    
+  
 
 .btn {
   width: 50%;
 }
 
+.manual-back {
+  width: 10%;
+}
+
 .inline-button {
   display: inline;
+  width: 20%;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.summaryHeader {
+  list-style: none; /* Removes the default arrow in some browsers */
+  padding: 10px;
+  font-size: 24px; 
+  font-weight: bold;
+  color: #105d89; 
+}
+
+.summaryHeader:hover {
+  color: #157bb7;
 }
 
 </style>
@@ -453,16 +477,32 @@ Based on your responses, the WMO applies to your research and you will need to u
 
 <button id="possWMOback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
 
-Based on your responses, it is *likely*, but not certain, that the WMO applies to your research. It's a good idea to follow-up with the METc that you would be submitting your ethical review to (for FGB, this is usually [metc@amsterdamumc.nl]) to clarify if you research does in fact fall under the WMO. It's likely that even if the WMO does not apply to your research, that you may still require a non-WMO declaration.
+Based on your responses, it is *likely*, but not certain, that the WMO applies to your research. It's a good idea to follow-up with the METc that you'll be submitting your research to (for FGB, this is usually [metc@amsterdamumc.nl]) to clarify if you research does in fact fall under the WMO. It's likely that even if the WMO does not apply to your research, that you may still require a non-WMO declaration.
+
+
+
+
+<details>
+<summary class="summaryHeader">
+View WMO Guidance
+</summary>
 
 <button class="inline-button btn btn-primary btn-sm" onclick="window.open('WMOguidance.html','_blank');">Open WMO guidance on new page</button>
-<button class="inline-button btn btn-primary btn-sm" onclick="window.open('nonWMOguidance.html','_blank');">Open non-WMO guidance on new page</button>
 
 ```{r, child='text/WMOtext.Rmd', echo=FALSE, results='asis'}
 ```
+</details>
+
+<details>
+<summary class="summaryHeader">
+View non-WMO Guidance
+</summary>
+
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open('nonWMOguidance.html','_blank');">Open non-WMO guidance on new page</button>
 
 ```{r, child='text/nonWMOtext.Rmd', echo=FALSE, results='asis'}
 ```
+</details>
 
 </div>
 
@@ -473,6 +513,32 @@ Based on your responses, it is *likely*, but not certain, that the WMO applies t
 
 <button id="possNonWMOback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
 
+Based on your responses, it is *likely*, but not certain, that the WMO does *not* apply to your research, but that you *will* need a non-WMO declaration. It's a good idea to follow-up with the METc that you'll be submitting your research to (for FGB, this is usually [metc@amsterdamumc.nl]) to clarify your situation.
+
+<details>
+<summary class="summaryHeader">
+View non-WMO Guidance
+</summary>
+
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open('nonWMOguidance.html','_blank');">Open non-WMO guidance on new page</button>
+
+```{r, child='text/nonWMOtext.Rmd', echo=FALSE, results='asis'}
+```
+</details>
+
+<details>
+<summary class="summaryHeader">
+View WMO Guidance
+</summary>
+
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open('WMOguidance.html','_blank');">Open WMO guidance on new page</button>
+
+```{r, child='text/WMOtext.Rmd', echo=FALSE, results='asis'}
+```
+</details>
+
+
+
 </div>
 
 
@@ -481,6 +547,16 @@ Based on your responses, it is *likely*, but not certain, that the WMO applies t
 ## Definitely VCWE {#defVCWEoutcome}
 
 <button id="defVCWEback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
+
+
+Based on your responses, the WMO does *not* apply to your research nor do you need to complete a non-WMO declaration. You should, however, submit your research to the faculty's ethical review board (VCWE) to ensure that it meets all ethical requirements.
+
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open('VCWEguidance.html','_blank');">Open VCWE guidance on new page</button>
+
+```{r, child='text/VCWEtext.Rmd', echo=FALSE, results='asis'}
+```
+
+
 
 </div>
 
@@ -491,6 +567,44 @@ Based on your responses, it is *likely*, but not certain, that the WMO applies t
 
 <button id="possVCWEback" class="manual-back btn btn-primary btn-sm">Back to quiz</button>
 
+
+Based on your responses, it is *likely*, but not certain, that the WMO does *not* apply to your research and you also likely *do not* need to complete a non-WMO declaration. It's a good idea to follow-up with the METc that you'll be submitting your research to (for FGB, this is usually [metc@amsterdamumc.nl]) to clarify your situation. If the WMO does not in fact apply to your research, nor do you require a non-WMO declaration, then you should still submit your research to the faculty's ethical review board (VCWE) to ensure that it meets all ethical requirements.
+
+<details>
+<summary class="summaryHeader">
+View VCWE Guidance
+</summary>
+
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open('VCWEguidance.html','_blank');">Open non-WMO guidance on new page</button>
+
+```{r, child='text/VCWEtext.Rmd', echo=FALSE, results='asis'}
+```
+</details>
+
+
+<details>
+<summary class="summaryHeader">
+View non-WMO Guidance
+</summary>
+
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open('nonWMOguidance.html','_blank');">Open non-WMO guidance on new page</button>
+
+```{r, child='text/nonWMOtext.Rmd', echo=FALSE, results='asis'}
+```
+</details>
+
+<details>
+<summary class="summaryHeader">
+View WMO Guidance
+</summary>
+
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open('WMOguidance.html','_blank');">Open WMO guidance on new page</button>
+
+```{r, child='text/WMOtext.Rmd', echo=FALSE, results='asis'}
+```
+</details>
+
+
 </div>
 
 
@@ -499,6 +613,8 @@ Based on your responses, it is *likely*, but not certain, that the WMO applies t
 ## Support A {#suppA}
 
 <button id="suppAback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
+
+You should determine more of what your research will entail before assessing the ethical review process that applies to you. You can find more information on what you need to consider and prepare at this stage on this [VUweb page](https://vu.nl/en/employee/research-data-management-fbms/before-research-fgb){target="_blank"}. If you feel that your research is fairly well planned, and you're not sure why you landed here, you can contact the [Research and Policy Support Team (REPS)](mailto:research.data.fgb@vu.nl).
 
 </div>
 
@@ -509,8 +625,7 @@ Based on your responses, it is *likely*, but not certain, that the WMO applies t
 
 <button id="suppBback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
 
-* [FGB Scientific and Ethical Review Committee (VCWE)](mailto:vcwe.fgb@vu.nl)
-* [Research and Policy Support Team (REPS)](mailto:research.data.fgb@vu.nl)
+Your situation is not so clear, meaning its difficult to make an assessment of which ethical review process applies to you. We recommend first contacting the [Research and Policy Support Team (REPS)](mailto:research.data.fgb@vu.nl) for support on your research planning. You are welcome to also contact the [FGB Scientific and Ethical Review Committee (VCWE)](mailto:vcwe.fgb@vu.nl) for support.
 
 
 </div>
