@@ -133,14 +133,6 @@ Determining which situation applies to you can be confusing *and* if you determi
 </div>
 
 <div id = "guidance-wrapper">
-<div  class = "guidance">
-
-## Support {#helpGuidance}
-
-* [FGB Scientific and Ethical Review Committee (VCWE)](mailto:vcwe.fgb@vu.nl)
-* [Research and Policy Support Team (REPS)](mailto:research.data.fgb@vu.nl)
-
-</div>
 
 <div class = "guidance">
 
@@ -432,8 +424,9 @@ Overall results after quiz completion:
 
 </div>
 
+</div>
 
-<div class = "quiz">
+<div class = "guidance">
 
 ## Definitely WMO {#defWMOoutcome}
 
@@ -441,22 +434,37 @@ Overall results after quiz completion:
 
 Based on your responses, the WMO applies to your research and you will need to undergo review with an METc. 
 
-* If you want to stay on this page, but bring up the WMO guidance: <button id="intWMOguid" class="inline-button btn btn-primary btn-sm">Click here</button> 
-* If you want to open the WMO guidance on a new page: <button id="extWMOguid" class="inline-button btn btn-primary btn-sm" onclick="window.open('WMOguidance.html','_blank');">Click here</button>
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open('WMOguidance.html','_blank');">Open WMO guidance on new page</button>
+
+```{r, child='text/WMOtext.Rmd', echo=FALSE, results='asis'}
+```
+
+
 
 </div>
 
 
-<div class = "quiz">
+<div class = "guidance">
 
 ## Possibly WMO {#possWMOoutcome}
 
 <button id="possWMOback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
 
+Based on your responses, it is *likely*, but not certain, that the WMO applies to your research. It's a good idea to follow-up with the METc that you would be submitting your ethical review to (for FGB, this is usually [metc@amsterdamumc.nl]) to clarify if you research does in fact fall under the WMO. It's likely that even if the WMO does not apply to your research, that you may still require a non-WMO declaration.
+
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open('WMOguidance.html','_blank');">Open WMO guidance on new page</button>
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open('nonWMOguidance.html','_blank');">Open non-WMO guidance on new page</button>
+
+```{r, child='text/WMOtext.Rmd', echo=FALSE, results='asis'}
+```
+
+```{r, child='text/nonWMOtext.Rmd', echo=FALSE, results='asis'}
+```
+
 </div>
 
 
-<div class = "quiz">
+<div class = "guidance">
 
 ## Possibly non-WMO {#possNonWMOoutcome}
 
@@ -465,7 +473,7 @@ Based on your responses, the WMO applies to your research and you will need to u
 </div>
 
 
-<div class = "quiz">
+<div class = "guidance">
 
 ## Definitely VCWE {#defVCWEoutcome}
 
@@ -474,7 +482,7 @@ Based on your responses, the WMO applies to your research and you will need to u
 </div>
 
 
-<div class = "quiz">
+<div class = "guidance">
 
 ## Possibly VCWE {#possVCWEoutcome}
 
@@ -483,7 +491,7 @@ Based on your responses, the WMO applies to your research and you will need to u
 </div>
 
 
-<div class = "quiz">
+<div class = "guidance">
 
 ## Support A {#suppA}
 
@@ -492,16 +500,20 @@ Based on your responses, the WMO applies to your research and you will need to u
 </div>
 
 
-<div class = "quiz">
+<div class = "guidance">
 
 ## Support B {#suppB}
 
 <button id="suppBback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
 
-</div>
+* [FGB Scientific and Ethical Review Committee (VCWE)](mailto:vcwe.fgb@vu.nl)
+* [Research and Policy Support Team (REPS)](mailto:research.data.fgb@vu.nl)
 
 
 </div>
+
+
+
 
 </div>
 

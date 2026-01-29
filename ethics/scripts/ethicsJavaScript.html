@@ -35,16 +35,9 @@ let outgoingDiv = null;
 
 // last two variables necessary for animation to run smoothly
 
+// create function for transitions that can be attached with event listener to form and buttons as needed
 
-// add event listenter to form so that on change the selected guidance div shows up
-// and comes in from the right while the previous one goes out to the left and fades away
-
-form.addEventListener('change', (event) => {
-
-  const selected = event.target.value;  // use input value then concat with Guidance to capture the chosen Div
-  const selectedDiv = document.getElementById(selected + 'Guidance');
-
-
+function performTransition(selectedDiv) {
   const guides = document.querySelectorAll('.guidance');
   guides.forEach(guide => guide.classList.remove('show', 'hide-left')); // clean up any CSS transition labels that may be present from quiz questions
 
@@ -105,6 +98,15 @@ form.addEventListener('change', (event) => {
       // Update reference
    currentDiv = selectedDiv;
 
+};
+
+// add event listenter to form so that on change the selected guidance div shows up
+// and comes in from the right while the previous one goes out to the left and fades away
+
+form.addEventListener('change', (event) => {
+
+  const selectedDiv = document.getElementById(event.target.value + 'Guidance');
+  performTransition(selectedDiv);
 
 
  });
@@ -448,11 +450,9 @@ suppBback.addEventListener('click', (event) => {
 
 });
 
-// add event listeners to buttons that redirect to guidance sections once results of quiz given
 
-intWMOguid.addEventListener('click', (event) => {
-      nextDiv('defWMOoutcome','wmoGuidance', recordHistory = false) // don't record history now that leaving quiz
-  });
+
+
 
 
 </script>
