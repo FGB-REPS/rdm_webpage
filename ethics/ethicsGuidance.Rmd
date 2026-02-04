@@ -1,5 +1,5 @@
 ---
-title: "Ethics @ FGB: Determining Necessary Ethical Review Processes"
+title: "Ethics @ FGB: Which Ethical Review Processes Apply?"
 date: "`r Sys.Date()`; version 1.0"
 output: 
   html_document:
@@ -133,14 +133,40 @@ li {
   color: #157bb7;
 }
 
+details {
+  padding-bottom: 10px;
+}
+
+.summaryEx {
+  list-style: none; /* Removes the default arrow in some browsers */
+  font-size: 18px; 
+  color: #157bb7; 
+}
+
+.summaryEx:hover {
+  color: #48aeea;
+}
+
+.detailsEx {
+ font-style: italic;
+}
+
+.detailsEx li, .detailsEx p { /* need to call this separately because otherwise the CSS for li elements already defined above will override what is in this div class */
+  font-size: 16px; 
+}
+
+
+
 </style>
 
 \
 \
 
-Almost all research conducted within FGB will require some form of ethical review process. Unfortunately, not all FGB research projects can be reviewed by the faculty's [Scientific and Ethical Review Board (VCWE)](https://vu.nl/en/employee/research-support/the-scientific-and-ethical-review-board-vcwe){target="_blank"} due to Dutch laws (primarily, the [WMO](https://english.ccmo.nl/investigators/legal-framework-for-medical-scientific-research/your-research-is-it-subject-to-the-wmo-or-not){target="_blank"}) on how medical research on humans is conducted. Some medical/clinical research *must* be reviewed by a [Medical Ethical Review Committee (METc)](https://metc.amsterdamumc.org/){target="_blank"}. In other cases, the METc may need to be approached for a non-WMO statement indicating that the study does not need to be reviewed by the METc, in which case the study should still undergo ethical review by the VCWE. 
+Almost all research conducted within FGB will require some form of ethical review. Unfortunately, not all FGB research projects can be reviewed by the faculty's [Scientific and Ethical Review Board (VCWE)](https://vu.nl/en/employee/research-support/the-scientific-and-ethical-review-board-vcwe){target="_blank"} because certain Dutch laws (primarily, the [WMO](https://english.ccmo.nl/investigators/legal-framework-for-medical-scientific-research/your-research-is-it-subject-to-the-wmo-or-not){target="_blank"}) require that some forms of clinical research *must* be reviewed by a [Medical Ethical Review Committee (METc)](https://metc.amsterdamumc.org/){target="_blank"}. In other cases, a clinical research project may not require ethical review by a METc, but will require a declaration from a METc that the study is not subject to the WMO.
 
-Determining which situation applies to you can be confusing *and* if you determine that you will need METc review or a non-WMO declaration, the process can be quite complicated because the METc is external to the VU. The following guide aims to help you determine which ethical review process(es) apply to you and once that's known, also helps you navigate the applicable ethical review process. 
+Determining which situation applies to you can be confusing. Additionally, if you determine that you will need METc review or a non-WMO declaration, the process can be quite complicated for FGB researchers because whichever METc you submit your research to, it will be an organization that is external to the VU. The following guide aims to help you determine which ethical review process(es) apply to you and, once that's known, help you navigate the applicable ethical review process. 
+
+NB: The guidance for WMO research and non-WMO declarations focuses on the METc of the Amsterdam UMC since this will, in most cases, be the METc that you are submitting your research to. The guidance should be transferrable to other METc's if that's necessary for your situation, but keep in mind that procedures could differ slightly outside of the AUMC context.
 
 \
 
@@ -150,7 +176,7 @@ Determining which situation applies to you can be confusing *and* if you determi
 <form id="whichRoute">
 <label><input type="radio" name="routePicker" id="displayWMO" value="wmo"> WMO research review process </label><br>
 <label><input type="radio" name="routePicker" id="displayNonWMO" value="nwmo"> Non-WMO declaration process </label><br>
-<label><input type="radio" name="routePicker" id="displayVCWE" value="vcwe"> Standard FGB ethical review for non-clinical research </label><br>
+<label><input type="radio" name="routePicker" id="displayVCWE" value="vcwe"> Standard FGB ethical review </label><br>
 <label><input type="radio" name="routePicker" id="displayQuiz" value="quiz"> I need help to figure out what process(es) apply to me </label><br>
 </form>
 
@@ -162,9 +188,8 @@ Determining which situation applies to you can be confusing *and* if you determi
 
 
 
-## WMO requirements and METc assessment for FGB research {#wmoGuidance}
+## WMO requirements for FGB research {#wmoGuidance}
 
-### Here's a further test of the push down functionality
 
 ```{r, child='text/WMOtext.Rmd', echo=FALSE, results='asis'}
 ```
@@ -174,9 +199,8 @@ Determining which situation applies to you can be confusing *and* if you determi
 
 <div class = "guidance">
 
-## Obtaining a non-WMO declaration from the METc {#nwmoGuidance}
+## Obtaining a non-WMO declaration for FGB research {#nwmoGuidance}
 
-### Here's a further test of the push down functionality
 
 ```{r, child='text/nonWMOtext.Rmd', echo=FALSE, results='asis'}
 ```
@@ -187,7 +211,7 @@ Determining which situation applies to you can be confusing *and* if you determi
 
 <div  class = "guidance">
 
-## Standard FGB VCWE ethical review process {#vcweGuidance}
+## Standard FGB ethical review process {#vcweGuidance}
 
 ```{r, child='text/VCWEtext.Rmd', echo=FALSE, results='asis'}
 ```
@@ -208,14 +232,15 @@ Determining which situation applies to you can be confusing *and* if you determi
 1. Will your research project have human research participants?
 e.g. Includes anything from participants in a lab to people answering an online survey. Excludes reviews of medical records, reuse of existing data or animal experiments. 
   -> if yes, continue quiz, but no further impact on outcome
-  -> if no, go straight to advice to follow-up with VCWE
+  -> if no, continue survey but look at outcome of q2
   -> if unsure, go straight to Support A (Guidance on figuring out study more first)
 2. Will your research project aim to answer questions related to illness, health or other medical/clinical topics?
 e.g. Includes anything related to etiology, pathogenesis, signs & symptoms, diagnostics, disease prevention, disease outcomes or treatment of illness.
-  -> if yes, increase likelihood of WMO
   -> if yes plus at least one yes from q4-8, ALWAYS WMO
-  -> if no, continue survey with decreased likelihood of WMO
-  -> if unsure, continue survey with increased likelihood to Support B (Contact info for support and links to WMO CCMO pages)
+  -> if yes plus no from q1, go immediately to DEFINITELY non-WMO
+  -> if no plus no from q1, go immediately to DEFINITELY VCWE
+  -> if unsure plus yes from q1, continue survey with increased likelihood to Support B (Contact info for support and links to WMO CCMO pages)
+  -> if unsure plus no from q1, go straight to Support A (Guidance on figuring out study more first) > necessary for user to figure out more because remaining questions are all about treatment of participants, which doesn't apply if q1 is 'no'
 3. Will you take blood samples from your research participants in the course of the research project?
   -> if yes, ALWAYS WMO
   -> if no, continue survey (no decrease in WMO likelihood)
@@ -253,15 +278,18 @@ e.g. Includes experiments where stress hormones are administered to investigate 
 
 
 Overall results after quiz completion:
-  -> if q1 is no, go immediately to definitely VCWE, but with info about studies without active participants
+  -> if q1 is no AND q2 is no, go immediately to definitely VCWE, but with info about studies without active participants
+  -> if q1 is no AND q2 is yes, go immediately to definitely non-WMO, but with info about studies without active participants
+  -> if q1 is no AND q2 is unsure, go straight to Support A (Guidance on figuring out study more first)
   -> if q1 is unsure, go straight to Support A (Guidance on figuring out study more first)
-  -> if q2 is yes and any of q4-8 are yes, go to definitely WMO
-  -> if q3 is yes, go immediately to definitely WMO
-  -> if q3 is unsure, go immediately to Support A (Guidance on figuring out study more first)
-  -> if for q4-8 at least one response is yes, but q2-3 are not yes, go to likely WMO, potentially non-WMO/VCWE (i.e. links to all three as well as support info)
-  -> if q2-8 all no, go to definitely VCWE
-  -> for q2,4-8 and none of answers are yes, if majority response is no, to likely VCWE page; if majority response is unsure or tied, to support page B
-  -> if q1-2 are yes and majority of others are no, go to likely non-WMO info (include reference to VCWE); if majority of others is unsure or tied, to support page B
+  -> if q1 is yes AND:
+    -> if q2 is yes AND any of q4-8 are yes, go to definitely WMO
+    -> if q3 is yes, go immediately to definitely WMO
+    -> if q3 is unsure, go immediately to Support A (Guidance on figuring out study more first)
+    -> if for q4-8 at least one response is yes, but q2-3 are not yes, go to likely WMO, potentially non-WMO/VCWE (i.e. links to all three as well as support info)
+    -> if q2-8 all no, go to definitely VCWE
+    -> for q2,4-8 and none of answers are yes, if majority response is no, to likely VCWE page; if majority response is unsure or tied, to support page B
+    -> if q2 is yes and majority of others are no, go to likely non-WMO info (include reference to VCWE); if majority of others is unsure or tied, to support page B
   
 -->
 
@@ -283,8 +311,17 @@ Overall results after quiz completion:
 ### 1. Will your research project have human research participants? {#quest1}
 
 <details>
-<summary>Examples</summary>
-*e.g. Includes anything from participants in a lab to people answering an online survey. Excludes reviews of medical records, reuse of existing data or animal experiments.*
+<summary class='summaryEx'>FGB examples</summary>
+<div class='detailsEx'>
+* Includes:
+    + Research with volunteers in brain/movement labs
+    + Online surveys with respondents gleaned via MTurk or Prolific
+    + RCTs and the like, i.e. research with intervention groups and control groups
+* Excludes:
+    + Research exclusively involving review of existing medical records 
+    + Reuse of existing data sources with no other new data collection from people
+    + Research exclusively on animals or on existing cell lines/existing biobanked materials
+</div>
 </details>
 
 <form id="answersQ1" class = "answers" data-answered = "false"> <!-- the data-* attribute is a way to add some extra attributes to an element where * is my choice of name -->
@@ -303,8 +340,18 @@ Overall results after quiz completion:
 ### 2. Will your research project aim to answer questions related to illness, health or other medical/clinical topics? {#quest2}
 
 <details>
-<summary>Examples</summary>
-*e.g. Includes anything related to etiology, pathogenesis, signs & symptoms, diagnostics, disease prevention, disease outcomes or treatment of illness.*
+<summary class='summaryEx'>FGB examples</summary>
+<div class='detailsEx'>
+Includes anything related to etiology, pathogenesis, signs & symptoms, diagnostics, disease prevention, disease outcomes or treatment of illness. 
+
+For example:
+
+* Need
+* Some 
+* Good 
+* Examples
+
+</div>
 </details>
 
 <form id="answersQ2" class = "answers" data-answered = "false">
@@ -342,8 +389,15 @@ Overall results after quiz completion:
 ### 4. Will your research participants be required to follow specific rules of behaviour? {#quest4}
 
 <details>
-<summary>Examples</summary>
-*e.g. Includes following a specific diet and/or exercise regiment, wearing cumbersome ambulatory monitoring devices for several days, requiring frequent (multiple times per day) self-reporting in a journal/diary for an extended period (several weeks or months).*
+<summary class='summaryEx'>FGB examples</summary>
+<div class='detailsEx'>
+For example:
+
+  * Following a specific diet and/or exercise regiment
+  * Wearing cumbersome ambulatory monitoring devices for several days
+  * Frequent (multiple times per day) self-reporting in a journal for an extended period (several weeks or months)
+  
+</div>
 </details>
 
 <form id="answersQ4" class = "answers" data-answered = "false">
@@ -364,8 +418,19 @@ Overall results after quiz completion:
 ### 5. Will your research participants receive experimental treatments as a part of the research project? {#quest5}
 
 <details>
-<summary>Examples</summary>
-*e.g. Includes RCTs comparing an experimental psycho- or physiotherapy protocol against the current gold standard (or where appropriate compared to no treatment), use of experimental medical devices with the intent to measure health outcomes or improve diagnostic output.*
+<summary class='summaryEx'>FGB examples</summary>
+<div class='detailsEx'>
+For example:
+  
+  * RCTs comparing an experimental psycho- or physiotherapy protocol against the current gold standard, e.g.:
+      + High-intensity psychotherapy vs low-intensity psychotherapy in depressive subjects
+      + Muscle-stimulating pressure cushions vs gold standard pressure cushions for wheelchair users
+  * Testing experimental medical devices to improve outcomes and/or diagnostics in, e.g.:
+      + Mentally ill subjects
+      + People with movement disorders such as Parkison's or cerebral palsy
+  * Using existing medical devices for new treatment or diagnostic purposes
+  
+</div>
 </details>
 
 <form id="answersQ5" class = "answers" data-answered = "false">
@@ -386,8 +451,15 @@ Overall results after quiz completion:
 ### 6. Will your research participants be subjected to procedures that could likely be experienced as physically and/or psychologically invasive? {#quest6}
 
 <details>
-<summary>Examples</summary>
-*e.g. Includes stressful psychological experiments where participants are subjects to extreme emotional and/or ethical pressure, studies of human physical performance that require rectal thermometers to record accurate body temperature measurements*
+<summary class='summaryEx'>FGB examples</summary>
+<div class='detailsEx'>
+
+For example:
+
+* Stressful psychological experiments where participants are subjects to extreme emotional and/or ethical pressure, 
+* Studies of human physical performance that require rectal thermometers to record accurate body temperature measurements
+
+</div>
 </details>
 
 <form id="answersQ6" class = "answers" data-answered = "false">
@@ -408,8 +480,15 @@ Overall results after quiz completion:
 ### 7. Will your research participants be subjected to procedures that have a reasonable potential to cause physical and/or psychological harm? {#quest7}
 
 <details>
-<summary>Examples</summary>
-*e.g. Includes experiments in heat labs to investigate the body's response and management of temperature regulation, in-depth psychological interviews on deeply distressing, upsetting or stigmatized topics*
+<summary class='summaryEx'>FGB examples</summary>
+<div class='detailsEx'>
+
+For example:
+
+* Experiments in heat labs investigating the body's response and management of temperature regulation during exertion
+* In-depth psychological interviews on deeply distressing, upsetting or stigmatized topics
+
+</div>
 </details>
 
 <form id="answersQ7" class = "answers" data-answered = "false">
@@ -431,8 +510,15 @@ Overall results after quiz completion:
 ### 8. Will your research participants be administered anything (medications, hormones, supplements) as a part of their participation in your research project? {#quest8}
 
 <details>
-<summary>Examples</summary>
-*e.g. Includes experiments where stress hormones are administered to investigate stress responses*
+<summary class='summaryEx'>FGB examples</summary>
+<div class='detailsEx'>
+
+For example:
+
+* Experiments where stress hormones are administered to study stress responses during emotional interpersonal interactions
+* Studies involving any tailoring or adjustment of psychotherapeutic medication regimens
+
+</div>
 </details>
 
 <form id="answersQ8" class = "answers" data-answered = "false">
@@ -455,31 +541,27 @@ Overall results after quiz completion:
 
 <div class = "guidance">
 
-## Definitely WMO {#defWMOoutcome}
+## WMO review is required {#defWMOoutcome}
 
 <button id="defWMOback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
 
-Based on your responses, the WMO applies to your research and you will need to undergo review with an METc. 
+Based on your responses, the WMO applies to your research and you *will* need to undergo review with an METc (for FGB, this is usually metc@amsterdamumc.nl). Below you can find more information on the WMO review processes and how they apply to you as an FGB researcher.
 
 <button class="inline-button btn btn-primary btn-sm" onclick="window.open('WMOguidance.html','_blank');">Open WMO guidance on new page</button>
 
 ```{r, child='text/WMOtext.Rmd', echo=FALSE, results='asis'}
 ```
 
-
-
 </div>
 
 
 <div class = "guidance">
 
-## Possibly WMO {#possWMOoutcome}
+## WMO review is potentially required {#possWMOoutcome}
 
 <button id="possWMOback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
 
-Based on your responses, it is *likely*, but not certain, that the WMO applies to your research. It's a good idea to follow-up with the METc that you'll be submitting your research to (for FGB, this is usually [metc@amsterdamumc.nl]) to clarify if you research does in fact fall under the WMO. It's likely that even if the WMO does not apply to your research, that you may still require a non-WMO declaration.
-
-
+Based on your responses, it is *likely*, but not certain, that the WMO applies to your research. It's a good idea to follow-up with the METc (for FGB, this is usually metc@amsterdamumc.nl) to clarify if your research does in fact fall under the WMO. It's likely that even if the WMO does not apply to your research, you may still require a non-WMO declaration. The METc can also advise you on this. Below you can find more information on the WMO review and non-WMO declaration processes, and how they apply to you as an FGB researcher.
 
 
 <details>
@@ -506,14 +588,13 @@ View non-WMO Guidance
 
 </div>
 
-
 <div class = "guidance">
 
-## Possibly non-WMO {#possNonWMOoutcome}
+## Non-WMO declaration is likely required {#defNonWMOoutcome}
 
-<button id="possNonWMOback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
+<button id="defNonWMOback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
 
-Based on your responses, it is *likely*, but not certain, that the WMO does *not* apply to your research, but that you *will* need a non-WMO declaration. It's a good idea to follow-up with the METc that you'll be submitting your research to (for FGB, this is usually [metc@amsterdamumc.nl]) to clarify your situation.
+Based on your responses, it is *very likely* that you *will* need a non-WMO declaration, but that your research is otherwise not subject to the WMO. You can check with the METc (for FGB, this is usually metc@amsterdamumc.nl) if you disagree and require clarification. Be aware that even if you get a non-WMO declaration, you will still need to do an ethical review with FGB's ethical committee, the VCWE. Below you can find more information on the non-WMO declaration and VCWE ethical review processes, and how they apply to you as an FGB researcher.
 
 <details>
 <summary class="summaryHeader">
@@ -528,34 +609,14 @@ View non-WMO Guidance
 
 <details>
 <summary class="summaryHeader">
-View WMO Guidance
+View VCWE Guidance
 </summary>
-
-<button class="inline-button btn btn-primary btn-sm" onclick="window.open('WMOguidance.html','_blank');">Open WMO guidance on new page</button>
-
-```{r, child='text/WMOtext.Rmd', echo=FALSE, results='asis'}
-```
-</details>
-
-
-
-</div>
-
-
-<div class = "guidance">
-
-## Definitely VCWE {#defVCWEoutcome}
-
-<button id="defVCWEback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
-
-
-Based on your responses, the WMO does *not* apply to your research nor do you need to complete a non-WMO declaration. You should, however, submit your research to the faculty's ethical review board (VCWE) to ensure that it meets all ethical requirements.
 
 <button class="inline-button btn btn-primary btn-sm" onclick="window.open('VCWEguidance.html','_blank');">Open VCWE guidance on new page</button>
 
 ```{r, child='text/VCWEtext.Rmd', echo=FALSE, results='asis'}
 ```
-
+</details>
 
 
 </div>
@@ -563,12 +624,35 @@ Based on your responses, the WMO does *not* apply to your research nor do you ne
 
 <div class = "guidance">
 
-## Possibly VCWE {#possVCWEoutcome}
+## Situation unclear: non-WMO declaration may be required {#possNonWMOoutcome}
 
-<button id="possVCWEback" class="manual-back btn btn-primary btn-sm">Back to quiz</button>
+<button id="possNonWMOback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
+
+Based on your responses, your situation is not entirely clear. Your situation seems to suggest that the WMO does *not* apply to your research, but that you may *still need* a non-WMO declaration. You should check with the METc (for FGB, this is usually metc@amsterdamumc.nl) to clarify your situation. Be aware that even if your research is not subject to the WMO and regardless of whether you obtain a non-WMO declaration, you will still need to do an ethical review with FGB's ethical committee, the VCWE. Below you can find more information on the WMO review, non-WMO declaration and VCWE ethical review processes, and how they apply to you as an FGB researcher.
+
+<details>
+<summary class="summaryHeader">
+View non-WMO Guidance
+</summary>
+
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open('nonWMOguidance.html','_blank');">Open non-WMO guidance on new page</button>
+
+```{r, child='text/nonWMOtext.Rmd', echo=FALSE, results='asis'}
+```
+</details>
+
+<details>
+<summary class="summaryHeader">
+View WMO Guidance
+</summary>
+
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open('WMOguidance.html','_blank');">Open WMO guidance on new page</button>
 
 
-Based on your responses, it is *likely*, but not certain, that the WMO does *not* apply to your research and you also likely *do not* need to complete a non-WMO declaration. It's a good idea to follow-up with the METc that you'll be submitting your research to (for FGB, this is usually [metc@amsterdamumc.nl]) to clarify your situation. If the WMO does not in fact apply to your research, nor do you require a non-WMO declaration, then you should still submit your research to the faculty's ethical review board (VCWE) to ensure that it meets all ethical requirements.
+
+```{r, child='text/WMOtext.Rmd', echo=FALSE, results='asis'}
+```
+</details>
 
 <details>
 <summary class="summaryHeader">
@@ -582,6 +666,50 @@ View VCWE Guidance
 </details>
 
 
+
+</div>
+
+
+<div class = "guidance">
+
+## Standard FGB ethical review is required {#defVCWEoutcome}
+
+<button id="defVCWEback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
+
+
+Based on your responses, the WMO does *not* apply to your research nor do you need to complete a non-WMO declaration. You should, however, submit your research to the FGB's ethical committee, the VCWE, to ensure that it meets all ethical requirements.
+
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open('VCWEguidance.html','_blank');">Open VCWE guidance on new page</button>
+
+
+```{r, child='text/VCWEtext.Rmd', echo=FALSE, results='asis'}
+```
+
+
+</div>
+
+
+<div class = "guidance">
+
+## Situation unclear: likely requires only standard FGB ethical review {#possVCWEoutcome}
+
+<button id="possVCWEback" class="manual-back btn btn-primary btn-sm">Back to quiz</button>
+
+
+Based on your responses, it is *likely*, but not certain, that the WMO does *not* apply to your research and you also likely *do not* need to complete a non-WMO declaration. It's a good idea to follow-up with the METc (for FGB, this is usually metc@amsterdamumc.nl) to clarify your situation. Be aware that even if your research is not subject to the WMO and regardless of whether you obtain a non-WMO declaration, you will still need to do an ethical review with FGB's ethical committee, the VCWE. Below you can find more information on the WMO review, non-WMO declaration and VCWE ethical review processes, and how they apply to you as an FGB researcher.
+
+<details>
+<summary class="summaryHeader">
+View VCWE Guidance
+</summary>
+
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open('VCWEguidance.html','_blank');">Open VCWE guidance on new page</button>
+
+```{r, child='text/VCWEtext.Rmd', echo=FALSE, results='asis'}
+```
+</details>
+
+
 <details>
 <summary class="summaryHeader">
 View non-WMO Guidance
@@ -610,7 +738,7 @@ View WMO Guidance
 
 <div class = "guidance">
 
-## Support A {#suppA}
+## Research requires more planning {#suppA}
 
 <button id="suppAback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
 
@@ -621,7 +749,7 @@ You should determine more of what your research will entail before assessing the
 
 <div class = "guidance">
 
-## Support B {#suppB}
+## Support {#suppB}
 
 <button id="suppBback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
 
@@ -629,7 +757,6 @@ Your situation is not so clear, meaning its difficult to make an assessment of w
 
 
 </div>
-
 
 
 

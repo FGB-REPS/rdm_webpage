@@ -1,3 +1,21 @@
-Here's some info on VCWE processes!
+<h3> The Scientific and Ethical Review Board of FGB (VCWE) </h3>
 
-Wheeeeeeeeeeeeeeee!
+You can find all the necessary information about standard ethical review within FGB and the VCWE on the [VCWE's VUweb page](https://vu.nl/en/employee/research-support/the-scientific-and-ethical-review-board-vcwe){target="_blank"}. On this page, you will find:
+
+* References to relevant codes of conduct
+* Steps required prior to submission to the VCWE
+  + The steps are also summarized in this [decision tree](https://assets-us-01.kc-usercontent.com/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/f4c93000-6a20-4bcd-852b-18fb2d2d4fd2/vcwe_workflow_2025.pdf){target="_blank"}
+* Templates for information letters and informed consent forms
+  + In Dutch and English
+  + Where needed, written for participants under 16
+* Information about the [ethical review submission portal](https://www.editorialmanager.com/vcwe/default2.aspx){target="_blank"}
+* Contact information for the current VCWE members
+
+<h3> Is ethical review always required? </h3>
+
+If you are of the opinion that your research shouldn't require *any* ethical review, make sure to follow-up with the [VCWE](mailto:vcwe.fgb@vu.nl) about this prior to commencing your research. There are relatively few cases within FGB where ethical review wouldn't be recommended, but additionally, an increasing number of research journals require proof of ethical review before your research article can be published. To avoid the risk of not being able to publish your work anywhere, it is generally wisest to err on the side of caution and obtain the ethical review.
+
+<h4> What happens if I am only reusing existing data? </h4>
+
+Even when research doesn't actively include research participants, there may still be ethical questions, and more frequently, privacy questions involved with the reuse of existing data in your research. In such a situation, prior to any ethical review, you should contact the [Research and Policy Support Team (REPS)](mailto:research.data.fgb@vu.nl) to ensure that you can appropriately reuse the data.
+
