@@ -1,76 +1,113 @@
-Here's some info on WMO processes!
+<!-- use html tags rather than markdown # tags for headers in all child text pages otherwise formatting of main ethicsGuidance page gets messed up -->
 
-Wheeeeeeeeeeeeeeee!
+<h2> WMO requirements for FGB research </h2>
+
+<h3> When does the WMO apply to research </h3>
+
+The Medical Research Involving Humans Act (a.k.a. *Wet medisch-wettenschappelijk onderzoek met mensen* [WMO](https://english.ccmo.nl/investigators/legal-framework-for-medical-scientific-research/your-research-is-it-subject-to-the-wmo-or-not){target="_blank"}) applies to research if:
+
+1. The research is medical-scientific research
+2. Research subjects must undergo procedures or must follow specific rules of behaviour
+
+The CCMO is the overarching organization that ensures research participants are protected while taking part in WMO research and this organization further explains [the conditions that make research fall under the WMO on this page](https://english.ccmo.nl/investigators/legal-framework-for-medical-scientific-research/your-research-is-it-subject-to-the-wmo-or-not){target="_blank"}.
+
+<div class="quizInfo">
+<!-- this section is is hidden when someone gets to the WMO guidance text from 
+the quiz outcomes since it wouldn't make sense to mention the quiz at that point-->
+
+However, this guidance can be confusing or unclear when applied to FGB research, which is why it's recommended to take the short FGB-based quiz (if you haven't already) to determine if the WMO is applies to your research or not.
+
+<!-- following button opens the guidance page with the quiz pre-selected (opting to open a new page for the quiz so as to not navigate away from the WMO info on the current page, but also to allow someone to go to the quiz from the external WMOguidance.html page).-->
+<button class="goToQuiz btn btn-primary btn-sm" >Go to quiz</button> 
+</div>
 
 
-LALALALALALA
+<h3> The WMO review process for FGB researchers </h3>
 
-LALALALALALA
+<h4> 1.Determine if additional regulations beyond the WMO apply </h4>
 
-LALALALALALA
+Much of the FGB research that is subject to the WMO is not subject to any other regulations than the WMO. Other regulations that may apply are ([described on this AUMC page as *Overig WMO-plichtig onderzoek*](https://metc.amsterdamumc.org/wmo/soorten-wmo-onderzoek/){target="_blank"}). Before you proceed under the assumption that your research is *only* subject to the WMO, check whether any of the following additional regulations will apply to your research.
 
-LALALALALALA
+### {.tabset .tabset-dropdown}
 
-LALALALALALA
+#### Click here to select a topic... {.active}
 
-LALALALALALA
+#### Clinical Trial Regulation
 
-LALALALALALA
+The [Clinical Trial Regulation](https://english.ccmo.nl/investigators/clinical-trials-with-medicinal-products-ctr){target="_blank"} is not likely to apply to many FGB research projects. However if:
 
-LALALALALALA
+* Your research falls under the WMO *and* 
+* Medicinal products are administered to your research subjects *and* 
+* Medicinal products are (one of) the focus(es) of your investigation
 
-LALALALALALA
+then the [CTR will apply](https://english.ccmo.nl/investigators/clinical-trials-with-medicinal-products-ctr/legal-framework-ctr/scope-ctr){target="_blank"}. 
 
-LALALALALALA
+<h5>FGB examples of CTR research </h5>
 
-LALALALALALA
+* RCT comparing clinical outcomes in a population with general anxiety disorder where the research subjects are randomized to either treatment with paroxetine or treatment with sertraline
+* RCT comparing pain management in arthritis patients where the research subjects are blinded to the pain medication they are receiving
+* Study on a standard clinical treatment for depression with anti-depressants, but where subjects must undergo more frequent monitoring, testing or procedures than they would experience with standard treatment
 
-LALALALALALA
+<h5>When does the CTR not apply</h5>
 
-LALALALALALA
+* If your research is **not** subject to the WMO
+* If no medicinal products are used in your research
+* If medicinal products are used, but for purposes other than investigating the medicinal products themselves. E.g.:
+  + Administration of contrast media for imaging purposes
+  + Administration of specific hormones to study changes in interaction, emotional response, stress response etc.
 
-LALALALALALA
 
-LALALALALALA
 
-LALALALALALA
+#### Medical Devices Regulation
 
-LALALALALALA
+The [Medical Devices Regulation](https://english.ccmo.nl/investigators/clinical-investigations-with-medical-devices){target="_blank"} applies to your research if you are specifically investigating the safety and/or effectiveness of a [medical device](https://english.ccmo.nl/investigators/clinical-investigations-with-medical-devices/legal-framework-guidances-and-standards-for-clinical-investigations-with-medical-devices/what-is-a-medical-device){target="_blank"}. 
 
-LALALALALALA
+<h5>FGB examples of MDR research </h5>
 
-LALALALALALA
+* 
 
-LALALALALALA
+<h5>When does the MDR not apply</h5>
 
-LALALALALALA
 
-LALALALALALA
+###
 
-LALALALALALA
+<h3> Things you should be aware of </h3>
 
-LALALALALALA
 
-LALALALALALA
 
-LALALALALALA
+<h3> Things you don't need to worry about </h3>
 
-LALALALALALA
 
-LALALALALALA
 
-LALALALALALA
 
-LALALALALALA
 
-LALALALALALA
 
-LALALALALALA
 
-LALALALALALA
 
-LALALALALALA
 
-LALALALALALA
 
-LALALALALALA
+
+
+
+<script>
+
+// script primarily for handling any local buttons that have local javascript that needs to work within this specific chunk of text
+
+
+// The Safety Guard: Only run this if we haven't already set up the listener
+// this is necessary because WMOtext.Rmd is used multiple times within ethicsGuidance as a child text doc, but we want the event listener to only set up once
+
+if (typeof goToQuizSetup === 'undefined') {
+  
+  document.addEventListener('click', function(event) {
+    // Check if the thing clicked has our class
+    if (event.target && event.target.classList.contains('goToQuiz')) {
+      window.open('ethicsGuidance.html?target=quiz', '_blank');
+    }
+  });
+
+  // Mark as set up so other copies of this file don't add the listener again
+  var goToQuizSetup = true;
+}
+
+</script>

@@ -1,3 +1,5 @@
+<!-- use html tags rather than markdown # tags for headers in all child text pages otherwise formatting of main ethicsGuidance page gets messed up -->
+<h2> Standard FGB ethical review process </h2>
 <h3> The Scientific and Ethical Review Board of FGB (VCWE) </h3>
 
 You can find all the necessary information about standard ethical review within FGB and the VCWE on the [VCWE's VUweb page](https://vu.nl/en/employee/research-support/the-scientific-and-ethical-review-board-vcwe){target="_blank"}. On this page, you will find:

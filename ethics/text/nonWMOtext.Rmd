@@ -1,57 +1,35 @@
+<!-- use html tags rather than markdown # tags for headers in all child text pages otherwise formatting of main ethicsGuidance page gets messed up -->
+
+<h2> Obtaining a non-WMO declaration for FGB research </h2>
+
+<h3> When is a non-WMO declaration necessary </h3>
+
+A non-WMO declaration is generally necessary for FGB research if it's uncertain whether the WMO applies to your research or if a third party requires a non-WMO declaration from you, for example, when publishing your research article. Both of these conditions aren't entirely clear cut for FGB researchers, so the general recommendation is to get a non-WMO declaration when your research has a medical/clinical focus, but otherwise doesn't meet the conditions to fall under the WMO, in other words, the research does not include participants undergoing procedures or being required to follow specific rules of behaviour. 
+
+<h3> How to obtain a non-WMO declaration </h3>
+
+For the vast majority of cases, FGB researchers will submit their request for a non-WMO declaration to the Amsterdam UMC's METc. A non-WMO declaration request must be submitted to the [Amsterdam UMC's Research Manager portal](https://metc.amsterdamumc.org/research-manager/){target="_blank"}. Relevant information for your submission can be found on the following pages:
+
+* [Manual on Research Manager and the Submission of Non-WMO research (only in Dutch)](https://metc.amsterdamumc.org/wp-content/uploads/2023/09/Research-Manager-Handleiding-voor-onderzoekers-niet-WMO-studies-versie-6-d.d.-1-september-2023.pdf){target="_blank"}
+* [Required information and documentation for a new non-WMO submission (only in Dutch)](https://metc.amsterdamumc.org/niet-wmo/nieuwe-indiening/){target="_blank"}
+* [Costs of a non-WMO declaration submission (only in Dutch)](https://metc.amsterdamumc.org/tarieven/niet-wmo/){target="_blank"}
 
 
-This is a test to see if iFrames could work for inserting this text into the decision making tool.
+<h3> Things you should be aware of </h3>
 
-Let's see!
+* You will need to pay the METc for their assessment of your research. Because our organization is external to the AUMC, the costs for FGB researchers are can be [€500-600](https://metc.amsterdamumc.org/tarieven/niet-wmo/){target="_blank"}. 
+    + You are expected to cover these costs with your project budget, therefore its important to assess if you need a non-WMO declaration **during your grant application**
+* You don't generally need to submit any amendments on your non-WMO research to the METc unless the changes are likely to cause your research to fall under the WMO
+    + If you do need to submit an amendment because your research might be subject to the WMO, you will be charged the cost of another non-WMO assessment
 
-Wheeeeee!
 
-Lalalalalalalalala
 
-Lalalalalalalalala
+<h3> Things you don't need to worry about </h3>
 
-Lalalalalalalalala
+Because a lot of information on non-WMO processes is designed for researchers working for an UMC, such as Amsterdam UMC, there is often more information given on reference sites than is needed for FGB researchers. The following are some things you can ignore.
 
-Lalalalalalalalala
-
-Lalalalalalalalala
-
-Lalalalalalalalala
-
-Lalalalalalalalala
-
-Lalalalalalalalala
-
-Lalalalalalalalala
-
-Lalalalalalalalala
-
-Lalalalalalalalala
-
-Lalalalalalalalala
-
-Lalalalalalalalala
-
-Lalalalalalalalala
-
-Lalalalalalalalala
-
-Lalalalalalalalala
-
-Lalalalalalalalala
-
-Lalalalalalalalala
-
-Lalalalalalalalala
-
-Lalalalalalalalala
-
-Lalalalalalalalala
-
-Lalalalalalalalala
-
-Lalalalalalalalala
-
-Lalalalalalalalala
+* The Amsterdam UMC mentions a special type of non-WMO research that falls under the DCRF assessment framework. This is for non-WMO research on pharmaceuticals or non-WMO research funded by pharmaceutical companies. Unless this applies to your situation, you can ignore any references to the DCRF assessment framework.
+* The Amsterdam UMC's [*verwerkingsregister* (processing registry)](https://metc.amsterdamumc.org/verwerkingsregister/){target="_blank"} is mentioned on their website a few times. You **do not** need to register your research in this processing registry as an FGB researcher; the VU has its own systems for this. 
+* The [information on setting up a data bank](https://metc.amsterdamumc.org/niet-wmo/databanken/){target="_blank"} is not applicable to FGB researchers. If you are considering the idea, contact the [FGB REPS Team](mailto:research.data.fgb@vu.nl).
 
 

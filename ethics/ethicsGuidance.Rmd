@@ -10,56 +10,13 @@ output:
         - scripts/ethicsJavaScript.html
 ---
 
+<!-- link to overall css stylesheet for all FGB RDM pages -->
+
+<link rel="stylesheet" href="../css/style.css" />
+
+<!-- additional css specific to this page only -->
 
 <style type="text/css">
-
-/* need to ensure all text is in Roboto so as to be in-line with VU house style*/
-
-body {
-  font-family: 'Roboto', sans-serif;
-
-}
-
-.main-container {
-  max-width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 5%;
-  padding-bottom: 30%;
-  padding-right: 10%;
-  padding-left: 10%;
-
-}
-
-h1.title {
-  font-size: 28px;
-  text-align: center;
-}
-
-h4.date { /* this is to affect the size of the date text in the YAML when it prints in html  */
-  font-size: 20px;
-  text-align: center;
-}
-
-h1, h2, h3, h4 {
-  color: #105d89;
-}
-
-a {
-  color: #157bb7;
-}
-
-
-li {
-  font-size: 18px;
-  margin: 5px;
-}
-
-
-.small-text p {
-  font-size: 14px;
-  color: #737373;
-}
 
 #intro-wrapper, #quizGuidance {
   margin-left: 30%;
@@ -121,12 +78,22 @@ li {
   word-wrap: break-word;
 }
 
+.goToQuiz { /* set width of goToQuiz button differently than other buttons */
+  width: 10%;
+}
+
+/* Hide section about quiz that includes goToQuiz button when it's inside a quiz outcome container */
+.outcome .quizInfo {
+  display: none;
+}
+
+
 .summaryHeader {
   list-style: none; /* Removes the default arrow in some browsers */
   padding: 10px;
-  font-size: 24px; 
+  font-size: 24px;
   font-weight: bold;
-  color: #105d89; 
+  color: #105d89;
 }
 
 .summaryHeader:hover {
@@ -139,8 +106,8 @@ details {
 
 .summaryEx {
   list-style: none; /* Removes the default arrow in some browsers */
-  font-size: 18px; 
-  color: #157bb7; 
+  font-size: 18px;
+  color: #157bb7;
 }
 
 .summaryEx:hover {
@@ -152,8 +119,9 @@ details {
 }
 
 .detailsEx li, .detailsEx p { /* need to call this separately because otherwise the CSS for li elements already defined above will override what is in this div class */
-  font-size: 16px; 
+  font-size: 16px;
 }
+
 
 
 
@@ -166,7 +134,7 @@ Almost all research conducted within FGB will require some form of ethical revie
 
 Determining which situation applies to you can be confusing. Additionally, if you determine that you will need METc review or a non-WMO declaration, the process can be quite complicated for FGB researchers because whichever METc you submit your research to, it will be an organization that is external to the VU. The following guide aims to help you determine which ethical review process(es) apply to you and, once that's known, help you navigate the applicable ethical review process. 
 
-NB: The guidance for WMO research and non-WMO declarations focuses on the METc of the Amsterdam UMC since this will, in most cases, be the METc that you are submitting your research to. The guidance should be transferrable to other METc's if that's necessary for your situation, but keep in mind that procedures could differ slightly outside of the AUMC context.
+NB: The guidance for WMO research and non-WMO declarations focuses on the METc of the Amsterdam UMC since this will, in most cases, be the METc that you are submitting your research to. The guidance should be transferable to other METc's if that's necessary for your situation, but keep in mind that procedures could differ slightly outside of the AUMC context.
 
 \
 
@@ -184,11 +152,10 @@ NB: The guidance for WMO research and non-WMO declarations focuses on the METc o
 
 <div id = "guidance-wrapper">
 
-<div class = "guidance">
+<div class = "guidance" id = "wmoGuidance">
 
-
-
-## WMO requirements for FGB research {#wmoGuidance}
+\
+\
 
 
 ```{r, child='text/WMOtext.Rmd', echo=FALSE, results='asis'}
@@ -197,9 +164,10 @@ NB: The guidance for WMO research and non-WMO declarations focuses on the METc o
 </div>
 
 
-<div class = "guidance">
+<div class = "guidance" id = "nwmoGuidance">
 
-## Obtaining a non-WMO declaration for FGB research {#nwmoGuidance}
+\
+\
 
 
 ```{r, child='text/nonWMOtext.Rmd', echo=FALSE, results='asis'}
@@ -208,10 +176,12 @@ NB: The guidance for WMO research and non-WMO declarations focuses on the METc o
 
 </div>
 
+\
+\
 
-<div  class = "guidance">
 
-## Standard FGB ethical review process {#vcweGuidance}
+<div  class = "guidance" id = "vcweGuidance">
+
 
 ```{r, child='text/VCWEtext.Rmd', echo=FALSE, results='asis'}
 ```
@@ -539,7 +509,7 @@ For example:
 
 
 
-<div class = "guidance">
+<div class = "guidance outcome">
 
 ## WMO review is required {#defWMOoutcome}
 
@@ -555,7 +525,7 @@ Based on your responses, the WMO applies to your research and you *will* need to
 </div>
 
 
-<div class = "guidance">
+<div class = "guidance outcome">
 
 ## WMO review is potentially required {#possWMOoutcome}
 
@@ -588,7 +558,7 @@ View non-WMO Guidance
 
 </div>
 
-<div class = "guidance">
+<div class = "guidance outcome">
 
 ## Non-WMO declaration is likely required {#defNonWMOoutcome}
 
@@ -622,7 +592,7 @@ View VCWE Guidance
 </div>
 
 
-<div class = "guidance">
+<div class = "guidance outcome">
 
 ## Situation unclear: non-WMO declaration may be required {#possNonWMOoutcome}
 
@@ -670,7 +640,7 @@ View VCWE Guidance
 </div>
 
 
-<div class = "guidance">
+<div class = "guidance outcome">
 
 ## Standard FGB ethical review is required {#defVCWEoutcome}
 
@@ -689,7 +659,7 @@ Based on your responses, the WMO does *not* apply to your research nor do you ne
 </div>
 
 
-<div class = "guidance">
+<div class = "guidance outcome">
 
 ## Situation unclear: likely requires only standard FGB ethical review {#possVCWEoutcome}
 
@@ -736,7 +706,7 @@ View WMO Guidance
 </div>
 
 
-<div class = "guidance">
+<div class = "guidance outcome">
 
 ## Research requires more planning {#suppA}
 
@@ -747,7 +717,7 @@ You should determine more of what your research will entail before assessing the
 </div>
 
 
-<div class = "guidance">
+<div class = "guidance outcome">
 
 ## Support {#suppB}
 

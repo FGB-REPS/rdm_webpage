@@ -9,54 +9,21 @@ output:
         - ../footer.html
 ---
 
+<!-- link to overall css stylesheet for all FGB RDM pages -->
+
+<link rel="stylesheet" href="../css/style.css" />
+
+<!-- for any css custom to this page only fill in below between style tag -->
 
 <style type="text/css">
 
-/* need to ensure all text is in Roboto so as to be in-line with VU house style */
-
-body {
-  font-family: 'Roboto', sans-serif;
-
-}
-
-.main-container {
-  max-width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 5%;
-  padding-bottom: 30%;
-  padding-right: 10%;
-  padding-left: 10%;
-
-}
-
-h1.title {
-  font-size: 28px;
-  text-align: center;
-}
-
-h4.date { /* this is to affect the size of the date text in the YAML when it prints in html  */
-  font-size: 20px;
-  text-align: center;
-}
-
-
-
-li {
-  font-size: 18px;
-  margin: 5px;
-}
-
-
-.small-text p {
-  font-size: 14px;
-  color: #737373;
-}
 
 
 
 </style>
 
+\
+\
 
 ```{r, child='text/WMOtext.Rmd', echo=FALSE, results='asis'}
 ```

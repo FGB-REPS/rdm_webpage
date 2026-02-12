@@ -468,8 +468,46 @@ suppAback.addEventListener('click', () => returnToQuiz('suppA'));
 suppBback.addEventListener('click', () => returnToQuiz('suppB'));
 
 
+// create a way to handle opening of ethicsGuidance in a new tab or page when user clicks on relevant button from guidance (e.g. goToQuiz in WMOtext)
+// the intention of this button from other guidance sections is to allow a new tab to open of ethicsGuidance but then with the quizGuidance (or whichever
+// other relevant section of interest) is pre-selected
+// we need to do this in this way because we will be coming to ethicsGuidance from different locations (either from ethicsGuidance itself or from WMOguidance
+// as an external page or even from another external page altogether and so when the ethicsGuidance page itself loads with the ?target value added to
+// the rerouting URL, it knows how to handle that information and select the appropriate div, which in this case is the quiz)
 
+window.addEventListener('DOMContentLoaded', () => {
+  // 1. Check if the URL has a "target" parameter
+  const urlParams = new URLSearchParams(window.location.search);
+  const targetValue = urlParams.get('target')?.toLowerCase(); // for most cases this will be quiz because wanting to redirect directly to quiz
+  // using toLowerCase here in case the URL that was input has any capitalization
 
+  if (targetValue) {
+    // 2. Find the radio button that matches the value (e.g., 'quiz')
+    // Note: Ensure your radio buttons have the name attribute (e.g., name="route")
+    const radioButton = document.querySelector(`input[value="${targetValue}"]`);
+
+    if (radioButton) {
+      // 3. Visually check the radio button
+      radioButton.checked = true;
+
+      // 4. Find the corresponding guidance div (e.g., 'quizGuidance')
+      const targetDiv = document.getElementById(targetValue + 'Guidance');
+
+      if (targetDiv) {
+        // 5. Trigger your existing transition logic
+        performTransition(targetDiv);
+
+        // This is the "display way" to bring it to the top
+      // behavior: 'smooth' makes it look polished
+      // block: 'start' ensures the top of the div hits the top of the screen
+      setTimeout(() => {
+        targetDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+
+      }
+    }
+  }
+});
 
 
 </script>
