@@ -88,40 +88,6 @@ output:
 }
 
 
-.summaryHeader {
-  list-style: none; /* Removes the default arrow in some browsers */
-  padding: 10px;
-  font-size: 24px;
-  font-weight: bold;
-  color: #105d89;
-}
-
-.summaryHeader:hover {
-  color: #157bb7;
-}
-
-details {
-  padding-bottom: 10px;
-}
-
-.summaryEx {
-  list-style: none; /* Removes the default arrow in some browsers */
-  font-size: 18px;
-  color: #157bb7;
-}
-
-.summaryEx:hover {
-  color: #48aeea;
-}
-
-.detailsEx {
- font-style: italic;
-}
-
-.detailsEx li, .detailsEx p { /* need to call this separately because otherwise the CSS for li elements already defined above will override what is in this div class */
-  font-size: 16px;
-}
-
 
 
 
@@ -156,6 +122,7 @@ NB: The guidance for WMO research and non-WMO declarations focuses on the METc o
 
 \
 \
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open('WMOguidance.html','_blank');">Open WMO guidance on new page</button>
 
 
 ```{r, child='text/WMOtext.Rmd', echo=FALSE, results='asis'}
@@ -168,7 +135,7 @@ NB: The guidance for WMO research and non-WMO declarations focuses on the METc o
 
 \
 \
-
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open('nonWMOguidance.html','_blank');">Open non-WMO guidance on new page</button>
 
 ```{r, child='text/nonWMOtext.Rmd', echo=FALSE, results='asis'}
 ```
@@ -176,11 +143,12 @@ NB: The guidance for WMO research and non-WMO declarations focuses on the METc o
 
 </div>
 
-\
-\
-
 
 <div  class = "guidance" id = "vcweGuidance">
+
+\
+\
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open('VCWEguidance.html','_blank');">Open VCWE guidance on new page</button>
 
 
 ```{r, child='text/VCWEtext.Rmd', echo=FALSE, results='asis'}
@@ -629,7 +597,7 @@ View WMO Guidance
 View VCWE Guidance
 </summary>
 
-<button class="inline-button btn btn-primary btn-sm" onclick="window.open('VCWEguidance.html','_blank');">Open non-WMO guidance on new page</button>
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open('VCWEguidance.html','_blank');">Open VCWE guidance on new page</button>
 
 ```{r, child='text/VCWEtext.Rmd', echo=FALSE, results='asis'}
 ```

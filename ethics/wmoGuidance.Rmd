@@ -4,15 +4,23 @@ date: "`r Sys.Date()`; version 1.0"
 output: 
   html_document:
     theme: cerulean
+    anchor_sections: TRUE
     includes: 
-      after_body: 
-        - ../footer.html
+      after_body: ../footer.html
+    toc: true
+    toc_depth: 4
+    toc_float: 
+      collapsed: false
+      smooth_scroll: true
 ---
 
 <!-- link to overall css stylesheet for all FGB RDM pages -->
 
 <link rel="stylesheet" href="../css/style.css" />
 
+<!-- link to extra overall css stylesheet for FGB RDM pages that use TOC-->
+
+<link rel="stylesheet" href="../css/styleTOC.css" />
 <!-- for any css custom to this page only fill in below between style tag -->
 
 <style type="text/css">
