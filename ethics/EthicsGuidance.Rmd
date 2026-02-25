@@ -64,23 +64,17 @@ output:
   
 
 .btn {
-  width: 50%;
+  width: 15%;
 }
 
-.manual-back {
-  width: 10%;
-}
 
 .inline-button {
   display: inline;
-  width: 20%;
   white-space: normal;
   word-wrap: break-word;
 }
 
-.goToQuiz { /* set width of goToQuiz button differently than other buttons */
-  width: 10%;
-}
+
 
 /* Hide section about quiz that includes goToQuiz button when it's inside a quiz outcome container */
 .outcome .quizInfo {

@@ -1681,13 +1681,23 @@ aren’t entirely clear cut for FGB researchers, so the general
 recommendation is to get a non-WMO declaration when your research has a
 medical/clinical focus, but otherwise doesn’t meet the conditions to
 fall under the WMO (i.e. your research does not involve participants
-undergoing procedures or being required to follow specific rules of
-behaviour).</p>
+being subject to procedures or specific rules of behaviour).</p>
+<div class="quizInfo">
+<!-- this section is is hidden when someone gets to the nonWMO guidance text from 
+the quiz outcomes since it wouldn't make sense to mention the quiz at that point-->
+<p>If you are still unsure if you need a non-WMO declaration, you can
+take the short FGB-based quiz (if you haven’t already) for a
+recommendation.</p>
+<!-- following button opens the guidance page with the quiz pre-selected (opting to open a new page for the quiz so as to not navigate away from the non-WMO info on the current page, but also to allow someone to go to the quiz from the external nonWMOguidance.html page).-->
+<button class="goToQuiz btn btn-primary btn-sm">
+Go to quiz
+</button>
+</div>
 <h2>
 How to obtain a non-WMO declaration
 </h2>
 <p>For the vast majority of cases, FGB researchers will submit their
-request for a non-WMO declaration to the Amsterdam UMC’s METc. A non-WMO
+request for a non-WMO declaration to the Amsterdam UMC’s METC. A non-WMO
 declaration request must be submitted to the <a href="https://metc.amsterdamumc.org/research-manager/" target="_blank">Amsterdam UMC’s Research Manager portal</a>. Relevant
 information for your submission can be found on the following pages:</p>
 <ul>
@@ -1700,13 +1710,13 @@ Dutch)</a></li>
 <li><a href="https://metc.amsterdamumc.org/niet-wmo/nieuwe-indiening/" target="_blank">Required information and documentation for a new non-WMO
 submission (only in Dutch)</a>
 <ul>
-<li>See the dropdown section on “Documenten nieuwe niet-WMO indiening”
-for a checklist of the require documents and links to templates that you
-<em>must</em> use <a href="https://metc.amsterdamumc.org/indieningseisen/" target="_blank">Submission requirements for documents and communication
+<li>See the dropdown section on <em>Documenten nieuwe niet-WMO
+indiening</em> for a checklist of the required documents as well as
+links to templates that you <em>must</em> use <a href="https://metc.amsterdamumc.org/indieningseisen/" target="_blank">Submission requirements for documents and communication
 processes with the METC (only in Dutch)</a></li>
 <li>See the very bottom of this page for further information specific to
 non-WMO submissions in Research Manager, particularly how to handle
-questions from the METc on your submission.</li>
+questions from the METC on your submission.</li>
 <li>The submission requirements are also summarized in greater detail in
 <a href="https://metc.amsterdamumc.org/wp-content/uploads/2025/08/Indieningseisen-versie-2.0-d.d.-22-08-2025.pdf" target="_blank">this document</a>.</li>
 </ul></li>
@@ -1724,23 +1734,23 @@ registration number from the processing register (<em>Register
 gegevensverwerking</em>) must be submitted in the General Information on
 your study in Research Manager. This does not apply to you as a VU
 research because you will not be using the AUMC’s processing register
-(<a href="#notAppl">see below</a>).</li>
+(<a href="#notAppl">see below for more information</a>).</li>
 <li><a href="https://metc.amsterdamumc.org/wp-content/uploads/2025/08/Indieningseisen-versie-2.0-d.d.-22-08-2025.pdf" target="_blank">The submission requirements</a> cite contact information
 that must be included in the participant information letter, but the
-contact information is for AUMC.
+contact information cited is for AUMC. As an FGB researcher:
 <ul>
 <li>For the Data Protection Officer (<em>Functionaris
 Gegevensbescherming</em>) use <a href="mailto:functionarisgegevensbescherming@vu.nl" class="email">functionarisgegevensbescherming@vu.nl</a></li>
 <li>Complaints (<em>Klachtenregeling</em>) are generally handled via the
 individual research team, so use the appropriate research team contact
-information there.</li>
+information here.</li>
 </ul></li>
 </ul>
 <h2>
 Things you should be aware of
 </h2>
 <ul>
-<li>You will need to pay the METc for their assessment of your research.
+<li>You will need to pay the METC for their assessment of your research.
 Because our organization is external to the AUMC, the costs for FGB
 researchers are can be <a href="https://metc.amsterdamumc.org/tarieven/niet-wmo/" target="_blank">€500-600</a>.
 <ul>
@@ -1749,12 +1759,12 @@ therefore its important to assess if you need a non-WMO declaration
 <strong>during your grant application</strong></li>
 </ul></li>
 <li>You don’t generally need to submit any amendments on your non-WMO
-research to the METc unless the changes are likely to cause your
+research to the METC unless the changes are likely to cause your
 research to fall under the WMO
 <ul>
-<li>If you do need to submit an amendment because your research might be
-subject to the WMO, you will be charged the cost of another non-WMO
-assessment</li>
+<li>If you <em>do</em> need to submit an amendment because your research
+might be subject to the WMO, you will be charged the cost of another
+non-WMO assessment</li>
 </ul></li>
 <li>Your submission and all communication about it will happen via
 Research Manager. The METC will ignore any documents sent to them via
@@ -1789,6 +1799,28 @@ required to complete.</li>
 applicable to FGB researchers. If you are considering the idea, contact
 the <a href="mailto:research.data.fgb@vu.nl">FGB REPS Team</a>.</li>
 </ul>
+<script>
+
+// script primarily for handling any local buttons that have local javascript that needs to work within this specific chunk of text
+
+
+// The Safety Guard: Only run this if we haven't already set up the listener
+// this is necessary because nonWMOtext.Rmd is used multiple times within ethicsGuidance as a child text doc, but we want the event listener to only set up once
+
+if (typeof goToQuizSetup === 'undefined') {
+  
+  document.addEventListener('click', function(event) {
+    // Check if the thing clicked has our class
+    if (event.target && event.target.classList.contains('goToQuiz')) {
+      window.open('ethicsGuidance.html?target=quiz', '_blank');
+    }
+  });
+
+  // Mark as set up so other copies of this file don't add the listener again
+  var goToQuizSetup = true;
+}
+
+</script>
 
 
 
