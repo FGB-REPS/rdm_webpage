@@ -1,12 +1,11 @@
 <!-- use html tags rather than markdown # tags for headers in all child text pages otherwise formatting of main ethicsGuidance page gets messed up -->
 
-<h2> Obtaining a non-WMO declaration for FGB research </h2>
 
-<h3> When is a non-WMO declaration necessary </h3>
+<h2> When is a non-WMO declaration necessary </h2>
 
 A non-WMO declaration is generally necessary for FGB research if it's uncertain whether the WMO applies to your research or if a third party requires a non-WMO declaration from you, for example, when publishing your research article in a scientific journal. Both of these conditions aren't entirely clear cut for FGB researchers, so the general recommendation is to get a non-WMO declaration when your research has a medical/clinical focus, but otherwise doesn't meet the conditions to fall under the WMO (i.e. your research does not involve participants undergoing procedures or being required to follow specific rules of behaviour). 
 
-<h3> How to obtain a non-WMO declaration </h3>
+<h2> How to obtain a non-WMO declaration </h2>
 
 For the vast majority of cases, FGB researchers will submit their request for a non-WMO declaration to the Amsterdam UMC's METc. A non-WMO declaration request must be submitted to the [Amsterdam UMC's Research Manager portal](https://metc.amsterdamumc.org/research-manager/){target="_blank"}. Relevant information for your submission can be found on the following pages:
 
@@ -29,7 +28,7 @@ The information on the submission procedures and requirements is written with AU
   + Complaints (*Klachtenregeling*) are generally handled via the individual research team, so use the appropriate research team contact information there.
 
 
-<h3> Things you should be aware of </h3>
+<h2> Things you should be aware of </h2>
 
 * You will need to pay the METc for their assessment of your research. Because our organization is external to the AUMC, the costs for FGB researchers are can be [€500-600](https://metc.amsterdamumc.org/tarieven/niet-wmo/){target="_blank"}. 
     + You are expected to cover these costs with your project budget, therefore its important to assess if you need a non-WMO declaration **during your grant application**
@@ -41,7 +40,7 @@ The information on the submission procedures and requirements is written with AU
   + In the general information of your Research Manager submission
 
 
-<h3 id="notAppl"> Things you don't need to worry about </h3>
+<h2 id="notAppl"> Things you don't need to worry about </h2>
 
 The information on the non-WMO processes is written with AUMC researchers in mind, which means that some information is not applicable to FGB researchers. The following are some things you can ignore.
 

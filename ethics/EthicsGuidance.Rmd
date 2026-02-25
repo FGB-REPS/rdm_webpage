@@ -96,11 +96,11 @@ output:
 \
 \
 
-Almost all research conducted within FGB will require some form of ethical review. Unfortunately, not all FGB research projects can be reviewed by the faculty's [Scientific and Ethical Review Board (VCWE)](https://vu.nl/en/employee/research-support/the-scientific-and-ethical-review-board-vcwe){target="_blank"} because certain Dutch laws (primarily, the [WMO](https://english.ccmo.nl/investigators/legal-framework-for-medical-scientific-research/your-research-is-it-subject-to-the-wmo-or-not){target="_blank"}) require that some forms of clinical research *must* be reviewed by a [Medical Ethical Review Committee (METc)](https://metc.amsterdamumc.org/){target="_blank"}. In other cases, a clinical research project may not require ethical review by a METc, but will require a declaration from a METc that the study is not subject to the WMO.
+Almost all research conducted within FGB will require some form of ethical review. Unfortunately, not all FGB research projects can be reviewed by the faculty's [Scientific and Ethical Review Board (VCWE)](https://vu.nl/en/employee/research-support/the-scientific-and-ethical-review-board-vcwe){target="_blank"} because certain Dutch laws (primarily, the [WMO](https://english.ccmo.nl/investigators/legal-framework-for-medical-scientific-research/your-research-is-it-subject-to-the-wmo-or-not){target="_blank"}) require that some forms of clinical research *must* be reviewed by a [Medical Ethical Review Committee (METC)](https://metc.amsterdamumc.org/){target="_blank"}. In other cases, a clinical research project may not require ethical review by a METC, but will require a declaration from a METC that the study is not subject to the WMO (i.e. a non-WMO declaration).
 
-Determining which situation applies to you can be confusing. Additionally, if you determine that you will need METc review or a non-WMO declaration, the process can be quite complicated for FGB researchers because whichever METc you submit your research to, it will be an organization that is external to the VU. The following guide aims to help you determine which ethical review process(es) apply to you and, once that's known, help you navigate the applicable ethical review process. 
+Determining which situation applies to you can be confusing. Additionally, if you determine that you will need METC review or a non-WMO declaration, the process can be quite complicated for FGB researchers because whichever METC you submit your research to, it will be an organization that is external to the VU. The following guide aims to help you determine which ethical review process(es) apply to you and, once that's known, help you navigate the applicable ethical review process. 
 
-NB: The guidance for WMO research and non-WMO declarations focuses on the METc of the Amsterdam UMC since this will, in most cases, be the METc that you are submitting your research to. The guidance should be transferable to other METc's if that's necessary for your situation, but keep in mind that procedures could differ slightly outside of the AUMC context.
+NB: The guidance for WMO research and non-WMO declarations focuses on the METC of the Amsterdam UMC since this will, in most cases, be the METC that you are submitting your research to. The guidance should be transferable to other METC's if that's necessary for your situation, but keep in mind that procedures could differ slightly outside of the AUMC context.
 
 \
 
@@ -124,6 +124,7 @@ NB: The guidance for WMO research and non-WMO declarations focuses on the METc o
 \
 <button class="inline-button btn btn-primary btn-sm" onclick="window.open('WMOguidance.html','_blank');">Open WMO guidance on new page</button>
 
+# WMO requirements for FGB research
 
 ```{r, child='text/WMOtext.Rmd', echo=FALSE, results='asis'}
 ```
@@ -136,6 +137,8 @@ NB: The guidance for WMO research and non-WMO declarations focuses on the METc o
 \
 \
 <button class="inline-button btn btn-primary btn-sm" onclick="window.open('nonWMOguidance.html','_blank');">Open non-WMO guidance on new page</button>
+
+# Obtaining a non-WMO declaration for FGB research
 
 ```{r, child='text/nonWMOtext.Rmd', echo=FALSE, results='asis'}
 ```
@@ -150,6 +153,7 @@ NB: The guidance for WMO research and non-WMO declarations focuses on the METc o
 \
 <button class="inline-button btn btn-primary btn-sm" onclick="window.open('VCWEguidance.html','_blank');">Open VCWE guidance on new page</button>
 
+# Standard FGB ethical review process 
 
 ```{r, child='text/VCWEtext.Rmd', echo=FALSE, results='asis'}
 ```
@@ -159,7 +163,7 @@ NB: The guidance for WMO research and non-WMO declarations focuses on the METc o
 
 <div id = "quizGuidance" class = "section level2 guidance"> <!-- wrote id and class in one html div because issues with rendering were impacting how divs were working in output html -->
 
-## Let's figure it out! 
+# Let's figure it out! 
 
 
 <div class = "small-text">
@@ -282,12 +286,14 @@ Overall results after quiz completion:
 <div class='detailsEx'>
 Includes anything related to etiology, pathogenesis, signs & symptoms, diagnostics, disease prevention, disease outcomes or treatment of illness. 
 
+<!--
 For example:
 
 * Need
 * Some 
 * Good 
 * Examples
+-->
 
 </div>
 </details>
@@ -332,7 +338,7 @@ For example:
 For example:
 
   * Following a specific diet and/or exercise regiment
-  * Wearing cumbersome ambulatory monitoring devices for several days
+  * Continuously wearing cumbersome ambulatory monitoring devices for several days
   * Frequent (multiple times per day) self-reporting in a journal for an extended period (several weeks or months)
   
 </div>
@@ -483,7 +489,7 @@ For example:
 
 <button id="defWMOback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
 
-Based on your responses, the WMO applies to your research and you *will* need to undergo review with an METc (for FGB, this is usually metc@amsterdamumc.nl). Below you can find more information on the WMO review processes and how they apply to you as an FGB researcher.
+Based on your responses, the WMO applies to your research and you *will* need to undergo review with a METC (for FGB, this is usually metc@amsterdamumc.nl). Below you can find more information on the WMO review processes and how they apply to you as an FGB researcher.
 
 <button class="inline-button btn btn-primary btn-sm" onclick="window.open('WMOguidance.html','_blank');">Open WMO guidance on new page</button>
 
@@ -499,7 +505,7 @@ Based on your responses, the WMO applies to your research and you *will* need to
 
 <button id="possWMOback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
 
-Based on your responses, it is *likely*, but not certain, that the WMO applies to your research. It's a good idea to follow-up with the METc (for FGB, this is usually metc@amsterdamumc.nl) to clarify if your research does in fact fall under the WMO. It's likely that even if the WMO does not apply to your research, you may still require a non-WMO declaration. The METc can also advise you on this. Below you can find more information on the WMO review and non-WMO declaration processes, and how they apply to you as an FGB researcher.
+Based on your responses, it is *likely*, but not certain, that the WMO applies to your research. It's a good idea to follow-up with a METC (for FGB, this is usually metc@amsterdamumc.nl) to clarify if your research does in fact fall under the WMO. It's likely that even if the WMO does not apply to your research, you may still require a non-WMO declaration. The METC can also advise you on this. Below you can find more information on the WMO review and non-WMO declaration processes, and how they apply to you as an FGB researcher.
 
 
 <details>
@@ -532,7 +538,7 @@ View non-WMO Guidance
 
 <button id="defNonWMOback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
 
-Based on your responses, it is *very likely* that you *will* need a non-WMO declaration, but that your research is otherwise not subject to the WMO. You can check with the METc (for FGB, this is usually metc@amsterdamumc.nl) if you disagree and require clarification. Be aware that even if you get a non-WMO declaration, you will still need to do an ethical review with FGB's ethical committee, the VCWE. Below you can find more information on the non-WMO declaration and VCWE ethical review processes, and how they apply to you as an FGB researcher.
+Based on your responses, it is *very likely* that you *will* need a non-WMO declaration, but that your research is otherwise not subject to the WMO. You can check with a METC (for FGB, this is usually metc@amsterdamumc.nl) if you disagree and require clarification. Be aware that even if you get a non-WMO declaration, you will still need to do an ethical review with FGB's ethical committee, the VCWE. Below you can find more information on the non-WMO declaration and VCWE ethical review processes, and how they apply to you as an FGB researcher.
 
 <details>
 <summary class="summaryHeader">
@@ -566,7 +572,7 @@ View VCWE Guidance
 
 <button id="possNonWMOback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
 
-Based on your responses, your situation is not entirely clear. Your situation seems to suggest that the WMO does *not* apply to your research, but that you may *still need* a non-WMO declaration. You should check with the METc (for FGB, this is usually metc@amsterdamumc.nl) to clarify your situation. Be aware that even if your research is not subject to the WMO and regardless of whether you obtain a non-WMO declaration, you will still need to do an ethical review with FGB's ethical committee, the VCWE. Below you can find more information on the WMO review, non-WMO declaration and VCWE ethical review processes, and how they apply to you as an FGB researcher.
+Based on your responses, your situation is not entirely clear. Your situation seems to suggest that the WMO does *not* apply to your research, but that you may *still need* a non-WMO declaration. You should check with a METC (for FGB, this is usually metc@amsterdamumc.nl) to clarify your situation. Be aware that even if your research is not subject to the WMO and regardless of whether you obtain a non-WMO declaration, you will still need to do an ethical review with FGB's ethical committee, the VCWE. Below you can find more information on the WMO review, non-WMO declaration and VCWE ethical review processes, and how they apply to you as an FGB researcher.
 
 <details>
 <summary class="summaryHeader">
@@ -634,7 +640,7 @@ Based on your responses, the WMO does *not* apply to your research nor do you ne
 <button id="possVCWEback" class="manual-back btn btn-primary btn-sm">Back to quiz</button>
 
 
-Based on your responses, it is *likely*, but not certain, that the WMO does *not* apply to your research and you also likely *do not* need to complete a non-WMO declaration. It's a good idea to follow-up with the METc (for FGB, this is usually metc@amsterdamumc.nl) to clarify your situation. Be aware that even if your research is not subject to the WMO and regardless of whether you obtain a non-WMO declaration, you will still need to do an ethical review with FGB's ethical committee, the VCWE. Below you can find more information on the WMO review, non-WMO declaration and VCWE ethical review processes, and how they apply to you as an FGB researcher.
+Based on your responses, it is *likely*, but not certain, that the WMO does *not* apply to your research and you also likely *do not* need to complete a non-WMO declaration. It's a good idea to follow-up with a METC (for FGB, this is usually metc@amsterdamumc.nl) to clarify your situation. Be aware that even if your research is not subject to the WMO and regardless of whether you obtain a non-WMO declaration, you will still need to do an ethical review with FGB's ethical committee, the VCWE. Below you can find more information on the WMO review, non-WMO declaration and VCWE ethical review processes, and how they apply to you as an FGB researcher.
 
 <details>
 <summary class="summaryHeader">

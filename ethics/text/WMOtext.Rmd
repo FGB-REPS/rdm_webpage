@@ -1,9 +1,9 @@
 
 <!-- use html tags rather than markdown # tags for headers in all child text pages otherwise formatting of main ethicsGuidance page gets messed up -->
 
-<h2> WMO requirements for FGB research </h2>
 
-<h3> When does the WMO apply to research </h3>
+
+<h2> When does the WMO apply to research </h2>
 
 The Medical Research Involving Humans Act (a.k.a. *Wet medisch-wettenschappelijk onderzoek met mensen* [WMO](https://english.ccmo.nl/investigators/legal-framework-for-medical-scientific-research/your-research-is-it-subject-to-the-wmo-or-not){target="_blank"}) applies to research if:
 
@@ -23,7 +23,7 @@ However, this guidance can be confusing or unclear when applied to FGB research,
 </div>
 
 
-<h3> The WMO review process for FGB researchers </h3>
+<h2> The WMO review process for FGB researchers </h2>
 
 <!-- Add in once relevant info is summarized
 <div class="subsectionIndented">
@@ -33,7 +33,7 @@ However, this guidance can be confusing or unclear when applied to FGB research,
 -->
 
 <div class="subsectionIndented">
-<h4> &#10147;Review the submission requirements </h4>
+<h3> &#10147;Review the submission requirements </h3>
 
 The AUMC METC has strict requirements for what must be submitted for WMO ethical review and how these materials are submitted. Make sure to review the following:
 
@@ -47,7 +47,7 @@ The AUMC METC has strict requirements for what must be submitted for WMO ethical
 </div>
 
 <div class="subsectionIndented">
-<h4 id="deviate"> &#10147;Deviate from standard submission procedure where necessary </h4>
+<h3 id="deviate"> &#10147;Deviate from standard submission procedure where necessary </h3>
 
 The information on the submission procedures and requirements is written with AUMC researchers in mind. The following deviations on the process apply to you as an FGB researcher:
 
@@ -61,7 +61,7 @@ The information on the submission procedures and requirements is written with AU
 
 </div>
 
-<h3 id="aware"> Things you should be aware of </h3>
+<h2 id="aware"> Things you should be aware of </h2>
 
 * Ensure that the number of participants you plan to include is consistent across all submitted documents. For WMO research this will generally be stated in:
   + Your research protocol
@@ -70,7 +70,7 @@ The information on the submission procedures and requirements is written with AU
   + Bear in mind that the BROK course was created for UMC researchers, meaning some aspects may still not apply to you as an FGB researcher. When in doubt, contact [research.data.fgb@vu.nl] for support.
 
 <div class="subsectionIndented">
-<h4 id="insurance"> &#10147;Insurance for WMO research within FGB </h4>
+<h3 id="insurance"> &#10147;Insurance for WMO research within FGB </h3>
 
 The AUMC METC will determine if your WMO research requires participants' insurance. If you believe that your research *does not* pose risks to your participants, you must include a written request to the AUMC METC for exemption from this insurance requirement. This written request *must be included in the initial submission of your standard research dossier*. Regardless of whether your research requires participant insurance, you are required to include proof of liability insurance in your submission to the METC. And if you are fairly certain that your research *will* required participants' insurance, you need to provide a declaration on the insurance that the VU will provide for this. For proof of either type of insurance, contact research.data.fgb@vu.nl for a copy of the relevant documentation.
 
@@ -80,7 +80,7 @@ If you do not request an exemption or the AUMC METC refuses your request for an 
 </div>
 
 <div class="subsectionIndented">
-<h4 id="costs"> &#10147;Costs of WMO research and budgeting </h4>
+<h3 id="costs"> &#10147;Costs of WMO research and budgeting </h3>
 
 WMO research involves many extra costs that need to be estimated and accounted for in your budgeting, especially if you are obtaining funding from an external grant provider. The primary costs that you need to take into account are:
 
@@ -88,7 +88,7 @@ WMO research involves many extra costs that need to be estimated and accounted f
 * The costs of participants' insurance. If your research requires [participants' insurance](#insurance), there will be additional costs per participant included in the study. For 2026, this cost is €45 per participant.
 </div>
 
-<h3 id="notAppl"> Things you don't need to worry about </h3>
+<h2 id="notAppl"> Things you don't need to worry about </h2>
 
 
 The information on the WMO reviews is written with AUMC researchers in mind, which means that some information is not applicable to FGB researchers. The following are some things you can ignore.
