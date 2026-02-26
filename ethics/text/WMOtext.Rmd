@@ -126,7 +126,7 @@ if (typeof goToQuizSetup === 'undefined') {
   document.addEventListener('click', function(event) {
     // Check if the thing clicked has our class
     if (event.target && event.target.classList.contains('goToQuiz')) {
-      window.open('ethicsGuidance.html?target=quiz', '_blank');
+      window.open('EthicsGuidance.html?target=quiz', '_blank');
     }
   });
 
