@@ -495,7 +495,7 @@ Based on your responses, the WMO applies to your research and you *will* need to
 
 <div class = "guidance outcome">
 
-## WMO review is potentially required {#possWMOoutcome}
+## WMO review is probably required {#possWMOoutcome}
 
 <button id="possWMOback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
 
