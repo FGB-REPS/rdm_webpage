@@ -80,6 +80,7 @@ table tr td:nth-of-type(2) {
 
 | | |
 | -- | ----------------------- |
+| 2026/04/16; Jessica Hrudey | [V1.1 of risk app](https://risk_levels_app.rshiny.labs.vu.nl/){target="_blank"} released. Updates include additional questions related to confidentiality concerns and an option to download a partially filled in data classification from the app inputs |
 | 2026/03/24; Jessica Hrudey | WMO guidance page and updates to risk app with data classification download option are nearing completion. Should be added to guidance pages by end of month |
 | 2026/01/26; Jessica Hrudey | Updated [yoda instructions](../rdm/tools/YODAInstructionsFGB.html){target="_blank"} to include alternative options for handling data access on YODA due to WebDAV being a more stable option than was initially suggested |
 | 2025/11/27; Jessica Hrudey | Updated [archiving guidelines](../rdm/archiving/ArchivingGuidelinesFull.html){target="_blank"} & [summary](../rdm/archiving/ArchivingGuidelinesSummary.html){target="_blank"}, [yoda instructions](../rdm/tools/YODAInstructionsFGB.html){target="_blank"} and [FAQ](../FAQ/index.html){target="_blank"} about PURE not offering auto-ingest of metadata and need for manual creation of PURE registration, but option to import metadata from YODA. |
