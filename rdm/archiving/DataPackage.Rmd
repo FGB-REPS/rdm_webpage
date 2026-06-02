@@ -1,9 +1,12 @@
 ---
-title: "Archiving @ FGB: Archiving Packages"
-date: "2022-12-06; Version 1.1"
+title: "Archiving @ FGB: Data Packages"
+date: "`r Sys.Date()`; Version 1.1"
 output: 
   html_document:
     theme: cerulean
+    anchor_sections: TRUE
+    includes: 
+      after_body: ../../footer.html
 ---
 
 ## {#CSS}
@@ -120,14 +123,12 @@ summary {
 
 
 
-NEED TO CHANGE NAME TO DATA PACKAGES!!!
-
 
 \ <!--this adds a space  -->
 
 ## {#intro}
 
-When it comes time to [archive](../definitions/Definitions.html#archivingdata){target="_blank"} your research data, you will need to archive more than just the data: you'll need to prepare an [archiving package](../definitions/Definitions.html#archivingpackage){target="_blank"} which contains not just the data but the information necessary to interpret the data, as well as a record of what you did with the data. This guide will help you determine what additional information should be archived with your data by providing advice for various kinds of data. The information isn't exhaustive, so if in doubt, include anything you think would be necessary for someone else to recreate your research from scratch.  
+When it comes time to [archive](../definitions/Definitions.html#archivingdata){target="_blank"} your research data, you will need to archive more than just the data: you'll need to prepare a [data package](../definitions/Definitions.html#datapackage){target="_blank"} which contains not just the data but the information necessary to interpret the data, as well as a record of what you did with the data. This guide will help you determine what additional information should be archived with your data by providing advice for various kinds of data. The information isn't exhaustive, so if in doubt, include anything you think would be necessary for someone else to recreate your research from scratch.  
 
 <!-- I've commented this out for now because I don't have a good page to reference to about publishing data. So will just have to trust that researchers understand the difference. Too much text will be confusing-->
 
