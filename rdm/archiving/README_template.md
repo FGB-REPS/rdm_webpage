@@ -172,7 +172,18 @@ is stored elsewhere]
 ## Open data
 [Explain whether the data have been openly published for anyone to download or whether the data
 can only be shared upon request. Explain the reason for this choice]
-[If data are available upon request, describe briefly what must be done to request and gain access]
+
+### Access conditions 
+[If (some of) the data are available upon request, describe briefly what must be done to request and gain access]
+[At a minimum, address the following statements and include your reasoning]
+
+* Under what conditions may the data be reused?
+* May the data be used for purposes outside of research?
+* May the data be linked with other data sources?
+* May the data be used for educational purposes?
+* What, if any, are the limitations of the reuse of the data? [e.g. data cannot be reused outside the EEA, only a subsection of the data may be reused]
+* What documents are required from the individual requesting access?
+* What, if any, are the costs associated with reusing the data?
 
 
 
