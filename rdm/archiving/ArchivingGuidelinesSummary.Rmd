@@ -1,6 +1,6 @@
 ---
 title: "Archiving @ FGB: Summary of FGB Archiving Guidelines"
-date: "`r Sys.Date()`; Version 2.3"
+date: "`r Sys.Date()`; Version 2.4"
 output: 
   html_document:
     theme: cerulean
@@ -141,7 +141,7 @@ class so that if looks like a header within the cerulean theme*/
 
 The following is a summary of the [FGB Implementation of the National Guidelines for Archiving of Academic Research for Faculties of Behavioural and Social Sciences](ArchivingGuidelinesFull.html){target="_blank"}. This summary highlights the major concerns when archiving data; in-depth explanation is found in the full guidelines.
 
-**NB: The guidelines summarized here refer specifically to [archiving](../definitions/Definitions.html#archivingdata){target="_blank"} data for preservation purposes; they do not address the complexities involved with the [reuse](../definitions/Definitions.html#reusedata){target="_blank"} of data by third parties.**
+**NB: The guidelines summarized here refer specifically to [data archiving](../definitions/Definitions.html#archivingdata){target="_blank"} and some elements of [data publishing](../definitions/Definitions.html#publishingdata){target="_blank"}, but they do not address the complexities involved with the [reuse](../definitions/Definitions.html#reusedata){target="_blank"} of data by third parties.**
 
 -------------------------
 
@@ -205,7 +205,7 @@ Summarized from guideline sections: [1.1](ArchivingGuidelinesFull.html#section1.
 
 <!--Can also delete or modify this following statement when the more detailed page on picking an archive is complete
 -->
-The vast majority of data used within the faculty is considered [personal data](../definitions/Definitions.html#personaldata){target="_blank"} and therefore should be stored in a secure archive. The default archive at FGB for most situations and data types is [YODA](../tools/YODAInstructionsFGB.html){target="_blank"}. Following this [YODA archiving checklist](../../Images/meta_archiving_guide_yoda_v2.1.docx) to ensure that you are archiving everything that needs to be archived in YODA in the correct way.
+The vast majority of data used within the faculty is considered [personal data](../definitions/Definitions.html#personaldata){target="_blank"} and therefore should be stored in a secure archive. The default archive at FGB for most situations and data types is [YODA](../tools/YODAInstructionsFGB.html){target="_blank"}. Following this [YODA archiving checklist](../../Images/meta_archiving_guide_yoda.docx) to ensure that you are archiving everything that needs to be archived in YODA in the correct way.
 
 * If your data are low enough risk and/or can be [de-identified](../../Security/Deidentification.html){target="_blank"}[*](#deIDnote) enough that they fall under the "Green" category from the [Privacy Risk categorization](../../Security/PrivacyRisks.html){target="_blank"}, then you can use [DataverseNL](https://dataverse.nl/dataverse/vuamsterdam){target="_blank"} instead of YODA if YODA does not meet your requirements.
 * If your data are low enough risk and/or can be [de-identified](../../Security/Deidentification.html){target="_blank"}[*](#deIDnote) enough that they fall under the "Blue" category from the [Privacy Risk categorization](../../Security/PrivacyRisks.html){target="_blank"}, then you can use [DataverseNL](https://dataverse.nl/dataverse/vuamsterdam){target="_blank"} or an external [data repository](https://www.re3data.org/){target="_blank"} instead of YODA if YODA does not meet your requirements.
