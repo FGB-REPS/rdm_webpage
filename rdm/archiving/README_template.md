@@ -96,6 +96,9 @@ section if you opt to include this information in the "Content of data package" 
 ### Role of data collector
 [The role of this person within the research team, e.g. researcher, research assistant,
 laboratory tech, data manager etc.]
+[Use the DataCite terminology when describing this role, where possible: 
+[https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/contributorType/](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/contributorType/)]
+
 
 ### Persistent identifier of data collector
 [If available, e.g. ORCID]

@@ -172,7 +172,7 @@ _NB2: Almost all data about human subjects are considered personal data under th
 <div id="NB">
 _NB1: Publishing data does not mean that the data must be open access or publicly accessible. Access to the data can be restricted and granted upon valid request._ 
 
-**More information on types of publishing**
+_NB2: Data underlying a [published research article must be published](../archiving/ArchivingGuidelinesFull.html#purereg){target="_blank"} (in addition to being [archived](#archivingdata)) so that, at a minimum, the metadata can be found and reviewed by others._
 
 #### Open data publishing: {#openPubl}
 
@@ -187,10 +187,6 @@ _NB1: Publishing data does not mean that the data must be open access or publicl
 * Published data are not available for reuse under any circumstances, often due to privacy concerns, ethical considerations, or intellectual property restrictions. However, metadata and descriptions of the data are available openly online.
 
 
-
-\
-
-_NB2: Data underlying a [published research article must be published](../archiving/ArchivingGuidelinesFull.html#purereg){target="_blank"} (in addition to being [archived](#archivingdata)) so that, at a minimum, the metadata can be found and reviewed by others._
 </div>
 
 
