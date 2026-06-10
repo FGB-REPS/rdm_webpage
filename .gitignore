@@ -28,10 +28,10 @@ Policies/FGB_Policy_Positions_GDPR.pdf
 
 # files to ignore
 
-archiving/questions_for_datastewards.txt
-archiving/oldArchPack.Rmd
-archiving/data/*.xlsx
-training/training_events.xlsx
+rdm/archiving/questions_for_datastewards.txt
+rdm/archiving/oldArchPack.Rmd
+rdm/archiving/data/*.xlsx
+rdm/training/training_events.xlsx
 ethics/notes
 
 # folders to ignore

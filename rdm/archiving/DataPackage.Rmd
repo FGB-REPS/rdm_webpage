@@ -1,6 +1,6 @@
 ---
 title: "Archiving @ FGB: Data Packages"
-date: "`r Sys.Date()`; Version 1.1"
+date: "`r Sys.Date()`; Version 1.2"
 output: 
   html_document:
     theme: cerulean
@@ -18,6 +18,14 @@ output:
 body {
   font-family: 'Roboto', sans-serif;
 }
+
+/* the follow CSS code allows me to take the automatically included anchor sections (that I made active in the YAML with anchor_sections: TRUE) and change the icon that is shown from a hash to a link symbol from the bootstrap icon library */
+
+a.anchor-section::before {
+    content: "&#xe144";
+    font-family: 'Glyphicons Halflings';
+}
+
 
 /* 2022-10-11: I made the max-width on this particular document 2000px when all the others were at 1600px; this is because I noticed an issue with the positioning of the tabsets (they aren't right next to each other as desired) when in full screen mode on the wide screen monitor. Will check if this is an issue on other pages and adjust max-width as necessary */
 
@@ -128,731 +136,216 @@ summary {
 
 ## {#intro}
 
-When it comes time to [archive](../definitions/Definitions.html#archivingdata){target="_blank"} your research data, you will need to archive more than just the data: you'll need to prepare a [data package](../definitions/Definitions.html#datapackage){target="_blank"} which contains not just the data but the information necessary to interpret the data, as well as a record of what you did with the data. This guide will help you determine what additional information should be archived with your data by providing advice for various kinds of data. The information isn't exhaustive, so if in doubt, include anything you think would be necessary for someone else to recreate your research from scratch.  
+When [it's time](ArchivingGuidelinesSummary.html#whenarchive){target="_blank"} to [archive](../definitions/Definitions.html#archivingdata){target="_blank"} your research data, you'll need to prepare a [data package](../definitions/Definitions.html#datapackage){target="_blank"} which contains not just the research data but the information necessary to interpret the data, as well as a record of what you did with the data. The following guide will help you determine what should be included in a data package depending on the kind(s) of data you are working with.
 
 <!-- I've commented this out for now because I don't have a good page to reference to about publishing data. So will just have to trust that researchers understand the difference. Too much text will be confusing-->
 
 <!--**NB: The guidance in this document is about [archiving data](../definitions/Definitions.html#archivingdata){target="_blank"} not [publishing data](../definitions/Definitions.html#publishingdata){target="_blank"}. Further guidance on publishing data will be available soon** -->
 
-<!--**WILL LINK TO PUBLISHING DATA PAGE WHEN I CREATE ONE**-->
+<!--**WILL LINK TO PUBLISHING DATA PAGE WHEN CREATED**-->
 
-<!--I'm going to comment the following section out because I think it's superfluous-->
-<!--In general, the three things you need to include in your archiving package are:
 
-1. Documentation 
-2. Data
-3. Code (if applicable) **INCLUDE CROSS-REF TO TIPS ON WRITING CLEAR CODE WHEN READY**-->
+## Standard data package requirements {#standard}
 
-## Standard archiving package requirements {#standard}
+Most data packages created by FGB researchers will be archived in [YODA](https://rdm.vu.nl/tools/yoda/cost_access.html){target="_blank"}. Using this [YODA archiving checklist](../../Images/meta_archiving_guide_yoda.docx) will help you meet most of your standard requirements.
 
 ### Standard documentation
 
-Some forms of documentation should be included with every archiving package, regardless of the type of data. This includes:
-
-<!-- Will need to update the information on the general README after YODA is implemented and the full archiving guidelines are updated with regards to interpreting what a README should be
-per nov 2022 have created a basic README.md based on the requirements of the archiving guidelines and looking at what is required by YODA. Will update further as YODA is implemented, to deal with
-the overlaps.
-
-Will also need to decide on if I still want to incorporate the 4TU ReadMe recommendations since these go beyond basic README requirements; investigate further once YODA is implemented.
--->
+The data package must include the following documentation:
 
 * A [README file](ArchivingGuidelinesFull.html#subsection9){target="_blank"}
-  + Some good practices for README files can be found [here](https://data.4tu.nl/info/fileadmin/user_upload/Documenten/Guidelines_for_creating_a_README_file.pdf){target="_blank"}
-    + NOTE: the "data-specific information" in these recommendations can be better documented in a [codebook](../definitions/Codebooks.html){target="_blank"}
-* A [logbook or laboratory notebook](../definitions/Definitions.html#logbook) or other form of documentation that describes the [provenance](https://libguides.vu.nl/rdm/data-provenance){target="_blank"} of the data
-* Description of the research design and process, such as:
-  + Research manuscript
-    + A manuscript isn't necessary if there isn't (yet) a research article, for example, if you are archiving the data for other [reasons](ArchivingGuidelinesFull.html#section1.1){target="_blank"}
+  + [Download FGB README template](https://fgb-rdm.nl/rdm/archiving/README_template.md){target="_blank"}
+* A record of your [research data's provenance](https://rdm.vu.nl/guides/process-and-analyse.html#data-provenance){target="_blank"}, e.g.:
+  + [A logbook or laboratory notebook](../definitions/Definitions.html#logbook)
+* Description of the research design and process, e.g.:
+  + Research manuscript, if available
   + Research protocol/pre-registration
   + Research proposal
+* A VU custom license if the data package will be [restricted](https://fgb-rdm.nl/rdm/definitions/Definitions.html#restrPubl){target="_blank"} or [closed](https://fgb-rdm.nl/rdm/definitions/Definitions.html#closedPubl){target="_blank"}
+  + [VU Restricted License](https://rdm.vu.nl/tools/yoda/workflow_metadata_licence.html#restricted){target="_blank"}
+  + [VU Closed License](https://rdm.vu.nl/tools/yoda/workflow_metadata_licence.html#closed){target="_blank"}
 
 ### Standard data requirements
 
-There are some standard considerations for how any type of data should be handled in your archiving package:
+The data package that will be archived must include: 
 
-* Raw, unadulterated data must always be archived
-  + If existing data are reused, rather than newly collected raw data, there must be a clear and permanent reference to the source of that data and the version used
-* The processed data ultimately used for the research analysis must also be archived
-  + These data files must be named using a logical naming system, for example with a date and version number. Do not name your data files "finalversion_final_final"!
-  + If your data files are very large, limiting where you can archive the data, contact research.data.fgb@vu.nl for advice
-* Whenever possible save all data files in [open source and/or preferred formats](https://ukdataservice.ac.uk/learning-hub/research-data-management/format-your-data/recommended-formats/){target="_blank"}
-  + If you conducted your research analysis using a proprietary format, archive that version of data, as well as a copy of the data in an open source or other preferred format
+* The original raw data that you collected
+  + If existing data were reused, include a link to the permanent identifier (e.g. DOI) of the data used (including the version, if applicable)
+* The processed data used in the research analysis
+
+#### Additional data considerations
+
+* Whenever possible, the data files in the data package must be in [open source and/or preferred formats](https://ukdataservice.ac.uk/learning-hub/research-data-management/format-your-data/recommended-formats/){target="_blank"}
+  + If your data were in a proprietary format (e.g. xls or sav files), include a copy of the data in that format
+* Use logical naming systems for your files and folders
+  + &#x2705; "analysis_data_v1.2_20260505.csv"
+  + &#x274C; "finalversion_final_final.sav"
+* If you plan to [openly publish](https://fgb-rdm.nl/rdm/definitions/Definitions.html#publishingdata){target="_blank"} (some of) the research data, organize your data package so that only the data that *can* be openly published *is* openly published.
+  + When you have some data that will be openly published and some that will be restricted or closed, it's best to create more than one data package and cross-reference them to each other in your README/metadata.
+
+
 
 \
 
 
-## Data-specific archiving package requirements {#dataspecificreq}
-
-### {.tabset .tabset-dropdown}
-
-#### Administrative data
-
-<!-- need to use h5 tag (which is the tag for the titles for this section at higher level tabsets) for the following titles because the markdown options with the #'s can't be used; that would mess up the levels of the subsetting of the tabsets -->
 
 
-<h5> Documentation </h5> 
-<details>
-<summary >What to include?</summary>
 
 
-* Copy of informed consent form and information letter provided to participants
-  + If applicable, include a copy of any additional materials used to correspond with research participants, such as invitations or reminders for follow-up measurements
 
-* Detailed description of the recruitment processes, if not sufficiently explained in the [standard documentation](#standard)
 
-* [Codebook](../documentation/Codebooks.html){target="_blank"} for accurate interpretation of your administrative [data](#admindata)
-<div class="NB">
-NB: This only applies if have digital administrative data
+## Data-specific data package requirements {#dataspecificreq}
+
+Different types of data used in a various kinds of research will have specific requirements when included in a data package. Use the following search bar for look for your research or data type to get more information on what is required for your specific data. If you aren't sure, you can review all of the specifications by clicking "Show All". If you still are not sure or cannot find information specific to your situation, please contact [research.data.fgb@vu.nl](mailto:research.data.fgb@vu.nl).
+
+
+``` {r, echo=FALSE}
+
+
+library(jsonlite)
+
+# read in data_documentation table
+
+csv_data <- read.csv("data/data_documentation.csv", stringsAsFactors = FALSE)
+
+# convert to JSON
+
+json_data <- jsonlite::toJSON(csv_data)
+
+
+```
+
+
+
+<div style="margin: 20px 0; text-align: center;">
+  <input type="text" id="searchBar" placeholder="Search research or data types..." 
+         style="width: 60%; padding: 10px; font-size: 16px;"
+         onkeypress="handleKeyPress(event)">
+  <button onclick="performSearch()" style="padding: 10px 20px;">Search</button>
+  <button onclick="performSearch(true)" style="padding: 10px 20px;">Show All</button>
 </div>
 
-* Other relevant administrative documents, for example:
-  + Documentation of ethical approval
-  + Record(s) of research grant application and approval
-  + Contracts/agreements with research funders and other third parties, such as those listed [here](https://www.ixa.nl/for-researchers/legal-affairs/){target="_blank"}
-  + Conflict of interest statements
-  + Declaration of non-WMO research status
-  + Approval for creation of a human tissue bio-bank
-<div class="NB_alt">
-NB: The above administrative documents may or may not apply to your research. Additional information on this topic can be found [here](https://aph-qualityhandbook.org/reporting-review-knowledge-utilization/archiving-open-data/records-retention/){target="_blank"}.
-<br>NB2: If any of the above documentation has already been archived elsewhere, you can simply refer to that location in your [README file](#standard)
-</div>
+<div id="resultsContainer"></div>
 
-<!-- need to use h5 tag (which is the tag for the titles for this section at higher level tabsets) for the following titles because the markdown options with the #'s can't be used; that would mess up the levels of the subsetting of the tabsets -->
+<script>
 
-</details>
+const data = '`r json_data`';
+const parsedData = JSON.parse(data);
 
-<h5 id="admindata"> Data </h5> 
-<details>
-<summary >What to include?</summary>
+// create map of links to insert into html
 
-Administrative data in this context means the data you collect on your research subjects that is only used for administrative purposes. Generally, this refers to:
-
-1. [Directly identifying data](../definitions/Definitions.html#directID){target="_blank"} which are used to:
-    + Re-identify the research subjects in your [pseudonymized](../definitions/Definitions.html#pseuddata) research data
-    + Maintain communication with research subjects, if applicable
+const linkMap = {
+  "BIDS": "https://bids-specification.readthedocs.io/en/stable/introduction.html",
+  "BIDS (behavioral)": "https://bids-specification.readthedocs.io/en/stable/modality-specific-files/behavioral-experiments.html",
+  "CDISC": "https://www.cdisc.org/standards",
+  "Codebook/data dictionary": "https://fgb-rdm.nl/rdm/documentation/Codebooks.html",
+  "Coding framework": "https://fgb-rdm.nl/rdm/documentation/Codebooks.html#codebooks-for-qualitative-data",
+  "DDI": "https://ddialliance.org/product_overview",
+  "Dublin Core": "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/",
+  "HL7 FHIR": "https://www.hl7.org/fhir/overview.html",
+  "ISO 19115": "https://docs.geostandaarden.nl/md/mdprofiel-iso19115/",
+  "MIAME": "https://www.ncbi.nlm.nih.gov/geo/info/MIAME.html",
+  "MINSEQE": "https://doi.org/10.5281/zenodo.5706412",
+  "OpenSim": "https://opensimconfluence.atlassian.net/wiki/spaces/OpenSim/pages/53090607/Musculoskeletal+Models#OpenSim-Core-Models",
+  "SensorML": "https://www.ogc.org/standards/sensorml/",
+  "TEI": "https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html"
   
-2. Data that serves as evidence that consent was validly obtained from your participants
-    + Consent data does not necessarily include directly identifying data. It is not a requirement of the [GDPR](https://gdpr-info.eu/art-7-gdpr/){target="_blank"} that name and signature be collected as part of consent procedures and in some cases, it may be more appropriate to collect consent "anonymously" (see below)
+};
 
-3. Data documenting participation rates of research subjects, particularly for studies with repeated measurements. This may include:
-  + When and how a participant was invited to participate
-  + Reasons for non-participation or drop-out, if available
-  + Which sub-studies each participant took part in, if applicable
+// This function checks if the pressed key is "Enter"
 
+function handleKeyPress(event) {
+  if (event.key === "Enter") {
+    performSearch();
+  }
+};
 
-##### {.tabset .tabset-fade}
+// function to capitalize first letter of strings 
 
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
-###### Standard FGB research (non-medical)
+// function to split string on | , clean up raw text, add in hyperlinks if present in linkMap and combine text as <ul>
 
-This section applies to research that is:
+function createListFromText(rawString, lookupMap = {}) {
+  if (!rawString || rawString.trim() === "") return "<em>n/a</em>"; // Handle empty data
 
-&#10146;  **Not** subject to the [WMO law](https://english.ccmo.nl/investigators/legal-framework-for-medical-scientific-research/your-research-is-it-subject-to-the-wmo-or-not){target="_blank"} or any of the medical research regulations cited in [section 1.1](ArchivingGuidelinesFull.html#section1.1) of the FGB Archiving Guidelines \
-AND \
-&#10146;  For which [directly identifying data](../definitions/Definitions.html#directID){target="_blank"} about your research subjects needed to be collected, e.g. contact information for longitudinal surveys
-
-**The majority of research conducted at the faculty will fall into this category**
-
--------------------
-
-* Determine whether it is necessary to re-identify research subjects in your [pseudonymized](../definitions/Definitions.html#pseuddata) research data. If so, it is advised to archive the digital [key file](../definitions/Definitions.html#keyfile){target="_blank"} you created (or ensure that the data are coupled to an identification number found on the paper consent forms). Some reasons you may need to re-identify include:
-  + Re-identification of research subjects is required for the verification your research findings
-  + Consent was obtained from the research subjects for ongoing reuse of the research data and the data cannot be fully [anonymized](../../Security/Deidentification.html#What_now){target="_blank"}
-    + Note that in this situation, the consent forms will need to be maintained for as long as the data are in use
-
-* Even if you no longer need to re-identify research subjects in your [pseudonymized](../definitions/Definitions.html#pseuddata) research data, you will still need to archive the consent forms to demonstrate that consent was validly obtained. These forms must be archived for the same duration that your research data will be archived.
-  + If you do not need to re-identify your research subjects for any other reason, you can delete the link between the research data and the consent forms
-    * Because archived data cannot be deleted (which means research subjects cannot request deletion once their data are archived), it is not necessary to maintain the means to re-identify archived data
-    <div class="NB">
-    NB: Consent **can** be revoked for ongoing reuse of data, so ensure that you've determined ahead of time whether the archived data will be eventually reused
-    </div> 
-  + If you used paper consent forms, you can find information on archiving paper materials [here](ArchivingGuidelinesFull.html#paperarchiving){target="_blank"}
-
-* If you determined that you *will* need to maintain directly identifying data to re-identify your participants, you should review this data to determine whether *all* of the information needs to be preserved. For example if there is no longer any need to follow-up with the research subjects, the contact information can be deleted.
-  + Deleting specific information only applies to directly identifying data that is preserved digitally; it is not recommended to black out text on paper consent forms
-
-* Generally, the data on participation rates can be stored pseudonymously by just using the participant identifier to link the participation data to the study data. Make sure any directly identifying information has been removed from the participation data (and if this information needs to be preserved for re-identification purposes, save it in the key file). 
-
-###### Medical research
-
-This section applies to research that is:
-
-&#10146; Subject to the [WMO law](https://english.ccmo.nl/investigators/legal-framework-for-medical-scientific-research/your-research-is-it-subject-to-the-wmo-or-not){target="_blank"} and/or to any of the medical research regulations cited in [section 1.1](ArchivingGuidelinesFull.html#section1.1) of the FGB Archiving Guidelines \
-
--------------------
-
-* For this type of research it is necessary to maintain the means to re-identify research subjects during the entire archiving term
-  + This is required for safety and liability purposes
-  + If some sub-studies within the research project do not fall under any of the medical research regulations, there isn't a requirement to maintain the means to re-identify research subjects for that specific data. 
-    + In such a case, review the "Standard FGB research" procedures and if you determine that this subset of data do not need to be re-identified, you can delete the link between this specific research data and the [directly identifying data](../definitions/Definitions.html#directID){target="_blank"}. 
+  const items = rawString.split('|');
   
-* You need to archive the consent forms to demonstrate that consent was validly obtained. These forms must be archived for the same duration that your research data will be archived.
-  + Most research of this type is required to use paper consent forms. You can find information on archiving paper materials [here](ArchivingGuidelinesFull.html#paperarchiving){target="_blank"}
-  + If consent was also obtained for ongoing reuse of the research data and the data cannot be fully [anonymized](../../Security/Deidentification.html#What_now){target="_blank"}, the consent forms will need to be maintained for as long as the data are in use
-
-* Generally, the data on participation rates can be stored pseudonymously by just using the participant identifier to link the participation data to the study data. If there is directly identifying data within the data on participation rates, consider whether this can be stored in the [key file](../definitions/Definitions.html#keyfile){target="_blank"} instead. 
-
-
-###### Research conducted "anonymously"
-
-This section only applies to research that is:
-
-<!-- &#10146; is the html code for an arrow symbol bullet point -->
-
-&#10146;  **Not** subject to the [WMO law](https://english.ccmo.nl/investigators/legal-framework-for-medical-scientific-research/your-research-is-it-subject-to-the-wmo-or-not){target="_blank"} or any of the medical research regulations cited in [section 1.1](ArchivingGuidelinesFull.html#section1.1) of the FGB Archiving Guidelines \
-AND\
-&#10146;  For which there was no reason to collect [directly identifying data](../definitions/Definitions.html#directID){target="_blank"} about your research subjects\
-
--------------------
-
-* You won't have any directly identifying data, but you will need to archive any consent forms in order to demonstrate that consent was validly obtained. These forms must be archived for the same duration that your research data will be archived. 
-  + If you used paper consent forms, you can find information on archiving paper materials [here](ArchivingGuidelinesFull.html#paperarchiving){target="_blank"}
+  const listItems = items.map(item => {
+    const trimmedItem = capitalizeFirstLetter(item.trim());
+      // run capitalizeFirstLetter on each element for consistent formatting
+      // also run trim() to remove any leading/trailing spaces
+    
+      // If the item name exists in lookupMap, create a link; otherwise, return text formatted as <li></li>
+    if (lookupMap[trimmedItem]) {
+      return `<li><a href='${lookupMap[trimmedItem]}' target='_blank'>${trimmedItem}</a></li>`;
+    }
+    // Otherwise, just return the plain list item
+    return `<li>${trimmedItem}</li>`;
+  }).join(''); // Join elements back together
   
-* It's possible that you have participation data, such as information on drop-outs. If this data is separate from your other research data, just make sure to have a participant identifier link the datasets together.
-
-
-#####
+  return `<ul>${listItems}</ul>`;
+}
 
 
 
-#### Audiovisual data
+// function to search on research type, data examples or keywords and return formatted results
 
-##### {.tabset .tabset-fade}
+function performSearch(showAll = false) {
+  const query = document.getElementById('searchBar').value.toLowerCase();
+  const container = document.getElementById('resultsContainer');
+  container.innerHTML = ""; // Clear previous
 
-###### Interviews/Focus Groups
-
-<!-- need to use h5 tag (which is the tag for the titles for this section at higher level tabsets) for the following titles because the markdown options with the #'s can't be used; that would mess up the levels of the subsetting of the tabsets -->
-
-
-<h5> Documentation </h5>
-<details>
-<summary >What to include?</summary>
-
-* Interview script or topic guide
-
-* Background information on each recording that includes:
-  + Information about the recording itself, e.g. equipment used, duration of recording, (general) location of recording
-  + Cross-reference to the location of additional data about each interviewee, if applicable, e.g. a tabular dataset with relevant information about each interviewee
+  // Filter logic: Show all if flag is true, otherwise filter by query
+  const filtered = showAll ? parsedData : parsedData.filter(item => 
+    item.research_type.toLowerCase().includes(query) || 
+    item.data_example.toLowerCase().includes(query) || 
+    item.keywords.toLowerCase().includes(query)
+  );
   
-* If using Atlas.ti for data analysis, any memos or comments that are relevant to the research process and that haven't been sufficiently documented in the [standard archiving requirements](#standard)
+  // Handle No Results
+  if (filtered.length === 0) {
+    container.innerHTML = `
+      <p style="text-align: center; color: #666;">
+        No results found. 
+        <a href="javascript:void(0)" onclick="performSearch(true)" style="color: #105d89;">Show all instead?</a>
+      </p>`;
+    return;
+  }
 
-* A [codebook](../documentation/Codebooks.html){target="_blank"} or other form of documentation that ensures accurate interpretation of any codes created
-
-* Documentation of any procedures used to avoid coder variance (see see Tip 2 on this [page about qualitative coding](https://www.cessda.eu/Training/Training-Resources/Library/Data-Management-Expert-Guide/3.-Process/Qualitative-coding){target="_blank"})
-
-</details>
-
-<h5> Data </h5>
-
-<details>
-<summary >What to include?</summary>
-
-* Raw audiovisual data files
-
-* Processed audiovisual data files, if applicable, e.g. audiovisual data that has been manipulated to reduce the identifiability of the interviewees/subjects
-  + You may or may not have processed data files. It depends on the purpose of your research and the appropriateness of such processing steps. See the [De-identification of Data guide](../../security/Deidentification.html){target="_blank"} for further guidance
-
-* Transcripts
-  + Further information on transcripts is discussed in the section on "Unstructured Textual data"
-
-</details>
-
-<h5> Code </h5>
-
-<details>
-<summary >What to include?</summary>
-
-* Code system used for tagging/labeling the audiovisual data and/or transcripts
-  + More information on coding systems can be found [here](https://www.cessda.eu/Training/Training-Resources/Library/Data-Management-Expert-Guide/3.-Process/Qualitative-coding){target="_blank"} and [here](https://doc.atlasti.com/QuicktourWin.v9/Codes/CodeSystem.html){target="_blank"}
-
-* If applicable, programming code (for example, R scripts) used to analyse the coded data and to generate any graphics, tables etc.
-
-
-###### Observations
-
-<!-- need to use h5 tag (which is the tag for the titles for this section at higher level tabsets) for the following titles because the markdown options with the #'s can't be used; that would mess up the levels of the subsetting of the tabsets -->
-
-
-<h5> Documentation </h5>
-
-<details>
-<summary >What to include?</summary>
-
-* Context within which subjects were observed (e.g. parent-child interaction during play; problem solving tasks in a team etc.)
-  + This is not necessary if this information has been sufficiently documented in the [description of the research design](#standard) 
+  filtered.forEach(item => {
   
-* Background information on each recording that includes:
-  + Information about the recording itself, e.g. equipment used, duration of recording, (general) location of recording
-  + Any unusual conditions or context unique to each recording
-  + Cross-reference to the location of additional data about each observed subject, if applicable, e.g. a tabular dataset with relevant information about each subject
-
-
-* *If you conducted qualitative analyses*: 
-  + Include a [codebook](../documentation/Codebooks.html){target="_blank"} or other form of documentation that ensures accurate interpretation of any codes you created
-  + If you used Atlas.ti for data analysis include any memos or comments that are relevant to the research process and that haven't been sufficiently documented [standard archiving requirements](#standard)
-  + Include any documentation of any procedures used to avoid coder variance (see see Tip 2 on this [page about qualitative coding](https://www.cessda.eu/Training/Training-Resources/Library/Data-Management-Expert-Guide/3.-Process/Qualitative-coding){target="_blank"})
-
-* *If quantitative data are generated from the audiovisual data*: 
-  + Include a [codebook](../documentation/Codebooks.html){target="_blank"} that allows for accurate interpretation of this quantitative data
-  + See the relevant section for that quantitative data (e.g. tabular data) for further information on what to include
-
-</details>
-
-<h5> Data </h5>
-
-<details>
-<summary >What to include?</summary>
-
-* Raw audiovisual data files
-
-* Processed audiovisual data files, e.g. audiovisual data that has been manipulated to reduce the identifiability of the interviewees/subjects
-  + You may or may not have processed data files. It depends on the purpose of your research and the appropriateness of such processing steps. See the [De-identification of Data guide](../../security/Deidentification.html){target="_blank"} for guidance on the necessity of such steps.
+    // use createListFromText to generate lists (and where appropriate hyperlinks) from text fields in csv
+    
+    const formatList = createListFromText(item.preferred_format, linkMap);
+    const metadataList = createListFromText(item.metadata_standard, linkMap);
+    const readmeList = createListFromText(item.readme_additions, linkMap);
+    const docsList = createListFromText(item.documentation_required, linkMap);
+    
   
-* If applicable, processed data gleaned from use of motion capture/eye-tracking etc.
-  + If this type of processed data is generated, see "Experimental data" for more information on what should be archived
+    container.innerHTML += `
+        <div style="padding: 20px; background-color: #f9f9f9; border: 1px solid #105d89; margin-bottom: 15px;">
+          <h3 style="color: #105d89;">${item.research_type}</h3>
+          <h4 style="color: #105d89;">Examples:</h4>
+          <p>${item.data_example}</p>
+          <h4 style="color: #105d89;">Preferred Format(s):</h4>
+          ${formatList}
+          <h4 style="color: #105d89;">Metadata Standard(s):</h4>
+          ${metadataList}
+          <h4 style="color: #105d89;">Additions to README:</h4>
+          ${readmeList}
+          <h4 style="color: #105d89;">Required Documentation:</h4>
+          ${docsList}
+        </div>
+      `;
+  });
+}
+</script>
 
-</details>
 
-<h5> Code </h5>
 
-<details>
-<summary >What to include?</summary>
 
-* Code system used for tagging/labeling the interactions observed in the audiovisual data
-  + More information on coding systems can be found [here](https://www.cessda.eu/Training/Training-Resources/Library/Data-Management-Expert-Guide/3.-Process/Qualitative-coding){target="_blank"} and [here](https://doc.atlasti.com/QuicktourWin.v9/Codes/CodeSystem.html){target="_blank"}
-
-* If applicable, programming code (for example, R scripts) used to analyse the coded data and to generate any graphics, tables etc.
-
-#####
-
-#### Experimental data
-
-##### {.tabset .tabset-fade}
-
-###### Eye tracking
-
-<!-- need to use h5 tag (which is the tag for the titles for this section at higher level tabsets) for the following titles because the markdown options with the #'s can't be used; that would mess up the levels of the subsetting of the tabsets -->
-
-<h5> Documentation </h5>
-
-<details>
-<summary >What to include?</summary>
-
-* Documentation on eye-tracking equipment:
-  + Brand of equipment
-  + Version of software the equipment was running
-
-* [Codebook(s)/data dictionaries](#codebooktips) for accurate interpretation of the data
-  + Ensure that there is clear documentation of how to couple the eye-tracking data to relevant data about each participant (e.g. colour-blindness), such as through participant ID number
-
-* Details in [logbook/laboratory notebook](../definitions/Definitions.html#logbook) reporting any abnormalities in experimental conditions for each subject measured
-
-
-* Documentation on software used to create experimental program, e.g. Presentation
-  + If this documentation is already published elsewhere, you can include a reference to this documentation in the [README file](#standard)
-  + Document the version of this software used during your research
-
-</details>
-
-<h5> Data </h5>
-
-<details>
-<summary >What to include?</summary>
-
-* Raw data directly collected from eye tracking equipment
-  + The data is often in a proprietary format such as EDF; whenever possible create a non-proprietary copy of the raw data, e.g. in .asci or .csv format
-  
-* Processed data including:
-  + Pre-processed data generated by the eye tracking equipment
-  + Data that has been further modified and converted to .csv format
-
-</details>
-
-<h5> Code </h5>
-
-<details>
-<summary >What to include?</summary>
-
-* Programming code containing your experimental program
-
-* Code used to further process the data and, if applicable, merge the data with other data sources
-
-* Code used to analyse the processed data and to generate any graphics, tables etc.
-
-* The environment.yml file with all dependencies, if Python is being used
-
-
-
-
-###### Executive function testing
-
-<!-- need to use h5 tag (which is the tag for the titles for this section at higher level tabsets) for the following titles because the markdown options with the #'s can't be used; that would mess up the levels of the subsetting of the tabsets -->
-
-<div class="NB">
- NB: This section refers to performance-based executive function tests; if you (also) assessed executive function using questionnaire-based tools, see the "Questionnaire & Other Tabular data" section for more information
-</div>
-
-<h5> Documentation </h5>
-
-<details>
-<summary>What to include?</summary>
-
-</details>
-
-<h5> Data </h5>
-
-<details>
-<summary>What to include?</summary>
-
-</details>
-
-
-<h5> Code </h5>
-
-<details>
-<summary>What to include?</summary>
-
-</details>
-
-
-
-
-###### Manual/response data
-
-<!-- need to use h5 tag (which is the tag for the titles for this section at higher level tabsets) for the following titles because the markdown options with the #'s can't be used; that would mess up the levels of the subsetting of the tabsets -->
-
-
-
-<h5> Documentation </h5>
-
-<details>
-<summary >What to include?</summary>
-
-* Detailed documentation of the experimental conditions and measures taken to ensure consistency between subjects
-  + Not necessary if this information has been sufficiently documented in the [description of the research design](#standard)
-
-* [Codebook(s)/data dictionaries](#codebooktips) for accurate interpretation of the data
-  + Ensure that there is clear documentation of how to couple the response data to relevant data about each participant (e.g. handedness), such as through participant ID number
-
-* Details in [logbook/laboratory notebook](../definitions/Definitions.html#logbook) reporting any abnormalities in experimental conditions for each subject measured
-
-* Documentation on equipment used:
-  + Brand of equipment used or, if equipment was developed in-house, further documentation on the development of the equipment
-    + If this documentation is already published elsewhere, you can include a reference to this documentation in the [README file](#standard)
-    + Documentation needs to describe the equipment developed in-house in enough detail that another research group could also build the same equipment and replicate your research findings
-  + Also document the type and version of software used by the equipment during your research
-  
-* Documentation on software used to create experimental program, e.g. OpenSesame
-  + If this documentation is already published elsewhere, you can include a reference to this documentation in the [README file](#standard)
-  + Document the version of this software used during your research
-
-</details>
-
-<h5> Data </h5>
-
-<details>
-<summary >What to include?</summary>
-
-* Raw data directly collected from measurement equipment
-  + Whenever possible, generate at least a copy of the raw data in an open format, such as .csv
-
-* Processed data
-  + Whenever possible, generate at least a copy of the processed data in an open format, such as .csv
-
-</details>
-
-<h5> Code </h5>
-
-<details>
-<summary >What to include?</summary>
-
-* Programming code containing your experimental program
-
-* Code used to process the data and, if applicable, merge the data with other data sources
-
-* Code used to analyse the processed data and to generate any graphics, tables etc.
-
-* The environment.yml file with all dependencies, if Python is being used
-
-###### Movement & motion capture data
-
-<!-- need to use h5 tag (which is the tag for the titles for this section at higher level tabsets) for the following titles because the markdown options with the #'s can't be used; that would mess up the levels of the subsetting of the tabsets -->
-
-<h5> Documentation </h5>
-
-<details>
-<summary >What to include?</summary>
-
-* Detailed documentation of the experimental conditions and measures taken to ensure consistency between subjects
-  + Not necessary if this information has been sufficiently documented in the [description of the research design](#standard)
-
-* [Codebook(s)/data dictionaries](../documentation/Codebooks.html){target="_blank"} for accurate interpretation of the data
-
-* Documentation on equipment used:
-  + Brand of equipment used or, if equipment was developed in-house, further documentation on the development of the equipment
-    + If this documentation is already published elsewhere, you can include a reference to this documentation in the general [README file](#standard)
-    + Documentation needs to describe the equipment developed in-house in enough detail that another research group could also build the same equipment and replicate your research findings
-  + Also document the type and version of software used by the equipment during your research
-
-* Details in [logbook/laboratory notebook](../definitions/Definitions.html#logbook) reporting any abnormalities in experimental conditions for each subject measured
-
-</details>
-
-<h5> Data </h5>
-
-<details>
-<summary >What to include?</summary>
-
-* Raw data directly collected from measurement equipment
-  + Whenever possible, generate at least a copy of the raw data in an open format, such as .csv
-
-* If applicable, video recordings used to verify motion capture processes
-  + See the Documentation section of "Audiovisual data: Observations" for information on what to document about these video recordings
-
-* Processed data
-  + Whenever possible, generate at least a copy of the processed data in an open format, such as .csv
-
-</details>
-
-<h5> Code </h5>
-
-<details>
-<summary >What to include?</summary>
-
-* Code used to process the data and, if applicable, merge the data with other data sources
-
-* Code used to analyse the processed data and to generate any graphics, tables etc.
-
-</details>
-
-#####
-
-
-#### Longitudinal Cohort & Registry data
-
-<h5> Documentation </h5>
-
-<details>
-<summary>What to include?</summary>
-
-* When working with longitudinal cohort and/or registry data, much of the documentation is standard for everyone working with the data. If you are using existing cohort/registry data, check with the data management team about which standard documentation needs to be included in your archiving package. They may provide you with a copy of this information or provide a reference to the location of these materials so that you can refer to them in your README.
-
-* You will also produce your own documentation in the course of your work with the cohort data, particularly if new data were collected for your specific research project. Refer to the (standard requirements)[#standard] for documentation, as well as the data-specific guidance for the type(s) of data you are working with for more information about what documentation to include.
-
-</details>
-
-<h5> Data </h5>
-
-<details>
-<summary>What to include?</summary>
-
-* When working with longitudinal cohort and/or registry data, much of the data you work with will be derived from the larger cohort database. In most cases, you will not archive the raw data yourself; check with the data management team for the correct procedures. Also ask how to properly refer to the relevant raw data in your README file
-
-* If you collected new data in the course of your research project, you will need to archive the raw data. Refer to the data-specific section for the type(s) of data you collected for more information.
-
-* You will also need to archive your processed data. Refer to the data-specific section for the type(s) of data you collected for more information.
-
-</details>
-
-
-<h5> Code </h5>
-
-<details>
-<summary>What to include?</summary>
-
-* When working with longitudinal cohort and/or registry data, many of the code scripts are standard for everyone working with the data. If you are using existing cohort/registry data, check with the data management team about which code scripts need to be included in your archiving package. They may provide you with a copy of the scripts or provide a reference to their location so that you can refer to them in your README.
-
-* Save relevant code that you produced:
-  + Code used to process the data that was provided by the data management team
-  + Code that was used to process newly collected data
-  + Code used to analyse the processed data and to generate any graphics, tables etc.
-  
-* See also data-specific sections for the type(s) of data you used for additional guidance on what code needs to be archived
-
-</details>
-
-#### (Neuro)imaging data
-
-<h5> Documentation </h5>
-
-<details>
-<summary>What to include?</summary>
-
-</details>
-
-<h5> Data </h5>
-
-<details>
-<summary>What to include?</summary>
-
-</details>
-
-
-<h5> Code </h5>
-
-<details>
-<summary>What to include?</summary>
-
-</details>
-
-
-
-
-
-#### Questionnaires, CRFs & Other Tabular data
-
-##### {.tabset .tabset-fade}
-
-###### Questionnaires
-
-<!-- need to use h5 tag (which is the tag for the titles for this section at higher level tabsets) for the following titles because the markdown options with the #'s can't be used; that would mess up the levels of the subsetting of the tabsets -->
-
-
-<h5> Documentation </h5>
-
-<details>
-<summary >What to include?</summary>
-
-* Copy of questionnaire(s) used (or references to existing standard questionnaires)
-  + Include all versions used to generate data (e.g. different languages, follow-up waves etc.)
-  + Ensure any question routing is documented (usually automatically generated when exporting questionnaire text from Qualtrics or Survalyzer)
-
-* [Codebook(s)](../documentation/Codebooks.html){target="_blank"} for accurate interpretation of the data
-  
-* Details in the [logbook](../definitions/Definitions.html#logbook) for reporting any data cleaning, corrections or manipulations that could not be carried out with data processing code (if applicable):
-  + Include a description of what was changed, why it was changed, by whom, and when it was changed
-  
-  
-* A description of the selection and recruitment process of survey respondents, if not already included in the [description of the research](#standard)
-  + Deviations from the proposed planning should be documented in the [logbook](../definitions/Definitions.html#logbook)
-
-</details>
-
-<h5> Data </h5>
-
-<details>
-<summary >What to include?</summary>
-
-* Raw data directly exported from the survey tool:
-  + If there are variables in this export that are not relevant to your research question, but were collected solely for administrative purposes, remove these from the export. If this information also needs to be archived, store it with your administrative data (see "Adminstrative Data" for more information).
-  + Whenever possible, generate at least a copy of the raw data in an open format (e.g. Qualtrics allows for an export in .csv format and Survalyzer in JSON format)
-
-* Processed data
-  + Whenever possible, generate at least a copy of the processed data in an open format, such as .csv
-
-</details>
-
-<h5> Code </h5>
-
-<details>
-<summary >What to include?</summary>
-
-* Code used to clean the raw data and process it into the processed data:
-  + If you create any new, derived variables, make sure to document your code with comments explaining your process, including references to any sources that were used in the creation of the variable (or ensure that these references are included with that variable in the codebook)
-
-* Code used to analyse the processed data and to generate any graphics, tables etc.
-
-</details>
-
-
-###### Case Report Forms
-
-<!-- need to use h5 tag (which is the tag for the titles for this section at higher level tabsets) for the following titles because the markdown options with the #'s can't be used; that would mess up the levels of the subsetting of the tabsets -->
-
-
-<h5> Documentation </h5>
-
-<details>
-<summary>What to include?</summary>
-
-</details>
-
-<h5> Data </h5>
-
-<details>
-<summary>What to include?</summary>
-
-</details>
-
-
-<h5> Code </h5>
-
-<details>
-<summary>What to include?</summary>
-
-</details>
-
-
-
-###### Other Tabular Data
-
-<!-- need to use h5 tag (which is the tag for the titles for this section at higher level tabsets) for the following titles because the markdown options with the #'s can't be used; that would mess up the levels of the subsetting of the tabsets -->
-
-
-<h5> Documentation </h5>
-
-<details>
-<summary>What to include?</summary>
-
-</details
-
-<h5> Data </h5>
-
-<details>
-<summary>What to include?</summary>
-
-</details>
-
-
-<h5> Code </h5>
-
-<details>
-<summary>What to include?</summary>
-
-</details>
-
-
-
-
-
-
-
-#####
-
-
-
-
-#### Unstructured Textual data
-
-<h5> Documentation </h5>
-
-<details>
-<summary>What to include?</summary>
-
-</details>
-
-<h5> Data </h5>
-
-<details>
-<summary>What to include?</summary>
-
-</details>
-
-
-<h5> Code </h5>
-
-<details>
-<summary>What to include?</summary>
-
-</details>
-
-
-
-
-#### Paper and other analog data
-
-Paper and other analog require additional consideration. See this [section](ArchivingGuidelinesFull.html#paperarchiving){target="_blank"} of the archiving guidelines for more information. Contact your department's secretary for advice on where to archive paper materials and other analog forms of data.
-
-###
 
 
