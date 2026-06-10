@@ -227,6 +227,9 @@ json_data <- jsonlite::toJSON(csv_data)
 
 <div id="resultsContainer"></div>
 
+
+
+
 <script>
 
 const data = '`r json_data`';
@@ -244,9 +247,12 @@ const linkMap = {
   "Dublin Core": "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/",
   "HL7 FHIR": "https://www.hl7.org/fhir/overview.html",
   "ISO 19115": "https://docs.geostandaarden.nl/md/mdprofiel-iso19115/",
+  "Logbook/laboratory notebook": "https://fgb-rdm.nl/rdm/definitions/Definitions.html#logbook",
   "MIAME": "https://www.ncbi.nlm.nih.gov/geo/info/MIAME.html",
   "MINSEQE": "https://doi.org/10.5281/zenodo.5706412",
   "OpenSim": "https://opensimconfluence.atlassian.net/wiki/spaces/OpenSim/pages/53090607/Musculoskeletal+Models#OpenSim-Core-Models",
+  "Procedures to manage coder variance": "https://dmeg.cessda.eu/Data-Management-Expert-Guide/3.-Process/Qualitative-coding",
+  "See guidelines on paper archiving": "https://fgb-rdm.nl/rdm/archiving/ArchivingGuidelinesFull.html#paperarchiving",
   "SensorML": "https://www.ogc.org/standards/sensorml/",
   "TEI": "https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html"
   
