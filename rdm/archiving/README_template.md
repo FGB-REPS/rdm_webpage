@@ -14,15 +14,16 @@ For further information on writing in Markdown see https://www.markdownguide.org
 
 
 
-
-
 ## Title of Data Package
 
 [Choose a title that describes the entirety of your data package, such as "Data package for {YOUR STUDY NAME}". You could also state "Data Package for {Title of Research Article}", but only if the title of your research article isn't overly long. If this README only describes a portion of the data from your overall study, make that clear in this title, .e.g "Data package for My Great Study: Questionnaire Data"]
 
 
+### Design and Context of Study
 
-
+[Brief description of the design and context of the study that produced the data package. You can also link to this information if it has been permanently published elsewhere]
+[If you have multiple datasets and the design and context of the research also varies with each of these, e.g. because of different sub-studies in your research, make sure 
+to note the additional design and context details with each dataset in the following section on the Content(s) of the Data Package under Description of File]
 
 
 ## Content(s) of Data Package
@@ -45,6 +46,7 @@ an appropriate option for the type of file https://support.datacite.org/docs/dat
 [For quantitative data files, such as data tables, include a description of the data structure, i.e. wide vs. long files, number of records (rows)
 and variables (columns). If this information is documented in a codebook that is also included in the data package, this
 information does not need to be repeated here]
+[This is where you can note any additional study design/context details that are specific to this file]
 
 ### Version of file
 
