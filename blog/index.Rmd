@@ -80,6 +80,7 @@ table tr td:nth-of-type(2) {
 
 | | |
 | -- | ----------------------- |
+| 2026/06/11; Jessica Hrudey | [Guidance on data packages](../rdm/archiving/DataPackage.html){target="_blank"} published. Provides an overview of what information needs to be archived & published with FGB data packages, both on a general level and a data-specific level. |
 | 2026/04/16; Jessica Hrudey | [V1.1 of risk app](https://risk_levels_app.rshiny.labs.vu.nl/){target="_blank"} released. Updates include additional questions related to confidentiality concerns and an option to download a partially filled in data classification from the app inputs |
 | 2026/03/24; Jessica Hrudey | WMO guidance page and updates to risk app with data classification download option are nearing completion. Should be added to guidance pages by end of month |
 | 2026/01/26; Jessica Hrudey | Updated [yoda instructions](../rdm/tools/YODAInstructionsFGB.html){target="_blank"} to include alternative options for handling data access on YODA due to WebDAV being a more stable option than was initially suggested |

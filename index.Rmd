@@ -77,6 +77,7 @@ li {
   + [Full FGB archiving guidelines](rdm/archiving/ArchivingGuidelinesFull.html){target="_blank"}
   + [Summary of FGB archiving guidelines](rdm/archiving/ArchivingGuidelinesSummary.html){target="_blank"}
   + [Guidance Policy - Digitizing Paper Informed Consent Forms](rdm/archiving/DigitizingICFs.html){target="_blank"}
+  + [Guidance on preparing data packages](rdm/archiving/DataPackage.html){target="_blank"}
 * [RDM Definitions](rdm/definitions/Definitions.html){target="_blank"}
 * RDM documentation guidance
   + [Codebooks](rdm/documentation/Codebooks.html){target="_blank"}
