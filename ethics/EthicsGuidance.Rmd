@@ -1,6 +1,6 @@
 ---
 title: "Ethics @ FGB: Which Ethical Review Processes Apply?"
-date: "`r Sys.Date()`; version 1.0"
+date: "`r Sys.Date()`; version 1.1"
 output: 
   html_document:
     theme: cerulean
@@ -103,9 +103,9 @@ NB: The guidance for WMO research and non-WMO declarations focuses on the METC o
 
 <form id="whichRoute">
 <label><input type="radio" name="routePicker" id="displayWMO" value="wmo"> WMO research review process </label><br>
-<label><input type="radio" name="routePicker" id="displayNonWMO" value="nwmo"> Non-WMO declaration process </label><br>
+<!--<label><input type="radio" name="routePicker" id="displayNonWMO" value="nwmo"> Non-WMO declaration process </label><br> removed because not relevant per 2026-09-08-->
 <label><input type="radio" name="routePicker" id="displayVCWE" value="vcwe"> Standard FGB ethical review </label><br>
-<label><input type="radio" name="routePicker" id="displayQuiz" value="quiz"> I need help to figure out what process(es) apply to me </label><br>
+<label><input type="radio" name="routePicker" id="displayQuiz" value="quiz"> I need help to figure out which process applies to me </label><br>
 </form>
 
 </div>
@@ -125,7 +125,7 @@ NB: The guidance for WMO research and non-WMO declarations focuses on the METC o
 
 </div>
 
-
+<!--removed because not relevant per 2026-09-08
 <div class = "guidance" id = "nwmoGuidance">
 
 \
@@ -134,12 +134,12 @@ NB: The guidance for WMO research and non-WMO declarations focuses on the METC o
 
 # Obtaining a non-WMO declaration for FGB research
 
-```{r, child='text/nonWMOtext.Rmd', echo=FALSE, results='asis'}
-```
+#```{r, child='text/nonWMOtext.Rmd', echo=FALSE, results='asis'}
+#```
 
 
 </div>
-
+-->
 
 <div  class = "guidance" id = "vcweGuidance">
 
@@ -173,7 +173,7 @@ e.g. Includes anything from participants in a lab to people answering an online 
 2. Will your research project aim to answer questions related to illness, health or other medical/clinical topics?
 e.g. Includes anything related to etiology, pathogenesis, signs & symptoms, diagnostics, disease prevention, disease outcomes or treatment of illness.
   -> if yes plus at least one yes from q4-8, ALWAYS WMO
-  -> if yes plus no from q1, go immediately to DEFINITELY non-WMO
+  -> if yes plus no from q1, go immediately to DEFINITELY medical VCWE (go to VCWE, also provide links to other relevant medical legislation)
   -> if no plus no from q1, go immediately to DEFINITELY VCWE
   -> if unsure plus yes from q1, continue survey with increased likelihood to Support B (Contact info for support and links to WMO CCMO pages)
   -> if unsure plus no from q1, go straight to Support A (Guidance on figuring out study more first) > necessary for user to figure out more because remaining questions are all about treatment of participants, which doesn't apply if q1 is 'no'
@@ -214,18 +214,18 @@ e.g. Includes experiments where stress hormones are administered to investigate 
 
 
 Overall results after quiz completion:
-  -> if q1 is no AND q2 is no, go immediately to definitely VCWE, but with info about studies without active participants
-  -> if q1 is no AND q2 is yes, go immediately to definitely non-WMO, but with info about studies without active participants
+  -> if q1 is no AND q2 is no, go immediately to definitely VCWE basic
+  -> if q1 is no AND q2 is yes, go immediately to definitely VCWE plus legisl
   -> if q1 is no AND q2 is unsure, go straight to Support A (Guidance on figuring out study more first)
   -> if q1 is unsure, go straight to Support A (Guidance on figuring out study more first)
   -> if q1 is yes AND:
     -> if q2 is yes AND any of q4-8 are yes, go to definitely WMO
     -> if q3 is yes, go immediately to definitely WMO
     -> if q3 is unsure, go immediately to Support A (Guidance on figuring out study more first)
-    -> if for q4-8 at least one response is yes, but q2-3 are not yes, go to likely WMO, potentially non-WMO/VCWE (i.e. links to all three as well as support info)
-    -> if q2-8 all no, go to definitely VCWE
-    -> for q2,4-8 and none of answers are yes, if majority response is no, to likely VCWE page; if majority response is unsure or tied, to support page B
-    -> if q2 is yes and majority of others are no, go to likely non-WMO info (include reference to VCWE); if majority of others is unsure or tied, to support page B
+    -> if for q4-8 at least one response is yes, but q2-3 are not yes, go to VCWE plus legisl AND WMO possibility
+    -> if q2-8 all no, go to definitely VCWE basic
+    -> for q2,4-8 and none of answers are yes, if majority response is no, go to VCWE basic; if majority response is unsure or tied, to support page B
+    -> if q2 is yes and majority of others are no, go to VCWE basic; if majority of others is unsure or tied, to support page B
   
 -->
 
@@ -250,13 +250,14 @@ Overall results after quiz completion:
 <summary class='summaryEx'>FGB examples</summary>
 <div class='detailsEx'>
 * Includes:
-    + Research with volunteers in brain/movement labs
-    + Online surveys with respondents gleaned via MTurk or Prolific
-    + RCTs and the like, i.e. research with intervention groups and control groups
+    + Lab experiments with volunteers in brain/movement labs
+    + Online surveys (including those with respondents from MTurk or Prolific)
+    + Research trials on patient populations
+    + Observation of research subjects in day-to-day activities
 * Excludes:
-    + Research exclusively involving review of existing medical records 
-    + Reuse of existing data sources with no other new data collection from people
-    + Research exclusively on animals or on existing cell lines/existing biobanked materials
+    + Review of existing medical records 
+    + Reuse of existing data sources
+    + Research on animals or existing biobanked materials
 </div>
 </details>
 
@@ -278,16 +279,16 @@ Overall results after quiz completion:
 <details>
 <summary class='summaryEx'>FGB examples</summary>
 <div class='detailsEx'>
-Includes anything related to etiology, pathogenesis, signs & symptoms, diagnostics, disease prevention, disease outcomes or treatment of illness. 
-
-<!--
+Research related to etiology, pathogenesis, signs & symptoms, diagnostics, disease prevention, disease outcomes or treatment of illness. 
 For example:
 
-* Need
-* Some 
-* Good 
-* Examples
--->
+* Genetic factors in (mental) illness or developmental differences
+* Societal contributors to (mental) illness 
+* Non-pharmaceutical psychological treatments
+* Pain management methods
+* (Cost) effectiveness of (new) psycho- and/or physiotherapy methods
+
+
 
 </div>
 </details>
@@ -329,11 +330,11 @@ For example:
 <details>
 <summary class='summaryEx'>FGB examples</summary>
 <div class='detailsEx'>
-For example:
 
   * Following a specific diet and/or exercise regiment
-  * Continuously wearing cumbersome ambulatory monitoring devices for several days
-  * Frequent (multiple times per day) self-reporting in a journal for an extended period (several weeks or months)
+  * Participation in group therapy sessions of varying intensity
+  * Continuously wearing accelerometers/ambulatory monitoring devices for several days
+  * Regular self-reporting in a journal for an extended period
   
 </div>
 </details>
@@ -358,15 +359,12 @@ For example:
 <details>
 <summary class='summaryEx'>FGB examples</summary>
 <div class='detailsEx'>
-For example:
   
-  * RCTs comparing an experimental psycho- or physiotherapy protocol against the current gold standard, e.g.:
-      + High-intensity psychotherapy vs low-intensity psychotherapy in depressive subjects
-      + Muscle-stimulating pressure cushions vs gold standard pressure cushions for wheelchair users
-  * Testing experimental medical devices to improve outcomes and/or diagnostics in, e.g.:
-      + Mentally ill subjects
-      + People with movement disorders such as Parkison's or cerebral palsy
-  * Using existing medical devices for new treatment or diagnostic purposes
+  * High-intensity vs low-intensity psychotherapy in depressive subjects
+  * Muscle-stimulating pressure cushions
+  * Application of non-invasive brain stimulation
+  * Augmented/virtual-reality tools and applications
+  * Exposure to anti-misinformation "innoculation" methods
   
 </div>
 </details>
@@ -392,9 +390,7 @@ For example:
 <summary class='summaryEx'>FGB examples</summary>
 <div class='detailsEx'>
 
-For example:
-
-* Stressful psychological experiments where participants are subjects to extreme emotional and/or ethical pressure, 
+* Stressful psychological experiments where participants are subjects to extreme emotional and/or ethical pressure 
 * Studies of human physical performance that require rectal thermometers to record accurate body temperature measurements
 
 </div>
@@ -420,8 +416,6 @@ For example:
 <details>
 <summary class='summaryEx'>FGB examples</summary>
 <div class='detailsEx'>
-
-For example:
 
 * Experiments in heat labs investigating the body's response and management of temperature regulation during exertion
 * In-depth psychological interviews on deeply distressing, upsetting or stigmatized topics
@@ -450,8 +444,6 @@ For example:
 <details>
 <summary class='summaryEx'>FGB examples</summary>
 <div class='detailsEx'>
-
-For example:
 
 * Experiments where stress hormones are administered to study stress responses during emotional interpersonal interactions
 * Studies involving any tailoring or adjustment of psychotherapeutic medication regimens
@@ -483,15 +475,162 @@ For example:
 
 <button id="defWMOback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
 
-Based on your responses, the WMO applies to your research and you *will* need to undergo review with a METC (for FGB, this is usually metc@amsterdamumc.nl). Below you can find more information on the WMO review processes and how they apply to you as an FGB researcher.
+Based on your responses, the WMO applies to your research and you *will* need to undergo review by [an METC](https://www.nedmec.nl/nl/wijze-van-indienen){target="_blank"}. Below you can find more information on the WMO review processes and how they apply to you as an FGB researcher.
+
+<details>
+<summary class="summaryHeader">
+View WMO Guidance
+</summary>
 
 <button class="inline-button btn btn-primary btn-sm" onclick="window.open('WMOguidance.html','_blank');">Open WMO guidance on new page</button>
 
 ```{r, child='text/WMOtext.Rmd', echo=FALSE, results='asis'}
 ```
 
+</details>
+
 </div>
 
+
+
+<div class = "guidance outcome">
+
+## Standard FGB ethical review is required {#defVCWEbasic}
+
+<button id="defVCWEback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
+
+
+Based on your responses, the WMO does *not* apply to your research. Submit your research to the VCWE (FGB's ethical committee) to ensure that it meets all ethical requirements.
+
+**NB**: If your research undergoes substantial amendments, it may become subject to the WMO. Substantial amendments will require a new ethical submission to the VCWE.
+
+<details>
+<summary class="summaryHeader">
+View VCWE Guidance
+</summary>
+
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open('VCWEguidance.html','_blank');">Open VCWE guidance on new page</button>
+
+
+```{r, child='text/VCWEtext.Rmd', echo=FALSE, results='asis'}
+```
+
+</details>
+
+</div>
+
+
+<div class = "guidance outcome">
+
+## Standard FGB ethical review is required {#defVCWEplus}
+
+<button id="plusVCWEback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
+
+
+Based on your responses, the WMO does *not* apply to your research. Submit your research to the VCWE (FGB's ethical committee) to ensure that it meets all ethical requirements.
+
+**NB**: If your research undergoes substantial amendments, it may become subject to the WMO. Substantial amendments will require a new ethical submission to the VCWE.
+
+### Potential additional concerns
+
+Other [legislation/concerns](https://english.ccmo.nl/investigators/additional-requirements-for-certain-types-of-research){target="_blank"} may apply to your research (even if the WMO does not apply) because of the medical nature of your research. The following concerns are particularly relevant for research within FGB:
+
+* [Medical Devices Regulation](https://english.ccmo.nl/investigators/clinical-investigations-with-medical-devices/legal-framework-guidances-and-standards-for-clinical-investigations-with-medical-devices){target="_blank"}
+* [In-vitro diagnostics Regulation](https://english.ccmo.nl/investigators/performance-studies-using-in-vitro-diagnostics-ivdr/legal-framework-guidances-and-standards-for-prestatiestudies-naar-in-vitro-diagnostica){target="_blank"}
+* [Research involving pregnant/breastfeeding participants](https://english.ccmo.nl/investigators/additional-requirements-for-certain-types-of-research/research-involving-fetuses-pregnant-and-or-breastfeeding-women){target="_blank"}
+* [Chart review research/retrospective patient file reviews](https://english.ccmo.nl/investigators/additional-requirements-for-certain-types-of-research/non-wmo-research/file-research){target="_blank"}
+* [Non-WMO/non-clinical trial research with a medical product that is initiated/financed by pharmaceutical companies](https://english.ccmo.nl/investigators/additional-requirements-for-certain-types-of-research/non-wmo-research/non-wmo-research-with-a-medicinal-product){target="_blank"}
+
+<details>
+<summary class="summaryHeader">
+View VCWE Guidance
+</summary>
+
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open('VCWEguidance.html','_blank');">Open VCWE guidance on new page</button>
+
+
+```{r, child='text/VCWEtext.Rmd', echo=FALSE, results='asis'}
+```
+
+</details>
+
+
+</div>
+
+<div class = "guidance outcome">
+
+## Standard FGB ethical review is most likely required {#VCWEplusWMO}
+
+<button id="vcweWMOback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
+
+
+Based on your responses, the WMO *probably doesn't* apply to your research, but with limited information it's not feasible to fully exclude the possibility. Submit your research to the VCWE (FGB's ethical committee). Upon review, the VCWE might determine that the WMO applies to your research, especially depending on intensity of the interventions/experiments involved and/or the nature of the research population you plan to study, in which case, further ethical assessment will be carried out by an METC. The VCWE can only determine if the WMO applies to your research by reviewing a full submission. 
+
+**NB**: If your research undergoes substantial amendments, it may become subject to the WMO. Substantial amendments will require a new ethical submission to the VCWE.
+
+### Potential additional concerns
+
+Other [legislation/concerns](https://english.ccmo.nl/investigators/additional-requirements-for-certain-types-of-research){target="_blank"} may apply to your research (even if the WMO does not apply) because of the interventions, experiments or treatments used in your research. The following concerns are particularly relevant for research within FGB:
+
+* [Medical Devices Regulation](https://english.ccmo.nl/investigators/clinical-investigations-with-medical-devices/legal-framework-guidances-and-standards-for-clinical-investigations-with-medical-devices){target="_blank"}
+* [In-vitro diagnostics Regulation](https://english.ccmo.nl/investigators/performance-studies-using-in-vitro-diagnostics-ivdr/legal-framework-guidances-and-standards-for-prestatiestudies-naar-in-vitro-diagnostica){target="_blank"}
+* [Research involving pregnant/breastfeeding participants](https://english.ccmo.nl/investigators/additional-requirements-for-certain-types-of-research/research-involving-fetuses-pregnant-and-or-breastfeeding-women){target="_blank"}
+* [Chart review research/retrospective patient file reviews](https://english.ccmo.nl/investigators/additional-requirements-for-certain-types-of-research/non-wmo-research/file-research){target="_blank"}
+* [Non-WMO/non-clinical trial research with a medical product that is initiated/financed by pharmaceutical companies](https://english.ccmo.nl/investigators/additional-requirements-for-certain-types-of-research/non-wmo-research/non-wmo-research-with-a-medicinal-product){target="_blank"}
+
+<details>
+<summary class="summaryHeader">
+View VCWE Guidance
+</summary>
+
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open('VCWEguidance.html','_blank');">Open VCWE guidance on new page</button>
+
+
+```{r, child='text/VCWEtext.Rmd', echo=FALSE, results='asis'}
+```
+
+</details>
+
+<details>
+<summary class="summaryHeader">
+View WMO Guidance
+</summary>
+
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open('WMOguidance.html','_blank');">Open WMO guidance on new page</button>
+
+```{r, child='text/WMOtext.Rmd', echo=FALSE, results='asis'}
+```
+
+</details>
+
+</div>
+
+
+<div class = "guidance outcome">
+
+## Research requires more planning {#suppA}
+
+<button id="suppAback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
+
+You should determine more of what your research will entail before assessing the ethical review process that applies to you. You can find more information on what you need to consider at this stage of the research process on this [VUweb page](https://vu.nl/en/employee/research-data-management-fbms/before-research-fgb){target="_blank"}. If you feel that your research is fairly well planned, and you're not sure why you landed here, you can contact the [Research and Policy Support Team (REPS)](mailto:research.data.fgb@vu.nl).
+
+</div>
+
+
+<div class = "guidance outcome">
+
+## Support {#suppB}
+
+<button id="suppBback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
+
+Your situation is not so clear, meaning its difficult to make an assessment of which ethical review process applies to you. We recommend first contacting the [Research and Policy Support Team (REPS)](mailto:research.data.fgb@vu.nl) for support on your research planning.
+
+
+</div>
+
+</div>
+
+<!--2026-09-08: removed after changes and discussions with VCWE & METC
 
 <div class = "guidance outcome">
 
@@ -509,8 +648,8 @@ View WMO Guidance
 
 <button class="inline-button btn btn-primary btn-sm" onclick="window.open('WMOguidance.html','_blank');">Open WMO guidance on new page</button>
 
-```{r, child='text/WMOtext.Rmd', echo=FALSE, results='asis'}
-```
+#```{r, child='text/WMOtext.Rmd', echo=FALSE, results='asis'}
+#```
 </details>
 
 <details>
@@ -520,8 +659,8 @@ View non-WMO Guidance
 
 <button class="inline-button btn btn-primary btn-sm" onclick="window.open('nonWMOguidance.html','_blank');">Open non-WMO guidance on new page</button>
 
-```{r, child='text/nonWMOtext.Rmd', echo=FALSE, results='asis'}
-```
+#```{r, child='text/nonWMOtext.Rmd', echo=FALSE, results='asis'}
+#```
 </details>
 
 </div>
@@ -541,8 +680,8 @@ View non-WMO Guidance
 
 <button class="inline-button btn btn-primary btn-sm" onclick="window.open('nonWMOguidance.html','_blank');">Open non-WMO guidance on new page</button>
 
-```{r, child='text/nonWMOtext.Rmd', echo=FALSE, results='asis'}
-```
+#```{r, child='text/nonWMOtext.Rmd', echo=FALSE, results='asis'}
+#```
 </details>
 
 <details>
@@ -552,8 +691,8 @@ View VCWE Guidance
 
 <button class="inline-button btn btn-primary btn-sm" onclick="window.open('VCWEguidance.html','_blank');">Open VCWE guidance on new page</button>
 
-```{r, child='text/VCWEtext.Rmd', echo=FALSE, results='asis'}
-```
+#```{r, child='text/VCWEtext.Rmd', echo=FALSE, results='asis'}
+#```
 </details>
 
 
@@ -575,8 +714,8 @@ View non-WMO Guidance
 
 <button class="inline-button btn btn-primary btn-sm" onclick="window.open('nonWMOguidance.html','_blank');">Open non-WMO guidance on new page</button>
 
-```{r, child='text/nonWMOtext.Rmd', echo=FALSE, results='asis'}
-```
+#```{r, child='text/nonWMOtext.Rmd', echo=FALSE, results='asis'}
+#```
 </details>
 
 <details>
@@ -588,8 +727,8 @@ View WMO Guidance
 
 
 
-```{r, child='text/WMOtext.Rmd', echo=FALSE, results='asis'}
-```
+#```{r, child='text/WMOtext.Rmd', echo=FALSE, results='asis'}
+#```
 </details>
 
 <details>
@@ -599,33 +738,17 @@ View VCWE Guidance
 
 <button class="inline-button btn btn-primary btn-sm" onclick="window.open('VCWEguidance.html','_blank');">Open VCWE guidance on new page</button>
 
-```{r, child='text/VCWEtext.Rmd', echo=FALSE, results='asis'}
-```
+#```{r, child='text/VCWEtext.Rmd', echo=FALSE, results='asis'}
+#```
 </details>
 
 
 
 </div>
 
+-->
 
-<div class = "guidance outcome">
-
-## Standard FGB ethical review is required {#defVCWEoutcome}
-
-<button id="defVCWEback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
-
-
-Based on your responses, the WMO does *not* apply to your research nor do you need to complete a non-WMO declaration. You should, however, submit your research to the FGB's ethical committee, the VCWE, to ensure that it meets all ethical requirements.
-
-<button class="inline-button btn btn-primary btn-sm" onclick="window.open('VCWEguidance.html','_blank');">Open VCWE guidance on new page</button>
-
-
-```{r, child='text/VCWEtext.Rmd', echo=FALSE, results='asis'}
-```
-
-
-</div>
-
+<!--2026-09-08: removed after changes and discussions with VCWE & METC
 
 <div class = "guidance outcome">
 
@@ -643,8 +766,8 @@ View VCWE Guidance
 
 <button class="inline-button btn btn-primary btn-sm" onclick="window.open('VCWEguidance.html','_blank');">Open VCWE guidance on new page</button>
 
-```{r, child='text/VCWEtext.Rmd', echo=FALSE, results='asis'}
-```
+#```{r, child='text/VCWEtext.Rmd', echo=FALSE, results='asis'}
+#```
 </details>
 
 
@@ -655,8 +778,8 @@ View non-WMO Guidance
 
 <button class="inline-button btn btn-primary btn-sm" onclick="window.open('nonWMOguidance.html','_blank');">Open non-WMO guidance on new page</button>
 
-```{r, child='text/nonWMOtext.Rmd', echo=FALSE, results='asis'}
-```
+#```{r, child='text/nonWMOtext.Rmd', echo=FALSE, results='asis'}
+#```
 </details>
 
 <details>
@@ -666,39 +789,16 @@ View WMO Guidance
 
 <button class="inline-button btn btn-primary btn-sm" onclick="window.open('WMOguidance.html','_blank');">Open WMO guidance on new page</button>
 
-```{r, child='text/WMOtext.Rmd', echo=FALSE, results='asis'}
-```
+#```{r, child='text/WMOtext.Rmd', echo=FALSE, results='asis'}
+#```
 </details>
 
 
 </div>
 
-
-<div class = "guidance outcome">
-
-## Research requires more planning {#suppA}
-
-<button id="suppAback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
-
-You should determine more of what your research will entail before assessing the ethical review process that applies to you. You can find more information on what you need to consider and prepare at this stage on this [VUweb page](https://vu.nl/en/employee/research-data-management-fbms/before-research-fgb){target="_blank"}. If you feel that your research is fairly well planned, and you're not sure why you landed here, you can contact the [Research and Policy Support Team (REPS)](mailto:research.data.fgb@vu.nl).
-
-</div>
+-->
 
 
-<div class = "guidance outcome">
-
-## Support {#suppB}
-
-<button id="suppBback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
-
-Your situation is not so clear, meaning its difficult to make an assessment of which ethical review process applies to you. We recommend first contacting the [Research and Policy Support Team (REPS)](mailto:research.data.fgb@vu.nl) for support on your research planning. You are welcome to also contact the [FGB Scientific and Ethical Review Committee (VCWE)](mailto:vcwe.fgb@vu.nl) for support.
-
-
-</div>
-
-
-
-</div>
 
 
 

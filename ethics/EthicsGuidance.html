@@ -350,7 +350,7 @@ display: none;
 
 <h1 class="title toc-ignore">Ethics @ FGB: Which Ethical Review
 Processes Apply?</h1>
-<h4 class="date">2026-06-09; version 1.0</h4>
+<h4 class="date">2026-09-09; version 1.1</h4>
 
 </div>
 
@@ -552,12 +552,11 @@ context.</p>
 <form id="whichRoute">
 <label><input type="radio" name="routePicker" id="displayWMO" value="wmo">
 WMO research review process </label><br>
-<label><input type="radio" name="routePicker" id="displayNonWMO" value="nwmo">
-Non-WMO declaration process </label><br>
+<!--<label><input type="radio" name="routePicker" id="displayNonWMO" value="nwmo"> Non-WMO declaration process </label><br> removed because not relevant per 2026-09-08-->
 <label><input type="radio" name="routePicker" id="displayVCWE" value="vcwe">
 Standard FGB ethical review </label><br>
 <label><input type="radio" name="routePicker" id="displayQuiz" value="quiz">
-I need help to figure out what process(es) apply to me </label><br>
+I need help to figure out which process applies to me </label><br>
 </form>
 </div>
 </div>
@@ -843,167 +842,21 @@ if (typeof goToQuizSetup === 'undefined') {
 </script>
 </div>
 </div>
-<div id="nwmoGuidance" class="guidance">
-<p><br />
-<br />
-<button class="inline-button btn btn-primary btn-sm" onclick="window.open(&#39;nonWMOguidance.html&#39;,&#39;_blank&#39;);">Open
-non-WMO guidance on new page</button></p>
-<div id="obtaining-a-non-wmo-declaration-for-fgb-research" class="section level1">
-<h1>Obtaining a non-WMO declaration for FGB research</h1>
-<!-- use html tags rather than markdown # tags for headers in all child text pages otherwise formatting of main ethicsGuidance page gets messed up -->
-<h2>
-When is a non-WMO declaration necessary
-</h2>
-<p>A non-WMO declaration is generally necessary for FGB research if it’s
-uncertain whether the WMO applies to your research or if a third party
-requires a non-WMO declaration from you, for example, when publishing
-your research article in a scientific journal. Both of these conditions
-aren’t entirely clear cut for FGB researchers, so the general
-recommendation is to get a non-WMO declaration when your research has a
-medical/clinical focus, but otherwise doesn’t meet the conditions to
-fall under the WMO (i.e. your research does not involve participants
-being subject to procedures or specific rules of behaviour).</p>
-<div class="quizInfo">
-<!-- this section is is hidden when someone gets to the nonWMO guidance text from 
-the quiz outcomes since it wouldn't make sense to mention the quiz at that point-->
-<p>If you are still unsure if you need a non-WMO declaration, you can
-take the short FGB-based quiz (if you haven’t already) for a
-recommendation.</p>
-<!-- following button opens the guidance page with the quiz pre-selected (opting to open a new page for the quiz so as to not navigate away from the non-WMO info on the current page, but also to allow someone to go to the quiz from the external nonWMOguidance.html page).-->
-<button class="goToQuiz btn btn-primary btn-sm">
-Go to quiz
-</button>
+<!--removed because not relevant per 2026-09-08
+<div class = "guidance" id = "nwmoGuidance">
+
+\
+\
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open('nonWMOguidance.html','_blank');">Open non-WMO guidance on new page</button>
+
+# Obtaining a non-WMO declaration for FGB research
+
+#```{r, child='text/nonWMOtext.Rmd', echo=FALSE, results='asis'}
+#```
+
+
 </div>
-<h2>
-How to obtain a non-WMO declaration
-</h2>
-<p>For the vast majority of cases, FGB researchers will submit their
-request for a non-WMO declaration to the Amsterdam UMC’s METC. A non-WMO
-declaration request must be submitted to the <a href="https://metc.amsterdamumc.org/research-manager/" target="_blank">Amsterdam UMC’s Research Manager portal</a>. Relevant
-information for your submission can be found on the following pages:</p>
-<ul>
-<li><a href="https://metc.amsterdamumc.org/wp-content/uploads/2023/09/Research-Manager-Handleiding-voor-onderzoekers-niet-WMO-studies-versie-6-d.d.-1-september-2023.pdf" target="_blank">Manual on Research Manager and the Submission of Non-WMO
-research (only in Dutch)</a></li>
-<li><a href="https://metc.amsterdamumc.org/tarieven/niet-wmo/" target="_blank">Costs of a non-WMO declaration submission (only in
-Dutch)</a></li>
-<li>Submission requirements:
-<ul>
-<li><a href="https://metc.amsterdamumc.org/niet-wmo/nieuwe-indiening/" target="_blank">Required information and documentation for a new non-WMO
-submission (only in Dutch)</a>
-<ul>
-<li>See the dropdown section on <em>Documenten nieuwe niet-WMO
-indiening</em> for a checklist of the required documents as well as
-links to templates that you <em>must</em> use <a href="https://metc.amsterdamumc.org/indieningseisen/" target="_blank">Submission requirements for documents and communication
-processes with the METC (only in Dutch)</a></li>
-<li>See the very bottom of this page for further information specific to
-non-WMO submissions in Research Manager, particularly how to handle
-questions from the METC on your submission.</li>
-<li>The submission requirements are also summarized in greater detail in
-<a href="https://metc.amsterdamumc.org/wp-content/uploads/2025/08/Indieningseisen-versie-2.0-d.d.-22-08-2025.pdf" target="_blank">this document</a>.</li>
-</ul></li>
-</ul></li>
-</ul>
-<h4>
-Deviations from standard submission procedure
-</h4>
-<p>The information on the submission procedures and requirements is
-written with AUMC researchers in mind. The following deviations on the
-process apply to you as an FGB researcher:</p>
-<ul>
-<li><a href="https://metc.amsterdamumc.org/wp-content/uploads/2025/08/Indieningseisen-versie-2.0-d.d.-22-08-2025.pdf" target="_blank">The submission requirements</a> state that a
-registration number from the processing register (<em>Register
-gegevensverwerking</em>) must be submitted in the General Information on
-your study in Research Manager. This does not apply to you as a VU
-research because you will not be using the AUMC’s processing register
-(<a href="#notAppl">see below for more information</a>).</li>
-<li><a href="https://metc.amsterdamumc.org/wp-content/uploads/2025/08/Indieningseisen-versie-2.0-d.d.-22-08-2025.pdf" target="_blank">The submission requirements</a> cite contact information
-that must be included in the participant information letter, but the
-contact information cited is for AUMC. As an FGB researcher:
-<ul>
-<li>For the Data Protection Officer (<em>Functionaris
-Gegevensbescherming</em>) use <a href="mailto:functionarisgegevensbescherming@vu.nl" class="email">functionarisgegevensbescherming@vu.nl</a></li>
-<li>Complaints (<em>Klachtenregeling</em>) are generally handled via the
-individual research team, so use the appropriate research team contact
-information here.</li>
-</ul></li>
-</ul>
-<h2>
-Things you should be aware of
-</h2>
-<ul>
-<li>You will need to pay the METC for their assessment of your research.
-Because our organization is external to the AUMC, the costs for FGB
-researchers are can be <a href="https://metc.amsterdamumc.org/tarieven/niet-wmo/" target="_blank">€500-600</a>.
-<ul>
-<li>You are expected to cover these costs with your project budget,
-therefore its important to assess if you need a non-WMO declaration
-<strong>during your grant application</strong></li>
-</ul></li>
-<li>You don’t generally need to submit any amendments on your non-WMO
-research to the METC unless the changes are likely to cause your
-research to fall under the WMO
-<ul>
-<li>If you <em>do</em> need to submit an amendment because your research
-might be subject to the WMO, you will be charged the cost of another
-non-WMO assessment</li>
-</ul></li>
-<li>Your submission and all communication about it will happen via
-Research Manager. The METC will ignore any documents sent to them via
-e-mail and all questions from the METC on your submission will be found
-in your Research Manager environment.</li>
-<li>Ensure that the number of participants you plan to include is
-consistent across all submitted documents. For non-WMO research this
-will generally be stated in:
-<ul>
-<li>Your research protocol</li>
-<li>In the general information of your Research Manager submission</li>
-</ul></li>
-</ul>
-<h2 id="notAppl">
-Things you don’t need to worry about
-</h2>
-<p>The information on the non-WMO processes is written with AUMC
-researchers in mind, which means that some information is not applicable
-to FGB researchers. The following are some things you can ignore.</p>
-<ul>
-<li>The Amsterdam UMC mentions a special type of non-WMO research that
-falls under the DCRF assessment framework. This is for non-WMO research
-on pharmaceuticals or non-WMO research funded by pharmaceutical
-companies. Unless this applies to your situation, you can ignore any
-references to the DCRF assessment framework.</li>
-<li>The Amsterdam UMC’s <a href="https://metc.amsterdamumc.org/verwerkingsregister/" target="_blank"><em>verwerkingsregister</em> (processing register)</a>
-is mentioned on their website a few times. You <strong>do not</strong>
-need to register your research in this processing registry as an FGB
-researcher; the VU has its own systems for <a href="../legal/GDPRBasics.html#Registration_of_Personal_Data_Processing" target="_blank">registering data processing</a> which you <em>are</em>
-required to complete.</li>
-<li>The <a href="https://metc.amsterdamumc.org/niet-wmo/databanken/" target="_blank">information on setting up a data bank</a> is not
-applicable to FGB researchers. If you are considering the idea, contact
-the <a href="mailto:research.data.fgb@vu.nl">FGB REPS Team</a>.</li>
-</ul>
-<script>
-
-// script primarily for handling any local buttons that have local javascript that needs to work within this specific chunk of text
-
-
-// The Safety Guard: Only run this if we haven't already set up the listener
-// this is necessary because nonWMOtext.Rmd is used multiple times within ethicsGuidance as a child text doc, but we want the event listener to only set up once
-
-if (typeof goToQuizSetup === 'undefined') {
-  
-  document.addEventListener('click', function(event) {
-    // Check if the thing clicked has our class
-    if (event.target && event.target.classList.contains('goToQuiz')) {
-      window.open('EthicsGuidance.html?target=quiz', '_blank');
-    }
-  });
-
-  // Mark as set up so other copies of this file don't add the listener again
-  var goToQuizSetup = true;
-}
-
-</script>
-</div>
-</div>
+-->
 <div id="vcweGuidance" class="guidance">
 <p><br />
 <br />
@@ -1026,30 +879,32 @@ review within FGB and the VCWE on the <a href="https://vu.nl/en/employee/researc
 <li>Templates for information letters and informed consent forms
 <ul>
 <li>In Dutch and English</li>
-<li>Where needed, written for participants under 16</li>
+<li>Versions for participants under 16</li>
 </ul></li>
 <li>Information about the <a href="https://www.editorialmanager.com/vcwe/default2.aspx" target="_blank">ethical review submission portal</a></li>
-<li>Contact information for the current VCWE members</li>
+<li>Contact information for the VCWE</li>
 </ul>
 <h2>
 Is ethical review always required?
 </h2>
-<p>If you are of the opinion that your research shouldn’t require
-<em>any</em> ethical review, make sure to follow-up with the <a href="mailto:vcwe.fgb@vu.nl">VCWE</a> about this prior to commencing
-your research. There are relatively few cases within FGB where ethical
-review wouldn’t be recommended. Additionally, an increasing number of
+<p>There are relatively few cases within FGB where ethical review
+wouldn’t be recommended. Additionally, an increasing number of
 scientific journals require proof of ethical review before your research
-article can be published. To avoid the risk of not being able to publish
-your work anywhere, it is generally wisest to err on the side of caution
-and obtain the ethical review.</p>
+article can be published. <strong>The VCWE will <em>not</em> provide
+post-hoc ethical review</strong>. To avoid the risk of not being able to
+publish your work anywhere, it is wisest to err on the side of caution
+and obtain ethical review.</p>
 <h2>
 What happens if I am only reusing existing data?
 </h2>
-<p>Even when research doesn’t actively include research participants,
-there may still be ethical questions, and more frequently, privacy
-questions involved with the reuse of existing data in your research. In
-such a situation, prior to any ethical review, you should contact the <a href="mailto:research.data.fgb@vu.nl">Research and Policy Support Team
-(REPS)</a> to ensure that you can (legally) reuse the data.</p>
+<p>Even if you are reusing data and aren’t including any active
+participants, there may still be ethical questions posed by your
+research, meaning ethical review is still advised. Additionally, there
+are very often privacy or legal questions that arise when data are
+reused for new research. If you plan to reuse data for your research,
+contact the <a href="mailto:research.data.fgb@vu.nl">Research and Policy
+Support Team (REPS)</a> prior to ethical review to ensure that you can
+(legally) reuse the data.</p>
 </div>
 </div>
 <div id="quizGuidance" class="section level2 guidance">
@@ -1071,7 +926,7 @@ e.g. Includes anything from participants in a lab to people answering an online 
 2. Will your research project aim to answer questions related to illness, health or other medical/clinical topics?
 e.g. Includes anything related to etiology, pathogenesis, signs & symptoms, diagnostics, disease prevention, disease outcomes or treatment of illness.
   -> if yes plus at least one yes from q4-8, ALWAYS WMO
-  -> if yes plus no from q1, go immediately to DEFINITELY non-WMO
+  -> if yes plus no from q1, go immediately to DEFINITELY medical VCWE (go to VCWE, also provide links to other relevant medical legislation)
   -> if no plus no from q1, go immediately to DEFINITELY VCWE
   -> if unsure plus yes from q1, continue survey with increased likelihood to Support B (Contact info for support and links to WMO CCMO pages)
   -> if unsure plus no from q1, go straight to Support A (Guidance on figuring out study more first) > necessary for user to figure out more because remaining questions are all about treatment of participants, which doesn't apply if q1 is 'no'
@@ -1112,18 +967,18 @@ e.g. Includes experiments where stress hormones are administered to investigate 
 
 
 Overall results after quiz completion:
-  -> if q1 is no AND q2 is no, go immediately to definitely VCWE, but with info about studies without active participants
-  -> if q1 is no AND q2 is yes, go immediately to definitely non-WMO, but with info about studies without active participants
+  -> if q1 is no AND q2 is no, go immediately to definitely VCWE basic
+  -> if q1 is no AND q2 is yes, go immediately to definitely VCWE plus legisl
   -> if q1 is no AND q2 is unsure, go straight to Support A (Guidance on figuring out study more first)
   -> if q1 is unsure, go straight to Support A (Guidance on figuring out study more first)
   -> if q1 is yes AND:
     -> if q2 is yes AND any of q4-8 are yes, go to definitely WMO
     -> if q3 is yes, go immediately to definitely WMO
     -> if q3 is unsure, go immediately to Support A (Guidance on figuring out study more first)
-    -> if for q4-8 at least one response is yes, but q2-3 are not yes, go to likely WMO, potentially non-WMO/VCWE (i.e. links to all three as well as support info)
-    -> if q2-8 all no, go to definitely VCWE
-    -> for q2,4-8 and none of answers are yes, if majority response is no, to likely VCWE page; if majority response is unsure or tied, to support page B
-    -> if q2 is yes and majority of others are no, go to likely non-WMO info (include reference to VCWE); if majority of others is unsure or tied, to support page B
+    -> if for q4-8 at least one response is yes, but q2-3 are not yes, go to VCWE plus legisl AND WMO possibility
+    -> if q2-8 all no, go to definitely VCWE basic
+    -> for q2,4-8 and none of answers are yes, if majority response is no, go to VCWE basic; if majority response is unsure or tied, to support page B
+    -> if q2 is yes and majority of others are no, go to VCWE basic; if majority of others is unsure or tied, to support page B
   
 -->
 <!--  FGB WMO examples:
@@ -1148,19 +1003,17 @@ FGB examples
 <ul>
 <li>Includes:
 <ul>
-<li>Research with volunteers in brain/movement labs</li>
-<li>Online surveys with respondents gleaned via MTurk or Prolific</li>
-<li>RCTs and the like, i.e. research with intervention groups and
-control groups</li>
+<li>Lab experiments with volunteers in brain/movement labs</li>
+<li>Online surveys (including those with respondents from MTurk or
+Prolific)</li>
+<li>Research trials on patient populations</li>
+<li>Observation of research subjects in day-to-day activities</li>
 </ul></li>
 <li>Excludes:
 <ul>
-<li>Research exclusively involving review of existing medical
-records</li>
-<li>Reuse of existing data sources with no other new data collection
-from people</li>
-<li>Research exclusively on animals or on existing cell lines/existing
-biobanked materials</li>
+<li>Review of existing medical records</li>
+<li>Reuse of existing data sources</li>
+<li>Research on animals or existing biobanked materials</li>
 </ul></li>
 </ul>
 </div>
@@ -1185,17 +1038,18 @@ illness, health or other medical/clinical topics?</h3>
 FGB examples
 </summary>
 <div class="detailsEx">
-<p>Includes anything related to etiology, pathogenesis, signs &amp;
-symptoms, diagnostics, disease prevention, disease outcomes or treatment
-of illness.</p>
-<!--
-For example:
-
-* Need
-* Some 
-* Good 
-* Examples
--->
+<p>Research related to etiology, pathogenesis, signs &amp; symptoms,
+diagnostics, disease prevention, disease outcomes or treatment of
+illness. For example:</p>
+<ul>
+<li>Genetic factors in (mental) illness or developmental
+differences</li>
+<li>Societal contributors to (mental) illness</li>
+<li>Non-pharmaceutical psychological treatments</li>
+<li>Pain management methods</li>
+<li>(Cost) effectiveness of (new) psycho- and/or physiotherapy
+methods</li>
+</ul>
 </div>
 </details>
 <form id="answersQ2" class="answers" data-answered="false">
@@ -1237,13 +1091,12 @@ rules of behaviour?</h3>
 FGB examples
 </summary>
 <div class="detailsEx">
-<p>For example:</p>
 <ul>
 <li>Following a specific diet and/or exercise regiment</li>
-<li>Continuously wearing cumbersome ambulatory monitoring devices for
-several days</li>
-<li>Frequent (multiple times per day) self-reporting in a journal for an
-extended period (several weeks or months)</li>
+<li>Participation in group therapy sessions of varying intensity</li>
+<li>Continuously wearing accelerometers/ambulatory monitoring devices
+for several days</li>
+<li>Regular self-reporting in a journal for an extended period</li>
 </ul>
 </div>
 </details>
@@ -1269,25 +1122,13 @@ as a part of the research project?</h3>
 FGB examples
 </summary>
 <div class="detailsEx">
-<p>For example:</p>
 <ul>
-<li>RCTs comparing an experimental psycho- or physiotherapy protocol
-against the current gold standard, e.g.:
-<ul>
-<li>High-intensity psychotherapy vs low-intensity psychotherapy in
-depressive subjects</li>
-<li>Muscle-stimulating pressure cushions vs gold standard pressure
-cushions for wheelchair users</li>
-</ul></li>
-<li>Testing experimental medical devices to improve outcomes and/or
-diagnostics in, e.g.:
-<ul>
-<li>Mentally ill subjects</li>
-<li>People with movement disorders such as Parkison’s or cerebral
-palsy</li>
-</ul></li>
-<li>Using existing medical devices for new treatment or diagnostic
-purposes</li>
+<li>High-intensity vs low-intensity psychotherapy in depressive
+subjects</li>
+<li>Muscle-stimulating pressure cushions</li>
+<li>Application of non-invasive brain stimulation</li>
+<li>Augmented/virtual-reality tools and applications</li>
+<li>Exposure to anti-misinformation “innoculation” methods</li>
 </ul>
 </div>
 </details>
@@ -1314,10 +1155,9 @@ invasive?</h3>
 FGB examples
 </summary>
 <div class="detailsEx">
-<p>For example:</p>
 <ul>
 <li>Stressful psychological experiments where participants are subjects
-to extreme emotional and/or ethical pressure,</li>
+to extreme emotional and/or ethical pressure</li>
 <li>Studies of human physical performance that require rectal
 thermometers to record accurate body temperature measurements</li>
 </ul>
@@ -1346,7 +1186,6 @@ harm?</h3>
 FGB examples
 </summary>
 <div class="detailsEx">
-<p>For example:</p>
 <ul>
 <li>Experiments in heat labs investigating the body’s response and
 management of temperature regulation during exertion</li>
@@ -1378,7 +1217,6 @@ your research project?</h3>
 FGB examples
 </summary>
 <div class="detailsEx">
-<p>For example:</p>
 <ul>
 <li>Experiments where stress hormones are administered to study stress
 responses during emotional interpersonal interactions</li>
@@ -1409,299 +1247,9 @@ Next
 Back to quiz
 </button>
 <p>Based on your responses, the WMO applies to your research and you
-<em>will</em> need to undergo review with a METC (for FGB, this is
-usually <a href="mailto:metc@amsterdamumc.nl" class="email">metc@amsterdamumc.nl</a>). Below you can find more
-information on the WMO review processes and how they apply to you as an
-FGB researcher.</p>
-<button class="inline-button btn btn-primary btn-sm" onclick="window.open(&#39;WMOguidance.html&#39;,&#39;_blank&#39;);">
-Open WMO guidance on new page
-</button>
-<!-- use html tags rather than markdown # tags for headers in all child text pages otherwise formatting of main ethicsGuidance page gets messed up -->
-<h2>
-When does the WMO apply to research
-</h2>
-<p>The Medical Research Involving Humans Act (a.k.a. <em>Wet
-medisch-wettenschappelijk onderzoek met mensen</em> <a href="https://english.ccmo.nl/investigators/legal-framework-for-medical-scientific-research/your-research-is-it-subject-to-the-wmo-or-not" target="_blank">WMO</a>) applies to research if:</p>
-<ol style="list-style-type: decimal">
-<li>The research is medical-scientific research</li>
-<li>Research subjects must undergo procedures or must follow specific
-rules of behaviour</li>
-</ol>
-<p>The CCMO is the overarching organization that ensures research
-participants are protected while taking part in WMO research and this
-organization further explains <a href="https://english.ccmo.nl/investigators/legal-framework-for-medical-scientific-research/your-research-is-it-subject-to-the-wmo-or-not" target="_blank">the conditions that make research fall under the WMO on
-this page</a>.</p>
-<div class="quizInfo">
-<!-- this section is is hidden when someone gets to the WMO guidance text from 
-the quiz outcomes since it wouldn't make sense to mention the quiz at that point-->
-<p>However, this guidance can be confusing or unclear when applied to
-FGB research, which is why it’s recommended to take the short FGB-based
-quiz (if you haven’t already) to determine if the WMO is applies to your
-research or not.</p>
-<!-- following button opens the guidance page with the quiz pre-selected (opting to open a new page for the quiz so as to not navigate away from the WMO info on the current page, but also to allow someone to go to the quiz from the external WMOguidance.html page).-->
-<button class="goToQuiz btn btn-primary btn-sm">
-Go to quiz
-</button>
-</div>
-<h2>
-The WMO review process for FGB researchers
-</h2>
-<!-- Add in once relevant info is summarized
-<div class="subsectionIndented">
-<h4 > &#10147;Determine if additional rules or regulations beyond the WMO apply </h4>
-
-</div>
--->
-<div class="subsectionIndented">
-<h3>
-➣Review the submission requirements
-</h3>
-<p>The AUMC METC has strict requirements for what must be submitted for
-WMO ethical review and how these materials are submitted. Make sure to
-review the following:</p>
-<ul>
-<li><a href="https://metc.amsterdamumc.org/wmo/standaarddossier/" target="_blank">Standard Research Dossier (only in Dutch)</a>
-<ul>
-<li>The information on the standard research dossier is written with
-AUMC researchers in mind. To ensure that your submission is specific to
-FGB, review the information in the following sections on <a href="#notAppl">which requirements do not apply to FGB research</a> or
-<a href="#deviate">which aspects require deviations from the standard
-UMC procedures</a></li>
-</ul></li>
-<li><a href="https://metc.amsterdamumc.org/indieningseisen/" target="_blank">Summarized submission requirements and submission in the
-Onderzoeksportaal (only in Dutch)</a></li>
-<li><a href="https://metc.amsterdamumc.org/wp-content/uploads/2025/08/Indieningseisen-versie-2.0-d.d.-22-08-2025.pdf" target="_blank">Detailed submission requirements (only in Dutch)</a>
-<ul>
-<li>The information in these submission requirements is written with
-AUMC researchers in mind. To ensure that your submission is specific to
-FGB, review the information in the following sections on <a href="#notAppl">which requirements do not apply to FGB research</a> or
-<a href="#deviate">which aspects require deviations from the standard
-UMC procedures</a></li>
-<li>Be sure to use only the templates required by the METC, as not using
-these templates can delay the review process. Use this <a href="http://metc.amsterdamumc.org/wp-content/uploads/2025/02/A1.-Standaard-aanbiedingsbrief-WMO-oordeel-METC-Amsterdam-UMC-versie-januari-2025.docx">template
-letter for all correspondence with the AUMC METC</a> and for all other
-components of the standard research dossier, use the <a href="https://www.ccmo.nl/onderzoekers/standaardonderzoeksdossier" target="_blank">CCMO templates in Dutch</a>.
-<ul>
-<li><a href="https://english.ccmo.nl/investigators/standard-research-file-for-research-subject-to-the-dutch-wmo-act" target="_blank">English versions of the templates are available</a>, if
-necessary, but note that the METC only reviews the Dutch documentation
-in your submission.</li>
-</ul></li>
-</ul></li>
-<li><a href="https://metc.amsterdamumc.org/wp-content/uploads/2024/10/Amsterdam-UMC-Checklist-d.d.-10-10-24.pdf" target="_blank">Amsterdam UMC Checklist</a>
-<ul>
-<li>This checklist repeats much of the information already detailed in
-other sections, but is a good reference document. As with other guidance
-on the AUMC METC page, the information is written with AUMC researchers
-in mind. To ensure that you don’t end up trying to meet requirements
-that only apply to AUMC researchers, review the information in the
-following sections on <a href="#notAppl">which requirements do not apply
-to FGB research</a> or <a href="#deviate">which aspects require
-deviations from the standard UMC procedures</a></li>
-</ul></li>
-</ul>
-</div>
-<div class="subsectionIndented">
-<h3 id="deviate">
-➣Deviate from standard submission procedure where necessary
-</h3>
-<p>The information on the submission procedures and requirements is
-written with AUMC researchers in mind. The following deviations on the
-process apply to you as an FGB researcher:</p>
-<ul>
-<li><a href="https://metc.amsterdamumc.org/wp-content/uploads/2025/08/Indieningseisen-versie-2.0-d.d.-22-08-2025.pdf" target="_blank">The submission requirements</a> cite contact information
-that must be included in the participant information letter, but the
-contact information listed is for AUMC. As an FGB researcher:
-<ul>
-<li>For the Data Protection Officer (<em>Functionaris
-Gegevensbescherming</em>), use <a href="mailto:functionarisgegevensbescherming@vu.nl" class="email">functionarisgegevensbescherming@vu.nl</a></li>
-<li>For complaints (<em>Klachtenregeling</em>), these are generally
-handled via the individual research team, so use the appropriate
-research team contact information here.</li>
-</ul></li>
-<li>A declaration that the research site is capable of conducting WMO
-research is a required part of the standard dossier (see <a href="https://metc.amsterdamumc.org/wmo/standaarddossier/" target="_blank">section I of Standard Research Dossier</a>). For almost
-all FGB research, this declaration can be made using a research
-declaration (<em>onderzoeksverklaring</em>). A Site Suitability
-Declaration (<em>Verklaring Geschiktheid Onderzoeksinstelling</em>) is
-<em>only</em> applicable when your research involves the use of
-medicinal products. For more information, see <a href="https://english.ccmo.nl/investigators/standard-research-file-for-research-subject-to-the-dutch-wmo-act/i-participating-centres/i2-site-suitability-declaration-vgo-or-research-declaration" target="_blank">this page on the CCMO website</a>.
-<ul>
-<li>Use this <a href="https://www.ccmo.nl/documenten/2015/07/01/standaardonderzoeksdossier-i2-model-onderzoeksverklaring" target="_blank">template for your research declaration
-(<em>onderzoeksverklaring</em>)</a></li>
-<li>If you’re using the research declaration
-(<em>onderzoeksverklaring</em>) to declare the suitability of the
-research site, you must also use this <a href="https://www.ccmo.nl/documenten/2019/09/20/k3-model-onderzoekscontract-clinical-trial-agreement-onderzoeker-geinitieerd-onderzoek" target="_blank">template</a> for the Clinical Trial Agreement (required
-in <a href="https://metc.amsterdamumc.org/wmo/standaarddossier/" target="_blank">section K of Standard Research Dossier</a>).
-<ul>
-<li>There are other <a href="https://english.ccmo.nl/investigators/standard-research-file-for-research-subject-to-the-dutch-wmo-act/k-other-documents/k3-clinical-trial-agreements" target="_blank">Clinical Trial Agreement templates provided by the
-CCMO</a>, but only use these if the nature of your research
-(e.g. industry-sponsored research) requires that you use a declaration
-form other than the <a href="https://www.ccmo.nl/documenten/2019/09/20/k3-model-onderzoekscontract-clinical-trial-agreement-onderzoeker-geinitieerd-onderzoek" target="_blank">standard research declaration</a>.</li>
-</ul></li>
-</ul></li>
-<li><a href="https://metc.amsterdamumc.org/wmo/standaarddossier/" target="_blank">Section G of Standard Research Dossier</a> discusses the
-insurance required to conduct WMO research, however the information
-listed is exclusive to AUMC researchers. See <a href="#insurance">“Insurance for WMO research within FGB”</a> for more
-information on how insurance is organized for WMO research within the
-VU.</li>
-<li>In the <a href="https://metc.amsterdamumc.org/wp-content/uploads/2024/10/Amsterdam-UMC-Checklist-d.d.-10-10-24.pdf" target="_blank">Amsterdam UMC Checklist</a>:
-<ul>
-<li>There is a subsection within <em>Studiegegevens</em> that discusses
-the use of apps, websites and recordings (<em>opnames</em>) on page 6.
-If you plan to use any third party apps, websites or transcribing
-services for your research, contact <a href="mailto:research.data.fgb@vu.nl">FGB REPS</a> for FGB specific
-guidance, both on which services to use and on what documentation to
-submit to the AUMC METC.</li>
-<li>The contact information is once again specific to AUMC. As an FGB
-researcher:
-<ul>
-<li>For the Data Protection Officer (<em>Functionaris
-Gegevensbescherming</em>), use <a href="mailto:functionarisgegevensbescherming@vu.nl" class="email">functionarisgegevensbescherming@vu.nl</a></li>
-<li>For complaints (<em>Klachtenregeling</em>), these are generally
-handled via the individual research team, so use the appropriate
-research team contact information here.</li>
-</ul></li>
-</ul></li>
-</ul>
-</div>
-<h2 id="aware">
-Things you should be aware of
-</h2>
-<ul>
-<li>Ensure that the number of participants you plan to include is
-consistent across all submitted documents. For WMO research this will
-generally be stated in:
-<ul>
-<li>Your research protocol</li>
-<li>The <a href="https://english.ccmo.nl/investigators/standard-research-file-for-research-subject-to-the-dutch-wmo-act/b-forms/b1-abr-form" target="_blank">ABR form</a> that you fill in in the
-<em>Onderzoeksportaal</em></li>
-</ul></li>
-<li>While UMC researchers are required to complete the BROK
-(<em>basiscursus regelgeving en organisatie van klinisch onderzoek</em>)
-course, the rules are not as clear for FGB. It is best practice that all
-researchers conducting WMO research complete either the BROK course or
-another Good Clinical Practice (GCP) certification. The <a href="https://www.umcmedewerkers.nl/kennisbank/brok/" target="_blank">BROK course</a> is preferable to other GCP
-certifications because it is not limited to research on medicinal
-products, but to all WMO research as well as relevant non-WMO clinical
-research.
-<ul>
-<li>Bear in mind that the BROK course was created for UMC researchers,
-meaning some aspects may still not apply to you as an FGB researcher.
-When in doubt, contact <a href="mailto:research.data.fgb@vu.nl">FGB
-REPS</a> for support.</li>
-</ul></li>
-</ul>
-<div class="subsectionIndented">
-<h3 id="insurance">
-➣Insurance for WMO research within FGB
-</h3>
-<p>The AUMC METC will determine if your WMO research requires
-participants’ insurance. If you believe that your research <em>does
-not</em> pose risks to your participants, you must include a written
-request to the AUMC METC for exemption from this insurance requirement.
-This written request <strong>must be included in the initial submission
-of your standard research dossier</strong>. If you are certain that your
-research <em>will</em> require participants’ insurance, you will need to
-include proof of participants’ insurance in your submission. Regardless
-of whether your research requires participants’ insurance, you are also
-required to include proof of liability insurance in your submission. For
-proof of either type of insurance, contact <a href="mailto:research.data.fgb@vu.nl" class="email">research.data.fgb@vu.nl</a> for a copy of the relevant
-documentation.</p>
-<p>If you do not request an exemption from requiring participants’
-insurance or the AUMC METC refuses your request for an exemption, you
-will need to <a href="https://fgbto3-web.labs.vu.nl/rdm/wmo-insurance/" target="_blank">register for participants’ insurance via this form</a>.
-You can only fill in this form <em>after</em> you have received approval
-for your research from an METC. The FGB REPS team collects most
-registrations from this form once a year in the fall for processing by
-VU Corporate Finance. You may fill in this form at any time of the year,
-but if you do so outside of the usual mass registration period (every
-year in September), please contact <a href="mailto:research.data.fgb@vu.nl" class="email">research.data.fgb@vu.nl</a> to confirm that your
-registration has been received.</p>
-<p><strong>NB</strong>: There are no additional costs with liability
-insurance, but the participants’ insurance will be billed to your
-research project from whichever funding source is applicable to you.
-This means that if you are obtaining funding from a grant provider, the
-costs of participants’ insurance need to be included in the budgeting.
-See the next section <a href="#costs">“Costs of WMO research and
-budgeting”</a> for more information.</p>
-</div>
-<div class="subsectionIndented">
-<h3 id="costs">
-➣Costs of WMO research and budgeting
-</h3>
-<p>WMO research involves many extra costs that need to be estimated and
-accounted for in your budgeting, especially if you are obtaining funding
-from an external grant provider. You are expected to cover these costs
-with your project budget, therefore it’s important to estimate what
-these costs will be <strong>during your grant application</strong>. The
-primary costs that you need to take into account are:</p>
-<ul>
-<li>The costs of a WMO review by the AUMC METC. For FGB researchers, who
-are external to the AUMC, the cost is <a href="https://metc.amsterdamumc.org/tarieven/wmo-onderzoek/" target="_blank">currently €4000 for research funded by research
-grants</a>. For every <a href="https://metc.amsterdamumc.org/tijdens-en-na-wmo-onderzoek/amendementen/" target="_blank">substantial amendment</a> that needs to be submitted to
-the AUMC METC, <a href="https://metc.amsterdamumc.org/tarieven/wmo-onderzoek/" target="_blank">you will need to pay €850</a>.</li>
-<li>The costs of participants’ insurance. If your research requires <a href="#insurance">participants’ insurance</a>, there will be additional
-costs per participant included in the study. For 2026, this cost is €45
-per participant.</li>
-</ul>
-</div>
-<h2 id="notAppl">
-Things you don’t need to worry about
-</h2>
-<p>The AUMC METC’s WMO review process is written with AUMC researchers
-in mind; some information is not applicable to FGB researchers. The
-following are some things you can ignore:</p>
-<ul>
-<li>The Amsterdam UMC’s <a href="https://metc.amsterdamumc.org/verwerkingsregister/" target="_blank"><em>verwerkingsregister</em> (processing register)</a>
-is mentioned on their website a few times. You <strong>do not</strong>
-need to register your research in this processing registry as an FGB
-researcher; the VU has its own systems for <a href="../legal/GDPRBasics.html#Registration_of_Personal_Data_Processing" target="_blank">registering data processing</a> which you <em>are</em>
-required to complete.</li>
-<li>In the <a href="https://metc.amsterdamumc.org/wmo/standaarddossier/" target="_blank">standard submission dossier</a> you don’t need to
-include anything for section D on “product information”
-(<em>productinformatie</em>) unless you are conducting research with
-medicinal products or medical devices.</li>
-<li>The information on the <a href="https://metc.amsterdamumc.org/lokale-uitvoerbaarheid/lu/" target="_blank">AUMC METC’s webpage about <em>Lokale
-Uitvoerbaarheid</em></a> is not applicable to FGB researchers
-<em>unless</em> you are conducting research in partnership with the AUMC
-<em>and</em> that research will take place (in part) at the AUMC.</li>
-</ul>
-<script>
-
-// script primarily for handling any local buttons that have local javascript that needs to work within this specific chunk of text
-
-
-// The Safety Guard: Only run this if we haven't already set up the listener
-// this is necessary because WMOtext.Rmd is used multiple times within ethicsGuidance as a child text doc, but we want the event listener to only set up once
-
-if (typeof goToQuizSetup === 'undefined') {
-  
-  document.addEventListener('click', function(event) {
-    // Check if the thing clicked has our class
-    if (event.target && event.target.classList.contains('goToQuiz')) {
-      window.open('EthicsGuidance.html?target=quiz', '_blank');
-    }
-  });
-
-  // Mark as set up so other copies of this file don't add the listener again
-  var goToQuizSetup = true;
-}
-
-</script>
-</div>
-<div id="possWMOoutcome" class="section level2 guidance outcome">
-<h2>WMO review is probably required</h2>
-<button id="possWMOback" class="manual-back btn btn-primary btn-sm">
-Back to quiz
-</button>
-<p>Based on your responses, it is <em>likely</em>, but not certain, that
-the WMO applies to your research. It’s a good idea to follow-up with a
-METC (for FGB, this is usually <a href="mailto:metc@amsterdamumc.nl" class="email">metc@amsterdamumc.nl</a>) to clarify if your research does
-in fact fall under the WMO. It’s likely that even if the WMO does not
-apply to your research, you may still require a non-WMO declaration. The
-METC can also advise you on this. Below you can find more information on
-the WMO review and non-WMO declaration processes, and how they apply to
-you as an FGB researcher.</p>
+<em>will</em> need to undergo review by <a href="https://www.nedmec.nl/nl/wijze-van-indienen" target="_blank">an
+METC</a>. Below you can find more information on the WMO review
+processes and how they apply to you as an FGB researcher.</p>
 <details>
 <summary class="summaryHeader">
 View WMO Guidance
@@ -1982,960 +1530,18 @@ if (typeof goToQuizSetup === 'undefined') {
 
 </script>
 </details>
-<details>
-<summary class="summaryHeader">
-View non-WMO Guidance
-</summary>
-<button class="inline-button btn btn-primary btn-sm" onclick="window.open(&#39;nonWMOguidance.html&#39;,&#39;_blank&#39;);">
-Open non-WMO guidance on new page
-</button>
-<!-- use html tags rather than markdown # tags for headers in all child text pages otherwise formatting of main ethicsGuidance page gets messed up -->
-<h2>
-When is a non-WMO declaration necessary
-</h2>
-<p>A non-WMO declaration is generally necessary for FGB research if it’s
-uncertain whether the WMO applies to your research or if a third party
-requires a non-WMO declaration from you, for example, when publishing
-your research article in a scientific journal. Both of these conditions
-aren’t entirely clear cut for FGB researchers, so the general
-recommendation is to get a non-WMO declaration when your research has a
-medical/clinical focus, but otherwise doesn’t meet the conditions to
-fall under the WMO (i.e. your research does not involve participants
-being subject to procedures or specific rules of behaviour).</p>
-<div class="quizInfo">
-<!-- this section is is hidden when someone gets to the nonWMO guidance text from 
-the quiz outcomes since it wouldn't make sense to mention the quiz at that point-->
-<p>If you are still unsure if you need a non-WMO declaration, you can
-take the short FGB-based quiz (if you haven’t already) for a
-recommendation.</p>
-<!-- following button opens the guidance page with the quiz pre-selected (opting to open a new page for the quiz so as to not navigate away from the non-WMO info on the current page, but also to allow someone to go to the quiz from the external nonWMOguidance.html page).-->
-<button class="goToQuiz btn btn-primary btn-sm">
-Go to quiz
-</button>
 </div>
-<h2>
-How to obtain a non-WMO declaration
-</h2>
-<p>For the vast majority of cases, FGB researchers will submit their
-request for a non-WMO declaration to the Amsterdam UMC’s METC. A non-WMO
-declaration request must be submitted to the <a href="https://metc.amsterdamumc.org/research-manager/" target="_blank">Amsterdam UMC’s Research Manager portal</a>. Relevant
-information for your submission can be found on the following pages:</p>
-<ul>
-<li><a href="https://metc.amsterdamumc.org/wp-content/uploads/2023/09/Research-Manager-Handleiding-voor-onderzoekers-niet-WMO-studies-versie-6-d.d.-1-september-2023.pdf" target="_blank">Manual on Research Manager and the Submission of Non-WMO
-research (only in Dutch)</a></li>
-<li><a href="https://metc.amsterdamumc.org/tarieven/niet-wmo/" target="_blank">Costs of a non-WMO declaration submission (only in
-Dutch)</a></li>
-<li>Submission requirements:
-<ul>
-<li><a href="https://metc.amsterdamumc.org/niet-wmo/nieuwe-indiening/" target="_blank">Required information and documentation for a new non-WMO
-submission (only in Dutch)</a>
-<ul>
-<li>See the dropdown section on <em>Documenten nieuwe niet-WMO
-indiening</em> for a checklist of the required documents as well as
-links to templates that you <em>must</em> use <a href="https://metc.amsterdamumc.org/indieningseisen/" target="_blank">Submission requirements for documents and communication
-processes with the METC (only in Dutch)</a></li>
-<li>See the very bottom of this page for further information specific to
-non-WMO submissions in Research Manager, particularly how to handle
-questions from the METC on your submission.</li>
-<li>The submission requirements are also summarized in greater detail in
-<a href="https://metc.amsterdamumc.org/wp-content/uploads/2025/08/Indieningseisen-versie-2.0-d.d.-22-08-2025.pdf" target="_blank">this document</a>.</li>
-</ul></li>
-</ul></li>
-</ul>
-<h4>
-Deviations from standard submission procedure
-</h4>
-<p>The information on the submission procedures and requirements is
-written with AUMC researchers in mind. The following deviations on the
-process apply to you as an FGB researcher:</p>
-<ul>
-<li><a href="https://metc.amsterdamumc.org/wp-content/uploads/2025/08/Indieningseisen-versie-2.0-d.d.-22-08-2025.pdf" target="_blank">The submission requirements</a> state that a
-registration number from the processing register (<em>Register
-gegevensverwerking</em>) must be submitted in the General Information on
-your study in Research Manager. This does not apply to you as a VU
-research because you will not be using the AUMC’s processing register
-(<a href="#notAppl">see below for more information</a>).</li>
-<li><a href="https://metc.amsterdamumc.org/wp-content/uploads/2025/08/Indieningseisen-versie-2.0-d.d.-22-08-2025.pdf" target="_blank">The submission requirements</a> cite contact information
-that must be included in the participant information letter, but the
-contact information cited is for AUMC. As an FGB researcher:
-<ul>
-<li>For the Data Protection Officer (<em>Functionaris
-Gegevensbescherming</em>) use <a href="mailto:functionarisgegevensbescherming@vu.nl" class="email">functionarisgegevensbescherming@vu.nl</a></li>
-<li>Complaints (<em>Klachtenregeling</em>) are generally handled via the
-individual research team, so use the appropriate research team contact
-information here.</li>
-</ul></li>
-</ul>
-<h2>
-Things you should be aware of
-</h2>
-<ul>
-<li>You will need to pay the METC for their assessment of your research.
-Because our organization is external to the AUMC, the costs for FGB
-researchers are can be <a href="https://metc.amsterdamumc.org/tarieven/niet-wmo/" target="_blank">€500-600</a>.
-<ul>
-<li>You are expected to cover these costs with your project budget,
-therefore its important to assess if you need a non-WMO declaration
-<strong>during your grant application</strong></li>
-</ul></li>
-<li>You don’t generally need to submit any amendments on your non-WMO
-research to the METC unless the changes are likely to cause your
-research to fall under the WMO
-<ul>
-<li>If you <em>do</em> need to submit an amendment because your research
-might be subject to the WMO, you will be charged the cost of another
-non-WMO assessment</li>
-</ul></li>
-<li>Your submission and all communication about it will happen via
-Research Manager. The METC will ignore any documents sent to them via
-e-mail and all questions from the METC on your submission will be found
-in your Research Manager environment.</li>
-<li>Ensure that the number of participants you plan to include is
-consistent across all submitted documents. For non-WMO research this
-will generally be stated in:
-<ul>
-<li>Your research protocol</li>
-<li>In the general information of your Research Manager submission</li>
-</ul></li>
-</ul>
-<h2 id="notAppl">
-Things you don’t need to worry about
-</h2>
-<p>The information on the non-WMO processes is written with AUMC
-researchers in mind, which means that some information is not applicable
-to FGB researchers. The following are some things you can ignore.</p>
-<ul>
-<li>The Amsterdam UMC mentions a special type of non-WMO research that
-falls under the DCRF assessment framework. This is for non-WMO research
-on pharmaceuticals or non-WMO research funded by pharmaceutical
-companies. Unless this applies to your situation, you can ignore any
-references to the DCRF assessment framework.</li>
-<li>The Amsterdam UMC’s <a href="https://metc.amsterdamumc.org/verwerkingsregister/" target="_blank"><em>verwerkingsregister</em> (processing register)</a>
-is mentioned on their website a few times. You <strong>do not</strong>
-need to register your research in this processing registry as an FGB
-researcher; the VU has its own systems for <a href="../legal/GDPRBasics.html#Registration_of_Personal_Data_Processing" target="_blank">registering data processing</a> which you <em>are</em>
-required to complete.</li>
-<li>The <a href="https://metc.amsterdamumc.org/niet-wmo/databanken/" target="_blank">information on setting up a data bank</a> is not
-applicable to FGB researchers. If you are considering the idea, contact
-the <a href="mailto:research.data.fgb@vu.nl">FGB REPS Team</a>.</li>
-</ul>
-<script>
-
-// script primarily for handling any local buttons that have local javascript that needs to work within this specific chunk of text
-
-
-// The Safety Guard: Only run this if we haven't already set up the listener
-// this is necessary because nonWMOtext.Rmd is used multiple times within ethicsGuidance as a child text doc, but we want the event listener to only set up once
-
-if (typeof goToQuizSetup === 'undefined') {
-  
-  document.addEventListener('click', function(event) {
-    // Check if the thing clicked has our class
-    if (event.target && event.target.classList.contains('goToQuiz')) {
-      window.open('EthicsGuidance.html?target=quiz', '_blank');
-    }
-  });
-
-  // Mark as set up so other copies of this file don't add the listener again
-  var goToQuizSetup = true;
-}
-
-</script>
-</details>
-</div>
-<div id="defNonWMOoutcome" class="section level2 guidance outcome">
-<h2>Non-WMO declaration is likely required</h2>
-<button id="defNonWMOback" class="manual-back btn btn-primary btn-sm">
-Back to quiz
-</button>
-<p>Based on your responses, it is <em>very likely</em> that you
-<em>will</em> need a non-WMO declaration, but that your research is
-otherwise not subject to the WMO. You can check with a METC (for FGB,
-this is usually <a href="mailto:metc@amsterdamumc.nl" class="email">metc@amsterdamumc.nl</a>) if you disagree and require
-clarification. Be aware that even if you get a non-WMO declaration, you
-will still need to do an ethical review with FGB’s ethical committee,
-the VCWE. Below you can find more information on the non-WMO declaration
-and VCWE ethical review processes, and how they apply to you as an FGB
-researcher.</p>
-<details>
-<summary class="summaryHeader">
-View non-WMO Guidance
-</summary>
-<button class="inline-button btn btn-primary btn-sm" onclick="window.open(&#39;nonWMOguidance.html&#39;,&#39;_blank&#39;);">
-Open non-WMO guidance on new page
-</button>
-<!-- use html tags rather than markdown # tags for headers in all child text pages otherwise formatting of main ethicsGuidance page gets messed up -->
-<h2>
-When is a non-WMO declaration necessary
-</h2>
-<p>A non-WMO declaration is generally necessary for FGB research if it’s
-uncertain whether the WMO applies to your research or if a third party
-requires a non-WMO declaration from you, for example, when publishing
-your research article in a scientific journal. Both of these conditions
-aren’t entirely clear cut for FGB researchers, so the general
-recommendation is to get a non-WMO declaration when your research has a
-medical/clinical focus, but otherwise doesn’t meet the conditions to
-fall under the WMO (i.e. your research does not involve participants
-being subject to procedures or specific rules of behaviour).</p>
-<div class="quizInfo">
-<!-- this section is is hidden when someone gets to the nonWMO guidance text from 
-the quiz outcomes since it wouldn't make sense to mention the quiz at that point-->
-<p>If you are still unsure if you need a non-WMO declaration, you can
-take the short FGB-based quiz (if you haven’t already) for a
-recommendation.</p>
-<!-- following button opens the guidance page with the quiz pre-selected (opting to open a new page for the quiz so as to not navigate away from the non-WMO info on the current page, but also to allow someone to go to the quiz from the external nonWMOguidance.html page).-->
-<button class="goToQuiz btn btn-primary btn-sm">
-Go to quiz
-</button>
-</div>
-<h2>
-How to obtain a non-WMO declaration
-</h2>
-<p>For the vast majority of cases, FGB researchers will submit their
-request for a non-WMO declaration to the Amsterdam UMC’s METC. A non-WMO
-declaration request must be submitted to the <a href="https://metc.amsterdamumc.org/research-manager/" target="_blank">Amsterdam UMC’s Research Manager portal</a>. Relevant
-information for your submission can be found on the following pages:</p>
-<ul>
-<li><a href="https://metc.amsterdamumc.org/wp-content/uploads/2023/09/Research-Manager-Handleiding-voor-onderzoekers-niet-WMO-studies-versie-6-d.d.-1-september-2023.pdf" target="_blank">Manual on Research Manager and the Submission of Non-WMO
-research (only in Dutch)</a></li>
-<li><a href="https://metc.amsterdamumc.org/tarieven/niet-wmo/" target="_blank">Costs of a non-WMO declaration submission (only in
-Dutch)</a></li>
-<li>Submission requirements:
-<ul>
-<li><a href="https://metc.amsterdamumc.org/niet-wmo/nieuwe-indiening/" target="_blank">Required information and documentation for a new non-WMO
-submission (only in Dutch)</a>
-<ul>
-<li>See the dropdown section on <em>Documenten nieuwe niet-WMO
-indiening</em> for a checklist of the required documents as well as
-links to templates that you <em>must</em> use <a href="https://metc.amsterdamumc.org/indieningseisen/" target="_blank">Submission requirements for documents and communication
-processes with the METC (only in Dutch)</a></li>
-<li>See the very bottom of this page for further information specific to
-non-WMO submissions in Research Manager, particularly how to handle
-questions from the METC on your submission.</li>
-<li>The submission requirements are also summarized in greater detail in
-<a href="https://metc.amsterdamumc.org/wp-content/uploads/2025/08/Indieningseisen-versie-2.0-d.d.-22-08-2025.pdf" target="_blank">this document</a>.</li>
-</ul></li>
-</ul></li>
-</ul>
-<h4>
-Deviations from standard submission procedure
-</h4>
-<p>The information on the submission procedures and requirements is
-written with AUMC researchers in mind. The following deviations on the
-process apply to you as an FGB researcher:</p>
-<ul>
-<li><a href="https://metc.amsterdamumc.org/wp-content/uploads/2025/08/Indieningseisen-versie-2.0-d.d.-22-08-2025.pdf" target="_blank">The submission requirements</a> state that a
-registration number from the processing register (<em>Register
-gegevensverwerking</em>) must be submitted in the General Information on
-your study in Research Manager. This does not apply to you as a VU
-research because you will not be using the AUMC’s processing register
-(<a href="#notAppl">see below for more information</a>).</li>
-<li><a href="https://metc.amsterdamumc.org/wp-content/uploads/2025/08/Indieningseisen-versie-2.0-d.d.-22-08-2025.pdf" target="_blank">The submission requirements</a> cite contact information
-that must be included in the participant information letter, but the
-contact information cited is for AUMC. As an FGB researcher:
-<ul>
-<li>For the Data Protection Officer (<em>Functionaris
-Gegevensbescherming</em>) use <a href="mailto:functionarisgegevensbescherming@vu.nl" class="email">functionarisgegevensbescherming@vu.nl</a></li>
-<li>Complaints (<em>Klachtenregeling</em>) are generally handled via the
-individual research team, so use the appropriate research team contact
-information here.</li>
-</ul></li>
-</ul>
-<h2>
-Things you should be aware of
-</h2>
-<ul>
-<li>You will need to pay the METC for their assessment of your research.
-Because our organization is external to the AUMC, the costs for FGB
-researchers are can be <a href="https://metc.amsterdamumc.org/tarieven/niet-wmo/" target="_blank">€500-600</a>.
-<ul>
-<li>You are expected to cover these costs with your project budget,
-therefore its important to assess if you need a non-WMO declaration
-<strong>during your grant application</strong></li>
-</ul></li>
-<li>You don’t generally need to submit any amendments on your non-WMO
-research to the METC unless the changes are likely to cause your
-research to fall under the WMO
-<ul>
-<li>If you <em>do</em> need to submit an amendment because your research
-might be subject to the WMO, you will be charged the cost of another
-non-WMO assessment</li>
-</ul></li>
-<li>Your submission and all communication about it will happen via
-Research Manager. The METC will ignore any documents sent to them via
-e-mail and all questions from the METC on your submission will be found
-in your Research Manager environment.</li>
-<li>Ensure that the number of participants you plan to include is
-consistent across all submitted documents. For non-WMO research this
-will generally be stated in:
-<ul>
-<li>Your research protocol</li>
-<li>In the general information of your Research Manager submission</li>
-</ul></li>
-</ul>
-<h2 id="notAppl">
-Things you don’t need to worry about
-</h2>
-<p>The information on the non-WMO processes is written with AUMC
-researchers in mind, which means that some information is not applicable
-to FGB researchers. The following are some things you can ignore.</p>
-<ul>
-<li>The Amsterdam UMC mentions a special type of non-WMO research that
-falls under the DCRF assessment framework. This is for non-WMO research
-on pharmaceuticals or non-WMO research funded by pharmaceutical
-companies. Unless this applies to your situation, you can ignore any
-references to the DCRF assessment framework.</li>
-<li>The Amsterdam UMC’s <a href="https://metc.amsterdamumc.org/verwerkingsregister/" target="_blank"><em>verwerkingsregister</em> (processing register)</a>
-is mentioned on their website a few times. You <strong>do not</strong>
-need to register your research in this processing registry as an FGB
-researcher; the VU has its own systems for <a href="../legal/GDPRBasics.html#Registration_of_Personal_Data_Processing" target="_blank">registering data processing</a> which you <em>are</em>
-required to complete.</li>
-<li>The <a href="https://metc.amsterdamumc.org/niet-wmo/databanken/" target="_blank">information on setting up a data bank</a> is not
-applicable to FGB researchers. If you are considering the idea, contact
-the <a href="mailto:research.data.fgb@vu.nl">FGB REPS Team</a>.</li>
-</ul>
-<script>
-
-// script primarily for handling any local buttons that have local javascript that needs to work within this specific chunk of text
-
-
-// The Safety Guard: Only run this if we haven't already set up the listener
-// this is necessary because nonWMOtext.Rmd is used multiple times within ethicsGuidance as a child text doc, but we want the event listener to only set up once
-
-if (typeof goToQuizSetup === 'undefined') {
-  
-  document.addEventListener('click', function(event) {
-    // Check if the thing clicked has our class
-    if (event.target && event.target.classList.contains('goToQuiz')) {
-      window.open('EthicsGuidance.html?target=quiz', '_blank');
-    }
-  });
-
-  // Mark as set up so other copies of this file don't add the listener again
-  var goToQuizSetup = true;
-}
-
-</script>
-</details>
-<details>
-<summary class="summaryHeader">
-View VCWE Guidance
-</summary>
-<button class="inline-button btn btn-primary btn-sm" onclick="window.open(&#39;VCWEguidance.html&#39;,&#39;_blank&#39;);">
-Open VCWE guidance on new page
-</button>
-<!-- use html tags rather than markdown # tags for headers in all child text pages otherwise formatting of main ethicsGuidance page gets messed up -->
-<h2>
-The Scientific and Ethical Review Board of FGB (VCWE)
-</h2>
-<p>You can find all the necessary information about standard ethical
-review within FGB and the VCWE on the <a href="https://vu.nl/en/employee/research-support/the-scientific-and-ethical-review-board-vcwe" target="_blank">VCWE’s VUweb page</a>. On this page, you will find:</p>
-<ul>
-<li>References to relevant codes of conduct</li>
-<li>Steps required prior to submission to the VCWE
-<ul>
-<li>The steps are also summarized in this <a href="https://assets-us-01.kc-usercontent.com/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/f4c93000-6a20-4bcd-852b-18fb2d2d4fd2/vcwe_workflow_2025.pdf" target="_blank">decision tree</a></li>
-</ul></li>
-<li>Templates for information letters and informed consent forms
-<ul>
-<li>In Dutch and English</li>
-<li>Where needed, written for participants under 16</li>
-</ul></li>
-<li>Information about the <a href="https://www.editorialmanager.com/vcwe/default2.aspx" target="_blank">ethical review submission portal</a></li>
-<li>Contact information for the current VCWE members</li>
-</ul>
-<h2>
-Is ethical review always required?
-</h2>
-<p>If you are of the opinion that your research shouldn’t require
-<em>any</em> ethical review, make sure to follow-up with the <a href="mailto:vcwe.fgb@vu.nl">VCWE</a> about this prior to commencing
-your research. There are relatively few cases within FGB where ethical
-review wouldn’t be recommended. Additionally, an increasing number of
-scientific journals require proof of ethical review before your research
-article can be published. To avoid the risk of not being able to publish
-your work anywhere, it is generally wisest to err on the side of caution
-and obtain the ethical review.</p>
-<h2>
-What happens if I am only reusing existing data?
-</h2>
-<p>Even when research doesn’t actively include research participants,
-there may still be ethical questions, and more frequently, privacy
-questions involved with the reuse of existing data in your research. In
-such a situation, prior to any ethical review, you should contact the <a href="mailto:research.data.fgb@vu.nl">Research and Policy Support Team
-(REPS)</a> to ensure that you can (legally) reuse the data.</p>
-</details>
-</div>
-<div id="possNonWMOoutcome" class="section level2 guidance outcome">
-<h2>Situation unclear: non-WMO declaration may be required</h2>
-<button id="possNonWMOback" class="manual-back btn btn-primary btn-sm">
-Back to quiz
-</button>
-<p>Based on your responses, your situation is not entirely clear. Your
-situation seems to suggest that the WMO does <em>not</em> apply to your
-research, but that you may <em>still need</em> a non-WMO declaration.
-You should check with a METC (for FGB, this is usually <a href="mailto:metc@amsterdamumc.nl" class="email">metc@amsterdamumc.nl</a>) to clarify your situation. Be
-aware that even if your research is not subject to the WMO and
-regardless of whether you obtain a non-WMO declaration, you will still
-need to do an ethical review with FGB’s ethical committee, the VCWE.
-Below you can find more information on the WMO review, non-WMO
-declaration and VCWE ethical review processes, and how they apply to you
-as an FGB researcher.</p>
-<details>
-<summary class="summaryHeader">
-View non-WMO Guidance
-</summary>
-<button class="inline-button btn btn-primary btn-sm" onclick="window.open(&#39;nonWMOguidance.html&#39;,&#39;_blank&#39;);">
-Open non-WMO guidance on new page
-</button>
-<!-- use html tags rather than markdown # tags for headers in all child text pages otherwise formatting of main ethicsGuidance page gets messed up -->
-<h2>
-When is a non-WMO declaration necessary
-</h2>
-<p>A non-WMO declaration is generally necessary for FGB research if it’s
-uncertain whether the WMO applies to your research or if a third party
-requires a non-WMO declaration from you, for example, when publishing
-your research article in a scientific journal. Both of these conditions
-aren’t entirely clear cut for FGB researchers, so the general
-recommendation is to get a non-WMO declaration when your research has a
-medical/clinical focus, but otherwise doesn’t meet the conditions to
-fall under the WMO (i.e. your research does not involve participants
-being subject to procedures or specific rules of behaviour).</p>
-<div class="quizInfo">
-<!-- this section is is hidden when someone gets to the nonWMO guidance text from 
-the quiz outcomes since it wouldn't make sense to mention the quiz at that point-->
-<p>If you are still unsure if you need a non-WMO declaration, you can
-take the short FGB-based quiz (if you haven’t already) for a
-recommendation.</p>
-<!-- following button opens the guidance page with the quiz pre-selected (opting to open a new page for the quiz so as to not navigate away from the non-WMO info on the current page, but also to allow someone to go to the quiz from the external nonWMOguidance.html page).-->
-<button class="goToQuiz btn btn-primary btn-sm">
-Go to quiz
-</button>
-</div>
-<h2>
-How to obtain a non-WMO declaration
-</h2>
-<p>For the vast majority of cases, FGB researchers will submit their
-request for a non-WMO declaration to the Amsterdam UMC’s METC. A non-WMO
-declaration request must be submitted to the <a href="https://metc.amsterdamumc.org/research-manager/" target="_blank">Amsterdam UMC’s Research Manager portal</a>. Relevant
-information for your submission can be found on the following pages:</p>
-<ul>
-<li><a href="https://metc.amsterdamumc.org/wp-content/uploads/2023/09/Research-Manager-Handleiding-voor-onderzoekers-niet-WMO-studies-versie-6-d.d.-1-september-2023.pdf" target="_blank">Manual on Research Manager and the Submission of Non-WMO
-research (only in Dutch)</a></li>
-<li><a href="https://metc.amsterdamumc.org/tarieven/niet-wmo/" target="_blank">Costs of a non-WMO declaration submission (only in
-Dutch)</a></li>
-<li>Submission requirements:
-<ul>
-<li><a href="https://metc.amsterdamumc.org/niet-wmo/nieuwe-indiening/" target="_blank">Required information and documentation for a new non-WMO
-submission (only in Dutch)</a>
-<ul>
-<li>See the dropdown section on <em>Documenten nieuwe niet-WMO
-indiening</em> for a checklist of the required documents as well as
-links to templates that you <em>must</em> use <a href="https://metc.amsterdamumc.org/indieningseisen/" target="_blank">Submission requirements for documents and communication
-processes with the METC (only in Dutch)</a></li>
-<li>See the very bottom of this page for further information specific to
-non-WMO submissions in Research Manager, particularly how to handle
-questions from the METC on your submission.</li>
-<li>The submission requirements are also summarized in greater detail in
-<a href="https://metc.amsterdamumc.org/wp-content/uploads/2025/08/Indieningseisen-versie-2.0-d.d.-22-08-2025.pdf" target="_blank">this document</a>.</li>
-</ul></li>
-</ul></li>
-</ul>
-<h4>
-Deviations from standard submission procedure
-</h4>
-<p>The information on the submission procedures and requirements is
-written with AUMC researchers in mind. The following deviations on the
-process apply to you as an FGB researcher:</p>
-<ul>
-<li><a href="https://metc.amsterdamumc.org/wp-content/uploads/2025/08/Indieningseisen-versie-2.0-d.d.-22-08-2025.pdf" target="_blank">The submission requirements</a> state that a
-registration number from the processing register (<em>Register
-gegevensverwerking</em>) must be submitted in the General Information on
-your study in Research Manager. This does not apply to you as a VU
-research because you will not be using the AUMC’s processing register
-(<a href="#notAppl">see below for more information</a>).</li>
-<li><a href="https://metc.amsterdamumc.org/wp-content/uploads/2025/08/Indieningseisen-versie-2.0-d.d.-22-08-2025.pdf" target="_blank">The submission requirements</a> cite contact information
-that must be included in the participant information letter, but the
-contact information cited is for AUMC. As an FGB researcher:
-<ul>
-<li>For the Data Protection Officer (<em>Functionaris
-Gegevensbescherming</em>) use <a href="mailto:functionarisgegevensbescherming@vu.nl" class="email">functionarisgegevensbescherming@vu.nl</a></li>
-<li>Complaints (<em>Klachtenregeling</em>) are generally handled via the
-individual research team, so use the appropriate research team contact
-information here.</li>
-</ul></li>
-</ul>
-<h2>
-Things you should be aware of
-</h2>
-<ul>
-<li>You will need to pay the METC for their assessment of your research.
-Because our organization is external to the AUMC, the costs for FGB
-researchers are can be <a href="https://metc.amsterdamumc.org/tarieven/niet-wmo/" target="_blank">€500-600</a>.
-<ul>
-<li>You are expected to cover these costs with your project budget,
-therefore its important to assess if you need a non-WMO declaration
-<strong>during your grant application</strong></li>
-</ul></li>
-<li>You don’t generally need to submit any amendments on your non-WMO
-research to the METC unless the changes are likely to cause your
-research to fall under the WMO
-<ul>
-<li>If you <em>do</em> need to submit an amendment because your research
-might be subject to the WMO, you will be charged the cost of another
-non-WMO assessment</li>
-</ul></li>
-<li>Your submission and all communication about it will happen via
-Research Manager. The METC will ignore any documents sent to them via
-e-mail and all questions from the METC on your submission will be found
-in your Research Manager environment.</li>
-<li>Ensure that the number of participants you plan to include is
-consistent across all submitted documents. For non-WMO research this
-will generally be stated in:
-<ul>
-<li>Your research protocol</li>
-<li>In the general information of your Research Manager submission</li>
-</ul></li>
-</ul>
-<h2 id="notAppl">
-Things you don’t need to worry about
-</h2>
-<p>The information on the non-WMO processes is written with AUMC
-researchers in mind, which means that some information is not applicable
-to FGB researchers. The following are some things you can ignore.</p>
-<ul>
-<li>The Amsterdam UMC mentions a special type of non-WMO research that
-falls under the DCRF assessment framework. This is for non-WMO research
-on pharmaceuticals or non-WMO research funded by pharmaceutical
-companies. Unless this applies to your situation, you can ignore any
-references to the DCRF assessment framework.</li>
-<li>The Amsterdam UMC’s <a href="https://metc.amsterdamumc.org/verwerkingsregister/" target="_blank"><em>verwerkingsregister</em> (processing register)</a>
-is mentioned on their website a few times. You <strong>do not</strong>
-need to register your research in this processing registry as an FGB
-researcher; the VU has its own systems for <a href="../legal/GDPRBasics.html#Registration_of_Personal_Data_Processing" target="_blank">registering data processing</a> which you <em>are</em>
-required to complete.</li>
-<li>The <a href="https://metc.amsterdamumc.org/niet-wmo/databanken/" target="_blank">information on setting up a data bank</a> is not
-applicable to FGB researchers. If you are considering the idea, contact
-the <a href="mailto:research.data.fgb@vu.nl">FGB REPS Team</a>.</li>
-</ul>
-<script>
-
-// script primarily for handling any local buttons that have local javascript that needs to work within this specific chunk of text
-
-
-// The Safety Guard: Only run this if we haven't already set up the listener
-// this is necessary because nonWMOtext.Rmd is used multiple times within ethicsGuidance as a child text doc, but we want the event listener to only set up once
-
-if (typeof goToQuizSetup === 'undefined') {
-  
-  document.addEventListener('click', function(event) {
-    // Check if the thing clicked has our class
-    if (event.target && event.target.classList.contains('goToQuiz')) {
-      window.open('EthicsGuidance.html?target=quiz', '_blank');
-    }
-  });
-
-  // Mark as set up so other copies of this file don't add the listener again
-  var goToQuizSetup = true;
-}
-
-</script>
-</details>
-<details>
-<summary class="summaryHeader">
-View WMO Guidance
-</summary>
-<button class="inline-button btn btn-primary btn-sm" onclick="window.open(&#39;WMOguidance.html&#39;,&#39;_blank&#39;);">
-Open WMO guidance on new page
-</button>
-<!-- use html tags rather than markdown # tags for headers in all child text pages otherwise formatting of main ethicsGuidance page gets messed up -->
-<h2>
-When does the WMO apply to research
-</h2>
-<p>The Medical Research Involving Humans Act (a.k.a. <em>Wet
-medisch-wettenschappelijk onderzoek met mensen</em> <a href="https://english.ccmo.nl/investigators/legal-framework-for-medical-scientific-research/your-research-is-it-subject-to-the-wmo-or-not" target="_blank">WMO</a>) applies to research if:</p>
-<ol style="list-style-type: decimal">
-<li>The research is medical-scientific research</li>
-<li>Research subjects must undergo procedures or must follow specific
-rules of behaviour</li>
-</ol>
-<p>The CCMO is the overarching organization that ensures research
-participants are protected while taking part in WMO research and this
-organization further explains <a href="https://english.ccmo.nl/investigators/legal-framework-for-medical-scientific-research/your-research-is-it-subject-to-the-wmo-or-not" target="_blank">the conditions that make research fall under the WMO on
-this page</a>.</p>
-<div class="quizInfo">
-<!-- this section is is hidden when someone gets to the WMO guidance text from 
-the quiz outcomes since it wouldn't make sense to mention the quiz at that point-->
-<p>However, this guidance can be confusing or unclear when applied to
-FGB research, which is why it’s recommended to take the short FGB-based
-quiz (if you haven’t already) to determine if the WMO is applies to your
-research or not.</p>
-<!-- following button opens the guidance page with the quiz pre-selected (opting to open a new page for the quiz so as to not navigate away from the WMO info on the current page, but also to allow someone to go to the quiz from the external WMOguidance.html page).-->
-<button class="goToQuiz btn btn-primary btn-sm">
-Go to quiz
-</button>
-</div>
-<h2>
-The WMO review process for FGB researchers
-</h2>
-<!-- Add in once relevant info is summarized
-<div class="subsectionIndented">
-<h4 > &#10147;Determine if additional rules or regulations beyond the WMO apply </h4>
-
-</div>
--->
-<div class="subsectionIndented">
-<h3>
-➣Review the submission requirements
-</h3>
-<p>The AUMC METC has strict requirements for what must be submitted for
-WMO ethical review and how these materials are submitted. Make sure to
-review the following:</p>
-<ul>
-<li><a href="https://metc.amsterdamumc.org/wmo/standaarddossier/" target="_blank">Standard Research Dossier (only in Dutch)</a>
-<ul>
-<li>The information on the standard research dossier is written with
-AUMC researchers in mind. To ensure that your submission is specific to
-FGB, review the information in the following sections on <a href="#notAppl">which requirements do not apply to FGB research</a> or
-<a href="#deviate">which aspects require deviations from the standard
-UMC procedures</a></li>
-</ul></li>
-<li><a href="https://metc.amsterdamumc.org/indieningseisen/" target="_blank">Summarized submission requirements and submission in the
-Onderzoeksportaal (only in Dutch)</a></li>
-<li><a href="https://metc.amsterdamumc.org/wp-content/uploads/2025/08/Indieningseisen-versie-2.0-d.d.-22-08-2025.pdf" target="_blank">Detailed submission requirements (only in Dutch)</a>
-<ul>
-<li>The information in these submission requirements is written with
-AUMC researchers in mind. To ensure that your submission is specific to
-FGB, review the information in the following sections on <a href="#notAppl">which requirements do not apply to FGB research</a> or
-<a href="#deviate">which aspects require deviations from the standard
-UMC procedures</a></li>
-<li>Be sure to use only the templates required by the METC, as not using
-these templates can delay the review process. Use this <a href="http://metc.amsterdamumc.org/wp-content/uploads/2025/02/A1.-Standaard-aanbiedingsbrief-WMO-oordeel-METC-Amsterdam-UMC-versie-januari-2025.docx">template
-letter for all correspondence with the AUMC METC</a> and for all other
-components of the standard research dossier, use the <a href="https://www.ccmo.nl/onderzoekers/standaardonderzoeksdossier" target="_blank">CCMO templates in Dutch</a>.
-<ul>
-<li><a href="https://english.ccmo.nl/investigators/standard-research-file-for-research-subject-to-the-dutch-wmo-act" target="_blank">English versions of the templates are available</a>, if
-necessary, but note that the METC only reviews the Dutch documentation
-in your submission.</li>
-</ul></li>
-</ul></li>
-<li><a href="https://metc.amsterdamumc.org/wp-content/uploads/2024/10/Amsterdam-UMC-Checklist-d.d.-10-10-24.pdf" target="_blank">Amsterdam UMC Checklist</a>
-<ul>
-<li>This checklist repeats much of the information already detailed in
-other sections, but is a good reference document. As with other guidance
-on the AUMC METC page, the information is written with AUMC researchers
-in mind. To ensure that you don’t end up trying to meet requirements
-that only apply to AUMC researchers, review the information in the
-following sections on <a href="#notAppl">which requirements do not apply
-to FGB research</a> or <a href="#deviate">which aspects require
-deviations from the standard UMC procedures</a></li>
-</ul></li>
-</ul>
-</div>
-<div class="subsectionIndented">
-<h3 id="deviate">
-➣Deviate from standard submission procedure where necessary
-</h3>
-<p>The information on the submission procedures and requirements is
-written with AUMC researchers in mind. The following deviations on the
-process apply to you as an FGB researcher:</p>
-<ul>
-<li><a href="https://metc.amsterdamumc.org/wp-content/uploads/2025/08/Indieningseisen-versie-2.0-d.d.-22-08-2025.pdf" target="_blank">The submission requirements</a> cite contact information
-that must be included in the participant information letter, but the
-contact information listed is for AUMC. As an FGB researcher:
-<ul>
-<li>For the Data Protection Officer (<em>Functionaris
-Gegevensbescherming</em>), use <a href="mailto:functionarisgegevensbescherming@vu.nl" class="email">functionarisgegevensbescherming@vu.nl</a></li>
-<li>For complaints (<em>Klachtenregeling</em>), these are generally
-handled via the individual research team, so use the appropriate
-research team contact information here.</li>
-</ul></li>
-<li>A declaration that the research site is capable of conducting WMO
-research is a required part of the standard dossier (see <a href="https://metc.amsterdamumc.org/wmo/standaarddossier/" target="_blank">section I of Standard Research Dossier</a>). For almost
-all FGB research, this declaration can be made using a research
-declaration (<em>onderzoeksverklaring</em>). A Site Suitability
-Declaration (<em>Verklaring Geschiktheid Onderzoeksinstelling</em>) is
-<em>only</em> applicable when your research involves the use of
-medicinal products. For more information, see <a href="https://english.ccmo.nl/investigators/standard-research-file-for-research-subject-to-the-dutch-wmo-act/i-participating-centres/i2-site-suitability-declaration-vgo-or-research-declaration" target="_blank">this page on the CCMO website</a>.
-<ul>
-<li>Use this <a href="https://www.ccmo.nl/documenten/2015/07/01/standaardonderzoeksdossier-i2-model-onderzoeksverklaring" target="_blank">template for your research declaration
-(<em>onderzoeksverklaring</em>)</a></li>
-<li>If you’re using the research declaration
-(<em>onderzoeksverklaring</em>) to declare the suitability of the
-research site, you must also use this <a href="https://www.ccmo.nl/documenten/2019/09/20/k3-model-onderzoekscontract-clinical-trial-agreement-onderzoeker-geinitieerd-onderzoek" target="_blank">template</a> for the Clinical Trial Agreement (required
-in <a href="https://metc.amsterdamumc.org/wmo/standaarddossier/" target="_blank">section K of Standard Research Dossier</a>).
-<ul>
-<li>There are other <a href="https://english.ccmo.nl/investigators/standard-research-file-for-research-subject-to-the-dutch-wmo-act/k-other-documents/k3-clinical-trial-agreements" target="_blank">Clinical Trial Agreement templates provided by the
-CCMO</a>, but only use these if the nature of your research
-(e.g. industry-sponsored research) requires that you use a declaration
-form other than the <a href="https://www.ccmo.nl/documenten/2019/09/20/k3-model-onderzoekscontract-clinical-trial-agreement-onderzoeker-geinitieerd-onderzoek" target="_blank">standard research declaration</a>.</li>
-</ul></li>
-</ul></li>
-<li><a href="https://metc.amsterdamumc.org/wmo/standaarddossier/" target="_blank">Section G of Standard Research Dossier</a> discusses the
-insurance required to conduct WMO research, however the information
-listed is exclusive to AUMC researchers. See <a href="#insurance">“Insurance for WMO research within FGB”</a> for more
-information on how insurance is organized for WMO research within the
-VU.</li>
-<li>In the <a href="https://metc.amsterdamumc.org/wp-content/uploads/2024/10/Amsterdam-UMC-Checklist-d.d.-10-10-24.pdf" target="_blank">Amsterdam UMC Checklist</a>:
-<ul>
-<li>There is a subsection within <em>Studiegegevens</em> that discusses
-the use of apps, websites and recordings (<em>opnames</em>) on page 6.
-If you plan to use any third party apps, websites or transcribing
-services for your research, contact <a href="mailto:research.data.fgb@vu.nl">FGB REPS</a> for FGB specific
-guidance, both on which services to use and on what documentation to
-submit to the AUMC METC.</li>
-<li>The contact information is once again specific to AUMC. As an FGB
-researcher:
-<ul>
-<li>For the Data Protection Officer (<em>Functionaris
-Gegevensbescherming</em>), use <a href="mailto:functionarisgegevensbescherming@vu.nl" class="email">functionarisgegevensbescherming@vu.nl</a></li>
-<li>For complaints (<em>Klachtenregeling</em>), these are generally
-handled via the individual research team, so use the appropriate
-research team contact information here.</li>
-</ul></li>
-</ul></li>
-</ul>
-</div>
-<h2 id="aware">
-Things you should be aware of
-</h2>
-<ul>
-<li>Ensure that the number of participants you plan to include is
-consistent across all submitted documents. For WMO research this will
-generally be stated in:
-<ul>
-<li>Your research protocol</li>
-<li>The <a href="https://english.ccmo.nl/investigators/standard-research-file-for-research-subject-to-the-dutch-wmo-act/b-forms/b1-abr-form" target="_blank">ABR form</a> that you fill in in the
-<em>Onderzoeksportaal</em></li>
-</ul></li>
-<li>While UMC researchers are required to complete the BROK
-(<em>basiscursus regelgeving en organisatie van klinisch onderzoek</em>)
-course, the rules are not as clear for FGB. It is best practice that all
-researchers conducting WMO research complete either the BROK course or
-another Good Clinical Practice (GCP) certification. The <a href="https://www.umcmedewerkers.nl/kennisbank/brok/" target="_blank">BROK course</a> is preferable to other GCP
-certifications because it is not limited to research on medicinal
-products, but to all WMO research as well as relevant non-WMO clinical
-research.
-<ul>
-<li>Bear in mind that the BROK course was created for UMC researchers,
-meaning some aspects may still not apply to you as an FGB researcher.
-When in doubt, contact <a href="mailto:research.data.fgb@vu.nl">FGB
-REPS</a> for support.</li>
-</ul></li>
-</ul>
-<div class="subsectionIndented">
-<h3 id="insurance">
-➣Insurance for WMO research within FGB
-</h3>
-<p>The AUMC METC will determine if your WMO research requires
-participants’ insurance. If you believe that your research <em>does
-not</em> pose risks to your participants, you must include a written
-request to the AUMC METC for exemption from this insurance requirement.
-This written request <strong>must be included in the initial submission
-of your standard research dossier</strong>. If you are certain that your
-research <em>will</em> require participants’ insurance, you will need to
-include proof of participants’ insurance in your submission. Regardless
-of whether your research requires participants’ insurance, you are also
-required to include proof of liability insurance in your submission. For
-proof of either type of insurance, contact <a href="mailto:research.data.fgb@vu.nl" class="email">research.data.fgb@vu.nl</a> for a copy of the relevant
-documentation.</p>
-<p>If you do not request an exemption from requiring participants’
-insurance or the AUMC METC refuses your request for an exemption, you
-will need to <a href="https://fgbto3-web.labs.vu.nl/rdm/wmo-insurance/" target="_blank">register for participants’ insurance via this form</a>.
-You can only fill in this form <em>after</em> you have received approval
-for your research from an METC. The FGB REPS team collects most
-registrations from this form once a year in the fall for processing by
-VU Corporate Finance. You may fill in this form at any time of the year,
-but if you do so outside of the usual mass registration period (every
-year in September), please contact <a href="mailto:research.data.fgb@vu.nl" class="email">research.data.fgb@vu.nl</a> to confirm that your
-registration has been received.</p>
-<p><strong>NB</strong>: There are no additional costs with liability
-insurance, but the participants’ insurance will be billed to your
-research project from whichever funding source is applicable to you.
-This means that if you are obtaining funding from a grant provider, the
-costs of participants’ insurance need to be included in the budgeting.
-See the next section <a href="#costs">“Costs of WMO research and
-budgeting”</a> for more information.</p>
-</div>
-<div class="subsectionIndented">
-<h3 id="costs">
-➣Costs of WMO research and budgeting
-</h3>
-<p>WMO research involves many extra costs that need to be estimated and
-accounted for in your budgeting, especially if you are obtaining funding
-from an external grant provider. You are expected to cover these costs
-with your project budget, therefore it’s important to estimate what
-these costs will be <strong>during your grant application</strong>. The
-primary costs that you need to take into account are:</p>
-<ul>
-<li>The costs of a WMO review by the AUMC METC. For FGB researchers, who
-are external to the AUMC, the cost is <a href="https://metc.amsterdamumc.org/tarieven/wmo-onderzoek/" target="_blank">currently €4000 for research funded by research
-grants</a>. For every <a href="https://metc.amsterdamumc.org/tijdens-en-na-wmo-onderzoek/amendementen/" target="_blank">substantial amendment</a> that needs to be submitted to
-the AUMC METC, <a href="https://metc.amsterdamumc.org/tarieven/wmo-onderzoek/" target="_blank">you will need to pay €850</a>.</li>
-<li>The costs of participants’ insurance. If your research requires <a href="#insurance">participants’ insurance</a>, there will be additional
-costs per participant included in the study. For 2026, this cost is €45
-per participant.</li>
-</ul>
-</div>
-<h2 id="notAppl">
-Things you don’t need to worry about
-</h2>
-<p>The AUMC METC’s WMO review process is written with AUMC researchers
-in mind; some information is not applicable to FGB researchers. The
-following are some things you can ignore:</p>
-<ul>
-<li>The Amsterdam UMC’s <a href="https://metc.amsterdamumc.org/verwerkingsregister/" target="_blank"><em>verwerkingsregister</em> (processing register)</a>
-is mentioned on their website a few times. You <strong>do not</strong>
-need to register your research in this processing registry as an FGB
-researcher; the VU has its own systems for <a href="../legal/GDPRBasics.html#Registration_of_Personal_Data_Processing" target="_blank">registering data processing</a> which you <em>are</em>
-required to complete.</li>
-<li>In the <a href="https://metc.amsterdamumc.org/wmo/standaarddossier/" target="_blank">standard submission dossier</a> you don’t need to
-include anything for section D on “product information”
-(<em>productinformatie</em>) unless you are conducting research with
-medicinal products or medical devices.</li>
-<li>The information on the <a href="https://metc.amsterdamumc.org/lokale-uitvoerbaarheid/lu/" target="_blank">AUMC METC’s webpage about <em>Lokale
-Uitvoerbaarheid</em></a> is not applicable to FGB researchers
-<em>unless</em> you are conducting research in partnership with the AUMC
-<em>and</em> that research will take place (in part) at the AUMC.</li>
-</ul>
-<script>
-
-// script primarily for handling any local buttons that have local javascript that needs to work within this specific chunk of text
-
-
-// The Safety Guard: Only run this if we haven't already set up the listener
-// this is necessary because WMOtext.Rmd is used multiple times within ethicsGuidance as a child text doc, but we want the event listener to only set up once
-
-if (typeof goToQuizSetup === 'undefined') {
-  
-  document.addEventListener('click', function(event) {
-    // Check if the thing clicked has our class
-    if (event.target && event.target.classList.contains('goToQuiz')) {
-      window.open('EthicsGuidance.html?target=quiz', '_blank');
-    }
-  });
-
-  // Mark as set up so other copies of this file don't add the listener again
-  var goToQuizSetup = true;
-}
-
-</script>
-</details>
-<details>
-<summary class="summaryHeader">
-View VCWE Guidance
-</summary>
-<button class="inline-button btn btn-primary btn-sm" onclick="window.open(&#39;VCWEguidance.html&#39;,&#39;_blank&#39;);">
-Open VCWE guidance on new page
-</button>
-<!-- use html tags rather than markdown # tags for headers in all child text pages otherwise formatting of main ethicsGuidance page gets messed up -->
-<h2>
-The Scientific and Ethical Review Board of FGB (VCWE)
-</h2>
-<p>You can find all the necessary information about standard ethical
-review within FGB and the VCWE on the <a href="https://vu.nl/en/employee/research-support/the-scientific-and-ethical-review-board-vcwe" target="_blank">VCWE’s VUweb page</a>. On this page, you will find:</p>
-<ul>
-<li>References to relevant codes of conduct</li>
-<li>Steps required prior to submission to the VCWE
-<ul>
-<li>The steps are also summarized in this <a href="https://assets-us-01.kc-usercontent.com/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/f4c93000-6a20-4bcd-852b-18fb2d2d4fd2/vcwe_workflow_2025.pdf" target="_blank">decision tree</a></li>
-</ul></li>
-<li>Templates for information letters and informed consent forms
-<ul>
-<li>In Dutch and English</li>
-<li>Where needed, written for participants under 16</li>
-</ul></li>
-<li>Information about the <a href="https://www.editorialmanager.com/vcwe/default2.aspx" target="_blank">ethical review submission portal</a></li>
-<li>Contact information for the current VCWE members</li>
-</ul>
-<h2>
-Is ethical review always required?
-</h2>
-<p>If you are of the opinion that your research shouldn’t require
-<em>any</em> ethical review, make sure to follow-up with the <a href="mailto:vcwe.fgb@vu.nl">VCWE</a> about this prior to commencing
-your research. There are relatively few cases within FGB where ethical
-review wouldn’t be recommended. Additionally, an increasing number of
-scientific journals require proof of ethical review before your research
-article can be published. To avoid the risk of not being able to publish
-your work anywhere, it is generally wisest to err on the side of caution
-and obtain the ethical review.</p>
-<h2>
-What happens if I am only reusing existing data?
-</h2>
-<p>Even when research doesn’t actively include research participants,
-there may still be ethical questions, and more frequently, privacy
-questions involved with the reuse of existing data in your research. In
-such a situation, prior to any ethical review, you should contact the <a href="mailto:research.data.fgb@vu.nl">Research and Policy Support Team
-(REPS)</a> to ensure that you can (legally) reuse the data.</p>
-</details>
-</div>
-<div id="defVCWEoutcome" class="section level2 guidance outcome">
+<div id="defVCWEbasic" class="section level2 guidance outcome">
 <h2>Standard FGB ethical review is required</h2>
 <button id="defVCWEback" class="manual-back btn btn-primary btn-sm">
 Back to quiz
 </button>
 <p>Based on your responses, the WMO does <em>not</em> apply to your
-research nor do you need to complete a non-WMO declaration. You should,
-however, submit your research to the FGB’s ethical committee, the VCWE,
-to ensure that it meets all ethical requirements.</p>
-<button class="inline-button btn btn-primary btn-sm" onclick="window.open(&#39;VCWEguidance.html&#39;,&#39;_blank&#39;);">
-Open VCWE guidance on new page
-</button>
-<!-- use html tags rather than markdown # tags for headers in all child text pages otherwise formatting of main ethicsGuidance page gets messed up -->
-<h2>
-The Scientific and Ethical Review Board of FGB (VCWE)
-</h2>
-<p>You can find all the necessary information about standard ethical
-review within FGB and the VCWE on the <a href="https://vu.nl/en/employee/research-support/the-scientific-and-ethical-review-board-vcwe" target="_blank">VCWE’s VUweb page</a>. On this page, you will find:</p>
-<ul>
-<li>References to relevant codes of conduct</li>
-<li>Steps required prior to submission to the VCWE
-<ul>
-<li>The steps are also summarized in this <a href="https://assets-us-01.kc-usercontent.com/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/f4c93000-6a20-4bcd-852b-18fb2d2d4fd2/vcwe_workflow_2025.pdf" target="_blank">decision tree</a></li>
-</ul></li>
-<li>Templates for information letters and informed consent forms
-<ul>
-<li>In Dutch and English</li>
-<li>Where needed, written for participants under 16</li>
-</ul></li>
-<li>Information about the <a href="https://www.editorialmanager.com/vcwe/default2.aspx" target="_blank">ethical review submission portal</a></li>
-<li>Contact information for the current VCWE members</li>
-</ul>
-<h2>
-Is ethical review always required?
-</h2>
-<p>If you are of the opinion that your research shouldn’t require
-<em>any</em> ethical review, make sure to follow-up with the <a href="mailto:vcwe.fgb@vu.nl">VCWE</a> about this prior to commencing
-your research. There are relatively few cases within FGB where ethical
-review wouldn’t be recommended. Additionally, an increasing number of
-scientific journals require proof of ethical review before your research
-article can be published. To avoid the risk of not being able to publish
-your work anywhere, it is generally wisest to err on the side of caution
-and obtain the ethical review.</p>
-<h2>
-What happens if I am only reusing existing data?
-</h2>
-<p>Even when research doesn’t actively include research participants,
-there may still be ethical questions, and more frequently, privacy
-questions involved with the reuse of existing data in your research. In
-such a situation, prior to any ethical review, you should contact the <a href="mailto:research.data.fgb@vu.nl">Research and Policy Support Team
-(REPS)</a> to ensure that you can (legally) reuse the data.</p>
-</div>
-<div id="possVCWEoutcome" class="section level2 guidance outcome">
-<h2>Situation unclear: likely requires only standard FGB ethical
-review</h2>
-<button id="possVCWEback" class="manual-back btn btn-primary btn-sm">
-Back to quiz
-</button>
-<p>Based on your responses, it is <em>likely</em>, but not certain, that
-the WMO does <em>not</em> apply to your research and you also likely
-<em>do not</em> need to complete a non-WMO declaration. It’s a good idea
-to follow-up with a METC (for FGB, this is usually <a href="mailto:metc@amsterdamumc.nl" class="email">metc@amsterdamumc.nl</a>) to clarify your situation. Be
-aware that even if your research is not subject to the WMO and
-regardless of whether you obtain a non-WMO declaration, you will still
-need to do an ethical review with FGB’s ethical committee, the VCWE.
-Below you can find more information on the WMO review, non-WMO
-declaration and VCWE ethical review processes, and how they apply to you
-as an FGB researcher.</p>
+research. Submit your research to the VCWE (FGB’s ethical committee) to
+ensure that it meets all ethical requirements.</p>
+<p><strong>NB</strong>: If your research undergoes substantial
+amendments, it may become subject to the WMO. Substantial amendments
+will require a new ethical submission to the VCWE.</p>
 <details>
 <summary class="summaryHeader">
 View VCWE Guidance
@@ -2958,190 +1564,193 @@ review within FGB and the VCWE on the <a href="https://vu.nl/en/employee/researc
 <li>Templates for information letters and informed consent forms
 <ul>
 <li>In Dutch and English</li>
-<li>Where needed, written for participants under 16</li>
+<li>Versions for participants under 16</li>
 </ul></li>
 <li>Information about the <a href="https://www.editorialmanager.com/vcwe/default2.aspx" target="_blank">ethical review submission portal</a></li>
-<li>Contact information for the current VCWE members</li>
+<li>Contact information for the VCWE</li>
 </ul>
 <h2>
 Is ethical review always required?
 </h2>
-<p>If you are of the opinion that your research shouldn’t require
-<em>any</em> ethical review, make sure to follow-up with the <a href="mailto:vcwe.fgb@vu.nl">VCWE</a> about this prior to commencing
-your research. There are relatively few cases within FGB where ethical
-review wouldn’t be recommended. Additionally, an increasing number of
+<p>There are relatively few cases within FGB where ethical review
+wouldn’t be recommended. Additionally, an increasing number of
 scientific journals require proof of ethical review before your research
-article can be published. To avoid the risk of not being able to publish
-your work anywhere, it is generally wisest to err on the side of caution
-and obtain the ethical review.</p>
+article can be published. <strong>The VCWE will <em>not</em> provide
+post-hoc ethical review</strong>. To avoid the risk of not being able to
+publish your work anywhere, it is wisest to err on the side of caution
+and obtain ethical review.</p>
 <h2>
 What happens if I am only reusing existing data?
 </h2>
-<p>Even when research doesn’t actively include research participants,
-there may still be ethical questions, and more frequently, privacy
-questions involved with the reuse of existing data in your research. In
-such a situation, prior to any ethical review, you should contact the <a href="mailto:research.data.fgb@vu.nl">Research and Policy Support Team
-(REPS)</a> to ensure that you can (legally) reuse the data.</p>
+<p>Even if you are reusing data and aren’t including any active
+participants, there may still be ethical questions posed by your
+research, meaning ethical review is still advised. Additionally, there
+are very often privacy or legal questions that arise when data are
+reused for new research. If you plan to reuse data for your research,
+contact the <a href="mailto:research.data.fgb@vu.nl">Research and Policy
+Support Team (REPS)</a> prior to ethical review to ensure that you can
+(legally) reuse the data.</p>
 </details>
+</div>
+<div id="defVCWEplus" class="section level2 guidance outcome">
+<h2>Standard FGB ethical review is required</h2>
+<button id="plusVCWEback" class="manual-back btn btn-primary btn-sm">
+Back to quiz
+</button>
+<p>Based on your responses, the WMO does <em>not</em> apply to your
+research. Submit your research to the VCWE (FGB’s ethical committee) to
+ensure that it meets all ethical requirements.</p>
+<p><strong>NB</strong>: If your research undergoes substantial
+amendments, it may become subject to the WMO. Substantial amendments
+will require a new ethical submission to the VCWE.</p>
+<div id="potential-additional-concerns" class="section level3">
+<h3>Potential additional concerns</h3>
+<p>Other <a href="https://english.ccmo.nl/investigators/additional-requirements-for-certain-types-of-research" target="_blank">legislation/concerns</a> may apply to your research
+(even if the WMO does not apply) because of the medical nature of your
+research. The following concerns are particularly relevant for research
+within FGB:</p>
+<ul>
+<li><a href="https://english.ccmo.nl/investigators/clinical-investigations-with-medical-devices/legal-framework-guidances-and-standards-for-clinical-investigations-with-medical-devices" target="_blank">Medical Devices Regulation</a></li>
+<li><a href="https://english.ccmo.nl/investigators/performance-studies-using-in-vitro-diagnostics-ivdr/legal-framework-guidances-and-standards-for-prestatiestudies-naar-in-vitro-diagnostica" target="_blank">In-vitro diagnostics Regulation</a></li>
+<li><a href="https://english.ccmo.nl/investigators/additional-requirements-for-certain-types-of-research/research-involving-fetuses-pregnant-and-or-breastfeeding-women" target="_blank">Research involving pregnant/breastfeeding
+participants</a></li>
+<li><a href="https://english.ccmo.nl/investigators/additional-requirements-for-certain-types-of-research/non-wmo-research/file-research" target="_blank">Chart review research/retrospective patient file
+reviews</a></li>
+<li><a href="https://english.ccmo.nl/investigators/additional-requirements-for-certain-types-of-research/non-wmo-research/non-wmo-research-with-a-medicinal-product" target="_blank">Non-WMO/non-clinical trial research with a medical
+product that is initiated/financed by pharmaceutical companies</a></li>
+</ul>
 <details>
 <summary class="summaryHeader">
-View non-WMO Guidance
+View VCWE Guidance
 </summary>
-<button class="inline-button btn btn-primary btn-sm" onclick="window.open(&#39;nonWMOguidance.html&#39;,&#39;_blank&#39;);">
-Open non-WMO guidance on new page
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open(&#39;VCWEguidance.html&#39;,&#39;_blank&#39;);">
+Open VCWE guidance on new page
 </button>
 <!-- use html tags rather than markdown # tags for headers in all child text pages otherwise formatting of main ethicsGuidance page gets messed up -->
 <h2>
-When is a non-WMO declaration necessary
+The Scientific and Ethical Review Board of FGB (VCWE)
 </h2>
-<p>A non-WMO declaration is generally necessary for FGB research if it’s
-uncertain whether the WMO applies to your research or if a third party
-requires a non-WMO declaration from you, for example, when publishing
-your research article in a scientific journal. Both of these conditions
-aren’t entirely clear cut for FGB researchers, so the general
-recommendation is to get a non-WMO declaration when your research has a
-medical/clinical focus, but otherwise doesn’t meet the conditions to
-fall under the WMO (i.e. your research does not involve participants
-being subject to procedures or specific rules of behaviour).</p>
-<div class="quizInfo">
-<!-- this section is is hidden when someone gets to the nonWMO guidance text from 
-the quiz outcomes since it wouldn't make sense to mention the quiz at that point-->
-<p>If you are still unsure if you need a non-WMO declaration, you can
-take the short FGB-based quiz (if you haven’t already) for a
-recommendation.</p>
-<!-- following button opens the guidance page with the quiz pre-selected (opting to open a new page for the quiz so as to not navigate away from the non-WMO info on the current page, but also to allow someone to go to the quiz from the external nonWMOguidance.html page).-->
-<button class="goToQuiz btn btn-primary btn-sm">
-Go to quiz
-</button>
+<p>You can find all the necessary information about standard ethical
+review within FGB and the VCWE on the <a href="https://vu.nl/en/employee/research-support/the-scientific-and-ethical-review-board-vcwe" target="_blank">VCWE’s VUweb page</a>. On this page, you will find:</p>
+<ul>
+<li>References to relevant codes of conduct</li>
+<li>Steps required prior to submission to the VCWE
+<ul>
+<li>The steps are also summarized in this <a href="https://assets-us-01.kc-usercontent.com/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/f4c93000-6a20-4bcd-852b-18fb2d2d4fd2/vcwe_workflow_2025.pdf" target="_blank">decision tree</a></li>
+</ul></li>
+<li>Templates for information letters and informed consent forms
+<ul>
+<li>In Dutch and English</li>
+<li>Versions for participants under 16</li>
+</ul></li>
+<li>Information about the <a href="https://www.editorialmanager.com/vcwe/default2.aspx" target="_blank">ethical review submission portal</a></li>
+<li>Contact information for the VCWE</li>
+</ul>
+<h2>
+Is ethical review always required?
+</h2>
+<p>There are relatively few cases within FGB where ethical review
+wouldn’t be recommended. Additionally, an increasing number of
+scientific journals require proof of ethical review before your research
+article can be published. <strong>The VCWE will <em>not</em> provide
+post-hoc ethical review</strong>. To avoid the risk of not being able to
+publish your work anywhere, it is wisest to err on the side of caution
+and obtain ethical review.</p>
+<h2>
+What happens if I am only reusing existing data?
+</h2>
+<p>Even if you are reusing data and aren’t including any active
+participants, there may still be ethical questions posed by your
+research, meaning ethical review is still advised. Additionally, there
+are very often privacy or legal questions that arise when data are
+reused for new research. If you plan to reuse data for your research,
+contact the <a href="mailto:research.data.fgb@vu.nl">Research and Policy
+Support Team (REPS)</a> prior to ethical review to ensure that you can
+(legally) reuse the data.</p>
+</details>
 </div>
+</div>
+<div id="VCWEplusWMO" class="section level2 guidance outcome">
+<h2>Standard FGB ethical review is most likely required</h2>
+<button id="vcweWMOback" class="manual-back btn btn-primary btn-sm">
+Back to quiz
+</button>
+<p>Based on your responses, the WMO <em>probably doesn’t</em> apply to
+your research, but with limited information it’s not feasible to fully
+exclude the possibility. Submit your research to the VCWE (FGB’s ethical
+committee). Upon review, the VCWE might determine that the WMO applies
+to your research, especially depending on intensity of the
+interventions/experiments involved and/or the nature of the research
+population you plan to study, in which case, further ethical assessment
+will be carried out by an METC. The VCWE can only determine if the WMO
+applies to your research by reviewing a full submission.</p>
+<p><strong>NB</strong>: If your research undergoes substantial
+amendments, it may become subject to the WMO. Substantial amendments
+will require a new ethical submission to the VCWE.</p>
+<div id="potential-additional-concerns-1" class="section level3">
+<h3>Potential additional concerns</h3>
+<p>Other <a href="https://english.ccmo.nl/investigators/additional-requirements-for-certain-types-of-research" target="_blank">legislation/concerns</a> may apply to your research
+(even if the WMO does not apply) because of the interventions,
+experiments or treatments used in your research. The following concerns
+are particularly relevant for research within FGB:</p>
+<ul>
+<li><a href="https://english.ccmo.nl/investigators/clinical-investigations-with-medical-devices/legal-framework-guidances-and-standards-for-clinical-investigations-with-medical-devices" target="_blank">Medical Devices Regulation</a></li>
+<li><a href="https://english.ccmo.nl/investigators/performance-studies-using-in-vitro-diagnostics-ivdr/legal-framework-guidances-and-standards-for-prestatiestudies-naar-in-vitro-diagnostica" target="_blank">In-vitro diagnostics Regulation</a></li>
+<li><a href="https://english.ccmo.nl/investigators/additional-requirements-for-certain-types-of-research/research-involving-fetuses-pregnant-and-or-breastfeeding-women" target="_blank">Research involving pregnant/breastfeeding
+participants</a></li>
+<li><a href="https://english.ccmo.nl/investigators/additional-requirements-for-certain-types-of-research/non-wmo-research/file-research" target="_blank">Chart review research/retrospective patient file
+reviews</a></li>
+<li><a href="https://english.ccmo.nl/investigators/additional-requirements-for-certain-types-of-research/non-wmo-research/non-wmo-research-with-a-medicinal-product" target="_blank">Non-WMO/non-clinical trial research with a medical
+product that is initiated/financed by pharmaceutical companies</a></li>
+</ul>
+<details>
+<summary class="summaryHeader">
+View VCWE Guidance
+</summary>
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open(&#39;VCWEguidance.html&#39;,&#39;_blank&#39;);">
+Open VCWE guidance on new page
+</button>
+<!-- use html tags rather than markdown # tags for headers in all child text pages otherwise formatting of main ethicsGuidance page gets messed up -->
 <h2>
-How to obtain a non-WMO declaration
+The Scientific and Ethical Review Board of FGB (VCWE)
 </h2>
-<p>For the vast majority of cases, FGB researchers will submit their
-request for a non-WMO declaration to the Amsterdam UMC’s METC. A non-WMO
-declaration request must be submitted to the <a href="https://metc.amsterdamumc.org/research-manager/" target="_blank">Amsterdam UMC’s Research Manager portal</a>. Relevant
-information for your submission can be found on the following pages:</p>
+<p>You can find all the necessary information about standard ethical
+review within FGB and the VCWE on the <a href="https://vu.nl/en/employee/research-support/the-scientific-and-ethical-review-board-vcwe" target="_blank">VCWE’s VUweb page</a>. On this page, you will find:</p>
 <ul>
-<li><a href="https://metc.amsterdamumc.org/wp-content/uploads/2023/09/Research-Manager-Handleiding-voor-onderzoekers-niet-WMO-studies-versie-6-d.d.-1-september-2023.pdf" target="_blank">Manual on Research Manager and the Submission of Non-WMO
-research (only in Dutch)</a></li>
-<li><a href="https://metc.amsterdamumc.org/tarieven/niet-wmo/" target="_blank">Costs of a non-WMO declaration submission (only in
-Dutch)</a></li>
-<li>Submission requirements:
+<li>References to relevant codes of conduct</li>
+<li>Steps required prior to submission to the VCWE
 <ul>
-<li><a href="https://metc.amsterdamumc.org/niet-wmo/nieuwe-indiening/" target="_blank">Required information and documentation for a new non-WMO
-submission (only in Dutch)</a>
-<ul>
-<li>See the dropdown section on <em>Documenten nieuwe niet-WMO
-indiening</em> for a checklist of the required documents as well as
-links to templates that you <em>must</em> use <a href="https://metc.amsterdamumc.org/indieningseisen/" target="_blank">Submission requirements for documents and communication
-processes with the METC (only in Dutch)</a></li>
-<li>See the very bottom of this page for further information specific to
-non-WMO submissions in Research Manager, particularly how to handle
-questions from the METC on your submission.</li>
-<li>The submission requirements are also summarized in greater detail in
-<a href="https://metc.amsterdamumc.org/wp-content/uploads/2025/08/Indieningseisen-versie-2.0-d.d.-22-08-2025.pdf" target="_blank">this document</a>.</li>
+<li>The steps are also summarized in this <a href="https://assets-us-01.kc-usercontent.com/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/f4c93000-6a20-4bcd-852b-18fb2d2d4fd2/vcwe_workflow_2025.pdf" target="_blank">decision tree</a></li>
 </ul></li>
-</ul></li>
-</ul>
-<h4>
-Deviations from standard submission procedure
-</h4>
-<p>The information on the submission procedures and requirements is
-written with AUMC researchers in mind. The following deviations on the
-process apply to you as an FGB researcher:</p>
+<li>Templates for information letters and informed consent forms
 <ul>
-<li><a href="https://metc.amsterdamumc.org/wp-content/uploads/2025/08/Indieningseisen-versie-2.0-d.d.-22-08-2025.pdf" target="_blank">The submission requirements</a> state that a
-registration number from the processing register (<em>Register
-gegevensverwerking</em>) must be submitted in the General Information on
-your study in Research Manager. This does not apply to you as a VU
-research because you will not be using the AUMC’s processing register
-(<a href="#notAppl">see below for more information</a>).</li>
-<li><a href="https://metc.amsterdamumc.org/wp-content/uploads/2025/08/Indieningseisen-versie-2.0-d.d.-22-08-2025.pdf" target="_blank">The submission requirements</a> cite contact information
-that must be included in the participant information letter, but the
-contact information cited is for AUMC. As an FGB researcher:
-<ul>
-<li>For the Data Protection Officer (<em>Functionaris
-Gegevensbescherming</em>) use <a href="mailto:functionarisgegevensbescherming@vu.nl" class="email">functionarisgegevensbescherming@vu.nl</a></li>
-<li>Complaints (<em>Klachtenregeling</em>) are generally handled via the
-individual research team, so use the appropriate research team contact
-information here.</li>
+<li>In Dutch and English</li>
+<li>Versions for participants under 16</li>
 </ul></li>
+<li>Information about the <a href="https://www.editorialmanager.com/vcwe/default2.aspx" target="_blank">ethical review submission portal</a></li>
+<li>Contact information for the VCWE</li>
 </ul>
 <h2>
-Things you should be aware of
+Is ethical review always required?
 </h2>
-<ul>
-<li>You will need to pay the METC for their assessment of your research.
-Because our organization is external to the AUMC, the costs for FGB
-researchers are can be <a href="https://metc.amsterdamumc.org/tarieven/niet-wmo/" target="_blank">€500-600</a>.
-<ul>
-<li>You are expected to cover these costs with your project budget,
-therefore its important to assess if you need a non-WMO declaration
-<strong>during your grant application</strong></li>
-</ul></li>
-<li>You don’t generally need to submit any amendments on your non-WMO
-research to the METC unless the changes are likely to cause your
-research to fall under the WMO
-<ul>
-<li>If you <em>do</em> need to submit an amendment because your research
-might be subject to the WMO, you will be charged the cost of another
-non-WMO assessment</li>
-</ul></li>
-<li>Your submission and all communication about it will happen via
-Research Manager. The METC will ignore any documents sent to them via
-e-mail and all questions from the METC on your submission will be found
-in your Research Manager environment.</li>
-<li>Ensure that the number of participants you plan to include is
-consistent across all submitted documents. For non-WMO research this
-will generally be stated in:
-<ul>
-<li>Your research protocol</li>
-<li>In the general information of your Research Manager submission</li>
-</ul></li>
-</ul>
-<h2 id="notAppl">
-Things you don’t need to worry about
+<p>There are relatively few cases within FGB where ethical review
+wouldn’t be recommended. Additionally, an increasing number of
+scientific journals require proof of ethical review before your research
+article can be published. <strong>The VCWE will <em>not</em> provide
+post-hoc ethical review</strong>. To avoid the risk of not being able to
+publish your work anywhere, it is wisest to err on the side of caution
+and obtain ethical review.</p>
+<h2>
+What happens if I am only reusing existing data?
 </h2>
-<p>The information on the non-WMO processes is written with AUMC
-researchers in mind, which means that some information is not applicable
-to FGB researchers. The following are some things you can ignore.</p>
-<ul>
-<li>The Amsterdam UMC mentions a special type of non-WMO research that
-falls under the DCRF assessment framework. This is for non-WMO research
-on pharmaceuticals or non-WMO research funded by pharmaceutical
-companies. Unless this applies to your situation, you can ignore any
-references to the DCRF assessment framework.</li>
-<li>The Amsterdam UMC’s <a href="https://metc.amsterdamumc.org/verwerkingsregister/" target="_blank"><em>verwerkingsregister</em> (processing register)</a>
-is mentioned on their website a few times. You <strong>do not</strong>
-need to register your research in this processing registry as an FGB
-researcher; the VU has its own systems for <a href="../legal/GDPRBasics.html#Registration_of_Personal_Data_Processing" target="_blank">registering data processing</a> which you <em>are</em>
-required to complete.</li>
-<li>The <a href="https://metc.amsterdamumc.org/niet-wmo/databanken/" target="_blank">information on setting up a data bank</a> is not
-applicable to FGB researchers. If you are considering the idea, contact
-the <a href="mailto:research.data.fgb@vu.nl">FGB REPS Team</a>.</li>
-</ul>
-<script>
-
-// script primarily for handling any local buttons that have local javascript that needs to work within this specific chunk of text
-
-
-// The Safety Guard: Only run this if we haven't already set up the listener
-// this is necessary because nonWMOtext.Rmd is used multiple times within ethicsGuidance as a child text doc, but we want the event listener to only set up once
-
-if (typeof goToQuizSetup === 'undefined') {
-  
-  document.addEventListener('click', function(event) {
-    // Check if the thing clicked has our class
-    if (event.target && event.target.classList.contains('goToQuiz')) {
-      window.open('EthicsGuidance.html?target=quiz', '_blank');
-    }
-  });
-
-  // Mark as set up so other copies of this file don't add the listener again
-  var goToQuizSetup = true;
-}
-
-</script>
+<p>Even if you are reusing data and aren’t including any active
+participants, there may still be ethical questions posed by your
+research, meaning ethical review is still advised. Additionally, there
+are very often privacy or legal questions that arise when data are
+reused for new research. If you plan to reuse data for your research,
+contact the <a href="mailto:research.data.fgb@vu.nl">Research and Policy
+Support Team (REPS)</a> prior to ethical review to ensure that you can
+(legally) reuse the data.</p>
 </details>
 <details>
 <summary class="summaryHeader">
@@ -3423,6 +2032,7 @@ if (typeof goToQuizSetup === 'undefined') {
 
 </script>
 </details>
+</div>
 </div>
 <div id="suppA" class="section level2 guidance outcome">
 <h2>Research requires more planning</h2>
@@ -3431,8 +2041,8 @@ Back to quiz
 </button>
 <p>You should determine more of what your research will entail before
 assessing the ethical review process that applies to you. You can find
-more information on what you need to consider and prepare at this stage
-on this <a href="https://vu.nl/en/employee/research-data-management-fbms/before-research-fgb" target="_blank">VUweb page</a>. If you feel that your research is fairly
+more information on what you need to consider at this stage of the
+research process on this <a href="https://vu.nl/en/employee/research-data-management-fbms/before-research-fgb" target="_blank">VUweb page</a>. If you feel that your research is fairly
 well planned, and you’re not sure why you landed here, you can contact
 the <a href="mailto:research.data.fgb@vu.nl">Research and Policy Support
 Team (REPS)</a>.</p>
@@ -3446,10 +2056,175 @@ Back to quiz
 assessment of which ethical review process applies to you. We recommend
 first contacting the <a href="mailto:research.data.fgb@vu.nl">Research
 and Policy Support Team (REPS)</a> for support on your research
-planning. You are welcome to also contact the <a href="mailto:vcwe.fgb@vu.nl">FGB Scientific and Ethical Review Committee
-(VCWE)</a> for support.</p>
+planning.</p>
 </div>
 </div>
+<!--2026-09-08: removed after changes and discussions with VCWE & METC
+
+<div class = "guidance outcome">
+
+## WMO review is probably required {#possWMOoutcome}
+
+<button id="possWMOback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
+
+Based on your responses, it is *likely*, but not certain, that the WMO applies to your research. It's a good idea to follow-up with a METC (for FGB, this is usually metc@amsterdamumc.nl) to clarify if your research does in fact fall under the WMO. It's likely that even if the WMO does not apply to your research, you may still require a non-WMO declaration. The METC can also advise you on this. Below you can find more information on the WMO review and non-WMO declaration processes, and how they apply to you as an FGB researcher.
+
+
+<details>
+<summary class="summaryHeader">
+View WMO Guidance
+</summary>
+
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open('WMOguidance.html','_blank');">Open WMO guidance on new page</button>
+
+#```{r, child='text/WMOtext.Rmd', echo=FALSE, results='asis'}
+#```
+</details>
+
+<details>
+<summary class="summaryHeader">
+View non-WMO Guidance
+</summary>
+
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open('nonWMOguidance.html','_blank');">Open non-WMO guidance on new page</button>
+
+#```{r, child='text/nonWMOtext.Rmd', echo=FALSE, results='asis'}
+#```
+</details>
+
+</div>
+
+<div class = "guidance outcome">
+
+## Non-WMO declaration is likely required {#defNonWMOoutcome}
+
+<button id="defNonWMOback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
+
+Based on your responses, it is *very likely* that you *will* need a non-WMO declaration, but that your research is otherwise not subject to the WMO. You can check with a METC (for FGB, this is usually metc@amsterdamumc.nl) if you disagree and require clarification. Be aware that even if you get a non-WMO declaration, you will still need to do an ethical review with FGB's ethical committee, the VCWE. Below you can find more information on the non-WMO declaration and VCWE ethical review processes, and how they apply to you as an FGB researcher.
+
+<details>
+<summary class="summaryHeader">
+View non-WMO Guidance
+</summary>
+
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open('nonWMOguidance.html','_blank');">Open non-WMO guidance on new page</button>
+
+#```{r, child='text/nonWMOtext.Rmd', echo=FALSE, results='asis'}
+#```
+</details>
+
+<details>
+<summary class="summaryHeader">
+View VCWE Guidance
+</summary>
+
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open('VCWEguidance.html','_blank');">Open VCWE guidance on new page</button>
+
+#```{r, child='text/VCWEtext.Rmd', echo=FALSE, results='asis'}
+#```
+</details>
+
+
+</div>
+
+
+<div class = "guidance outcome">
+
+## Situation unclear: non-WMO declaration may be required {#possNonWMOoutcome}
+
+<button id="possNonWMOback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
+
+Based on your responses, your situation is not entirely clear. Your situation seems to suggest that the WMO does *not* apply to your research, but that you may *still need* a non-WMO declaration. You should check with a METC (for FGB, this is usually metc@amsterdamumc.nl) to clarify your situation. Be aware that even if your research is not subject to the WMO and regardless of whether you obtain a non-WMO declaration, you will still need to do an ethical review with FGB's ethical committee, the VCWE. Below you can find more information on the WMO review, non-WMO declaration and VCWE ethical review processes, and how they apply to you as an FGB researcher.
+
+<details>
+<summary class="summaryHeader">
+View non-WMO Guidance
+</summary>
+
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open('nonWMOguidance.html','_blank');">Open non-WMO guidance on new page</button>
+
+#```{r, child='text/nonWMOtext.Rmd', echo=FALSE, results='asis'}
+#```
+</details>
+
+<details>
+<summary class="summaryHeader">
+View WMO Guidance
+</summary>
+
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open('WMOguidance.html','_blank');">Open WMO guidance on new page</button>
+
+
+
+#```{r, child='text/WMOtext.Rmd', echo=FALSE, results='asis'}
+#```
+</details>
+
+<details>
+<summary class="summaryHeader">
+View VCWE Guidance
+</summary>
+
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open('VCWEguidance.html','_blank');">Open VCWE guidance on new page</button>
+
+#```{r, child='text/VCWEtext.Rmd', echo=FALSE, results='asis'}
+#```
+</details>
+
+
+
+</div>
+
+-->
+<!--2026-09-08: removed after changes and discussions with VCWE & METC
+
+<div class = "guidance outcome">
+
+## Situation unclear: likely requires only standard FGB ethical review {#possVCWEoutcome}
+
+<button id="possVCWEback" class="manual-back btn btn-primary btn-sm">Back to quiz</button>
+
+
+Based on your responses, it is *likely*, but not certain, that the WMO does *not* apply to your research and you also likely *do not* need to complete a non-WMO declaration. It's a good idea to follow-up with a METC (for FGB, this is usually metc@amsterdamumc.nl) to clarify your situation. Be aware that even if your research is not subject to the WMO and regardless of whether you obtain a non-WMO declaration, you will still need to do an ethical review with FGB's ethical committee, the VCWE. Below you can find more information on the WMO review, non-WMO declaration and VCWE ethical review processes, and how they apply to you as an FGB researcher.
+
+<details>
+<summary class="summaryHeader">
+View VCWE Guidance
+</summary>
+
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open('VCWEguidance.html','_blank');">Open VCWE guidance on new page</button>
+
+#```{r, child='text/VCWEtext.Rmd', echo=FALSE, results='asis'}
+#```
+</details>
+
+
+<details>
+<summary class="summaryHeader">
+View non-WMO Guidance
+</summary>
+
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open('nonWMOguidance.html','_blank');">Open non-WMO guidance on new page</button>
+
+#```{r, child='text/nonWMOtext.Rmd', echo=FALSE, results='asis'}
+#```
+</details>
+
+<details>
+<summary class="summaryHeader">
+View WMO Guidance
+</summary>
+
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open('WMOguidance.html','_blank');">Open WMO guidance on new page</button>
+
+#```{r, child='text/WMOtext.Rmd', echo=FALSE, results='asis'}
+#```
+</details>
+
+
+</div>
+
+-->
 
 
 
@@ -3780,20 +2555,19 @@ function navigateQuiz(currentId, isAutoAdvance = true) {
     const q8Answer = getSelectedValue("answersQ8");
     let destination = config.next;
 
-    // 1. Determine destination based on current question and routing rules
-    //Overall results after quiz completion:
-//  -> if q1 is no AND q2 is no, go immediately to definitely VCWE, but with info about studies without active participants
-//  -> if q1 is no AND q2 is yes, go immediately to definitely non-WMO, but with info about studies without active participants
+    // Overall results after quiz completion:
+//  -> if q1 is no AND q2 is no, go immediately to definitely VCWE basic
+//  -> if q1 is no AND q2 is yes, go immediately to definitely VCWE plus legisl
 //  -> if q1 is no AND q2 is unsure, go straight to Support A (Guidance on figuring out study more first)
 //  -> if q1 is unsure, go straight to Support A (Guidance on figuring out study more first)
 //  -> if q1 is yes AND:
 //    -> if q2 is yes AND any of q4-8 are yes, go to definitely WMO
 //    -> if q3 is yes, go immediately to definitely WMO
 //    -> if q3 is unsure, go immediately to Support A (Guidance on figuring out study more first)
-//    -> if for q4-8 at least one response is yes, but q2-3 are not yes, go to likely WMO, potentially non-WMO/VCWE (i.e. links to all three as well as support info)
-//    -> if q2-8 all no, go to definitely VCWE
-//    -> for q2,4-8 and none of answers are yes, if majority response is no, to likely VCWE page; if majority response is unsure or tied, to support page B
-//    -> if q2 is yes and majority of others are no, go to likely non-WMO info (include reference to VCWE); if majority of others is unsure or tied, to support page B
+//    -> if for q4-8 at least one response is yes, but q2-3 are not yes, go to VCWE plus legisl AND WMO possibility
+//    -> if q2-8 all no, go to definitely VCWE basic
+//    -> for q2,4-8 and none of answers are yes, if majority response is no, go to VCWE basic; if majority response is unsure or tied, to support page B
+//    -> if q2 is yes and majority of others are no, go to VCWE basic; if majority of others is unsure or tied, to support page B
 
     if (currentId === 'quest1') {
       // special logic:
@@ -3802,12 +2576,12 @@ function navigateQuiz(currentId, isAutoAdvance = true) {
       }
     } else if (q1Answer === 'no' && currentId === 'quest2') {
       // special logic:
-      if (currentAnswer === 'yes') {
-        destination = 'defNonWMOoutcome';
-      } else if (currentAnswer === 'no') {
-        destination = 'defVCWEoutcome';
-      } else if (currentAnswer === 'unsure') {
+      if (currentAnswer === 'unsure') {
         destination = 'suppA';
+      } else if (currentAnswer === 'yes') {
+        destination = 'defVCWEplus';
+      } else if (currentAnswer === 'no') {
+        destination = 'defVCWEbasic';
       }
     } else if (currentId === 'quest3') {
       // special logic:
@@ -3829,13 +2603,15 @@ function navigateQuiz(currentId, isAutoAdvance = true) {
         if (q2Answer === 'yes' && currentAnswer === 'yes') {
           destination = 'defWMOoutcome';
         } else if (q2Answer !== 'yes' && counts.hasYes) {
-          destination = 'possWMOoutcome';
+          destination = 'VCWEplusWMO';
         } else if (q2Answer === 'no' && counts.no === 5) {
-          destination = 'defVCWEoutcome';
+          destination = 'defVCWEbasic';
+        } else if (q2Answer === 'yes' && counts.no === 5) {
+          destination = 'defVCWEplus';
         } else if (q2Answer !== 'yes' && (counts.no > counts.unsure)) {
-          destination = 'possVCWEoutcome';
+          destination = 'defVCWEbasic';
         } else if (q2Answer === 'yes' && (counts.no > counts.unsure)) {
-          destination = 'possNonWMOoutcome';
+          destination = 'defVCWEplus';
         } else {
           destination = 'suppB';
         }
@@ -3954,11 +2730,9 @@ function returnToQuiz(outcomeId) {
 }
 
 defWMOback.addEventListener('click', () => returnToQuiz('defWMOoutcome'));
-possWMOback.addEventListener('click', () => returnToQuiz('possWMOoutcome'));
-defNonWMOback.addEventListener('click', () => returnToQuiz('defNonWMOoutcome'));
-possNonWMOback.addEventListener('click', () => returnToQuiz('possNonWMOoutcome'));
-defVCWEback.addEventListener('click', () => returnToQuiz('defVCWEoutcome'));
-possVCWEback.addEventListener('click', () => returnToQuiz('possVCWEoutcome'));
+defVCWEback.addEventListener('click', () => returnToQuiz('defVCWEbasic'));
+plusVCWEback.addEventListener('click', () => returnToQuiz('defVCWEplus'));
+vcweWMOback.addEventListener('click', () => returnToQuiz('VCWEplusWMO'));
 suppAback.addEventListener('click', () => returnToQuiz('suppA'));
 suppBback.addEventListener('click', () => returnToQuiz('suppB'));
 

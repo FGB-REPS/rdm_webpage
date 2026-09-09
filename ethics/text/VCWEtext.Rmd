@@ -9,15 +9,15 @@ You can find all the necessary information about standard ethical review within 
   + The steps are also summarized in this [decision tree](https://assets-us-01.kc-usercontent.com/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/f4c93000-6a20-4bcd-852b-18fb2d2d4fd2/vcwe_workflow_2025.pdf){target="_blank"}
 * Templates for information letters and informed consent forms
   + In Dutch and English
-  + Where needed, written for participants under 16
+  + Versions for participants under 16
 * Information about the [ethical review submission portal](https://www.editorialmanager.com/vcwe/default2.aspx){target="_blank"}
-* Contact information for the current VCWE members
+* Contact information for the VCWE
 
 <h2> Is ethical review always required? </h2>
 
-If you are of the opinion that your research shouldn't require *any* ethical review, make sure to follow-up with the [VCWE](mailto:vcwe.fgb@vu.nl) about this prior to commencing your research. There are relatively few cases within FGB where ethical review wouldn't be recommended. Additionally, an increasing number of scientific journals require proof of ethical review before your research article can be published. To avoid the risk of not being able to publish your work anywhere, it is generally wisest to err on the side of caution and obtain the ethical review.
+There are relatively few cases within FGB where ethical review wouldn't be recommended. Additionally, an increasing number of scientific journals require proof of ethical review before your research article can be published. **The VCWE will _not_ provide post-hoc ethical review**. To avoid the risk of not being able to publish your work anywhere, it is wisest to err on the side of caution and obtain ethical review.
 
 <h2> What happens if I am only reusing existing data? </h2>
 
-Even when research doesn't actively include research participants, there may still be ethical questions, and more frequently, privacy questions involved with the reuse of existing data in your research. In such a situation, prior to any ethical review, you should contact the [Research and Policy Support Team (REPS)](mailto:research.data.fgb@vu.nl) to ensure that you can (legally) reuse the data.
+Even if you are reusing data and aren't including any active participants, there may still be ethical questions posed by your research, meaning ethical review is still advised. Additionally, there are very often privacy or legal questions that arise when data are reused for new research. If you plan to reuse data for your research, contact the [Research and Policy Support Team (REPS)](mailto:research.data.fgb@vu.nl) prior to ethical review to ensure that you can (legally) reuse the data.
 

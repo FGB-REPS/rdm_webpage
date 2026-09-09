@@ -285,20 +285,19 @@ function navigateQuiz(currentId, isAutoAdvance = true) {
     const q8Answer = getSelectedValue("answersQ8");
     let destination = config.next;
 
-    // 1. Determine destination based on current question and routing rules
-    //Overall results after quiz completion:
-//  -> if q1 is no AND q2 is no, go immediately to definitely VCWE, but with info about studies without active participants
-//  -> if q1 is no AND q2 is yes, go immediately to definitely non-WMO, but with info about studies without active participants
+    // Overall results after quiz completion:
+//  -> if q1 is no AND q2 is no, go immediately to definitely VCWE basic
+//  -> if q1 is no AND q2 is yes, go immediately to definitely VCWE plus legisl
 //  -> if q1 is no AND q2 is unsure, go straight to Support A (Guidance on figuring out study more first)
 //  -> if q1 is unsure, go straight to Support A (Guidance on figuring out study more first)
 //  -> if q1 is yes AND:
 //    -> if q2 is yes AND any of q4-8 are yes, go to definitely WMO
 //    -> if q3 is yes, go immediately to definitely WMO
 //    -> if q3 is unsure, go immediately to Support A (Guidance on figuring out study more first)
-//    -> if for q4-8 at least one response is yes, but q2-3 are not yes, go to likely WMO, potentially non-WMO/VCWE (i.e. links to all three as well as support info)
-//    -> if q2-8 all no, go to definitely VCWE
-//    -> for q2,4-8 and none of answers are yes, if majority response is no, to likely VCWE page; if majority response is unsure or tied, to support page B
-//    -> if q2 is yes and majority of others are no, go to likely non-WMO info (include reference to VCWE); if majority of others is unsure or tied, to support page B
+//    -> if for q4-8 at least one response is yes, but q2-3 are not yes, go to VCWE plus legisl AND WMO possibility
+//    -> if q2-8 all no, go to definitely VCWE basic
+//    -> for q2,4-8 and none of answers are yes, if majority response is no, go to VCWE basic; if majority response is unsure or tied, to support page B
+//    -> if q2 is yes and majority of others are no, go to VCWE basic; if majority of others is unsure or tied, to support page B
 
     if (currentId === 'quest1') {
       // special logic:
@@ -307,12 +306,12 @@ function navigateQuiz(currentId, isAutoAdvance = true) {
       }
     } else if (q1Answer === 'no' && currentId === 'quest2') {
       // special logic:
-      if (currentAnswer === 'yes') {
-        destination = 'defNonWMOoutcome';
-      } else if (currentAnswer === 'no') {
-        destination = 'defVCWEoutcome';
-      } else if (currentAnswer === 'unsure') {
+      if (currentAnswer === 'unsure') {
         destination = 'suppA';
+      } else if (currentAnswer === 'yes') {
+        destination = 'defVCWEplus';
+      } else if (currentAnswer === 'no') {
+        destination = 'defVCWEbasic';
       }
     } else if (currentId === 'quest3') {
       // special logic:
@@ -334,13 +333,15 @@ function navigateQuiz(currentId, isAutoAdvance = true) {
         if (q2Answer === 'yes' && currentAnswer === 'yes') {
           destination = 'defWMOoutcome';
         } else if (q2Answer !== 'yes' && counts.hasYes) {
-          destination = 'possWMOoutcome';
+          destination = 'VCWEplusWMO';
         } else if (q2Answer === 'no' && counts.no === 5) {
-          destination = 'defVCWEoutcome';
+          destination = 'defVCWEbasic';
+        } else if (q2Answer === 'yes' && counts.no === 5) {
+          destination = 'defVCWEplus';
         } else if (q2Answer !== 'yes' && (counts.no > counts.unsure)) {
-          destination = 'possVCWEoutcome';
+          destination = 'defVCWEbasic';
         } else if (q2Answer === 'yes' && (counts.no > counts.unsure)) {
-          destination = 'possNonWMOoutcome';
+          destination = 'defVCWEplus';
         } else {
           destination = 'suppB';
         }
@@ -459,11 +460,9 @@ function returnToQuiz(outcomeId) {
 }
 
 defWMOback.addEventListener('click', () => returnToQuiz('defWMOoutcome'));
-possWMOback.addEventListener('click', () => returnToQuiz('possWMOoutcome'));
-defNonWMOback.addEventListener('click', () => returnToQuiz('defNonWMOoutcome'));
-possNonWMOback.addEventListener('click', () => returnToQuiz('possNonWMOoutcome'));
-defVCWEback.addEventListener('click', () => returnToQuiz('defVCWEoutcome'));
-possVCWEback.addEventListener('click', () => returnToQuiz('possVCWEoutcome'));
+defVCWEback.addEventListener('click', () => returnToQuiz('defVCWEbasic'));
+plusVCWEback.addEventListener('click', () => returnToQuiz('defVCWEplus'));
+vcweWMOback.addEventListener('click', () => returnToQuiz('VCWEplusWMO'));
 suppAback.addEventListener('click', () => returnToQuiz('suppA'));
 suppBback.addEventListener('click', () => returnToQuiz('suppB'));
 
