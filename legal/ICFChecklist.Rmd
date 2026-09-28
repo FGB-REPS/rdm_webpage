@@ -1,6 +1,6 @@
 ---
 title: "GDPR Checklist for Informed Consent Forms and Information Letters"
-date: "`r Sys.Date()`; Version 2.2"
+date: "`r Sys.Date()`; Version 2.3"
 output: 
   html_document:
     theme: cerulean
@@ -198,7 +198,7 @@ The faculty has also developed an [Informed Consent Form Generator tool](https:/
 
 ### Privacy Statement {#privStat}
 
-The VU's Legal Affairs department has developed a privacy statement template which you can obtain from the [FGB Privacy Champion](mailto:research.data.fgb@vu.nl). This statement ensures that all legal requirements are met and it should ideally be published somewhere online so that research subjects can refer back to it at a later stage or review it should there be any changes to the information that was given at the outset. FGB recommends publishing the privacy statement on [OSF](https://osf.io/){target="_blank"} so that there is a permanent public location where the privacy statement can be found. You can refer to this location in your information letter and consent form so that participants can investigate the detailed privacy aspects of the research at their leisure without being overwhelmed by too much information. 
+The VU's Legal Affairs department has developed a privacy statement template which you can obtain from the [FGB Privacy Champion](mailto:research.data.fgb@vu.nl). This statement ensures that all legal requirements are met and it should ideally be published somewhere online so that research subjects can refer back to it at a later stage or review it should there be any changes to the information that was given at the outset. FGB recommends publishing the privacy statement on [Zenodo](https://zenodo.org/){target="_blank"} so that there is a permanent public location where the privacy statement can be found. You can refer to this location in your information letter and consent form so that participants can investigate the detailed privacy aspects of the research at their leisure without being overwhelmed by too much information. 
 
 Some privacy-related topics should still be addressed in the information letter and/or consent form. The following section explains how to adjust your consent forms and information letters to meet these requirements, as well as how to use the privacy statement by itself in the rare cases where consent cannot be obtained.
 
