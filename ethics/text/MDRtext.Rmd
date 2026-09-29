@@ -7,12 +7,17 @@
 
 The [EU Medical Devices Regulation](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32017R0745){target="_blank"} applies to your research if you are studying the safety and/or (clinical) performance of a medical device. If your research involves the use of a medical device, but that device is not the subject of investigation, the MDR does not apply, but other [regulations](#otherRegs), including the [WMO](WMOguidance.html){target="_blank"} may still apply.
 
+For example, if you're evaluating the **performance** of a wearable device to **accurately** measure heart rate and blood pressure, the **MDR applies**. If you're using the wearable to measure blood pressure and heart rate as a proxy for emotional response, but the performance, safety and effectiveness of the wearable itself are not under study, the **MDR _does not_ apply**. 
 
 
 <h3> What constitutes a medical device? </h3>
 
 This CCMO page ([in Dutch](https://www.ccmo.nl/onderzoekers/klinisch-onderzoek-naar-medische-hulpmiddelen/wet-en-regelgeving-richtsnoeren-en-standaarden-voor-onderzoek-medische-hulpmiddelen/wat-is-een-medisch-hulpmiddel){target="_blank"} and [in English](https://english.ccmo.nl/investigators/clinical-investigations-with-medical-devices/legal-framework-guidances-and-standards-for-clinical-investigations-with-medical-devices/what-is-a-medical-device){target="_blank"}) explains the MDR definition of a medical device. Additionally, some [devices without medical purposes](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32017R0745#anx_XVI) are subject to the MDR and sometimes [software can be considered a medical device](https://health.ec.europa.eu/document/download/b865d8e9-081a-4601-a91a-f120321c0491_en){target="_blank"}.
 
+Examples of medical devices within FGB include:
+
+* [Interactive Walkway](https://www.researchgate.net/publication/318108511_Walking-adaptability_assessments_with_the_Interactive_Walkway_Between-systems_agreement_and_sensitivity_to_task_and_subject_variations){target="_blank"}
+* [Electrical stimulation device for prevention of pressure ulcers in wheelchair users](https://link.springer.com/article/10.1186/s13063-022-06088-0){target="_blank"}
 
 <h3 id="framework"> Frameworks for clinical investigation </h3>
 
