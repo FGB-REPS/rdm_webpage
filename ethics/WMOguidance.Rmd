@@ -1,6 +1,6 @@
 ---
 title: "Ethics @ FGB: Navigating Ethical Reviews of WMO Research"
-date: "`r Sys.Date()`; version 1.0"
+date: "`r Sys.Date()`; version 2.0"
 output: 
   html_document:
     theme: cerulean
@@ -35,3 +35,4 @@ output:
 
 ```{r, child='text/WMOtext.Rmd', echo=FALSE, results='asis'}
 ```
+

@@ -5,68 +5,89 @@
 
 <h2> When does the WMO apply to research </h2>
 
-The Medical Research Involving Humans Act (a.k.a. *Wet medisch-wettenschappelijk onderzoek met mensen* [WMO](https://english.ccmo.nl/investigators/legal-framework-for-medical-scientific-research/your-research-is-it-subject-to-the-wmo-or-not){target="_blank"}) applies to research if:
+The Medical Research Involving Humans Act (a.k.a. *Wet medisch-wettenschappelijk onderzoek met mensen* [WMO](https://wetten.overheid.nl/BWBR0009408/2025-01-01){target="_blank"}) applies to research if both of the following conditions apply:
 
 1. The research is medical-scientific research
 2. Research subjects must undergo procedures or must follow specific rules of behaviour
 
-The CCMO is the overarching organization that ensures research participants are protected while taking part in WMO research and this organization further explains [the conditions that make research fall under the WMO on this page](https://english.ccmo.nl/investigators/legal-framework-for-medical-scientific-research/your-research-is-it-subject-to-the-wmo-or-not){target="_blank"}.
+The Central Committee on Research Involving Human Subjects (CCMO) goes into further detail on this topic [on this page in English](https://english.ccmo.nl/investigators/legal-framework-for-medical-scientific-research/your-research-is-it-subject-to-the-wmo-or-not){target="_blank"} and [on this page in Dutch](https://www.ccmo.nl/onderzoekers/wet-en-regelgeving-voor-medisch-wetenschappelijk-onderzoek/is-uw-onderzoek-wmo-plichtig){target="_blank"}.
 
 <div class="quizInfo">
 <!-- this section is is hidden when someone gets to the WMO guidance text from 
 the quiz outcomes since it wouldn't make sense to mention the quiz at that point-->
 
-However, this guidance can be confusing or unclear when applied to FGB research, which is why it's recommended to take the short FGB-based quiz (if you haven't already) to determine if the WMO is applies to your research or not.
+It can be confusing as to whether the WMO applies to your research or not, in part because there is no legal definition of "medical-scientific research". Additionally, the intensity or invasiveness of the procedures/rules of behaviour can impact whether your research is judged as subject to the WMO. You might argue that your research is not medical-scientific research, but if you need to take blood samples from your research subjects, your research will be considered invasive enough to fall under the WMO. 
+
+Because there is nuance in what does and does not fall under the WMO, it's recommended to take the short FGB-based quiz (if you haven't already) to help determine if the WMO is applies to your research or not. 
 
 <!-- following button opens the guidance page with the quiz pre-selected (opting to open a new page for the quiz so as to not navigate away from the WMO info on the current page, but also to allow someone to go to the quiz from the external WMOguidance.html page).-->
 <button class="goToQuiz btn btn-primary btn-sm" >Go to quiz</button> 
 </div>
 
+<h3> Other medical research regulations </h3>
+
+There are other regulations that can also apply to medical-scientific research. More information is found [on this page about these other regulations](MDRguidance.html){target="_blank"}. In short:
+
+* Of all the additional regulations, FGB researchers are most likely to have to deal with the [Medical Devices Regulation (MDR)](MDRguidance.html){target="_blank"}. The MDR can apply to both WMO and non-WMO research. [The FGB page on other regulations](MDRguidance.html){target="_blank"}, therefore, focuses primarily on the MDR and what it means for FGB researchers.
+* The Clinical Trial Regulation (CTR) *can* apply to FGB WMO research but *very rarely*. The CTR usually applies when there is a collaboration with a medical institution. More information can be found [here on the CTR](https://english.ccmo.nl/investigators/clinical-trials-with-medicinal-products-ctr){target="_blank"}.
+* The In Vitro Diagnostics Regulation (IVDR) also rarely applies to FGB research. More information can be found [here on the IVDR](https://english.ccmo.nl/investigators/performance-studies-using-in-vitro-diagnostics-ivdr){target="_blank"}.
+
 
 <h2> The WMO review process for FGB researchers </h2>
 
-<!-- Add in once relevant info is summarized
-<div class="subsectionIndented">
-<h4 > &#10147;Determine if additional rules or regulations beyond the WMO apply </h4>
-
-</div>
--->
+The submission procedures described here will primarily refer to [NedMec+](https://www.nedmec.nl/nl){target="_blank"}, an METC representing the Antoni van Leeuwenhoek, Prinses Maxima Centrum and UMC Utrect hospitals, and which the Amsterdam UMC joined on July 1 2026. The guidance should be transferable to other METCs because all METCs are guided by the national CCMO, but keep in mind that procedures could differ slightly outside of the NedMec+ context. 
 
 <div class="subsectionIndented">
 <h3> &#10147;Review the submission requirements </h3>
 
-The AUMC METC has strict requirements for what must be submitted for WMO ethical review and how these materials are submitted. Make sure to review the following:
+Make sure to follow all of the NedMec+ (or other METC) [submission requirements](https://www.nedmec.nl/nl/wijze-van-indienen){target="_blank"}. You do not need to follow any of the institution specific requirements (such as those for the AUMC) unless your research is in collaboration with a relevant institution. The templates used in all standard submissions are written with multiple use-cases in mind, so if you find yourself unsure how to fill in certain sections of a template, check the [FGB specifics section](#FGBspecifics).
 
-* [Standard Research Dossier (only in Dutch)](https://metc.amsterdamumc.org/wmo/standaarddossier/){target="_blank"}
-  + The information on the standard research dossier is written with AUMC researchers in mind. To ensure that your submission is specific to FGB, review the information in the following sections on [which requirements do not apply to FGB research](#notAppl) or [which aspects require deviations from the standard UMC procedures](#deviate)
-* [Summarized submission requirements and submission in the Onderzoeksportaal (only in Dutch)](https://metc.amsterdamumc.org/indieningseisen/){target="_blank"}
-* [Detailed submission requirements (only in Dutch)](https://metc.amsterdamumc.org/wp-content/uploads/2025/08/Indieningseisen-versie-2.0-d.d.-22-08-2025.pdf){target="_blank"}
-  + The information in these submission requirements is written with AUMC researchers in mind. To ensure that your submission is specific to FGB, review the information in the following sections on [which requirements do not apply to FGB research](#notAppl) or [which aspects require deviations from the standard UMC procedures](#deviate)
-  + Be sure to use only the templates required by the METC, as not using these templates can delay the review process. Use this [template letter for all correspondence with the AUMC METC](http://metc.amsterdamumc.org/wp-content/uploads/2025/02/A1.-Standaard-aanbiedingsbrief-WMO-oordeel-METC-Amsterdam-UMC-versie-januari-2025.docx) and for all other components of the standard research dossier, use the [CCMO templates in Dutch](https://www.ccmo.nl/onderzoekers/standaardonderzoeksdossier){target="_blank"}. 
-      + [English versions of the templates are available](https://english.ccmo.nl/investigators/standard-research-file-for-research-subject-to-the-dutch-wmo-act){target="_blank"}, if necessary, but note that the METC only reviews the Dutch documentation in your submission.
-* [Amsterdam UMC Checklist](https://metc.amsterdamumc.org/wp-content/uploads/2024/10/Amsterdam-UMC-Checklist-d.d.-10-10-24.pdf){target="_blank"}
-  + This checklist repeats much of the information already detailed in other sections, but is a good reference document. As with other guidance on the AUMC METC page, the information is written with AUMC researchers in mind. To ensure that you don't end up trying to meet requirements that only apply to AUMC researchers, review the information in the following sections on [which requirements do not apply to FGB research](#notAppl) or [which aspects require deviations from the standard UMC procedures](#deviate)
+As part of the standard submission, make sure to review the following:
+
+* [Standard submission requirements](https://www.nedmec.nl/nl/wijze-van-indienen#standard-vereisten){target="_blank"}
+  + The coding described for each document will be automatically added when each document is uploaded in the [Research Portal (Onderzoeksportaal)](https://english.ccmo.nl/investigators/primary-submission-to-the-review-committee/how-to-submit){target="_blank"} and the portal will ask you to provide a version date and number for each document. See this [guide (in Dutch only) for more information on the specific documents and how they are coded](https://www.ccmo.nl/documenten/2019/05/21/standaardonderzoeksdossier-toelichting){target="_blank"}.
+    + Make sure the version dates and numbers listed in the appendix of your cover letter correspond with the information uploaded into the Research Portal.
+* [Primary review](https://www.nedmec.nl/nl/wijze-van-indienen#nieuwe-studie-indienen){target="_blank"}
+  + You must use a [template cover letter for correspondence with the METC](https://english.ccmo.nl/investigators/standard-research-file-for-research-subject-to-the-dutch-wmo-act/a-correspondence/a1a.-cover-letter-to-review-committee-and-competent-authority){target="_blank"}. 
+  + You must submit a standard research file on your primary submission. The documents required for a standard research file are listed [here in English](https://english.ccmo.nl/investigators/standard-research-file-for-research-subject-to-the-dutch-wmo-act){target="_blank"} and [here in Dutch](https://www.ccmo.nl/onderzoekers/standaardonderzoeksdossier){target="_blank"}.
+  + Some METCs require [local addendums with additional questions](https://english.ccmo.nl/investigators/standard-research-file-for-research-subject-to-the-dutch-wmo-act/b-forms/b2-local-addendum){target="_blank" in the standard research file}. A local addendum usually supplements the [General Assessment Form(ABR-form)](https://english.ccmo.nl/investigators/standard-research-file-for-research-subject-to-the-dutch-wmo-act/b-forms/b1-abr-form){target="_blank"}, but in the case of NedMec+, the local addendum supplements the cover letter. Dutch and English templates for the local NedMec+ addendum are [found here under "METC NedMec"](https://www.nedmec.nl/nl/documenten-formulieren){target="_blank"}.
+  + There are some specific language requirements for the standard research file:
+    + The [template cover letter](https://english.ccmo.nl/investigators/standard-research-file-for-research-subject-to-the-dutch-wmo-act/a-correspondence/a1a.-cover-letter-to-review-committee-and-competent-authority){target="_blank"} for *initial* correspondence with the METC is always [in Dutch](https://www.ccmo.nl/onderzoekers/standaardonderzoeksdossier/a-correspondentie/a1a.-aanbiedingsbrief-aan-toetsingscommissie-en-bevoegde-instantie){target="_blank"}. For other correspondence (e.g. responses to questions from the METC, announcing amendments), NedMec+ offers [templates in both Dutch and English](https://www.nedmec.nl/nl/documenten-formulieren){target="_blank"}
+    + The [research protocol](https://english.ccmo.nl/investigators/standard-research-file-for-research-subject-to-the-dutch-wmo-act/c-protocol/c1-research-protocol){target="_blank"} is always submitted in English
+    + The [consent forms and information letters](https://english.ccmo.nl/investigators/standard-research-file-for-research-subject-to-the-dutch-wmo-act/e-information-research-participants/e1.-information-sheet-and-consent-form-research-participants){target="_blank"} will only be reviewed [in Dutch](https://www.ccmo.nl/onderzoekers/standaardonderzoeksdossier/e-informatie-onderzoeksdeelnemers){target="_blank"}. Any translated versions do not need to be submitted for review, but if your research will include participants who require translated versions, you'll need to include a translation certificate in your standard research file.
+
+
 
 </div>
 
 <div class="subsectionIndented">
-<h3 id="deviate"> &#10147;Deviate from standard submission procedure where necessary </h3>
+<h3 id="FGBspecifics"> &#10147;FGB specifics</h3>
 
-The information on the submission procedures and requirements is written with AUMC researchers in mind. The following deviations on the process apply to you as an FGB researcher:
-
-* [The submission requirements](https://metc.amsterdamumc.org/wp-content/uploads/2025/08/Indieningseisen-versie-2.0-d.d.-22-08-2025.pdf){target="_blank"} cite contact information that must be included in the participant information letter, but the contact information listed is for AUMC. As an FGB researcher:
-  + For the Data Protection Officer (*Functionaris Gegevensbescherming*), use functionarisgegevensbescherming@vu.nl
-  + For complaints (*Klachtenregeling*), these are generally handled via the individual research team, so use the appropriate research team contact information here.
-* A declaration that the research site is capable of conducting WMO research is a required part of the standard dossier (see [section I of Standard Research Dossier](https://metc.amsterdamumc.org/wmo/standaarddossier/){target="_blank"}). For almost all FGB research, this declaration can be made using a research declaration (*onderzoeksverklaring*). A Site Suitability Declaration (*Verklaring Geschiktheid Onderzoeksinstelling*) is *only* applicable when your research involves the use of medicinal products. For more information, see [this page on the CCMO website](https://english.ccmo.nl/investigators/standard-research-file-for-research-subject-to-the-dutch-wmo-act/i-participating-centres/i2-site-suitability-declaration-vgo-or-research-declaration){target="_blank"}.
-  + Use this [template for your research declaration (*onderzoeksverklaring*)](https://www.ccmo.nl/documenten/2015/07/01/standaardonderzoeksdossier-i2-model-onderzoeksverklaring){target="_blank"}
-  + If you're using the research declaration (*onderzoeksverklaring*) to declare the suitability of the research site, you must also use this [template](https://www.ccmo.nl/documenten/2019/09/20/k3-model-onderzoekscontract-clinical-trial-agreement-onderzoeker-geinitieerd-onderzoek){target="_blank"} for the Clinical Trial Agreement (required in [section K of Standard Research Dossier](https://metc.amsterdamumc.org/wmo/standaarddossier/){target="_blank"}). 
-      + There are other [Clinical Trial Agreement templates provided by the CCMO](https://english.ccmo.nl/investigators/standard-research-file-for-research-subject-to-the-dutch-wmo-act/k-other-documents/k3-clinical-trial-agreements){target="_blank"}, but only use these if the nature of your research (e.g. industry-sponsored research) requires that you use a declaration form other than the [standard research declaration](https://www.ccmo.nl/documenten/2019/09/20/k3-model-onderzoekscontract-clinical-trial-agreement-onderzoeker-geinitieerd-onderzoek){target="_blank"}.
-* [Section G of Standard Research Dossier](https://metc.amsterdamumc.org/wmo/standaarddossier/){target="_blank"} discusses the insurance required to conduct WMO research, however the information listed is exclusive to AUMC researchers. See ["Insurance for WMO research within FGB"](#insurance) for more information on how insurance is organized for WMO research within the VU. 
-* In the [Amsterdam UMC Checklist](https://metc.amsterdamumc.org/wp-content/uploads/2024/10/Amsterdam-UMC-Checklist-d.d.-10-10-24.pdf){target="_blank"}:
-    + There is a subsection within *Studiegegevens* that discusses the use of apps, websites and recordings (*opnames*) on page 6. If you plan to use any third party apps, websites or transcribing services for your research, contact [FGB REPS](mailto:research.data.fgb@vu.nl) for FGB specific guidance, both on which services to use and on what documentation to submit to the AUMC METC.
-    + The contact information is once again specific to AUMC. As an FGB researcher:
-        + For the Data Protection Officer (*Functionaris Gegevensbescherming*), use functionarisgegevensbescherming@vu.nl
-        + For complaints (*Klachtenregeling*), these are generally handled via the individual research team, so use the appropriate research team contact information here.
+* **A1 Template cover letter** ([Dutch guidance](https://www.ccmo.nl/onderzoekers/standaardonderzoeksdossier/a-correspondentie){target="_blank"} / [English guidance](https://english.ccmo.nl/investigators/standard-research-file-for-research-subject-to-the-dutch-wmo-act/a-correspondence/a1a.-cover-letter-to-review-committee-and-competent-authority){target="_blank"}) & [A1.Addendum NedMec](https://www.nedmec.nl/nl/documenten-formulieren){target="_blank"}
+  + WMO research at FGB often requires an *onderzoekscontract* (a.k.a. Clinical Trial Agreement) so adjust the text in the second paragraph to *wel een onderzoekscontract afgesloten*. Clinical Trial Agreement's are explained further below under **K3 Clinical trial agreements**
+    + If you have a Clinical Trial Agreement, also make sure question 9 of the NedMec addendum is answered "yes"
+  + The text relating to *geneesmiddelonderzoek met ongeregistreerde middelen* should be removed (except, of course, in the rare case of pharmaceutical research with unregistered products within FGB)
+  + Under the section "Invoice sheet" of the NedMec addendum, if you are unsure how to fill in the billing information, you can contact your department manager for assistance
+* **B1 ABR form** ([Dutch guidance](https://www.ccmo.nl/onderzoekers/standaardonderzoeksdossier/b-formulieren/b1a.-abr-formulier){target="_blank"} / [English guidance](https://english.ccmo.nl/investigators/standard-research-file-for-research-subject-to-the-dutch-wmo-act/b-forms/b1-abr-form){target="_blank"})
+  + Under section 1.5, if you are unsure how to fill in the billing information, you can contact your department manager for assistance
+  + Section 8.10 of the ABR form is about insurance. See ["Insurance for WMO research within FGB"](#insurance) for more information on how insurance is organized for WMO research within the VU.
+  + Section 11.3 is about publishing research data. If your aim is to publish de-identified participant data, make sure to follow FGB and VU requirements to ensure this is done safely, legally and ethically. You can assess the level of risk posed by the data you plan to share with this [risk app](https://risk_levels_app.rshiny.labs.vu.nl/){target="_blank"}. Based on the risk level, you can review the recommended procedures for reuse of data after the current research project. You can also contact the [FGB Privacy Officer](mailto: research.data.fgb@vu.nl) for guidance on how to approach this topic. NB: it is possible to determine your data sharing plan after your research is reviewed by the METC, but make sure you have a plan in place before you begin data collection because consent is very often one of the most important aspects that will allow future data reuse.
+* [**C1 Research protocol**](https://english.ccmo.nl/investigators/standard-research-file-for-research-subject-to-the-dutch-wmo-act/c-protocol/c1-research-protocol){target="_blank"}
+  + Section 11.5 of the protocol is about insurance. See ["Insurance for WMO research within FGB"](#insurance) for more information on how insurance is organized for WMO research within the VU.  
+* **E1 Subject Information Sheet and informed consent form** ([Dutch guidance](https://www.ccmo.nl/onderzoekers/standaardonderzoeksdossier/e-informatie-onderzoeksdeelnemers){target="_blank"} / [English guidance](https://english.ccmo.nl/investigators/standard-research-file-for-research-subject-to-the-dutch-wmo-act/e-information-research-participants/e1.-information-sheet-and-consent-form-research-participants){target="_blank"})  
+  + Section 6 of the information letter template is about insurance. See ["Insurance for WMO research within FGB"](#insurance) for more information on how insurance is organized for WMO research within the VU.
+  + Appendix A contact information:
+    + See ["Insurance for WMO research within FGB"](#insurance) for more information on what to fill in for the insurance contact information
+    + For complaints (*Klachten*), these are generally handled via the individual research team, so use the appropriate research team contact information here
+    + For the Data Protection Officer (*Functionaris Gegevensbescherming*), use functionarisgegevensbescherming@vu.nl
+  + In addition to Section 5 and Appendix C of the template, it is a VU requirement to have a privacy statement that participants can refer to at their leisure. See this [page for more information on privacy statements](../legal/ICFChecklist.html#privStat){target="_blank"}. You can submit the privacy statement in section *E4 Other informational materials* of the standard research file.
+    + It is recommended to include a reference to the privacy statement in the information letter. Include the following text: "In de bijgevoegde privacyverklaring vindt u meer informatie over hoe wij uw persoonsgegevens gebruiken in dit onderzoek" at the end of section 5 of the model information letter. It is also advised to include a motivation in your standard research file to inform the METC of this minor addition and the reason for its inclusion. You can use the following standard text for this: "Conform het beleid van de Vrije Universiteit Amsterdam dient elk onderzoek te worden voorzien van een privacyverklaring als aanvulling op de informatiebrief. Deze is ingediend onder categorie E4 ('Overig voorlichtingsmateriaal'). Tevens is daartoe een verwijzende zin in de informatiebrief opgenomen."
+* **G Insurances** ([Dutch guidance](https://www.ccmo.nl/onderzoekers/standaardonderzoeksdossier/g-verzekeringen){target="_blank"} / [English guidance](https://english.ccmo.nl/investigators/standard-research-file-for-research-subject-to-the-dutch-wmo-act/g-insurances){target="_blank"})  
+  + Everything related to how participants' insurance and liability insurance work for FGB researchers is explained below in ["Insurance for WMO research within FGB"](#insurance)
+* **I2 Site Suitability Declaration (VGO) / Research declaration** ([Dutch guidance](https://www.ccmo.nl/onderzoekers/standaardonderzoeksdossier/i-deelnemende-centra/i2-verklaring-geschiktheid-onderzoeksinstelling-vgo-of-onderzoeksverklaring){target="_blank"} / [English guidance](https://english.ccmo.nl/investigators/standard-research-file-for-research-subject-to-the-dutch-wmo-act/i-participating-centres/i2-site-suitability-declaration-vgo-or-research-declaration){target="_blank"})
+  + Most FGB research uses the research declaration (*onderzoeksverklaring*) for this part of the standard research file; a full VGO is only necessary when research with medical products is being carried out
+* **K3 Clinical Trial Agreements**([Dutch guidance](https://www.ccmo.nl/onderzoekers/standaardonderzoeksdossier/k-overige-documenten/k3.-clinical-trial-agreements-onderzoekscontracten){target="_blank"} / [English guidance](https://english.ccmo.nl/investigators/standard-research-file-for-research-subject-to-the-dutch-wmo-act/k-other-documents/k3-clinical-trial-agreements){target="_blank"})
+  + Since FGB research usually requires a research declaration (*onderzoeksverklaring*) to declare the suitability of the research site, if you require a clinical trial agreement you must use the [template (only in English)](https://english.ccmo.nl/documents/2019/09/20/k3-template-clinical-trial-agreement-investigator-initiated-research){target="_blank"} that is suited to studies with a research declaration. 
 
 </div>
 
@@ -74,16 +95,18 @@ The information on the submission procedures and requirements is written with AU
 
 * Ensure that the number of participants you plan to include is consistent across all submitted documents. For WMO research this will generally be stated in:
   + Your research protocol
-  + The [ABR form](https://english.ccmo.nl/investigators/standard-research-file-for-research-subject-to-the-dutch-wmo-act/b-forms/b1-abr-form){target="_blank"} that you fill in in the *Onderzoeksportaal*
-* While UMC researchers are required to complete the BROK (*basiscursus regelgeving en organisatie van klinisch onderzoek*) course, the rules are not as clear for FGB. It is best practice that all researchers conducting WMO research complete either the BROK course or another Good Clinical Practice (GCP) certification. The [BROK course](https://www.umcmedewerkers.nl/kennisbank/brok/){target="_blank"} is preferable to other GCP certifications because it is not limited to research on medicinal products, but to all WMO research as well as relevant non-WMO clinical research.
+  + The [ABR form](https://english.ccmo.nl/investigators/standard-research-file-for-research-subject-to-the-dutch-wmo-act/b-forms/b1-abr-form){target="_blank"} that you fill in in the Research Portal
+* It is best practice that all researchers conducting WMO research complete either the BROK (*basiscursus regelgeving en organisatie van klinisch onderzoek*) course or another Good Clinical Practice (GCP) certification. The [BROK course](https://www.umcmedewerkers.nl/kennisbank/brok/){target="_blank"} is preferable to other GCP certifications because it is not limited to research on medicinal products, but to all WMO research as well as relevant non-WMO clinical research.
   + Bear in mind that the BROK course was created for UMC researchers, meaning some aspects may still not apply to you as an FGB researcher. When in doubt, contact [FGB REPS](mailto:research.data.fgb@vu.nl) for support.
 
 <div class="subsectionIndented">
 <h3 id="insurance"> &#10147;Insurance for WMO research within FGB </h3>
 
-The AUMC METC will determine if your WMO research requires participants' insurance. If you believe that your research *does not* pose risks to your participants, you must include a written request to the AUMC METC for exemption from this insurance requirement. This written request **must be included in the initial submission of your standard research dossier**. If you are certain that your research *will* require participants' insurance, you will need to include proof of participants' insurance in your submission. Regardless of whether your research requires participants' insurance, you are also required to include proof of liability insurance in your submission. For proof of either type of insurance, contact research.data.fgb@vu.nl for a copy of the relevant documentation.
+The METC will determine if your WMO research requires participants' insurance. If you believe that your research *does not* pose risks to your participants, you must include a written request to the METC for exemption from the insurance requirement. This written request **must be included in the initial submission of your standard research file**. If you are certain that your research *will* require participants' insurance, you will need to include proof of participants' insurance in your submission. You can find the latest participants' insurance documentation on this [VUweb page](https://vu.nl/nl/medewerker/financien/proefpersonenverzekering){target="_blank"}. Regardless of whether your research requires participants' insurance, you are also required to include proof of liability insurance in your submission. For proof of liability insurance, contact research.data.fgb@vu.nl for a copy of the relevant documentation.
 
-If you do not request an exemption from requiring participants' insurance or the AUMC METC refuses your request for an exemption, you will need to [register for participants' insurance via this form](https://fgbto3-web.labs.vu.nl/rdm/wmo-insurance/){target="_blank"}. You can only fill in this form *after* you have received approval for your research from an METC. The FGB REPS team collects most registrations from this form once a year in the fall for processing by VU Corporate Finance. You may fill in this form at any time of the year, but if you do so outside of the usual mass registration period (every year in September), please contact research.data.fgb@vu.nl to confirm that your registration has been received.
+**NB**: VU liability insurance covers all research and education activities carried out by VU staff, even when they are doing those activities on location.
+
+If you do not request an exemption from participants' insurance or the METC rejects your request for an exemption, you will need to [register for participants' insurance via this form](https://fgbto3-web.labs.vu.nl/rdm/wmo-insurance/){target="_blank"}. You can only fill in this form *after* you have received approval for your research from an METC because you need to submit the letter of approval from the METC that states that participants' insurance is required. The FGB REPS team collects most registrations from this form once a year in the fall for processing by VU Corporate Finance. You may fill in this form at any time of the year, but if you do so outside of the usual mass registration period (every year in September), please contact research.data.fgb@vu.nl to confirm that your registration has been received.
 
 **NB**: There are no additional costs with liability insurance, but the participants' insurance will be billed to your research project from whichever funding source is applicable to you. This means that if you are obtaining funding from a grant provider, the costs of participants' insurance need to be included in the budgeting. See the next section ["Costs of WMO research and budgeting"](#costs) for more information.
 </div>
@@ -91,11 +114,16 @@ If you do not request an exemption from requiring participants' insurance or the
 <div class="subsectionIndented">
 <h3 id="costs"> &#10147;Costs of WMO research and budgeting </h3>
 
-WMO research involves many extra costs that need to be estimated and accounted for in your budgeting, especially if you are obtaining funding from an external grant provider. You are expected to cover these costs with your project budget, therefore it's important to estimate what these costs will be **during your grant application**. The primary costs that you need to take into account are:
+WMO research involves many extra costs that need to be estimated and accounted for in your budgeting, especially if you are obtaining funding from a grant provider. You are expected to cover these costs with your project budget, therefore it's important to estimate what these costs will be **during your grant application**. The primary costs that you need to take into account are:
 
-* The costs of a WMO review by the AUMC METC. For FGB researchers, who are external to the AUMC, the cost is [currently €4000 for research funded by research grants](https://metc.amsterdamumc.org/tarieven/wmo-onderzoek/){target="_blank"}. For every [substantial amendment](https://metc.amsterdamumc.org/tijdens-en-na-wmo-onderzoek/amendementen/){target="_blank"} that needs to be submitted to the AUMC METC, [you will need to pay €850](https://metc.amsterdamumc.org/tarieven/wmo-onderzoek/){target="_blank"}.
-* The costs of participants' insurance. If your research requires [participants' insurance](#insurance), there will be additional costs per participant included in the study. For 2026, this cost is €45 per participant.
+* The costs of a WMO review by an METC
+    + For FGB researchers (i.e. external applicants) funded by research grants (i.e. not by industry), the cost of review by [NedMec+ is currently €4000](https://www.nedmec.nl/nl/tarieven){target="_blank"}. For every [substantial amendment](https://www.nedmec.nl/nl/wijze-van-indienen#amendementen){target="_blank"} that needs to be resubmitted to the NedMec+ METC, [you will need to pay €850](https://www.nedmec.nl/nl/tarieven){target="_blank"}.
+    + The costs of review can differ across METCs.
+* The costs of participants' insurance
+    + If your research requires [participants' insurance](#insurance), there will be additional costs per participant included in the study. For 2026, this cost is €45 per participant.
 </div>
+
+<!-- Commenting out per 2026-09-21; not fully deleting because there may be a role for this section in the future as NedMec guidance develops or questions come in from researchers
 
 <h2 id="notAppl"> Things you don't need to worry about </h2>
 
@@ -106,9 +134,11 @@ The AUMC METC's WMO review process is written with AUMC researchers in mind; som
 * In the [standard submission dossier](https://metc.amsterdamumc.org/wmo/standaarddossier/){target="_blank"} you don't need to include anything for section D on "product information" (*productinformatie*) unless you are conducting research with medicinal products or medical devices.
 * The information on the [AUMC METC's webpage about *Lokale Uitvoerbaarheid*](https://metc.amsterdamumc.org/lokale-uitvoerbaarheid/lu/){target="_blank"} is not applicable to FGB researchers *unless* you are conducting research in partnership with the AUMC *and* that research will take place (in part) at the AUMC. 
 
+-->
 
+<h2>Support</h2>
 
-
+If you have questions or need additional support, contact the [FGB REPS team](mailto:research.data.fgb@vu.nl). REPS has also created a peer-to-peer Teams channel for researchers conducting WMO research; the channel provides a place where researchers can help each other out in finding answers and solutions to questions or issues that arise around their WMO review process (and the REPS team is in the channel too to help of course!). If you would like to join this Teams channel, contact research.data.fgb@vu.nl.
 
 
 

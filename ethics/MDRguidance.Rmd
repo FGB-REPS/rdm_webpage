@@ -1,6 +1,6 @@
 ---
-title: "Ethics @ FGB: VCWE & Standard Ethical Review"
-date: "`r Sys.Date()`; version 1.1"
+title: "Ethics @ FGB: Medical Devices Regulation & Other Relevant Regulations"
+date: "`r Sys.Date()`; version 1.0"
 output: 
   html_document:
     theme: cerulean
@@ -8,12 +8,11 @@ output:
     includes: 
       after_body: ../footer.html
     toc: true
-    toc_depth: 3
+    toc_depth: 4
     toc_float: 
       collapsed: false
       smooth_scroll: true
 ---
-
 
 <!-- link to overall css stylesheet for all FGB RDM pages -->
 
@@ -22,14 +21,17 @@ output:
 <!-- link to extra overall css stylesheet for FGB RDM pages that use TOC-->
 
 <link rel="stylesheet" href="../css/styleTOC.css" />
-
 <!-- for any css custom to this page only fill in below between style tag -->
 
 <style type="text/css">
 
 
+
+
 </style>
 
+\
+\
 
-```{r, child='text/VCWEtext.Rmd', echo=FALSE, results='asis'}
+```{r, child='text/MDRtext.Rmd', echo=FALSE, results='asis'}
 ```

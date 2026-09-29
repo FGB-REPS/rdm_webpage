@@ -1,6 +1,6 @@
 ---
 title: "Ethics @ FGB: Which Ethical Review Processes Apply?"
-date: "`r Sys.Date()`; version 1.1"
+date: "`r Sys.Date()`; version 2.0"
 output: 
   html_document:
     theme: cerulean
@@ -90,11 +90,10 @@ output:
 \
 \
 
-Almost all research conducted within FGB will require some form of ethical review. Unfortunately, not all FGB research projects can be reviewed by the faculty's [Scientific and Ethical Review Board (VCWE)](https://vu.nl/en/employee/research-support/the-scientific-and-ethical-review-board-vcwe){target="_blank"} because certain Dutch laws (primarily, the [WMO](https://english.ccmo.nl/investigators/legal-framework-for-medical-scientific-research/your-research-is-it-subject-to-the-wmo-or-not){target="_blank"}) require that some forms of clinical research *must* be reviewed by a [Medical Ethical Review Committee (METC)](https://metc.amsterdamumc.org/){target="_blank"}. In other cases, a clinical research project may not require ethical review by a METC, but will require a declaration from a METC that the study is not subject to the WMO (i.e. a non-WMO declaration).
+Most, if not all, research conducted within FGB will require some form of ethical review. Not all FGB research projects can be reviewed by the faculty's [Scientific and Ethical Review Board (VCWE)](https://vu.nl/en/employee/research-support/the-scientific-and-ethical-review-board-vcwe){target="_blank"} because certain Dutch & EU laws (e.g. [WMO](https://english.ccmo.nl/investigators/legal-framework-for-medical-scientific-research/your-research-is-it-subject-to-the-wmo-or-not){target="_blank"}, [MDR](https://english.ccmo.nl/investigators/clinical-investigations-with-medical-devices){target="_blank"} etc.) require that some forms of clinical research be reviewed by a [Medical Research Ethics Committee (METC)](https://english.ccmo.nl/mrecs){target="_blank"}. 
 
-Determining which situation applies to you can be confusing. Additionally, if you determine that you will need METC review or a non-WMO declaration, the process can be quite complicated for FGB researchers because whichever METC you submit your research to, it will be an organization that is external to the VU. The following guide aims to help you determine which ethical review process(es) apply to you and, once that's known, help you navigate the applicable ethical review process. 
+Determining which situation applies to you can be confusing and if you determine that your research is subject to the WMO and/or MDR, the process can be quite complicated for FGB researchers because all METCs are external to the VU. The following guide aims to help you determine which ethical review process(es) apply to you and, once that's known, help you navigate the applicable ethical review process. 
 
-NB: The guidance for WMO research and non-WMO declarations focuses on the METC of the Amsterdam UMC since this will, in most cases, be the METC that you are submitting your research to. The guidance should be transferable to other METC's if that's necessary for your situation, but keep in mind that procedures could differ slightly outside of the AUMC context.
 
 \
 
@@ -104,6 +103,7 @@ NB: The guidance for WMO research and non-WMO declarations focuses on the METC o
 <form id="whichRoute">
 <label><input type="radio" name="routePicker" id="displayWMO" value="wmo"> WMO research review process </label><br>
 <!--<label><input type="radio" name="routePicker" id="displayNonWMO" value="nwmo"> Non-WMO declaration process </label><br> removed because not relevant per 2026-09-08-->
+<label><input type="radio" name="routePicker" id="displayMDR" value="mdr"> MDR and other regulations' review process </label><br>
 <label><input type="radio" name="routePicker" id="displayVCWE" value="vcwe"> Standard FGB ethical review </label><br>
 <label><input type="radio" name="routePicker" id="displayQuiz" value="quiz"> I need help to figure out which process applies to me </label><br>
 </form>
@@ -140,6 +140,21 @@ NB: The guidance for WMO research and non-WMO declarations focuses on the METC o
 
 </div>
 -->
+
+<div id = "guidance-wrapper">
+
+<div class = "guidance" id = "mdrGuidance">
+
+\
+\
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open('MDRguidance.html','_blank');">Open MDR guidance on new page</button>
+
+# MDR and other regulations for medical FGB research
+
+```{r, child='text/MDRtext.Rmd', echo=FALSE, results='asis'}
+```
+
+</div>
 
 <div  class = "guidance" id = "vcweGuidance">
 
@@ -475,7 +490,7 @@ For example:
 
 <button id="defWMOback" class="manual-back btn btn-primary btn-sm">Back to quiz</button> 
 
-Based on your responses, the WMO applies to your research and you *will* need to undergo review by [an METC](https://www.nedmec.nl/nl/wijze-van-indienen){target="_blank"}. Below you can find more information on the WMO review processes and how they apply to you as an FGB researcher.
+Based on your responses, the WMO applies to your research and you *will* need to undergo review by [an METC](https://www.nedmec.nl/nl/wijze-van-indienen){target="_blank"}. Below you can find more information on the WMO review processes and how they apply to you as an FGB researcher. The information also includes references to other regulations that might apply to your research such as the Medical Devices Regulation (MDR).
 
 <details>
 <summary class="summaryHeader">
@@ -533,13 +548,7 @@ Based on your responses, the WMO does *not* apply to your research. Submit your 
 
 ### Potential additional concerns
 
-Other [legislation/concerns](https://english.ccmo.nl/investigators/additional-requirements-for-certain-types-of-research){target="_blank"} may apply to your research (even if the WMO does not apply) because of the medical nature of your research. The following concerns are particularly relevant for research within FGB:
-
-* [Medical Devices Regulation](https://english.ccmo.nl/investigators/clinical-investigations-with-medical-devices/legal-framework-guidances-and-standards-for-clinical-investigations-with-medical-devices){target="_blank"}
-* [In-vitro diagnostics Regulation](https://english.ccmo.nl/investigators/performance-studies-using-in-vitro-diagnostics-ivdr/legal-framework-guidances-and-standards-for-prestatiestudies-naar-in-vitro-diagnostica){target="_blank"}
-* [Research involving pregnant/breastfeeding participants](https://english.ccmo.nl/investigators/additional-requirements-for-certain-types-of-research/research-involving-fetuses-pregnant-and-or-breastfeeding-women){target="_blank"}
-* [Chart review research/retrospective patient file reviews](https://english.ccmo.nl/investigators/additional-requirements-for-certain-types-of-research/non-wmo-research/file-research){target="_blank"}
-* [Non-WMO/non-clinical trial research with a medical product that is initiated/financed by pharmaceutical companies](https://english.ccmo.nl/investigators/additional-requirements-for-certain-types-of-research/non-wmo-research/non-wmo-research-with-a-medicinal-product){target="_blank"}
+Other [regulations](https://english.ccmo.nl/investigators/additional-requirements-for-certain-types-of-research){target="_blank"} may apply to your research (even if the WMO does not apply) because of the medical nature of your research. More information on how to apply these regulations within FGB can be found under the "MDR and Other Regulations Guidance".
 
 <details>
 <summary class="summaryHeader">
@@ -547,6 +556,19 @@ View VCWE Guidance
 </summary>
 
 <button class="inline-button btn btn-primary btn-sm" onclick="window.open('VCWEguidance.html','_blank');">Open VCWE guidance on new page</button>
+
+
+```{r, child='text/VCWEtext.Rmd', echo=FALSE, results='asis'}
+```
+
+</details>
+
+<details>
+<summary class="summaryHeader">
+View MDR and Other Regulations Guidance
+</summary>
+
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open('MDRguidance.html','_blank');">Open MDR guidance on new page</button>
 
 
 ```{r, child='text/VCWEtext.Rmd', echo=FALSE, results='asis'}
@@ -570,13 +592,7 @@ Based on your responses, the WMO *probably doesn't* apply to your research, but 
 
 ### Potential additional concerns
 
-Other [legislation/concerns](https://english.ccmo.nl/investigators/additional-requirements-for-certain-types-of-research){target="_blank"} may apply to your research (even if the WMO does not apply) because of the interventions, experiments or treatments used in your research. The following concerns are particularly relevant for research within FGB:
-
-* [Medical Devices Regulation](https://english.ccmo.nl/investigators/clinical-investigations-with-medical-devices/legal-framework-guidances-and-standards-for-clinical-investigations-with-medical-devices){target="_blank"}
-* [In-vitro diagnostics Regulation](https://english.ccmo.nl/investigators/performance-studies-using-in-vitro-diagnostics-ivdr/legal-framework-guidances-and-standards-for-prestatiestudies-naar-in-vitro-diagnostica){target="_blank"}
-* [Research involving pregnant/breastfeeding participants](https://english.ccmo.nl/investigators/additional-requirements-for-certain-types-of-research/research-involving-fetuses-pregnant-and-or-breastfeeding-women){target="_blank"}
-* [Chart review research/retrospective patient file reviews](https://english.ccmo.nl/investigators/additional-requirements-for-certain-types-of-research/non-wmo-research/file-research){target="_blank"}
-* [Non-WMO/non-clinical trial research with a medical product that is initiated/financed by pharmaceutical companies](https://english.ccmo.nl/investigators/additional-requirements-for-certain-types-of-research/non-wmo-research/non-wmo-research-with-a-medicinal-product){target="_blank"}
+Other [regulations](https://english.ccmo.nl/investigators/additional-requirements-for-certain-types-of-research){target="_blank"} may apply to your research (even if the WMO does not apply) because of the interventions/experiments used in your research. More information on how to apply these regulations within FGB can be found under the "MDR and Other Regulations Guidance".
 
 <details>
 <summary class="summaryHeader">
@@ -602,6 +618,21 @@ View WMO Guidance
 ```
 
 </details>
+
+
+<details>
+<summary class="summaryHeader">
+View MDR and Other Regulations Guidance
+</summary>
+
+<button class="inline-button btn btn-primary btn-sm" onclick="window.open('MDRguidance.html','_blank');">Open MDR guidance on new page</button>
+
+
+```{r, child='text/VCWEtext.Rmd', echo=FALSE, results='asis'}
+```
+
+</details>
+
 
 </div>
 
@@ -629,6 +660,49 @@ Your situation is not so clear, meaning its difficult to make an assessment of w
 </div>
 
 </div>
+
+
+<!-- suppress internal hyperlinks on this page so as to not cause problems upon refresh of the ethics guidance page 
+and also cause page to go back to top upon refresh-->
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Select all links that start with a hash '#'
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault(); // Stop the default URL-hash jump
+      
+      const targetId = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+      
+      if (targetElement) {
+        // Smoothly scroll to the target section without changing the URL
+        targetElement.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+});
+
+
+// 1. Tell the browser NOT to automatically restore previous scroll positions on reload
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+
+// 2. Force the window to jump to the top right before a refresh/unload occurs
+window.addEventListener('beforeunload', function () {
+  window.scrollTo(0, 0);
+});
+
+</script>
+
+
+
+
+
+
 
 <!--2026-09-08: removed after changes and discussions with VCWE & METC
 

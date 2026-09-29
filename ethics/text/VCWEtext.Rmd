@@ -21,3 +21,33 @@ There are relatively few cases within FGB where ethical review wouldn't be recom
 
 Even if you are reusing data and aren't including any active participants, there may still be ethical questions posed by your research, meaning ethical review is still advised. Additionally, there are very often privacy or legal questions that arise when data are reused for new research. If you plan to reuse data for your research, contact the [Research and Policy Support Team (REPS)](mailto:research.data.fgb@vu.nl) prior to ethical review to ensure that you can (legally) reuse the data.
 
+
+<h2 id="insurance"> Insurance for non-medical/non-WMO research within FGB </h2>
+
+VU liability insurance covers all research and education activities carried out by VU staff, even when they are doing those activities on location. There are no additional costs associated with the VU's liability insurance.
+
+You don't need to provide evidence of the VU's liability insurance to the VCWE, but if you are working with external partners and the question of liability insurance comes up, you can contact research.data.fgb@vu.nl for further support. Where appropriate, a copy of the insurance documentation can be provided to you.
+
+
+<script>
+
+// script primarily for handling any local buttons that have local javascript that needs to work within this specific chunk of text
+
+
+// The Safety Guard: Only run this if we haven't already set up the listener
+// this is necessary because VCWEtext.Rmd is used multiple times within ethicsGuidance as a child text doc, but we want the event listener to only set up once
+
+if (typeof goToQuizSetup === 'undefined') {
+  
+  document.addEventListener('click', function(event) {
+    // Check if the thing clicked has our class
+    if (event.target && event.target.classList.contains('goToQuiz')) {
+      window.open('EthicsGuidance.html?target=quiz', '_blank');
+    }
+  });
+
+  // Mark as set up so other copies of this file don't add the listener again
+  var goToQuizSetup = true;
+}
+
+</script>
