@@ -71,6 +71,11 @@ li {
   margin: 5px;
 }
 
+p, summary {
+  font-size: 18px;
+}
+
+
 .subsectionIndented {
   padding-left: 3em;
 }
