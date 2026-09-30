@@ -17,7 +17,7 @@ This CCMO page ([in Dutch](https://www.ccmo.nl/onderzoekers/klinisch-onderzoek-n
 Examples of medical devices within FGB include:
 
 * [Interactive Walkway](https://www.researchgate.net/publication/318108511_Walking-adaptability_assessments_with_the_Interactive_Walkway_Between-systems_agreement_and_sensitivity_to_task_and_subject_variations){target="_blank"}
-* [Electrical stimulation device for prevention of pressure ulcers in wheelchair users](https://link.springer.com/article/10.1186/s13063-022-06088-0){target="_blank"}
+* Electrical stimulation device for prevention of pressure ulcers in wheelchair users
 
 <h3 id="framework"> Frameworks for clinical investigation </h3>
 
