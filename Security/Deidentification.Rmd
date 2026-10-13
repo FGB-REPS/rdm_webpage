@@ -1,6 +1,6 @@
 ---
 title: "FGB Security Tips: De-identification of Data"
-date: "`r Sys.Date()`; Version 1.2"
+date: "`r Sys.Date()`; Version 1.3"
 output: 
   html_document:
     theme: cerulean
@@ -122,6 +122,8 @@ summary {
 \
 
 You will see a lot of different words used to describe the process of making it harder or impossible to identify a specific person within your data: anonymization, pseudonymization, de-identification etc. The definitions of these terms can vary depending on context and opinion. For the purposes of this guide, de-identification will be used and the focus is mainly on making it as hard as possible to re-identify people in the data. It's important to also be aware that it isn't always feasible or appropriate to de-identify data so much that it is impossible to re-identify people: you might be able to achieve anonymous data this way, but in doing so you modify your data so much that you render it useless. 
+
+NB: De-identification may not be appropriate in all cases or for all of your data, particularly your raw data; any de-identification done to your raw data must not irrevocably alter the integrity of the data. This is explained further in the [FGB Archiving Guidelines](../rdm/archiving/ArchivingGuidelinesFull.html#subsection4){target="_blank"}.
 
 ### Why De-identification?
 
