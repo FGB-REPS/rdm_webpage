@@ -1,6 +1,6 @@
 ---
 title: "FGB Security Tips: Safe Practices for Students Working With Research Data"
-date: "`r Sys.Date()`; Version 4.1"
+date: "`r Sys.Date()`; Version 4.2"
 output: 
   html_document:
     theme: cerulean
@@ -300,6 +300,7 @@ You can also share "Yellow" data with students via [Research Drive](https://serv
 [Teams/SharePoint](https://services.vu.nl/esc?id=emp_taxonomy_topic&topic_id=4d4956d7978f09d0e553359fe153afb3){target="_blank"}, [ZIVVER](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012860){target="_blank"}  or [SURFFileSender](https://www.surf.nl/en/surffilesender-send-large-files-securely-and-encrypted){target="_blank"}. There are a few important things to be aware of however:
 
   * Research Drive can only be used for research purposes; it is not intended for student activities that are *purely educational*. If you are uncertain whether or not your student can use Research Drive, contact the [RDM Support Desk](mailto: rdm@vu.nl) for advice.
+      * <u style="text-decoration-color:#ed0000">**NB: it is no longer possible to use the public link functionality for data sharing in Research Drive due to insecure usage**</u>
   * Students unfortunately cannot be added as users on SURFdrive folders. In general, "Yellow" data should not be shared via a SURFdrive public link, however, you may share the data with students in this manner as long as the link is sent to the student's VU e-mail address using a strong password and a short expiry date on the link. The student will need to download the data from the public link, and once the student has the data, the public link should be deleted.
   * Make sure to follow the instructions in the [Digital Data Transfer Guide](DigitalTransfer.html){target="_blank"} to securely share the "Yellow" data for whichever option you choose.
     + This guide does not apply to SciStor. You can contact [IT for Research](mailto: itvo.ucit@vu.nl) for support if you don't know how to give a student access to your SciStor storage space.

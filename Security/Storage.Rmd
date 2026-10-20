@@ -1,6 +1,6 @@
 ---
 title: "FGB Security Tips: Storage"
-date: "`r Sys.Date()`; Version 4.2"
+date: "`r Sys.Date()`; Version 5.0"
 output: 
   html_document:
     theme: cerulean
@@ -215,17 +215,17 @@ table tr:nth-child(3)   {
 ## Faculty Storage Recommendations for Research Data {#FGBrecs}
 
 There are a variety of data storage options available at the VU which can get a bit confusing. FGB recommends **three primary options** for the storage of **research** data: [YODA](../rdm/tools/YODAInstructionsFGB.html){target="_blank"}, [Research Drive](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012856){target="_blank"}, and [SciStor](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012858){target="_blank"}. Additionally, 
-[Teams/SharePoint](https://services.vu.nl/esc?id=emp_taxonomy_topic&topic_id=4d4956d7978f09d0e553359fe153afb3){target="_blank"} has been approved for the storage of research data, **but FGB recommends only using it if the three primary options are not feasible because Teams suffers from various functionality issues.** You can always discuss your options with the [FGB Research Data Stewards](mailto:research.data.fgb@vu.nl) if you are unsure which option to use.
+[Teams/SharePoint](https://services.vu.nl/esc?id=emp_taxonomy_topic&topic_id=4d4956d7978f09d0e553359fe153afb3){target="_blank"} has been approved for the storage of research data, **but FGB recommends only using it if the three primary options are not feasible**. This is because Teams suffers from various functionality issues that limit its use for research data. You can always discuss your options with the [FGB Research Data Stewards](mailto:research.data.fgb@vu.nl) if you are unsure which option to use.
 
 \
 
 | | YODA | Research Drive | SciStor | (Teams/SharePoint) |
 | -- | ---- | ---- | ---- | ---- |
-| **Recommended Uses/Benefits** |  &#10146; Storage of large volumes of data that **don't** need to be frequently accessed for processing/analysis <br> &#10146; Creation of structured metadata to describe your research and the associated datasets (helps with making data FAIR) <br> &#10146; Offers read-only storage of (a copy of) your raw data <br> &#10146; Allows data to be shared with external (non-VU) collaborators <br> &#10146; Provides [archiving](../rdm/definitions/Definitions.html#archivingdata){target="_blank"} for data after a research article is published <br> &#10146; Other benefits and uses of YODA are described in further detail [here](../rdm/tools/YODAInstructionsFGB.html#pros){target="_blank"} and in the [VU Storage Finder](https://vu.nl/en/research/storagefinder){target="_blank"} | &#10146; Storage of large volumes of data that need to be regularly accessed for processing/analysis <br> &#10146; Similar uses to SURFdrive, but ensures that data storage is linked to a project rather than an individual <br> &#10146; Has a desktop sync client for easy management of locally copied data <br> &#10146; Allows for access management at the folder and subfolder level, e.g. ensures students/collaborators can only access certain folders <br> &#10146; Allows for easy collaboration and sharing with external collaborators <br> &#10146; Additional information on the uses of Research Drive are found in the [VU Storage Finder](https://vu.nl/en/research/storagefinder){target="_blank"} | &#10146; Storage of **very** large volumes of data that need to be regularly accessed for processing/analysis <br> &#10146; Data can be accessed directly from SciStor without copying locally prior to processing/analysis <br> &#10146; Best option for high-performance computing <br> &#10146; Allows for access management at the folder and subfolder level, e.g. ensures students can only access certain folders <br> &#10146; Additional information on the uses of SciStor are found in the [VU Storage Finder](https://vu.nl/en/research/storagefinder){target="_blank"} | &#10146; Only use if YODA, Research Drive or SciStor are not feasible options <br> &#10146; Replacement for the previously used G-drive <br> &#10146; Similar to OneDrive, but ensures that data storage is linked to a project rather than an individual <br> &#10146; Allows for access management at the folder and subfolder level <br> &#10146; Allows for easy collaboration and sharing with external collaborators <br> &#10146; Can be used to record and generate transcripts for interviews conducted via Teams (depending on the ["sensitivity"](PrivacyRisks.html){target="_blank"} of the data) <br> &#10146; Additional information on the uses of Teams/Sharepoint are found in the [VU Storage Finder](https://vu.nl/en/research/storagefinder){target="_blank"} |
+| **Recommended Uses/Benefits** |  &#10146; Storage of large volumes of data that **don't** need to be frequently accessed for processing/analysis <br> &#10146; Creation of structured metadata to describe your research and the associated datasets (helps with making data FAIR) <br> &#10146; Offers read-only storage of (a copy of) your raw data <br> &#10146; Allows data to be shared with external (non-VU) collaborators <br> &#10146; Provides [archiving](../rdm/definitions/Definitions.html#archivingdata){target="_blank"} for data after a research article is published <br> &#10146; Other benefits and uses of YODA are described in further detail [here](../rdm/tools/YODAInstructionsFGB.html#pros){target="_blank"} and in the [VU Storage Finder](https://vu.nl/en/research/storagefinder){target="_blank"} | &#10146; Storage of large volumes of data that need to be regularly accessed for processing/analysis <br> &#10146; Similar uses to [SURFdrive](#nonpreferred), but ensures that data storage is linked to a project rather than an individual <br> &#10146; Has a desktop sync client for easy management of locally copied data <br> &#10146; Allows for access management at the folder and subfolder level, e.g. ensures students/collaborators can only access certain folders <br> &#10146; Allows for easy collaboration and sharing with external collaborators <br> &#10146; Additional information on the uses of Research Drive are found in the [VU RDM Handbook](https://rdm.vu.nl/tools/researchdrive/index.html){target="_blank"} & the [VU Storage Finder](https://vu.nl/en/research/storagefinder){target="_blank"} | &#10146; Storage of **very** large volumes of data that need to be regularly accessed for processing/analysis <br> &#10146; Data can be accessed directly from SciStor without copying locally prior to processing/analysis <br> &#10146; Best option for high-performance computing <br> &#10146; Allows for access management at the folder and subfolder level, e.g. ensures students can only access certain folders <br> &#10146; Additional information on the uses of SciStor are found in the [VU RDM Handbook](https://rdm.vu.nl/tools/scistor/){target="_blank"} & the [VU Storage Finder](https://vu.nl/en/research/storagefinder){target="_blank"} | &#10146; Only use if YODA, Research Drive or SciStor are not feasible options <br> &#10146; Replacement for the previously used G-drive <br> &#10146; Similar to OneDrive, but ensures that data storage is linked to a project rather than an individual <br> &#10146; Allows for access management at the folder and subfolder level <br> &#10146; Allows for easy collaboration and sharing with external collaborators <br> &#10146; Can be used to record and generate transcripts for interviews conducted via Teams (depending on the ["sensitivity"](PrivacyRisks.html){target="_blank"} of the data) <br> &#10146; Additional information on the uses of Teams/Sharepoint are found in the [VU Storage Finder](https://vu.nl/en/research/storagefinder){target="_blank"} |
 | **Limitations** | &#10146; Not efficient for the storage of large volumes of data that need to be regularly accessed for processing/analysis <br> &#10146; Difficult and slow to access data directly on the YODA disk; data will likely need to be copied locally prior to data processing/analysis <br> &#10146; Lacks a desktop sync client for easy management of local copies of data <br> &#10146; Does not allow for access management of subfolders; everyone in your YODA group folder has access to all subfolders therein <br> &#10146; The limitations of YODA are described in further detail [here](../rdm/tools/YODAInstructionsFGB.html#cons){target="_blank"} | &#10146; Requires encryption for [higher risk data](#security) <br> &#10146; Not possible to interact directly with the Research Drive disk; requires syncing of data locally before processing/analysis <br> &#10146; Does not offer structured metadata documentation to help make data FAIR <br> &#10146; Does not provide locking or vault options to prevent raw data from being modified or to serve as an archive | &#10146; Cannot be used for collaboration with external (non-VU) users <br> &#10146; If using SciStor from home, connectivity ends up similar to YODA; advantages are only present when connecting on campus<br> &#10146; Does not offer free storage up to 500 GB like YODA and Research Drive do <br> &#10146; May not be appropriate for storage of higher risk data; must be [discussed](#security) with the [IT for Research Engineers](mailto:itvo.ucit@vu.nl) <br> &#10146; Does not offer structured metadata documentation to help make data FAIR <br> &#10146; Access rights are managed entirely by the IT for Research Engineers and changes can only be made upon request | &#10146; Requires encryption for [higher risk data](#security) <br> &#10146; Can be _**too**_ easy to share data, meaning data may be leaked to the wrong parties <br> &#10146; Difficult to maintain an overview of who has access to which folders or Teams channels <br> &#10146; Not possible to manipulate non-Microsoft files directly within Teams/SharePoint environment; to edit, these need to be opened locally in an appropriate app on your device <br> &#10146; Does not offer structured metadata documentation to help make data FAIR <br> &#10146; Does not provide locking or vault options to prevent raw data from being modified or to serve as an archive <br> &#10146; Back-up notifications are not always accurate, i.e. Teams may tell you your data is fully backed-up before the process is complete; always triple check that data are fully backed up before deletion  <br> &#10146; **Should not be used for storing files managed by git or other version control software. The syncing functionalities of SharePoint do not work well with version control, especially when pushing to remote repositories, such as GitHub** |
 | **Storage of ["Sensitive"](PrivacyRisks.html){target="_blank"} Data:** | | | |
 | &nbsp;&nbsp;&#10146; <u style="text-decoration-color:#ed0000">*Red Data*</u> | &#126; [*](#highrisk) |&#126; [*](#highrisk) | &#126; [*](#highrisk) | &#126; [*](#highrisk) |
-| &nbsp;&nbsp;&#10146; <u style="text-decoration-color:#ff9000">*Orange Data*</u> | &#10003; | &#10003; [**](#security) | &#126; [**](#security) | &#10003; [**](#security) |
+| &nbsp;&nbsp;&#10146; <u style="text-decoration-color:#ff9000">*Orange Data*</u> | &#10003; | &#10003; [**](#security) | &#10003; [**](#security) | &#10003; [**](#security) |
 | &nbsp;&nbsp;&#10146; <u style="text-decoration-color:#ffDf00">*Yellow Data*</u>  | &#10003; | &#10003; | &#10003; | &#10003; |
 | &nbsp;&nbsp;&#10146; <u style="text-decoration-color:#379e00">*Green Data*</u> | &#10003; | &#10003; | &#10003; | &#10003; |
 | &nbsp;&nbsp;&#10146; <u style="text-decoration-color:#6e99c4">*Blue Data*</u>  | &#10003; [***](#anonymous) | &#10003; [***](#anonymous) | &#10003; [***](#anonymous) | &#10003; [***](#anonymous) |
@@ -253,11 +253,9 @@ You can also use the [VU Storage Finder](https://vu.nl/en/research/storagefinder
 
 ### Storage of Very High-Risk Data {#highrisk}
 
-If your data are "Red" (a.k.a. "very high risk" according to the [privacy risks page](PrivacyRisks.html){target="_blank"}), you may require a custom storage solution to be built by IT. However, IT may also determine that the data are not so high risk as to require a custom solution. In such a case, IT Security would consider your "Red" data to only be "high risk". 
+If your data are "Red" (a.k.a. "very high risk" according to the [privacy risks page](PrivacyRisks.html){target="_blank"}), you may require a custom storage solution to be built by IT. This can be an intensive process, so a good first step is investigate how the risks posed by the data can be lowered. Start by contacting the [FGB REPS data stewards](mailto: research.data.fgb@vu.nl): they can help you determine if the risks posed by your data can be lowered and if this isn't possible, they will get you into contact with other experts for additional support. 
 
-You can have your "Red" data assessed by IT Security by contacting the [RDM Support Desk](mailto: rdm@vu.nl). 
-
-**NB**: Even if IT Security deems your "Red" data "high risk" according to their classification system, you should still use additional data protection measures to protect the "Red" data. This is because "Red" data are that much more sensitive than "Orange" data (e.g. the difference between video interviews of children speaking about abuse ("red") vs. video recordings observing children playing at a playground ("orange")). This is discussed further [below](#security).
+**NB**: If "Red" data are stored on a VU storage solution, they will require additional data protection measures. This is discussed further [below](#security) and the [FGB REPS data stewards](mailto: research.data.fgb@vu.nl) can also provide guidance on this.
 
 \
 
@@ -268,13 +266,12 @@ You can have your "Red" data assessed by IT Security by contacting the [RDM Supp
 
 ##### Research Drive {.tab}
 
-[Research Drive](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012856){target="_blank"} is similar to [SURF Drive](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012728){target="_blank"} in much of its functionality, however Research Drive is akin to the former G-drive or to Teams, while SURFdrive is akin to the former H-drive or to OneDrive. Research Drive ensures that storage is not linked to a single individual, but the entire research team. This is better for research data management. Research Drive also allows for multi-factor authentication of all users with access to your Research Drive files. The arguments against SURFdrive and where its use may be appropriate are discussed [below](#nonpreferred).
 
-\
+<h4> Security Use of Research Drive </h4>
 
-<h4> Security Considerations </h4>
+Research Drive does not have standard approval for the storage of "Red" or "Orange" data. If you want to store "Red" data on Research Drive, contact the [FGB REPS data stewards](mailto: research.data.fgb@vu.nl) for assistance, as discussed [above](#highrisk). 
 
-Research Drive does not, unfortunately, have standard approval for the storage of "Red" or "Orange" data. If you want to store "Red" data on Research Drive, contact the [RDM Support Desk](mailto:rdm@vu.nl) and they will connect you with IT Security, as discussed [above](#highrisk). If you are storing "Orange" data on Research Drive, or "Red" data that IT Security deems to be only ["high risk"](#highrisk) according to their classifications, then you will need to apply extra protection of the data by [encrypting](Encryption.html#fle){target="_blank"} the data at the file level. If file-level data encryption is not feasible for you, contact the [RDM Support Desk](mailto:rdm@vu.nl). They will connect you to IT Security for further assistance.
+If you are storing "Orange" data (or "Red" data after you've spoken to the [FGB REPS data stewards](mailto: research.data.fgb@vu.nl)) on Research Drive, you will need to [encrypt](Encryption.html#fle){target="_blank"} the data at the file level. If file-level data encryption is not feasible for you, contact the [FGB REPS data stewards](mailto: research.data.fgb@vu.nl) for further assistance. 
 
 Regardless of the risk-level of your data, you (and everyone who has access to the Research Drive workspace) are required to activate [multi-factor authentication (MFA)](https://wiki.surfnet.nl/display/RDRIVE/How+to+enable+two-factor+authentication+%282FA%29+for+your+account){target="_blank"}. 
 
@@ -288,7 +285,7 @@ If you use Research Drive, you will need to determine your method of accessing t
       * Ensure you are following all of the [basic security measures](SecurityBasics.html){target="_blank"} required by the faculty
       * Obtain a [hardware-encrypted](PhysicalTransport.html#usb){target="_blank"} external hard drive and protect it with a strong [password](SecurityBasics.html#passwords){target="_blank"}. Any data you need to work with locally must sync to this external hard drive. Once the data on this hard drive are no longer needed, the data must be [permanently removed](SecurityBasics.html#removal){target="_blank"} from the external hard drive or the external hard drive must be destroyed.
         * NB: This hard drive must be _**dedicated**_ to this single research project and must be kept safe and secure at all times. This external hard drive **should not** be used for any other purpose and it should only be physically transported from one location to another when it is _**absolutely**_ necessary. The reason for using an encrypted external hard drive when using your personal computer is to partition the "Red" or "Orange" data from all the other data on your personal hard drive and to make it easier to delete later on. **The hard-drive is not intended for day-to-day physical transport of the data**.
-        * If this option is not feasible, contact the [RDM Support Desk](mailto:rdm@vu.nl) for further guidance.
+        * If this option is not feasible, contact the [FGB REPS data stewards](mailto: research.data.fgb@vu.nl) for further guidance.
   * In all cases, always turn off automatic syncing, and instead manage which files and folders sync to your local device. 
       + **This is especially important if you are syncing files to a personal (private) computer. In that case, you should _only_ sync the data files that absolutely need to be temporarily stored on your personal computer. Once again, if the data are "Red" or "Orange" and you absolutely need to use a personal device, ensure that the files always sync to the dedicated, encrypted external hard drive, as discussed in the previous point**. 
   * In all cases, always activate [Full Disk Encryption](Encryption.html#fde){target="_blank"} on your computer.
@@ -298,51 +295,55 @@ If you use Research Drive, you will need to determine your method of accessing t
 
 \
 
-<h4> Access Management </h4>
+<h4> Access Management in Research Drive </h4>
 
 Information on how to provide access to data in Research Drive is found in the [Digital Data Transfer Guide](DigitalTransfer.html){target="_blank"}. It is important to remember that when someone is given access to a folder in Research Drive (or SURFdrive) they have access to all of that folder's subfolders. **Keep this in mind when structuring your folders so that you don't accidentally give someone access to data or documentation that they should not see.**
 
 ##### YODA {.tab}
 
+<h4> Secure Use of YODA </h4>
+
 Secure use of YODA is described in detail in the [FGB YODA Manual](../rdm/tools/YODAInstructionsFGB.html#protection){target="_blank"}.
 
 ##### SciStor {.tab}
 
-Unfortunately, [SciStor](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012858){target="_blank"} is not currently approved for the storage of "Red" or "Orange" data. Start by contacting the IT for Research engineers who manage SciStor via itvo.ucit@vu.nl. They will assess what extra security measures can be applied and whether your data can be stored on SciStor. If you have "Red" data, they _may_ also ask you to check with IT Security (who you can contact via the [RDM Support Desk](mailto:rdm@vu.nl)) to determine if the "Red" data are low enough in risk that they can be stored on SciStor, as discussed [above](#highrisk). If the IT for Research Engineers cannot determine security measures to protect your data, but you need the computing and storage power that SciStor offers, then IT will need to develop a custom storage solution for you. It may be that IT for Research develops this custom solution for you. If the IT for Research Engineers are unable to assist with this, contact the [RDM Support Desk](mailto:rdm@vu.nl). They can connect you with other IT staff who can develop a new custom storage option.
+<h4> Security Use of SciStor </h4>
+
+[SciStor](https://rdm.vu.nl/tools/scistor/index.html){target="_blank"} does not have standard approval for the storage of "Red" data. It is approved for the storage or "Orange" data with appropriate precautions. If you want to store "Red" data on SciStor, contact the [FGB REPS data stewards](mailto: research.data.fgb@vu.nl) for assistance, as discussed [above](#highrisk). 
+
+If you are storing "Orange" data (or "Red" data after you've spoken to the [FGB REPS data stewards](mailto: research.data.fgb@vu.nl)) on SciStor, inform the [IT for Research engineers](mailto:itvo.ucit@vu.nl) who will set up your SciStor workspace that your data are high risk (if they are "Orange") or very high risk (if they are "Red"). This will allow the engineers to ensure appropriate measures are in place. They may determine that a custom solution is needed if the data are very high risk, as discussed [above](#highrisk). 
+
+
 
 ##### Teams/SharePoint {.tab}
 
-If you have determined (ideally in discussion with an [FGB Research Data Steward](mailto:research.data.fgb@vu.nl)) that Teams/SharePoint is your only option for research data storage, then ensure that you are using Teams and not OneDrive. They are not the same: data stored in Teams is accessible to an entire research team and will remain accessible even if one team member leaves. OneDrive is linked entirely to you as an individual and when your contract ends, all data in your OneDrive will be deleted. OneDrive and the arguments against using it for research are explained further [below](#nonpreferred).
+<h4> Security Use of Teams </h4>
+
+If you have determined (ideally in discussion with an [FGB Research Data Steward](mailto:research.data.fgb@vu.nl)) that Teams/SharePoint is your only option for research data storage, then ensure that you are using **Teams and not OneDrive**. They are not the same: data stored in Teams is accessible to an entire research team and will remain accessible even if one team member leaves. OneDrive is linked entirely to you as an individual and when your contract ends, all data in your OneDrive will be deleted. OneDrive and the arguments against using it for research are explained further [below](#nonpreferred).
 
 All of the security guidance described for Research Drive also applies to Teams/SharePoint. The primary difference is that Teams does not use a sync client like Research Drive. If you are working with any non-Microsoft files, start by selecting the option to open these with an applicable app (e.g. RStudio if you are opening an R script). If that is not feasible, the data may need to be downloaded and saved locally. In both cases, all of the same protections on your computer that apply when using Research Drive, also apply to Teams. In short:
 
-* If you get approval from IT Security to store "Red" data on Teams, it _**must**_ be encrypted. If you are storing "Orange" data on Teams it _**must**_ also be encrypted.
+* If you are storing "Orange" data (or "Red" data, if appropriate) on Teams the data _**must**_ be encrypted.
 * If you need to work with "Red" or "Orange" data locally, you *must* used your work computer and in all cases when copying data to your computer:
   + Always have [Full Disk Encryption](Encryption.html#fde){target="_blank"} active on your computer.
   + Take extra security measures if your computer is a [laptop](SecurityBasics.html#laptops){target="_blank"}.
   + [Delete](SecurityBasics.html#removal){target="_blank"} the locally copied files from your local hard drive when you no longer need to access them regularly.
 
-Lastly, if someone has access to a folder, they have access to all of the subfolders in that folder. Make sure this is appropriate for anyone given access to a folder in Teams, and also ensure that they have appropriate access rights (e.g. read-only vs. full editing rights). And remember: Teams makes sharing access *very* easy which means, it's *very* easy to accidentally share data with the wrong person. Always check that the access rights are set up correctly before sharing. You should also set an expiration date on any files or folders shared with anyone outside of your Teams "Team". You can find more information on how to set expiration dates [here](https://vunl.sharepoint.com/:u:/r/sites/CollaborationServices/SitePages/en/Blijf-in-controle-van-je-gedeelde-data.aspx?csf=1&web=1&e=2IyOkA){target="_blank"}.
+\
+
+<h4> Access Management in Temas </h4>
+
+* If someone has access to a folder, they have access to all of the subfolders in that folder. Make sure this is appropriate for anyone given access to a folder in Teams, and also ensure that they have appropriate access rights (e.g. read-only vs. full editing rights). 
+
+* Teams makes granting access *very* easy which means, it's *very* easy to accidentally share data with the wrong person. Always check that the access rights are set up correctly before sharing. You should also set an expiration date on any files or folders shared with anyone outside of your Teams "Team". You can find more information on [how to set expiration dates here](https://vunl.sharepoint.com/:u:/r/sites/CollaborationServices/SitePages/en/Blijf-in-controle-van-je-gedeelde-data.aspx?csf=1&web=1&e=2IyOkA){target="_blank"}.
 
 ####
 
-
 -------------------
-
-
-## Storage of Anonymous/Anonymized Data {#anonymous}
-
-If your data are "Blue" or anonymous, you can use whichever storage option you wish from the list mentioned in the [VU Storage Finder](https://vu.nl/en/research/storagefinder){target="_blank"}, however YODA, Research Drive and SciStor remain the preferred *and* recommended options, particularly for research data. 
-
-**Be aware**: very little research data collected at FGB are anonymous and, more often than not, the data cannot be anonymized fully. This is discussed in the [Privacy Risks Guide](PrivacyRisks.html){target="_blank"}. Even if your data are anonymous there may be [confidentiality concerns](PrivacyRisks.html#confidentiality){target="_blank"} that require you to choose a more secure storage option. If you believe that your data are "Blue", you should check with the [FGB Privacy Champion](mailto:research.data.fgb@vu.nl) to ensure that your assessment is correct. 
-
-In general, "Blue" data will more often consist of your research documentation, metadata, code scripts etc. The [non-preferred](#nonpreferred) storage options mentioned in the VU Storage Finder may be used for the storage of these materials; these storage options are only "non-preferred" with regards to *research* data. If your research data itself is confirmed to be "Blue", [OSF](#nonpreferred) is your best option for storage _if_ you cannot use any of the preferred FGB options. 
-
-\
 
 ## Non-preferred Data Storage Options {#nonpreferred}
 
-There are several other options for storage listed in [VU Storage Finder](https://vu.nl/en/research/storagefinder){target="_blank"}. FGB discourages the use of these other options for the storage of *research* data. 
+There are several other options for storage listed in [VU Storage Finder](https://vu.nl/en/research/storagefinder){target="_blank"}. FGB **strongly discourages** the use of these other options for the storage of *research* data. 
 
 #### {.tabset .tabset-fade}
 
@@ -374,7 +375,7 @@ OneDrive is generally discouraged for the storage of research data and related m
 
 ##### OSF {.tab}
 
-The primary use for OSF is the storage of research documentation and the pre-registration of your research protocols. You can also connect to data stored in Research Drive via your OSF storage space. This way you maintain the organization and findability of your data through OSF without actually storing your research data on OSF. You may store "Blue" data on OSF, but it is not recommended for all other [risk categories](PrivacyRisks.html){target="_blank"}. This is primarily because for all other risk categories, you will need to set your OSF to a private project to prevent the data from being publicly disclosed. However with a private project you will only have 5 GB of storage space. If you use OSF to store "Blue" data, it is recommended to choose Frankfurt, Germany as the storage location when setting up your OSF workspace.
+OSF is no longer an option for storing data or any related research materials because the service will cease to provide data storage at the start of 2027.
 
 
 ##### Google Drive VU {.tab}
@@ -391,8 +392,13 @@ Encrypted portable storage is *always* a temporary solution. Its primary use is 
 
 ------------
 
-\
+## Storage of Anonymous/Anonymized Data {#anonymous}
 
+If your data are "Blue" or anonymous, you can use whichever storage option you wish from the list mentioned in the [VU Storage Finder](https://vu.nl/en/research/storagefinder){target="_blank"}, however YODA, Research Drive and SciStor remain the preferred *and* recommended options, particularly for research data. 
+
+**Be aware**: very little research data collected at FGB are anonymous and, more often than not, the data cannot be anonymized fully. This is discussed in the [Privacy Risks Guide](PrivacyRisks.html){target="_blank"}. Even if your data are anonymous there may be [confidentiality concerns](PrivacyRisks.html#confidentiality){target="_blank"} that require you to choose a more secure storage option. If you believe that your data are "Blue", you should check with the [FGB Privacy Champion](mailto:research.data.fgb@vu.nl) to ensure that your assessment is correct. 
+
+\
 
 ## Additional Tips for Data Storage {#additionalTips}
 
@@ -401,7 +407,7 @@ Encrypted portable storage is *always* a temporary solution. Its primary use is 
     + If the higher risk data *must* be stored in the same location as the lower risk data, [encrypt](Encryption.html#fle){target="_blank"} the higher risk dataset. Also store the higher risk data in a folder that is separate from the other lower-risk data and ensure that this folder can only be accessed by those who absolutely need to view the higher-risk data.
     
 * Make use of data [de-identification](Deidentification.html){target="_blank"} methods to lower the privacy risks of your processed data. Your raw data will probably still need to be stored at a higher level of security, but if you lower the [privacy risks](PrivacyRisks.html){target="_blank"} of your processed data by de-identifying it, you will have more storage options for the processed data.
-<div id="cloudstorage">
+<div id="cloudstorage"></div>
 
 
 <!---I've commented out this statement because there is really no reason why red data should be going on Research Drive now
@@ -410,13 +416,22 @@ Encrypted portable storage is *always* a temporary solution. Its primary use is 
 
 \
 
+## Data Clean-up at the End of Research {#offboarding}
+
+When you have completed your active research, you *must* [archive](../rdm/archiving/ArchivingGuidelinesSummary.html){target="_blank"} your data and remove the data from the storage solution(s) you have been using. The only exception is if you are using YODA for active data storage: when it is time to archive your data, move the data from active YODA storage to [the YODA vault](../rdm/tools/YODAInstructionsFGB.html#furtherArchiving){target="_blank"}.
+
+To help you clean-up your data effectively at the end of your research, review the [RDM Offboarding Guide](../Images/rdm_offboarding.pdf){target="_blank"}. Additionally, if you were using YODA or Research Drive for active data storage, use [this form](https://services.vu.nl/esc?id=sc_cat_item&sys_id=e237c4f4c3900b5026ed7e43e4013152){target="_blank"} to request that the data be deleted. **Make sure you've [archived](../rdm/archiving/ArchivingGuidelinesSummary.html){target="_blank"} your data first!!!!**
+
+
+\
+
 ## More Information and Gettting Access {#moreInfo}
 
 * [FGB YODA Manual](../rdm/tools/YODAInstructionsFGB.html){target="_blank"}
-  + [Getting access](https://yoda.vu.nl/site/getting-started/requesting-space.html){target="_blank"}
+  + [Getting access](https://rdm.vu.nl/tools/yoda/cost_access.html){target="_blank"}
 
-* [Research Drive](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012856){target="_blank"}
+* [Research Drive](https://rdm.vu.nl/tools/researchdrive/index.html){target="_blank"}
   + [Tutorial from SURF](https://wiki.surfnet.nl/display/RDRIVE/SURF+Research+Drive+wiki){target="_blank"}
 
-* [SciStor](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012858){target="_blank"}
+* [SciStor](https://rdm.vu.nl/tools/scistor/index.html){target="_blank"}
 
