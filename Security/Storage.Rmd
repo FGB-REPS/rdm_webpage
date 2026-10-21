@@ -214,7 +214,7 @@ table tr:nth-child(3)   {
 
 ## Faculty Storage Recommendations for Research Data {#FGBrecs}
 
-There are a variety of data storage options available at the VU which can get a bit confusing. FGB recommends **three primary options** for the storage of **research** data: [YODA](../rdm/tools/YODAInstructionsFGB.html){target="_blank"}, [Research Drive](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012856){target="_blank"}, and [SciStor](https://services.vu.nl/esc?id=kb_article&sysparm_article=KB0012858){target="_blank"}. Additionally, 
+There are a variety of data storage options available at the VU which can get a bit confusing. FGB recommends **three primary options** for the storage of **research** data: [YODA](../rdm/tools/YODAInstructionsFGB.html){target="_blank"}, [Research Drive](https://rdm.vu.nl/tools/researchdrive/index.html){target="_blank"}, and [SciStor](https://rdm.vu.nl/tools/scistor/index.html){target="_blank"}. Additionally, 
 [Teams/SharePoint](https://services.vu.nl/esc?id=emp_taxonomy_topic&topic_id=4d4956d7978f09d0e553359fe153afb3){target="_blank"} has been approved for the storage of research data, **but FGB recommends only using it if the three primary options are not feasible**. This is because Teams suffers from various functionality issues that limit its use for research data. You can always discuss your options with the [FGB Research Data Stewards](mailto:research.data.fgb@vu.nl) if you are unsure which option to use.
 
 \
