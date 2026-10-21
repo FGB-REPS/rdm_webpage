@@ -267,7 +267,7 @@ If your data are "Red" (a.k.a. "very high risk" according to the [privacy risks 
 ##### Research Drive {.tab}
 
 
-<h4> Security Use of Research Drive </h4>
+<h4> Secure use of Research Drive </h4>
 
 Research Drive does not have standard approval for the storage of "Red" or "Orange" data. If you want to store "Red" data on Research Drive, contact the [FGB REPS data stewards](mailto: research.data.fgb@vu.nl) for assistance, as discussed [above](#highrisk). 
 
@@ -307,7 +307,7 @@ Secure use of YODA is described in detail in the [FGB YODA Manual](../rdm/tools/
 
 ##### SciStor {.tab}
 
-<h4> Security Use of SciStor </h4>
+<h4> Secure use of SciStor </h4>
 
 [SciStor](https://rdm.vu.nl/tools/scistor/index.html){target="_blank"} does not have standard approval for the storage of "Red" data. It is approved for the storage or "Orange" data with appropriate precautions. If you want to store "Red" data on SciStor, contact the [FGB REPS data stewards](mailto: research.data.fgb@vu.nl) for assistance, as discussed [above](#highrisk). 
 
@@ -317,7 +317,7 @@ If you are storing "Orange" data (or "Red" data after you've spoken to the [FGB 
 
 ##### Teams/SharePoint {.tab}
 
-<h4> Security Use of Teams </h4>
+<h4> Secure use of Teams </h4>
 
 If you have determined (ideally in discussion with an [FGB Research Data Steward](mailto:research.data.fgb@vu.nl)) that Teams/SharePoint is your only option for research data storage, then ensure that you are using **Teams and not OneDrive**. They are not the same: data stored in Teams is accessible to an entire research team and will remain accessible even if one team member leaves. OneDrive is linked entirely to you as an individual and when your contract ends, all data in your OneDrive will be deleted. OneDrive and the arguments against using it for research are explained further [below](#nonpreferred).
 
