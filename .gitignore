@@ -11,6 +11,7 @@
 /webpage_planning
 /ethics/discussions_feedback
 /ethics/archive
+/testing
 
 # These are some examples of commonly ignored file patterns.
 # You should customize this list as applicable to your project.
@@ -34,6 +35,7 @@ rdm/archiving/questions_for_datastewards.txt
 rdm/archiving/oldArchPack.Rmd
 rdm/archiving/data/*.xlsx
 rdm/training/training_events.xlsx
+rdm/tools/discussion_points_yoda.txt
 ethics/notes
 
 # folders to ignore

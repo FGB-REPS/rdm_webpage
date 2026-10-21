@@ -1,0 +1,8 @@
+onderzoeksdocumentatie/
+onderzoeksdocumentatie/administratieve_data/
+onderzoeksdocumentatie/onderzoeksdocumentatie/
+onderzoeksdata/ruwe/
+onderzoeksdata/verwerkt/
+scripts/
+datadocumentatie/
+resultaten/

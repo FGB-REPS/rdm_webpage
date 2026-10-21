@@ -1,0 +1,8 @@
+research_administration/
+research_administration/administrative_data/
+research_administration/research_documentation/
+research_data/raw/
+research_data/processed/
+scripts/
+data_documentation/
+results/

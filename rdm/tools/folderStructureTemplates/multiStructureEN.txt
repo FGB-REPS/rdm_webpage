@@ -1,0 +1,16 @@
+public/research_administration/
+public/research_administration/administrative_data/
+public/research_administration/research_documentation/
+public/research_data/raw/
+public/research_data/processed/
+public/scripts/
+public/data_documentation/
+public/results/
+restricted/research_administration/
+restricted/research_administration/administrative_data/
+restricted/research_administration/research_documentation/
+restricted/research_data/raw/
+restricted/research_data/processed/
+restricted/scripts/
+restricted/data_documentation/
+restricted/results/

@@ -1,0 +1,16 @@
+openbaar/onderzoeksdocumentatie/
+openbaar/onderzoeksdocumentatie/administratieve_data/
+openbaar/onderzoeksdocumentatie/onderzoeksdocumentatie/
+openbaar/onderzoeksdata/ruwe/
+openbaar/onderzoeksdata/verwerkt/
+openbaar/scripts/
+openbaar/datadocumentatie/
+openbaar/resultaten/
+restricted/onderzoeksdocumentatie/
+restricted/onderzoeksdocumentatie/administratieve_data/
+restricted/onderzoeksdocumentatie/onderzoeksdocumentatie/
+restricted/onderzoeksdata/ruwe/
+restricted/onderzoeksdata/verwerkt/
+restricted/scripts/
+restricted/datadocumentatie/
+restricted/resultaten/
