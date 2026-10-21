@@ -80,6 +80,7 @@ table tr td:nth-of-type(2) {
 
 | | |
 | -- | ----------------------- |
+| 2026/10/21; Jessica Hrudey | Updates to [FGB YODA Manual](../rdm/tools/YODAInstructionsFGB.html){target="_blank"}: addition of folder structure templates; major guidance revisions on data access methods, data protection, metadata and overall manual readailibity |
 | 2026/10/20; Jessica Hrudey | [Security pages](../index.html#Security_Guidance){target="_blank"} updated with information on more secure SciStor and removal of public link sharing in Research Drive. |
 | 2026/09/29; Jessica Hrudey | [Ethics guidance pages](../ethics/EthicsGuidance.html){target="_blank"} edited and published for general use. |
 | 2026/06/11; Jessica Hrudey | [Guidance on data packages](../rdm/archiving/DataPackage.html){target="_blank"} published. Provides an overview of what information needs to be archived & published with FGB data packages, both on a general level and a data-specific level. |
