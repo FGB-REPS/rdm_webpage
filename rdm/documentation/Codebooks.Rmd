@@ -88,6 +88,9 @@ The [VU Open Research Support Handbook](https://rdm.vu.nl/topics/data-documentat
   + You can also refer to the code used to create the derived variable or the section of the [logbook](../definitions/Definitions.html#logbook) that describes the process
 
 While a  codebook tends to provide more specific data information, there can be overlap between what you document in a codebook and what you document in a [README file](../archiving/ArchivingGuidelinesFull.html#subsection9). You can opt to cross-reference between these two documents, rather than documenting the same thing in two places, however you must then ensure that these cross-references are maintained (i.e. don't go changing your folder structure and make it impossible to find the cross-referenced file(s) later on). 
+\
+\
+If your variable list is kept in a spreadsheet, a free browser-based tool such as the [METACO Codebook Generator](https://ersan.eu/MetaCo/free/codebook.html){target="_blank"} can turn it into a printable codebook (variable names, descriptions, value labels). The data stays on your own computer. Keep the spreadsheet itself as the machine-readable version of your codebook.
 <!--IN future versions:
 **DISCUSS FURTHER THE OVERLAPS WITH README FILES (done) AND WHETHER A SEPARATE CODEBOOK FOR EACH DATA FILE IS NECESSARY OR WHETHER YOU CAN DESCRIBE CLUSTERS OF DATA IN ONE CODEBOOK**-->
 \
